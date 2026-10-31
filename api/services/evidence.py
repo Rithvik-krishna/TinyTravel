@@ -17,18 +17,23 @@ def build_evidence(
     currency: str = "INR",
     mock: bool = False,
     existing_evidence: Optional[list[dict]] = None,
+    offer_id: Optional[str] = None,
 ) -> list[dict]:
+
     """Construct evidence items adhering to TinyTravel invariants.
 
-    Until live screenshots are confirmed by the SDK, evidence consists of:
-    - Live browser streaming link (type: 'recording')
-    - Verifiable page text snippets (type: 'page_text')
+    Captures artifacts (text snippets, streaming links, screenshots) under /evidence/
+    and points evidence URLs to the static /evidence/... endpoint.
     """
     if existing_evidence:
         return existing_evidence
 
     evidence_items = []
     timestamp = finished_at or started_at or ""
+    
+    from pathlib import Path
+    evidence_dir = Path(__file__).resolve().parents[2] / "evidence"
+    evidence_dir.mkdir(parents=True, exist_ok=True)
 
     # Live session recording / stream URL
     if streaming_url:
@@ -44,9 +49,17 @@ def build_evidence(
 
     # Verifiable text excerpt from listing page
     if listing_page_text:
+        listing_url = streaming_url or ""
+        if offer_id:
+            try:
+                fn = f"{offer_id}_listing.txt"
+                (evidence_dir / fn).write_text(listing_page_text, encoding="utf-8")
+                listing_url = f"/evidence/{fn}"
+            except Exception:
+                pass
         evidence_items.append({
             "type": "page_text",
-            "url": streaming_url or "",
+            "url": listing_url,
             "step": "listing",
             "captured_at": started_at or timestamp,
             "extracted_value": price_shown_on_listing,
@@ -56,9 +69,17 @@ def build_evidence(
 
     # Verifiable text excerpt from payment page
     if payment_page_text:
+        payment_url = streaming_url or ""
+        if offer_id:
+            try:
+                fn = f"{offer_id}_payment.txt"
+                (evidence_dir / fn).write_text(payment_page_text, encoding="utf-8")
+                payment_url = f"/evidence/{fn}"
+            except Exception:
+                pass
         evidence_items.append({
             "type": "page_text",
-            "url": streaming_url or "",
+            "url": payment_url,
             "step": "payment",
             "captured_at": finished_at or timestamp,
             "extracted_value": price_final_payable,
@@ -67,3 +88,4 @@ def build_evidence(
         })
 
     return evidence_items
+

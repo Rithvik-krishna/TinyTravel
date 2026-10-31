@@ -121,6 +121,22 @@ def site_url(platform: str, req: dict) -> str:
         raise NotImplementedError(f"Platform '{platform}' direct search URL is unknown.")
 
 
+def classify_blocker(error_text: Optional[str]) -> Optional[str]:
+    """Map observed failure/error text to standard Blocker enum."""
+    if not error_text:
+        return None
+    err = str(error_text).lower()
+    if any(k in err for k in ["captcha", "challenge", "cloudflare", "datadome", "perimeterx", "bot"]):
+        return "captcha"
+    if any(k in err for k in ["login", "sign in", "signin", "authenticate", "account required"]):
+        return "login"
+    if any(k in err for k in ["otp", "verification code", "2fa", "sms code", "one time password"]):
+        return "otp"
+    if any(k in err for k in ["timeout", "timed out", "deadline"]):
+        return "timeout"
+    return "other"
+
+
 async def verify_offer(
     platform: str,
     hotel_name: str,
@@ -162,7 +178,7 @@ async def verify_offer(
     site = probe_data.get("site") or platform
     reached_payment_page = bool(probe_data.get("reached_payment_page", False))
     furthest_step = probe_data.get("furthest_step") or ("payment" if reached_payment_page else "unknown")
-    blocker = probe_data.get("blocker")
+    blocker = classify_blocker(probe_data.get("blocker"))
     policy = probe_data.get("cancellation_policy")
     price_listing = probe_data.get("price_shown_on_listing")
     price_room = probe_data.get("price_shown_on_room_selection")
@@ -173,6 +189,22 @@ async def verify_offer(
 
     listing_page_text = probe_data.get("listing_page_text")
     payment_page_text = probe_data.get("payment_page_text")
+    notes = probe_data.get("notes") or (run.error or "")
+
+    # Handle run level timeout / errors
+    if run.status == "timeout":
+        blocker = "timeout"
+        furthest_step = "timeout"
+        reached_payment_page = False
+    elif run.status == "failed" and not blocker:
+        blocker = classify_blocker(run.error) or "other"
+
+    # Verify max_occupancy fits requested guests
+    req_guests = int(req.get("guests", 2))
+    max_occ = probe_data.get("max_occupancy")
+    if max_occ is not None and max_occ < req_guests:
+        reached_payment_page = False
+        notes = (notes + f" [Occupancy mismatch: room fits {max_occ} adults but search requested {req_guests}]").strip()
 
     # Post-processing via pure functions
     if reached_payment_page and price_payable is not None:
@@ -180,6 +212,11 @@ async def verify_offer(
 
     c_cat = cancellation_category(policy)
     recon = reconciliation_status(fee_lines, price_payable)
+
+    hotel_slug = hotel_name.lower().replace(" ", "_")
+    site_slug = platform.lower().replace(".", "").replace(" ", "")
+    offer_id = req.get("offer_id") or f"off_{site_slug}_{hotel_slug[:8]}"
+    hotel_id = req.get("hotel_id") or f"h_{hotel_slug[:8]}"
 
     # Build evidence items
     existing_ev = run.raw.get("evidence") if isinstance(run.raw, dict) else None
@@ -197,6 +234,7 @@ async def verify_offer(
         currency=currency,
         mock=is_mock,
         existing_evidence=existing_ev,
+        offer_id=offer_id,
     )
 
     status = determine_status(
@@ -209,10 +247,6 @@ async def verify_offer(
 
     leak = fee_leak_pct(price_listing, price_payable) if status == "verified" else None
 
-    hotel_slug = hotel_name.lower().replace(" ", "_")
-    site_slug = platform.lower().replace(".", "").replace(" ", "")
-    offer_id = req.get("offer_id") or f"off_{site_slug}_{hotel_slug[:8]}"
-    hotel_id = req.get("hotel_id") or f"h_{hotel_slug[:8]}"
 
     if not is_mock:
         try:
@@ -265,8 +299,9 @@ async def verify_offer(
         "urgency_or_scarcity_messages": probe_data.get("urgency_or_scarcity_messages", []),
         "price_trail": price_trail,
         "currency": currency,
-        "notes": probe_data.get("notes", run.error or ""),
+        "notes": notes,
         "fee_leak_pct": leak,
+
         "evidence": evidence,
         "mock": is_mock,
         "listing_page_text": listing_page_text,

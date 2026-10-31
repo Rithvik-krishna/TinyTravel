@@ -160,13 +160,57 @@ def results(sid: str):
     raise HTTPException(status_code=404, detail="Results not ready")
 
 
+ROOT = Path(__file__).parent.parent
+evidence_dir = ROOT / "evidence"
+evidence_dir.mkdir(parents=True, exist_ok=True)
+
+try:
+    from fastapi.staticfiles import StaticFiles
+    app.mount("/evidence", StaticFiles(directory=str(evidence_dir)), name="evidence")
+except Exception as e:
+    logger.warning("Could not mount static evidence directory: %s", e)
+
+
 @app.post("/api/offers/{oid}/recheck", response_model=Recheck)
-def recheck(oid: str):
-    # Stays mock until Prompt 8
-    return demo["rechecks"][0]
+async def recheck(oid: str):
+    mode = os.getenv("DATA_MODE", "mock")
+    if mode == "mock" and oid == demo["rechecks"][0]["offer_id"]:
+        return demo["rechecks"][0]
+
+    try:
+        from agents.recheck import recheck_offer
+    except ImportError:
+        from .agents.recheck import recheck_offer
+
+    try:
+        return await recheck_offer(oid)
+    except ValueError as e:
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logger.error(f"Recheck failed for offer {oid}: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Recheck failed")
 
 
 @app.get("/api/offers/{oid}/handoff", response_model=HandoffPack)
 def handoff(oid: str):
-    # Stays mock until Prompt 8
-    return demo["handoff"]
+    mode = os.getenv("DATA_MODE", "mock")
+    if mode == "mock" and oid == demo["handoff"]["offer_id"]:
+        return demo["handoff"]
+
+    try:
+        from services.handoff import build_handoff
+        from db import get_offer
+    except ImportError:
+        from .services.handoff import build_handoff
+        from .db import get_offer
+
+    offer = get_offer(oid)
+    if not offer:
+        matched = next((o for o in demo.get("offers", []) if o.get("offer_id") == oid), None)
+        if matched:
+            offer = matched
+
+    if not offer:
+        raise HTTPException(status_code=404, detail=f"Offer '{oid}' not found")
+
+    return build_handoff(offer)

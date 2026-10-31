@@ -51,9 +51,11 @@ try:
     )
     from ..agents.discovery import discover
     from ..agents.checkout import verify_offer
-    from .dedupe import group_listings
+    from .dedupe import group_listings, normalize_name
     from .normalize import select_targets, non_comparable_warnings
     from .scoring import rank_offers, pick_verdicts, summary_strip, transparency_score
+
+
 except ImportError:
     from models import (
         SearchRequestOut,
@@ -96,9 +98,12 @@ except ImportError:
     )
     from agents.discovery import discover
     from agents.checkout import verify_offer
-    from services.dedupe import group_listings
+    from services.dedupe import group_listings, normalize_name
     from services.normalize import select_targets, non_comparable_warnings
     from services.scoring import rank_offers, pick_verdicts, summary_strip, transparency_score
+
+from rapidfuzz import fuzz
+
 
 logger = logging.getLogger("tinytravel.orchestrator")
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -195,40 +200,21 @@ def _create_unverified_offer(
 
 
 def _build_handoff_pack(best_offer: Optional[dict], req_dict: dict, mock: bool = False) -> dict:
-    """Construct a HandoffPack adhering to the contract."""
-    hotel_name = (best_offer or {}).get("hotel_name") or "La Marvella"
-    platform = (best_offer or {}).get("site") or "Cleartrip"
-    deep_link = (best_offer or {}).get("hotel_url") or "https://www.cleartrip.com"
-    check_in = req_dict.get("check_in", "2026-11-20")
-    check_out = req_dict.get("check_out", "2026-11-21")
-    c_cat = (best_offer or {}).get("cancellation_category") or "free"
-    c_label = "Free cancellation" if c_cat == "free" else "Non-refundable"
+    """Construct a HandoffPack adhering to the contract via handoff service."""
+    try:
+        from services.handoff import build_handoff
+    except ImportError:
+        from .handoff import build_handoff
 
-    return {
-        "offer_id": (best_offer or {}).get("offer_id", "h1_cleartrip"),
-        "platform": platform,
-        "deep_link": deep_link,
-        "qr_png_base64": "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
-        "qr_note": f"Scan on mobile to pay directly on {platform}",
-        "selection_card": {
-            "hotel": hotel_name,
-            "room_type": (best_offer or {}).get("room_type") or "Executive Room",
-            "meal_plan": (best_offer or {}).get("meal_plan") or "Room Only",
-            "cancellation": c_label,
-            "dates": f"{check_in} - {check_out}",
-            "guests": int(req_dict.get("guests", 2)),
-            "expected_final_payable": (best_offer or {}).get("price_final_payable") or 7420.0,
-            "currency": (best_offer or {}).get("currency", "INR"),
-            "verified_at": (best_offer or {}).get("finished_at") or datetime.now(IST).isoformat(),
-        },
-        "copy_paste": {
-            "name": "Test Guest",
-            "email": "test.guest+probe@example.com",
-            "phone": "9000000000",
-        },
-        "disclaimer": "TinyTravel verified this price as a guest. Stop at payment page, never pay. TinyTravel does not process payments.",
+    offer_to_use = dict(best_offer) if best_offer else {
+        "offer_id": "h1_cleartrip",
+        "hotel_name": "La Marvella",
+        "site": "Cleartrip",
+        "hotel_url": "https://www.cleartrip.com",
+        "price_final_payable": 7420.0,
         "mock": mock,
     }
+    return build_handoff(offer_to_use, req_dict)
 
 
 async def run_search(
@@ -378,13 +364,17 @@ async def run_search(
                 start_time,
             )
 
-            # Discover listings across platforms
+            # Discover listings across platforms in parallel, limited by semaphore
+            max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
+            discovery_semaphore = asyncio.Semaphore(max_concurrent)
+
             async def run_discovery_one(platform_name: str) -> list[dict]:
-                try:
-                    return await discover(platform_name, req_dict)
-                except Exception as exc:
-                    logger.warning("Discovery failed for %s: %s", platform_name, exc)
-                    return []
+                async with discovery_semaphore:
+                    try:
+                        return await discover(platform_name, req_dict)
+                    except Exception as exc:
+                        logger.warning("Discovery failed for %s: %s", platform_name, exc)
+                        return []
 
             discovery_results = await asyncio.gather(
                 *(run_discovery_one(p) for p in platforms),
@@ -432,6 +422,8 @@ async def run_search(
                 target_groups = hotel_groups[:1]
 
             # Build list of offers to probe
+            probe_missing = os.getenv("PROBE_MISSING", "0") == "1"
+
             for g in target_groups:
                 gid = g["hotel_id"]
                 hname = g["canonical_name"]
@@ -446,10 +438,24 @@ async def run_search(
                         platform_name = "Cleartrip"
 
                     # Find matching listing if available
+                    pslug_norm = pslug.lower().replace(".", "").replace(" ", "")
+                    valid_platforms = {"booking", "bookingcom"} if pslug_norm == "booking" else {pslug_norm}
+
                     matched_listing = next(
-                        (l for l in all_listings if l.get("platform", "").lower().replace(".", "").replace(" ", "") == pslug and l.get("hotel_id") == gid),
+                        (
+                            l for l in all_listings
+                            if l.get("platform", "").lower().replace(".", "").replace(" ", "") in valid_platforms
+                            and (
+                                l.get("hotel_name", "").lower() == hname.lower()
+                                or fuzz.token_sort_ratio(normalize_name(l.get("hotel_name", "")), normalize_name(hname)) >= 80
+                            )
+                        ),
                         None,
                     )
+
+                    # Config PROBE_MISSING=0: skip platforms where the hotel wasn't discovered
+                    if not probe_missing and matched_listing is None:
+                        continue
 
                     target_offers_to_run.append({
                         "platform": platform_name,
@@ -458,6 +464,7 @@ async def run_search(
                         "hotel_id": gid,
                         "listing": matched_listing,
                     })
+
 
         # 3. Checkout Verification Phase
         max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
@@ -545,14 +552,19 @@ async def run_search(
                     )
                 except Exception as exc:
                     logger.warning("Agent execution failed for %s on %s: %s", hotel_name, platform_name, exc)
+                    try:
+                        from agents.checkout import classify_blocker
+                    except ImportError:
+                        from .agents.checkout import classify_blocker
+                    b_val = "timeout" if isinstance(exc, (asyncio.TimeoutError, TimeoutError)) else (classify_blocker(str(exc)) or "other")
                     offer_res = _create_unverified_offer(
                         offer_id=offer_id,
                         hotel_id=hotel_id,
                         hotel_name=hotel_name,
                         platform=platform_name,
                         run_id=run_id,
-                        blocker="timeout" if isinstance(exc, asyncio.TimeoutError) else "other",
-                        furthest_step="failed",
+                        blocker=b_val,
+                        furthest_step="timeout" if b_val == "timeout" else "failed",
                         notes=f"Run failed: {exc}",
                         mock=is_mock,
                     )

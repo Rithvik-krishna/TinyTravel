@@ -96,11 +96,15 @@ def select_targets(
 
         # 3. Budget check on shown_price
         hid = g.get("hotel_id", "")
-        group_listings = listings_by_hotel.get(hid, [])
+        hname = g.get("canonical_name", "")
         prices = [
             float(l["shown_price"])
-            for l in group_listings
+            for l in (listings or [])
             if l.get("shown_price") is not None
+            and (
+                l.get("hotel_id") == hid
+                or l.get("hotel_name", "").lower() == hname.lower()
+            )
         ]
         min_price = min(prices) if prices else 0.0
 
@@ -108,6 +112,7 @@ def select_targets(
             # If all prices exceed budget, skip
             if min_price > budget_per_night:
                 continue
+
 
         eligible.append({
             "group": g,
