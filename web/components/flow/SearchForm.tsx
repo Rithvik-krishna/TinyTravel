@@ -191,10 +191,7 @@ export function SearchForm() {
         </div>
       </fieldset>
 
-      <details className="req">
-        <summary>What we&apos;ll check</summary>
-        <pre>{JSON.stringify({ ...req, raw_text: buildSentence(req) }, null, 2)}</pre>
-      </details>
+      
 
       {error && <div className="notice bad" role="alert">{error}</div>}
 
