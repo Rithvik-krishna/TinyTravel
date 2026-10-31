@@ -36,3 +36,9 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Field / Event**: Added `SearchInput` to `POST /api/search` accepting `text`, structured search fields, and target mode fields (`hotel_name: str`, `platforms: list[str]`). Added `response_model` to all endpoints.
 - **Why**: Prevent frontend/backend contract drift; enable live target-mode probing.
 - **Fixtures updated**: No (fixtures remain canonical source of truth and validated 100% against new models).
+
+### 2026-10-31 - Nikhil
+- **Page Text Evidence Fields**: Added optional `listing_page_text: Optional[str] = None` and `payment_page_text: Optional[str] = None` to `ProbeResult` and `Offer`.
+- **Type**: `Optional[str]` (defaults to `None`)
+- **Why**: Captures verbatim text snippets from listing and payment pages to serve as verifiable `page_text` evidence without fabricating screenshot URLs.
+- **Fixtures updated**: No (purely additive optional fields, existing fixtures validate with extra="forbid").

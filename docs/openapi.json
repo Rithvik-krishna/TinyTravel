@@ -924,6 +924,28 @@
                 "type": "null"
               }
             ]
+          },
+          "listing_page_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Listing Page Text"
+          },
+          "payment_page_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Payment Page Text"
           }
         },
         "additionalProperties": false,

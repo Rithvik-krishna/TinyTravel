@@ -1,0 +1,117 @@
+{
+  "offer_id": "off_cleartrip_la_marve",
+  "hotel_id": "h_la_marve",
+  "run_id": "mock_run_h1_cleartrip",
+  "streaming_url": "/mock/tile-cleartrip.html",
+  "started_at": "2026-10-31T12:12:15.579984+05:30",
+  "finished_at": "2026-10-31T12:12:15.683688+05:30",
+  "steps": 6,
+  "cost_usd": 0.29,
+  "status": "verified",
+  "reconciliation": "ok",
+  "cancellation_category": "free",
+  "site": "Cleartrip",
+  "reached_payment_page": true,
+  "furthest_step": "payment",
+  "blocker": null,
+  "hotel_name": "La Marvella",
+  "hotel_url": "https://www.cleartrip.com/hotels/?mock=1",
+  "room_type": "Deluxe Double",
+  "max_occupancy": 2,
+  "meal_plan": "Breakfast included",
+  "cancellation_policy": "Free cancellation until 18 Nov 2026, 12:00",
+  "price_shown_on_listing": 8210.0,
+  "price_shown_on_room_selection": 8210.0,
+  "price_final_payable": 11276.0,
+  "fee_lines": [
+    {
+      "label": "Room price (base)",
+      "amount": 15639.0
+    },
+    {
+      "label": "Taxes & fees",
+      "amount": 1971.0
+    },
+    {
+      "label": "Discount",
+      "amount": -4692.0
+    },
+    {
+      "label": "Offer / coupon",
+      "amount": -2737.0
+    },
+    {
+      "label": "Convenience fee",
+      "amount": 1095.0
+    }
+  ],
+  "preselected_addons": [],
+  "urgency_or_scarcity_messages": [],
+  "price_trail": [
+    {
+      "step": "listing",
+      "amount": 8210.0,
+      "currency": "INR"
+    },
+    {
+      "step": "room",
+      "amount": 8210.0,
+      "currency": "INR"
+    },
+    {
+      "step": "traveller_details",
+      "amount": 10181.0,
+      "currency": "INR"
+    },
+    {
+      "step": "payment",
+      "amount": 11276.0,
+      "currency": "INR"
+    }
+  ],
+  "currency": "INR",
+  "notes": "Real probe numbers (Cleartrip). Line labels are placeholders.",
+  "fee_leak_pct": 37.3,
+  "evidence": [
+    {
+      "type": "screenshot",
+      "url": "/mock/evidence-placeholder.svg",
+      "step": "listing",
+      "captured_at": "2026-10-30T22:10:00+05:30",
+      "extracted_value": 8210,
+      "currency": "INR",
+      "mock": true
+    },
+    {
+      "type": "screenshot",
+      "url": "/mock/evidence-placeholder.svg",
+      "step": "room",
+      "captured_at": "2026-10-30T22:10:00+05:30",
+      "extracted_value": 8210,
+      "currency": "INR",
+      "mock": true
+    },
+    {
+      "type": "screenshot",
+      "url": "/mock/evidence-placeholder.svg",
+      "step": "payment",
+      "captured_at": "2026-10-30T22:10:00+05:30",
+      "extracted_value": 11276,
+      "currency": "INR",
+      "mock": true
+    }
+  ],
+  "mock": true,
+  "listing_page_text": null,
+  "payment_page_text": null,
+  "transparency": {
+    "score": 42,
+    "breakdown": {
+      "fee_leak": 3.4,
+      "addons_pressure": 20,
+      "price_stability": null,
+      "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+  }
+}
