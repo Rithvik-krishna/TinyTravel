@@ -2,10 +2,10 @@
 
 import React, { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { getResults, MOCK, openStream } from "@/lib/dataSource";
+import { getResults, MOCK, openStream, startSearch } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
 import { offersToTags, blockerLabel, siteLabel, TagItem } from "@/lib/tags";
-import { loadRequest, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
+import { buildSentence, loadRequest, saveSearch, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
 import { AgentState, countsOf, emptyStream, Phase, useInvestigationStream } from "@/lib/useInvestigationStream";
 import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell";
 import { Provenance } from "@/components/landing/Provenance";
@@ -69,6 +69,29 @@ function Inner() {
   const [summary, setSummary] = useState("");
   // Set when the service does not know this search id (old link, wrong data mode), so we stop waiting.
   const [missing, setMissing] = useState(false);
+  const [retrying, setRetrying] = useState(false);
+  const [retryError, setRetryError] = useState("");
+  // Starts the same search again from the saved request (one click after a search that found nothing).
+  const searchAgain = async () => {
+    const r = loadRequest();
+    if (!r) {
+      window.location.href = "/book";
+      return;
+    }
+    setRetrying(true);
+    setRetryError("");
+    try {
+      const { raw_text: _raw, ...fields } = r;
+      void _raw;
+      const res: { search_id?: string } = await startSearch("", fields);
+      if (!res?.search_id) throw new Error("no id");
+      saveSearch({ ...r, raw_text: buildSentence(r) }, res.search_id);
+      window.location.href = `/investigation?id=${encodeURIComponent(res.search_id)}`;
+    } catch {
+      setRetrying(false);
+      setRetryError("Could not start the search again. Check that the booking service is running.");
+    }
+  };
   useEffect(() => {
     const r = loadRequest();
     if (r) setSummary(`${r.destination} · ${stayLabel({ check_in: r.check_in, check_out: r.check_out, guests: r.guests })}`);
@@ -207,8 +230,15 @@ function Inner() {
         ))}
 
         <div className="cta-bar">
+          {!finished && (state.hotels ?? 0) > 0 && (
+            <Link className="btn ghost" href={withId("/compare", id)}>See results so far</Link>
+          )}
           {state.phase === "done" && agents.length === 0 ? (
-            <Link className="btn" href="/book">Try another search</Link>
+            <>
+              <button className="btn" type="button" onClick={searchAgain} disabled={retrying}>{retrying ? "Starting…" : "Search again"}</button>
+              <Link className="btn ghost" href="/book">Change the search</Link>
+              {retryError && <span className="fine" role="alert">{retryError}</span>}
+            </>
           ) : state.phase === "done" ? (
             <>
               <Link className="btn" href={withId("/compare", id)}>See results</Link>
