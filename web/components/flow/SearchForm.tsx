@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
 import { useBackendMode } from "@/lib/extras";
@@ -93,10 +93,6 @@ export function SearchForm() {
   const [error, setError] = useState<string | null>(null);
   const mode = useBackendMode();
   const live = mode === "live";
-  // In live mode the one-hotel check is the default: a full city search runs many paid browser agents.
-  const targetMode = useSearchParams().get("target") === "1" || live;
-  const [hotelName, setHotelName] = useState("");
-  const [sites, setSites] = useState<string[]>(["cleartrip"]);
 
   const dlg = useRef<HTMLDialogElement>(null);
 
@@ -115,21 +111,16 @@ export function SearchForm() {
     ev.preventDefault();
     setTouched(true);
     if (!valid || busy) return;
-    if (live && !hotelName.trim()) {
-      const ok = window.confirm(
-        "You did not enter a hotel name, so this will search the whole city with real browser agents.\n\nIt can take 15 minutes or more and uses about $4 of TinyFish credits.\n\nFor a quick check (about 4 minutes, about $0.40), cancel and enter a hotel name instead.\n\nContinue with the full search?",
-      );
+    if (live) {
+      // Every search checks all three sites, so a live run is long and uses TinyFish credits.
+      const ok = window.confirm("This checks Cleartrip, Agoda and Booking.com with real browser agents.\n\nA full search can take 15 minutes or more and uses TinyFish credits (about $4).\n\nStart the search?");
       if (!ok) return;
-    }
-    if (targetMode && hotelName.trim() && sites.length === 0) {
-      setError("Pick at least one site to check.");
-      return;
     }
     setBusy(true);
     setError(null);
     const full = { ...req, destination: req.destination.trim(), raw_text: buildSentence(req) };
     try {
-      const res: { search_id?: string; detail?: unknown } = await startSearch("", { ...structured(full), ...(targetMode && hotelName.trim() ? { hotel_name: hotelName.trim(), platforms: sites } : {}) });
+      const res: { search_id?: string; detail?: unknown } = await startSearch("", { ...structured(full) });
       if (!res?.search_id) throw new Error(res?.detail ? JSON.stringify(res.detail).slice(0, 160) : "the service did not return a search id");
       saveSearch(full, res.search_id);
       router.push(`/investigation?id=${encodeURIComponent(res.search_id)}`);
@@ -172,26 +163,7 @@ export function SearchForm() {
         </div>
       </div>
 
-      {targetMode && (
-        <fieldset>
-          <legend>{live ? "Which hotel? (recommended)" : "Check one hotel"}</legend>
-          <div className="field">
-            <input type="text" aria-label="Hotel name" placeholder="Hotel name, e.g. La Marvella" value={hotelName} onChange={(e) => setHotelName(e.target.value)} />
-          </div>
-          <div className="chips">
-            {[["cleartrip", "Cleartrip"], ["agoda", "Agoda"], ["booking", "Booking.com"]].map(([v, label]) => (
-              <button key={v} type="button" className="chip-btn" aria-pressed={sites.includes(v)} onClick={() => setSites((s) => (s.includes(v) ? s.filter((x) => x !== v) : [...s, v]))}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <p className="fine">
-            {live
-              ? "Live mode uses real browser agents and TinyFish credits. Name a hotel to check just that one: about 4 minutes on one site. Leave it empty for a full city search, which can take 15 minutes or more."
-              : "Checks only this hotel on the sites you pick. Fewer sites means a shorter, cheaper run."}
-          </p>
-        </fieldset>
-      )}
+      
 
       <fieldset>
         <legend>Must have</legend>
@@ -226,7 +198,7 @@ export function SearchForm() {
 
       <div className="form-foot">
         <p>
-          We check 3 sites like a real buyer, as a guest, and never pay. About 3–5 minutes.{" "}
+          We check Cleartrip, Agoda and Booking.com like a real buyer, as a guest, and never pay. This can take several minutes.{" "}
           <button type="button" className="linkish" onClick={() => dlg.current?.showModal()}>How we stay safe</button>
         </p>
         <button className="btn" type="submit" disabled={busy || mode === "down" || (touched && !valid)}>

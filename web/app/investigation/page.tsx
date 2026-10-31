@@ -16,7 +16,7 @@ const PHASE_TEXT: Record<Phase, string> = {
   parsing: "Reading your request",
   discovering: "Finding listings on 3 sites",
   grouping: "Matching the same hotel across sites",
-  verifying: "Checking like a real buyer. This usually takes 3 to 5 minutes.",
+  verifying: "Checking each site like a real buyer. This can take several minutes.",
   done: "Investigation complete",
   error: "The investigation hit an error",
 };
