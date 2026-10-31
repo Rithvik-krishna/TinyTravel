@@ -1,2 +1,57 @@
-@tailwind base; @tailwind components; @tailwind utilities;
-body { @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --brand: #0284c7;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+
+  /* Aliases for reference component and shadcn tokens */
+  --color-foreground: var(--text);
+  --color-background: var(--surface);
+  --color-card: var(--surface-2);
+  --color-card-foreground: var(--text);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--text-muted);
+  --color-border: var(--border);
+  --color-ring: var(--brand);
+  --color-chart-2: var(--success);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0b0f19;
+    --surface-2: #131b2e;
+    --border: #1e293b;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --brand: #38bdf8;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #60a5fa;
+
+    --color-foreground: var(--text);
+    --color-background: var(--surface);
+    --color-card: var(--surface-2);
+    --color-card-foreground: var(--text);
+    --color-muted: var(--surface-2);
+    --color-muted-foreground: var(--text-muted);
+    --color-border: var(--border);
+    --color-ring: var(--brand);
+    --color-chart-2: var(--success);
+  }
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text);
+}
