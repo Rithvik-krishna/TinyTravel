@@ -6,9 +6,8 @@ import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
 import { useBackendMode } from "@/lib/extras";
 import { PlaceInput } from "@/components/flow/PlaceInput";
-import { placeLabel } from "@/lib/places";
 import { inr } from "@/lib/format";
-import { applySentence, buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
+import { buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
 
 const MUST: Array<[keyof MustHave, string]> = [
   ["breakfast", "Breakfast"],
@@ -92,25 +91,13 @@ export function SearchForm() {
   const [touched, setTouched] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [nl, setNl] = useState("");
-  const [nlMsg, setNlMsg] = useState("");
-  // Single-hotel check: opened with /book?target=1. Skips broad discovery, so a live run is one hotel on the chosen sites.
   const mode = useBackendMode();
   const live = mode === "live";
   // In live mode the one-hotel check is the default: a full city search runs many paid browser agents.
   const targetMode = useSearchParams().get("target") === "1" || live;
   const [hotelName, setHotelName] = useState("");
   const [sites, setSites] = useState<string[]>(["cleartrip"]);
-  const fillIn = () => {
-    if (!nl.trim()) return;
-    const next = applySentence(req, nl, today);
-    if (JSON.stringify(next) === JSON.stringify(req)) {
-      setNlMsg("We could not read details from that. Try something like: Bengaluru, 20-21 Nov, 2 people, under 12k.");
-      return;
-    }
-    setReq(next);
-    setNlMsg("Filled in. Check the details below, then press Verify prices.");
-  };
+
   const dlg = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -156,11 +143,7 @@ export function SearchForm() {
   return (
     <form className="sform" onSubmit={submit} noValidate aria-label="Search hotels">
       <h2 className="sf-title">Find your stay</h2>
-      <div className="nlrow">
-        <PlaceInput freeText ariaLabel="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(v) => { setNl(v); setNlMsg(""); }} onPick={(p) => { setReq((r) => ({ ...r, destination: p.city, area_hint: p.area ?? "" })); setNl(""); setNlMsg(`Destination set to ${placeLabel(p)}. Now pick your dates below, or type more details here.`); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); fillIn(); } }} />
-        <button className="btn ghost sm" type="button" onClick={fillIn}>Fill in</button>
-      </div>
-      {nlMsg && <p className="fine" role="status">{nlMsg}</p>}
+      
       <div className="fgrid">
         <div className="field f-wide">
           <label htmlFor="dest">Where to?</label>
