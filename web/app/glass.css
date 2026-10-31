@@ -226,3 +226,16 @@ body .tt .steps{grid-template-columns:repeat(3,1fr)}
   body .tt .steps .step{border-left:0;border-top:1px solid var(--line)}
   body .tt .steps .step:first-child{border-top:0}
 }
+/* nav pill: win over the legacy .nav rules in landing.css and centre the links exactly */
+body .tt header.nav .navpill{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+body .tt header.nav .navpill .logo{justify-self:start}
+body .tt header.nav .navpill .navlinks{display:flex;gap:2px;margin:0;justify-self:center;position:relative;left:-7px}
+body .tt header.nav .navpill .navlinks a{color:var(--text-1);font-weight:400;font-size:15px;padding:8px 18px;opacity:1}
+body .tt header.nav .navpill .navlinks a:hover{background:var(--glass-strong)}
+body .tt header.nav .navpill .navcta{justify-self:end;margin:0}
+body .tt header.nav .navpill .menubtn{justify-self:end;margin:0}
+@media (max-width:760px){
+  body .tt header.nav .navpill{grid-template-columns:1fr auto}
+  body .tt header.nav .navpill .navlinks,body .tt header.nav .navpill .navcta{display:none}
+  body .tt header.nav .navpill .menubtn{display:inline-grid}
+}
