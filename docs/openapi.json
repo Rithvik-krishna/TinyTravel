@@ -222,6 +222,173 @@
           }
         }
       }
+    },
+    "/api/history": {
+      "get": {
+        "summary": "History",
+        "description": "Retrieve historical price observations for a hotel, ordered newest first.",
+        "operationId": "history_api_history_get",
+        "parameters": [
+          {
+            "name": "hotel",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "description": "Canonical hotel name",
+              "title": "Hotel"
+            },
+            "description": "Canonical hotel name"
+          },
+          {
+            "name": "platform",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Optional platform filter",
+              "title": "Platform"
+            },
+            "description": "Optional platform filter"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PriceHistoryItem"
+                  },
+                  "title": "Response History Api History Get"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/fee-glossary": {
+      "get": {
+        "summary": "Fee Glossary",
+        "description": "Retrieve static dictionary of common travel fee explanations and kinds.",
+        "operationId": "fee_glossary_api_fee_glossary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/FeeGlossaryItem"
+                  },
+                  "type": "object",
+                  "title": "Response Fee Glossary Api Fee Glossary Get"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/{sid}/report": {
+      "get": {
+        "summary": "Search Report",
+        "description": "Generate a self-contained, printable HTML evidence report.",
+        "operationId": "search_report_api_search__sid__report_get",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/offers/{oid}/report-fee-draft": {
+      "get": {
+        "summary": "Report Fee Draft",
+        "description": "Generate a polite, factual draft message for inquiring about an observed fee.",
+        "operationId": "report_fee_draft_api_offers__oid__report_fee_draft_get",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Oid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeeDraftResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -305,6 +472,117 @@
         ],
         "title": "Evidence"
       },
+      "FeeDraftResponse": {
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "platform": {
+            "type": "string",
+            "title": "Platform"
+          },
+          "hotel_name": {
+            "type": "string",
+            "title": "Hotel Name"
+          },
+          "subject": {
+            "type": "string",
+            "title": "Subject"
+          },
+          "draft_message": {
+            "type": "string",
+            "title": "Draft Message"
+          },
+          "observed_leak_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observed Leak Pct"
+          },
+          "observed_price_initial": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observed Price Initial"
+          },
+          "observed_price_final": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Observed Price Final"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "offer_id",
+          "platform",
+          "hotel_name",
+          "subject",
+          "draft_message"
+        ],
+        "title": "FeeDraftResponse"
+      },
+      "FeeGlossaryItem": {
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "tax",
+              "platform_fee",
+              "property_fee",
+              "add_on",
+              "other"
+            ],
+            "title": "Kind"
+          },
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description"
+          },
+          "examples": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Examples"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "kind",
+          "name",
+          "description",
+          "examples"
+        ],
+        "title": "FeeGlossaryItem"
+      },
       "FeeLine": {
         "properties": {
           "label": {
@@ -314,6 +592,25 @@
           "amount": {
             "type": "number",
             "title": "Amount"
+          },
+          "fee_kind": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "tax",
+                  "platform_fee",
+                  "property_fee",
+                  "add_on",
+                  "other"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Kind",
+            "default": "other"
           }
         },
         "additionalProperties": false,
@@ -967,6 +1264,52 @@
         ],
         "title": "Offer"
       },
+      "PriceHistoryItem": {
+        "properties": {
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "captured_at": {
+            "type": "string",
+            "title": "Captured At"
+          },
+          "run_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Run Id"
+          },
+          "offer_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Offer Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "amount",
+          "captured_at"
+        ],
+        "title": "PriceHistoryItem"
+      },
       "RankingItem": {
         "properties": {
           "offer_id": {
@@ -1140,6 +1483,17 @@
           },
           "summary_strip": {
             "$ref": "#/components/schemas/SummaryStrip"
+          },
+          "complete": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Complete"
           }
         },
         "additionalProperties": false,

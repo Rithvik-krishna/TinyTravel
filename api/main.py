@@ -3,21 +3,42 @@ import json
 import logging
 import os
 from pathlib import Path
+from typing import Optional
 import uuid
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, HTMLResponse
 
 try:
-    from .models import SearchInput, SearchResponse, ResultsResponse, HandoffPack, Recheck, SearchRequestOut
+    from .models import (
+        SearchInput,
+        SearchResponse,
+        ResultsResponse,
+        HandoffPack,
+        Recheck,
+        SearchRequestOut,
+        PriceHistoryItem,
+        FeeGlossaryItem,
+        FeeDraftResponse,
+    )
     from .services.intake import parse_request
     from .services.orchestrator import run_search, get_search_queue, get_search_results
-    from .db import get_events, get_search
+    from .db import get_events, get_search, get_price_history, get_offer
 except ImportError:
-    from models import SearchInput, SearchResponse, ResultsResponse, HandoffPack, Recheck, SearchRequestOut
+    from models import (
+        SearchInput,
+        SearchResponse,
+        ResultsResponse,
+        HandoffPack,
+        Recheck,
+        SearchRequestOut,
+        PriceHistoryItem,
+        FeeGlossaryItem,
+        FeeDraftResponse,
+    )
     from services.intake import parse_request
     from services.orchestrator import run_search, get_search_queue, get_search_results
-    from db import get_events, get_search
+    from db import get_events, get_search, get_price_history, get_offer
 
 logger = logging.getLogger("tinytravel.api")
 DATA_MODE = os.getenv("DATA_MODE", "mock")
@@ -214,3 +235,69 @@ def handoff(oid: str):
         raise HTTPException(status_code=404, detail=f"Offer '{oid}' not found")
 
     return build_handoff(offer)
+
+
+@app.get("/api/history", response_model=list[PriceHistoryItem])
+def history(
+    hotel: str = Query(..., description="Canonical hotel name"),
+    platform: Optional[str] = Query(None, description="Optional platform filter"),
+):
+    """Retrieve historical price observations for a hotel, ordered newest first."""
+    return get_price_history(hotel=hotel, platform=platform)
+
+
+@app.get("/api/fee-glossary", response_model=dict[str, FeeGlossaryItem])
+def fee_glossary():
+    """Retrieve static dictionary of common travel fee explanations and kinds."""
+    try:
+        from services.fees import FEE_GLOSSARY
+    except ImportError:
+        from .services.fees import FEE_GLOSSARY
+    return FEE_GLOSSARY
+
+
+@app.get("/api/search/{sid}/report", response_class=HTMLResponse)
+def search_report(sid: str):
+    """Generate a self-contained, printable HTML evidence report."""
+    mode = os.getenv("DATA_MODE", "mock")
+    res = None
+    if mode == "mock":
+        res = demo
+    else:
+        res = get_search_results(sid)
+        if not res:
+            rec = get_search(sid)
+            if rec and rec.get("results"):
+                res = rec["results"]
+
+    if not res:
+        if sid in ("demo", "test", "demo_run"):
+            res = demo
+        else:
+            raise HTTPException(status_code=404, detail=f"Search '{sid}' results not found")
+
+    try:
+        from services.reporting import generate_html_report
+    except ImportError:
+        from .services.reporting import generate_html_report
+
+    return HTMLResponse(content=generate_html_report(res, search_id=sid))
+
+
+@app.get("/api/offers/{oid}/report-fee-draft", response_model=FeeDraftResponse)
+def report_fee_draft(oid: str):
+    """Generate a polite, factual draft message for inquiring about an observed fee."""
+    offer = get_offer(oid)
+    if not offer:
+        offer = next((o for o in demo.get("offers", []) if o.get("offer_id") == oid), None)
+
+    if not offer:
+        raise HTTPException(status_code=404, detail=f"Offer '{oid}' not found")
+
+    try:
+        from services.reporting import generate_fee_draft
+    except ImportError:
+        from .services.reporting import generate_fee_draft
+
+    return generate_fee_draft(offer)
+

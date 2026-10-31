@@ -19,6 +19,7 @@ try:
         determine_status,
         transparency_score,
     )
+    from ..services.fees import classify_fee_label
 except ImportError:
     from models import ProbeResult, Offer
     from services.tinyfish import run_agent, AgentRun
@@ -30,6 +31,7 @@ except ImportError:
         determine_status,
         transparency_score,
     )
+    from services.fees import classify_fee_label
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -183,7 +185,15 @@ async def verify_offer(
     price_listing = probe_data.get("price_shown_on_listing")
     price_room = probe_data.get("price_shown_on_room_selection")
     price_payable = probe_data.get("price_final_payable")
-    fee_lines = probe_data.get("fee_lines") or []
+    raw_fee_lines = probe_data.get("fee_lines") or []
+    fee_lines = []
+    for fl in raw_fee_lines:
+        if isinstance(fl, dict):
+            fl_copy = dict(fl)
+            fl_copy["fee_kind"] = fl_copy.get("fee_kind") or classify_fee_label(fl_copy.get("label", ""))
+            fee_lines.append(fl_copy)
+        else:
+            fee_lines.append(fl)
     price_trail = probe_data.get("price_trail") or []
     currency = probe_data.get("currency") or "INR"
 

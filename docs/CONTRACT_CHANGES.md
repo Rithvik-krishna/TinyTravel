@@ -48,3 +48,16 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Type**: `Optional[bool]` (defaults to `None`)
 - **Why**: Allows partial results inspection via `GET /api/search/:id/results` while runs are in progress, signaling completion status additively.
 - **Fixtures updated**: No (purely additive optional field, existing fixtures validate with extra="forbid").
+
+### 2026-10-31 - Nikhil
+- **Fee Classification and Remaining Endpoints**:
+  - **Fee Kind Attribute**: Added `fee_kind: Optional[FeeKind] = "other"` to `FeeLine` (`"tax"` | `"platform_fee"` | `"property_fee"` | `"add_on"` | `"other"`).
+  - **New Endpoints**:
+    1. `GET /api/history`: historical price ledger records for a hotel, ordered newest first (`list[PriceHistoryItem]`).
+    2. `GET /api/fee-glossary`: static dictionary of explanations for common travel fee lines (`dict[str, FeeGlossaryItem]`).
+    3. `GET /api/search/{sid}/report`: self-contained printable HTML evidence report (`HTMLResponse`).
+    4. `GET /api/offers/{oid}/report-fee-draft`: polite, factual draft inquiry message for observed fees (`FeeDraftResponse`).
+  - **Live Partial Results**: `summary_strip` counters (`listings_found`, `unique_hotels`, `verified`, `unverified`, `blocked`, `avg_fee_leak_pct`) are kept continuously updated in `ResultsResponse` during search execution.
+- **Why**: Completes all remaining backend requirements, enables UI fee categorization, and provides transparent evidence reporting.
+- **Fixtures updated**: Yes (`fixtures/demo_run.json` and `fixtures/real/gate_la_marvella_cleartrip.json` updated with classified `fee_kind` on each fee line).
+

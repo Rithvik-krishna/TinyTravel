@@ -311,6 +311,7 @@ async def run_search(
         all_listings: list[dict] = []
         hotel_groups: list[dict] = []
         target_offers_to_run: list[dict] = []
+        probed_offers: list[dict] = []
 
         if is_target_mode:
             # TARGET MODE: Run checkout directly for 1 hotel across specified platforms
@@ -397,6 +398,11 @@ async def run_search(
                 start_time,
             )
 
+            # Live update partial results
+            ACTIVE_RESULTS[search_id]["listings"] = all_listings
+            ACTIVE_RESULTS[search_id]["summary_strip"] = summary_strip(probed_offers, listings=len(all_listings))
+            update_search(search_id, results=ACTIVE_RESULTS[search_id])
+
             # Deduplication
             hotel_groups = group_listings(all_listings)
 
@@ -407,6 +413,7 @@ async def run_search(
                 {"hotel_groups": hotel_groups},
                 start_time,
             )
+            ACTIVE_RESULTS[search_id]["hotel_groups"] = hotel_groups
 
             # Target Selection
             budget_limit = req_dict.get("budget_per_night")
@@ -474,7 +481,6 @@ async def run_search(
 
         cumulative_spend_usd = 0.0
         spend_lock = asyncio.Lock()
-        probed_offers: list[dict] = []
 
         async def run_checkout_task(item: dict) -> dict:
             nonlocal cumulative_spend_usd
@@ -505,6 +511,9 @@ async def run_search(
                         notes="Skipped: MAX_SPEND_USD limit reached",
                         mock=is_mock,
                     )
+                    probed_offers.append(unverified_offer)
+                    ACTIVE_RESULTS[search_id]["offers"] = list(probed_offers)
+                    ACTIVE_RESULTS[search_id]["summary_strip"] = summary_strip(probed_offers, listings=len(all_listings))
                     return unverified_offer
 
             async with semaphore:
@@ -597,17 +606,24 @@ async def run_search(
                         amount=float(offer_res["price_final_payable"]),
                         captured_at=offer_res.get("finished_at") or datetime.now(IST).isoformat(),
                         offer_id=offer_id,
+                        run_id=actual_run_id,
+                        currency=offer_res.get("currency", "INR"),
                     )
+
+                # Live update partial results as each offer completes
+                probed_offers.append(offer_res)
+                ACTIVE_RESULTS[search_id]["offers"] = list(probed_offers)
+                ACTIVE_RESULTS[search_id]["summary_strip"] = summary_strip(probed_offers, listings=len(all_listings))
+                update_search(search_id, results=ACTIVE_RESULTS[search_id])
 
                 return offer_res
 
         # Run checkout agents concurrently
         if target_offers_to_run:
-            results = await asyncio.gather(
+            await asyncio.gather(
                 *(run_checkout_task(item) for item in target_offers_to_run),
                 return_exceptions=False,
             )
-            probed_offers.extend(results)
 
         # 4. Final Scoring, Ranking, Verdicts, and Response Assembly
         # Build Hotels list
