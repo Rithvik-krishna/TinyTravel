@@ -8,6 +8,7 @@ import { useResults, useSearchId } from "@/lib/flow";
 import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell";
 import { VerdictSection } from "@/components/landing/VerdictSection";
 import { Provenance } from "@/components/landing/Provenance";
+import { ReportLink } from "@/components/flow/ReportLink";
 
 function Inner() {
   const { id, ready } = useSearchId();
@@ -17,7 +18,15 @@ function Inner() {
   const [hotel, setHotel] = useState<string | null>(null);
   const [handoff, setHandoff] = useState<Handoff | null>(null);
 
-  const hotelId = hotel ?? data?.verdicts?.hero_hotel_id ?? groups[0]?.hotel_id ?? null;
+  // Only hotels that have offers can have a verdict; default to the hero hotel, else the first one with a pick.
+  const withOffers = groups.filter((g) => tags.some((t) => t.hotelId === g.hotel_id));
+  const hasPick = (hid?: string) => {
+    const p = hid ? data?.verdicts?.per_hotel?.[hid] : undefined;
+    return !!(p && (p.cheapest_verified || p.safe_cheapest || p.best_for_you));
+  };
+  const hero = data?.verdicts?.hero_hotel_id;
+  const defaultHotel = (hero && withOffers.some((g) => g.hotel_id === hero) && hasPick(hero) ? hero : withOffers.find((g) => hasPick(g.hotel_id))?.hotel_id) ?? withOffers[0]?.hotel_id ?? null;
+  const hotelId = hotel ?? defaultHotel;
   const pick = hotelId ? data?.verdicts?.per_hotel?.[hotelId] : undefined;
   const handoffId = pick?.best_for_you ?? pick?.safe_cheapest ?? null;
 
@@ -49,21 +58,22 @@ function Inner() {
         <span className="eyebrow">Step 5 of 5</span>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", marginTop: 10 }}>
           <Provenance meta={data._meta} />
-          {groups.length > 1 && (
+          {withOffers.length > 1 && (
             <div className="seg" role="group" aria-label="Hotel">
-              {groups.map((g) => (
+              {withOffers.map((g) => (
                 <button key={g.hotel_id} type="button" aria-pressed={g.hotel_id === hotelId} onClick={() => setHotel(g.hotel_id ?? null)}>{g.canonical_name}</button>
               ))}
             </div>
           )}
         </div>
       </div>
+      {data.complete !== false && <div className="wrap" style={{ paddingTop: 12 }}><ReportLink searchId={id} /></div>}
       {data.complete === false && <div className="wrap" style={{ paddingTop: 16 }}><div className="notice warn" role="status">The investigation is still running, so the verdict is not final yet.</div></div>}
       {pick && data.complete !== false && (pick.cheapest_verified || pick.safe_cheapest || pick.best_for_you) ? (
         <VerdictSection hotelName={name} tags={tags} pick={pick} warnings={data.verdicts?.non_comparable_warnings ?? []} handoff={shownHandoff} searchId={id} />
       ) : data.complete === false ? null : (
         <div className="wrap" style={{ paddingBlock: 40 }}>
-          <div className="notice warn">No verified offer meets the criteria for this hotel, so we don&apos;t name a pick.</div>
+          <div className="notice warn">No offer was verified at the payment page for this hotel, so we don&apos;t name a pick. The results page shows what was found.</div>
         </div>
       )}
     </main>

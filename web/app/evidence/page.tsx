@@ -10,6 +10,8 @@ import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell
 import { PriceTrail } from "@/components/landing/PriceTrail";
 import { FeeBreakdown } from "@/components/landing/FeeBreakdown";
 import { Provenance } from "@/components/landing/Provenance";
+import { FeeDraftButton } from "@/components/flow/FeeDraftButton";
+import { PriceHistory } from "@/components/flow/PriceHistory";
 
 interface RawOffer {
   offer_id?: string;
@@ -58,7 +60,7 @@ function Inner() {
             {groups.map((g) => (
               <optgroup key={g.hotel_id} label={g.canonical_name}>
                 {tags.filter((t) => (g.offer_ids ? g.offer_ids.includes(t.id) : t.hotelId === g.hotel_id)).map((t) => (
-                  <option key={t.id} value={t.id}>{t.platform} · {t.status}{t.payable != null ? ` · ${inr(t.payable, t.currency)}` : ""}</option>
+                  <option key={t.id} value={t.id}>{t.platform} · {t.status}{t.status === "verified" && t.payable != null ? ` · ${inr(t.payable, t.currency)}` : ""}</option>
                 ))}
               </optgroup>
             ))}
@@ -76,6 +78,7 @@ function Inner() {
             <p className="lede">
               {offer.status === "blocked" ? `${blockerLabel(offer.blocker)}. We never solve captchas, log in or enter an OTP.` : "No payable price was captured at the payment page."}{" "}
               There is no fee gap and no score for this offer.
+              {offer.price_trail.some((p) => p.step === "payment") && " The payment-page amount in the trail below was observed but not confirmed, so treat it as unverified."}
             </p>
             <dl>
               <div><dt>Furthest step</dt><dd>{raw?.furthest_step ?? "N/A"}</dd></div>
@@ -97,15 +100,18 @@ function Inner() {
             {offer.cancellation_policy && <div><dt>Cancellation</dt><dd>{offer.cancellation_policy}</dd></div>}
           </dl>
           {pressure.length > 0 && (
-            <div className="tags">{pressure.map((m) => <span className="badge" key={m}>Site message: {m}</span>)}</div>
+            <div className="tags">{Array.from(new Set(pressure)).map((m) => <span className="badge" key={m}>Site message: {m}</span>)}</div>
           )}
           {addons.length > 0 && (
             <div className="tags">{addons.map((a, i) => <span className="badge" key={i}>Pre-selected by the site: {typeof a === "string" ? a : JSON.stringify(a)}</span>)}</div>
           )}
           <p className="note" style={{ marginTop: 4 }}>
-            {[raw?.steps != null && `${raw.steps} steps checked`, at && `verified at ${at}`].filter(Boolean).join(" · ")}
+            {[raw?.steps != null && `${raw.steps} steps checked`, at && `${verified ? "verified" : "checked"} at ${at}`].filter(Boolean).join(" · ")}
           </p>
         </div>
+
+        {verified && <div style={{ marginTop: 16 }}><FeeDraftButton offerId={offer.id} /></div>}
+        <PriceHistory hotel={offer.groupName ?? offer.title} platform={offer.platform} />
 
         <div className="cta-bar">
           <Link className="btn" href={withId("/verdict", id)}>See verdict</Link>

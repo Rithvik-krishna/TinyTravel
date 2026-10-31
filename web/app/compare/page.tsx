@@ -20,6 +20,7 @@ function Inner() {
   const warnings = data?.verdicts?.non_comparable_warnings ?? [];
   const ncIds = new Set(warnings.map((w) => w.offer_id));
   const groups = data?.hotel_groups ?? [];
+  const unchecked = groups.filter((g) => !tags.some((t) => (g.offer_ids ? g.offer_ids.includes(t.id) : t.hotelId === g.hotel_id)));
 
   if (ready && !id) return <EmptyState title="Start a search first" body="There are no results to compare yet." />;
   if (loading || !ready) return <main className="page"><div className="wrap"><LoadingBlock label="Loading results" /></div></main>;
@@ -60,6 +61,7 @@ function Inner() {
           groups.map((g) => {
             const merged = g.match_status === "merged";
             const items = tags.filter((t) => (g.offer_ids ? g.offer_ids.includes(t.id) : t.hotelId === g.hotel_id)).filter(visible).sort(byPayable);
+            if (items.length === 0) return null; // hotels we found but did not check are listed separately below
             const pick = g.hotel_id ? data.verdicts?.per_hotel?.[g.hotel_id] : undefined;
             const scaleMax = Math.max(0, ...items.map((x) => Math.max(x.listing ?? 0, x.payable ?? 0)));
             const gw = warnings.filter((w) => w.hotel_id === g.hotel_id || (w.offer_id && g.offer_ids?.includes(w.offer_id)));
@@ -86,6 +88,18 @@ function Inner() {
               </div>
             );
           })
+        )}
+
+        {mode === "hotel" && unchecked.length > 0 && (
+          <div className="hotel-card" style={{ marginTop: 8 }}>
+            <h2 style={{ fontSize: 20 }}>Other hotels we found</h2>
+            <p className="muted" style={{ fontSize: 14 }}>We did not check these at the payment page, so there are no prices to show for them.</p>
+            <ul style={{ margin: 0, paddingLeft: 18, display: "grid", gap: 4, color: "var(--muted)" }}>
+              {unchecked.map((g) => (
+                <li key={g.hotel_id ?? g.canonical_name}><span style={{ color: "var(--fg)" }}>{g.canonical_name}</span>{g.area ? ` · ${g.area}` : ""}</li>
+              ))}
+            </ul>
+          </div>
         )}
 
         <div className="cta-bar">
