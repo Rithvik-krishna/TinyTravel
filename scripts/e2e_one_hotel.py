@@ -6,6 +6,7 @@ Supports DATA_MODE=fake out of the box and --live --yes-spend for real runs.
 import argparse
 import asyncio
 from datetime import datetime
+import json
 import os
 import sys
 import time
@@ -15,6 +16,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+
+from dotenv import load_dotenv
+load_dotenv(ROOT / ".env", override=True)
+load_dotenv(override=True)
+
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
 
 from api.models import ResultsResponse, SearchRequestOut
 from api.services.orchestrator import run_search, get_search_queue
@@ -131,6 +143,46 @@ async def main_async(args: argparse.Namespace) -> int:
         tscore = o.get("transparency", {}).get("score")
         score_str = f"{tscore}/100" if tscore is not None else "N/A"
         print(f"{site:<14} | {st:<10} | {shown:<10} | {final:<10} | {leak:<8} | {score_str:<6}")
+
+        # If live or if requested, save offer to fixtures/real/
+        hslug = args.hotel.lower().replace(" ", "_")
+        sslug = site.lower().replace(".", "").replace(" ", "")
+        if sslug == "cleartrip":
+            real_fixtures_dir = ROOT / "fixtures" / "real"
+            real_fixtures_dir.mkdir(parents=True, exist_ok=True)
+            offer_path = real_fixtures_dir / f"gate_{hslug}_{sslug}.json"
+            offer_path.write_text(json.dumps(o, indent=2), encoding="utf-8")
+            print(f"\n[SAVED OFFER] Saved processed offer to {offer_path}")
+
+        # Verification audit details
+        print("\n--- GATE AUDIT CHECKLIST ---")
+        print(f"Hotel URL            : {o.get('hotel_url')}")
+        print(f"Reached Payment Page : {o.get('reached_payment_page')}")
+        print(f"Price Final Payable  : {o.get('price_final_payable')} {o.get('currency')}")
+        print(f"Meal Plan            : {o.get('meal_plan')}")
+        print(f"Cancellation Cat     : {o.get('cancellation_category')} ({o.get('cancellation_policy')})")
+
+        fee_lines = o.get("fee_lines") or []
+        fee_sum = sum(fl.get("amount", 0) for fl in fee_lines)
+        payable = o.get("price_final_payable") or 0.0
+        diff = abs(fee_sum - payable)
+        tol = 0.01 * payable if payable else 0.0
+        recon_ok = bool(payable and diff <= tol)
+        print(f"Fee Lines Sum        : {fee_sum:,.2f} vs Payable: {payable:,.2f} (diff: {diff:.2f}, within 1%: {recon_ok})")
+
+        price_trail = o.get("price_trail") or []
+        steps_found = [pt.get("step") for pt in price_trail]
+        print(f"Price Trail Steps    : {steps_found}")
+
+        evidence_items = o.get("evidence") or []
+        print(f"Evidence Count       : {len(evidence_items)}")
+        for idx, ev in enumerate(evidence_items):
+            print(f"  [{idx+1}] Type: {ev.get('type')} | Step: {ev.get('step')} | URL: {ev.get('url')} | Value: {ev.get('extracted_value')}")
+        if o.get("listing_page_text"):
+            print(f"Listing Page Text    : {o.get('listing_page_text')[:120]}...")
+        if o.get("payment_page_text"):
+            print(f"Payment Page Text    : {o.get('payment_page_text')[:120]}...")
+        print("----------------------------\n")
 
     # Print verdicts
     verdicts = results.get("verdicts", {})

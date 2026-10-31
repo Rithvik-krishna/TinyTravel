@@ -1,0 +1,122 @@
+{
+  "offer_id": "h1_cleartrip",
+  "hotel_id": "h1",
+  "run_id": "d82b558c-6630-4113-bf65-a405a8a2f58c",
+  "streaming_url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-b4cce668-4378-42bb-8ced-ea96ab7c3bf6/stream/2",
+  "started_at": "2026-10-31T13:46:31.027384+05:30",
+  "finished_at": "2026-10-31T13:51:45.147595+05:30",
+  "steps": 30,
+  "cost_usd": 0.48,
+  "status": "verified",
+  "reconciliation": "ok",
+  "cancellation_category": "non_refundable",
+  "site": "Cleartrip",
+  "reached_payment_page": true,
+  "furthest_step": "payment",
+  "blocker": null,
+  "hotel_name": "La Marvella",
+  "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-bengaluru-2050898?c=20112026|21112026&city=Bangalore&state=Karnataka&country=IN&r=2,0",
+  "room_type": "Executive Twin (City view)",
+  "max_occupancy": 3,
+  "meal_plan": "Breakfast included",
+  "cancellation_policy": "Non-refundable (cancellation charges apply / no refund)",
+  "price_shown_on_listing": 8867.0,
+  "price_shown_on_room_selection": 8867.0,
+  "price_final_payable": 11933.0,
+  "fee_lines": [
+    {
+      "label": "1 room x 1 night",
+      "amount": 15639.0
+    },
+    {
+      "label": "Hotel taxes",
+      "amount": 1971.0
+    },
+    {
+      "label": "Property discount",
+      "amount": -4692.0
+    },
+    {
+      "label": "Coupon discount (CTHOTEL)",
+      "amount": -2080.0
+    },
+    {
+      "label": "Convenience fee",
+      "amount": 1095.0
+    }
+  ],
+  "preselected_addons": [
+    "CTHOTEL coupon pre-applied"
+  ],
+  "urgency_or_scarcity_messages": [
+    "Total saving of \u20b96,772!",
+    "24 month EMI available at \u20b9525/mo"
+  ],
+  "price_trail": [
+    {
+      "step": "listing",
+      "amount": 8867.0,
+      "currency": "INR"
+    },
+    {
+      "step": "room",
+      "amount": 11933.0,
+      "currency": "INR"
+    },
+    {
+      "step": "traveller_details",
+      "amount": 11933.0,
+      "currency": "INR"
+    },
+    {
+      "step": "payment",
+      "amount": 11933.0,
+      "currency": "INR"
+    }
+  ],
+  "currency": "INR",
+  "notes": "Cheapest room (Executive Twin, \u20b98,867/night + \u20b93,066 taxes = \u20b911,933 total). Breakfast included but NO free cancellation (non-refundable rate). Guest details filled: Name: Test Guest, Email: test.guest+probe@example.com, Phone: 9000000000. Stopped at payment page without entering payment details. Listing page text from hotel card: Ad | La Marvella | 4.8 | 5-star Resort, Jayanagar | 1k+ ratings | \u20b98,867 + \u20b93,065 taxes & fees / night | \u20b912,297 total",
+  "fee_leak_pct": 34.6,
+  "evidence": [
+    {
+      "type": "recording",
+      "url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-b4cce668-4378-42bb-8ced-ea96ab7c3bf6/stream/2",
+      "step": "payment",
+      "captured_at": "2026-10-31T13:51:45.147595+05:30",
+      "extracted_value": 11933.0,
+      "currency": "INR",
+      "mock": false
+    },
+    {
+      "type": "page_text",
+      "url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-b4cce668-4378-42bb-8ced-ea96ab7c3bf6/stream/2",
+      "step": "listing",
+      "captured_at": "2026-10-31T13:46:31.027384+05:30",
+      "extracted_value": 8867.0,
+      "currency": "INR",
+      "mock": false
+    },
+    {
+      "type": "page_text",
+      "url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-b4cce668-4378-42bb-8ced-ea96ab7c3bf6/stream/2",
+      "step": "payment",
+      "captured_at": "2026-10-31T13:51:45.147595+05:30",
+      "extracted_value": 11933.0,
+      "currency": "INR",
+      "mock": false
+    }
+  ],
+  "mock": false,
+  "transparency": {
+    "score": 23.0,
+    "breakdown": {
+      "fee_leak": 6.8,
+      "addons_pressure": 5.0,
+      "price_stability": null,
+      "evidence": 6.7
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+  },
+  "listing_page_text": "Ad | La Marvella | 4.8 | 5-star Resort, Jayanagar | 1k+ ratings | \u20b98,867 + \u20b93,065 taxes & fees / night | \u20b912,297 total",
+  "payment_page_text": "Price Breakdown: 1 room x 1 night: 15,639 | Hotel taxes: 1,971 | Property discount: -4,692 | Coupon discount (CTHOTEL): -2,080 | Convenience fee: 1,095 | Total: 11933 | Cancellation: Non-refundable | Total saving of \u20b96,772! | 24 month EMI available at \u20b9525/mo"
+}
