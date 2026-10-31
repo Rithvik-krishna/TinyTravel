@@ -7,7 +7,8 @@ import { usePathname } from "next/navigation";
 export function DevHeader() {
   const pathname = usePathname();
   // Replace the dev nav links on "/"
-  if (pathname === "/") {
+  // Product pages carry their own header; the dev links only remain on the scaffold onboarding page.
+  if (pathname !== "/onboarding") {
     return null;
   }
 

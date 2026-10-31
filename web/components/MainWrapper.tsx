@@ -7,7 +7,7 @@ export function MainWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   return (
-    <main className={pathname === "/" ? "w-full" : "max-w-5xl mx-auto p-4"}>
+    <main className={pathname !== "/onboarding" ? "w-full" : "max-w-5xl mx-auto p-4"}>
       {children}
     </main>
   );
