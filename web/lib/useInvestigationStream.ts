@@ -19,6 +19,8 @@ export interface StreamState {
   listings: number | null;
   hotels: number | null;
   error: string | null;
+  /** From the error event: true means the user can retry the same search. */
+  recoverable: boolean;
   agents: Record<string, AgentState>; // by run_id
 }
 
@@ -27,7 +29,7 @@ export interface StreamEvent {
   data: unknown;
 }
 
-export const emptyStream: StreamState = { phase: "idle", listings: null, hotels: null, error: null, agents: {} };
+export const emptyStream: StreamState = { phase: "idle", listings: null, hotels: null, error: null, recoverable: false, agents: {} };
 
 function rec(v: unknown): Record<string, unknown> {
   return typeof v === "object" && v !== null ? (v as Record<string, unknown>) : {};
@@ -77,7 +79,7 @@ export function reduceStream(state: StreamState, ev: StreamEvent): StreamState {
     case "ranking_ready":
       return { ...state, phase: "done" };
     case "error":
-      return { ...state, phase: "error", error: str(d.message) || "The investigation reported an error." };
+      return { ...state, phase: "error", error: str(d.message) || "The investigation reported an error.", recoverable: d.recoverable === true };
     default:
       return state;
   }

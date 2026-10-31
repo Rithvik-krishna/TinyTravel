@@ -146,8 +146,12 @@ function Inner() {
 
         {state.phase === "error" && (
           <div className="notice bad" role="alert" style={{ marginBottom: 20 }}>
-            {state.error}{" "}
-            <button className="linkish" type="button" onClick={() => setRun((r) => r + 1)}>Retry</button>
+            <strong>Something went wrong.</strong> {state.error}{" "}
+            {state.recoverable ? (
+              <button className="linkish" type="button" onClick={() => setRun((r) => r + 1)}>Try again</button>
+            ) : (
+              <Link className="linkish" href="/book">Start a new search</Link>
+            )}
           </div>
         )}
 
