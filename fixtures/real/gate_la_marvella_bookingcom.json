@@ -1,0 +1,109 @@
+{
+  "offer_id": "h1_booking",
+  "hotel_id": "h1",
+  "run_id": "90ff5677-3d75-47f9-a037-34327dea1e6a",
+  "streaming_url": "https://ip-3-101-12-17.tetra-data.production.tinyfish.io/tf-c388527a-1c1b-41d1-a538-1f97bbb4dd38/stream/1",
+  "started_at": "2026-10-31T17:42:52.434488+05:30",
+  "finished_at": "2026-10-31T17:49:01.337394+05:30",
+  "steps": 32,
+  "cost_usd": 0.512,
+  "status": "unverified",
+  "reconciliation": "mismatch",
+  "cancellation_category": "free",
+  "site": "booking.com",
+  "reached_payment_page": true,
+  "furthest_step": "payment_step",
+  "blocker": null,
+  "hotel_name": "La Marvella, Bengaluru",
+  "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html",
+  "room_type": "Executive Room",
+  "max_occupancy": 2,
+  "meal_plan": "Breakfast included in the price",
+  "cancellation_policy": "Free cancellation before November 18, 2026",
+  "price_shown_on_listing": 9836.0,
+  "price_shown_on_room_selection": 14297.93,
+  "price_final_payable": 14297.93,
+  "fee_lines": [
+    {
+      "label": "Original price",
+      "amount": 18052.94,
+      "fee_kind": "other"
+    },
+    {
+      "label": "Bonus savings (21% off)",
+      "amount": -3755.01,
+      "fee_kind": "other"
+    },
+    {
+      "label": "Goods and services tax (included)",
+      "amount": 2181.04,
+      "fee_kind": "tax"
+    }
+  ],
+  "preselected_addons": [],
+  "urgency_or_scarcity_messages": [
+    "Stay flexible: You can cancel for free before November 18, 2026 \u2013 lock in this great price today."
+  ],
+  "price_trail": [
+    {
+      "step": "listing",
+      "amount": 9836.0,
+      "currency": "INR"
+    },
+    {
+      "step": "room",
+      "amount": 14297.93,
+      "currency": "INR"
+    },
+    {
+      "step": "traveller_details",
+      "amount": 14297.93,
+      "currency": "INR"
+    },
+    {
+      "step": "payment",
+      "amount": 14297.93,
+      "currency": "INR"
+    }
+  ],
+  "currency": "INR",
+  "notes": "Guest 'Test Guest' with email test.guest+probe@example.com and phone 9000000000 filled in. Room: Executive Room, 1 night (Nov 20-21, 2026), 1 room, 2 adults. Cheapest room for 2 adults with free cancellation and breakfast included selected. Original price Rs. 18,053, discounted to Rs. 14,297.93 (includes Rs. 2,181.04 GST). Listing price shown was Rs. 9,836 (displayed at 21% off). No other fees or preselected add-ons detected. Booking.com stopped at traveller details / payment page - no payment details entered, no login attempted.",
+  "fee_leak_pct": null,
+  "evidence": [
+    {
+      "type": "recording",
+      "url": "https://ip-3-101-12-17.tetra-data.production.tinyfish.io/tf-c388527a-1c1b-41d1-a538-1f97bbb4dd38/stream/1",
+      "step": "payment",
+      "captured_at": "2026-10-31T17:49:01.337394+05:30",
+      "extracted_value": 14297.93,
+      "currency": "INR",
+      "mock": false
+    },
+    {
+      "type": "page_text",
+      "url": "/evidence/h1_booking_listing.txt",
+      "step": "listing",
+      "captured_at": "2026-10-31T17:42:52.434488+05:30",
+      "extracted_value": 9836.0,
+      "currency": "INR",
+      "mock": false
+    },
+    {
+      "type": "page_text",
+      "url": "/evidence/h1_booking_payment.txt",
+      "step": "payment",
+      "captured_at": "2026-10-31T17:49:01.337394+05:30",
+      "extracted_value": 14297.93,
+      "currency": "INR",
+      "mock": false
+    }
+  ],
+  "mock": false,
+  "listing_page_text": "La Marvella, Bengaluru | Featured | This property matches your criteria and may be ranked higher in search results due to Booking.com Preferred Partner Program participation. 14th Cross, 2nd Block Jayanagar, Bangalore, 560011. Scored 7.9 Good, 300 reviews. From Rs. 9,836 (21% off Rs. 12,411).",
+  "payment_page_text": "Executive Room | Breakfast included in the price | Rated excellent 26 reviews, 8.8 Excellent | Includes 10% off food/drink + valet parking + early check-in + high-speed internet | Your price summary: Original price Rs. 18,052.94, Bonus savings, Includes Rs. 2,181.04 in taxes and fees (Goods and services tax). Free cancellation before November 18, 2026. Guests: 2 adults | Total: Rs. 14,297.93",
+  "transparency": {
+    "score": null,
+    "breakdown": null,
+    "note": "N/A (not verified)"
+  }
+}
