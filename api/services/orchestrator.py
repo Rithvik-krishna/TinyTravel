@@ -400,6 +400,19 @@ async def run_search(
                 by_platform_count[p] = len(res_listings)
                 all_listings.extend(res_listings)
 
+            # Nothing found on the first site: try the other sites one at a time (never in parallel, to avoid queueing).
+            if not all_listings and not _fake_run:
+                for _p in [x for x in all_platforms if x not in platforms]:
+                    try:
+                        _res = await discover(_p, req_dict)
+                    except Exception as exc:
+                        logger.warning("Fallback discovery failed for %s: %s", _p, exc)
+                        _res = []
+                    by_platform_count[_p] = len(_res)
+                    if _res:
+                        all_listings.extend(_res)
+                        break
+
             # Event 3: listings_found
             await emit_event(
                 search_id,

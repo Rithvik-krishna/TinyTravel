@@ -143,15 +143,21 @@ async def discover(
     goal = build_discovery_goal(req, platform)
     schema = DiscoveryResult.model_json_schema()
 
-    run: AgentRun = await run_agent(
-        url=url,
-        goal=goal,
-        output_schema=schema,
-        profile=profile,
-        timeout_s=req.get("timeout_s", int(os.getenv("DISCOVERY_TIMEOUT_S", "900"))),
-        on_stream_url=on_stream_url,
-        on_progress=on_progress,
-    )
+    # The agent sometimes finishes normally but hands back an empty list (seen live), so retry when empty.
+    attempts = max(1, int(os.getenv("DISCOVERY_ATTEMPTS", "3")))
+    run: AgentRun
+    for attempt in range(attempts):
+        run = await run_agent(
+            url=url,
+            goal=goal,
+            output_schema=schema,
+            profile=profile,
+            timeout_s=req.get("timeout_s", int(os.getenv("DISCOVERY_TIMEOUT_S", "900"))),
+            on_stream_url=on_stream_url,
+            on_progress=on_progress,
+        )
+        if isinstance(run.result, dict) and run.result.get("listings"):
+            break
 
     extracted_items = []
     if run.result and isinstance(run.result, dict):
