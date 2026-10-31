@@ -1,6 +1,7 @@
 import React from "react";
 import script from "@fixtures/sse_script.json";
 import "./landing.css";
+import "./glass.css";
 import demo from "@fixtures/demo_run.json";
 import { offersToTags } from "@/lib/tags";
 import { Handoff, LandingResults } from "@/lib/landing";
@@ -8,6 +9,7 @@ import type { StreamEvent } from "@/lib/useInvestigationStream";
 
 import { NavBar } from "@/components/landing/NavBar";
 import { Hero } from "@/components/landing/Hero";
+import { TagRailSection } from "@/components/landing/TagRailSection";
 import { ProofStrip } from "@/components/landing/ProofStrip";
 import { GapSection } from "@/components/landing/GapSection";
 import { HowItWorks } from "@/components/landing/HowItWorks";
@@ -45,10 +47,11 @@ export default async function Home() {
   const events = (script as { events: StreamEvent[] }).events;
 
   return (
-    <div className="tt tb">
+    <div className="tt">
       <NavBar />
       <main id="top">
-        <Hero tags={heroTags} meta={results._meta} checkIn={results.search_request?.check_in} checkOut={results.search_request?.check_out} />
+        <Hero offer={proofOffer} meta={results._meta} />
+        <TagRailSection tags={heroTags} checkIn={results.search_request?.check_in} checkOut={results.search_request?.check_out} />
         <ProofStrip summary={results.summary_strip} sites={platforms.length} />
         <GapSection offer={proofOffer} />
         <HowItWorks />

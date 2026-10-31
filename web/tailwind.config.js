@@ -1,20 +1,31 @@
 /** @type {import('tailwindcss').Config} */
-// Colours come from the CSS variables defined once in app/globals.css (the "Coastal Minimal" palette).
+// Colours come from the CSS variables defined once in app/globals.css (sky-blue fluted glass theme).
 module.exports = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
-  darkMode: "media",
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-body)"],
+      },
       colors: {
+        sky: { DEFAULT: "var(--sky)", deep: "var(--sky-deep)", night: "var(--sky-night)", light: "var(--sky-light)" },
+        white: "var(--white)",
+        pink: { DEFAULT: "var(--pink)", soft: "var(--pink-soft)" },
+        glass: { DEFAULT: "var(--glass)", strong: "var(--glass-strong)", dark: "var(--glass-dark)" },
+        line: "var(--line)",
+        "text-1": "var(--text-1)",
+        "text-2": "var(--text-2)",
+        "text-3": "var(--text-3)",
+        verified: "var(--verified)",
+        unverified: "var(--unverified)",
+        blocked: "var(--blocked)",
+
+        // Names the existing components already use, pointed at the new tokens.
         background: "var(--background)",
         surface: "var(--surface)",
         "surface-2": "var(--surface-2)",
         ink: "var(--ink)",
-        muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--color-muted-foreground)",
-        },
-        line: "var(--line)",
+        muted: { DEFAULT: "var(--muted)", foreground: "var(--color-muted-foreground)" },
         brand: "var(--brand)",
         "brand-hover": "var(--brand-hover)",
         "brand-soft": "var(--brand-soft)",
@@ -29,8 +40,6 @@ module.exports = {
         bad: "var(--bad)",
         "bad-soft": "var(--bad-soft)",
         sand: "var(--sand)",
-
-        // Names the existing components already use, pointed at the new tokens.
         border: "var(--border)",
         text: "var(--text)",
         "text-muted": "var(--text-muted)",
@@ -39,10 +48,7 @@ module.exports = {
         danger: "var(--danger)",
         info: "var(--info)",
         foreground: "var(--color-foreground)",
-        card: {
-          DEFAULT: "var(--color-card)",
-          foreground: "var(--color-card-foreground)",
-        },
+        card: { DEFAULT: "var(--color-card)", foreground: "var(--color-card-foreground)" },
         ring: "var(--color-ring)",
         "chart-2": "var(--color-chart-2)",
       },

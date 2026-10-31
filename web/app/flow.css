@@ -28,7 +28,7 @@
 @media (max-width:820px){.tt .fgrid,.tt .fgrid2{grid-template-columns:1fr 1fr}.tt .fgrid .f-wide{grid-column:1/-1}}
 @media (max-width:520px){.tt .fgrid,.tt .fgrid2{grid-template-columns:1fr}}
 .tt .field{display:grid;gap:6px;min-width:0}
-.tt .field>label,.tt .field>span.fl,.tt fieldset legend{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0}
+.tt .field>label,.tt .field>span.fl,.tt fieldset legend{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:0;color:var(--muted);padding:0}
 .tt .field input[type=text],.tt .field input[type=date],.tt .field input[type=number],.tt .field select{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font:500 16px var(--font-body),system-ui,sans-serif;color-scheme:inherit}
 .tt .field input:focus-visible,.tt .field select:focus-visible{outline:2px solid var(--brass-hi);outline-offset:1px}
 .tt .field .err{color:var(--bad);font-size:13px}
@@ -122,7 +122,7 @@
 .tt .picker select{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 14px;font:500 16px var(--font-body),system-ui,sans-serif;max-width:100%}
 .tt .facts{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:20px;display:grid;gap:12px}
 .tt .facts dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.tt .facts dt{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tt .facts dt{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:0;color:var(--muted)}
 .tt .facts dd{margin:2px 0 0}
 
 /* hotel detail */

@@ -3,106 +3,139 @@
 @tailwind utilities;
 
 /*
- * "Coastal Minimal" palette. The ONLY place colours are defined.
- * Palette: Ocean #0F4C5C, Teal #2A9D8F, Sand #E9D8A6, Clay #F4A261, Ivory #FAF9F6, Slate #1F2937.
- * Everything else (Tailwind, landing.css, flow.css, components) reads the semantic tokens below.
+ * Sky-blue fluted glass theme. The ONLY place colours are defined.
+ * One theme (dark colour-scheme so native date pickers and scrollbars render light-on-dark).
  */
 :root {
   /* raw palette */
-  --ocean: #0F4C5C;
-  --teal: #2A9D8F;
-  --sand: #E9D8A6;
-  --clay: #F4A261;
-  --ivory: #FAF9F6;
-  --slate: #1F2937;
+  --sky: #0593C6;
+  --sky-deep: #0577A8;
+  --sky-night: #045A82;
+  --sky-light: #4FC3F0;
+  --white: #FCFFFF;
+  --pink: #D83995;
+  --pink-soft: #F27AC0;
+  /* Pink used as a fill behind white text: slightly deeper than --pink so small text reaches 4.5:1. */
+  --pink-fill: #C72C88;
 
-  /* semantic tokens, light */
-  --background: #FAF9F6;
-  --surface: #FFFFFF;
-  --surface-2: #F4EFDD;
-  --ink: #1F2937;
-  --muted: #5B6675;
-  --line: #E3E0D5;
-  --brand: #0F4C5C;
-  --brand-hover: #0B3A47;
-  --brand-soft: #DCEBEC;
-  --brand-ink: #FFFFFF;
-  --accent: #2A9D8F;
-  --accent-soft: #D9F0ED;
-  --gap: #F4A261;
-  --warn: #9A4F0C;
-  --warn-soft: #FCEBD9;
-  --ok: #1B7F4B;
-  --ok-soft: #DDF3E6;
-  --bad: #B42318;
-  --bad-soft: #FDE4E1;
-  --info: #1D5FA8;
-  --sand-line: #D8C98F;
-  --shadow-color: rgba(31, 41, 55, 0.18);
-  --scrim: rgba(31, 41, 55, 0.6);
-  --paper: #FFFFFF;
-  color-scheme: only light;
+  /* glass and lines */
+  --glass: rgba(255, 255, 255, 0.14);
+  --glass-strong: rgba(255, 255, 255, 0.22);
+  --glass-dark: rgba(4, 70, 105, 0.35);
+  --glass-text: rgba(4, 70, 105, 0.48);
+  --line: rgba(255, 255, 255, 0.28);
+  --scrim: rgba(3, 40, 62, 0.6);
+  --shadow-color: rgba(4, 70, 105, 0.25);
+  --glass-fallback: rgba(4, 90, 130, 0.85);
+
+  /* text */
+  --text-1: #FCFFFF;
+  --text-2: rgba(252, 255, 255, 0.86);
+  --text-3: rgba(252, 255, 255, 0.72);
+
+  /* status (always paired with an icon and a label) */
+  --verified: #8DF0B5;
+  --unverified: #FFD27A;
+  --blocked: #FF9B9B;
+
+  color-scheme: dark;
 }
 
 /*
  * Aliases. Older pages and the landing/flow stylesheets use these names; they all resolve to the tokens above.
- * --surface is the card colour and --background is the page colour.
  */
 :root {
-  --text: var(--ink);
-  --text-muted: var(--muted);
+  --background: var(--sky-deep);
+  --ink: var(--text-1);
+  --muted: var(--text-3);
+  --brand: var(--white);
+  --brand-hover: var(--white);
+  --brand-soft: var(--glass);
+  --brand-ink: var(--sky-night);
+  --accent: var(--white);
+  --accent-soft: var(--glass-strong);
+  --gap: var(--pink);
+  --warn: var(--unverified);
+  --warn-soft: var(--glass-dark);
+  --ok: var(--verified);
+  --ok-soft: var(--glass-dark);
+  --bad: var(--blocked);
+  --bad-soft: var(--glass-dark);
+  --info: var(--sky-light);
+  --surface: var(--glass-text);
+  --surface-2: var(--glass-strong);
+  --sand: var(--glass-strong);
+  --sand-line: var(--line);
+  --paper: #FFFFFF;
+
+  --text: var(--text-1);
+  --text-muted: var(--text-3);
   --border: var(--line);
-  --success: var(--ok);
-  --warning: var(--warn);
-  --danger: var(--bad);
-  --surface2: var(--surface-2);
+  --success: var(--verified);
+  --warning: var(--unverified);
+  --danger: var(--blocked);
+  --surface2: var(--glass-strong);
 
-  --bg: var(--background);
-  --fg: var(--ink);
-  --brass: var(--brand);
-  --brass-hi: var(--brand-hover);
-  --brass-lo: var(--brand-hover);
-  --on-brass: var(--brand-ink);
+  --bg: transparent;
+  --fg: var(--text-1);
+  --brass: var(--white);
+  --brass-hi: var(--white);
+  --brass-lo: var(--sky-night);
+  --on-brass: var(--sky-night);
 
-  /* key tags stay light "paper" cards in both themes */
-  --tag-bg: #F4EFDD;
-  --tag-fg: #1F2937;
-  --tag-muted: #5B6675;
-  --tag-line: #E3D9B8;
-  --tag-ok: #166B3F;
-  --tag-warn: #9A4F0C;
-  --tag-bad: #B42318;
-  --tag-delta-bg: #FCEBD9;
+  /* key tags are glass cards too */
+  --tag-bg: rgba(4, 70, 105, 0.62);
+  --tag-fg: var(--text-1);
+  --tag-muted: var(--text-2);
+  --tag-line: var(--line);
+  --tag-ok: var(--verified);
+  --tag-warn: var(--unverified);
+  --tag-bad: var(--blocked);
+  --tag-delta-bg: var(--pink);
 
-  --color-foreground: var(--ink);
-  --color-background: var(--background);
-  --color-card: var(--surface-2);
-  --color-card-foreground: var(--ink);
-  --color-muted: var(--surface-2);
-  --color-muted-foreground: var(--muted);
+  --color-foreground: var(--text-1);
+  --color-background: var(--sky-deep);
+  --color-card: var(--glass);
+  --color-card-foreground: var(--text-1);
+  --color-muted: var(--glass);
+  --color-muted-foreground: var(--text-3);
   --color-border: var(--line);
-  --color-ring: var(--brand);
-  --color-chart-2: var(--ok);
+  --color-ring: var(--white);
+  --color-chart-2: var(--verified);
 }
 
-/* Font families used by the landing and flow pages (loaded by the stylesheet link in layout.tsx). */
+/* One family everywhere (loaded by the stylesheet link in layout.tsx). */
 :root {
-  --font-display: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
-  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
-  --font-figtree: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-figtree: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--ink);
-}
-
-/* Focus ring: 2px Ocean with a 2px offset. */
-:focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
-}
 html {
-  scrollbar-color: var(--line) var(--background);
+  background-color: var(--sky-night);
+  scrollbar-color: var(--line) transparent;
+}
+body {
+  background-color: transparent;
+  color: var(--text-1);
+  font-family: var(--font-body);
+}
+
+/* Focus ring: 2px white with an offset on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
+/* No backdrop-filter support: use a solid translucent blue instead of glass. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root {
+    --glass: var(--glass-fallback);
+    --glass-strong: var(--glass-fallback);
+    --glass-dark: var(--glass-fallback);
+    --glass-text: var(--glass-fallback);
+    --surface: var(--glass-fallback);
+    --surface-2: var(--glass-fallback);
+  }
 }

@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 import "@/app/landing.css";
 import "@/app/flow.css";
 import { Footer } from "@/components/landing/Footer";
+import { NavPill } from "@/components/ui/NavPill";
+import "@/app/glass.css";
 import { useSearchId, withId } from "@/lib/flow";
 
 const STEPS: Array<{ href: string; label: string }> = [
@@ -45,21 +47,8 @@ function Stepper() {
 
 export function FlowShell({ children, showSteps = true }: { children: React.ReactNode; showSteps?: boolean }) {
   return (
-    <div className="tt tb">
-      <header className="nav">
-        <div className="wrap">
-          <Link className="logo" href="/">
-            <i />
-            TinyTravel
-          </Link>
-          <nav aria-label="Site">
-            <Link href="/#how">How it works</Link>
-            <Link href="/#safety">Safety</Link>
-            <Link href="/#faq">FAQ</Link>
-          </nav>
-          <Link className="btn sm" href="/book">New search</Link>
-        </div>
-      </header>
+    <div className="tt">
+      <NavPill links={[{ href: "/#how", label: "How it works" }, { href: "/#safety", label: "Safety" }, { href: "/#faq", label: "FAQ" }]} ctaLabel="New search" ctaHref="/book" />
       {showSteps && (
         <div className="flow-top">
           <div className="wrap">

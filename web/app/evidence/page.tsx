@@ -49,7 +49,6 @@ function Inner() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <span className="eyebrow">Step 4 of 5</span>
           <h1>Every number links to its page</h1>
           <div className="row"><Provenance meta={data._meta} /></div>
         </div>

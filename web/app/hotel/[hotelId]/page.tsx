@@ -184,10 +184,10 @@ function Inner() {
               <div className="price">{inr(sel.payable, sel.currency)}</div>
               <div className="hmeta">
                 {sel.listing != null && <s>listed {inr(sel.listing, sel.currency)}</s>}
-                {sel.fee_leak_pct != null && <span className="badge">+{sel.fee_leak_pct}%</span>}
+                {sel.fee_leak_pct != null && <span className="badge gap">+{sel.fee_leak_pct}%</span>}
               </div>
               {cancelBadge(sel)}
-              <button className="btn" type="button" onClick={() => setOpen(true)}>Continue on {sel.platform}</button>
+              <button className="btn pink" type="button" onClick={() => setOpen(true)}>Continue on {sel.platform}</button>
               <p className="fine">You pay on {sel.platform}. TinyTravel never takes payment.{at ? ` Verified ${at};` : ""} prices can change.</p>
             </aside>
           )}
@@ -201,7 +201,7 @@ function Inner() {
               <div className="price">{inr(sel.payable, sel.currency)}</div>
               <div className="fine">total on {sel.platform}</div>
             </div>
-            <button className="btn" type="button" onClick={() => setOpen(true)}>Continue on {sel.platform}</button>
+            <button className="btn pink" type="button" onClick={() => setOpen(true)}>Continue on {sel.platform}</button>
           </div>
           <HandoffDialog open={open} onClose={() => setOpen(false)} offer={sel} hotelName={name} stay={stay} handoff={handoff} />
         </>

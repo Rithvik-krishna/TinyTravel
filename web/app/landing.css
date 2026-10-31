@@ -8,7 +8,7 @@ html{scroll-behavior:smooth}
 .tt a{color:inherit}
 .tt .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .tt section{padding-block:clamp(56px,9vw,104px)}
-.tt .eyebrow{font-family:var(--font-mono),ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--brass-hi)}
+.tt .eyebrow{font-family:var(--font-mono),ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:0;color:var(--brass-hi)}
 :root[data-theme="light"] .tt .eyebrow{color:var(--brass)}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tt .eyebrow{color:var(--brass)}}
 .tt h2{font-size:clamp(28px,4.4vw,46px);font-weight:800}
@@ -33,7 +33,7 @@ html{scroll-behavior:smooth}
 @media (max-width:760px){.tt .nav nav{display:none}
 .tt .nav .btn{margin-left:auto}
 }
-.tt .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+.tt .badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;letter-spacing:0;padding:5px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--surface)}
 .tt .badge.mock{color:var(--warn);border-color:color-mix(in oklab,var(--warn) 55%,transparent)}
 .tt .badge.ok{color:var(--ok);border-color:color-mix(in oklab,var(--ok) 55%,transparent)}
 .tt .badge.warn{color:var(--warn);border-color:color-mix(in oklab,var(--warn) 55%,transparent)}
@@ -62,15 +62,15 @@ html{scroll-behavior:smooth}
 .tt .face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:var(--tag-bg);border-radius:14px;border:1px solid var(--tag-line);box-shadow:0 14px 30px var(--shadow-color);padding:calc(var(--tw)*.09) calc(var(--tw)*.1);display:flex;flex-direction:column;gap:calc(var(--tw)*.04);overflow:hidden}
 .tt .face.back{transform:rotateY(180deg)}
 .tt .eyelet{width:calc(var(--tw)*.1);height:calc(var(--tw)*.1);border-radius:50%;border:calc(var(--tw)*.03) solid var(--brass);background:var(--bg);margin:0 auto calc(var(--tw)*.02);flex:none}
-.tt .chip{align-self:flex-start;font-family:var(--font-mono);font-size:max(10px,calc(var(--tw)*.06));letter-spacing:.04em;padding:3px 9px;border-radius:999px;background:var(--tag-fg);color:var(--tag-bg);flex:none}
+.tt .chip{align-self:flex-start;font-family:var(--font-mono);font-size:max(10px,calc(var(--tw)*.06));letter-spacing:0;padding:3px 9px;border-radius:999px;background:var(--tag-fg);color:var(--tag-bg);flex:none}
 .tt .hname{font-family:var(--font-display);font-weight:700;font-size:max(15px,calc(var(--tw)*.115));line-height:1.1;letter-spacing:-.01em}
-.tt .lab{font-family:var(--font-mono);font-size:max(10px,calc(var(--tw)*.058));text-transform:uppercase;letter-spacing:.1em;color:var(--tag-muted)}
+.tt .lab{font-family:var(--font-mono);font-size:max(10px,calc(var(--tw)*.058));letter-spacing:0;color:var(--tag-muted)}
 .tt .price{font-family:var(--font-display);font-weight:800;font-size:max(26px,calc(var(--tw)*.2));line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .tt .price.na{font-size:max(22px,calc(var(--tw)*.15));color:var(--tag-muted)}
 .tt .spacer{flex:1}
 .tt .hint{font-size:max(10px,calc(var(--tw)*.055));color:var(--tag-muted)}
 .tt .delta{align-self:flex-start;font-family:var(--font-mono);font-size:max(10px,calc(var(--tw)*.056));padding:4px 8px;border-radius:6px;background:color-mix(in oklab,var(--warn) 22%,var(--tag-bg));color:var(--tag-warn);line-height:1.35}
-.tt .stamp{align-self:flex-start;font-family:var(--font-mono);font-size:max(9.5px,calc(var(--tw)*.052));letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border:1.5px solid currentColor;border-radius:5px;font-weight:500}
+.tt .stamp{align-self:flex-start;font-family:var(--font-mono);font-size:max(9.5px,calc(var(--tw)*.052));letter-spacing:0;padding:3px 7px;border:1.5px solid currentColor;border-radius:5px;font-weight:500}
 .tt .stamp.ok{color:var(--tag-ok)}
 .tt .stamp.warn{color:var(--tag-warn)}
 .tt .stamp.bad{color:var(--tag-bad)}
@@ -121,7 +121,7 @@ html{scroll-behavior:smooth}
 .tt .counters{display:flex;gap:18px;flex-wrap:wrap}
 .tt .counters div{display:grid;gap:0}
 .tt .counters b{font-family:var(--font-display);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
-.tt .counters span{font-size:12px;color:var(--muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em}
+.tt .counters span{font-size:12px;color:var(--muted);font-family:var(--font-mono);letter-spacing:0}
 .tt .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .tt .tile{background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
 .tt .tile .bar{display:flex;align-items:center;gap:6px;padding:9px 12px;border-bottom:1px solid var(--line);font-family:var(--font-mono);font-size:12px;color:var(--muted)}
@@ -170,7 +170,7 @@ html{scroll-behavior:smooth}
 .tt .fees table{width:100%;border-collapse:collapse;font-size:15px}
 .tt .fees td{padding:9px 0;border-bottom:1px solid var(--line)}
 .tt .fees td:last-child{text-align:right;font-family:var(--font-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-.tt .fees tr.grp td{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:16px;border-bottom:0}
+.tt .fees tr.grp td{font-family:var(--font-mono);font-size:11px;letter-spacing:0;color:var(--muted);padding-top:16px;border-bottom:0}
 .tt .fees tr.tot td{font-weight:600;border-bottom:0;padding-top:14px}
 .tt .fees .ok{color:var(--ok);font-size:13px;margin-top:10px;display:flex;gap:6px;align-items:center}
 .tt .fees .small{color:var(--muted);font-size:13px;margin-top:8px}

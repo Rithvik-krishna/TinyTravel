@@ -55,7 +55,6 @@ function Inner() {
   return (
     <main>
       <div className="wrap" style={{ paddingTop: 28 }}>
-        <span className="eyebrow">Step 5 of 5</span>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", marginTop: 10 }}>
           <Provenance meta={data._meta} />
           {withOffers.length > 1 && (

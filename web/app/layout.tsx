@@ -1,12 +1,14 @@
 import "./globals.css";
+import "./glass.css";
 import React from "react";
 import { DevHeader } from "@/components/DevHeader";
 import { MainWrapper } from "@/components/MainWrapper";
+import { AppBackground } from "@/components/ui/AppBackground";
 
 // Fonts load in the browser (see the stylesheet link below) instead of at build time, so `next build`
 // never needs network access to Google Fonts. The --font-* variables are defined in globals.css.
 const FONTS_URL =
-  "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Figtree:wght@400;500;600;700&display=swap";
+  "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap";
 
 export const metadata = {
   title: "TinyTravel — The price you see isn't the price you pay.",
@@ -17,8 +19,8 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  // Light theme only. meta theme-color cannot use CSS variables, so this is the Ivory page background.
-  themeColor: "#FAF9F6",
+  // Single dark-blue theme. meta theme-color cannot use CSS variables; this is the sky-night base.
+  themeColor: "#045A82",
 };
 
 export default function RootLayout({
@@ -34,7 +36,8 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="stylesheet" href={FONTS_URL} />
       </head>
-      <body className="min-h-screen bg-background text-ink antialiased selection:bg-brand-soft selection:text-ink">
+      <body className="min-h-screen text-text-1 antialiased selection:bg-glass-strong selection:text-text-1">
+        <AppBackground />
         <DevHeader />
         <MainWrapper>{children}</MainWrapper>
       </body>

@@ -137,7 +137,6 @@ function Inner() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <span className="eyebrow">Step 2 of 5</span>
           <h1>{siteCount > 0 ? `Checking prices on ${siteCount} site${siteCount === 1 ? "" : "s"}` : "Checking prices"}</h1>
           <p className="lede">
             {summary ? `${summary}. ` : ""}Each agent opens a site as a guest, picks the room, fills in placeholder guest details and stops at the payment page, so you see the real total. Nothing is booked.
