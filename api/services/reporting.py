@@ -13,8 +13,11 @@ SAFETY_STATEMENT = (
 
 
 def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
-    """Generate a self-contained, printable HTML evidence report with zero external assets."""
-    sid = search_id or results.get("search_request", {}).get("raw_text") or "N/A"
+    """Generate a self-contained, printable HTML evidence report with zero external assets.
+    Every dynamic value is strictly HTML-escaped to prevent injection.
+    """
+    raw_sid = search_id or results.get("search_request", {}).get("raw_text") or "N/A"
+    sid = html.escape(str(raw_sid))
     req = results.get("search_request", {})
     verdicts = results.get("verdicts", {})
     offers = results.get("offers", [])
@@ -26,7 +29,7 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
     guests = html.escape(str(req.get("guests", 2)))
     rooms = html.escape(str(req.get("rooms", 1)))
     deal_mode = html.escape(str(verdicts.get("deal_mode", "best_value")).replace("_", " ").title())
-    now_str = datetime.now().strftime("%d %b %Y, %I:%M %p")
+    now_str = html.escape(datetime.now().strftime("%d %b %Y, %I:%M %p"))
 
     # Overall headlines
     headlines = verdicts.get("overall", {}).get("headlines", {})
@@ -58,6 +61,10 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
         currency = html.escape(str(off.get("currency", "INR")))
         started = html.escape(str(off.get("started_at", "N/A")))
         finished = html.escape(str(off.get("finished_at", "N/A")))
+        raw_notes = off.get("notes")
+        notes = html.escape(str(raw_notes)) if raw_notes else ""
+        raw_hotel_url = off.get("hotel_url")
+        hotel_url = html.escape(str(raw_hotel_url)) if raw_hotel_url else ""
 
         price_list_str = f"{currency} {price_list:,.2f}" if price_list is not None else "N/A"
         price_final_str = f"{currency} {price_final:,.2f}" if price_final is not None else "N/A"
@@ -98,6 +105,24 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
             else "<em>None observed.</em>"
         )
 
+        # Captured page text snippets
+        raw_listing_text = off.get("listing_page_text")
+        raw_payment_text = off.get("payment_page_text")
+        page_text_blocks = []
+        if raw_listing_text:
+            escaped_listing_text = html.escape(str(raw_listing_text))
+            page_text_blocks.append(
+                f"<details style='margin-top: 6px;'><summary style='cursor: pointer; color: #475569;'>Listing Page Text (Observed)</summary>"
+                f"<pre style='white-space: pre-wrap; font-size: 11px; background: #f8fafc; padding: 8px; border-radius: 4px; border: 1px solid #e2e8f0;'>{escaped_listing_text}</pre></details>"
+            )
+        if raw_payment_text:
+            escaped_payment_text = html.escape(str(raw_payment_text))
+            page_text_blocks.append(
+                f"<details style='margin-top: 6px;'><summary style='cursor: pointer; color: #475569;'>Payment Page Text (Observed)</summary>"
+                f"<pre style='white-space: pre-wrap; font-size: 11px; background: #f8fafc; padding: 8px; border-radius: 4px; border: 1px solid #e2e8f0;'>{escaped_payment_text}</pre></details>"
+            )
+        page_text_html = "".join(page_text_blocks)
+
         # Evidence links
         evidence_items = off.get("evidence", [])
         evidence_links = []
@@ -105,10 +130,12 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
             ev_type = html.escape(str(ev.get("type", "screenshot")))
             ev_url = html.escape(str(ev.get("url", "#")))
             ev_step = html.escape(str(ev.get("step", "")))
-            evidence_links.append(f"<li><strong>{ev_step}</strong>: <a href='{ev_url}'>{ev_type} ({ev_url})</a></li>")
+            evidence_links.append(f"<li><strong>{ev_step}</strong>: <a href='{ev_url}' target='_blank' rel='noopener noreferrer'>{ev_type} ({ev_url})</a></li>")
         ev_html = "".join(evidence_links) if evidence_links else "<em>No standalone artifacts captured.</em>"
 
         status_class = "status-verified" if status == "verified" else "status-other"
+        url_snippet = f"<p style='margin: 4px 0;'><strong>Property URL:</strong> <a href='{hotel_url}' target='_blank' rel='noopener noreferrer'>{hotel_url}</a></p>" if hotel_url else ""
+        notes_snippet = f"<p style='margin: 4px 0;'><strong>Observation Notes:</strong> {notes}</p>" if notes else ""
 
         offers_html.append(f"""
         <div class="offer-card">
@@ -131,10 +158,12 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
                     <p style="margin: 4px 0;"><strong>Room Type:</strong> {room}</p>
                     <p style="margin: 4px 0;"><strong>Meal Plan:</strong> {meal}</p>
                     <p style="margin: 4px 0;"><strong>Cancellation:</strong> {cancellation}</p>
+                    {url_snippet}
                 </div>
                 <div>
                     <p style="margin: 4px 0;"><strong>Offer ID:</strong> <code>{oid}</code></p>
                     <p style="margin: 4px 0;"><strong>Timeline:</strong> {started} &rarr; {finished}</p>
+                    {notes_snippet}
                     <p style="margin: 4px 0; color: #475569;"><em>Observed on this run under guest conditions.</em></p>
                 </div>
             </div>
@@ -168,8 +197,9 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
             </div>
 
             <div style="margin-top: 12px;">
-                <h4 style="margin: 0 0 6px 0;">Captured Evidence Links</h4>
+                <h4 style="margin: 0 0 6px 0;">Captured Evidence Links & Page Text</h4>
                 <ul style="margin: 0; padding-left: 20px;">{ev_html}</ul>
+                {page_text_html}
             </div>
         </div>
         """)
@@ -405,7 +435,10 @@ def generate_html_report(results: dict, search_id: Optional[str] = None) -> str:
 
 
 def generate_fee_draft(offer: dict) -> dict:
-    """Generate a polite, factual draft inquiry message about an observed fee."""
+    """Generate a polite, factual draft inquiry message about an observed fee.
+    Only cites platform_fee, property_fee, and add_on lines. Excludes taxes from fees.
+    Strictly observational tone: no accusations, no inferred cause.
+    """
     platform = offer.get("site") or "Booking Platform"
     hotel_name = offer.get("hotel_name") or "the property"
     price_listing = offer.get("price_shown_on_listing")
@@ -416,13 +449,19 @@ def generate_fee_draft(offer: dict) -> dict:
     room_type = offer.get("room_type") or "Selected room"
 
     fee_lines_items = []
+    # Only cite platform_fee / property_fee / add_on lines (label + amount). Exclude taxes from fees.
     for fl in offer.get("fee_lines", []):
-        lbl = fl.get("label", "Fee")
-        amt = fl.get("amount", 0.0)
-        kind = fl.get("fee_kind", "other")
-        fee_lines_items.append(f"  - {lbl} ({kind}): {currency} {amt:,.2f}")
+        kind = fl.get("fee_kind") or ""
+        if kind in ("platform_fee", "property_fee", "add_on"):
+            lbl = fl.get("label", "Fee")
+            amt = fl.get("amount", 0.0)
+            fee_lines_items.append(f"  - {lbl}: {currency} {amt:,.2f}")
 
-    fee_breakdown_text = "\n".join(fee_lines_items) if fee_lines_items else "  - (No separate fee line breakdown provided on checkout page)"
+    fee_breakdown_text = (
+        "\n".join(fee_lines_items)
+        if fee_lines_items
+        else "  - (No separate platform, property, or add-on fee lines observed)"
+    )
 
     diff = (price_payable - price_listing) if (price_payable is not None and price_listing is not None) else None
     diff_str = f"{currency} {diff:,.2f}" if diff is not None else "N/A"
@@ -430,7 +469,7 @@ def generate_fee_draft(offer: dict) -> dict:
     listing_str = f"{currency} {price_listing:,.2f}" if price_listing is not None else "N/A"
     payable_str = f"{currency} {price_payable:,.2f}" if price_payable is not None else "N/A"
 
-    subject = f"Inquiry regarding fee breakdown for booking at {hotel_name}"
+    subject = f"Inquiry regarding observed fee lines for booking at {hotel_name}"
     message = (
         f"Dear {platform} Support Team,\n\n"
         f"I am writing to inquire about the pricing and fee breakdown observed during the checkout process for {hotel_name}.\n\n"
@@ -443,7 +482,7 @@ def generate_fee_draft(offer: dict) -> dict:
         f"- Total Observed Difference: {diff_str} (observed increase: {leak_str})\n\n"
         f"Observed Fee Lines:\n"
         f"{fee_breakdown_text}\n\n"
-        f"Could you please provide clarification on the calculation and components of these fee lines?\n\n"
+        f"Could you please provide clarification on the calculation and components of these observed fee lines?\n\n"
         f"Thank you for your assistance.\n\n"
         f"Sincerely,\n"
         f"[Your Name]"

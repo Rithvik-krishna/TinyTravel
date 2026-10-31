@@ -58,11 +58,12 @@ def init_db(db_path: Optional[Union[str, Path]] = None) -> None:
                 currency TEXT DEFAULT 'INR',
                 captured_at TEXT NOT NULL,
                 run_id TEXT,
-                offer_id TEXT
+                offer_id TEXT,
+                mock INTEGER DEFAULT 0
             )
         """)
         # Schema migration for existing DB
-        for col_def in ["currency TEXT DEFAULT 'INR'", "run_id TEXT"]:
+        for col_def in ["currency TEXT DEFAULT 'INR'", "run_id TEXT", "mock INTEGER DEFAULT 0"]:
             try:
                 conn.execute(f"ALTER TABLE price_history ADD COLUMN {col_def}")
             except sqlite3.OperationalError:
@@ -223,6 +224,7 @@ def save_price_history(
     offer_id: Optional[str] = None,
     run_id: Optional[str] = None,
     currency: str = "INR",
+    mock: bool = False,
     db_path: Optional[Union[str, Path]] = None,
 ) -> None:
     """Record a verified final payable price in historical ledger."""
@@ -230,10 +232,10 @@ def save_price_history(
     with conn:
         conn.execute(
             """
-            INSERT INTO price_history (hotel, platform, amount, currency, captured_at, run_id, offer_id)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO price_history (hotel, platform, amount, currency, captured_at, run_id, offer_id, mock)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             """,
-            (hotel, platform, amount, currency, captured_at, run_id, offer_id),
+            (hotel, platform, amount, currency, captured_at, run_id, offer_id, 1 if mock else 0),
         )
     conn.close()
 
@@ -241,15 +243,20 @@ def save_price_history(
 def get_price_history(
     hotel: Optional[str] = None,
     platform: Optional[str] = None,
+    include_mock: bool = False,
     db_path: Optional[Union[str, Path]] = None,
 ) -> list[dict]:
     """Query historical price records ordered newest first.
-    Returns: list of {amount, currency, captured_at, run_id, offer_id}
+    Only rows recorded from real runs (live or saved) are returned by default.
+    Mock/fake observations excluded unless include_mock=True.
+    No real data -> returns empty list.
     """
     conn = get_conn(db_path)
     cur = conn.cursor()
-    query = "SELECT amount, currency, captured_at, run_id, offer_id FROM price_history WHERE 1=1"
+    query = "SELECT amount, currency, captured_at, run_id, offer_id, mock FROM price_history WHERE 1=1"
     params: list[Any] = []
+    if not include_mock:
+        query += " AND (mock IS NULL OR mock = 0)"
     if hotel:
         query += " AND LOWER(TRIM(hotel)) = LOWER(TRIM(?))"
         params.append(hotel)
@@ -267,43 +274,10 @@ def get_price_history(
             "captured_at": r["captured_at"],
             "run_id": r["run_id"],
             "offer_id": r["offer_id"],
+            "mock": bool(r["mock"]) if r["mock"] is not None else False,
         }
         for r in rows
     ]
-
-
-def seed_demo_price_history(db_path: Optional[Union[str, Path]] = None) -> None:
-    """Seed historical observations from demo_run.json if price_history is empty."""
-    conn = get_conn(db_path)
-    cur = conn.cursor()
-    cur.execute("SELECT COUNT(*) as c FROM price_history")
-    count = cur.fetchone()["c"]
-    if count == 0:
-        demo_path = Path(__file__).parent.parent / "fixtures" / "demo_run.json"
-        if demo_path.exists():
-            try:
-                demo_data = json.loads(demo_path.read_text(encoding="utf-8"))
-                for off in demo_data.get("offers", []):
-                    if off.get("status") == "verified" and off.get("price_final_payable") is not None:
-                        conn.execute(
-                            """
-                            INSERT INTO price_history (hotel, platform, amount, currency, captured_at, run_id, offer_id)
-                            VALUES (?, ?, ?, ?, ?, ?, ?)
-                            """,
-                            (
-                                off.get("hotel_name") or "La Marvella",
-                                off.get("site") or "Cleartrip",
-                                float(off["price_final_payable"]),
-                                off.get("currency") or "INR",
-                                off.get("finished_at") or datetime.now(IST).isoformat(),
-                                off.get("run_id"),
-                                off.get("offer_id"),
-                            ),
-                        )
-                conn.commit()
-            except Exception:
-                pass
-    conn.close()
 
 
 def get_total_spend(db_path: Optional[Union[str, Path]] = None) -> float:
@@ -322,6 +296,5 @@ def get_total_spend(db_path: Optional[Union[str, Path]] = None) -> float:
     return round(total, 4)
 
 
-# Ensure tables exist and initial observations are seeded
+# Ensure tables exist without seeding mock/demo data
 init_db()
-seed_demo_price_history()

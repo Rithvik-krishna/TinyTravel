@@ -15,13 +15,18 @@ DEAL_MODE_WEIGHTS = {
 }
 
 
-def fee_leak_pct(listing: Optional[float], final: Optional[float]) -> Optional[float]:
+def fee_leak_pct(
+    listing: Optional[float],
+    final: Optional[float],
+    same_room: bool = True,
+) -> Optional[float]:
     """Calculate fee leak percentage between listing price and final payable price.
     
     Label: "observed on this run".
     Formula: round((final - listing) / listing * 100, 1).
+    Never compute fee_leak_pct from a different room (returns None if not same_room or listing is None).
     """
-    if not listing or final is None:
+    if not same_room or not listing or final is None:
         return None
     return round((final - listing) / listing * 100, 1)
 
@@ -60,12 +65,17 @@ def determine_status(
     evidence: list,
     reconciliation: Optional[str],
     blocker: Optional[str] = None,
+    occupancy_mismatch: bool = False,
+    currency_mismatch: bool = False,
 ) -> Status:
     """Evaluate offer verification status by the strict TinyTravel product rules.
     
     Invariant 2: verified requires ALL: reached_payment_page==true, price_final_payable!=null,
     at least one evidence item, fee_lines sum to price_final_payable within +/-1%.
+    Occupancy or currency mismatch causes offer to be unverified (non-comparable), with blocker=None.
     """
+    if occupancy_mismatch or currency_mismatch:
+        return "unverified"
     if (
         reached_payment_page
         and final_price is not None

@@ -176,10 +176,10 @@ async def main_async(args: argparse.Namespace) -> int:
         score_str = f"{tscore}/100" if tscore is not None else "N/A"
         print(f"{site:<14} | {st:<10} | {shown:<10} | {final:<10} | {leak:<8} | {score_str:<6}")
 
-        # If live or if requested, save offer to fixtures/real/
+        # If live, save offer to fixtures/real/
         hslug = args.hotel.lower().replace(" ", "_")
         sslug = site.lower().replace(".", "").replace(" ", "")
-        if args.live and sslug == "cleartrip":
+        if args.live:
             real_fixtures_dir = ROOT / "fixtures" / "real"
 
             real_fixtures_dir.mkdir(parents=True, exist_ok=True)
