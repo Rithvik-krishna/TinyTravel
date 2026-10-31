@@ -12,6 +12,7 @@ import React, {
 import { createPortal } from "react-dom";
 import { TagItem } from "@/lib/tags";
 import { inr, shortTime } from "@/lib/format";
+import { Lock, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 export interface KeyTagRailProps extends React.HTMLAttributes<HTMLElement> {
   items: TagItem[];
@@ -320,7 +321,7 @@ function resolveContacts(
   }
 }
 
-export default function KeyTagRail({
+export function KeyTagRail({
   items,
   eyebrow,
   heading,
@@ -1507,12 +1508,21 @@ export function TagFront({
 }) {
   const eyeletSize = Math.max(16, Math.round(unit * 0.11));
   const eyeletCenterY = Math.max(14, Math.round(unit * 0.1));
-
-  // Normalise platform name (e.g. Booking.com stays Booking.com, clean text without letter spacing overflow)
   const platformLabel = item.platform;
 
+  const isVerified = item.status === "verified";
+  const isBlocked = item.status === "blocked";
+  const isUnverified = item.status === "unverified";
+  const isNonRefundable = item.cancellation_category === "non_refundable";
+
+  const cardBorderClass = isUnverified
+    ? "border-2 border-dashed border-warning/70 bg-surface/90"
+    : isBlocked
+    ? "border-2 border-danger/40 bg-surface/90"
+    : "border border-border/80 bg-surface-2";
+
   return (
-    <div className="relative h-full w-full select-none rounded-2xl bg-surface-2 border border-border/80 shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5 transition-colors">
+    <div className={`relative h-full w-full select-none rounded-2xl ${cardBorderClass} shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5 transition-colors`}>
       {/* Subtle hotel cardstock texture & inner border bevel */}
       <div className="pointer-events-none absolute inset-1.5 sm:inset-2 rounded-[14px] border border-border/40" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-black/5 dark:from-white/5 dark:to-black/30" />
@@ -1543,10 +1553,36 @@ export function TagFront({
             }}
           />
         </div>
+
+        {/* Stage 2 Stamp / Badge */}
+        <div className="mt-2 text-center">
+          {isVerified && item.verifiedAt ? (
+            <span
+              className="inline-flex items-center gap-1 rounded bg-success/15 border border-success/40 text-success font-bold uppercase tracking-wider px-2 py-0.5"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+            >
+              ✓ Verified {shortTime(item.verifiedAt)}
+            </span>
+          ) : isBlocked ? (
+            <span
+              className="inline-flex items-center gap-1 rounded bg-danger/15 border border-danger/40 text-danger font-bold uppercase tracking-wider px-2 py-0.5"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+            >
+              <Lock className="w-3 h-3 inline" /> Stopped at {item.blocker || "captcha"}
+            </span>
+          ) : isUnverified ? (
+            <span
+              className="inline-flex items-center gap-1 rounded bg-warning/15 border border-warning/40 text-warning font-bold uppercase tracking-wider px-2 py-0.5"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+            >
+              <AlertTriangle className="w-3 h-3 inline" /> NOT VERIFIED
+            </span>
+          ) : null}
+        </div>
       </div>
 
       {/* Mid area: Platform badge & Hotel Name (up to 2 lines, no ellipsis) */}
-      <div className="relative z-10 my-auto text-center space-y-2.5 px-1 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 my-auto text-center space-y-2 px-1 flex-1 flex flex-col justify-center">
         <div>
           <span
             className="inline-flex items-center rounded-full bg-surface border border-border/90 px-3 py-1 font-medium text-text-muted shadow-sm max-w-full"
@@ -1562,6 +1598,18 @@ export function TagFront({
         >
           {item.title}
         </h3>
+
+        {/* Non-refundable warning chip */}
+        {isNonRefundable && (
+          <div className="pt-0.5">
+            <span
+              className="inline-block rounded bg-warning/10 border border-warning/30 text-warning font-semibold leading-tight px-1.5 py-0.5"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.036), 8, 10)}px` }}
+            >
+              Non-refundable, not comparable with free cancellation
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Bottom area: Separated Price Block with Label ABOVE Amount */}
@@ -1646,7 +1694,7 @@ export function TagBack({
           {item.platform}
         </p>
 
-        {hasPayable ? (
+        {item.status === "verified" && hasPayable ? (
           <div className="space-y-1">
             <div
               className="font-semibold uppercase tracking-wider text-text-muted"
@@ -1661,17 +1709,33 @@ export function TagBack({
               {inr(item.payable)}
             </div>
           </div>
+        ) : item.status === "blocked" ? (
+          <div className="space-y-1">
+            <div className="flex items-center justify-center gap-1 font-bold text-danger text-xs sm:text-sm">
+              <Lock className="w-3.5 h-3.5 inline" />
+              <span>Stopped at {item.blocker || "captcha"}</span>
+            </div>
+            <div className="font-extrabold text-text text-2xl">
+              N/A
+            </div>
+            <p className="text-[10px] text-text-muted">
+              Anti-bot challenge stopped probe
+            </p>
+          </div>
         ) : (
           <div className="space-y-1">
             <div
-              className="font-semibold uppercase tracking-wider text-danger"
+              className="font-semibold uppercase tracking-wider text-warning text-xs sm:text-sm"
               style={{ fontSize: `${clamp(Math.round(unit * 0.042), 9, 12)}px` }}
             >
-              Price not reached
+              NOT VERIFIED
             </div>
-            <div className="font-extrabold text-text text-xl">
+            <div className="font-extrabold text-text text-2xl">
               N/A
             </div>
+            <p className="text-[10px] text-text-muted">
+              Checkout funnel not completed
+            </p>
           </div>
         )}
 
@@ -2130,3 +2194,5 @@ function TagDetailModal({
     document.body
   );
 }
+
+export default KeyTagRail;
