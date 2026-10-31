@@ -63,5 +63,6 @@ data: {"t_ms": 300, "event": "<event_name>", "data": { ... }}
 ### 9. `error`
 - **When**: Fatal error aborts pipeline or stream.
 - **Payload**:
-  - `message` (`str`): Description of error.
-  - `code` (`Optional[str]`): Error code if applicable.
+  - `message` (`str`): Human-readable error description.
+  - `recoverable` (`bool`): Indicates whether the client stream or search can recover (`false` for pipeline crashes).
+  - `code` (`Optional[str]`): Optional error category identifier if supplied (default: `null`).
