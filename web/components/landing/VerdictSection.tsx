@@ -15,6 +15,8 @@ interface Props {
   handoff?: Handoff | null;
   /** When set (flow pages), cards link to the hotel page for that search. */
   searchId?: string | null;
+  /** Landing page: leave the "verified at <time>" out of the handoff note. */
+  hideVerifiedTime?: boolean;
 }
 
 const LABELS: Array<[keyof VerdictPick, string]> = [
@@ -23,7 +25,7 @@ const LABELS: Array<[keyof VerdictPick, string]> = [
   ["best_for_you", "Best for you"],
 ];
 
-export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searchId }: Props) {
+export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searchId, hideVerifiedTime }: Props) {
   // One card per offer; verdicts that point at the same offer share a card.
   const cards = new Map<string, string[]>();
   for (const [key, label] of LABELS) {
@@ -71,7 +73,7 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searc
               </div>
             );
           })}
-          <HandoffPhone handoff={handoff} />
+          <HandoffPhone handoff={handoff} hideVerifiedTime={hideVerifiedTime} />
         </div>
         {handoff && <p className="note">The link opens the property on {platform}. Pick exactly this room; the price should match.</p>}
       </div>

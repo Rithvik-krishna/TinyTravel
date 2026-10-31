@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import { blockerLabel, TagItem } from "@/lib/tags";
-import { gapAmount, gapPct, inr, shortTime } from "@/lib/format";
+import { gapAmount, gapPct, inr } from "@/lib/format";
 
 /** Per-tag pendulum state: angle in degrees, angular velocity. */
 interface Swinger {
@@ -20,8 +20,7 @@ function cancelHint(c: TagItem["cancellation_category"]): string {
 
 function Stamp({ tag }: { tag: TagItem }) {
   if (tag.status === "verified") {
-    const t = shortTime(tag.verifiedAt);
-    return <span className="stamp ok">{t ? `Verified ${t}` : "Verified"}</span>;
+    return <span className="stamp ok">Verified</span>;
   }
   if (tag.status === "blocked") return <span className="stamp bad">🔒 {blockerLabel(tag.blocker)}</span>;
   return <span className="stamp warn">Not verified</span>;
@@ -37,6 +36,8 @@ interface TagProps {
 
 function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
   const [flipped, setFlipped] = useState(false);
+  // Mouse: hovering shows the back and leaving returns to the front. Touch, pen and keyboard: tap/press toggles.
+  const lastPointer = useRef<string>("");
   const verified = tag.status === "verified" && tag.payable != null;
   const nonRefundable = tag.cancellation_category === "non_refundable";
   const extra = nonRefundable ? <span className="stamp warn">Non-refundable · not comparable</span> : null;
@@ -52,9 +53,19 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
       ref={(el) => setNode(index, el)}
       style={{ "--tw": width } as React.CSSProperties}
       onPointerEnter={(e) => {
-        if (e.pointerType === "mouse") kick(index, dir() * 55);
+        lastPointer.current = e.pointerType;
+        if (e.pointerType === "mouse") {
+          setFlipped(true);
+          kick(index, dir() * 55);
+        }
       }}
-      onPointerDown={() => kick(index, dir() * 80)}
+      onPointerLeave={(e) => {
+        if (e.pointerType === "mouse") setFlipped(false);
+      }}
+      onPointerDown={(e) => {
+        lastPointer.current = e.pointerType;
+        kick(index, dir() * 80);
+      }}
     >
       <span className="hook" />
       <svg className="string" viewBox="0 0 100 46" preserveAspectRatio="none" aria-hidden="true">
@@ -65,7 +76,9 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
         className={`tag${tag.status !== "verified" ? " loose" : ""}${flipped ? " flipped" : ""}`}
         aria-pressed={flipped}
         aria-label={label}
-        onClick={() => {
+        onClick={(e) => {
+          // A mouse click is already covered by hover; keyboard activation (detail 0) and touch still toggle.
+          if (e.detail > 0 && lastPointer.current === "mouse") return;
           setFlipped((f) => !f);
           kick(index, dir() * 70);
         }}
@@ -79,7 +92,7 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
             <span className="lab">Listing price</span>
             <span className={`price${tag.listing == null ? " na" : ""}`}>{inr(tag.listing, tag.currency)}</span>
             {verified ? extra : <Stamp tag={tag} />}
-            <span className="hint">Tap to flip</span>
+            <span className="hint">Hover or tap to flip</span>
           </span>
           <span className="face back">
             <span className="eyelet" />

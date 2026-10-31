@@ -61,6 +61,7 @@ export default async function Home() {
           pick={pick}
           warnings={results.verdicts?.non_comparable_warnings ?? []}
           handoff={handoff}
+          hideVerifiedTime
         />
         <SafetyBlock />
         <Faq />
