@@ -49,6 +49,8 @@ def test_build_goal_verbatim_safety():
     # Preferences & fallback
     assert "Prefer free cancellation, breakfast included" in goal
     assert "select the cheapest room that fits 2 adults, and report the actual meal plan and cancellation policy" in goal
+    assert 'max_occupancy and room_type must describe the room in the final booking summary, copying the "X adults" text from that page.' in goal
+    assert 'price_shown_on_listing must be the price of the same room as the final payable, or null. Never record a listing price from a different room.' in goal
 
 
 # --- 2. Platform URL Tests ---
@@ -370,3 +372,99 @@ def test_verify_offer_missing_evidence_case(monkeypatch):
     validated = Offer.model_validate(offer)
     assert validated.status == "unverified"
     assert len(validated.evidence) == 0
+
+
+def test_occupancy_mismatch_keeps_observed_payment_page_unverified_blocker_null(monkeypatch):
+    """Part a: Occupancy mismatch must NOT change reached_payment_page (kept as observed).
+    Status = unverified (non-comparable), blocker = null, reason in notes.
+    Blocked is only for captcha/login/otp/timeout/other that really stopped the run.
+    """
+    monkeypatch.setenv("TINYFISH_FAKE", "1")
+    from services.tinyfish import AgentRun
+
+    async def mock_run(**kwargs):
+        return AgentRun(
+            run_id="run_occ_obs",
+            status="completed",
+            streaming_url="https://agent.tinyfish.ai/live/occ_obs",
+            result={
+                "site": "agoda",
+                "reached_payment_page": True,
+                "furthest_step": "payment",
+                "blocker": "other",  # Raw TinyFish may return other, but run was NOT stopped
+                "hotel_name": "La Marvella",
+                "room_type": "Executive Twin",
+                "max_occupancy": 1,  # Fits 1 adult, search asked for 2
+                "meal_plan": "Breakfast included",
+                "cancellation_policy": "Free cancellation",
+                "price_shown_on_listing": 12000.0,
+                "price_final_payable": 15000.0,
+                "fee_lines": [
+                    {"label": "Room", "amount": 15000.0},
+                ],
+                "listing_page_text": "Listing text",
+                "payment_page_text": "Payment text",
+            },
+            started_at="2026-10-31T12:00:00+05:30",
+            finished_at="2026-10-31T12:01:00+05:30",
+            steps=15,
+            cost_usd=0.20,
+            raw={},
+        )
+
+    monkeypatch.setattr("agents.checkout.run_agent", mock_run)
+
+    req = {"guests": 2, "destination": "Bengaluru"}
+    offer = asyncio.run(verify_offer("agoda", "La Marvella", req))
+
+    # Keep reached_payment_page as observed (True)
+    assert offer["reached_payment_page"] is True
+    # Status = unverified (non-comparable)
+    assert offer["status"] == "unverified"
+    # Blocker = null (not stopped by platform blocker)
+    assert offer["blocker"] is None
+    # Reason in notes
+    assert "Occupancy mismatch: room fits 1 adults but search requested 2" in offer["notes"]
+    # Fee leak pct is None for non-comparable / unverified
+    assert offer["fee_leak_pct"] is None
+
+    # Contract model validates cleanly
+    validated = Offer.model_validate(offer)
+    assert validated.status == "unverified"
+    assert validated.blocker is None
+    assert validated.reached_payment_page is True
+
+
+def test_fee_leak_pct_same_room_rule():
+    """Part c: price_shown_on_listing must be the price of the same room as the final payable, or null.
+    Never compute fee_leak_pct from a different room.
+    """
+    # Same room normal calculation
+    assert fee_leak_pct(1000.0, 1200.0, same_room=True) == 20.0
+
+    # If price_shown_on_listing is null / None -> leak is None
+    assert fee_leak_pct(None, 1200.0) is None
+
+    # If same_room is False -> leak is None (never compute fee_leak_pct from a different room)
+    assert fee_leak_pct(1000.0, 1200.0, same_room=False) is None
+
+    # Status determine_status handles occupancy_mismatch explicitly
+    assert determine_status(
+        reached_payment_page=True,
+        final_price=1200.0,
+        evidence=[{"type": "recording"}],
+        reconciliation="ok",
+        blocker=None,
+        occupancy_mismatch=True,
+    ) == "unverified"
+
+    # Status determine_status without mismatch verifies
+    assert determine_status(
+        reached_payment_page=True,
+        final_price=1200.0,
+        evidence=[{"type": "recording"}],
+        reconciliation="ok",
+        blocker=None,
+        occupancy_mismatch=False,
+    ) == "verified"
+
