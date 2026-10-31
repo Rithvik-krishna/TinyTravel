@@ -12,6 +12,7 @@ export function AppBackground() {
       <span className="blob b3" />
       <span className="blob b4" />
       <span className="blob b5" />
+      <span className="blob b6" />
       <span className="flutes" />
       <span className="vignette" />
       <span className="grain" />

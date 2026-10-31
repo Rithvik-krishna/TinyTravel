@@ -6,14 +6,10 @@ export function HowItWorks() {
       <div className="wrap">
         <div className="sec-head">
           <span className="eyebrow">How it works</span>
-          <h2>Four steps, no payment.</h2>
+          <h2>Three steps, no payment.</h2>
         </div>
         <div className="steps">
-          <div className="step">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z" /></svg>
-            <h3>Tell us in one sentence</h3>
-            <p>&quot;Bengaluru, 20–21 Nov, 2 people, breakfast, free cancellation, under 12k.&quot;</p>
-          </div>
+          
           <div className="step">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2" /><path d="M3 9h18M8 22h8" /></svg>
             <h3>Agents check out as a guest</h3>

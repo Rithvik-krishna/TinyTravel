@@ -8,8 +8,18 @@ interface NavLink {
   label: string;
 }
 
-/** Floating glass nav pill: logo, centred links, a white CTA. On small screens the links move into a glass sheet. */
-export function NavPill({ links, ctaLabel, ctaHref, logoHref = "/" }: { links: NavLink[]; ctaLabel: string; ctaHref: string; logoHref?: string }) {
+/** Full-width glass nav: big logo, centred links, prominent white CTA. On small screens the links move into a glass sheet. */
+export function NavPill({
+  links,
+  ctaLabel,
+  ctaHref,
+  logoHref = "/",
+}: {
+  links: NavLink[];
+  ctaLabel: string;
+  ctaHref: string;
+  logoHref?: string;
+}) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -29,22 +39,37 @@ export function NavPill({ links, ctaLabel, ctaHref, logoHref = "/" }: { links: N
           </Link>
           <nav className="navlinks" aria-label="Sections">
             {links.map((l) => (
-              <Link key={l.href} href={l.href}>{l.label}</Link>
+              <Link key={l.href} href={l.href}>
+                {l.label}
+              </Link>
             ))}
           </nav>
-          <Link className="btn sm navcta" href={ctaHref}>
-            {ctaLabel}
-          </Link>
-          <button className="menubtn" type="button" aria-label="Menu" aria-expanded={open} aria-controls="navsheet" onClick={() => setOpen((o) => !o)}>
-            <span aria-hidden="true">{open ? "✕" : "☰"}</span>
-          </button>
+          <div className="nav-actions">
+            <Link className="btn navcta" href={ctaHref}>
+              {ctaLabel}
+            </Link>
+            <button
+              className="menubtn"
+              type="button"
+              aria-label="Menu"
+              aria-expanded={open}
+              aria-controls="navsheet"
+              onClick={() => setOpen((o) => !o)}
+            >
+              <span aria-hidden="true">{open ? "✕" : "☰"}</span>
+            </button>
+          </div>
         </div>
         {open && (
           <div className="navsheet" id="navsheet">
             {links.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
+              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+                {l.label}
+              </Link>
             ))}
-            <Link className="btn" href={ctaHref} onClick={() => setOpen(false)}>{ctaLabel}</Link>
+            <Link className="btn" href={ctaHref} onClick={() => setOpen(false)}>
+              {ctaLabel}
+            </Link>
           </div>
         )}
       </div>

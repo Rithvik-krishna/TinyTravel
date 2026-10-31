@@ -10,8 +10,9 @@
 .appbg .b1{width:52vw;height:52vw;left:-14vw;top:-16vw;background:var(--sky-light);opacity:.42;filter:blur(110px)}
 .appbg .b2{width:44vw;height:44vw;left:28vw;top:22vh;background:var(--white);opacity:.18;filter:blur(120px)}
 .appbg .b3{width:56vw;height:56vw;right:-18vw;bottom:-22vw;background:var(--sky-night);opacity:.9;filter:blur(100px)}
-.appbg .b4{width:40vw;height:40vw;left:-12vw;bottom:-14vw;background:var(--pink);opacity:.35;filter:blur(110px)}
-.appbg .b5{width:20vw;height:20vw;left:-2vw;bottom:-4vw;background:var(--pink-soft);opacity:.5;filter:blur(80px)}
+.appbg .b4{width:50vw;height:50vw;left:-14vw;bottom:-12vw;background:var(--pink);opacity:.5;filter:blur(110px)}
+.appbg .b5{width:26vw;height:26vw;left:0;bottom:-2vw;background:var(--pink-soft);opacity:.65;filter:blur(80px)}
+.appbg .b6{width:34vw;height:34vw;right:-8vw;top:38vh;background:var(--pink);opacity:.28;filter:blur(120px)}
 @keyframes drift-a{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(6vw,5vh,0) scale(1.12)}}
 @keyframes drift-b{from{transform:translate3d(0,0,0) scale(1.05)}to{transform:translate3d(-5vw,6vh,0) scale(.92)}}
 @media (prefers-reduced-motion:no-preference){
@@ -20,6 +21,7 @@
   .appbg .b3{animation:drift-a 38s ease-in-out infinite alternate-reverse}
   .appbg .b4{animation:drift-b 46s ease-in-out infinite alternate}
   .appbg .b5{animation:drift-a 35s ease-in-out infinite alternate-reverse}
+  .appbg .b6{animation:drift-b 44s ease-in-out infinite alternate}
 }
 .appbg .flutes{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 2px,rgba(255,255,255,0) 2px 9px),repeating-linear-gradient(90deg,rgba(4,60,95,.10) 0 1px,rgba(0,0,0,0) 1px 9px);-webkit-backdrop-filter:blur(1.5px);backdrop-filter:blur(1.5px)}
 /* Darkens the whole field a little and more toward the bottom so small white text stays readable. */
@@ -216,3 +218,11 @@ body .tt .tag-section .wrap{display:grid;gap:18px;justify-items:center;text-alig
 body .tt .tag-section .rail-note{color:var(--text-2)}
 body .tt header.nav .wrap{display:block}
 body .tt header.nav .navpill{width:100%}
+
+/* three-step "how it works" */
+body .tt .steps{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){
+  body .tt .steps{grid-template-columns:1fr}
+  body .tt .steps .step{border-left:0;border-top:1px solid var(--line)}
+  body .tt .steps .step:first-child{border-top:0}
+}
