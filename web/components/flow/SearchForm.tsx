@@ -232,6 +232,11 @@ export function SearchForm() {
 
       
 
+      {mode === "down" && (
+        <div className="notice bad" role="alert">
+          The booking service is not running, so searches cannot start yet. Start the API, then reload this page.
+        </div>
+      )}
       {error && <div className="notice bad" role="alert">{error}</div>}
 
       <div className="form-foot">
@@ -239,7 +244,7 @@ export function SearchForm() {
           We check 3 sites like a real buyer, as a guest, and never pay. About 3–5 minutes.{" "}
           <button type="button" className="linkish" onClick={() => dlg.current?.showModal()}>How we stay safe</button>
         </p>
-        <button className="btn" type="submit" disabled={busy || (touched && !valid)}>
+        <button className="btn" type="submit" disabled={busy || mode === "down" || (touched && !valid)}>
           {busy ? "Starting…" : "Verify prices"}
         </button>
       </div>
