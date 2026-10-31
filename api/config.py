@@ -15,7 +15,7 @@ DISABLED_PLATFORMS = {
 
 # Investigation configuration
 PROBE_MISSING = os.getenv("PROBE_MISSING", "0") == "1"
-MAX_CONCURRENT_RUNS = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
+MAX_CONCURRENT_RUNS = int(os.getenv("MAX_CONCURRENT_RUNS", "2"))
 MAX_SPEND_USD = float(os.getenv("MAX_SPEND_USD", "4.0"))
 AGENT_TIMEOUT_S = int(os.getenv("AGENT_TIMEOUT_S", "360"))
 INTAKE_MODEL = os.getenv("INTAKE_MODEL", "claude-3-5-sonnet-20241022")

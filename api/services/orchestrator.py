@@ -362,7 +362,13 @@ async def run_search(
 
         else:
             # DISCOVERY MODE: Full search
-            platforms = ["Cleartrip", "Agoda", "Booking.com"]
+            all_platforms = ["Cleartrip", "Agoda", "Booking.com"]
+            # Finding hotels with three browser agents at once makes each one crawl and all three time out
+            # (seen live for Delhi). Discover on the first site only, then check those hotels on every site.
+            discovery_names = [p.strip() for p in os.getenv("DISCOVERY_PLATFORMS", "Cleartrip").split(",") if p.strip()]
+            _fake_run = os.getenv("TINYFISH_FAKE") == "1" or req_dict.get("fake") is True
+            # Fake/mock runs keep the original behaviour (all sites, canned listings).
+            platforms = all_platforms if _fake_run else ([p for p in all_platforms if p in discovery_names] or ["Cleartrip"])
 
             # Event 2: discovery_started
             await emit_event(
@@ -373,7 +379,7 @@ async def run_search(
             )
 
             # Discover listings across platforms in parallel, limited by semaphore
-            max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
+            max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "2"))
             discovery_semaphore = asyncio.Semaphore(max_concurrent)
 
             async def run_discovery_one(platform_name: str) -> list[dict]:
@@ -413,6 +419,14 @@ async def run_search(
             # Deduplication
             hotel_groups = group_listings(all_listings)
 
+            # Every discovered hotel is checked on all three sites, not only where it was discovered.
+            for _g in hotel_groups:
+                _have = set(_g.get("offer_ids", []))
+                for _slug in ("cleartrip", "agoda", "booking"):
+                    _oid = f"{_g['hotel_id']}_{_slug}"
+                    if _oid not in _have:
+                        _g.setdefault("offer_ids", []).append(_oid)
+
             # Event 4: hotels_grouped
             await emit_event(
                 search_id,
@@ -436,7 +450,7 @@ async def run_search(
                 target_groups = hotel_groups[:1]
 
             # Build list of offers to probe
-            probe_missing = os.getenv("PROBE_MISSING", "0") == "1"
+            probe_missing = os.getenv("PROBE_MISSING", "0" if os.getenv("TINYFISH_FAKE") == "1" else "1") == "1"
 
             for g in target_groups:
                 gid = g["hotel_id"]
@@ -481,7 +495,7 @@ async def run_search(
 
 
         # 3. Checkout Verification Phase
-        max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
+        max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "2"))
         semaphore = asyncio.Semaphore(max_concurrent)
         max_spend_usd = float(os.getenv("MAX_SPEND_USD", "4.0"))
         per_run_timeout_s = int(os.getenv("AGENT_TIMEOUT_S", "600" if os.getenv("DATA_MODE") == "live" else "360"))
