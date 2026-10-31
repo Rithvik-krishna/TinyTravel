@@ -311,7 +311,11 @@ async def verify_offer(
         try:
             results_dir = Path(__file__).resolve().parents[2] / "results"
             results_dir.mkdir(parents=True, exist_ok=True)
-            raw_path = results_dir / f"gate_{hotel_slug}_{site_slug}_raw.json"
+            city_slug = req.get("destination", "").lower().replace(" ", "_")
+            if city_slug and city_slug != "bengaluru":
+                raw_path = results_dir / f"gate_{city_slug}_{hotel_slug}_{site_slug}_raw.json"
+            else:
+                raw_path = results_dir / f"gate_{hotel_slug}_{site_slug}_raw.json"
             raw_payload = {
                 "run_id": run.run_id,
                 "streaming_url": run.streaming_url,

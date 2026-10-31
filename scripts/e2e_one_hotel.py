@@ -179,13 +179,17 @@ async def main_async(args: argparse.Namespace) -> int:
         print(f"{site:<14} | {st:<10} | {shown:<10} | {final:<10} | {leak:<8} | {score_str:<6}")
 
         # If live, save offer to fixtures/real/
-        hslug = args.hotel.lower().replace(" ", "_")
+        hname = o.get("hotel_name") or args.hotel or "hotel"
+        hslug = hname.lower().replace(" ", "_")
         sslug = site.lower().replace(".", "").replace(" ", "")
+        cslug = args.destination.lower().replace(" ", "_")
         if args.live:
             real_fixtures_dir = ROOT / "fixtures" / "real"
-
             real_fixtures_dir.mkdir(parents=True, exist_ok=True)
-            offer_path = real_fixtures_dir / f"gate_{hslug}_{sslug}.json"
+            if is_full or cslug != "bengaluru":
+                offer_path = real_fixtures_dir / f"gate_{cslug}_{hslug}_{sslug}.json"
+            else:
+                offer_path = real_fixtures_dir / f"gate_{hslug}_{sslug}.json"
             offer_path.write_text(json.dumps(o, indent=2), encoding="utf-8")
             print(f"\n[SAVED OFFER] Saved processed offer to {offer_path}")
 
@@ -250,6 +254,8 @@ def main():
 
     args = parser.parse_args()
     ret = asyncio.run(main_async(args))
+    sys.stdout.flush()
+    sys.stderr.flush()
     os._exit(ret)
 
 

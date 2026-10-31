@@ -6,6 +6,11 @@ import os
 from pathlib import Path
 from typing import Optional
 import uuid
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=True)
+load_dotenv(override=True)
+
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, HTMLResponse, FileResponse
