@@ -414,9 +414,11 @@ def handoff(oid: str):
 def history(
     hotel: str = Query(..., description="Canonical hotel name"),
     platform: Optional[str] = Query(None, description="Optional platform filter"),
+    include_mock: bool = Query(False, description="Include mock/simulated observations"),
 ):
     """Retrieve historical price observations for a hotel, ordered newest first."""
-    return get_price_history(hotel=hotel, platform=platform)
+    return get_price_history(hotel=hotel, platform=platform, include_mock=include_mock)
+
 
 
 @app.get("/api/fee-glossary", response_model=dict[str, FeeGlossaryItem])

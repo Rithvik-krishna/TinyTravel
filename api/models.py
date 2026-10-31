@@ -325,6 +325,8 @@ class PriceHistoryItem(BaseModelForbid):
     captured_at: str
     run_id: Optional[str] = None
     offer_id: Optional[str] = None
+    mock: Optional[bool] = False
+
 
 
 class FeeGlossaryItem(BaseModelForbid):

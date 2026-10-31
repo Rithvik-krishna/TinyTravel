@@ -99,32 +99,62 @@ def test_classify_fee_labels_all_fixtures():
         assert kind == expected_kind, f"Failed on label '{label}': got '{kind}', expected '{expected_kind}'"
 
 
-def test_history_endpoint(client, tmp_path):
-    """GET /api/history returns rows ordered newest first without interpolation."""
-    # Test with query params
-    resp = client.get("/api/history?hotel=La%20Marvella")
+def test_history_endpoint(client):
+    """GET /api/history returns rows ordered newest first.
+    No real data -> empty list. Mock/fake observations excluded by default.
+    """
+    import uuid
+    hotel_name = f"Isolated Hotel {uuid.uuid4().hex[:8]}"
+    platform = "Cleartrip"
+
+    # 1. No real data -> empty list
+    resp = client.get(f"/api/history?hotel={hotel_name}")
     assert resp.status_code == 200
-    rows = resp.json()
-    assert isinstance(rows, list)
-    assert len(rows) > 0
+    assert resp.json() == []
 
-    first = rows[0]
-    assert "amount" in first
-    assert "currency" in first
-    assert "captured_at" in first
-    assert "run_id" in first
-    assert "offer_id" in first
+    # 2. Insert mock observation (mock=True)
+    save_price_history(
+        hotel=hotel_name,
+        platform=platform,
+        amount=9500.0,
+        captured_at="2026-10-31T12:00:00+05:30",
+        offer_id="off_mock_1",
+        run_id="run_mock_1",
+        mock=True,
+    )
 
-    # Test filtering by platform
-    resp_cleartrip = client.get("/api/history?hotel=La%20Marvella&platform=Cleartrip")
-    assert resp_cleartrip.status_code == 200
-    ct_rows = resp_cleartrip.json()
-    assert isinstance(ct_rows, list)
+    # By default, mock observation is excluded -> returns empty list
+    resp_default = client.get(f"/api/history?hotel={hotel_name}")
+    assert resp_default.status_code == 200
+    assert resp_default.json() == []
 
-    # Empty result for unknown hotel
-    resp_empty = client.get("/api/history?hotel=NonExistentHotelXYZ")
-    assert resp_empty.status_code == 200
-    assert resp_empty.json() == []
+    # With include_mock=true -> returns mock observation with mock: true
+    resp_mock = client.get(f"/api/history?hotel={hotel_name}&include_mock=true")
+    assert resp_mock.status_code == 200
+    mock_rows = resp_mock.json()
+    assert len(mock_rows) == 1
+    assert mock_rows[0]["mock"] is True
+    assert mock_rows[0]["amount"] == 9500.0
+
+    # 3. Insert real recorded observation (mock=False)
+    save_price_history(
+        hotel=hotel_name,
+        platform=platform,
+        amount=10250.0,
+        captured_at="2026-10-31T13:00:00+05:30",
+        offer_id="off_real_1",
+        run_id="run_real_1",
+        mock=False,
+    )
+
+    # Real observation returned without include_mock
+    resp_real = client.get(f"/api/history?hotel={hotel_name}")
+    assert resp_real.status_code == 200
+    real_rows = resp_real.json()
+    assert len(real_rows) == 1
+    assert real_rows[0]["amount"] == 10250.0
+    assert real_rows[0]["mock"] is False
+    assert real_rows[0]["offer_id"] == "off_real_1"
 
 
 def test_search_report_html_endpoint(client):
@@ -150,8 +180,63 @@ def test_search_report_html_endpoint(client):
     assert resp_404.status_code == 404
 
 
+def test_reporting_html_escapes_xss():
+    """Verify html.escape strictly sanitizes dynamic hotel names, labels, URLs, notes, and page text."""
+    xss_payload = "<script>alert(1)</script>"
+    xss_note = "<img src=x onerror=alert(2)>"
+    xss_page_text = "<svg onload=alert(3)>"
+    xss_url = "https://example.com/hotel?id=1&name=<script>alert(4)</script>"
+
+    results = {
+        "search_request": {
+            "destination": f"Bengaluru {xss_payload}",
+            "check_in": "2026-11-20",
+            "check_out": "2026-11-21",
+            "guests": 2,
+            "rooms": 1,
+        },
+        "verdicts": {
+            "overall": {"headlines": {"cheapest_verified": f"Hotel {xss_payload}"}}
+        },
+        "summary_strip": {"listings_found": 1, "unique_hotels": 1, "verified": 1},
+        "offers": [
+            {
+                "offer_id": "off_xss_1",
+                "hotel_name": f"Luxury Palace {xss_payload}",
+                "site": f"Cleartrip {xss_payload}",
+                "status": "verified",
+                "reconciliation": "ok",
+                "notes": xss_note,
+                "listing_page_text": xss_page_text,
+                "hotel_url": xss_url,
+                "price_shown_on_listing": 5000.0,
+                "price_final_payable": 6500.0,
+                "fee_lines": [
+                    {"label": f"Convenience Fee {xss_payload}", "amount": 500.0, "fee_kind": "platform_fee"}
+                ],
+                "evidence": [
+                    {"step": "payment", "type": "screenshot", "url": xss_url}
+                ]
+            }
+        ]
+    }
+
+    report = generate_html_report(results, search_id=f"sid_{xss_payload}")
+
+    # Raw script and dangerous tags must NOT be present
+    assert "<script>alert(1)</script>" not in report
+    assert "<img src=x onerror=alert(2)>" not in report
+    assert "<svg onload=alert(3)>" not in report
+    assert "<script>alert(4)</script>" not in report
+
+    # Escaped versions must be present
+    assert "&lt;script&gt;alert(1)&lt;/script&gt;" in report
+    assert "&lt;img src=x onerror=alert(2)&gt;" in report
+    assert "&lt;svg onload=alert(3)&gt;" in report
+
+
 def test_report_fee_draft_endpoint(client):
-    """GET /api/offers/{id}/report-fee-draft returns polite, factual draft."""
+    """GET /api/offers/{id}/report-fee-draft returns polite, factual draft citing fees and excluding taxes."""
     resp = client.get("/api/offers/h1_cleartrip/report-fee-draft")
     assert resp.status_code == 200
     draft = resp.json()
@@ -169,6 +254,15 @@ def test_report_fee_draft_endpoint(client):
     assert "Dear Cleartrip Support Team" in msg
     assert "inquire" in msg or "clarification" in msg
     assert "Observed Details" in msg
+
+    # Only cites platform_fee / property_fee / add_on (Convenience fee: INR 1,095.00)
+    assert "Convenience fee: INR 1,095.00" in msg
+    # Excludes taxes from fees
+    assert "Taxes & fees" not in msg
+    # Excludes room price base and discount lines from fees
+    assert "Room price (base)" not in msg
+    assert "Discount" not in msg
+
     # Never accuse or claim dishonesty
     assert "cheat" not in msg.lower()
     assert "fraud" not in msg.lower()

@@ -21,7 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 # Suspicious key regexes
 PATTERNS = [
     ("Anthropic API Key", re.compile(r"sk-ant-(?:api\d{2}-)?[a-zA-Z0-9_\-]{30,}")),
-    ("TinyFish API Key", re.compile(r"\btf_[a-zA-Z0-9_\-]{20,}\b")),
+    ("TinyFish API Key", re.compile(r"\btf_[a-zA-Z0-9_\-]{20,}\b|\bsk-tinyfish(?:-[a-zA-Z0-9_\-]+)?\b")),
     ("GitHub Token", re.compile(r"\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9_]{36,}\b|\bgithub_pat_[A-Za-z0-9_]{82}\b")),
     ("AWS Access Key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
     ("Google API Key", re.compile(r"\bAIza[0-9A-Za-z\-_]{35}\b")),

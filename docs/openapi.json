@@ -312,6 +312,18 @@
               "title": "Platform"
             },
             "description": "Optional platform filter"
+          },
+          {
+            "name": "include_mock",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "description": "Include mock/simulated observations",
+              "default": false,
+              "title": "Include Mock"
+            },
+            "description": "Include mock/simulated observations"
           }
         ],
         "responses": {
@@ -1416,6 +1428,18 @@
               }
             ],
             "title": "Offer Id"
+          },
+          "mock": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mock",
+            "default": false
           }
         },
         "additionalProperties": false,

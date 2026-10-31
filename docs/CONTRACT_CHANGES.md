@@ -70,4 +70,15 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Why**: Allows replaying a full, labelled real investigation without external network requests or credit spend, adhering to strict contract validation.
 - **Fixtures updated**: Yes (`fixtures/saved_run.json` and `fixtures/saved_sse_script.json` created).
 
+### 2026-10-31 - Nikhil
+- **Price History Ledger & Reporting Fix-ups**:
+  - Added optional `mock: Optional[bool] = False` to `PriceHistoryItem` in `api/models.py`.
+  - Added optional `include_mock: bool = False` query parameter to `GET /api/history` in `api/main.py`.
+  - Removed demo seeding from `api/db.py`; only real observations returned by default (empty list when no real records exist).
+  - Sanitized HTML reporting with strict `html.escape` across all dynamic fields (preventing XSS).
+  - Updated `report-fee-draft` to cite only `platform_fee`, `property_fee`, and `add_on` lines, excluding taxes from fees.
+- **Why**: Ensures purity of historical observations, guarantees XSS safety in evidence reports, and isolates discretionary fees from statutory taxes in inquiry drafts.
+- **Fixtures updated**: No (purely additive optional field).
+
+
 
