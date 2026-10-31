@@ -424,15 +424,16 @@ async def run_search(
 
             # Target Selection
             budget_limit = req_dict.get("budget_per_night")
+            max_targets = int(req_dict.get("max_target_hotels", 2))
             target_groups = select_targets(
                 hotel_groups,
-                max_hotels=3,
+                max_hotels=max_targets,
                 budget_per_night=budget_limit,
                 listings=all_listings,
             )
 
-            # If no multi-platform groups qualified, take top groups
-            if not target_groups and hotel_groups:
+            # If no multi-platform groups qualified and not strictly multi_platform_only
+            if not target_groups and hotel_groups and not req_dict.get("multi_platform_only", True):
                 target_groups = hotel_groups[:1]
 
             # Build list of offers to probe
@@ -483,7 +484,7 @@ async def run_search(
         # 3. Checkout Verification Phase
         max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
         semaphore = asyncio.Semaphore(max_concurrent)
-        max_spend_usd = float(os.getenv("MAX_SPEND_USD", "4.0"))
+        max_spend_usd = float(os.getenv("MAX_SPEND_USD", "10.0"))
         per_run_timeout_s = int(os.getenv("AGENT_TIMEOUT_S", "600" if os.getenv("DATA_MODE") == "live" else "360"))
 
         cumulative_spend_usd = 0.0
@@ -554,6 +555,10 @@ async def run_search(
                 offer_req["offer_id"] = offer_id
                 offer_req["hotel_id"] = hotel_id
                 offer_req["timeout_s"] = per_run_timeout_s
+                if item.get("listing"):
+                    l_url = item["listing"].get("source_url") or item["listing"].get("hotel_url")
+                    if l_url:
+                        offer_req["url"] = l_url
 
                 logger.info("[AGENT_START] run_id=%s platform=%s hotel=%s", run_id, platform_name, hotel_name)
                 try:
