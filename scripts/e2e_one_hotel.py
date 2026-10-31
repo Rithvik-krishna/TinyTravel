@@ -64,6 +64,35 @@ async def stream_and_display(search_id: str, queue: asyncio.Queue, start_time: f
 
 
 async def main_async(args: argparse.Namespace) -> int:
+    is_full = getattr(args, "full", False)
+    platforms = [p.strip() for p in args.platforms.split(",")]
+
+    # Calculate pre-flight cost estimate
+    if is_full:
+        num_disc = len(platforms)
+        max_checkout = 3 * len(platforms)
+        est_min_cost = (num_disc + 3) * 0.20
+        est_max_cost = min(4.0, (num_disc + max_checkout) * 0.35)
+        print("\n" + "=" * 70)
+        print("FULL INVESTIGATION PRE-FLIGHT COST ESTIMATE")
+        print("=" * 70)
+        print(f"Mode                 : Full Investigation (Discovery -> Grouping -> Checkout)")
+        print(f"Discovery Platforms  : {', '.join(platforms)} ({num_disc} discovery runs)")
+        print(f"Target Selection     : Up to 3 hotel groups across discovered platforms")
+        print(f"Estimated Total Runs : {num_disc} to {num_disc + max_checkout} runs")
+        print(f"Estimated Cost Range : ${est_min_cost:.2f} - ${est_max_cost:.2f} USD (budget cap: $4.00 USD)")
+        print(f"Concurrency Limit    : 3 parallel agent runs")
+        print("=" * 70 + "\n")
+    else:
+        est_cost = len(platforms) * 0.30
+        print("\n" + "=" * 70)
+        print(f"TARGET MODE PRE-FLIGHT COST ESTIMATE: '{args.hotel}'")
+        print("=" * 70)
+        print(f"Platforms            : {', '.join(platforms)} ({len(platforms)} checkout runs)")
+        print(f"Estimated Cost       : ~${est_cost:.2f} USD")
+        print(f"Concurrency Limit    : 3 parallel agent runs")
+        print("=" * 70 + "\n")
+
     # Mode setup
     if args.live:
         if not args.yes_spend:
@@ -71,14 +100,13 @@ async def main_async(args: argparse.Namespace) -> int:
             return 1
         os.environ["DATA_MODE"] = "live"
         os.environ.pop("TINYFISH_FAKE", None)
-        print(">>> RUNNING IN LIVE MODE with real TinyFish agents <<<")
+        print(">>> RUNNING IN LIVE MODE with real TinyFish agents <<<\n")
     else:
         os.environ["DATA_MODE"] = "fake"
         os.environ["TINYFISH_FAKE"] = "1"
-        print(">>> RUNNING IN FAKE MODE (simulated speed) <<<")
+        print(">>> RUNNING IN FAKE MODE (simulated speed) <<<\n")
 
     search_id = f"e2e_{int(time.time())}"
-    platforms = [p.strip() for p in args.platforms.split(",")]
 
     req = {
         "destination": args.destination,
@@ -94,12 +122,12 @@ async def main_async(args: argparse.Namespace) -> int:
             "wifi": True,
             "parking": False,
         },
-        "hotel_name": args.hotel,
+        "hotel_name": None if is_full else args.hotel,
         "platforms": platforms,
         "currency": "INR",
     }
 
-    target = {
+    target = None if is_full else {
         "hotel_name": args.hotel,
         "platforms": platforms,
     }
@@ -107,7 +135,10 @@ async def main_async(args: argparse.Namespace) -> int:
     start_time = time.monotonic()
     queue = get_search_queue(search_id)
 
-    print(f"\nInitiating target search for '{args.hotel}' across {', '.join(platforms)}...\n" + "-" * 70)
+    if is_full:
+        print(f"Initiating full investigation for '{args.destination}' across {', '.join(platforms)}...\n" + "-" * 70)
+    else:
+        print(f"Initiating target search for '{args.hotel}' across {', '.join(platforms)}...\n" + "-" * 70)
 
     # Launch display consumer and orchestrator runner concurrently
     display_task = asyncio.create_task(stream_and_display(search_id, queue, start_time))
@@ -115,6 +146,7 @@ async def main_async(args: argparse.Namespace) -> int:
 
     results, _ = await asyncio.gather(orchestrator_task, display_task)
     total_time = time.monotonic() - start_time
+
 
     print("-" * 70)
     print(f"Completed in {total_time:.2f} seconds.")
@@ -147,8 +179,9 @@ async def main_async(args: argparse.Namespace) -> int:
         # If live or if requested, save offer to fixtures/real/
         hslug = args.hotel.lower().replace(" ", "_")
         sslug = site.lower().replace(".", "").replace(" ", "")
-        if sslug == "cleartrip":
+        if args.live and sslug == "cleartrip":
             real_fixtures_dir = ROOT / "fixtures" / "real"
+
             real_fixtures_dir.mkdir(parents=True, exist_ok=True)
             offer_path = real_fixtures_dir / f"gate_{hslug}_{sslug}.json"
             offer_path.write_text(json.dumps(o, indent=2), encoding="utf-8")
@@ -208,8 +241,10 @@ def main():
     parser.add_argument("--rooms", type=int, default=1, help="Number of rooms")
     parser.add_argument("--budget", type=float, default=12000.0, help="Budget per night")
     parser.add_argument("--deal-mode", default="best_value", help="Deal mode: best_value, lowest_price, most_transparent")
+    parser.add_argument("--full", action="store_true", help="Run full investigation: discovery -> dedupe -> checkout")
     parser.add_argument("--live", action="store_true", help="Run against real platforms using TinyFish")
     parser.add_argument("--yes-spend", action="store_true", help="Acknowledge real spending for live mode")
+
 
     args = parser.parse_args()
     ret = asyncio.run(main_async(args))

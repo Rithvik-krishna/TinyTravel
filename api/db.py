@@ -153,6 +153,18 @@ def get_offers(search_id: str, db_path: Optional[Union[str, Path]] = None) -> li
     return [json.loads(r["body"]) for r in rows]
 
 
+def get_offer(offer_id: str, db_path: Optional[Union[str, Path]] = None) -> Optional[dict]:
+    """Get a single offer record by id."""
+    conn = get_conn(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT id, search_id, body FROM offers WHERE id = ?", (offer_id,))
+    row = cur.fetchone()
+    conn.close()
+    if not row:
+        return None
+    return json.loads(row["body"])
+
+
 def append_event(
     search_id: str,
     t_ms: int,
