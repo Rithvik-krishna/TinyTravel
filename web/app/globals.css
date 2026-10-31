@@ -2,105 +2,161 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * "Coastal Minimal" palette. The ONLY place colours are defined.
+ * Palette: Ocean #0F4C5C, Teal #2A9D8F, Sand #E9D8A6, Clay #F4A261, Ivory #FAF9F6, Slate #1F2937.
+ * Everything else (Tailwind, landing.css, flow.css, components) reads the semantic tokens below.
+ */
 :root {
-  --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --border: #e2e8f0;
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --brand: #0284c7;
-  --success: #16a34a;
-  --warning: #d97706;
-  --danger: #dc2626;
-  --info: #2563eb;
+  /* raw palette */
+  --ocean: #0F4C5C;
+  --teal: #2A9D8F;
+  --sand: #E9D8A6;
+  --clay: #F4A261;
+  --ivory: #FAF9F6;
+  --slate: #1F2937;
 
-  /* Aliases for reference component and shadcn tokens */
-  --color-foreground: var(--text);
-  --color-background: var(--surface);
-  --color-card: var(--surface-2);
-  --color-card-foreground: var(--text);
-  --color-muted: var(--surface-2);
-  --color-muted-foreground: var(--text-muted);
-  --color-border: var(--border);
-  --color-ring: var(--brand);
-  --color-chart-2: var(--success);
+  /* semantic tokens, light */
+  --background: #FAF9F6;
+  --surface: #FFFFFF;
+  --surface-2: #F4EFDD;
+  --ink: #1F2937;
+  --muted: #5B6675;
+  --line: #E3E0D5;
+  --brand: #0F4C5C;
+  --brand-hover: #0B3A47;
+  --brand-soft: #DCEBEC;
+  --brand-ink: #FFFFFF;
+  --accent: #2A9D8F;
+  --accent-soft: #D9F0ED;
+  --gap: #F4A261;
+  --warn: #9A4F0C;
+  --warn-soft: #FCEBD9;
+  --ok: #1B7F4B;
+  --ok-soft: #DDF3E6;
+  --bad: #B42318;
+  --bad-soft: #FDE4E1;
+  --info: #1D5FA8;
+  --sand-line: #D8C98F;
+  --shadow-color: rgba(31, 41, 55, 0.18);
+  --scrim: rgba(31, 41, 55, 0.6);
+  --paper: #FFFFFF;
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --surface: #0b0f19;
-    --surface-2: #131b2e;
-    --border: #1e293b;
-    --text: #f8fafc;
-    --text-muted: #94a3b8;
-    --brand: #38bdf8;
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --danger: #ef4444;
-    --info: #60a5fa;
-
-    --color-foreground: var(--text);
-    --color-background: var(--surface);
-    --color-card: var(--surface-2);
-    --color-card-foreground: var(--text);
-    --color-muted: var(--surface-2);
-    --color-muted-foreground: var(--text-muted);
-    --color-border: var(--border);
-    --color-ring: var(--brand);
-    --color-chart-2: var(--success);
+  :root:not([data-theme="light"]) {
+    --background: #111827;
+    --surface: #1F2937;
+    --surface-2: #273244;
+    --ink: #F3F4F6;
+    --muted: #9CA3AF;
+    --line: #374151;
+    --brand: #5FC3B5;
+    --brand-hover: #7AD3C6;
+    --brand-soft: #17383A;
+    --brand-ink: #0B2A2E;
+    --accent: #2A9D8F;
+    --accent-soft: #163B3A;
+    --gap: #F4A261;
+    --warn: #F4A261;
+    --warn-soft: #3A2A1A;
+    --ok: #4CC38A;
+    --ok-soft: #12301F;
+    --bad: #F28B82;
+    --bad-soft: #3A1B1B;
+    --info: #8AB8F0;
+    --sand-line: #5A5230;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --scrim: rgba(0, 0, 0, 0.65);
+    color-scheme: dark;
   }
 }
-
-body {
-  background-color: var(--surface);
-  color: var(--text);
-}
-
-/* Landing ("/") tokens. Scoped to .tt so the other pages' --surface/--info etc. are not overridden. */
-.tt {
-  --bg:#0a0f1e; --surface:#121a30; --surface2:#1a2540; --line:#27345a;
-  --fg:#eaeef8; --muted:#9aa6c2; --brass:#d9a441; --brass-hi:#f2c970; --brass-lo:#8a6420;
-  --ok:#3ecf8e; --warn:#f2b84b; --bad:#f07a7a; --info:#6db3ff;
-  --tag-bg:#eee9dc; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#cfc8b6;
-  --on-brass:#1b1405;
+:root[data-theme="dark"] {
+  --background: #111827;
+  --surface: #1F2937;
+  --surface-2: #273244;
+  --ink: #F3F4F6;
+  --muted: #9CA3AF;
+  --line: #374151;
+  --brand: #5FC3B5;
+  --brand-hover: #7AD3C6;
+  --brand-soft: #17383A;
+  --brand-ink: #0B2A2E;
+  --accent: #2A9D8F;
+  --accent-soft: #163B3A;
+  --warn: #F4A261;
+  --warn-soft: #3A2A1A;
+  --ok: #4CC38A;
+  --ok-soft: #12301F;
+  --bad: #F28B82;
+  --bad-soft: #3A1B1B;
+  --info: #8AB8F0;
+  --sand-line: #5A5230;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --scrim: rgba(0, 0, 0, 0.65);
   color-scheme: dark;
 }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .tt {
-    --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
-    --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
-    --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
-    --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
-    --on-brass:#fff; color-scheme: light;
-  }
+
+/*
+ * Aliases. Older pages and the landing/flow stylesheets use these names; they all resolve to the tokens above.
+ * --surface is the card colour and --background is the page colour.
+ */
+:root {
+  --text: var(--ink);
+  --text-muted: var(--muted);
+  --border: var(--line);
+  --success: var(--ok);
+  --warning: var(--warn);
+  --danger: var(--bad);
+  --surface2: var(--surface-2);
+
+  --bg: var(--background);
+  --fg: var(--ink);
+  --brass: var(--brand);
+  --brass-hi: var(--brand-hover);
+  --brass-lo: var(--brand-hover);
+  --on-brass: var(--brand-ink);
+
+  /* key tags stay light "paper" cards in both themes */
+  --tag-bg: #F4EFDD;
+  --tag-fg: #1F2937;
+  --tag-muted: #5B6675;
+  --tag-line: #E3D9B8;
+  --tag-ok: #166B3F;
+  --tag-warn: #9A4F0C;
+  --tag-bad: #B42318;
+  --tag-delta-bg: #FCEBD9;
+
+  --color-foreground: var(--ink);
+  --color-background: var(--background);
+  --color-card: var(--surface-2);
+  --color-card-foreground: var(--ink);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--muted);
+  --color-border: var(--line);
+  --color-ring: var(--brand);
+  --color-chart-2: var(--ok);
 }
-:root[data-theme="light"] .tt, .tt[data-theme="light"] {
-  --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
-  --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
-  --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
-  --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
-  --on-brass:#fff; color-scheme: light;
-}
-/* Booking/flow theme (.tb on top of .tt): teal action colour, calm light-first palette. Re-maps the same token names. */
-.tt.tb { --font-body: var(--font-figtree);
-  /* Midnight Navy / Deep Slate / Steel Blue / Electric Teal / Soft Coral / Snow White / Muted Blue / Success Green / Warning Amber */
-  --bg:#0B1220; --surface:#172438; --surface2:#1d2e47; --line:#263B52;
-  --fg:#F8FAFC; --muted:#9BAFC5; --brass:#2DD4BF; --brass-hi:#2DD4BF; --brass-lo:#14998a; --on-brass:#06231f;
-  --ok:#4ADE80; --warn:#FBBF24; --bad:#FF8B72; --info:#7dd3fc; }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .tt.tb {
-    --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
-    --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
-    --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
-}
-:root[data-theme="light"] .tt.tb {
-  --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
-  --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
-  --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
+
 /* Font families used by the landing and flow pages (loaded by the stylesheet link in layout.tsx). */
 :root {
   --font-display: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
   --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
   --font-figtree: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--ink);
+}
+
+/* Focus ring: 2px brand colour (Ocean in light, Teal in dark) with a 2px offset. */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+html {
+  scrollbar-color: var(--line) var(--background);
 }

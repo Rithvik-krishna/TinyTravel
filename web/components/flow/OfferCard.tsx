@@ -58,7 +58,7 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
       )}
       <div className="tags">
         <span className={`badge ${t.cancellation_category === "free" ? "ok" : "warn"}`}>{CANCEL[t.cancellation_category]}</span>
-        {notComparable && <span className="badge warn">Not comparable</span>}
+        {notComparable && <span className="badge nc">Not comparable</span>}
       </div>
       <dl>
         {t.meal_plan && (<><dt>Meal plan</dt><dd>{t.meal_plan}</dd></>)}

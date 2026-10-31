@@ -59,7 +59,7 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searc
                 {t.listing != null && <s>listing showed {inr(t.listing, t.currency)}</s>}
                 <div className="tags">
                   {nonRefundable && <span className="badge warn">Non-refundable</span>}
-                  {warn && <span className="badge warn">Not comparable</span>}
+                  {warn && <span className="badge nc">Not comparable</span>}
                   {t.cancellation_category === "free" && t.cancellation_policy && <span className="badge ok">{t.cancellation_policy}</span>}
                 </div>
                 {warn?.message && <p style={{ color: "var(--muted)", fontSize: 14 }}>{warn.message}</p>}

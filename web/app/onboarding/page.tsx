@@ -14,10 +14,10 @@ export default function Onboarding() {
   const next = (a?: string) => { const n = a ? [...ans, a] : ans; setAns(n); i + 1 >= STEPS.length ? r.push("/search") : setI(i + 1); };
   return (
     <div className="space-y-4">
-      <div className="text-xs text-slate-500">Step {i + 1}/{STEPS.length}</div>
+      <div className="text-xs text-text-muted">Step {i + 1}/{STEPS.length}</div>
       <h1 className="text-xl font-semibold">{s.q}</h1>
       <div className="flex gap-2 flex-wrap">{s.opts.map(o => <button key={o} className="border rounded-full px-4 py-2" onClick={() => next(o)}>{o}</button>)}</div>
-      <button className="text-sm text-slate-500 underline" onClick={() => r.push("/search")}>Skip</button>
+      <button className="text-sm text-text-muted underline" onClick={() => r.push("/search")}>Skip</button>
     </div>
   );
 }

@@ -17,6 +17,11 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  // meta theme-color cannot use CSS variables; these are the Ivory and Slate-900 page backgrounds.
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FAF9F6" },
+    { media: "(prefers-color-scheme: dark)", color: "#111827" },
+  ],
 };
 
 export default function RootLayout({
@@ -32,7 +37,7 @@ export default function RootLayout({
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link rel="stylesheet" href={FONTS_URL} />
       </head>
-      <body className="min-h-screen bg-surface text-text antialiased selection:bg-brand/20 selection:text-brand">
+      <body className="min-h-screen bg-background text-ink antialiased selection:bg-brand-soft selection:text-ink">
         <DevHeader />
         <MainWrapper>{children}</MainWrapper>
       </body>
