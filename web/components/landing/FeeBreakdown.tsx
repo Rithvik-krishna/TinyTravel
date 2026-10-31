@@ -2,6 +2,7 @@ import React from "react";
 import { FeeLine, TagItem } from "@/lib/tags";
 import { inr } from "@/lib/format";
 import { groupFeeLines } from "@/lib/landing";
+import { GlossHint } from "@/components/flow/GlossHint";
 
 const amount = (n: number, currency: string) => (n < 0 ? `−${inr(Math.abs(n), currency)}` : inr(n, currency));
 
@@ -12,7 +13,7 @@ function Group({ title, lines, currency }: { title: string; lines: FeeLine[]; cu
       <tr className="grp"><td colSpan={2}>{title}</td></tr>
       {lines.map((l, i) => (
         <tr key={`${l.label}-${i}`}>
-          <td>{l.label}</td>
+          <td>{l.label}<GlossHint kind={l.fee_kind} /></td>
           <td>{amount(l.amount, currency)}</td>
         </tr>
       ))}

@@ -74,7 +74,7 @@ export function HandoffDialog({ open, onClose, offer, hotelName, stay, handoff }
             <div className="fine">Scan to open it on your phone.<br />{at ? `Verified ${at}. ` : ""}Prices can change.</div>
           </div>
         )}
-        {own?.copy_paste && <p className="fine">Dummy test details used by our agents: {own.copy_paste.name}. Use your own on the real site.</p>}
+        {own?.copy_paste && <p className="fine">Dummy test details used by our agents: {own.copy_paste.name ?? own.copy_paste.guest_name}. Use your own on the real site.</p>}
         <div style={{ display: "grid", gap: 8 }}>
           <RecheckButton offerId={offer.id} platform={offer.platform} />
           <button className="btn ghost sm" type="button" style={{ justifySelf: "start" }} onClick={copy}>{copied}</button>

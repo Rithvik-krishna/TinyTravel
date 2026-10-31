@@ -74,6 +74,13 @@ export interface ResultsData {
   rechecks?: unknown[];
 }
 
+const SITE_NAMES: Record<string, string> = { cleartrip: "Cleartrip", agoda: "Agoda", booking: "Booking.com", "booking.com": "Booking.com" };
+
+/** The live API sends site names in lower case; show the proper name. Unknown sites are shown as given. */
+export function siteLabel(site: string): string {
+  return SITE_NAMES[site.trim().toLowerCase()] ?? site;
+}
+
 const BLOCKER_LABEL: Record<string, string> = {
   captcha: "Stopped at captcha",
   login: "Stopped at login",
@@ -133,15 +140,16 @@ export function offersToTags(results: ResultsData | unknown[] | null | undefined
     return {
       id: offerId,
       title: String(offer.hotel_name || "Hotel"),
-      platform: String(offer.site || "Platform"),
-      listing: typeof offer.price_shown_on_listing === "number" ? offer.price_shown_on_listing : null,
-      payable: typeof offer.price_final_payable === "number" ? offer.price_final_payable : null,
+      platform: siteLabel(String(offer.site || "Platform")),
+      // 0 is never a real price: the backend uses it for "unknown", so show N/A instead of ₹0.
+      listing: typeof offer.price_shown_on_listing === "number" && offer.price_shown_on_listing > 0 ? offer.price_shown_on_listing : null,
+      payable: typeof offer.price_final_payable === "number" && offer.price_final_payable > 0 ? offer.price_final_payable : null,
       status: (offer.status as "verified" | "unverified" | "blocked") || "unverified",
       blocker: offer.blocker ? String(offer.blocker) : null,
       cancellation_category: (offer.cancellation_category as "free" | "partial" | "non_refundable") || "free",
       fee_leak_pct: leak,
       fee_lines: Array.isArray(offer.fee_lines) ? (offer.fee_lines as FeeLine[]) : [],
-      price_trail: Array.isArray(offer.price_trail) ? (offer.price_trail as PriceTrailItem[]) : [],
+      price_trail: Array.isArray(offer.price_trail) ? (offer.price_trail as PriceTrailItem[]).filter((p) => typeof p.amount === "number" && p.amount > 0) : [],
       urgency_or_scarcity_messages: Array.isArray(offer.urgency_or_scarcity_messages)
         ? (offer.urgency_or_scarcity_messages as string[])
         : [],

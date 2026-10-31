@@ -26,7 +26,7 @@ export interface Handoff {
   platform?: string;
   deep_link?: string;
   qr_png_base64?: string;
-  copy_paste?: { name?: string; email?: string; phone?: string };
+  copy_paste?: { name?: string; guest_name?: string; email?: string; phone?: string };
   disclaimer?: string;
 }
 

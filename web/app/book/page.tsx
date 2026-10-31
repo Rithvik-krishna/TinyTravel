@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
 import demo from "@fixtures/demo_run.json";
 import { gapAmount, gapPct, inr, shortTime, signedInr } from "@/lib/format";
@@ -45,7 +45,9 @@ export default async function Book() {
               <li><Tick /><span>Nothing is booked. You finish on the real site</span></li>
             </ul>
           </div>
-          <SearchForm />
+          <Suspense fallback={null}>
+            <SearchForm />
+          </Suspense>
         </div>
 
         {example && (

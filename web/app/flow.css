@@ -213,3 +213,11 @@
 .tt .cta-bar{margin-top:28px}
 .tt .hgroup h2{font-size:20px}
 .tt main.page{min-height:60vh}
+/* fee hints, drafts, tabs */
+.tt .gloss{display:inline-block;margin-left:8px;vertical-align:middle;position:relative}
+.tt .gloss summary{list-style:none;cursor:pointer;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:inline-grid;place-items:center;font:600 11px var(--font-mono),monospace;color:var(--muted);user-select:none}
+.tt .gloss summary::-webkit-details-marker{display:none}
+.tt .gloss[open] summary{border-color:var(--brass);color:var(--brass)}
+.tt .gloss p{position:absolute;z-index:5;left:0;top:26px;width:min(280px,70vw);background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--fg);box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:normal;text-align:left;font-family:var(--font-body),system-ui,sans-serif;letter-spacing:0;text-transform:none}
+.tt textarea.draft{width:100%;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:12px;font:14px/1.5 var(--font-body),system-ui,sans-serif;resize:vertical}
+.tt .seg{flex-wrap:wrap;max-width:100%}
