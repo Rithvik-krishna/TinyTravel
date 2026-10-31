@@ -1,0 +1,1858 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "TinyTravel API",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health",
+        "operationId": "health_api_health_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search": {
+      "post": {
+        "summary": "Search",
+        "operationId": "search_api_search_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SearchInput"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/{sid}/stream": {
+      "get": {
+        "summary": "Stream",
+        "operationId": "stream_api_search__sid__stream_get",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          },
+          {
+            "name": "speed",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "number",
+              "default": 1.0,
+              "title": "Speed"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search/{sid}/results": {
+      "get": {
+        "summary": "Results",
+        "operationId": "results_api_search__sid__results_get",
+        "parameters": [
+          {
+            "name": "sid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Sid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResultsResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/offers/{oid}/recheck": {
+      "post": {
+        "summary": "Recheck",
+        "operationId": "recheck_api_offers__oid__recheck_post",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Oid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Recheck"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/offers/{oid}/handoff": {
+      "get": {
+        "summary": "Handoff",
+        "operationId": "handoff_api_offers__oid__handoff_get",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Oid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HandoffPack"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CopyPastePack": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "phone": {
+            "type": "string",
+            "title": "Phone"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "name",
+          "email",
+          "phone"
+        ],
+        "title": "CopyPastePack"
+      },
+      "Evidence": {
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "screenshot",
+              "recording",
+              "page_text"
+            ],
+            "title": "Type"
+          },
+          "url": {
+            "type": "string",
+            "title": "Url"
+          },
+          "step": {
+            "type": "string",
+            "title": "Step"
+          },
+          "captured_at": {
+            "type": "string",
+            "title": "Captured At"
+          },
+          "extracted_value": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Extracted Value"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "type",
+          "url",
+          "step",
+          "captured_at"
+        ],
+        "title": "Evidence"
+      },
+      "FeeLine": {
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "Label"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "label",
+          "amount"
+        ],
+        "title": "FeeLine"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "HandoffPack": {
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "platform": {
+            "type": "string",
+            "title": "Platform"
+          },
+          "deep_link": {
+            "type": "string",
+            "title": "Deep Link"
+          },
+          "qr_png_base64": {
+            "type": "string",
+            "title": "Qr Png Base64",
+            "default": ""
+          },
+          "qr_note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Qr Note"
+          },
+          "selection_card": {
+            "$ref": "#/components/schemas/SelectionCard"
+          },
+          "copy_paste": {
+            "$ref": "#/components/schemas/CopyPastePack"
+          },
+          "disclaimer": {
+            "type": "string",
+            "title": "Disclaimer"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "offer_id",
+          "platform",
+          "deep_link",
+          "selection_card",
+          "copy_paste",
+          "disclaimer"
+        ],
+        "title": "HandoffPack"
+      },
+      "Hotel": {
+        "properties": {
+          "hotel_id": {
+            "type": "string",
+            "title": "Hotel Id"
+          },
+          "canonical_name": {
+            "type": "string",
+            "title": "Canonical Name"
+          },
+          "area": {
+            "type": "string",
+            "title": "Area"
+          },
+          "rating": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hotel_id",
+          "canonical_name",
+          "area"
+        ],
+        "title": "Hotel"
+      },
+      "HotelGroup": {
+        "properties": {
+          "hotel_id": {
+            "type": "string",
+            "title": "Hotel Id"
+          },
+          "canonical_name": {
+            "type": "string",
+            "title": "Canonical Name"
+          },
+          "area": {
+            "type": "string",
+            "title": "Area"
+          },
+          "match_status": {
+            "type": "string",
+            "enum": [
+              "merged",
+              "suggested"
+            ],
+            "title": "Match Status"
+          },
+          "confidence": {
+            "type": "number",
+            "title": "Confidence"
+          },
+          "why": {
+            "type": "string",
+            "title": "Why"
+          },
+          "offer_ids": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Offer Ids"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hotel_id",
+          "canonical_name",
+          "area",
+          "match_status",
+          "confidence",
+          "why",
+          "offer_ids"
+        ],
+        "title": "HotelGroup"
+      },
+      "Listing": {
+        "properties": {
+          "listing_id": {
+            "type": "string",
+            "title": "Listing Id"
+          },
+          "platform": {
+            "type": "string",
+            "title": "Platform"
+          },
+          "hotel_name": {
+            "type": "string",
+            "title": "Hotel Name"
+          },
+          "address": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Address"
+          },
+          "area": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area"
+          },
+          "lat": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lat"
+          },
+          "lng": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Lng"
+          },
+          "phone": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Phone"
+          },
+          "rating": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Rating"
+          },
+          "shown_price": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Shown Price"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "source_url": {
+            "type": "string",
+            "title": "Source Url"
+          },
+          "captured_at": {
+            "type": "string",
+            "title": "Captured At"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "listing_id",
+          "platform",
+          "hotel_name",
+          "source_url",
+          "captured_at"
+        ],
+        "title": "Listing"
+      },
+      "MetaInfo": {
+        "properties": {
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          },
+          "label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Label"
+          },
+          "saved_run_label": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saved Run Label"
+          },
+          "note": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "MetaInfo"
+      },
+      "NonComparableWarning": {
+        "properties": {
+          "hotel_id": {
+            "type": "string",
+            "title": "Hotel Id"
+          },
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hotel_id",
+          "offer_id",
+          "message"
+        ],
+        "title": "NonComparableWarning"
+      },
+      "Offer": {
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "hotel_id": {
+            "type": "string",
+            "title": "Hotel Id"
+          },
+          "run_id": {
+            "type": "string",
+            "title": "Run Id"
+          },
+          "streaming_url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Streaming Url"
+          },
+          "started_at": {
+            "type": "string",
+            "title": "Started At"
+          },
+          "finished_at": {
+            "type": "string",
+            "title": "Finished At"
+          },
+          "steps": {
+            "type": "integer",
+            "title": "Steps"
+          },
+          "cost_usd": {
+            "type": "number",
+            "title": "Cost Usd"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "verified",
+              "unverified",
+              "blocked"
+            ],
+            "title": "Status"
+          },
+          "reconciliation": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "ok",
+                  "mismatch"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Reconciliation"
+          },
+          "cancellation_category": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "free",
+                  "partial",
+                  "non_refundable"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cancellation Category"
+          },
+          "site": {
+            "type": "string",
+            "title": "Site"
+          },
+          "reached_payment_page": {
+            "type": "boolean",
+            "title": "Reached Payment Page"
+          },
+          "furthest_step": {
+            "type": "string",
+            "title": "Furthest Step"
+          },
+          "blocker": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "captcha",
+                  "login",
+                  "otp",
+                  "timeout",
+                  "other"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Blocker"
+          },
+          "hotel_name": {
+            "type": "string",
+            "title": "Hotel Name"
+          },
+          "hotel_url": {
+            "type": "string",
+            "title": "Hotel Url"
+          },
+          "room_type": {
+            "type": "string",
+            "title": "Room Type",
+            "default": ""
+          },
+          "max_occupancy": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Max Occupancy"
+          },
+          "meal_plan": {
+            "type": "string",
+            "title": "Meal Plan",
+            "default": ""
+          },
+          "cancellation_policy": {
+            "type": "string",
+            "title": "Cancellation Policy",
+            "default": ""
+          },
+          "price_shown_on_listing": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price Shown On Listing"
+          },
+          "price_shown_on_room_selection": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price Shown On Room Selection"
+          },
+          "price_final_payable": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price Final Payable"
+          },
+          "fee_lines": {
+            "items": {
+              "$ref": "#/components/schemas/FeeLine"
+            },
+            "type": "array",
+            "title": "Fee Lines",
+            "default": []
+          },
+          "preselected_addons": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Preselected Addons",
+            "default": []
+          },
+          "urgency_or_scarcity_messages": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Urgency Or Scarcity Messages",
+            "default": []
+          },
+          "price_trail": {
+            "items": {
+              "$ref": "#/components/schemas/TrailPoint"
+            },
+            "type": "array",
+            "title": "Price Trail",
+            "default": []
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "notes": {
+            "type": "string",
+            "title": "Notes",
+            "default": ""
+          },
+          "fee_leak_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Leak Pct"
+          },
+          "evidence": {
+            "items": {
+              "$ref": "#/components/schemas/Evidence"
+            },
+            "type": "array",
+            "title": "Evidence",
+            "default": []
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          },
+          "transparency": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/Transparency"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "offer_id",
+          "hotel_id",
+          "run_id",
+          "started_at",
+          "finished_at",
+          "steps",
+          "cost_usd",
+          "status",
+          "site",
+          "reached_payment_page",
+          "furthest_step",
+          "hotel_name",
+          "hotel_url"
+        ],
+        "title": "Offer"
+      },
+      "RankingItem": {
+        "properties": {
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "total": {
+            "type": "number",
+            "title": "Total"
+          },
+          "components": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Components"
+          },
+          "weights": {
+            "additionalProperties": {
+              "type": "number"
+            },
+            "type": "object",
+            "title": "Weights"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "offer_id",
+          "total",
+          "components",
+          "weights"
+        ],
+        "title": "RankingItem"
+      },
+      "Recheck": {
+        "properties": {
+          "recheck_id": {
+            "type": "string",
+            "title": "Recheck Id"
+          },
+          "offer_id": {
+            "type": "string",
+            "title": "Offer Id"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status"
+          },
+          "previous": {
+            "$ref": "#/components/schemas/RecheckSnapshot"
+          },
+          "current": {
+            "$ref": "#/components/schemas/RecheckSnapshot"
+          },
+          "delta": {
+            "type": "number",
+            "title": "Delta"
+          },
+          "delta_pct": {
+            "type": "number",
+            "title": "Delta Pct"
+          },
+          "elapsed_minutes": {
+            "type": "integer",
+            "title": "Elapsed Minutes"
+          },
+          "trail_diff": {
+            "items": {
+              "$ref": "#/components/schemas/TrailDiffItem"
+            },
+            "type": "array",
+            "title": "Trail Diff",
+            "default": []
+          },
+          "message": {
+            "type": "string",
+            "title": "Message"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "recheck_id",
+          "offer_id",
+          "status",
+          "previous",
+          "current",
+          "delta",
+          "delta_pct",
+          "elapsed_minutes",
+          "message"
+        ],
+        "title": "Recheck"
+      },
+      "RecheckSnapshot": {
+        "properties": {
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "at": {
+            "type": "string",
+            "title": "At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "amount",
+          "at"
+        ],
+        "title": "RecheckSnapshot"
+      },
+      "ResultsResponse": {
+        "properties": {
+          "_meta": {
+            "$ref": "#/components/schemas/MetaInfo"
+          },
+          "search_request": {
+            "$ref": "#/components/schemas/SearchRequestOut"
+          },
+          "travel_profile": {
+            "$ref": "#/components/schemas/TravelProfile"
+          },
+          "hotels": {
+            "items": {
+              "$ref": "#/components/schemas/Hotel"
+            },
+            "type": "array",
+            "title": "Hotels"
+          },
+          "listings": {
+            "items": {
+              "$ref": "#/components/schemas/Listing"
+            },
+            "type": "array",
+            "title": "Listings"
+          },
+          "hotel_groups": {
+            "items": {
+              "$ref": "#/components/schemas/HotelGroup"
+            },
+            "type": "array",
+            "title": "Hotel Groups"
+          },
+          "offers": {
+            "items": {
+              "$ref": "#/components/schemas/Offer"
+            },
+            "type": "array",
+            "title": "Offers"
+          },
+          "verdicts": {
+            "$ref": "#/components/schemas/Verdicts"
+          },
+          "handoff": {
+            "$ref": "#/components/schemas/HandoffPack"
+          },
+          "rechecks": {
+            "items": {
+              "$ref": "#/components/schemas/Recheck"
+            },
+            "type": "array",
+            "title": "Rechecks"
+          },
+          "summary_strip": {
+            "$ref": "#/components/schemas/SummaryStrip"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "_meta",
+          "search_request",
+          "travel_profile",
+          "hotels",
+          "listings",
+          "hotel_groups",
+          "offers",
+          "verdicts",
+          "handoff",
+          "rechecks",
+          "summary_strip"
+        ],
+        "title": "ResultsResponse"
+      },
+      "SearchInput": {
+        "properties": {
+          "text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Text"
+          },
+          "destination": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Destination"
+          },
+          "area_hint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Hint"
+          },
+          "check_in": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check In"
+          },
+          "check_out": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Check Out"
+          },
+          "guests": {
+            "type": "integer",
+            "title": "Guests",
+            "default": 2
+          },
+          "rooms": {
+            "type": "integer",
+            "title": "Rooms",
+            "default": 1
+          },
+          "budget_per_night": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Per Night"
+          },
+          "must_have": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object",
+            "title": "Must Have",
+            "default": {}
+          },
+          "deal_mode": {
+            "type": "string",
+            "enum": [
+              "lowest_price",
+              "best_value",
+              "most_transparent"
+            ],
+            "title": "Deal Mode",
+            "default": "best_value"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "raw_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Text"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          },
+          "hotel_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hotel Name"
+          },
+          "platforms": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Platforms"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "SearchInput",
+        "description": "Accepted payload for POST /api/search."
+      },
+      "SearchRequestOut": {
+        "properties": {
+          "destination": {
+            "type": "string",
+            "title": "Destination"
+          },
+          "area_hint": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Area Hint"
+          },
+          "check_in": {
+            "type": "string",
+            "title": "Check In"
+          },
+          "check_out": {
+            "type": "string",
+            "title": "Check Out"
+          },
+          "guests": {
+            "type": "integer",
+            "title": "Guests",
+            "default": 2
+          },
+          "rooms": {
+            "type": "integer",
+            "title": "Rooms",
+            "default": 1
+          },
+          "budget_per_night": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Per Night"
+          },
+          "must_have": {
+            "additionalProperties": {
+              "type": "boolean"
+            },
+            "type": "object",
+            "title": "Must Have",
+            "default": {}
+          },
+          "deal_mode": {
+            "type": "string",
+            "enum": [
+              "lowest_price",
+              "best_value",
+              "most_transparent"
+            ],
+            "title": "Deal Mode",
+            "default": "best_value"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          },
+          "raw_text": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Raw Text"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "destination",
+          "check_in",
+          "check_out"
+        ],
+        "title": "SearchRequestOut"
+      },
+      "SearchResponse": {
+        "properties": {
+          "search_id": {
+            "type": "string",
+            "title": "Search Id"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "search_id"
+        ],
+        "title": "SearchResponse"
+      },
+      "SelectionCard": {
+        "properties": {
+          "hotel": {
+            "type": "string",
+            "title": "Hotel"
+          },
+          "room_type": {
+            "type": "string",
+            "title": "Room Type"
+          },
+          "meal_plan": {
+            "type": "string",
+            "title": "Meal Plan"
+          },
+          "cancellation": {
+            "type": "string",
+            "title": "Cancellation"
+          },
+          "dates": {
+            "type": "string",
+            "title": "Dates"
+          },
+          "guests": {
+            "type": "integer",
+            "title": "Guests",
+            "default": 2
+          },
+          "expected_final_payable": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Expected Final Payable"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          },
+          "verified_at": {
+            "type": "string",
+            "title": "Verified At"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "hotel",
+          "room_type",
+          "meal_plan",
+          "cancellation",
+          "dates",
+          "verified_at"
+        ],
+        "title": "SelectionCard"
+      },
+      "SummaryStrip": {
+        "properties": {
+          "listings_found": {
+            "type": "integer",
+            "title": "Listings Found"
+          },
+          "unique_hotels": {
+            "type": "integer",
+            "title": "Unique Hotels"
+          },
+          "verified": {
+            "type": "integer",
+            "title": "Verified"
+          },
+          "unverified": {
+            "type": "integer",
+            "title": "Unverified"
+          },
+          "blocked": {
+            "type": "integer",
+            "title": "Blocked"
+          },
+          "avg_fee_leak_pct": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Fee Leak Pct"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "listings_found",
+          "unique_hotels",
+          "verified",
+          "unverified",
+          "blocked"
+        ],
+        "title": "SummaryStrip"
+      },
+      "TrailDiffItem": {
+        "properties": {
+          "step": {
+            "type": "string",
+            "title": "Step"
+          },
+          "before": {
+            "type": "number",
+            "title": "Before"
+          },
+          "after": {
+            "type": "number",
+            "title": "After"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "step",
+          "before",
+          "after"
+        ],
+        "title": "TrailDiffItem"
+      },
+      "TrailPoint": {
+        "properties": {
+          "step": {
+            "type": "string",
+            "title": "Step"
+          },
+          "amount": {
+            "type": "number",
+            "title": "Amount"
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "INR"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "step",
+          "amount"
+        ],
+        "title": "TrailPoint"
+      },
+      "Transparency": {
+        "properties": {
+          "score": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Score"
+          },
+          "breakdown": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/TransparencyBreakdown"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "note": {
+            "type": "string",
+            "title": "Note"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "note"
+        ],
+        "title": "Transparency"
+      },
+      "TransparencyBreakdown": {
+        "properties": {
+          "fee_leak": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fee Leak"
+          },
+          "addons_pressure": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Addons Pressure"
+          },
+          "price_stability": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Price Stability"
+          },
+          "evidence": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Evidence"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "TransparencyBreakdown"
+      },
+      "TravelProfile": {
+        "properties": {
+          "traveller_type": {
+            "type": "string",
+            "enum": [
+              "solo",
+              "couple",
+              "friends",
+              "family",
+              "business"
+            ],
+            "title": "Traveller Type"
+          },
+          "budget_min": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Min"
+          },
+          "budget_max": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Budget Max"
+          },
+          "hotel_type": {
+            "type": "string",
+            "title": "Hotel Type",
+            "default": "any"
+          },
+          "min_rating": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Min Rating"
+          },
+          "must_have": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Must Have",
+            "default": []
+          },
+          "prefers_refundable": {
+            "type": "boolean",
+            "title": "Prefers Refundable",
+            "default": true
+          },
+          "deal_mode": {
+            "type": "string",
+            "enum": [
+              "lowest_price",
+              "best_value",
+              "most_transparent"
+            ],
+            "title": "Deal Mode",
+            "default": "best_value"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "traveller_type"
+        ],
+        "title": "TravelProfile"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      },
+      "VerdictPick": {
+        "properties": {
+          "cheapest_verified": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cheapest Verified"
+          },
+          "safe_cheapest": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Safe Cheapest"
+          },
+          "best_for_you": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Best For You"
+          },
+          "headlines": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Headlines",
+            "default": {}
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "VerdictPick"
+      },
+      "Verdicts": {
+        "properties": {
+          "deal_mode": {
+            "type": "string",
+            "enum": [
+              "lowest_price",
+              "best_value",
+              "most_transparent"
+            ],
+            "title": "Deal Mode"
+          },
+          "hero_hotel_id": {
+            "type": "string",
+            "title": "Hero Hotel Id"
+          },
+          "ranking": {
+            "items": {
+              "$ref": "#/components/schemas/RankingItem"
+            },
+            "type": "array",
+            "title": "Ranking",
+            "default": []
+          },
+          "overall": {
+            "$ref": "#/components/schemas/VerdictPick"
+          },
+          "per_hotel": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/VerdictPick"
+            },
+            "type": "object",
+            "title": "Per Hotel",
+            "default": {}
+          },
+          "non_comparable_warnings": {
+            "items": {
+              "$ref": "#/components/schemas/NonComparableWarning"
+            },
+            "type": "array",
+            "title": "Non Comparable Warnings",
+            "default": []
+          },
+          "mock": {
+            "type": "boolean",
+            "title": "Mock",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "required": [
+          "deal_mode",
+          "hero_hotel_id",
+          "overall"
+        ],
+        "title": "Verdicts"
+      }
+    }
+  }
+}

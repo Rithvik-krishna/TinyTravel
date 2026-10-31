@@ -30,3 +30,9 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 ### 2026-10-31 - Nikhil
 - **Initial Baseline**: Documented initial contract based on `fixtures/demo_run.json` and `fixtures/sse_script.json`.
 - **Fixtures updated**: N/A (baseline establishment)
+
+### 2026-10-31 - Nikhil
+- **Executable Contract**: Formalized full models in `api/models.py` (`extra="forbid"`), SSE models in `api/events.py`, and exported `docs/openapi.json`.
+- **Field / Event**: Added `SearchInput` to `POST /api/search` accepting `text`, structured search fields, and target mode fields (`hotel_name: str`, `platforms: list[str]`). Added `response_model` to all endpoints.
+- **Why**: Prevent frontend/backend contract drift; enable live target-mode probing.
+- **Fixtures updated**: No (fixtures remain canonical source of truth and validated 100% against new models).
