@@ -97,3 +97,10 @@ body {
   --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
   --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
   --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
+/* Font families used by the landing and flow pages (loaded by the stylesheet link in layout.tsx). */
+:root {
+  --font-display: 'Bricolage Grotesque', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --font-figtree: 'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
