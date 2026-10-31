@@ -40,6 +40,7 @@ export interface TagItem {
   groupName?: string;
   groupConfidence?: number;
   groupWhy?: string;
+  groupArea?: string;
   aspect: number; // fixed ~0.62 portrait tag
   drop: number; // scaled fee_leak_pct (0 to 0.3), null leak = 0. Longer string = bigger leak.
   evidence?: EvidenceItem[];
@@ -67,6 +68,19 @@ export interface ResultsData {
   summary_strip?: unknown;
   handoff?: unknown;
   rechecks?: unknown[];
+}
+
+const BLOCKER_LABEL: Record<string, string> = {
+  captcha: "Stopped at captcha",
+  login: "Stopped at login",
+  otp: "Stopped at OTP",
+  timeout: "Stopped at room step",
+  other: "Stopped before payment",
+};
+
+/** Plain reason shown on a blocked tag. Unknown blocker is still stated, never hidden. */
+export function blockerLabel(blocker: string | null | undefined): string {
+  return (blocker && BLOCKER_LABEL[blocker]) || "Stopped before payment";
 }
 
 function computeDrop(feeLeakPct: number | null | undefined): number {
@@ -135,6 +149,7 @@ export function offersToTags(results: ResultsData | unknown[] | null | undefined
       groupName: group?.canonical_name || (offer.hotel_name ? String(offer.hotel_name) : undefined),
       groupConfidence: group?.confidence,
       groupWhy: group?.why,
+      groupArea: group?.area,
       aspect: 0.62,
       drop: computeDrop(leak),
       evidence: Array.isArray(offer.evidence) ? (offer.evidence as EvidenceItem[]) : [],

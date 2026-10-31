@@ -55,3 +55,29 @@ body {
   background-color: var(--surface);
   color: var(--text);
 }
+
+/* Landing ("/") tokens. Scoped to .tt so the other pages' --surface/--info etc. are not overridden. */
+.tt {
+  --bg:#0a0f1e; --surface:#121a30; --surface2:#1a2540; --line:#27345a;
+  --fg:#eaeef8; --muted:#9aa6c2; --brass:#d9a441; --brass-hi:#f2c970; --brass-lo:#8a6420;
+  --ok:#3ecf8e; --warn:#f2b84b; --bad:#f07a7a; --info:#6db3ff;
+  --tag-bg:#eee9dc; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#cfc8b6;
+  --on-brass:#1b1405;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .tt {
+    --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
+    --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
+    --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
+    --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
+    --on-brass:#fff; color-scheme: light;
+  }
+}
+:root[data-theme="light"] .tt, .tt[data-theme="light"] {
+  --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
+  --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
+  --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
+  --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
+  --on-brass:#fff; color-scheme: light;
+}
