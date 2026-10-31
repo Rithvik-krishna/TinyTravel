@@ -39,9 +39,22 @@ def parse_offline_heuristics(text: str) -> dict:
     t = text.strip()
     tl = t.lower()
 
+    # 0. Recognition check: verify query has recognizable travel intent, destination, dates, or hotel keywords
+    common_cities = ["bengaluru", "bangalore", "mumbai", "delhi", "goa", "hyderabad", "chennai", "jaipur", "kolkata", "pune", "kochi", "agra"]
+    travel_keywords = [
+        "hotel", "stay", "room", "resort", "inn", "suites", "villa", "guest", "guests",
+        "night", "nights", "booking", "trip", "travel", "budget", "checkin", "checkout",
+        "check-in", "check-out", "breakfast", "cancellation", "marvella", "lemon", "la marvella"
+    ]
+    has_city = any(city in tl for city in common_cities)
+    has_travel_kw = any(kw in tl for kw in travel_keywords)
+    has_date = bool(re.search(r"(\d{1,2})\s*(?:-|to)\s*(\d{1,2})\s*([a-zA-Z]+)", tl) or re.search(r"\b(\d{4}-\d{2}-\d{2})\b", t))
+
+    if not (has_city or has_travel_kw or has_date):
+        raise ValueError("Unrecognized query: please provide a destination (e.g. 'Bengaluru'), dates, or hotel name.")
+
     # 1. Destination
     destination = "Bengaluru"
-    common_cities = ["bengaluru", "bangalore", "mumbai", "delhi", "goa", "hyderabad", "chennai", "jaipur", "kolkata"]
     for city in common_cities:
         if city in tl:
             destination = "Bengaluru" if city in ("bengaluru", "bangalore") else city.title()
@@ -66,13 +79,14 @@ def parse_offline_heuristics(text: str) -> dict:
     check_in = None
     check_out = None
 
-    # Pattern: 20-21 Nov or 20-21 November or 20 to 21 Nov
-    m_range = re.search(r"(\d{1,2})\s*(?:-|to)\s*(\d{1,2})\s*([a-zA-Z]+)", tl)
+    # Pattern: 10-12 Jan 2020 or 20-21 Nov or 20-21 November or 20 to 21 Nov
+    m_range = re.search(r"(\d{1,2})\s*(?:-|to)\s*(\d{1,2})\s*([a-zA-Z]+)(?:\s*(\d{4}))?", tl)
     if m_range:
         d1, d2, m_name = int(m_range.group(1)), int(m_range.group(2)), m_range.group(3)
+        year = int(m_range.group(4)) if m_range.group(4) else 2026
         month = _parse_month(m_name)
-        check_in = f"2026-{month:02d}-{d1:02d}"
-        check_out = f"2026-{month:02d}-{d2:02d}"
+        check_in = f"{year}-{month:02d}-{d1:02d}"
+        check_out = f"{year}-{month:02d}-{d2:02d}"
     else:
         # Pattern: ISO dates YYYY-MM-DD
         iso_dates = re.findall(r"\b(\d{4}-\d{2}-\d{2})\b", t)
@@ -108,16 +122,17 @@ def parse_offline_heuristics(text: str) -> dict:
 
     # 5. Budget per night
     budget_per_night = None
-    # Matches "under 12k", "under 12000", "<12k", "12k", "budget 12000", "under 12,000"
-    m_budget = re.search(r"(?:under|budget|below|<|max)?\s*(?:rs\.?|inr)?\s*(\d+(?:,\d+)?(?:\.\d+)?)\s*(k|thousand)?\b", tl)
-    # Be careful not to match dates like "20-21" or guests
-    budget_matches = re.finditer(r"(?:under|budget|below|<|upto)\s*(?:rs\.?|inr)?\s*(\d+(?:,\d+)?(?:\.\d+)?)\s*(k|thousand)?\b", tl)
+    # Matches "under 12k", "under 12000", "<12k", "12k", "budget 0", "budget 12000", "under 12,000"
+    budget_matches = re.finditer(r"(?:under|budget|below|<|upto|max)\s*(?:rs\.?|inr)?\s*(-?\d+(?:,\d+)?(?:\.\d+)?)\s*(k|thousand)?\b", tl)
     found_budget = None
     for bm in budget_matches:
         raw_num = bm.group(1).replace(",", "")
         unit = bm.group(2)
-        val = float(raw_num)
-        if unit == "k" or (unit is None and val < 100):
+        try:
+            val = float(raw_num)
+        except ValueError:
+            continue
+        if unit == "k" or (unit is None and 0 < val < 100):
             val *= 1000
         found_budget = val
         break
@@ -128,7 +143,7 @@ def parse_offline_heuristics(text: str) -> dict:
         if m_k:
             found_budget = float(m_k.group(1)) * 1000
 
-    if found_budget is not None and found_budget > 0:
+    if found_budget is not None:
         budget_per_night = found_budget
 
     # 6. Must-haves

@@ -187,9 +187,17 @@ def rank_offers(
     
     total = round(sum(c * w) / sum(w present), 1), sorted descending.
     """
+    currencies = [
+        o.get("currency", "INR") for o in offers
+        if o.get("status") == "verified" and o.get("price_final_payable") is not None
+    ]
+    dominant_currency = Counter(currencies).most_common(1)[0][0] if currencies else "INR"
+
     verified_offers = [
         o for o in offers
-        if o.get("status") == "verified" and o.get("price_final_payable") is not None
+        if o.get("status") == "verified"
+        and o.get("price_final_payable") is not None
+        and o.get("currency", "INR") == dominant_currency
     ]
     if not verified_offers:
         return []
@@ -295,9 +303,17 @@ def _pick_scope_verdicts(
     scope_offers: list[dict],
     ranking: list[dict],
 ) -> dict:
+    currencies = [
+        o.get("currency", "INR") for o in scope_offers
+        if o.get("status") == "verified" and o.get("price_final_payable") is not None
+    ]
+    dominant_currency = Counter(currencies).most_common(1)[0][0] if currencies else "INR"
+
     verified = [
         o for o in scope_offers
-        if o.get("status") == "verified" and o.get("price_final_payable") is not None
+        if o.get("status") == "verified"
+        and o.get("price_final_payable") is not None
+        and o.get("currency", "INR") == dominant_currency
     ]
     if not verified:
         return {
@@ -487,5 +503,18 @@ def non_comparable_warnings(offers: list[dict]) -> list[dict]:
                         "offer_id": o["offer_id"],
                         "message": msg,
                     })
+
+    # Currency mismatch check: detect non-INR or currency differences across offers
+    for o in offers:
+        curr = o.get("currency")
+        if curr and curr != "INR":
+            oid = o.get("offer_id", "")
+            if not any(w["offer_id"] == oid for w in warnings):
+                site_name = o.get("site", "Platform")
+                warnings.append({
+                    "hotel_id": o.get("hotel_id", ""),
+                    "offer_id": oid,
+                    "message": f"{site_name} returned price in {curr}; not comparable with INR offers without currency conversion.",
+                })
 
     return warnings

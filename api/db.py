@@ -306,6 +306,22 @@ def seed_demo_price_history(db_path: Optional[Union[str, Path]] = None) -> None:
     conn.close()
 
 
+def get_total_spend(db_path: Optional[Union[str, Path]] = None) -> float:
+    """Calculate total USD spend across all recorded offer investigations."""
+    conn = get_conn(db_path)
+    total = 0.0
+    with conn:
+        rows = conn.execute("SELECT body FROM offers").fetchall()
+        for r in rows:
+            try:
+                data = json.loads(r["body"])
+                total += float(data.get("cost_usd") or 0.0)
+            except Exception:
+                pass
+    conn.close()
+    return round(total, 4)
+
+
 # Ensure tables exist and initial observations are seeded
 init_db()
 seed_demo_price_history()

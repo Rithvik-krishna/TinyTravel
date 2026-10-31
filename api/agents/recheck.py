@@ -109,7 +109,21 @@ def calculate_recheck(
 async def recheck_offer(offer_id: str) -> dict:
     """Execute recheck for an offer, diffing against previous verified price."""
     offer = get_offer(offer_id)
-    is_live = os.getenv("DATA_MODE") == "live" and os.getenv("TINYFISH_FAKE") != "1"
+    is_disabled = os.getenv("DISABLE_LIVE") == "1"
+    max_spend = float(os.getenv("MAX_SPEND_USD", "4.0"))
+    spend = 0.0
+    try:
+        from ..db import get_total_spend
+        spend = get_total_spend()
+    except Exception:
+        pass
+
+    is_live = (
+        os.getenv("DATA_MODE") == "live"
+        and os.getenv("TINYFISH_FAKE") != "1"
+        and not is_disabled
+        and (spend < max_spend)
+    )
 
     if not offer:
         # Fallback to demo fixture if available

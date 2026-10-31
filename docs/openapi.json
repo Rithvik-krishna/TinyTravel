@@ -21,6 +21,24 @@
         }
       }
     },
+    "/api/budget": {
+      "get": {
+        "summary": "Get Budget",
+        "operationId": "get_budget_api_budget_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BudgetInfo"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/search": {
       "post": {
         "summary": "Search",
@@ -129,6 +147,43 @@
                 "schema": {
                   "$ref": "#/components/schemas/ResultsResponse"
                 }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/evidence/{file_path}": {
+      "get": {
+        "summary": "Serve Evidence",
+        "operationId": "serve_evidence_evidence__file_path__get",
+        "parameters": [
+          {
+            "name": "file_path",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "File Path"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
               }
             }
           },
@@ -393,6 +448,44 @@
   },
   "components": {
     "schemas": {
+      "BudgetInfo": {
+        "properties": {
+          "wallet_balance": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Wallet Balance"
+          },
+          "spend_so_far": {
+            "type": "number",
+            "title": "Spend So Far",
+            "default": 0.0
+          },
+          "spend_cap": {
+            "type": "number",
+            "title": "Spend Cap",
+            "default": 4.0
+          },
+          "currency": {
+            "type": "string",
+            "title": "Currency",
+            "default": "USD"
+          },
+          "status": {
+            "type": "string",
+            "title": "Status",
+            "default": "ok"
+          }
+        },
+        "additionalProperties": false,
+        "type": "object",
+        "title": "BudgetInfo"
+      },
       "CopyPastePack": {
         "properties": {
           "name": {
@@ -905,6 +998,29 @@
             "type": "boolean",
             "title": "Mock",
             "default": false
+          },
+          "saved": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saved",
+            "default": false
+          },
+          "saved_at": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Saved At"
           },
           "label": {
             "anyOf": [
