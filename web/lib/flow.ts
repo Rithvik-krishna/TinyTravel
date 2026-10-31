@@ -92,6 +92,21 @@ export function useResults(id: string | null, enabled = true): ResultsState {
   return state;
 }
 
+/** "20 Nov – 21 Nov · 1 night, 2 guests", or "" when the request is missing. */
+export function stayLabel(r?: { check_in?: string; check_out?: string; guests?: number }): string {
+  if (!r?.check_in || !r.check_out) return "";
+  const f = (d: string) => new Date(`${d}T00:00:00`).toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+  const n = Math.round((new Date(r.check_out).getTime() - new Date(r.check_in).getTime()) / 864e5);
+  const nights = n > 0 ? ` · ${n} night${n === 1 ? "" : "s"}` : "";
+  const guests = r.guests ? `, ${r.guests} guest${r.guests === 1 ? "" : "s"}` : "";
+  return `${f(r.check_in)} – ${f(r.check_out)}${nights}${guests}`;
+}
+
+export function hotelHref(hotelId: string, id: string | null, offer?: string): string {
+  const qs = [id && `id=${encodeURIComponent(id)}`, offer && `offer=${encodeURIComponent(offer)}`].filter(Boolean).join("&");
+  return `/hotel/${encodeURIComponent(hotelId)}${qs ? `?${qs}` : ""}`;
+}
+
 export function withId(path: string, id: string | null): string {
   return id ? `${path}?id=${encodeURIComponent(id)}` : path;
 }

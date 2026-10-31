@@ -46,8 +46,17 @@ export interface SummaryStrip {
   avg_fee_leak_pct?: number | null;
 }
 
+export interface HotelInfo {
+  hotel_id?: string;
+  canonical_name?: string;
+  area?: string;
+  rating?: number | null;
+}
+
 export interface LandingResults extends ResultsData {
   _meta?: LandingMeta;
+  hotels?: HotelInfo[];
+  search_request?: { destination?: string; check_in?: string; check_out?: string; guests?: number };
   summary_strip?: SummaryStrip;
   verdicts?: {
     hero_hotel_id?: string;

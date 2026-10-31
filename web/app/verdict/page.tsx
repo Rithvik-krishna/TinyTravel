@@ -59,7 +59,7 @@ function Inner() {
         </div>
       </div>
       {pick && (pick.cheapest_verified || pick.safe_cheapest || pick.best_for_you) ? (
-        <VerdictSection hotelName={name} tags={tags} pick={pick} warnings={data.verdicts?.non_comparable_warnings ?? []} handoff={shownHandoff} />
+        <VerdictSection hotelName={name} tags={tags} pick={pick} warnings={data.verdicts?.non_comparable_warnings ?? []} handoff={shownHandoff} searchId={id} />
       ) : (
         <div className="wrap" style={{ paddingBlock: 40 }}>
           <div className="notice warn">No verified offer meets the criteria for this hotel, so we don&apos;t name a pick.</div>

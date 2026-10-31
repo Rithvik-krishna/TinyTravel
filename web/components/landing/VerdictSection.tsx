@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+import { hotelHref } from "@/lib/flow";
 import { TagItem } from "@/lib/tags";
 import { inr } from "@/lib/format";
 import { Handoff, NonComparableWarning, VerdictPick } from "@/lib/landing";
@@ -11,6 +13,8 @@ interface Props {
   pick?: VerdictPick;
   warnings: NonComparableWarning[];
   handoff?: Handoff | null;
+  /** When set (flow pages), cards link to the hotel page for that search. */
+  searchId?: string | null;
 }
 
 const LABELS: Array<[keyof VerdictPick, string]> = [
@@ -19,7 +23,7 @@ const LABELS: Array<[keyof VerdictPick, string]> = [
   ["best_for_you", "Best for you"],
 ];
 
-export function VerdictSection({ hotelName, tags, pick, warnings, handoff }: Props) {
+export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searchId }: Props) {
   // One card per offer; verdicts that point at the same offer share a card.
   const cards = new Map<string, string[]>();
   for (const [key, label] of LABELS) {
@@ -59,6 +63,9 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff }: Pro
                 {warn?.message && <p style={{ color: "var(--muted)", fontSize: 14 }}>{warn.message}</p>}
                 {labels.length > 1 && merged && (
                   <p style={{ color: "var(--muted)", fontSize: 14 }}>Two verdicts point to the same offer, so they share one card.</p>
+                )}
+                {searchId !== undefined && t.status === "verified" && (
+                  <Link className="btn sm" href={hotelHref(t.hotelId, searchId, t.id)} style={{ justifySelf: "start" }}>View hotel and book</Link>
                 )}
                 {handoff?.offer_id === id && <RecheckButton offerId={id} platform={platform} />}
               </div>

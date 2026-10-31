@@ -15,6 +15,11 @@ export function RecheckButton({ offerId, platform }: { offerId: string; platform
     setOut(`Re-checking the same room on ${platform}…`);
     try {
       const r: Recheck = await recheck(offerId);
+      if (r.offer_id && r.offer_id !== offerId) {
+        // The demo only ships a saved re-check for one offer; never show another offer's drift as this one's.
+        setOut("No saved re-check exists for this offer in the demo. A live re-check would run the same steps again.");
+        return;
+      }
       const extra =
         r.delta != null && r.delta_pct != null ? ` ${signedInr(r.delta)}, ${r.delta_pct > 0 ? "+" : ""}${r.delta_pct}%.` : "";
       setOut(`${r.message ?? "Re-check finished."}${extra}`);

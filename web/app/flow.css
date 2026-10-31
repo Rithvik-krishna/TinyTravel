@@ -1,4 +1,4 @@
-/* Product flow (search -> investigation -> results -> proof -> verdict). Scoped under .tt like landing.css. */
+﻿/* Product flow (search -> investigation -> results -> proof -> verdict). Scoped under .tt like landing.css. */
 .tt .flow-top{border-bottom:1px solid var(--line);background:var(--bg)}
 .tt .stepper{display:flex;gap:6px;list-style:none;margin:0;padding:14px 0;overflow:hidden}
 .tt .stepper li{flex:1;min-width:0}
@@ -124,3 +124,48 @@
 .tt .facts dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
 .tt .facts dt{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .tt .facts dd{margin:2px 0 0}
+
+/* hotel detail */
+.tt .back{margin-bottom:14px}
+.tt .dhead{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;margin-bottom:22px}
+.tt .dhead .art{height:200px}
+.tt .dhead .hb{padding:20px;display:grid;gap:8px}
+.tt .dhead h1{font-size:clamp(28px,4.4vw,40px);font-weight:800}
+.tt .hmeta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted)}
+.tt .dlayout{display:grid;grid-template-columns:1fr 340px;gap:24px;align-items:start}
+.tt .dsec{display:grid;gap:14px;margin-bottom:28px}
+.tt .dsec h2{font-size:22px}
+.tt .orows{display:grid;gap:12px}
+.tt .orow{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;cursor:pointer;width:100%;text-align:left;color:inherit;font:inherit}
+.tt .orow[aria-checked=true]{border-color:var(--brass);box-shadow:0 0 0 2px color-mix(in oklab,var(--brass) 25%,transparent)}
+.tt .orow[aria-disabled=true]{cursor:default;opacity:.8;background:var(--surface2);border-style:dashed}
+.tt .radio{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center}
+.tt .orow[aria-checked=true] .radio{border-color:var(--brass)}
+.tt .orow[aria-checked=true] .radio::after{content:"";width:10px;height:10px;border-radius:50%;background:var(--brass)}
+.tt .orow b.pf{font-family:var(--font-display),system-ui,sans-serif;font-size:18px}
+.tt .orow .sub{font-size:14px;color:var(--muted)}
+.tt .oamt{text-align:right}
+.tt .orow .oamt .price{font-family:var(--font-display),system-ui,sans-serif;font-weight:800;font-size:26px;font-variant-numeric:tabular-nums}
+.tt .aside{position:sticky;top:calc(76px + env(safe-area-inset-top,0px));background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px;display:grid;gap:12px}
+.tt .aside .price{font-family:var(--font-display),system-ui,sans-serif;font-weight:800;font-size:42px;line-height:1;font-variant-numeric:tabular-nums}
+.tt .aside s{color:var(--muted);font-family:var(--font-mono),ui-monospace,monospace;font-size:14px}
+.tt .sticky-bar{display:none}
+@media (max-width:900px){
+  .tt .dlayout{grid-template-columns:1fr}
+  .tt .aside{display:none}
+  .tt .sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;background:var(--surface);border-top:1px solid var(--line);gap:12px;align-items:center;justify-content:space-between;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .tt .sticky-bar .price{font-family:var(--font-display),system-ui,sans-serif;font-weight:800;font-size:26px;line-height:1}
+  .tt .hotel-page{padding-bottom:96px}
+}
+.tt .sumcard{background:var(--surface2);border-radius:14px;padding:16px}
+.tt .sumcard dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font-size:15px}
+.tt .sumcard dt{color:var(--muted)}.tt .sumcard dd{margin:0}
+.tt .todo{margin:0;padding:0;list-style:none;display:grid;gap:14px;counter-reset:s}
+.tt .todo li{display:grid;grid-template-columns:32px 1fr;gap:12px;counter-increment:s}
+.tt .todo li::before{content:counter(s);width:32px;height:32px;border-radius:50%;background:color-mix(in oklab,var(--brass) 18%,var(--surface));color:var(--brass-hi);font-weight:800;display:grid;place-items:center}
+.tt .qrbox{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.tt .qrbox .qr{width:132px;height:132px}
+.tt .fine{font-size:13px;color:var(--muted)}
+.tt .muted{color:var(--muted)}
+.tt .btn.ghost.sm{min-height:44px}
+.tt .hotel-link{display:inline-flex;align-items:center;min-height:44px;font-weight:600}

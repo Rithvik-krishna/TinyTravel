@@ -3,7 +3,7 @@
 import React, { Suspense, useMemo, useState } from "react";
 import Link from "next/link";
 import { offersToTags, TagItem } from "@/lib/tags";
-import { useResults, useSearchId, withId } from "@/lib/flow";
+import { hotelHref, useResults, useSearchId, withId } from "@/lib/flow";
 import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell";
 import { OfferCard } from "@/components/flow/OfferCard";
 import { Provenance } from "@/components/landing/Provenance";
@@ -70,6 +70,9 @@ function Inner() {
                   {g.area && <span className="mono" style={{ color: "var(--muted)", fontSize: 13 }}>{g.area}</span>}
                   {merged ? <span className="badge ok">Same hotel{conf != null ? ` · ${conf}%` : ""}</span> : <span className="badge warn">Possible match, not merged in pricing{conf != null ? ` · ${conf}%` : ""}</span>}
                 </div>
+                {g.hotel_id && items.some((t) => t.status === "verified") && (
+                  <Link className="hotel-link linkish" href={hotelHref(g.hotel_id, id)}>View hotel and prices →</Link>
+                )}
                 {g.why && <p className="gwhy" style={{ color: "var(--muted)", fontSize: 14 }}>Why grouped: {g.why}</p>}
                 {gw.map((w) => <div className="notice warn" key={w.offer_id}>{w.message}</div>)}
                 {items.every((t) => t.status !== "verified") && items.length > 0 && <div className="notice">No verified offer for this hotel, so there is no price to rank.</div>}

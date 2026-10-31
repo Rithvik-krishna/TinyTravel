@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import qrcode from "qrcode-generator";
@@ -29,7 +29,7 @@ function CopyButton({ label, value }: { label: string; value: string }) {
   );
 }
 
-function Qr({ link, png, platform }: { link: string; png?: string; platform: string }) {
+export function Qr({ link, png, platform }: { link: string; png?: string; platform: string }) {
   const svg = useMemo(() => {
     if (png || !link) return null;
     try {

@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { TagItem, blockerLabel } from "@/lib/tags";
 import { inr, shortTime } from "@/lib/format";
-import { withId } from "@/lib/flow";
+import { hotelHref, withId } from "@/lib/flow";
 
 const CANCEL: Record<TagItem["cancellation_category"], string> = {
   free: "Free cancellation",
@@ -66,7 +66,10 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
         <dt>Transparency</dt><dd>{score == null ? "N/A" : `${score}/100`}</dd>
         {verified && at && (<><dt>Verified</dt><dd>{at}</dd></>)}
       </dl>
-      <Link className="proof" href={`${withId("/evidence", searchId)}${searchId ? "&" : "?"}offer=${encodeURIComponent(t.id)}`}>Show proof →</Link>
+      <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
+        {verified && <Link className="btn sm" href={hotelHref(t.hotelId, searchId, t.id)}>Book this</Link>}
+        <Link className="proof" href={`${withId("/evidence", searchId)}${searchId ? "&" : "?"}offer=${encodeURIComponent(t.id)}`}>Show proof →</Link>
+      </div>
     </article>
   );
 }

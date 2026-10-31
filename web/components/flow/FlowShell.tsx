@@ -19,7 +19,8 @@ const STEPS: Array<{ href: string; label: string }> = [
 function Stepper() {
   const path = usePathname();
   const { id } = useSearchId();
-  const current = Math.max(0, STEPS.findIndex((s) => s.href === path));
+  // The hotel detail page sits inside the Results step.
+  const current = path?.startsWith("/hotel") ? 2 : Math.max(0, STEPS.findIndex((s) => s.href === path));
   return (
     <ol className="stepper" aria-label="Progress">
       {STEPS.map((s, i) => {
