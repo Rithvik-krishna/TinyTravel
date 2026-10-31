@@ -61,9 +61,11 @@ def determine_status(
     reconciliation: Optional[str],
     blocker: Optional[str] = None,
 ) -> Status:
-    """Evaluate offer verification status by the strict TinyTravel product rules."""
-    if blocker is not None:
-        return "blocked"
+    """Evaluate offer verification status by the strict TinyTravel product rules.
+    
+    Invariant 2: verified requires ALL: reached_payment_page==true, price_final_payable!=null,
+    at least one evidence item, fee_lines sum to price_final_payable within +/-1%.
+    """
     if (
         reached_payment_page
         and final_price is not None
@@ -71,6 +73,8 @@ def determine_status(
         and reconciliation == "ok"
     ):
         return "verified"
+    if blocker is not None:
+        return "blocked"
     return "unverified"
 
 

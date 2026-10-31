@@ -10,6 +10,11 @@ import os
 from pathlib import Path
 import re
 from typing import Callable, Literal, Optional, Any
+from dotenv import load_dotenv
+
+# Load local .env if present
+load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=True)
+load_dotenv(override=True)
 
 logger = logging.getLogger("tinyfish")
 
@@ -189,6 +194,59 @@ async def _run_fake_agent(
     )
 
 
+def clean_schema_for_tinyfish(schema: Optional[dict]) -> Optional[dict]:
+    """Clean a JSON schema for TinyFish API compatibility.
+    
+    TinyFish rejects schemas with:
+    1. '$defs' (definitions must be inlined)
+    2. 'additionalProperties'
+    3. 'title'
+    4. 'default'
+    5. 'type: null' or 'anyOf' with null (collapsed to concrete non-null type)
+    """
+    if not schema or not isinstance(schema, dict):
+        return schema
+
+    import copy
+    schema_copy = copy.deepcopy(schema)
+    defs = schema_copy.pop("$defs", {})
+
+    def _resolve(node):
+        if isinstance(node, dict):
+            while "$ref" in node:
+                ref_path = node.pop("$ref")
+                ref_name = ref_path.split("/")[-1]
+                if ref_name in defs:
+                    resolved = copy.deepcopy(defs[ref_name])
+                    resolved.update(node)
+                    node.clear()
+                    node.update(resolved)
+                else:
+                    break
+
+            if "anyOf" in node:
+                non_null = [item for item in node["anyOf"] if item.get("type") != "null"]
+                if len(non_null) == 1:
+                    replacement = non_null[0]
+                    node.pop("anyOf")
+                    node.update(replacement)
+                elif len(non_null) > 1:
+                    node["anyOf"] = non_null
+
+            node.pop("default", None)
+            node.pop("title", None)
+            node.pop("additionalProperties", None)
+
+            for v in list(node.values()):
+                _resolve(v)
+        elif isinstance(node, list):
+            for item in node:
+                _resolve(item)
+
+    _resolve(schema_copy)
+    return schema_copy
+
+
 async def run_agent(
     url: str,
     goal: str,
@@ -245,6 +303,9 @@ async def run_agent(
     if not api_key:
         raise ValueError("TINYFISH_API_KEY environment variable is not set.")
 
+    # Clean schema for TinyFish API compatibility
+    cleaned_output_schema = clean_schema_for_tinyfish(output_schema)
+
     loop = asyncio.get_running_loop()
     started_at = datetime.now(IST).isoformat()
 
@@ -280,11 +341,19 @@ async def run_agent(
                 else:
                     loop.call_soon_threadsafe(on_progress, purpose)
 
+        capture_cfg = None
+        try:
+            from tinyfish import CaptureConfig
+            capture_cfg = CaptureConfig(screenshots=True, recording=True)
+        except Exception:
+            pass
+
         with c.agent.stream(
             url=url,
             goal=goal,
             browser_profile=profile,
-            output_schema=output_schema,
+            output_schema=cleaned_output_schema,
+            capture_config=capture_cfg,
             on_streaming_url=_handle_stream_url,
             on_progress=_handle_progress,
         ) as stream:

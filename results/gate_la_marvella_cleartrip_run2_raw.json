@@ -1,0 +1,146 @@
+{
+  "run_id": "b90d7c92-f7b0-4034-ad2e-9cee8b8a6771",
+  "streaming_url": "https://ip-54-177-62-167.tetra-data.production.tinyfish.io/tf-615cfeaf-8ab7-482d-b921-5c7e687638d4/stream/2",
+  "status": "completed",
+  "steps": 33,
+  "cost_usd": 0.528,
+  "started_at": "2026-10-31T13:54:44.158443+05:30",
+  "finished_at": "2026-10-31T13:59:10.540150+05:30",
+  "result": {
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment_page",
+    "blocker": "other",
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-bengaluru-2050898",
+    "room_type": "Executive Twin",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast included",
+    "cancellation_policy": "No Refund (non-refundable)",
+    "price_shown_on_listing": 8867,
+    "price_shown_on_room_selection": 11933,
+    "price_final_payable": 11933,
+    "fee_lines": [
+      {
+        "label": "Hotel taxes",
+        "amount": 1971
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2080
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095
+      }
+    ],
+    "preselected_addons": [
+      "Breakfast"
+    ],
+    "urgency_or_scarcity_messages": [
+      "LUXURY DEAL",
+      "Special discounted rate is non-refundable",
+      "Total saving of \u20b96,772!"
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 8867,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 8867,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11933,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11933,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "No free cancellation option found. Cheapest room with breakfast included selected: Executive Twin at \u20b98,867/night. Final total after property discount, CTHOTEL coupon, and convenience fee is \u20b911,933. No login or OTP required.",
+    "listing_page_text": "La Marvella - 5-star Resort in Jayanagar, 4.8 rating, 1k+ ratings",
+    "payment_page_text": "Hotel booking itinerary and payment review page for La Marvella. Guest details: Test Guest. Total: \u20b911,933 (room: \u20b915,639 + taxes: \u20b91,971 - property discount: \u20b94,692 - coupon discount: \u20b92,080 + convenience fee: \u20b91,095). Total saving: \u20b96,772."
+  },
+  "raw": {
+    "result_json": {
+      "site": "cleartrip",
+      "reached_payment_page": true,
+      "furthest_step": "payment_page",
+      "blocker": "other",
+      "hotel_name": "La Marvella",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-bengaluru-2050898",
+      "room_type": "Executive Twin",
+      "max_occupancy": 2,
+      "meal_plan": "Breakfast included",
+      "cancellation_policy": "No Refund (non-refundable)",
+      "price_shown_on_listing": 8867,
+      "price_shown_on_room_selection": 11933,
+      "price_final_payable": 11933,
+      "fee_lines": [
+        {
+          "label": "Hotel taxes",
+          "amount": 1971
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2080
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095
+        }
+      ],
+      "preselected_addons": [
+        "Breakfast"
+      ],
+      "urgency_or_scarcity_messages": [
+        "LUXURY DEAL",
+        "Special discounted rate is non-refundable",
+        "Total saving of \u20b96,772!"
+      ],
+      "price_trail": [
+        {
+          "step": "listing",
+          "amount": 8867,
+          "currency": "INR"
+        },
+        {
+          "step": "room",
+          "amount": 8867,
+          "currency": "INR"
+        },
+        {
+          "step": "traveller_details",
+          "amount": 11933,
+          "currency": "INR"
+        },
+        {
+          "step": "payment",
+          "amount": 11933,
+          "currency": "INR"
+        }
+      ],
+      "currency": "INR",
+      "notes": "No free cancellation option found. Cheapest room with breakfast included selected: Executive Twin at \u20b98,867/night. Final total after property discount, CTHOTEL coupon, and convenience fee is \u20b911,933. No login or OTP required.",
+      "listing_page_text": "La Marvella - 5-star Resort in Jayanagar, 4.8 rating, 1k+ ratings",
+      "payment_page_text": "Hotel booking itinerary and payment review page for La Marvella. Guest details: Test Guest. Total: \u20b911,933 (room: \u20b915,639 + taxes: \u20b91,971 - property discount: \u20b94,692 - coupon discount: \u20b92,080 + convenience fee: \u20b91,095). Total saving: \u20b96,772."
+    }
+  },
+  "error": null
+}

@@ -2,7 +2,9 @@
 Autonomous TinyFish browser agent probing through hotel checkouts to verify all-in payable price.
 """
 from datetime import datetime, timezone, timedelta
+import json
 import os
+from pathlib import Path
 from typing import Callable, Optional, Any
 from urllib.parse import quote_plus
 
@@ -68,6 +70,8 @@ def build_goal(hotel_name: str, req: dict) -> str:
         "Proceed as a GUEST through checkout using: Name \"Test Guest\", email \"test.guest+probe@example.com\", phone \"9000000000\".\n"
         "Record the displayed total at each step in price_trail with the currency shown on screen. Do not convert currencies.\n"
         "Record every fee line, pre-selected add-on, and any urgency/scarcity message.\n"
+        "Extract hotel_url, listing_page_text (text from listing card), and payment_page_text (price breakdown text from payment page).\n"
+        "Ensure price_trail includes each observed step: 'listing', 'room', 'traveller_details', 'payment'.\n"
         "STOP at the payment page. Never enter payment details, never click pay/confirm/book, never log in, never enter an OTP, never create an account.\n"
         "If blocked (login, OTP, captcha, empty page), stop and return the blocker.\n"
         "Use at most 30 steps. Return ONLY JSON in the given schema."
@@ -171,6 +175,9 @@ async def verify_offer(
     payment_page_text = probe_data.get("payment_page_text")
 
     # Post-processing via pure functions
+    if reached_payment_page and price_payable is not None:
+        blocker = None
+
     c_cat = cancellation_category(policy)
     recon = reconciliation_status(fee_lines, price_payable)
 
@@ -202,10 +209,31 @@ async def verify_offer(
 
     leak = fee_leak_pct(price_listing, price_payable) if status == "verified" else None
 
-    hotel_slug = hotel_name.lower().replace(" ", "_")[:8]
+    hotel_slug = hotel_name.lower().replace(" ", "_")
     site_slug = platform.lower().replace(".", "").replace(" ", "")
-    offer_id = req.get("offer_id") or f"off_{site_slug}_{hotel_slug}"
-    hotel_id = req.get("hotel_id") or f"h_{hotel_slug}"
+    offer_id = req.get("offer_id") or f"off_{site_slug}_{hotel_slug[:8]}"
+    hotel_id = req.get("hotel_id") or f"h_{hotel_slug[:8]}"
+
+    if not is_mock:
+        try:
+            results_dir = Path(__file__).resolve().parents[2] / "results"
+            results_dir.mkdir(parents=True, exist_ok=True)
+            raw_path = results_dir / f"gate_{hotel_slug}_{site_slug}_raw.json"
+            raw_payload = {
+                "run_id": run.run_id,
+                "streaming_url": run.streaming_url,
+                "status": run.status,
+                "steps": run.steps,
+                "cost_usd": run.cost_usd,
+                "started_at": run.started_at,
+                "finished_at": run.finished_at,
+                "result": run.result,
+                "raw": run.raw,
+                "error": run.error,
+            }
+            raw_path.write_text(json.dumps(raw_payload, indent=2), encoding="utf-8")
+        except Exception:
+            pass
 
     return {
         "offer_id": offer_id,
