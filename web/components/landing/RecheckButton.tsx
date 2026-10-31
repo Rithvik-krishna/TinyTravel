@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { recheck } from "@/lib/dataSource";
+import { MOCK, recheck } from "@/lib/dataSource";
 import { signedInr } from "@/lib/format";
 import { Recheck } from "@/lib/landing";
 
@@ -12,12 +12,12 @@ export function RecheckButton({ offerId, platform }: { offerId: string; platform
 
   const run = async () => {
     setBusy(true);
-    setOut(`Re-checking the same room on ${platform}…`);
+    setOut(MOCK ? `Re-checking the same room on ${platform}…` : `Re-checking the same room on ${platform}. This runs a full checkout again and can take 3 to 5 minutes. You can keep using the page.`);
     try {
       const r: Recheck = await recheck(offerId);
       if (r.offer_id && r.offer_id !== offerId) {
-        // The demo only ships a saved re-check for one offer; never show another offer's drift as this one's.
-        setOut("No saved re-check exists for this offer in the demo. A live re-check would run the same steps again.");
+        // Never show another offer's price drift as this one's.
+        setOut("A re-check is not available for this offer yet.");
         return;
       }
       const extra =

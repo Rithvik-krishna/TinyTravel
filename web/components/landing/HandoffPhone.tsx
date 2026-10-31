@@ -44,7 +44,7 @@ export function Qr({ link, png, platform }: { link: string; png?: string; platfo
 
   if (png) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <div className="qr"><img src={`data:image/png;base64,${png}`} alt={`QR code to open ${platform}`} /></div>;
+    return <div className="qr"><img src={png.startsWith("data:") ? png : `data:image/png;base64,${png}`} alt={`QR code to open ${platform}`} /></div>;
   }
   if (svg) return <div className="qr" role="img" aria-label={`QR code to open ${platform}`} dangerouslySetInnerHTML={{ __html: svg }} />;
   return (
@@ -59,7 +59,7 @@ export function HandoffPhone({ handoff, hideVerifiedTime = false }: { handoff?: 
   const platform = handoff.platform ?? "the site";
   const link = handoff.deep_link ?? "";
   const cp = handoff.copy_paste ?? {};
-  const fields: Array<[string, string | undefined]> = [["name", cp.name], ["email", cp.email], ["phone", cp.phone]];
+  const fields: Array<[string, string | undefined]> = [["name", cp.name ?? cp.guest_name], ["email", cp.email], ["phone", cp.phone]];
   return (
     <div className="phone">
       <Qr link={link} png={handoff.qr_png_base64} platform={platform} />

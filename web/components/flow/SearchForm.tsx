@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
@@ -91,6 +91,10 @@ export function SearchForm() {
   const [error, setError] = useState<string | null>(null);
   const [nl, setNl] = useState("");
   const [nlMsg, setNlMsg] = useState("");
+  // Single-hotel check: opened with /book?target=1. Skips broad discovery, so a live run is one hotel on the chosen sites.
+  const targetMode = useSearchParams().get("target") === "1";
+  const [hotelName, setHotelName] = useState("");
+  const [sites, setSites] = useState<string[]>(["cleartrip"]);
   const fillIn = () => {
     if (!nl.trim()) return;
     const next = applySentence(req, nl, today);
@@ -118,11 +122,15 @@ export function SearchForm() {
     ev.preventDefault();
     setTouched(true);
     if (!valid || busy) return;
+    if (targetMode && hotelName.trim() && sites.length === 0) {
+      setError("Pick at least one site to check.");
+      return;
+    }
     setBusy(true);
     setError(null);
     const full = { ...req, destination: req.destination.trim(), raw_text: buildSentence(req) };
     try {
-      const res: { search_id?: string; detail?: unknown } = await startSearch("", structured(full));
+      const res: { search_id?: string; detail?: unknown } = await startSearch("", { ...structured(full), ...(targetMode && hotelName.trim() ? { hotel_name: hotelName.trim(), platforms: sites } : {}) });
       if (!res?.search_id) throw new Error(res?.detail ? JSON.stringify(res.detail).slice(0, 160) : "the service did not return a search id");
       saveSearch(full, res.search_id);
       router.push(`/investigation?id=${encodeURIComponent(res.search_id)}`);
@@ -168,6 +176,23 @@ export function SearchForm() {
           <span id="e-bud" className="err" role="alert">{show("budget_per_night")}</span>
         </div>
       </div>
+
+      {targetMode && (
+        <fieldset>
+          <legend>Check one hotel</legend>
+          <div className="field">
+            <input type="text" aria-label="Hotel name" placeholder="Hotel name, e.g. La Marvella" value={hotelName} onChange={(e) => setHotelName(e.target.value)} />
+          </div>
+          <div className="chips">
+            {[["cleartrip", "Cleartrip"], ["agoda", "Agoda"], ["booking", "Booking.com"]].map(([v, label]) => (
+              <button key={v} type="button" className="chip-btn" aria-pressed={sites.includes(v)} onClick={() => setSites((s) => (s.includes(v) ? s.filter((x) => x !== v) : [...s, v]))}>
+                {label}
+              </button>
+            ))}
+          </div>
+          <p className="fine">Checks only this hotel on the sites you pick. Fewer sites means a shorter, cheaper run.</p>
+        </fieldset>
+      )}
 
       <fieldset>
         <legend>Must have</legend>

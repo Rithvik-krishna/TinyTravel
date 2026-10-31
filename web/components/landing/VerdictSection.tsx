@@ -42,7 +42,7 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searc
         <div className="sec-head">
           <span className="eyebrow">Your verdict</span>
           <h2>Pick, then pay on the real site.</h2>
-          <p className="lede">{hotelName ? `${hotelName}, ranked for you: cheap, but refundable.` : "Ranked for you: cheap, but refundable."}</p>
+          <p className="lede">{hotelName ? `${hotelName}: the picks below come from prices we verified at the payment page.` : "The picks below come from prices we verified at the payment page."}</p>
         </div>
         <div className="verdict">
           {Array.from(cards.entries()).map(([id, labels]) => {
@@ -59,12 +59,12 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searc
                 {t.listing != null && <s>listing showed {inr(t.listing, t.currency)}</s>}
                 <div className="tags">
                   {nonRefundable && <span className="badge warn">Non-refundable</span>}
-                  {(warn || nonRefundable) && <span className="badge warn">Not comparable</span>}
+                  {warn && <span className="badge warn">Not comparable</span>}
                   {t.cancellation_category === "free" && t.cancellation_policy && <span className="badge ok">{t.cancellation_policy}</span>}
                 </div>
                 {warn?.message && <p style={{ color: "var(--muted)", fontSize: 14 }}>{warn.message}</p>}
                 {labels.length > 1 && merged && (
-                  <p style={{ color: "var(--muted)", fontSize: 14 }}>Two verdicts point to the same offer, so they share one card.</p>
+                  <p style={{ color: "var(--muted)", fontSize: 14 }}>These picks are the same offer, so they share one card.</p>
                 )}
                 {searchId !== undefined && t.status === "verified" && (
                   <Link className="btn sm" href={hotelHref(t.hotelId, searchId, t.id)} style={{ justifySelf: "start" }}>View hotel and book</Link>
