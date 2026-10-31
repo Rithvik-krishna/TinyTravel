@@ -37,24 +37,58 @@ class DiscoveryResult(BaseModelForbid):
     listings: list[DiscoveryItem] = []
 
 
-def build_discovery_goal(req: dict) -> str:
+def discovery_start_url(platform: str, req: dict) -> str:
+    """Where a discovery agent starts.
+
+    A guessed results-page URL (e.g. Cleartrip ?city=Delhi) does not work for city names and the agent stalls
+    on it, so Cleartrip and Agoda start from their hotel search page and type the city. Booking.com accepts
+    a direct search URL.
+    """
+    p = platform.lower().replace(".", "").replace(" ", "").replace("-", "")
+    if p == "cleartrip":
+        return "https://www.cleartrip.com/hotels"
+    if p == "agoda":
+        return "https://www.agoda.com/"
+    if p in ("booking", "bookingcom"):
+        city = quote_plus(req.get("destination", "Bengaluru"))
+        return (
+            "https://www.booking.com/searchresults.html"
+            f"?ss={city}&checkin={req.get('check_in', '2026-11-20')}&checkout={req.get('check_out', '2026-11-21')}"
+            f"&group_adults={req.get('guests', 2)}&no_rooms={req.get('rooms', 1)}&selected_currency=INR"
+        )
+    return site_url(platform, req)
+
+
+def build_discovery_goal(req: dict, platform: str = "") -> str:
     """Construct goal prompt for search listing extraction without checkout."""
     city = req.get("destination", "Bengaluru")
     check_in = req.get("check_in", "2026-11-20")
     check_out = req.get("check_out", "2026-11-21")
     guests = req.get("guests", 2)
     rooms = req.get("rooms", 1)
+    p = platform.lower().replace(".", "").replace(" ", "").replace("-", "")
+
+    if p in ("booking", "bookingcom"):
+        how = (
+            f"The page should already show hotel search results for {city}. If a sign-in prompt or pop-up appears, close it. "
+            f"If results are not shown, search for {city} for {check_in} to {check_out}, {guests} adults, {rooms} room."
+        )
+    else:
+        how = (
+            f"Open the hotel search form. Type {city} in the destination box and pick the first matching city suggestion. "
+            f"Set check-in {check_in} and check-out {check_out}, {guests} adults, {rooms} room, then press Search. "
+            "Close any pop-up or login prompt that appears (do not log in)."
+        )
 
     return (
-        f"Open the provided URL. Search for hotels in {city} for {check_in} to {check_out}, {guests} adults, {rooms} room.\n"
-        "Extract up to 8 hotel search results displayed on the first page.\n"
+        f"{how}\n"
+        "When hotel results are shown, extract up to 8 hotels from the first page. Do not scroll more than twice.\n"
         "For each hotel, extract: hotel_name, address, area, lat, lng, phone, rating (numeric score out of 5), "
         "shown_price (the initial total or nightly price shown on the card), currency, and source_url (the direct link to the hotel).\n"
         "Missing fields must be null, never guessed or fabricated.\n"
         "STOP on the search results page. Never select a room, never enter checkout, never enter payment or login details.\n"
-        "Use at most 15 steps. Return ONLY JSON in the given schema."
+        "Use at most 25 steps. Return ONLY JSON in the given schema."
     )
-
 
 def _load_fixture_listings(platform: str) -> list[dict]:
     """Load mock listings from fixtures/demo_run.json matching the platform."""
@@ -73,6 +107,15 @@ def _load_fixture_listings(platform: str) -> list[dict]:
         ]
     except Exception:
         return []
+
+
+def _clean(value: Any, *, zero_is_null: bool = False) -> Any:
+    """Agents sometimes return the text "null" or 0 for unknown values. Unknown must be null, never 0."""
+    if isinstance(value, str) and value.strip().lower() in ("", "null", "none", "n/a", "unknown"):
+        return None
+    if zero_is_null and isinstance(value, (int, float)) and value == 0:
+        return None
+    return value
 
 
 async def discover(
@@ -95,9 +138,9 @@ async def discover(
             return fixture_listings
 
     explicit_url = req.get("url")
-    url = explicit_url if explicit_url else site_url(platform, req)
+    url = explicit_url if explicit_url else discovery_start_url(platform, req)
 
-    goal = build_discovery_goal(req)
+    goal = build_discovery_goal(req, platform)
     schema = DiscoveryResult.model_json_schema()
 
     run: AgentRun = await run_agent(
@@ -105,7 +148,7 @@ async def discover(
         goal=goal,
         output_schema=schema,
         profile=profile,
-        timeout_s=req.get("timeout_s", 180),
+        timeout_s=req.get("timeout_s", 300),
         on_stream_url=on_stream_url,
         on_progress=on_progress,
     )
@@ -124,13 +167,13 @@ async def discover(
                 "listing_id": listing_id,
                 "platform": platform,
                 "hotel_name": item.get("hotel_name", ""),
-                "address": item.get("address"),
-                "area": item.get("area"),
-                "lat": item.get("lat"),
-                "lng": item.get("lng"),
-                "phone": item.get("phone"),
-                "rating": item.get("rating"),
-                "shown_price": item.get("shown_price"),
+                "address": _clean(item.get("address")),
+                "area": _clean(item.get("area")),
+                "lat": _clean(item.get("lat"), zero_is_null=True),
+                "lng": _clean(item.get("lng"), zero_is_null=True),
+                "phone": _clean(item.get("phone")),
+                "rating": _clean(item.get("rating"), zero_is_null=True),
+                "shown_price": _clean(item.get("shown_price"), zero_is_null=True),
                 "currency": item.get("currency", "INR"),
                 "source_url": item.get("source_url") or url,
                 "captured_at": now_iso,

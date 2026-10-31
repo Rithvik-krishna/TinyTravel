@@ -21,7 +21,7 @@ from services.normalize import (
     comparable_sets,
     select_targets,
 )
-from agents.discovery import discover, build_discovery_goal
+from agents.discovery import discover, build_discovery_goal, discovery_start_url, _clean
 
 demo_path = Path(__file__).resolve().parents[2] / "fixtures" / "demo_run.json"
 demo_data = json.loads(demo_path.read_text(encoding="utf-8"))
@@ -177,7 +177,7 @@ def test_select_targets_empty():
 def test_discovery_goal_construction():
     req = {"destination": "Bengaluru", "check_in": "2026-11-20", "check_out": "2026-11-21", "guests": 2, "rooms": 1}
     goal = build_discovery_goal(req)
-    assert "Search for hotels in Bengaluru" in goal
+    assert "Type Bengaluru in the destination box" in goal
     assert "STOP on the search results page" in goal
     assert "Never select a room, never enter checkout" in goal
 
@@ -197,3 +197,18 @@ def test_discovery_fake_mode(monkeypatch):
     listings_bk = asyncio.run(discover("booking", req))
     assert len(listings_bk) == 3
     assert all(l["platform"] == "Booking.com" for l in listings_bk)
+
+
+def test_discovery_start_urls_do_not_use_guessed_city_params():
+    req = {"destination": "Delhi", "check_in": "2026-11-20", "check_out": "2026-11-21", "guests": 2, "rooms": 1}
+    assert discovery_start_url("Cleartrip", req) == "https://www.cleartrip.com/hotels"
+    assert discovery_start_url("Agoda", req) == "https://www.agoda.com/"
+    assert "ss=Delhi" in discovery_start_url("Booking.com", req)
+
+
+def test_discovery_clean_turns_unknown_into_null():
+    assert _clean("null") is None
+    assert _clean("N/A") is None
+    assert _clean(0, zero_is_null=True) is None
+    assert _clean(4.4, zero_is_null=True) == 4.4
+    assert _clean("HSR Layout") == "HSR Layout"
