@@ -11,7 +11,7 @@ import React, {
 } from "react";
 import { createPortal } from "react-dom";
 import { TagItem } from "@/lib/tags";
-import { inr } from "@/lib/format";
+import { inr, shortTime } from "@/lib/format";
 
 export interface KeyTagRailProps extends React.HTMLAttributes<HTMLElement> {
   items: TagItem[];
@@ -21,6 +21,7 @@ export interface KeyTagRailProps extends React.HTMLAttributes<HTMLElement> {
   action?: React.ReactNode;
   autoplay?: boolean;
   interval?: number;
+  maxUnit?: number;
   active?: number | null;
   onActiveChange?: (index: number | null) => void;
   onOpenChange?: (index: number | null) => void;
@@ -40,31 +41,31 @@ const DEFAULT_LABELS = {
 };
 
 const PERSPECTIVE = 1200;
-const GAP_FACTOR = 0.3;
-const EXTRA_ACTIVE_GAP = 0.1;
+const GAP_FACTOR = 0.28;
+const EXTRA_ACTIVE_GAP = 0.12;
 const CONTACT_EPSILON = 0.05;
 const RAIL_PAD = 36;
-const MIN_DESKTOP_UNIT = 90;
-const MAX_UNIT = 150;
-const MAX_CAROUSEL_UNIT = 128;
-const LIFT_SCALE = 0.06;
+const MIN_DESKTOP_UNIT = 110;
+const DEFAULT_MAX_UNIT = 280; // Large desktop tags (~220px wide)
+const MAX_CAROUSEL_UNIT = 190;
+const LIFT_SCALE = 0.05;
 const SUPERSAMPLE = 2;
-const ACTIVE_EXPAND = 1.12;
-const LIFT_Z = 26;
-const TILT_X = -6;
+const ACTIVE_EXPAND = 1.08;
+const LIFT_Z = 24;
+const TILT_X = -5;
 const AIM_MAX_DEG = 4;
-const SWING_MAX_DEG = 14;
-const PENDULUM_DAMPING = 2.2;
-const GRAVITY_CONST = 3900;
+const SWING_MAX_DEG = 12;
+const PENDULUM_DAMPING = 2.4;
+const GRAVITY_CONST = 3800;
 const DRAG_SWING_GAIN = 0.08;
 const FREE_SWING_GAIN = 0.16;
-const IMPULSE_FORCE = 12;
+const IMPULSE_FORCE = 10;
 const DEG_TO_RAD = 180 / Math.PI;
 
 const BRASS_GRADIENT_HOOK =
-  "linear-gradient(to bottom, color-mix(in oklab, #eab308 40%, white) 0%, color-mix(in oklab, #ca8a04 80%, white) 32%, color-mix(in oklab, #854d0e 85%, black) 72%, color-mix(in oklab, #713f12 60%, black) 100%)";
+  "linear-gradient(to bottom, color-mix(in oklab, #facc15 50%, white) 0%, color-mix(in oklab, #ca8a04 80%, white) 30%, color-mix(in oklab, #854d0e 85%, black) 70%, color-mix(in oklab, #713f12 60%, black) 100%)";
 const BRASS_GRADIENT_STEM =
-  "linear-gradient(to right, color-mix(in oklab, #eab308 70%, white), color-mix(in oklab, #a16207 80%, black) 70%, color-mix(in oklab, #713f12 50%, black))";
+  "linear-gradient(to right, color-mix(in oklab, #facc15 70%, white), color-mix(in oklab, #a16207 80%, black) 70%, color-mix(in oklab, #713f12 50%, black))";
 
 function stamp(e: React.PointerEvent | PointerEvent | Event): number {
   const now = performance.now();
@@ -76,7 +77,7 @@ function clamp(v: number, min: number, max: number): number {
 }
 
 function restTilt(index: number): number {
-  return (((index * 37 + 11) % 7) - 3) * 0.5;
+  return (((index * 37 + 11) % 7) - 3) * 0.4;
 }
 
 interface TagShape {
@@ -86,7 +87,7 @@ interface TagShape {
 }
 
 function shapeOf(item: TagItem): TagShape {
-  const aspect = clamp(item.aspect ?? 0.62, 0.45, 0.9);
+  const aspect = clamp(item.aspect ?? 0.62, 0.5, 0.75);
   const rootAspect = Math.sqrt(aspect);
   return {
     aspect,
@@ -109,34 +110,39 @@ interface RailLayout {
 function layoutFor(
   shapes: TagShape[],
   drops: number[],
-  width: number
+  width: number,
+  maxUnit: number = DEFAULT_MAX_UNIT
 ): RailLayout {
   const count = shapes.length;
   const totalW = shapes.reduce((sum, s) => sum + s.w, 0);
   const maxW = shapes.reduce((max, s) => Math.max(max, s.w), 0);
+
   const calculatedUnit = count
     ? (width - 2 * RAIL_PAD) /
       (totalW +
         Math.max(0, count - 1) * GAP_FACTOR +
         2 * EXTRA_ACTIVE_GAP +
         maxW * (ACTIVE_EXPAND - 1))
-    : MAX_UNIT;
-  const carousel = calculatedUnit < MIN_DESKTOP_UNIT;
-  const unit = carousel
-    ? clamp(width * 0.22, 96, MAX_CAROUSEL_UNIT)
-    : Math.min(MAX_UNIT, calculatedUnit);
+    : maxUnit;
 
-  const railTop = 8;
-  const railT = Math.round(clamp(unit * 0.12, 10, 18));
-  const pivotY = railTop + railT + Math.round(unit * 0.04) + 2;
+  // On narrow viewports or when unit falls below threshold, use carousel
+  const isNarrow = width < 680;
+  const carousel = isNarrow || calculatedUnit < MIN_DESKTOP_UNIT;
+  const unit = carousel
+    ? clamp(width * 0.44, 140, MAX_CAROUSEL_UNIT)
+    : Math.min(maxUnit, calculatedUnit);
+
+  const railTop = 10;
+  const railT = Math.round(clamp(unit * 0.08, 12, 20));
+  const pivotY = railTop + railT + Math.round(unit * 0.035) + 3;
 
   const maxH = shapes.reduce((max, s) => Math.max(max, s.h), 0) * unit;
-  const midY = pivotY + unit * 0.22 + maxH / 2;
+  const midY = pivotY + unit * 0.18 + maxH / 2;
 
   const tops = shapes.map((s, i) =>
     Math.round(
       Math.max(
-        pivotY + unit * 0.1,
+        pivotY + unit * 0.08,
         midY - (s.h * unit) / 2 + clamp(drops[i] ?? 0, 0, 0.3) * unit
       )
     )
@@ -155,7 +161,7 @@ function layoutFor(
     railT,
     pivotY,
     tops,
-    stageH: Math.round(maxBottom + 40),
+    stageH: Math.round(maxBottom + 44),
   };
 }
 
@@ -205,7 +211,7 @@ function emptySim(): Sim {
 
 function pendulum(layout: RailLayout, shape: TagShape, index: number): number {
   return Math.max(
-    30,
+    40,
     (layout.tops[index] ?? 0) - layout.pivotY + (shape.h * layout.unit) / 2
   );
 }
@@ -321,7 +327,8 @@ export default function KeyTagRail({
   caption,
   action,
   autoplay = false,
-  interval = 2800,
+  interval = 3200,
+  maxUnit = DEFAULT_MAX_UNIT,
   active: controlledActive,
   onActiveChange,
   onOpenChange,
@@ -347,8 +354,8 @@ export default function KeyTagRail({
 
   const [containerWidth, setContainerWidth] = useState(0);
   const layout = useMemo(
-    () => layoutFor(shapes, drops, containerWidth),
-    [shapes, drops, containerWidth]
+    () => layoutFor(shapes, drops, containerWidth, maxUnit),
+    [shapes, drops, containerWidth, maxUnit]
   );
 
   const [uncontrolledActive, setUncontrolledActive] = useState<number | null>(null);
@@ -765,8 +772,8 @@ export default function KeyTagRail({
     for (let i = 0; i < count; i++) {
       st.timers.push(
         window.setTimeout(
-          () => impulse(i, 16 - i * 1.1),
-          140 + i * 60
+          () => impulse(i, 14 - i * 1.5),
+          140 + i * 80
         )
       );
     }
@@ -821,7 +828,7 @@ export default function KeyTagRail({
     }
     const now = performance.now();
     if (!autoplayNextTime.current || autoplayNextTime.current < now - interval) {
-      autoplayNextTime.current = now + (activeIndex === null ? 1100 : interval);
+      autoplayNextTime.current = now + (activeIndex === null ? 1200 : interval);
     }
 
     let timer: number = window.setTimeout(function advance() {
@@ -866,7 +873,7 @@ export default function KeyTagRail({
       triggerFocusIndex.current = idx;
       setOpenIndex(null);
       callbacksRef.current.onOpenChange?.(null);
-      impulse(idx, idx % 2 ? 22 : -22);
+      impulse(idx, idx % 2 ? 18 : -18);
     }
   }, [openIndex, impulse]);
 
@@ -1097,17 +1104,23 @@ export default function KeyTagRail({
       }`}
     >
       {(eyebrow || heading) && (
-        <header className="relative z-10 flex flex-col items-center gap-2 px-6 pt-7 text-center">
+        <header className="relative z-10 flex flex-col items-center gap-3 px-6 pt-4 text-center">
           {eyebrow && (
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-brand">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-brand">
               {eyebrow}
             </p>
           )}
           {heading && (
-            <h2 className="text-balance text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl">
+            <h2 className="text-balance text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl text-text">
               {heading}
             </h2>
           )}
+          {caption && (
+            <p className="max-w-2xl text-base sm:text-lg text-text-muted mt-1 leading-relaxed">
+              {caption}
+            </p>
+          )}
+          {action && <div className="mt-3 flex items-center gap-4">{action}</div>}
         </header>
       )}
 
@@ -1116,7 +1129,7 @@ export default function KeyTagRail({
         data-stage
         role="group"
         aria-label={heading ?? "Key tag rail"}
-        className="relative mt-4 w-full touch-pan-y select-none"
+        className="relative mt-2 w-full touch-pan-y select-none"
         style={{ height: layout.stageH, overflowX: "clip" }}
         onPointerMove={onPointerMove}
         onPointerDown={onPointerDown}
@@ -1137,32 +1150,32 @@ export default function KeyTagRail({
         }}
         onKeyDown={onKeyDown}
       >
-        {/* Brass rail */}
+        {/* Solid Brass Hanging Rail */}
         <div
           aria-hidden="true"
           data-rail
           className="pointer-events-none absolute inset-x-0 z-[1]"
           style={{ top: layout.railTop, height: layout.railT }}
         >
-          {/* Rail drop shadow */}
-          <div className="absolute inset-x-0 top-full h-3 bg-black opacity-10 blur-[4px] dark:opacity-40" />
+          {/* Subtle warm rail cast shadow */}
+          <div className="absolute inset-x-0 top-full h-4 bg-black/15 blur-[6px] dark:bg-black/50" />
 
           {/* Brass extrusion bar */}
           <div
-            className="absolute inset-0 rounded-[1px]"
+            className="absolute inset-0 rounded-[2px]"
             style={{
               background:
-                "linear-gradient(to bottom, #fef08a 0%, #eab308 14%, #ca8a04 35%, #a16207 55%, #713f12 80%, #451a03 100%)",
+                "linear-gradient(to bottom, #fef08a 0%, #eab308 14%, #ca8a04 36%, #a16207 58%, #713f12 82%, #451a03 100%)",
               boxShadow:
-                "0 2px 4px rgba(0,0,0,0.18), inset 0 1px 0 rgba(255,255,255,0.7), inset 0 -1px 0 rgba(0,0,0,0.4)",
+                "0 3px 6px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(0,0,0,0.45)",
             }}
           />
-          {/* Brass highlight stripe */}
-          <div className="absolute inset-x-0 top-[20%] h-px bg-white/70" />
+          {/* Polished brass highlight reflection */}
+          <div className="absolute inset-x-0 top-[22%] h-[1.5px] bg-white/75" />
           <div className="absolute inset-x-0 bottom-0 h-px bg-black/40" />
         </div>
 
-        {/* Ambient tag drop shadows */}
+        {/* Dynamic drop shadows beneath swinging tags */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 z-[2]"
@@ -1188,7 +1201,7 @@ export default function KeyTagRail({
                 }}
               >
                 <span
-                  className="absolute opacity-20 dark:opacity-60"
+                  className="absolute opacity-25 dark:opacity-65"
                   style={{
                     left: 0,
                     top: topY,
@@ -1217,8 +1230,8 @@ export default function KeyTagRail({
           const fh = sh.h * unitPx;
           const topY = layout.tops[i] ?? 0;
           const isAct = activeIndex === i;
-          // String connects to brass eyelet near tag top
-          const eyeletOffsetY = Math.round(fw * 0.16);
+          // String connects to brass eyelet hole near tag top
+          const eyeletOffsetY = Math.round(fw * 0.12);
           const stringTargetY = topY + eyeletOffsetY;
 
           return (
@@ -1235,7 +1248,7 @@ export default function KeyTagRail({
                 zIndex: isAct ? 30 : 10 + i,
               }}
             >
-              {/* Brass Rail Ring Hook */}
+              {/* Solid brass sliding collar */}
               <RailRingHook
                 x={fw / 2}
                 railTop={layout.railTop}
@@ -1256,32 +1269,32 @@ export default function KeyTagRail({
                   visibility: liftHiddenIndex === i ? "hidden" : undefined,
                 }}
               >
-                {/* Hanging string / braided cord loop */}
+                {/* Woven braided cord hanging from rail hook down into eyelet */}
                 <svg
                   aria-hidden="true"
                   className="pointer-events-none absolute left-0 top-0 overflow-visible"
                   width={Math.max(1, fw)}
                   height={Math.max(1, stringTargetY)}
                 >
-                  {/* Drop shadow of cord */}
+                  {/* Cord drop shadow */}
                   <line
                     x1={fw / 2 + 1}
                     y1={layout.pivotY + 2}
                     x2={fw / 2 + 1}
                     y2={stringTargetY + 1}
                     stroke="black"
-                    strokeOpacity="0.16"
-                    strokeWidth="2.4"
+                    strokeOpacity="0.2"
+                    strokeWidth="2.6"
                   />
-                  {/* Cord body (twisted warm cord) */}
+                  {/* Twined cord threads */}
                   <line
                     x1={fw / 2 - 0.7}
                     y1={layout.pivotY}
                     x2={fw / 2 - 0.7}
                     y2={stringTargetY}
                     stroke="#b45309"
-                    strokeWidth="1.5"
-                    strokeDasharray="3 2"
+                    strokeWidth="1.8"
+                    strokeDasharray="4 2"
                   />
                   <line
                     x1={fw / 2 + 0.7}
@@ -1289,18 +1302,17 @@ export default function KeyTagRail({
                     x2={fw / 2 + 0.7}
                     y2={stringTargetY}
                     stroke="#d97706"
-                    strokeWidth="1.5"
-                    strokeDasharray="2 3"
+                    strokeWidth="1.8"
+                    strokeDasharray="2 4"
                   />
-                  {/* Highlight core */}
                   <line
                     x1={fw / 2}
                     y1={layout.pivotY}
                     x2={fw / 2}
                     y2={stringTargetY}
                     stroke="#fef3c7"
-                    strokeOpacity="0.45"
-                    strokeWidth="0.8"
+                    strokeOpacity="0.5"
+                    strokeWidth="0.9"
                   />
                 </svg>
 
@@ -1314,7 +1326,7 @@ export default function KeyTagRail({
                   tabIndex={i === (activeIndex ?? focusIndex) ? 0 : -1}
                   aria-label={`${item.title} on ${item.platform} - Listing price ${inr(
                     item.listing
-                  )}`}
+                  )} - Click or tap to flip`}
                   aria-describedby={`${uid}-caption`}
                   aria-pressed={isAct}
                   className="pointer-events-auto absolute cursor-pointer rounded-2xl outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
@@ -1367,10 +1379,10 @@ export default function KeyTagRail({
         })}
       </div>
 
-      {/* Mobile carousel indicator dots */}
+      {/* Mobile carousel indicator pills */}
       {layout.carousel && count > 1 && (
         <div
-          className="relative z-10 mt-2 flex justify-center gap-1.5"
+          className="relative z-10 mt-3 flex justify-center gap-1.5"
           role="group"
           aria-label={heading ?? "Tags"}
         >
@@ -1394,32 +1406,7 @@ export default function KeyTagRail({
         </div>
       )}
 
-      {/* Caption & primary action */}
-      <div className="relative z-10 flex flex-col items-center gap-3 px-6 pb-6 pt-3 text-center">
-        <div
-          id={`${uid}-caption`}
-          aria-live="polite"
-          className="min-h-[2.5rem]"
-        >
-          <p className="text-sm font-semibold text-text">
-            {activeItem
-              ? `${activeItem.title} · ${activeItem.platform}`
-              : caption}
-          </p>
-          {activeItem && (
-            <p className="mt-0.5 text-xs text-text-muted">
-              Listing price:{" "}
-              <span className="font-semibold text-text">
-                {inr(activeItem.listing)}
-              </span>{" "}
-              · <span className="text-brand font-medium">{labels.open}</span>
-            </p>
-          )}
-        </div>
-        {action}
-      </div>
-
-      {/* 3D Detail Modal with flip */}
+      {/* Detail Modal with 3D Flip */}
       {openIndex !== null && items[openIndex] && shapes[openIndex] && (
         <TagDetailModal
           uid={uid}
@@ -1439,7 +1426,7 @@ export default function KeyTagRail({
 }
 
 /**
- * RailRingHook: Brass hardware sliding on the top rail
+ * RailRingHook: Sturdy brass hardware collar that rides on top rail
  */
 function RailRingHook({
   x,
@@ -1452,15 +1439,15 @@ function RailRingHook({
   railT: number;
   pivotY: number;
 }) {
-  const ringRadius = clamp(railT * 0.38, 4, 7);
-  const hookH = pivotY - railTop + 6;
+  const ringRadius = clamp(railT * 0.42, 5, 9);
+  const hookH = pivotY - railTop + 8;
   return (
     <span
       aria-hidden="true"
       className="absolute"
       style={{
         left: x - ringRadius,
-        top: railTop - 2,
+        top: railTop - 3,
         width: ringRadius * 2,
         height: hookH,
       }}
@@ -1469,18 +1456,18 @@ function RailRingHook({
       <span
         className="absolute inset-x-0 top-0 rounded-full"
         style={{
-          height: 5,
+          height: 6,
           background: BRASS_GRADIENT_HOOK,
-          boxShadow: "0 1px 2px rgba(0,0,0,0.3)",
+          boxShadow: "0 1px 3px rgba(0,0,0,0.35)",
         }}
       />
       {/* Vertical brass drop tab */}
       <span
-        className="absolute top-[3px] rounded-b-[1px]"
+        className="absolute top-[4px] rounded-b-[1px]"
         style={{
           left: ringRadius * 0.5,
           width: ringRadius,
-          bottom: 5,
+          bottom: 6,
           background: BRASS_GRADIENT_STEM,
           boxShadow: "1px 1px 2px rgba(0,0,0,0.25)",
         }}
@@ -1490,24 +1477,24 @@ function RailRingHook({
         aria-hidden="true"
         className="absolute bottom-0 left-0 overflow-visible"
         width={ringRadius * 2}
-        height={8}
+        height={10}
       >
         <circle
           cx={ringRadius}
-          cy={4}
-          r={ringRadius * 0.8}
+          cy={5}
+          r={ringRadius * 0.82}
           fill="none"
           stroke="#ca8a04"
-          strokeWidth="2"
+          strokeWidth="2.2"
         />
-        <circle cx={ringRadius} cy={4} r={ringRadius * 0.4} fill="#451a03" />
+        <circle cx={ringRadius} cy={5} r={ringRadius * 0.4} fill="#451a03" />
       </svg>
     </span>
   );
 }
 
 /**
- * TagFront: The physical key tag front face
+ * TagFront: Redesigned unit-scaled physical key tag
  */
 export function TagFront({
   item,
@@ -1518,21 +1505,23 @@ export function TagFront({
   shape: TagShape;
   unit: number;
 }) {
-  const eyeletSize = Math.max(12, Math.round(unit * 0.11));
-  const eyeletCenterY = Math.max(10, Math.round(unit * 0.11));
+  const eyeletSize = Math.max(16, Math.round(unit * 0.11));
+  const eyeletCenterY = Math.max(14, Math.round(unit * 0.1));
+
+  // Normalise platform name (e.g. Booking.com stays Booking.com, clean text without letter spacing overflow)
+  const platformLabel = item.platform;
 
   return (
-    <div className="relative h-full w-full select-none rounded-2xl bg-surface-2 border border-border shadow-[0_8px_24px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_28px_rgba(0,0,0,0.45)] overflow-hidden flex flex-col justify-between p-2 sm:p-3 transition-colors">
-      {/* Subtle hotel key tag texture & inner border */}
-      <div className="pointer-events-none absolute inset-1 sm:inset-1.5 rounded-[12px] border border-border/50" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/5 dark:from-white/5 dark:to-black/20" />
+    <div className="relative h-full w-full select-none rounded-2xl bg-surface-2 border border-border/80 shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5 transition-colors">
+      {/* Subtle hotel cardstock texture & inner border bevel */}
+      <div className="pointer-events-none absolute inset-1.5 sm:inset-2 rounded-[14px] border border-border/40" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-black/5 dark:from-white/5 dark:to-black/30" />
 
-      {/* Top area: Brass Eyelet */}
+      {/* Top area: Punched Brass Eyelet */}
       <div
-        className="relative z-10 flex flex-col items-center"
-        style={{ marginTop: Math.max(1, eyeletCenterY - 12) }}
+        className="relative z-10 flex flex-col items-center flex-shrink-0"
+        style={{ marginTop: Math.max(0, eyeletCenterY - 14) }}
       >
-        {/* Brass Eyelet / Grommet */}
         <div
           className="relative rounded-full flex items-center justify-center"
           style={{
@@ -1541,47 +1530,59 @@ export function TagFront({
             background:
               "radial-gradient(circle, #fef08a 0%, #eab308 35%, #ca8a04 65%, #713f12 100%)",
             boxShadow:
-              "0 1px 2px rgba(0,0,0,0.35), inset 0 1px 1px rgba(255,255,255,0.8), inset 0 -1px 1px rgba(0,0,0,0.5)",
+              "0 1.5px 3px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.9), inset 0 -1px 1px rgba(0,0,0,0.6)",
           }}
         >
-          {/* Eyelet center hole showing through */}
+          {/* Eyelet hole cutout */}
           <div
             className="rounded-full bg-surface"
             style={{
-              width: Math.round(eyeletSize * 0.46),
-              height: Math.round(eyeletSize * 0.46),
-              boxShadow: "inset 0 1px 2px rgba(0,0,0,0.6)",
+              width: Math.round(eyeletSize * 0.44),
+              height: Math.round(eyeletSize * 0.44),
+              boxShadow: "inset 0 1.5px 3px rgba(0,0,0,0.7)",
             }}
           />
         </div>
       </div>
 
-      {/* Mid area: Hotel name & platform chip */}
-      <div className="relative z-10 my-auto text-center space-y-1.5 px-0.5">
-        <div className="inline-block max-w-full">
-          <span className="inline-flex items-center rounded-full bg-surface border border-border px-2 py-0.5 text-[9px] font-semibold text-text-muted uppercase tracking-wider shadow-sm truncate max-w-full">
-            {item.platform}
+      {/* Mid area: Platform badge & Hotel Name (up to 2 lines, no ellipsis) */}
+      <div className="relative z-10 my-auto text-center space-y-2.5 px-1 flex-1 flex flex-col justify-center">
+        <div>
+          <span
+            className="inline-flex items-center rounded-full bg-surface border border-border/90 px-3 py-1 font-medium text-text-muted shadow-sm max-w-full"
+            style={{ fontSize: `${clamp(Math.round(unit * 0.046), 11, 14)}px` }}
+          >
+            {platformLabel}
           </span>
         </div>
 
         <h3
-          className="font-bold text-text line-clamp-2 leading-tight tracking-tight px-0.5"
-          style={{ fontSize: `${Math.max(11, Math.round(unit * 0.09))}px` }}
+          className="font-bold text-text leading-tight tracking-tight break-words"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.076), 14, 21)}px` }}
         >
           {item.title}
         </h3>
       </div>
 
-      {/* Bottom area: Big Listing Price */}
-      <div className="relative z-10 text-center pb-0.5 pt-1 border-t border-border/60">
+      {/* Bottom area: Separated Price Block with Label ABOVE Amount */}
+      <div className="relative z-10 text-center pt-2.5 pb-1 border-t border-border/70 flex-shrink-0 space-y-1">
+        <div
+          className="font-semibold uppercase tracking-wider text-text-muted"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.042), 9, 12)}px` }}
+        >
+          Listing price
+        </div>
         <div
           className="font-extrabold text-text tabular-nums tracking-tight leading-none"
-          style={{ fontSize: `${Math.max(14, Math.round(unit * 0.135))}px` }}
+          style={{ fontSize: `${clamp(Math.round(unit * 0.125), 18, 34)}px` }}
         >
           {inr(item.listing)}
         </div>
-        <div className="mt-0.5 text-[8px] sm:text-[9px] font-medium uppercase tracking-wider text-text-muted whitespace-nowrap">
-          listing price
+        <div
+          className="text-brand font-medium pt-1 opacity-90"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+        >
+          Tap to flip ↺
         </div>
       </div>
     </div>
@@ -1589,7 +1590,7 @@ export function TagFront({
 }
 
 /**
- * TagBack: The thermal receipt or key tag reverse side
+ * TagBack: Flipped receipt / real payable price side
  */
 export function TagBack({
   item,
@@ -1600,12 +1601,22 @@ export function TagBack({
   shape: TagShape;
   unit: number;
 }) {
-  const eyeletSize = Math.max(14, Math.round(unit * 0.12));
+  const eyeletSize = Math.max(16, Math.round(unit * 0.11));
+  const eyeletCenterY = Math.max(14, Math.round(unit * 0.1));
+
+  const hasPayable = typeof item.payable === "number";
+  const delta = hasPayable && typeof item.listing === "number" ? item.payable! - item.listing! : null;
+  const deltaSign = delta !== null && delta >= 0 ? "+" : "";
+  const deltaPct = item.fee_leak_pct != null ? ` (+${item.fee_leak_pct}%)` : "";
+  const verifiedStr = item.verifiedAt ? `Verified at ${shortTime(item.verifiedAt)}` : "Observed on this run";
 
   return (
-    <div className="relative h-full w-full select-none rounded-2xl bg-surface border border-border shadow-[0_8px_24px_rgba(0,0,0,0.1)] overflow-hidden flex flex-col justify-between p-3.5">
-      {/* Top Eyelet on Back */}
-      <div className="relative z-10 flex flex-col items-center">
+    <div className="relative h-full w-full select-none rounded-2xl bg-surface border border-border/80 shadow-[0_10px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5">
+      {/* Punched Eyelet on Back */}
+      <div
+        className="relative z-10 flex flex-col items-center flex-shrink-0"
+        style={{ marginTop: Math.max(0, eyeletCenterY - 14) }}
+      >
         <div
           className="rounded-full flex items-center justify-center"
           style={{
@@ -1613,50 +1624,108 @@ export function TagBack({
             height: eyeletSize,
             background:
               "radial-gradient(circle, #eab308 0%, #ca8a04 50%, #713f12 100%)",
-            boxShadow: "0 1px 2px rgba(0,0,0,0.35)",
+            boxShadow: "0 1.5px 3px rgba(0,0,0,0.35)",
           }}
         >
           <div
             className="rounded-full bg-surface-2"
             style={{
-              width: Math.round(eyeletSize * 0.46),
-              height: Math.round(eyeletSize * 0.46),
+              width: Math.round(eyeletSize * 0.44),
+              height: Math.round(eyeletSize * 0.44),
             }}
           />
         </div>
       </div>
 
-      {/* Back content preview */}
-      <div className="relative z-10 my-auto text-center space-y-2 px-1">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-text-muted">
-          Inspection Card
+      {/* Back Body: Big Real Payable Price */}
+      <div className="relative z-10 my-auto text-center space-y-2.5 px-1 flex-1 flex flex-col justify-center">
+        <p
+          className="font-medium text-text-muted"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.046), 11, 14)}px` }}
+        >
+          {item.platform}
         </p>
-        <p className="text-xs font-semibold text-text">{item.title}</p>
-        <div className="text-[11px] text-text-muted">
-          Platform: <span className="font-medium text-text">{item.platform}</span>
-        </div>
-        <div className="text-xs font-bold text-text tabular-nums">
-          Listing: {inr(item.listing)}
-        </div>
+
+        {hasPayable ? (
+          <div className="space-y-1">
+            <div
+              className="font-semibold uppercase tracking-wider text-text-muted"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.042), 9, 12)}px` }}
+            >
+              You&apos;d pay
+            </div>
+            <div
+              className="font-extrabold text-text tabular-nums tracking-tight leading-none text-danger"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.125), 18, 34)}px` }}
+            >
+              {inr(item.payable)}
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-1">
+            <div
+              className="font-semibold uppercase tracking-wider text-danger"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.042), 9, 12)}px` }}
+            >
+              Price not reached
+            </div>
+            <div className="font-extrabold text-text text-xl">
+              N/A
+            </div>
+          </div>
+        )}
+
+        {/* Delta Chip */}
+        {delta !== null ? (
+          <div className="pt-1">
+            <span
+              className="inline-block rounded-lg bg-danger/10 border border-danger/30 text-danger px-2.5 py-1 font-semibold leading-tight"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.04), 9, 12)}px` }}
+            >
+              {deltaSign}{inr(delta)}{deltaPct} observed on this run
+            </span>
+          </div>
+        ) : item.blocker ? (
+          <div className="pt-1">
+            <span
+              className="inline-block rounded-lg bg-warning/10 border border-warning/30 text-warning px-2.5 py-1 font-semibold leading-tight"
+              style={{ fontSize: `${clamp(Math.round(unit * 0.04), 9, 12)}px` }}
+            >
+              Stopped at {item.blocker}
+            </span>
+          </div>
+        ) : null}
       </div>
 
-      <div className="relative z-10 text-center text-[10px] text-text-muted border-t border-border/60 pt-2">
-        Flip to compare
+      {/* Bottom Area: Timestamp & Flip back */}
+      <div className="relative z-10 text-center pt-2.5 pb-1 border-t border-border/70 flex-shrink-0 space-y-1">
+        <div
+          className="text-text-muted font-medium"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+        >
+          {verifiedStr}
+        </div>
+        <div
+          className="text-brand font-medium"
+          style={{ fontSize: `${clamp(Math.round(unit * 0.038), 9, 11)}px` }}
+        >
+          Flip to front ↻
+        </div>
       </div>
     </div>
   );
 }
 
 function fitDetailUnit(shape: TagShape): number {
-  if (typeof window === "undefined") return 260;
+  if (typeof window === "undefined") return 300;
   const isMd = window.innerWidth >= 768;
   const maxW = isMd
-    ? Math.min(480, window.innerWidth * 0.42)
-    : window.innerWidth * 0.74;
+    ? Math.min(520, window.innerWidth * 0.44)
+    : window.innerWidth * 0.78;
   const maxH = isMd
-    ? Math.min(480, window.innerHeight * 0.62)
-    : window.innerHeight * 0.44;
-  return Math.max(80, Math.min(maxW / shape.w, maxH / shape.h));
+    ? Math.min(520, window.innerHeight * 0.65)
+    : window.innerHeight * 0.46;
+  return Math.max(90, Math.min(maxW / shape.w, maxH / shape.h));
 }
 
 /**
@@ -1998,22 +2067,32 @@ function TagDetailModal({
 
         <div className="flex w-full max-w-sm flex-col gap-4 text-center md:text-left">
           <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-            {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+            Offer {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
           </p>
 
           <h3 id={titleId} className="text-2xl font-bold tracking-tight sm:text-3xl text-text">
             {item.title}
           </h3>
 
-          <p className="text-sm font-medium text-brand">
+          <p className="text-sm font-semibold text-brand">
             {item.platform}
           </p>
 
-          <div className="space-y-1 rounded-xl bg-surface-2 border border-border p-3.5 text-left">
-            <div className="text-xs text-text-muted">Observed listing price:</div>
-            <div className="text-xl font-bold text-text tabular-nums">
-              {inr(item.listing)}
+          <div className="space-y-2 rounded-xl bg-surface-2 border border-border p-4 text-left">
+            <div className="flex justify-between items-baseline">
+              <span className="text-xs text-text-muted">Listing price:</span>
+              <span className="text-lg font-bold text-text tabular-nums">
+                {inr(item.listing)}
+              </span>
             </div>
+            {typeof item.payable === "number" && (
+              <div className="flex justify-between items-baseline pt-2 border-t border-border/60">
+                <span className="text-xs font-semibold text-danger">Real payable:</span>
+                <span className="text-xl font-extrabold text-danger tabular-nums">
+                  {inr(item.payable)}
+                </span>
+              </div>
+            )}
           </div>
 
           <div
