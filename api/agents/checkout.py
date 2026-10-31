@@ -36,7 +36,7 @@ except ImportError:
 IST = timezone(timedelta(hours=5, minutes=30))
 
 
-def build_goal(hotel_name: str, req: dict) -> str:
+def build_goal(hotel_name: str, req: dict, platform: Optional[str] = None) -> str:
     """Construct the goal prompt for TinyFish, keeping safety instructions verbatim."""
     city = req.get("destination", "Bengaluru")
     check_in = req.get("check_in", "2026-11-20")
@@ -65,10 +65,33 @@ def build_goal(hotel_name: str, req: dict) -> str:
     else:
         prefs_clause = "Prefer free cancellation; otherwise cheapest, and report the cancellation policy."
 
+    p = (platform or req.get("platform") or "").lower().replace(".", "").replace(" ", "").replace("-", "")
+
+    platform_notes = ""
+    if p in ("booking", "bookingcom"):
+        platform_notes = (
+            f"Booking.com specific:\n"
+            f"- Search for \"{hotel_name}\" in the destination/hotel search box to navigate to \"{hotel_name}\".\n"
+            f"- Currency MUST be INR. If prices display in USD, switch the currency picker to INR or record the property's INR amount (Rs. X) as the prices and currency.\n"
+            f"- Pick a room whose listed occupancy is >= {guests} adults.\n"
+            "- Don't browse other properties or read reviews.\n"
+            "- Record the booked room's 'X adults' text in notes.\n"
+            "- Set max_occupancy strictly from the booked room's occupancy text (>= 2).\n"
+            "- Fee reconciliation: If taxes are already included in the room total (e.g. 'includes taxes and fees'), do not add taxes as an extra fee; fee_lines must sum to price_final_payable within 1%.\n"
+        )
+    elif p == "agoda":
+        platform_notes = (
+            f"Agoda specific:\n"
+            f"- Search for \"{hotel_name}\" in the Agoda search box to locate and open \"{hotel_name}\".\n"
+            "- Ignore rooms showing max 1 adult; select only a room fitting 2 adults.\n"
+            "- On the booking summary page, copy the room name + guest count text verbatim into notes, and set max_occupancy from that text, never from rejected rooms.\n"
+        )
+
     return (
-        f"Open the provided URL. Search for hotels in {city} for {check_in} to {check_out}, {guests} adults, {rooms} room.\n"
-        f"Find the hotel named \"{hotel_name}\" (exact name; if not found, return blocker \"other\" with notes).\n"
+        f"Open the provided URL. Search for \"{hotel_name}\" in {city} for {check_in} to {check_out}, {guests} adults, {rooms} room.\n"
+        f"Type \"{hotel_name}\" into the search input if needed to locate and select the hotel named \"{hotel_name}\" (if not found after searching, return blocker \"other\" with notes).\n"
         f"Select the cheapest room that fits {guests} adults. {prefs_clause}\n"
+        f"{platform_notes}"
         "Proceed as a GUEST through checkout using: Name \"Test Guest\", email \"test.guest+probe@example.com\", phone \"9000000000\".\n"
         "Record the displayed total at each step in price_trail with the currency shown on screen. Do not convert currencies.\n"
         "Record every fee line, pre-selected add-on, and any urgency/scarcity message.\n"
@@ -107,7 +130,7 @@ def site_url(platform: str, req: dict) -> str:
     elif p in ("booking", "bookingcom"):
         return (
             f"https://www.booking.com/searchresults.html?"
-            f"ss={city}&checkin={check_in}&checkout={check_out}&group_adults={guests}&no_rooms={rooms}"
+            f"ss={city}&checkin={check_in}&checkout={check_out}&group_adults={guests}&no_rooms={rooms}&selected_currency=INR&group_children=0"
         )
     elif p == "easemytrip":
         raise NotImplementedError(
@@ -155,15 +178,18 @@ async def verify_offer(
     explicit_url = req.get("url")
     url = explicit_url if explicit_url else site_url(platform, req)
 
-    goal = build_goal(hotel_name, req)
+    goal = build_goal(hotel_name, req, platform=platform)
     output_schema = ProbeResult.model_json_schema()
+
+    default_timeout = int(os.getenv("AGENT_TIMEOUT_S", "600" if os.getenv("DATA_MODE") == "live" else "360"))
+    timeout_s = req.get("timeout_s", default_timeout)
 
     run: AgentRun = await run_agent(
         url=url,
         goal=goal,
         output_schema=output_schema,
         profile=profile,
-        timeout_s=req.get("timeout_s", 360),
+        timeout_s=timeout_s,
         on_stream_url=on_stream_url,
         on_progress=on_progress,
     )

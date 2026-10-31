@@ -1,0 +1,142 @@
+{
+  "run_id": "6779ac9c-2021-4b5c-8309-8340dc574e10",
+  "streaming_url": "https://ip-13-56-82-219.tetra-data.production.tinyfish.io/tf-e6a9af34-f713-4d34-bb8d-902dffb60c17/stream/5",
+  "status": "completed",
+  "steps": 40,
+  "cost_usd": 0.64,
+  "started_at": "2026-10-31T17:31:13.204737+05:30",
+  "finished_at": "2026-10-31T17:38:39.129312+05:30",
+  "result": {
+    "site": "booking",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": "other",
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html",
+    "room_type": "Executive Room",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast included in the price",
+    "cancellation_policy": "Free cancellation before Nov 18, 2026",
+    "price_shown_on_listing": 190.14,
+    "price_shown_on_room_selection": 190.14,
+    "price_final_payable": 150.59,
+    "fee_lines": [
+      {
+        "label": "Original price",
+        "amount": 190.14,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Bonus savings (discount)",
+        "amount": -20.53,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Genius discount",
+        "amount": -19.01,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Goods and services tax",
+        "amount": 22.97,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 190.14,
+        "currency": "USD"
+      },
+      {
+        "step": "room",
+        "amount": 190.14,
+        "currency": "USD"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 150.59,
+        "currency": "USD"
+      },
+      {
+        "step": "payment",
+        "amount": 150.59,
+        "currency": "USD"
+      }
+    ],
+    "currency": "USD",
+    "notes": "Selected Executive Room at La Marvella, Bengaluru for 2026-11-20 to 2026-11-21, 2 adults, 1 room. Cheapest room with 2 adults capacity. Free cancellation and breakfast included. Filled guest details: Name 'Test Guest', email 'test.guest+probe@example.com', phone '9000000000'. Stopped at payment page as instructed. The original price $190.14 was discounted to $150.59 with bonus savings (-$20.53) and Genius discount (-$19.01). Taxes ($22.97) included. Property currency INR: Rs. 14,297.93.",
+    "listing_page_text": "La Marvella, Bengaluru\n1, 14th Cross, South-end Circle, 2nd Block, Jayanagar, 560011 Bangalore, India\nGreat Location \u2014 8.4\nScored 7.9\n7.9\nRated good 300 reviews",
+    "payment_page_text": "Original price $190.14, Bonus savings -$20.53, Genius discount -$19.01, Total $150.59, Includes $22.97 in taxes and fees (Goods and services tax). In property currency: Rs. 14,297.93"
+  },
+  "raw": {
+    "result_json": {
+      "site": "booking",
+      "reached_payment_page": true,
+      "furthest_step": "payment",
+      "blocker": "other",
+      "hotel_name": "La Marvella",
+      "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html",
+      "room_type": "Executive Room",
+      "max_occupancy": 2,
+      "meal_plan": "Breakfast included in the price",
+      "cancellation_policy": "Free cancellation before Nov 18, 2026",
+      "price_shown_on_listing": 190.14,
+      "price_shown_on_room_selection": 190.14,
+      "price_final_payable": 150.59,
+      "fee_lines": [
+        {
+          "label": "Original price",
+          "amount": 190.14,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Bonus savings (discount)",
+          "amount": -20.53,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Genius discount",
+          "amount": -19.01,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Goods and services tax",
+          "amount": 22.97,
+          "fee_kind": "tax"
+        }
+      ],
+      "preselected_addons": [],
+      "urgency_or_scarcity_messages": [],
+      "price_trail": [
+        {
+          "step": "listing",
+          "amount": 190.14,
+          "currency": "USD"
+        },
+        {
+          "step": "room",
+          "amount": 190.14,
+          "currency": "USD"
+        },
+        {
+          "step": "traveller_details",
+          "amount": 150.59,
+          "currency": "USD"
+        },
+        {
+          "step": "payment",
+          "amount": 150.59,
+          "currency": "USD"
+        }
+      ],
+      "currency": "USD",
+      "notes": "Selected Executive Room at La Marvella, Bengaluru for 2026-11-20 to 2026-11-21, 2 adults, 1 room. Cheapest room with 2 adults capacity. Free cancellation and breakfast included. Filled guest details: Name 'Test Guest', email 'test.guest+probe@example.com', phone '9000000000'. Stopped at payment page as instructed. The original price $190.14 was discounted to $150.59 with bonus savings (-$20.53) and Genius discount (-$19.01). Taxes ($22.97) included. Property currency INR: Rs. 14,297.93.",
+      "listing_page_text": "La Marvella, Bengaluru\n1, 14th Cross, South-end Circle, 2nd Block, Jayanagar, 560011 Bangalore, India\nGreat Location \u2014 8.4\nScored 7.9\n7.9\nRated good 300 reviews",
+      "payment_page_text": "Original price $190.14, Bonus savings -$20.53, Genius discount -$19.01, Total $150.59, Includes $22.97 in taxes and fees (Goods and services tax). In property currency: Rs. 14,297.93"
+    }
+  },
+  "error": null
+}

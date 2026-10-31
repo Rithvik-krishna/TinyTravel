@@ -484,7 +484,7 @@ async def run_search(
         max_concurrent = int(os.getenv("MAX_CONCURRENT_RUNS", "3"))
         semaphore = asyncio.Semaphore(max_concurrent)
         max_spend_usd = float(os.getenv("MAX_SPEND_USD", "4.0"))
-        per_run_timeout_s = int(os.getenv("AGENT_TIMEOUT_S", "360"))
+        per_run_timeout_s = int(os.getenv("AGENT_TIMEOUT_S", "600" if os.getenv("DATA_MODE") == "live" else "360"))
 
         cumulative_spend_usd = 0.0
         spend_lock = asyncio.Lock()

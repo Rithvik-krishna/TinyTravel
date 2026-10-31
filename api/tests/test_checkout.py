@@ -86,6 +86,20 @@ def test_site_url_confirmed_platforms():
     assert "checkin=2026-11-20" in booking_url
     assert "checkout=2026-11-21" in booking_url
     assert "group_adults=2" in booking_url
+    assert "selected_currency=INR" in booking_url
+    assert "group_children=0" in booking_url
+
+    # Booking specific goal clauses
+    booking_goal = build_goal("La Marvella", req, platform="booking")
+    assert "Booking.com specific:" in booking_goal
+    assert "Pick a room whose listed occupancy is >= 2 adults" in booking_goal
+    assert "Don't browse other properties or read reviews" in booking_goal
+
+    # Agoda specific goal clauses
+    agoda_goal = build_goal("La Marvella", req, platform="agoda")
+    assert "Agoda specific:" in agoda_goal
+    assert "Ignore rooms showing max 1 adult" in agoda_goal
+    assert "set max_occupancy from that text, never from rejected rooms" in agoda_goal
 
 
 def test_site_url_not_implemented_platforms():
