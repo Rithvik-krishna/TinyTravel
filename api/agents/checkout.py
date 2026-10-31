@@ -216,6 +216,12 @@ async def verify_offer(
         reached_payment_page = False
         notes = (notes + f" [Occupancy mismatch: room fits {max_occ} adults but search requested {req_guests}]").strip()
 
+    # Verify currency matches requested search currency
+    req_curr = req.get("currency", "INR")
+    if currency and req_curr and currency.upper() != req_curr.upper():
+        reached_payment_page = False
+        notes = (notes + f" [Currency mismatch: platform returned {currency} but search requested {req_curr}]").strip()
+
     # Post-processing via pure functions
     if reached_payment_page and price_payable is not None:
         blocker = None
@@ -317,14 +323,18 @@ async def verify_offer(
         "listing_page_text": listing_page_text,
         "payment_page_text": payment_page_text,
         "transparency": (
-            run.raw.get("transparency")
-            if isinstance(run.raw, dict) and run.raw.get("transparency")
-            else transparency_score({
-                "status": status,
-                "fee_leak_pct": leak,
-                "preselected_addons": probe_data.get("preselected_addons", []),
-                "urgency_or_scarcity_messages": probe_data.get("urgency_or_scarcity_messages", []),
-                "evidence": evidence,
-            })
+            {"score": None, "breakdown": None, "note": "N/A (not verified)"}
+            if status != "verified"
+            else (
+                run.raw.get("transparency")
+                if isinstance(run.raw, dict) and run.raw.get("transparency")
+                else transparency_score({
+                    "status": status,
+                    "fee_leak_pct": leak,
+                    "preselected_addons": probe_data.get("preselected_addons", []),
+                    "urgency_or_scarcity_messages": probe_data.get("urgency_or_scarcity_messages", []),
+                    "evidence": evidence,
+                })
+            )
         ),
     }

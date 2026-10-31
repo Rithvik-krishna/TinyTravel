@@ -262,9 +262,11 @@ async def run_agent(
     """
     logger.info(redact(f"run_agent starting for url={url}, profile={profile}"))
 
-    # Check fake mode
-    is_fake = os.getenv("TINYFISH_FAKE") == "1"
+    # Check fake mode or kill switch
+    is_fake = os.getenv("TINYFISH_FAKE") == "1" or os.getenv("DISABLE_LIVE") == "1"
     if is_fake:
+        if os.getenv("DISABLE_LIVE") == "1":
+            logger.warning("DISABLE_LIVE=1 kill switch is active: diverting live run to fake simulation")
         try:
             async with asyncio.timeout(timeout_s):
                 return await _run_fake_agent(

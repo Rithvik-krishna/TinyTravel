@@ -21,6 +21,8 @@ class BaseModelForbid(BaseModel):
 
 class MetaInfo(BaseModelForbid):
     mock: bool = False
+    saved: Optional[bool] = False
+    saved_at: Optional[str] = None
     label: Optional[str] = None
     saved_run_label: Optional[str] = None
     note: Optional[str] = None
@@ -342,3 +344,12 @@ class FeeDraftResponse(BaseModelForbid):
     observed_price_initial: Optional[float] = None
     observed_price_final: Optional[float] = None
     currency: str = "INR"
+
+
+class BudgetInfo(BaseModelForbid):
+    wallet_balance: Optional[float] = None
+    spend_so_far: float = 0.0
+    spend_cap: float = 4.0
+    currency: str = "USD"
+    status: str = "ok"
+

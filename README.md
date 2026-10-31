@@ -170,10 +170,11 @@ Open <http://localhost:3000> for the landing page, or <http://localhost:3000/sea
 | Layer | Variable | Values | Behaviour |
 |---|---|---|---|
 | UI | `NEXT_PUBLIC_DATA_MODE` | `mock` (default), `live` | `mock` reads `fixtures/*.json` directly, no API needed. `live` calls the API. |
-| API | `DATA_MODE` | `mock` (default), `fake`, `live` | `mock` serves `fixtures/demo_run.json` and replays `fixtures/sse_script.json`. `fake` runs the full real pipeline against simulated TinyFish agents (no spend). `live` runs real TinyFish browser agents (costs money). |
+| API | `DATA_MODE` | `mock` (default), `fake`, `saved`, `live` | `mock` serves static demo fixtures. `fake` runs full real pipeline against simulated TinyFish agents (no spend). `saved` replays a recorded real investigation (`saved_run.json`). `live` runs real TinyFish browser agents (costs money). |
 | API | `TINYFISH_FAKE=1` | | Forces simulated agents regardless of mode. Used by the test suite. |
+| API | `DISABLE_LIVE=1` | | Emergency kill switch: forces all live calls to safe simulated mode, zero wallet spend. |
 
-Recommended progression: `mock` for UI work, `fake` to exercise the pipeline, `live` only for deliberate verification runs.
+Recommended progression: `mock` for UI work, `fake` to exercise the pipeline, `saved` for frozen demo playback, `live` only for deliberate verification runs.
 
 ## Configuration
 
@@ -182,7 +183,8 @@ Copy `.env.example` to `.env` (API) and `web/.env.local` (UI). Never commit them
 | Variable | Default | Purpose |
 |---|---|---|
 | `TINYFISH_API_KEY` | none | Required for `DATA_MODE=live`. |
-| `DATA_MODE` | `mock` | API mode (see above). |
+| `DATA_MODE` | `mock` | API mode (`mock`, `fake`, `saved`, `live`). |
+| `DISABLE_LIVE` | `0` | Kill switch (`1` forces all live runs to fake mode). |
 | `NEXT_PUBLIC_DATA_MODE` | `mock` | UI mode. |
 | `NEXT_PUBLIC_API_URL` | `http://localhost:8000` | API base URL used by the UI. |
 | `ANTHROPIC_API_KEY` | none | Optional, used by intake parsing. |
@@ -198,12 +200,18 @@ Base URL: `http://localhost:8000`. The generated schema is committed at [`docs/o
 
 | Method | Path | Description |
 |---|---|---|
-| `GET` | `/api/health` | `{ok, mode}` |
+| `GET` | `/api/health` | `{ok, mode, kill_switch}` |
+| `GET` | `/api/budget` | Budget status: `{wallet_balance, spend_so_far, spend_cap, currency, status}` |
 | `POST` | `/api/search` | Start a search. Body: `text` and/or structured fields (`destination`, `check_in`, `check_out`, ...), plus optional `hotel_name` and `platforms` for **target mode**. Returns `{search_id}`. |
-| `GET` | `/api/search/{id}/stream` | SSE progress stream. Late subscribers get stored events replayed first. Optional `speed` query for mock replay. |
+| `GET` | `/api/search/{id}/stream` | SSE progress stream. Late subscribers get stored events replayed first. Optional `speed` query for replay. |
 | `GET` | `/api/search/{id}/results` | Final `ResultsResponse` (offers, hotel groups, verdicts, summary strip). `404` if unknown or not ready. |
-| `POST` | `/api/offers/{oid}/recheck` | Re-check an offer's price. *Currently served from the mock fixture.* |
-| `GET` | `/api/offers/{oid}/handoff` | Handoff Pack. *Currently served from the mock fixture.* |
+| `POST` | `/api/offers/{oid}/recheck` | Re-check an offer's price (max 2 per search, budget guarded). |
+| `GET` | `/api/offers/{oid}/handoff` | Handoff Pack with QR code and direct booking link. |
+| `GET` | `/api/history` | Historical price observations for a hotel. |
+| `GET` | `/api/fee-glossary` | Dictionary of common travel fees with explanations. |
+| `GET` | `/api/search/{id}/report` | Printable HTML evidence report. |
+| `GET` | `/api/offers/{oid}/report-fee-draft` | Polite draft inquiry message for an observed fee. |
+| `GET` | `/evidence/{file_path}` | Serves evidence artifacts with directory traversal protection. |
 
 Start a search:
 
@@ -263,6 +271,9 @@ All scripts run from the repo root.
 | `scripts/e2e_one_hotel.py` | Target-mode end-to-end run for one hotel. Flags: `--hotel`, `--platforms`, `--destination`, `--check-in`, `--check-out`, `--guests`, `--rooms`, `--budget`, `--deal-mode`, `--live`, `--yes-spend`. Without `--live` it uses simulated agents. Live mode requires `--yes-spend`. |
 | `scripts/probe_site.py` | Probe a single platform's checkout feasibility. |
 | `scripts/export_openapi.py` | Regenerate `docs/openapi.json`. |
+| `scripts/query_suite.py` | Run 20+ varied query boundary tests and injected failure drills. |
+| `scripts/scan_secrets.py` | Scan repository and git commit history for credentials and API keys. |
+| `scripts/record_fixture.py` | Replay and record investigation stream into canned fixtures. |
 
 ```bash
 python scripts/e2e_one_hotel.py --hotel "La Marvella" --platforms Cleartrip

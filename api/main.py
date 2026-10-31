@@ -1,4 +1,5 @@
 import asyncio
+from datetime import datetime, timezone, timedelta
 import json
 import logging
 import os
@@ -7,7 +8,7 @@ from typing import Optional
 import uuid
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse, HTMLResponse
+from fastapi.responses import StreamingResponse, HTMLResponse, FileResponse
 
 try:
     from .models import (
@@ -20,10 +21,11 @@ try:
         PriceHistoryItem,
         FeeGlossaryItem,
         FeeDraftResponse,
+        BudgetInfo,
     )
     from .services.intake import parse_request
     from .services.orchestrator import run_search, get_search_queue, get_search_results
-    from .db import get_events, get_search, get_price_history, get_offer
+    from .db import get_events, get_search, get_price_history, get_offer, get_total_spend
 except ImportError:
     from models import (
         SearchInput,
@@ -35,16 +37,63 @@ except ImportError:
         PriceHistoryItem,
         FeeGlossaryItem,
         FeeDraftResponse,
+        BudgetInfo,
     )
     from services.intake import parse_request
     from services.orchestrator import run_search, get_search_queue, get_search_results
-    from db import get_events, get_search, get_price_history, get_offer
+    from db import get_events, get_search, get_price_history, get_offer, get_total_spend
 
 logger = logging.getLogger("tinytravel.api")
 DATA_MODE = os.getenv("DATA_MODE", "mock")
 FIX = Path(__file__).parent.parent / "fixtures"
 demo = json.loads((FIX / "demo_run.json").read_text(encoding="utf-8"))
 script = json.loads((FIX / "sse_script.json").read_text(encoding="utf-8"))
+
+
+def _get_saved_run() -> dict:
+    saved_file = FIX / "saved_run.json"
+    if not saved_file.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="DATA_MODE=saved error: fixtures/saved_run.json does not exist.",
+        )
+    try:
+        data = json.loads(saved_file.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"DATA_MODE=saved error: failed to parse saved_run.json: {e}",
+        )
+    meta = data.get("_meta", {})
+    if meta.get("mock") is True or meta.get("saved") is False:
+        raise HTTPException(
+            status_code=503,
+            detail="DATA_MODE=saved error: saved_run.json contains mock data (mock: true / saved: false); a real saved run must be recorded first.",
+        )
+    return data
+
+
+def _get_saved_script() -> dict:
+    saved_script_file = FIX / "saved_sse_script.json"
+    if not saved_script_file.exists():
+        raise HTTPException(
+            status_code=503,
+            detail="DATA_MODE=saved error: fixtures/saved_sse_script.json does not exist.",
+        )
+    try:
+        data = json.loads(saved_script_file.read_text(encoding="utf-8"))
+    except Exception as e:
+        raise HTTPException(
+            status_code=500,
+            detail=f"DATA_MODE=saved error: failed to parse saved_sse_script.json: {e}",
+        )
+    if data.get("mock") is True or data.get("saved") is False:
+        raise HTTPException(
+            status_code=503,
+            detail="DATA_MODE=saved error: saved_sse_script.json contains mock data (mock: true / saved: false); a real saved script must be recorded first.",
+        )
+    return data
+
 
 app = FastAPI(title="TinyTravel API")
 app.add_middleware(
@@ -62,16 +111,49 @@ BACKGROUND_TASKS = set()
 @app.get("/api/health")
 def health():
     mode = os.getenv("DATA_MODE", "mock")
-    return {"ok": True, "mode": mode}
+    kill_switch = os.getenv("DISABLE_LIVE") == "1"
+    if kill_switch and mode == "live":
+        mode = "fake"
+    return {"ok": True, "mode": mode, "kill_switch": kill_switch}
+
+
+@app.get("/api/budget", response_model=BudgetInfo)
+async def get_budget():
+    max_spend = float(os.getenv("MAX_SPEND_USD", "4.0"))
+    try:
+        from services.tinyfish import get_balance
+        balance = await get_balance()
+    except Exception:
+        balance = None
+
+    try:
+        spend = get_total_spend()
+    except Exception:
+        spend = 0.0
+
+    status = "capped" if spend >= max_spend else "ok"
+    return {
+        "wallet_balance": balance,
+        "spend_so_far": spend,
+        "spend_cap": max_spend,
+        "currency": "USD",
+        "status": status,
+    }
 
 
 @app.post("/api/search", response_model=SearchResponse)
 async def search(body: SearchInput):
     mode = os.getenv("DATA_MODE", "mock")
+    if os.getenv("DISABLE_LIVE") == "1" and mode == "live":
+        logger.warning("DISABLE_LIVE=1 active: overriding live mode to fake in search")
+        mode = "fake"
+
     sid = uuid.uuid4().hex[:8]
 
-    if mode == "mock":
-        # Keep original mock behavior
+    if mode in ("mock", "saved"):
+        if mode == "saved":
+            _get_saved_run()
+        # Canned modes return instant search ID
         return {"search_id": sid}
 
     # DATA_MODE is "fake" or "live"
@@ -117,14 +199,19 @@ async def search(body: SearchInput):
 async def stream(sid: str, speed: float = 1.0):
     mode = os.getenv("DATA_MODE", "mock")
 
-    if mode == "mock":
-        async def gen_mock():
+    if mode in ("mock", "saved"):
+        curr_script = _get_saved_script() if mode == "saved" else script
+        effective_speed = speed
+        if mode == "saved" and speed == 1.0 and curr_script.get("speed_default"):
+            effective_speed = float(curr_script["speed_default"])
+
+        async def gen_canned():
             last = 0
-            for ev in script["events"]:
-                await asyncio.sleep(max(0, ev["t_ms"] - last) / 1000 / speed)
+            for ev in curr_script["events"]:
+                await asyncio.sleep(max(0, ev["t_ms"] - last) / 1000 / effective_speed)
                 last = ev["t_ms"]
                 yield f"event: {ev['event']}\ndata: {json.dumps(ev['data'])}\n\n"
-        return StreamingResponse(gen_mock(), media_type="text/event-stream")
+        return StreamingResponse(gen_canned(), media_type="text/event-stream")
 
     # Real SSE stream (fake or live) supporting late subscribers
     async def gen_live():
@@ -165,6 +252,8 @@ def results(sid: str):
     mode = os.getenv("DATA_MODE", "mock")
     if mode == "mock":
         return demo
+    if mode == "saved":
+        return _get_saved_run()
 
     # Real results (fake or live)
     res = get_search_results(sid)
@@ -184,19 +273,89 @@ def results(sid: str):
 ROOT = Path(__file__).parent.parent
 evidence_dir = ROOT / "evidence"
 evidence_dir.mkdir(parents=True, exist_ok=True)
+fixtures_evidence_dir = FIX / "evidence"
+fixtures_evidence_dir.mkdir(parents=True, exist_ok=True)
 
-try:
-    from fastapi.staticfiles import StaticFiles
-    app.mount("/evidence", StaticFiles(directory=str(evidence_dir)), name="evidence")
-except Exception as e:
-    logger.warning("Could not mount static evidence directory: %s", e)
+RECHECK_SEARCH_COUNTS: dict[str, int] = {}
+
+
+@app.get("/evidence/{file_path:path}")
+async def serve_evidence(file_path: str):
+    import urllib.parse
+    # Guard against traversal, URL-encoded traversal (%2e%2e), and absolute paths
+    unquoted = urllib.parse.unquote(file_path)
+    if (
+        ".." in unquoted
+        or ".." in file_path
+        or "%2e" in file_path.lower()
+        or unquoted.startswith("/")
+        or unquoted.startswith("\\")
+        or ":" in unquoted
+    ):
+        raise HTTPException(status_code=404, detail="Evidence file not found")
+
+    try:
+        ev_dir_res = evidence_dir.resolve()
+        p1 = (evidence_dir / unquoted).resolve()
+        if p1.is_file() and p1.is_relative_to(ev_dir_res):
+            return FileResponse(p1)
+
+        fix_ev_dir_res = fixtures_evidence_dir.resolve()
+        p2 = (fixtures_evidence_dir / unquoted).resolve()
+        if p2.is_file() and p2.is_relative_to(fix_ev_dir_res):
+            return FileResponse(p2)
+    except (ValueError, RuntimeError):
+        pass
+
+    raise HTTPException(status_code=404, detail="Evidence file not found")
 
 
 @app.post("/api/offers/{oid}/recheck", response_model=Recheck)
 async def recheck(oid: str):
     mode = os.getenv("DATA_MODE", "mock")
-    if mode == "mock" and oid == demo["rechecks"][0]["offer_id"]:
+    if mode == "mock" and demo.get("rechecks") and oid == demo["rechecks"][0]["offer_id"]:
         return demo["rechecks"][0]
+
+    # Find offer to resolve search_id for recheck limit guard
+    offer_obj = get_offer(oid)
+    if not offer_obj:
+        matched = next((o for o in demo.get("offers", []) if o.get("offer_id") == oid), None)
+        if matched:
+            offer_obj = matched
+
+    sid = (offer_obj.get("search_id") if offer_obj else None) or "default_search"
+    count = RECHECK_SEARCH_COUNTS.get(sid, 0)
+    if count >= 2:
+        raise HTTPException(
+            status_code=429,
+            detail=f"Recheck limit exceeded: maximum 2 rechecks allowed per search (search_id={sid}).",
+        )
+
+    if mode == "saved":
+        s_run = _get_saved_run()
+        for r in s_run.get("rechecks", []):
+            if r.get("offer_id") == oid:
+                RECHECK_SEARCH_COUNTS[sid] = count + 1
+                return r
+        # Canned replay recheck for saved mode offer
+        off = next((o for o in s_run.get("offers", []) if o.get("offer_id") == oid), None)
+        if off:
+            RECHECK_SEARCH_COUNTS[sid] = count + 1
+            amt = float(off.get("price_final_payable") or 11276.0)
+            now_iso = datetime.now(timezone(timedelta(hours=5, minutes=30))).isoformat()
+            return {
+                "recheck_id": f"recheck_saved_{oid}",
+                "offer_id": oid,
+                "status": "done",
+                "previous": {"amount": amt, "at": off.get("finished_at") or now_iso},
+                "current": {"amount": amt, "at": now_iso},
+                "delta": 0.0,
+                "delta_pct": 0.0,
+                "elapsed_minutes": 1,
+                "trail_diff": [],
+                "message": f"Price stable at INR {amt:,.0f} (observed in saved run).",
+                "mock": False,
+            }
 
     try:
         from agents.recheck import recheck_offer
@@ -204,7 +363,9 @@ async def recheck(oid: str):
         from .agents.recheck import recheck_offer
 
     try:
-        return await recheck_offer(oid)
+        res = await recheck_offer(oid)
+        RECHECK_SEARCH_COUNTS[sid] = count + 1
+        return res
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
@@ -217,6 +378,18 @@ def handoff(oid: str):
     mode = os.getenv("DATA_MODE", "mock")
     if mode == "mock" and oid == demo["handoff"]["offer_id"]:
         return demo["handoff"]
+
+    if mode == "saved":
+        s_run = _get_saved_run()
+        if s_run.get("handoff") and oid == s_run["handoff"].get("offer_id"):
+            return s_run["handoff"]
+        matched = next((o for o in s_run.get("offers", []) if o.get("offer_id") == oid), None)
+        if matched:
+            try:
+                from services.handoff import build_handoff
+            except ImportError:
+                from .services.handoff import build_handoff
+            return build_handoff(matched)
 
     try:
         from services.handoff import build_handoff
