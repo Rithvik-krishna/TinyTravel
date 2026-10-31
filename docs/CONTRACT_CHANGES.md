@@ -42,3 +42,9 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Type**: `Optional[str]` (defaults to `None`)
 - **Why**: Captures verbatim text snippets from listing and payment pages to serve as verifiable `page_text` evidence without fabricating screenshot URLs.
 - **Fixtures updated**: No (purely additive optional fields, existing fixtures validate with extra="forbid").
+
+### 2026-10-31 - Nikhil
+- **Results Complete Flag**: Added optional `complete: Optional[bool] = None` to `ResultsResponse`.
+- **Type**: `Optional[bool]` (defaults to `None`)
+- **Why**: Allows partial results inspection via `GET /api/search/:id/results` while runs are in progress, signaling completion status additively.
+- **Fixtures updated**: No (purely additive optional field, existing fixtures validate with extra="forbid").

@@ -312,3 +312,4 @@ class ResultsResponse(BaseModelForbid):
     handoff: HandoffPack
     rechecks: list[Recheck]
     summary_strip: SummaryStrip
+    complete: Optional[bool] = None
