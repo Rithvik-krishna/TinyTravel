@@ -74,6 +74,13 @@ export interface ResultsData {
   rechecks?: unknown[];
 }
 
+const SITE_NAMES: Record<string, string> = { cleartrip: "Cleartrip", agoda: "Agoda", booking: "Booking.com", "booking.com": "Booking.com" };
+
+/** The live API sends site names in lower case; show the proper name. Unknown sites are shown as given. */
+export function siteLabel(site: string): string {
+  return SITE_NAMES[site.trim().toLowerCase()] ?? site;
+}
+
 const BLOCKER_LABEL: Record<string, string> = {
   captcha: "Stopped at captcha",
   login: "Stopped at login",
@@ -133,7 +140,7 @@ export function offersToTags(results: ResultsData | unknown[] | null | undefined
     return {
       id: offerId,
       title: String(offer.hotel_name || "Hotel"),
-      platform: String(offer.site || "Platform"),
+      platform: siteLabel(String(offer.site || "Platform")),
       listing: typeof offer.price_shown_on_listing === "number" ? offer.price_shown_on_listing : null,
       payable: typeof offer.price_final_payable === "number" ? offer.price_final_payable : null,
       status: (offer.status as "verified" | "unverified" | "blocked") || "unverified",

@@ -4,32 +4,32 @@ import React, { Suspense, useCallback, useEffect, useMemo, useState } from "reac
 import Link from "next/link";
 import { MOCK, openStream } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
-import { offersToTags, blockerLabel, TagItem } from "@/lib/tags";
+import { offersToTags, blockerLabel, siteLabel, TagItem } from "@/lib/tags";
 import { loadRequest, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
 import { AgentState, countsOf, emptyStream, Phase, useInvestigationStream } from "@/lib/useInvestigationStream";
 import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell";
 import { Provenance } from "@/components/landing/Provenance";
 
-/** Steps an agent reports before the payment page; only used to scale the progress bar. */
-const STEP_TOTAL = 6;
 
 const PHASE_TEXT: Record<Phase, string> = {
   idle: "Getting ready",
   parsing: "Reading your request",
   discovering: "Finding listings on 3 sites",
   grouping: "Matching the same hotel across sites",
-  verifying: "Checking 3 sites like a real buyer. About 3–5 minutes.",
+  verifying: "Checking like a real buyer. This usually takes 3 to 5 minutes.",
   done: "Investigation complete",
   error: "The investigation hit an error",
 };
 
 const SHOW_DEV = process.env.NEXT_PUBLIC_SHOW_PROVENANCE === "1";
+const siteName = siteLabel;
 const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 const safeUrl = (u: string) => (/^(https?:\/\/|\/)/.test(u) ? u : "");
 
 function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
   const done = a.status !== "running";
-  const width = done ? 100 : Math.round((a.steps / STEP_TOTAL) * 92);
+  // Real agents report an unpredictable number of steps, so the bar eases toward 92% instead of assuming a total.
+  const width = done ? 100 : Math.min(92, 8 + a.steps * 3);
   const badge = a.status === "verified" ? "ok" : a.status === "blocked" ? "bad" : a.status === "unverified" ? "warn" : "";
   const url = safeUrl(a.streamingUrl);
   // Same-origin views embed; external live-view links are opened in a new tab instead of leaving a blank frame.
@@ -37,7 +37,7 @@ function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
   return (
     <div className={`itile ${a.status}`}>
       <div className="ihead">
-        <b>{a.platform}</b>
+        <b>{siteName(a.platform)}</b>
         <span className={`badge ${badge}`}>{a.status}</span>
       </div>
       {embed && <iframe src={url} title={`${a.platform} checkout view for ${a.hotel}`} loading="lazy" sandbox="allow-scripts" />}
@@ -45,7 +45,7 @@ function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
         <div className="st">{a.stepText ?? "Starting"}</div>
         <div className="prog"><i style={{ width: `${width}%` }} /></div>
         <div className="meta">
-          <span>{done ? "finished" : `step ${Math.min(a.steps, STEP_TOTAL)} of ${STEP_TOTAL}`}</span>
+          <span>{done ? "finished" : `${a.steps} step${a.steps === 1 ? "" : "s"} so far`}</span>
           {url && !done && <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline" }}>Watch live view ↗</a>}
         </div>
         {a.status === "verified" && tag?.payable != null && (
@@ -96,6 +96,7 @@ function Inner() {
   const tags = useMemo(() => offersToTags(results.data), [results.data]);
   const agents = Object.values(state.agents);
   const total = Math.max(tags.length, agents.length);
+  const siteCount = new Set(agents.map((a) => siteName(a.platform))).size;
   const c = countsOf(state, total);
 
   const groups = useMemo(() => {
@@ -123,7 +124,7 @@ function Inner() {
       <div className="wrap">
         <div className="page-head">
           <span className="eyebrow">Step 2 of 5</span>
-          <h1>Checking prices on 3 sites</h1>
+          <h1>{siteCount > 0 ? `Checking prices on ${siteCount} site${siteCount === 1 ? "" : "s"}` : "Checking prices"}</h1>
           <p className="lede">
             {summary ? `${summary}. ` : ""}Each agent opens a site as a guest, picks the room, fills in placeholder guest details and stops at the payment page, so you see the real total. Nothing is booked.
           </p>
@@ -135,8 +136,8 @@ function Inner() {
           <span className="clock" aria-label="Elapsed time">{clock(elapsed)}</span>
         </div>
         <div className="counters" aria-live="polite" style={{ marginBottom: 14 }}>
-          <div><b>{state.listings ?? "…"}</b><span>listings</span></div>
-          <div><b>{state.hotels ?? "…"}</b><span>hotels</span></div>
+          <div><b>{state.listings ?? "–"}</b><span>listings</span></div>
+          <div><b>{state.hotels ?? "–"}</b><span>hotels</span></div>
           <div><b>{c.verified}</b><span>verified</span></div>
           <div><b>{c.unverified}</b><span>unverified</span></div>
           <div><b>{c.blocked}</b><span>blocked</span></div>

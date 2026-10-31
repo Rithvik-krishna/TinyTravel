@@ -36,6 +36,18 @@ function rec(v: unknown): Record<string, unknown> {
 }
 const str = (v: unknown): string => (typeof v === "string" ? v : "");
 
+/** The live API can send a different run_id on agent_done than on agent_started, so fall back to the offer. */
+function agentKey(state: StreamState, d: Record<string, unknown>): string {
+  const runId = str(d.run_id);
+  if (runId && state.agents[runId]) return runId;
+  const offerId = str(d.offer_id);
+  if (offerId) {
+    const hit = Object.values(state.agents).find((a) => a.offerId === offerId);
+    if (hit) return hit.runId;
+  }
+  return "";
+}
+
 /** Pure reducer: unknown, duplicate and late events are ignored or idempotent, so the page never breaks on them. */
 export function reduceStream(state: StreamState, ev: StreamEvent): StreamState {
   const d = rec(ev.data);
@@ -65,16 +77,18 @@ export function reduceStream(state: StreamState, ev: StreamEvent): StreamState {
       };
     }
     case "agent_progress": {
-      const a = state.agents[runId];
+      const key = agentKey(state, d);
+      const a = key ? state.agents[key] : undefined;
       if (!a || a.status !== "running") return state;
-      return { ...state, agents: { ...state.agents, [runId]: { ...a, steps: a.steps + 1, stepText: str(d.step_text) || a.stepText } } };
+      return { ...state, agents: { ...state.agents, [key]: { ...a, steps: a.steps + 1, stepText: str(d.step_text) || a.stepText } } };
     }
     case "agent_done": {
-      const a = state.agents[runId];
+      const key = agentKey(state, d);
+      const a = key ? state.agents[key] : undefined;
       if (!a) return state;
       const s = str(d.status);
       const status: AgentStatus = s === "verified" || s === "unverified" || s === "blocked" ? s : "unverified";
-      return { ...state, agents: { ...state.agents, [runId]: { ...a, status } } };
+      return { ...state, agents: { ...state.agents, [key]: { ...a, status } } };
     }
     case "ranking_ready":
       return { ...state, phase: "done" };
