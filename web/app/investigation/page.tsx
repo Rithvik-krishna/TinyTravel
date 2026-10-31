@@ -156,6 +156,17 @@ function Inner() {
           </div>
         )}
 
+        {agents.length === 0 && !finished && elapsed > 15 && (
+          <div className="notice" role="status" style={{ marginBottom: 16 }}>
+            Finding hotels on each site first. With real browser agents this step alone can take 3 to 5 minutes, and nothing is shown until it finishes.
+          </div>
+        )}
+        {!finished && elapsed > 600 && (
+          <div className="notice warn" role="status" style={{ marginBottom: 16 }}>
+            This is taking longer than usual ({Math.floor(elapsed / 60)} minutes). Real runs usually finish in 5 to 15 minutes. You can leave this page and come back to the same link later; results fill in as agents finish.{" "}
+            <Link className="linkish" href="/book">Start a new search</Link>
+          </div>
+        )}
         {agents.length === 0 && state.phase !== "error" && <LoadingBlock label="Waiting for agents to start" />}
 
         {groups.map((g) => (

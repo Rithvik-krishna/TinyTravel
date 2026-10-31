@@ -73,3 +73,15 @@ export function useHistory(hotel: string | undefined, platform: string | undefin
 export function fetchFeeDraft(offerId: string): Promise<FeeDraft | null> {
   return getJson<FeeDraft>(`/api/offers/${encodeURIComponent(offerId)}/report-fee-draft`);
 }
+/** "live" | "fake" | "mock" | "saved" from /api/health, or null when unknown (mock frontend, API down). */
+export function useBackendMode(): string | null {
+  const [mode, setMode] = useState<string | null>(null);
+  useEffect(() => {
+    let alive = true;
+    getJson<{ mode?: string }>("/api/health").then((h) => alive && setMode(h?.mode ?? null));
+    return () => {
+      alive = false;
+    };
+  }, []);
+  return mode;
+}

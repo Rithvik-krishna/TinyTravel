@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
+import { useBackendMode } from "@/lib/extras";
 import { inr } from "@/lib/format";
 import { applySentence, buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
 
@@ -92,7 +93,10 @@ export function SearchForm() {
   const [nl, setNl] = useState("");
   const [nlMsg, setNlMsg] = useState("");
   // Single-hotel check: opened with /book?target=1. Skips broad discovery, so a live run is one hotel on the chosen sites.
-  const targetMode = useSearchParams().get("target") === "1";
+  const mode = useBackendMode();
+  const live = mode === "live";
+  // In live mode the one-hotel check is the default: a full city search runs many paid browser agents.
+  const targetMode = useSearchParams().get("target") === "1" || live;
   const [hotelName, setHotelName] = useState("");
   const [sites, setSites] = useState<string[]>(["cleartrip"]);
   const fillIn = () => {
@@ -122,6 +126,12 @@ export function SearchForm() {
     ev.preventDefault();
     setTouched(true);
     if (!valid || busy) return;
+    if (live && !hotelName.trim()) {
+      const ok = window.confirm(
+        "You did not enter a hotel name, so this will search the whole city with real browser agents.\n\nIt can take 15 minutes or more and uses about $4 of TinyFish credits.\n\nFor a quick check (about 4 minutes, about $0.40), cancel and enter a hotel name instead.\n\nContinue with the full search?",
+      );
+      if (!ok) return;
+    }
     if (targetMode && hotelName.trim() && sites.length === 0) {
       setError("Pick at least one site to check.");
       return;
@@ -179,7 +189,7 @@ export function SearchForm() {
 
       {targetMode && (
         <fieldset>
-          <legend>Check one hotel</legend>
+          <legend>{live ? "Which hotel? (recommended)" : "Check one hotel"}</legend>
           <div className="field">
             <input type="text" aria-label="Hotel name" placeholder="Hotel name, e.g. La Marvella" value={hotelName} onChange={(e) => setHotelName(e.target.value)} />
           </div>
@@ -190,7 +200,11 @@ export function SearchForm() {
               </button>
             ))}
           </div>
-          <p className="fine">Checks only this hotel on the sites you pick. Fewer sites means a shorter, cheaper run.</p>
+          <p className="fine">
+            {live
+              ? "Live mode uses real browser agents and TinyFish credits. Name a hotel to check just that one: about 4 minutes on one site. Leave it empty for a full city search, which can take 15 minutes or more."
+              : "Checks only this hotel on the sites you pick. Fewer sites means a shorter, cheaper run."}
+          </p>
         </fieldset>
       )}
 
