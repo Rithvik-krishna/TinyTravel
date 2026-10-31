@@ -17,12 +17,12 @@ const Tick = () => (
 
 export default async function Book() {
   // The "what you see / what you pay" example comes from the demo run, so it only exists in mock mode.
-  let example: { listing: number; payable: number; platform: string; hotel: string; at: string } | null = null;
+  let example: { listing: number; payable: number; platform: string; hotel: string; at: string; currency: string } | null = null;
   if (MOCK) {
     const results: LandingResults = await getResults("demo");
     const heroId = results.verdicts?.hero_hotel_id;
     const t = offersToTags(results).find((x) => x.hotelId === heroId && x.status === "verified" && x.listing != null && x.payable != null);
-    if (t && t.listing != null && t.payable != null) example = { listing: t.listing, payable: t.payable, platform: t.platform, hotel: t.title, at: shortTime(t.verifiedAt) };
+    if (t && t.listing != null && t.payable != null) example = { listing: t.listing, payable: t.payable, platform: t.platform, hotel: t.title, at: shortTime(t.verifiedAt), currency: t.currency };
   }
   const gap = example ? gapAmount(example.listing, example.payable) : null;
   const pct = example ? gapPct(example.listing, example.payable) : null;
@@ -52,7 +52,7 @@ export default async function Book() {
           <div className="example">
             <div className="box">
               <span className="muted" style={{ fontWeight: 600 }}>What you see</span>
-              <span className="big">{inr(example.listing)}</span>
+              <span className="big">{inr(example.listing, example.currency)}</span>
               <span className="muted">{example.hotel} on {example.platform}, listing price</span>
             </div>
             <div className="mid">
@@ -64,8 +64,8 @@ export default async function Book() {
             </div>
             <div className="box">
               <span className="muted" style={{ fontWeight: 600 }}>What you pay</span>
-              <span className="big" style={{ color: "var(--warn)" }}>{inr(example.payable)}</span>
-              <span className="muted">Same room, at the payment page{example.at ? `, verified ${example.at}` : ""}. Example from demo data.</span>
+              <span className="big" style={{ color: "var(--warn)" }}>{inr(example.payable, example.currency)}</span>
+              <span className="muted">Same room, at the payment page{example.at ? `, verified ${example.at}` : ""}. Example.</span>
             </div>
           </div>
         )}

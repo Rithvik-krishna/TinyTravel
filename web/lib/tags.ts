@@ -1,6 +1,7 @@
 export interface FeeLine {
   label: string;
   amount: number;
+  fee_kind?: string | null;
 }
 
 export interface PriceTrailItem {
@@ -51,6 +52,9 @@ export interface TagItem {
   reconciliation?: string;
   notes?: string;
   mock?: boolean;
+  currency: string;
+  listing_page_text?: string;
+  payment_page_text?: string;
 }
 
 export interface ResultsData {
@@ -160,6 +164,9 @@ export function offersToTags(results: ResultsData | unknown[] | null | undefined
       reconciliation: offer.reconciliation ? String(offer.reconciliation) : undefined,
       notes: offer.notes ? String(offer.notes) : undefined,
       mock: Boolean(offer.mock),
+      currency: typeof offer.currency === "string" && offer.currency ? offer.currency : "INR",
+      listing_page_text: typeof offer.listing_page_text === "string" ? offer.listing_page_text : undefined,
+      payment_page_text: typeof offer.payment_page_text === "string" ? offer.payment_page_text : undefined,
     };
   });
 }

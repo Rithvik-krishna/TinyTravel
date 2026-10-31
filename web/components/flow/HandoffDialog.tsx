@@ -33,7 +33,7 @@ export function HandoffDialog({ open, onClose, offer, hotelName, stay, handoff }
   const at = shortTime(offer.verifiedAt);
 
   const copy = async () => {
-    const t = `${hotelName} · ${offer.room_type ?? ""} · ${offer.meal_plan ?? ""} · ${offer.cancellation_policy ?? ""} · ${stay} · expect to pay ${inr(offer.payable)} on ${offer.platform}${at ? ` (verified ${at})` : ""}`;
+    const t = `${hotelName} · ${offer.room_type ?? ""} · ${offer.meal_plan ?? ""} · ${offer.cancellation_policy ?? ""} · ${stay} · expect to pay ${inr(offer.payable, offer.currency)} on ${offer.platform}${at ? ` (verified ${at})` : ""}`;
     try {
       await navigator.clipboard.writeText(t);
       setCopied("Copied");
@@ -55,7 +55,7 @@ export function HandoffDialog({ open, onClose, offer, hotelName, stay, handoff }
             {offer.meal_plan && (<><dt>Meals</dt><dd>{offer.meal_plan}</dd></>)}
             {offer.cancellation_policy && (<><dt>Cancellation</dt><dd>{offer.cancellation_policy}</dd></>)}
             {stay && (<><dt>Stay</dt><dd>{stay}</dd></>)}
-            <dt>Expect to pay</dt><dd><b className="num">{inr(offer.payable)}</b></dd>
+            <dt>Expect to pay</dt><dd><b className="num">{inr(offer.payable, offer.currency)}</b></dd>
           </dl>
         </div>
         <ol className="todo">

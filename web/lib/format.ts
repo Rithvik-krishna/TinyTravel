@@ -1,8 +1,12 @@
-export function inr(n: number | null | undefined): string {
-  if (n == null || isNaN(n)) return "N/A";
-  return `₹${n.toLocaleString("en-IN")}`;
-}
+const SYMBOL: Record<string, string> = { INR: "₹", USD: "$", EUR: "€", GBP: "£", AED: "AED " };
 
+/** Formats an amount exactly as the data says: the offer's own currency, never converted. Null is N/A, never 0. */
+export function inr(n: number | null | undefined, currency: string = "INR"): string {
+  if (n == null || isNaN(n)) return "N/A";
+  const sym = SYMBOL[currency] ?? `${currency} `;
+  const locale = currency === "INR" ? "en-IN" : "en-US";
+  return `${sym}${n.toLocaleString(locale)}`;
+}
 export function shortTime(isoString: string | null | undefined): string {
   if (!isoString) return "";
   try {
@@ -45,9 +49,9 @@ export function relativeTime(isoString: string | null | undefined): string {
 }
 
 /** Absolute amount with explicit sign, e.g. "+₹3,066" / "−₹4,692". Null-safe. */
-export function signedInr(n: number | null | undefined): string {
+export function signedInr(n: number | null | undefined, currency: string = "INR"): string {
   if (n == null || isNaN(n)) return "N/A";
-  return `${n < 0 ? "−" : "+"}${inr(Math.abs(n))}`;
+  return `${n < 0 ? "−" : "+"}${inr(Math.abs(n), currency)}`;
 }
 
 /** payable - listing, or null when either side is unknown. */

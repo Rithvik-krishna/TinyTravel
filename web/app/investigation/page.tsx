@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MOCK, openStream } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
 import { offersToTags, blockerLabel, TagItem } from "@/lib/tags";
-import { useResults, useSearchId, withId } from "@/lib/flow";
+import { loadRequest, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
 import { AgentState, countsOf, emptyStream, Phase, useInvestigationStream } from "@/lib/useInvestigationStream";
 import { EmptyState, FlowShell, LoadingBlock } from "@/components/flow/FlowShell";
 import { Provenance } from "@/components/landing/Provenance";
@@ -23,6 +23,7 @@ const PHASE_TEXT: Record<Phase, string> = {
   error: "The investigation hit an error",
 };
 
+const SHOW_DEV = process.env.NEXT_PUBLIC_SHOW_PROVENANCE === "1";
 const clock = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 const safeUrl = (u: string) => (/^(https?:\/\/|\/)/.test(u) ? u : "");
 
@@ -31,24 +32,26 @@ function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
   const width = done ? 100 : Math.round((a.steps / STEP_TOTAL) * 92);
   const badge = a.status === "verified" ? "ok" : a.status === "blocked" ? "bad" : a.status === "unverified" ? "warn" : "";
   const url = safeUrl(a.streamingUrl);
+  // Same-origin views embed; external live-view links are opened in a new tab instead of leaving a blank frame.
+  const embed = url.startsWith("/");
   return (
     <div className={`itile ${a.status}`}>
       <div className="ihead">
         <b>{a.platform}</b>
         <span className={`badge ${badge}`}>{a.status}</span>
       </div>
-      {url && <iframe src={url} title={`${a.platform} checkout view for ${a.hotel}`} loading="lazy" sandbox="allow-scripts" />}
+      {embed && <iframe src={url} title={`${a.platform} checkout view for ${a.hotel}`} loading="lazy" sandbox="allow-scripts" />}
       <div className="ibody">
         <div className="st">{a.stepText ?? "Starting"}</div>
         <div className="prog"><i style={{ width: `${width}%` }} /></div>
         <div className="meta">
           <span>{done ? "finished" : `step ${Math.min(a.steps, STEP_TOTAL)} of ${STEP_TOTAL}`}</span>
-          {url && <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline" }}>Open live view</a>}
+          {url && !done && <a href={url} target="_blank" rel="noopener noreferrer" style={{ textDecoration: "underline" }}>Watch live view ↗</a>}
         </div>
         {a.status === "verified" && tag?.payable != null && (
           <div className="pay">
-            {inr(tag.payable)}
-            {tag.listing != null && <s>listing {inr(tag.listing)}</s>}
+            {inr(tag.payable, tag.currency)}
+            {tag.listing != null && <s>listing {inr(tag.listing, tag.currency)}</s>}
           </div>
         )}
         {a.status === "blocked" && <p style={{ color: "var(--muted)", fontSize: 14 }}>{blockerLabel(tag?.blocker)}. We never solve captchas or log in, so there is no price for this one.</p>}
@@ -63,6 +66,11 @@ function Inner() {
   const [speed, setSpeed] = useState(2);
   const [elapsed, setElapsed] = useState(0);
   const [run, setRun] = useState(0);
+  const [summary, setSummary] = useState("");
+  useEffect(() => {
+    const r = loadRequest();
+    if (r) setSummary(`${r.destination} · ${stayLabel({ check_in: r.check_in, check_out: r.check_out, guests: r.guests })}`);
+  }, []);
 
   const open = useCallback(
     (onEvent: (event: string, data: unknown) => void) => openStream(id ?? "mock_search", onEvent, MOCK ? speed : 1),
@@ -115,7 +123,10 @@ function Inner() {
       <div className="wrap">
         <div className="page-head">
           <span className="eyebrow">Step 2 of 5</span>
-          <h1>Agents at checkout</h1>
+          <h1>Checking prices on 3 sites</h1>
+          <p className="lede">
+            {summary ? `${summary}. ` : ""}Each agent opens a site as a guest, picks the room, fills in placeholder guest details and stops at the payment page, so you see the real total. Nothing is booked.
+          </p>
           <div className="row"><Provenance meta={results.data?._meta} /></div>
         </div>
 
@@ -160,9 +171,9 @@ function Inner() {
               <Link className="btn ghost" href={withId("/verdict", id)}>Go to verdict</Link>
             </>
           ) : (
-            MOCK && <Link className="linkish" href={withId("/compare", id)}>Skip to results</Link>
+            null
           )}
-          {MOCK && (
+          {SHOW_DEV && MOCK && (
             <div className="tools" style={{ marginLeft: "auto" }}>
               <label htmlFor="spd" className="lab mono" style={{ color: "var(--muted)", fontSize: 12 }}>Replay speed</label>
               <select id="spd" value={speed} onChange={(e) => setSpeed(Number(e.target.value))}>

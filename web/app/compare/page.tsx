@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { Suspense, useMemo, useState } from "react";
 import Link from "next/link";
@@ -47,7 +47,8 @@ function Inner() {
           </div>
         </div>
 
-        {verifiedCount === 0 && <div className="notice warn" style={{ marginBottom: 20 }}>No offer was verified at the payment page, so no price is highlighted.</div>}
+        {data.complete === false && <div className="notice warn" role="status" style={{ marginBottom: 20 }}>The investigation is still running. These results are partial and will fill in as agents finish.</div>}
+        {verifiedCount === 0 && data.complete !== false && <div className="notice warn" style={{ marginBottom: 20 }}>No offer was verified at the payment page, so no price is highlighted.</div>}
 
         {mode === "all" ? (
           <div className="offers">

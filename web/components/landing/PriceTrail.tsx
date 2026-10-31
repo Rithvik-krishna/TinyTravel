@@ -25,7 +25,7 @@ export function PriceTrail({ offer }: { offer: TagItem }) {
     step: p.step,
     name: stepName(p.step),
     amount: p.amount,
-    evidence: offer.evidence?.find((e) => e.step === p.step) ?? null,
+    evidence: (offer.evidence ?? []).filter((e) => e.step === p.step),
   }));
 
   useEffect(() => {
@@ -45,21 +45,21 @@ export function PriceTrail({ offer }: { offer: TagItem }) {
               <span className="dot" />
               <div>
                 <div className="name">{r.name}</div>
-                <div className="sub">{r.evidence ? "Evidence captured" : "No evidence captured"}</div>
+                <div className="sub">{r.evidence.length > 0 ? "Evidence captured" : "No evidence captured"}</div>
               </div>
               <div>
                 <button
                   type="button"
-                  className={`amt${r.evidence ? "" : " none"}`}
-                  aria-label={`${r.name}, ${inr(r.amount)}. Show evidence`}
+                  className={`amt${r.evidence.length > 0 ? "" : " none"}`}
+                  aria-label={`${r.name}, ${inr(r.amount, offer.currency)}. Show evidence`}
                   onClick={(e) => {
                     opener.current = e.currentTarget;
                     setSel(r);
                   }}
                 >
-                  {inr(r.amount)}
+                  {inr(r.amount, offer.currency)}
                 </button>
-                {step != null && <span className="d">{signedInr(step)}</span>}
+                {step != null && <span className="d">{signedInr(step, offer.currency)}</span>}
               </div>
             </li>
           );
@@ -68,7 +68,9 @@ export function PriceTrail({ offer }: { offer: TagItem }) {
       <EvidenceDialog
         dialogRef={dlgRef}
         row={sel}
+        currency={offer.currency}
         sourceUrl={offer.hotel_url}
+        pageText={{ listing: offer.listing_page_text, payment: offer.payment_page_text }}
         onClosed={() => {
           setSel(null);
           opener.current?.focus();

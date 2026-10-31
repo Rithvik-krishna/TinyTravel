@@ -58,9 +58,10 @@ function Inner() {
           )}
         </div>
       </div>
-      {pick && (pick.cheapest_verified || pick.safe_cheapest || pick.best_for_you) ? (
+      {data.complete === false && <div className="wrap" style={{ paddingTop: 16 }}><div className="notice warn" role="status">The investigation is still running, so the verdict is not final yet.</div></div>}
+      {pick && data.complete !== false && (pick.cheapest_verified || pick.safe_cheapest || pick.best_for_you) ? (
         <VerdictSection hotelName={name} tags={tags} pick={pick} warnings={data.verdicts?.non_comparable_warnings ?? []} handoff={shownHandoff} searchId={id} />
-      ) : (
+      ) : data.complete === false ? null : (
         <div className="wrap" style={{ paddingBlock: 40 }}>
           <div className="notice warn">No verified offer meets the criteria for this hotel, so we don&apos;t name a pick.</div>
         </div>

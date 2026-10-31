@@ -39,8 +39,8 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
       {showHotel && <span className="why" style={{ fontWeight: 600, color: "var(--fg)" }}>{t.title}</span>}
       {labels.length > 0 && <div className="tags">{labels.map((l) => <span className="badge ok" key={l}>{l}</span>)}</div>}
       <div>
-        <div className={`pay${verified ? "" : " none"}`}>{verified ? inr(t.payable) : "N/A"}</div>
-        {t.listing != null && <s>listing showed {inr(t.listing)}</s>}
+        <div className={`pay${verified ? "" : " none"}`}>{verified ? inr(t.payable, t.currency) : "N/A"}</div>
+        {t.listing != null && <s>listing showed {inr(t.listing, t.currency)}</s>}
       </div>
       {verified && t.listing != null && (
         <div className="bars" aria-hidden="true">

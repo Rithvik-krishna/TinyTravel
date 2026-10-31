@@ -1624,7 +1624,7 @@ export function TagFront({
           className="font-extrabold text-text tabular-nums tracking-tight leading-none"
           style={{ fontSize: `${clamp(Math.round(unit * 0.125), 18, 34)}px` }}
         >
-          {inr(item.listing)}
+          {inr(item.listing, item.currency)}
         </div>
         <div
           className="text-brand font-medium pt-1 opacity-90"
@@ -1706,7 +1706,7 @@ export function TagBack({
               className="font-extrabold text-text tabular-nums tracking-tight leading-none text-danger"
               style={{ fontSize: `${clamp(Math.round(unit * 0.125), 18, 34)}px` }}
             >
-              {inr(item.payable)}
+              {inr(item.payable, item.currency)}
             </div>
           </div>
         ) : item.status === "blocked" ? (
@@ -2146,14 +2146,14 @@ function TagDetailModal({
             <div className="flex justify-between items-baseline">
               <span className="text-xs text-text-muted">Listing price:</span>
               <span className="text-lg font-bold text-text tabular-nums">
-                {inr(item.listing)}
+                {inr(item.listing, item.currency)}
               </span>
             </div>
             {typeof item.payable === "number" && (
               <div className="flex justify-between items-baseline pt-2 border-t border-border/60">
                 <span className="text-xs font-semibold text-danger">Real payable:</span>
                 <span className="text-xl font-extrabold text-danger tabular-nums">
-                  {inr(item.payable)}
+                  {inr(item.payable, item.currency)}
                 </span>
               </div>
             )}

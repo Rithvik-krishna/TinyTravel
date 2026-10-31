@@ -56,6 +56,8 @@ export interface HotelInfo {
 export interface LandingResults extends ResultsData {
   _meta?: LandingMeta;
   hotels?: HotelInfo[];
+  /** False while a run is still going; null/undefined when the backend does not say. */
+  complete?: boolean | null;
   search_request?: { destination?: string; check_in?: string; check_out?: string; guests?: number };
   summary_strip?: SummaryStrip;
   verdicts?: {
@@ -87,7 +89,10 @@ export interface FeeGroups {
 export function groupFeeLines(lines: FeeLine[]): FeeGroups {
   const g: FeeGroups = { room: [], discounts: [], taxes: [], platform: [], other: [] };
   for (const l of lines) {
-    if (l.amount < 0) g.discounts.push(l);
+    if (l.fee_kind === "tax") g.taxes.push(l);
+    else if (l.fee_kind === "platform_fee") g.platform.push(l);
+    else if (l.fee_kind === "property_fee" || l.fee_kind === "add_on" || l.fee_kind === "other") g.other.push(l);
+    else if (l.amount < 0) g.discounts.push(l);
     else if (/tax|gst/i.test(l.label)) g.taxes.push(l);
     else if (/convenience|platform|service/i.test(l.label)) g.platform.push(l);
     else if (/room|base/i.test(l.label)) g.room.push(l);

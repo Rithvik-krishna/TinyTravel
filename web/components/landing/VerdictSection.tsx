@@ -53,8 +53,8 @@ export function VerdictSection({ hotelName, tags, pick, warnings, handoff, searc
               <div className={`vcard${best ? " best" : ""}`} key={id}>
                 <span className={`badge${best ? " ok" : ""}`}>{labels.join(" · ")}</span>
                 <h3>{t.platform}</h3>
-                <span className="big">{inr(t.payable)}</span>
-                {t.listing != null && <s>listing showed {inr(t.listing)}</s>}
+                <span className="big">{inr(t.payable, t.currency)}</span>
+                {t.listing != null && <s>listing showed {inr(t.listing, t.currency)}</s>}
                 <div className="tags">
                   {nonRefundable && <span className="badge warn">Non-refundable</span>}
                   {(warn || nonRefundable) && <span className="badge warn">Not comparable</span>}

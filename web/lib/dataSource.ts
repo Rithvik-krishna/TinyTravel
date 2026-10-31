@@ -7,7 +7,7 @@ export const EVENTS = ["parsed","discovery_started","listings_found","hotels_gro
 
 export async function startSearch(text: string, request?: Record<string, unknown>) {
   if (MOCK) return { search_id: "mock_search" };
-  return (await fetch(`${API}/api/search`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(request ? { text, request } : { text }) })).json();
+  return (await fetch(`${API}/api/search`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(request ? { text, ...request } : { text }) })).json();
 }
 export async function getResults(id: string): Promise<any> {
   return MOCK ? demo : (await fetch(`${API}/api/search/${id}/results`)).json();

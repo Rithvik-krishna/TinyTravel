@@ -58,7 +58,7 @@ export function LiveReplay({ tiles, total, events }: Props) {
           <span className="eyebrow">Watch it verify</span>
           <h2>Agents at checkout.</h2>
           <p className="lede">
-            A replay of the demo run at 2x speed. Eight agents run in parallel; the three for La Marvella are shown.
+            Each agent opens a site, picks the room, fills in guest details and stops at the payment page. Several run in parallel; the ones for {tiles[0]?.groupName ?? tiles[0]?.title ?? "one hotel"} are shown.
           </p>
         </div>
         <div className="live">
@@ -70,7 +70,7 @@ export function LiveReplay({ tiles, total, events }: Props) {
               <div><b>{c.running}</b><span>running</span></div>
             </div>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-              {MOCK && <span className="badge mock">Mock replay</span>}
+              
               <button className="btn ghost sm" type="button" onClick={start}>Restart</button>
             </div>
           </div>
@@ -81,12 +81,12 @@ export function LiveReplay({ tiles, total, events }: Props) {
               const verified = a?.status === "verified";
               const width = !a ? 0 : done ? 100 : Math.round((a.steps / STEP_TOTAL) * 92);
               const text = !a ? "Waiting to start" : a.stepText ?? "Starting";
-              const res = !a || !done ? "" : verified ? `Verified · ${inr(t.payable)}` : a.status === "blocked" ? `Blocked · ${t.blocker ?? "other"}` : "Not verified";
+              const res = !a || !done ? "" : verified ? `Verified · ${inr(t.payable, t.currency)}` : a.status === "blocked" ? `Blocked · ${t.blocker ?? "other"}` : "Not verified";
               return (
                 <div className={`tile${verified ? " done" : ""}`} key={t.id}>
                   <div className="bar">
                     <i /><i /><i />
-                    <span>{MOCK ? "mock checkout" : "checkout"} · {t.platform.toLowerCase().replace(".com", "")}</span>
+                    <span>checkout · {t.platform.toLowerCase().replace(".com", "")}</span>
                   </div>
                   <div className="body">
                     <div className="plat">{t.platform}</div>

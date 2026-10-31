@@ -139,7 +139,7 @@ export function SearchForm() {
       <div className="fgrid2">
         <Counter label="Guests" value={req.guests} min={1} max={12} onChange={(n) => set("guests", n)} />
         <Counter label="Rooms" value={req.rooms} min={1} max={6} onChange={(n) => set("rooms", n)} />
-        <div className="field">
+        <div className="field f-wide">
           <label htmlFor="budget">Budget per night: <span className="num" style={{ color: "var(--fg)", textTransform: "none", letterSpacing: 0 }}>{inr(req.budget_per_night)}</span></label>
           <input id="budget" type="range" min={2000} max={20000} step={500} value={Math.min(20000, Math.max(2000, req.budget_per_night || 12000))} onChange={(e) => set("budget_per_night", Number(e.target.value))} aria-describedby="e-bud" />
           <span id="e-bud" className="err" role="alert">{show("budget_per_night")}</span>
@@ -184,11 +184,7 @@ export function SearchForm() {
           {busy ? "Starting…" : "Verify prices"}
         </button>
       </div>
-      {MOCK && (
-        <p className="notice warn" role="note">
-          Demo mode: this runs a recorded sample (Bengaluru, 20–21 Nov) whatever you enter. Results are labelled MOCK DATA.
-        </p>
-      )}
+
 
       <dialog ref={dlg} aria-labelledby="safe-t" onClick={(e) => e.target === dlg.current && dlg.current?.close()}>
         <div className="dlg">

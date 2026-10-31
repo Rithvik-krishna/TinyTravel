@@ -129,8 +129,8 @@ function Inner() {
                       <div className="oamt">
                         {ok ? (
                           <>
-                            <div className="price">{inr(t.payable)}</div>
-                            <div className="sub">listed {inr(t.listing)}</div>
+                            <div className="price">{inr(t.payable, t.currency)}</div>
+                            <div className="sub">listed {inr(t.listing, t.currency)}</div>
                           </>
                         ) : (
                           <div className="sub">No price</div>
@@ -181,9 +181,9 @@ function Inner() {
           {sel && (
             <aside className="aside" aria-label="Your selection">
               <span className="fine" style={{ fontWeight: 600 }}>Total on {sel.platform}</span>
-              <div className="price">{inr(sel.payable)}</div>
+              <div className="price">{inr(sel.payable, sel.currency)}</div>
               <div className="hmeta">
-                {sel.listing != null && <s>listed {inr(sel.listing)}</s>}
+                {sel.listing != null && <s>listed {inr(sel.listing, sel.currency)}</s>}
                 {sel.fee_leak_pct != null && <span className="badge">+{sel.fee_leak_pct}%</span>}
               </div>
               {cancelBadge(sel)}
@@ -198,7 +198,7 @@ function Inner() {
         <>
           <div className="sticky-bar">
             <div>
-              <div className="price">{inr(sel.payable)}</div>
+              <div className="price">{inr(sel.payable, sel.currency)}</div>
               <div className="fine">total on {sel.platform}</div>
             </div>
             <button className="btn" type="button" onClick={() => setOpen(true)}>Continue on {sel.platform}</button>

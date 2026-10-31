@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import script from "@fixtures/sse_script.json";
 import "./landing.css";
 import { getHandoff, getResults } from "@/lib/dataSource";
@@ -44,7 +44,7 @@ export default async function Home() {
   const events = (script as { events: StreamEvent[] }).events;
 
   return (
-    <div className="tt">
+    <div className="tt tb">
       <NavBar />
       <main id="top">
         <Hero tags={heroTags} meta={results._meta} checkIn={results.search_request?.check_in} checkOut={results.search_request?.check_out} />

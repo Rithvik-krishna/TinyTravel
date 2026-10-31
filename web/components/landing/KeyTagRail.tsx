@@ -44,7 +44,7 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
   const pct = tag.fee_leak_pct ?? gapPct(tag.listing, tag.payable);
   const dir = () => (Math.random() > 0.5 ? 1 : -1);
 
-  const label = `${tag.title} on ${tag.platform}, listing ${inr(tag.listing)}${verified ? `, payable ${inr(tag.payable)}` : ", not verified"}. Press to flip.`;
+  const label = `${tag.title} on ${tag.platform}, listing ${inr(tag.listing, tag.currency)}${verified ? `, payable ${inr(tag.payable, tag.currency)}` : ", not verified"}. Press to flip.`;
 
   return (
     <div
@@ -77,7 +77,7 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
             <span className="hname">{tag.title}</span>
             <span className="spacer" />
             <span className="lab">Listing price</span>
-            <span className={`price${tag.listing == null ? " na" : ""}`}>{inr(tag.listing)}</span>
+            <span className={`price${tag.listing == null ? " na" : ""}`}>{inr(tag.listing, tag.currency)}</span>
             {verified ? extra : <Stamp tag={tag} />}
             <span className="hint">Tap to flip</span>
           </span>
@@ -86,7 +86,7 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
             <span className="lab">At the payment page</span>
             {verified ? (
               <>
-                <span className="price">{inr(tag.payable)}</span>
+                <span className="price">{inr(tag.payable, tag.currency)}</span>
                 {gap != null && (
                   <span className="delta">
                     +{inr(gap)}

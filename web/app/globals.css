@@ -83,9 +83,10 @@ body {
 }
 /* Booking/flow theme (.tb on top of .tt): teal action colour, calm light-first palette. Re-maps the same token names. */
 .tt.tb { --font-body: var(--font-figtree);
-  --bg:#0a1211; --surface:#111c1a; --surface2:#172624; --line:#243633;
-  --fg:#e6f0ee; --muted:#94a9a5; --brass:#38c6b0; --brass-hi:#38c6b0; --brass-lo:#1f8d7c; --on-brass:#04201b;
-  --ok:#4cd391; --warn:#f0b366; --bad:#f28e8e; --info:#82b6ff; }
+  /* Midnight Navy / Deep Slate / Steel Blue / Electric Teal / Soft Coral / Snow White / Muted Blue / Success Green / Warning Amber */
+  --bg:#0B1220; --surface:#172438; --surface2:#1d2e47; --line:#263B52;
+  --fg:#F8FAFC; --muted:#9BAFC5; --brass:#2DD4BF; --brass-hi:#2DD4BF; --brass-lo:#14998a; --on-brass:#06231f;
+  --ok:#4ADE80; --warn:#FBBF24; --bad:#FF8B72; --info:#7dd3fc; }
 @media (prefers-color-scheme: light) {
   :root:not([data-theme="dark"]) .tt.tb {
     --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
