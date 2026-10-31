@@ -1518,19 +1518,19 @@ export function TagFront({
   shape: TagShape;
   unit: number;
 }) {
-  const eyeletSize = Math.max(14, Math.round(unit * 0.12));
-  const eyeletCenterY = Math.max(12, Math.round(unit * 0.12));
+  const eyeletSize = Math.max(12, Math.round(unit * 0.11));
+  const eyeletCenterY = Math.max(10, Math.round(unit * 0.11));
 
   return (
-    <div className="relative h-full w-full select-none rounded-2xl bg-surface-2 border border-border shadow-[0_8px_24px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_28px_rgba(0,0,0,0.45)] overflow-hidden flex flex-col justify-between p-3.5 transition-colors">
+    <div className="relative h-full w-full select-none rounded-2xl bg-surface-2 border border-border shadow-[0_8px_24px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_8px_28px_rgba(0,0,0,0.45)] overflow-hidden flex flex-col justify-between p-2 sm:p-3 transition-colors">
       {/* Subtle hotel key tag texture & inner border */}
-      <div className="pointer-events-none absolute inset-1.5 rounded-[12px] border border-border/50" />
+      <div className="pointer-events-none absolute inset-1 sm:inset-1.5 rounded-[12px] border border-border/50" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/10 via-transparent to-black/5 dark:from-white/5 dark:to-black/20" />
 
       {/* Top area: Brass Eyelet */}
       <div
         className="relative z-10 flex flex-col items-center"
-        style={{ marginTop: Math.max(2, eyeletCenterY - 14) }}
+        style={{ marginTop: Math.max(1, eyeletCenterY - 12) }}
       >
         {/* Brass Eyelet / Grommet */}
         <div
@@ -1557,30 +1557,30 @@ export function TagFront({
       </div>
 
       {/* Mid area: Hotel name & platform chip */}
-      <div className="relative z-10 my-auto text-center space-y-2 px-1">
-        <div className="inline-block">
-          <span className="inline-flex items-center rounded-full bg-surface border border-border px-2.5 py-0.5 text-[10px] font-semibold text-text-muted uppercase tracking-wider shadow-sm">
+      <div className="relative z-10 my-auto text-center space-y-1.5 px-0.5">
+        <div className="inline-block max-w-full">
+          <span className="inline-flex items-center rounded-full bg-surface border border-border px-2 py-0.5 text-[9px] font-semibold text-text-muted uppercase tracking-wider shadow-sm truncate max-w-full">
             {item.platform}
           </span>
         </div>
 
         <h3
-          className="font-bold text-text line-clamp-2 leading-tight tracking-tight"
-          style={{ fontSize: `${Math.max(12, Math.round(unit * 0.095))}px` }}
+          className="font-bold text-text line-clamp-2 leading-tight tracking-tight px-0.5"
+          style={{ fontSize: `${Math.max(11, Math.round(unit * 0.09))}px` }}
         >
           {item.title}
         </h3>
       </div>
 
       {/* Bottom area: Big Listing Price */}
-      <div className="relative z-10 text-center pb-1 pt-1 border-t border-border/60">
+      <div className="relative z-10 text-center pb-0.5 pt-1 border-t border-border/60">
         <div
           className="font-extrabold text-text tabular-nums tracking-tight leading-none"
-          style={{ fontSize: `${Math.max(16, Math.round(unit * 0.14))}px` }}
+          style={{ fontSize: `${Math.max(14, Math.round(unit * 0.135))}px` }}
         >
           {inr(item.listing)}
         </div>
-        <div className="mt-1 text-[9px] font-medium uppercase tracking-widest text-text-muted">
+        <div className="mt-0.5 text-[8px] sm:text-[9px] font-medium uppercase tracking-wider text-text-muted whitespace-nowrap">
           listing price
         </div>
       </div>
