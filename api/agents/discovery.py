@@ -148,7 +148,7 @@ async def discover(
         goal=goal,
         output_schema=schema,
         profile=profile,
-        timeout_s=req.get("timeout_s", 300),
+        timeout_s=req.get("timeout_s", int(os.getenv("DISCOVERY_TIMEOUT_S", "900"))),
         on_stream_url=on_stream_url,
         on_progress=on_progress,
     )
