@@ -1,8 +1,11 @@
 import copy
 import json
+import sys
 from pathlib import Path
 import pytest
 from pydantic import ValidationError
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from models import ResultsResponse, SearchInput
 from events import ScriptFile, EVENT_DATA_MODELS
