@@ -17,11 +17,8 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
-  // meta theme-color cannot use CSS variables; these are the Ivory and Slate-900 page backgrounds.
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#FAF9F6" },
-    { media: "(prefers-color-scheme: dark)", color: "#111827" },
-  ],
+  // Light theme only. meta theme-color cannot use CSS variables, so this is the Ivory page background.
+  themeColor: "#FAF9F6",
 };
 
 export default function RootLayout({
