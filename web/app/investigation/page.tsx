@@ -2,7 +2,7 @@
 
 import React, { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { MOCK, openStream } from "@/lib/dataSource";
+import { getResults, MOCK, openStream } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
 import { offersToTags, blockerLabel, siteLabel, TagItem } from "@/lib/tags";
 import { loadRequest, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
@@ -67,6 +67,8 @@ function Inner() {
   const [elapsed, setElapsed] = useState(0);
   const [run, setRun] = useState(0);
   const [summary, setSummary] = useState("");
+  // Set when the service does not know this search id (old link, wrong data mode), so we stop waiting.
+  const [missing, setMissing] = useState(false);
   useEffect(() => {
     const r = loadRequest();
     if (r) setSummary(`${r.destination} · ${stayLabel({ check_in: r.check_in, check_out: r.check_out, guests: r.guests })}`);
@@ -91,6 +93,18 @@ function Inner() {
     const t = window.setInterval(() => setElapsed((s) => s + 1), 1000);
     return () => window.clearInterval(t);
   }, [finished, ready, id, run]);
+
+  useEffect(() => {
+    if (!id || MOCK || state.phase !== "idle") return;
+    const t = window.setTimeout(() => {
+      getResults(id)
+        .then((r: { detail?: unknown; offers?: unknown }) => {
+          if (!r || r.detail || !Array.isArray(r.offers)) setMissing(true);
+        })
+        .catch(() => setMissing(true));
+    }, 6000);
+    return () => window.clearTimeout(t);
+  }, [id, state.phase, run]);
 
   const results = useResults(id, MOCK || state.phase === "done");
   const tags = useMemo(() => offersToTags(results.data), [results.data]);
@@ -156,7 +170,13 @@ function Inner() {
           </div>
         )}
 
-        {agents.length === 0 && !finished && elapsed > 15 && (
+        {missing && agents.length === 0 && (
+          <div className="notice bad" role="alert" style={{ marginBottom: 16 }}>
+            We could not find this search. The link may be old, or it was made in a different data mode.{" "}
+            <Link className="linkish" href="/book">Start a new search</Link>
+          </div>
+        )}
+        {!missing && agents.length === 0 && !finished && elapsed > 15 && (
           <div className="notice" role="status" style={{ marginBottom: 16 }}>
             Finding hotels on each site first. With real browser agents this step alone can take 3 to 5 minutes, and nothing is shown until it finishes.
           </div>
