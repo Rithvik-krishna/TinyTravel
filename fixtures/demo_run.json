@@ -256,23 +256,28 @@
    "fee_lines": [
     {
      "label": "Room price (base)",
-     "amount": 15639
+     "amount": 15639,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & fees",
-     "amount": 1971
+     "amount": 1971,
+     "fee_kind": "tax"
     },
     {
      "label": "Discount",
-     "amount": -4692
+     "amount": -4692,
+     "fee_kind": "other"
     },
     {
      "label": "Offer / coupon",
-     "amount": -2737
+     "amount": -2737,
+     "fee_kind": "other"
     },
     {
      "label": "Convenience fee",
-     "amount": 1095
+     "amount": 1095,
+     "fee_kind": "platform_fee"
     }
    ],
    "preselected_addons": [],
@@ -371,11 +376,13 @@
    "fee_lines": [
     {
      "label": "Room price",
-     "amount": 8950
+     "amount": 8950,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & service fees",
-     "amount": 1462
+     "amount": 1462,
+     "fee_kind": "tax"
     }
    ],
    "preselected_addons": [],
@@ -477,11 +484,13 @@
    "fee_lines": [
     {
      "label": "Room price",
-     "amount": 8700
+     "amount": 8700,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & charges",
-     "amount": 1121
+     "amount": 1121,
+     "fee_kind": "tax"
     }
    ],
    "preselected_addons": [],
@@ -582,15 +591,18 @@
    "fee_lines": [
     {
      "label": "Room price",
-     "amount": 6400
+     "amount": 6400,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & fees",
-     "amount": 768
+     "amount": 768,
+     "fee_kind": "tax"
     },
     {
      "label": "Convenience fee",
-     "amount": 544
+     "amount": 544,
+     "fee_kind": "platform_fee"
     }
    ],
    "preselected_addons": [
@@ -691,11 +703,13 @@
    "fee_lines": [
     {
      "label": "Room price",
-     "amount": 6900
+     "amount": 6900,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & service fees",
-     "amount": 828
+     "amount": 828,
+     "fee_kind": "tax"
     }
    ],
    "preselected_addons": [],
@@ -842,15 +856,18 @@
    "fee_lines": [
     {
      "label": "Room price",
-     "amount": 5200
+     "amount": 5200,
+     "fee_kind": "other"
     },
     {
      "label": "Taxes & fees",
-     "amount": 624
+     "amount": 624,
+     "fee_kind": "tax"
     },
     {
      "label": "Convenience fee",
-     "amount": 282
+     "amount": 282,
+     "fee_kind": "platform_fee"
     }
    ],
    "preselected_addons": [],

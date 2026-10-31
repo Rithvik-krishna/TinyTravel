@@ -55,10 +55,18 @@ def init_db(db_path: Optional[Union[str, Path]] = None) -> None:
                 hotel TEXT NOT NULL,
                 platform TEXT NOT NULL,
                 amount REAL NOT NULL,
+                currency TEXT DEFAULT 'INR',
                 captured_at TEXT NOT NULL,
+                run_id TEXT,
                 offer_id TEXT
             )
         """)
+        # Schema migration for existing DB
+        for col_def in ["currency TEXT DEFAULT 'INR'", "run_id TEXT"]:
+            try:
+                conn.execute(f"ALTER TABLE price_history ADD COLUMN {col_def}")
+            except sqlite3.OperationalError:
+                pass
     conn.close()
 
 
@@ -213,6 +221,8 @@ def save_price_history(
     amount: float,
     captured_at: str,
     offer_id: Optional[str] = None,
+    run_id: Optional[str] = None,
+    currency: str = "INR",
     db_path: Optional[Union[str, Path]] = None,
 ) -> None:
     """Record a verified final payable price in historical ledger."""
@@ -220,10 +230,10 @@ def save_price_history(
     with conn:
         conn.execute(
             """
-            INSERT INTO price_history (hotel, platform, amount, captured_at, offer_id)
-            VALUES (?, ?, ?, ?, ?)
+            INSERT INTO price_history (hotel, platform, amount, currency, captured_at, run_id, offer_id)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             """,
-            (hotel, platform, amount, captured_at, offer_id),
+            (hotel, platform, amount, currency, captured_at, run_id, offer_id),
         )
     conn.close()
 
@@ -233,23 +243,69 @@ def get_price_history(
     platform: Optional[str] = None,
     db_path: Optional[Union[str, Path]] = None,
 ) -> list[dict]:
-    """Query historical price records."""
+    """Query historical price records ordered newest first.
+    Returns: list of {amount, currency, captured_at, run_id, offer_id}
+    """
     conn = get_conn(db_path)
     cur = conn.cursor()
-    query = "SELECT id, hotel, platform, amount, captured_at, offer_id FROM price_history WHERE 1=1"
+    query = "SELECT amount, currency, captured_at, run_id, offer_id FROM price_history WHERE 1=1"
     params: list[Any] = []
     if hotel:
-        query += " AND hotel = ?"
+        query += " AND LOWER(TRIM(hotel)) = LOWER(TRIM(?))"
         params.append(hotel)
     if platform:
-        query += " AND platform = ?"
+        query += " AND LOWER(TRIM(platform)) = LOWER(TRIM(?))"
         params.append(platform)
-    query += " ORDER BY id DESC"
+    query += " ORDER BY captured_at DESC, id DESC"
     cur.execute(query, params)
     rows = cur.fetchall()
     conn.close()
-    return [dict(r) for r in rows]
+    return [
+        {
+            "amount": float(r["amount"]),
+            "currency": r["currency"] or "INR",
+            "captured_at": r["captured_at"],
+            "run_id": r["run_id"],
+            "offer_id": r["offer_id"],
+        }
+        for r in rows
+    ]
 
 
-# Ensure tables exist on load
+def seed_demo_price_history(db_path: Optional[Union[str, Path]] = None) -> None:
+    """Seed historical observations from demo_run.json if price_history is empty."""
+    conn = get_conn(db_path)
+    cur = conn.cursor()
+    cur.execute("SELECT COUNT(*) as c FROM price_history")
+    count = cur.fetchone()["c"]
+    if count == 0:
+        demo_path = Path(__file__).parent.parent / "fixtures" / "demo_run.json"
+        if demo_path.exists():
+            try:
+                demo_data = json.loads(demo_path.read_text(encoding="utf-8"))
+                for off in demo_data.get("offers", []):
+                    if off.get("status") == "verified" and off.get("price_final_payable") is not None:
+                        conn.execute(
+                            """
+                            INSERT INTO price_history (hotel, platform, amount, currency, captured_at, run_id, offer_id)
+                            VALUES (?, ?, ?, ?, ?, ?, ?)
+                            """,
+                            (
+                                off.get("hotel_name") or "La Marvella",
+                                off.get("site") or "Cleartrip",
+                                float(off["price_final_payable"]),
+                                off.get("currency") or "INR",
+                                off.get("finished_at") or datetime.now(IST).isoformat(),
+                                off.get("run_id"),
+                                off.get("offer_id"),
+                            ),
+                        )
+                conn.commit()
+            except Exception:
+                pass
+    conn.close()
+
+
+# Ensure tables exist and initial observations are seeded
 init_db()
+seed_demo_price_history()

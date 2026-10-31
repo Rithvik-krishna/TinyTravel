@@ -12,6 +12,7 @@ DealMode = Literal["lowest_price", "best_value", "most_transparent"]
 MatchStatus = Literal["merged", "suggested"]
 TravellerType = Literal["solo", "couple", "friends", "family", "business"]
 EvidenceType = Literal["screenshot", "recording", "page_text"]
+FeeKind = Literal["tax", "platform_fee", "property_fee", "add_on", "other"]
 
 
 class BaseModelForbid(BaseModel):
@@ -112,6 +113,7 @@ class HotelGroup(BaseModelForbid):
 class FeeLine(BaseModelForbid):
     label: str
     amount: float
+    fee_kind: Optional[FeeKind] = "other"
 
 
 class TrailPoint(BaseModelForbid):
@@ -313,3 +315,30 @@ class ResultsResponse(BaseModelForbid):
     rechecks: list[Recheck]
     summary_strip: SummaryStrip
     complete: Optional[bool] = None
+
+
+class PriceHistoryItem(BaseModelForbid):
+    amount: float
+    currency: str = "INR"
+    captured_at: str
+    run_id: Optional[str] = None
+    offer_id: Optional[str] = None
+
+
+class FeeGlossaryItem(BaseModelForbid):
+    kind: FeeKind
+    name: str
+    description: str
+    examples: list[str]
+
+
+class FeeDraftResponse(BaseModelForbid):
+    offer_id: str
+    platform: str
+    hotel_name: str
+    subject: str
+    draft_message: str
+    observed_leak_pct: Optional[float] = None
+    observed_price_initial: Optional[float] = None
+    observed_price_final: Optional[float] = None
+    currency: str = "INR"

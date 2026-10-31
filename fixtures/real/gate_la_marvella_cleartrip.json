@@ -26,23 +26,28 @@
   "fee_lines": [
     {
       "label": "1 room x 1 night",
-      "amount": 15639.0
+      "amount": 15639.0,
+      "fee_kind": "other"
     },
     {
       "label": "Hotel taxes",
-      "amount": 1971.0
+      "amount": 1971.0,
+      "fee_kind": "tax"
     },
     {
       "label": "Property discount",
-      "amount": -4692.0
+      "amount": -4692.0,
+      "fee_kind": "other"
     },
     {
       "label": "Coupon discount (CTHOTEL)",
-      "amount": -2080.0
+      "amount": -2080.0,
+      "fee_kind": "other"
     },
     {
       "label": "Convenience fee",
-      "amount": 1095.0
+      "amount": 1095.0,
+      "fee_kind": "platform_fee"
     }
   ],
   "preselected_addons": [
