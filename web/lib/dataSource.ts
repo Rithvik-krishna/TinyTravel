@@ -2,7 +2,8 @@ import demo from "@fixtures/demo_run.json";
 import script from "@fixtures/sse_script.json";
 
 export const MOCK = process.env.NEXT_PUBLIC_DATA_MODE !== "live";
-const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+// Same-origin on Vercel (services mode routes /api/* to the api service); localhost in dev.
+const API = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "production" ? "" : "http://localhost:8000");
 export const EVENTS = ["parsed","discovery_started","listings_found","hotels_grouped","agent_started","agent_progress","agent_done","ranking_ready","error"];
 
 export async function startSearch(text: string, request?: Record<string, unknown>) {
