@@ -143,6 +143,30 @@ class Transparency(BaseModelForbid):
     note: str
 
 
+class ProbeResult(BaseModelForbid):
+    site: str = ""
+    reached_payment_page: bool = False
+    furthest_step: str = "unknown"
+    blocker: Optional[Blocker] = None
+    hotel_name: str = ""
+    hotel_url: str = ""
+    room_type: str = ""
+    max_occupancy: Optional[int] = None
+    meal_plan: str = ""
+    cancellation_policy: str = ""
+    price_shown_on_listing: Optional[float] = None
+    price_shown_on_room_selection: Optional[float] = None
+    price_final_payable: Optional[float] = None
+    fee_lines: list[FeeLine] = []
+    preselected_addons: list[str] = []
+    urgency_or_scarcity_messages: list[str] = []
+    price_trail: list[TrailPoint] = []
+    currency: str = "INR"
+    notes: str = ""
+    listing_page_text: Optional[str] = None
+    payment_page_text: Optional[str] = None
+
+
 class Offer(BaseModelForbid):
     offer_id: str
     hotel_id: str
@@ -178,6 +202,8 @@ class Offer(BaseModelForbid):
     evidence: list[Evidence] = []
     mock: bool = False
     transparency: Optional[Transparency] = None
+    listing_page_text: Optional[str] = None
+    payment_page_text: Optional[str] = None
 
 
 class RankingItem(BaseModelForbid):
@@ -286,3 +312,4 @@ class ResultsResponse(BaseModelForbid):
     handoff: HandoffPack
     rechecks: list[Recheck]
     summary_strip: SummaryStrip
+    complete: Optional[bool] = None
