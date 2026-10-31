@@ -98,6 +98,8 @@ class Envelope(BaseModelForbid):
 
 class ScriptFile(BaseModelForbid):
     mock: bool = True
+    saved: Optional[bool] = False
+    speed: Optional[float] = None
     speed_default: float = 1.0
     total_ms: int
     events: list[Envelope]

@@ -61,3 +61,13 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Why**: Completes all remaining backend requirements, enables UI fee categorization, and provides transparent evidence reporting.
 - **Fixtures updated**: Yes (`fixtures/demo_run.json` and `fixtures/real/gate_la_marvella_cleartrip.json` updated with classified `fee_kind` on each fee line).
 
+### 2026-10-31 - Nikhil
+- **Saved Mode & Fixture Replay Fields**:
+  - Added `saved: Optional[bool] = False` and `saved_at: Optional[str] = None` to `MetaInfo` in `api/models.py`.
+  - Added `saved: Optional[bool] = False` and `speed: Optional[float] = None` to `ScriptFile` in `api/events.py`.
+  - Added `DATA_MODE=saved` support across `POST /api/search`, `GET /api/search/{id}/results`, `GET /api/search/{id}/stream`, `POST /api/offers/{id}/recheck`, and `GET /api/offers/{id}/handoff`.
+  - Added static evidence fallback route `/evidence/{file_path:path}` checking `evidence/` and `fixtures/evidence/`.
+- **Why**: Allows replaying a full, labelled real investigation without external network requests or credit spend, adhering to strict contract validation.
+- **Fixtures updated**: Yes (`fixtures/saved_run.json` and `fixtures/saved_sse_script.json` created).
+
+

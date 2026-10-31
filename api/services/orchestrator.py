@@ -234,7 +234,14 @@ async def run_search(
     else:
         req_dict = {}
 
-    is_mock = os.getenv("DATA_MODE", "live") == "fake" or req_dict.get("mock", False) or os.getenv("TINYFISH_FAKE") == "1"
+    is_mock = (
+        os.getenv("DATA_MODE", "live") == "fake"
+        or req_dict.get("mock", False)
+        or os.getenv("TINYFISH_FAKE") == "1"
+        or os.getenv("DISABLE_LIVE") == "1"
+    )
+    if os.getenv("DISABLE_LIVE") == "1":
+        logger.warning("DISABLE_LIVE=1 kill switch is active: forcing simulated/fake run")
     req_dict["mock"] = is_mock
 
     # Format search request model for event
@@ -548,6 +555,7 @@ async def run_search(
                 offer_req["hotel_id"] = hotel_id
                 offer_req["timeout_s"] = per_run_timeout_s
 
+                logger.info("[AGENT_START] run_id=%s platform=%s hotel=%s", run_id, platform_name, hotel_name)
                 try:
                     offer_res = await asyncio.wait_for(
                         verify_offer(
@@ -586,6 +594,11 @@ async def run_search(
                 # Emit agent_done
                 actual_status = offer_res.get("status", "unverified")
                 actual_run_id = offer_res.get("run_id") or run_id
+                steps_cnt = int(offer_res.get("steps") or 0)
+                logger.info(
+                    "[AGENT_FINISH] run_id=%s platform=%s status=%s steps=%d cost=$%.4f",
+                    actual_run_id, platform_name, actual_status, steps_cnt, cost
+                )
                 await emit_event(
                     search_id,
                     "agent_done",

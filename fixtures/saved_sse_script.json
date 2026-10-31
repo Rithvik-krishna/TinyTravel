@@ -1,0 +1,494 @@
+{
+  "mock": true,
+  "saved": false,
+  "speed": 2.0,
+  "speed_default": 2.0,
+  "total_ms": 578,
+  "events": [
+    {
+      "t_ms": 170,
+      "event": "parsed",
+      "data": {
+        "search_request": {
+          "destination": "Bengaluru",
+          "area_hint": "HSR Layout / Koramangala",
+          "check_in": "2026-11-20",
+          "check_out": "2026-11-21",
+          "guests": 2,
+          "rooms": 1,
+          "budget_per_night": 12000.0,
+          "must_have": {
+            "breakfast": true,
+            "free_cancellation": true,
+            "parking": false,
+            "wifi": true
+          },
+          "deal_mode": "best_value",
+          "currency": "INR",
+          "mock": true,
+          "raw_text": "Bengaluru, 20-21 Nov 2026, 2 people, breakfast, free cancellation, under 12k"
+        }
+      }
+    },
+    {
+      "t_ms": 187,
+      "event": "discovery_started",
+      "data": {
+        "platforms": [
+          "Cleartrip",
+          "Agoda",
+          "Booking.com"
+        ]
+      }
+    },
+    {
+      "t_ms": 187,
+      "event": "listings_found",
+      "data": {
+        "count": 8,
+        "by_platform": {
+          "Cleartrip": 3,
+          "Agoda": 2,
+          "Booking.com": 3
+        }
+      }
+    },
+    {
+      "t_ms": 203,
+      "event": "hotels_grouped",
+      "data": {
+        "hotel_groups": [
+          {
+            "hotel_id": "h1",
+            "canonical_name": "La Marvella",
+            "area": "HSR Layout",
+            "match_status": "merged",
+            "confidence": 0.96,
+            "why": "Name 100%, same area",
+            "offer_ids": [
+              "h1_cleartrip",
+              "h1_agoda",
+              "h1_booking"
+            ]
+          },
+          {
+            "hotel_id": "h2",
+            "canonical_name": "Lemon Leaf Suites",
+            "area": "Koramangala",
+            "match_status": "merged",
+            "confidence": 0.96,
+            "why": "Name 100%, same area",
+            "offer_ids": [
+              "h2_cleartrip",
+              "h2_agoda",
+              "h2_booking"
+            ]
+          },
+          {
+            "hotel_id": "h3",
+            "canonical_name": "Urban Nest Inn",
+            "area": "HSR Layout",
+            "match_status": "suggested",
+            "confidence": 0.79,
+            "why": "Name 72% (\"Urban Nest Inn\" vs \"Urban Nest Inn & Suites\"), same area. Possible match: not merged in pricing",
+            "offer_ids": [
+              "h3_cleartrip",
+              "h3_booking"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "t_ms": 234,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "offer_id": "h2_cleartrip",
+        "platform": "Cleartrip",
+        "hotel": "Lemon Leaf Suites",
+        "streaming_url": "/mock/tile-cleartrip.html"
+      }
+    },
+    {
+      "t_ms": 234,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "offer_id": "h2_agoda",
+        "platform": "Agoda",
+        "hotel": "Lemon Leaf Suites",
+        "streaming_url": "/mock/tile-agoda.html"
+      }
+    },
+    {
+      "t_ms": 250,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h2_booking",
+        "offer_id": "h2_booking",
+        "platform": "Booking.com",
+        "hotel": "Lemon Leaf Suites",
+        "streaming_url": "/mock/tile-booking.html"
+      }
+    },
+    {
+      "t_ms": 264,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 264,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 264,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_booking",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 264,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 264,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 280,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_booking",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 280,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Opening hotel page"
+      }
+    },
+    {
+      "t_ms": 295,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Opening hotel page"
+      }
+    },
+    {
+      "t_ms": 295,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_booking",
+        "step_text": "Encountered CAPTCHA challenge"
+      }
+    },
+    {
+      "t_ms": 295,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h2_booking",
+        "offer_id": "h2_booking",
+        "status": "blocked"
+      }
+    },
+    {
+      "t_ms": 312,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Selecting room"
+      }
+    },
+    {
+      "t_ms": 312,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Selecting room"
+      }
+    },
+    {
+      "t_ms": 328,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "offer_id": "h1_cleartrip",
+        "platform": "Cleartrip",
+        "hotel": "La Marvella",
+        "streaming_url": "/mock/tile-cleartrip.html"
+      }
+    },
+    {
+      "t_ms": 343,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Entering guest details (dummy)"
+      }
+    },
+    {
+      "t_ms": 343,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Entering guest details (dummy)"
+      }
+    },
+    {
+      "t_ms": 343,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 359,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "step_text": "Reached payment page, stopping"
+      }
+    },
+    {
+      "t_ms": 359,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "step_text": "Reached payment page, stopping"
+      }
+    },
+    {
+      "t_ms": 359,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h2_cleartrip",
+        "offer_id": "h2_cleartrip",
+        "status": "verified"
+      }
+    },
+    {
+      "t_ms": 375,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h2_agoda",
+        "offer_id": "h2_agoda",
+        "status": "verified"
+      }
+    },
+    {
+      "t_ms": 405,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 420,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "offer_id": "h1_agoda",
+        "platform": "Agoda",
+        "hotel": "La Marvella",
+        "streaming_url": "/mock/tile-agoda.html"
+      }
+    },
+    {
+      "t_ms": 420,
+      "event": "agent_started",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "offer_id": "h1_booking",
+        "platform": "Booking.com",
+        "hotel": "La Marvella",
+        "streaming_url": "/mock/tile-booking.html"
+      }
+    },
+    {
+      "t_ms": 437,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Opening hotel page"
+      }
+    },
+    {
+      "t_ms": 437,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 437,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Selecting room"
+      }
+    },
+    {
+      "t_ms": 437,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Opening search page"
+      }
+    },
+    {
+      "t_ms": 453,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 453,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Searching hotel by name"
+      }
+    },
+    {
+      "t_ms": 453,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Entering guest details (dummy)"
+      }
+    },
+    {
+      "t_ms": 453,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Opening hotel page"
+      }
+    },
+    {
+      "t_ms": 468,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "step_text": "Reached payment page, stopping"
+      }
+    },
+    {
+      "t_ms": 468,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Opening hotel page"
+      }
+    },
+    {
+      "t_ms": 468,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h1_cleartrip",
+        "offer_id": "h1_cleartrip",
+        "status": "verified"
+      }
+    },
+    {
+      "t_ms": 484,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Selecting room"
+      }
+    },
+    {
+      "t_ms": 484,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Selecting room"
+      }
+    },
+    {
+      "t_ms": 500,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Entering guest details (dummy)"
+      }
+    },
+    {
+      "t_ms": 500,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Entering guest details (dummy)"
+      }
+    },
+    {
+      "t_ms": 500,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "step_text": "Reached payment page, stopping"
+      }
+    },
+    {
+      "t_ms": 514,
+      "event": "agent_progress",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "step_text": "Reached payment page, stopping"
+      }
+    },
+    {
+      "t_ms": 514,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h1_agoda",
+        "offer_id": "h1_agoda",
+        "status": "verified"
+      }
+    },
+    {
+      "t_ms": 530,
+      "event": "agent_done",
+      "data": {
+        "run_id": "mock_run_h1_booking",
+        "offer_id": "h1_booking",
+        "status": "verified"
+      }
+    },
+    {
+      "t_ms": 578,
+      "event": "ranking_ready",
+      "data": {
+        "hero_hotel_id": "h2"
+      }
+    }
+  ]
+}

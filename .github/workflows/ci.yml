@@ -30,6 +30,10 @@ jobs:
           cd api
           pytest -q
 
+      - name: Scan for secrets
+        run: |
+          python scripts/scan_secrets.py --git-history
+
   web:
     name: Frontend Web (Node 20)
     runs-on: ubuntu-latest
