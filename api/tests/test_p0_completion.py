@@ -248,8 +248,9 @@ def test_occupancy_mismatch_marks_unverified(monkeypatch):
     }
 
     res = asyncio.run(verify_offer("Booking.com", "Single Room Hotel", req))
-    assert res["reached_payment_page"] is False
+    assert res["reached_payment_page"] is True
     assert res["status"] == "unverified"
+    assert res["blocker"] is None
     assert "Occupancy mismatch" in res["notes"]
     assert res["fee_leak_pct"] is None
 

@@ -73,6 +73,8 @@ def build_goal(hotel_name: str, req: dict) -> str:
         "Record the displayed total at each step in price_trail with the currency shown on screen. Do not convert currencies.\n"
         "Record every fee line, pre-selected add-on, and any urgency/scarcity message.\n"
         "Extract hotel_url, listing_page_text (text from listing card), and payment_page_text (price breakdown text from payment page).\n"
+        "max_occupancy and room_type must describe the room in the final booking summary, copying the \"X adults\" text from that page.\n"
+        "price_shown_on_listing must be the price of the same room as the final payable, or null. Never record a listing price from a different room.\n"
         "Ensure price_trail includes each observed step: 'listing', 'room', 'traveller_details', 'payment'.\n"
         "STOP at the payment page. Never enter payment details, never click pay/confirm/book, never log in, never enter an OTP, never create an account.\n"
         "If blocked (login, OTP, captcha, empty page), stop and return the blocker.\n"
@@ -209,22 +211,35 @@ async def verify_offer(
     elif run.status == "failed" and not blocker:
         blocker = classify_blocker(run.error) or "other"
 
-    # Verify max_occupancy fits requested guests
+    # Verify max_occupancy fits requested guests (do NOT mutate reached_payment_page)
     req_guests = int(req.get("guests", 2))
     max_occ = probe_data.get("max_occupancy")
+    occupancy_mismatch = False
     if max_occ is not None and max_occ < req_guests:
-        reached_payment_page = False
+        occupancy_mismatch = True
         notes = (notes + f" [Occupancy mismatch: room fits {max_occ} adults but search requested {req_guests}]").strip()
 
-    # Verify currency matches requested search currency
+    # Verify currency matches requested search currency (do NOT mutate reached_payment_page)
     req_curr = req.get("currency", "INR")
+    currency_mismatch = False
     if currency and req_curr and currency.upper() != req_curr.upper():
-        reached_payment_page = False
+        currency_mismatch = True
         notes = (notes + f" [Currency mismatch: platform returned {currency} but search requested {req_curr}]").strip()
 
-    # Post-processing via pure functions
+    # Blocked is only for captcha/login/otp/timeout/other that really stopped the run.
+    # If the payment page was reached and payable price obtained, the run was not stopped by a blocker.
     if reached_payment_page and price_payable is not None:
         blocker = None
+
+    # On occupancy mismatch or currency mismatch, blocker must be null (reason is in notes, status is unverified)
+    if occupancy_mismatch or currency_mismatch:
+        blocker = None
+
+    # price_shown_on_listing must be the price of the same room as the final payable, or null.
+    # Never compute fee_leak_pct from a different room.
+    same_room = probe_data.get("listing_price_same_room", True)
+    if not same_room:
+        price_listing = None
 
     c_cat = cancellation_category(policy)
     recon = reconciliation_status(fee_lines, price_payable)
@@ -259,9 +274,11 @@ async def verify_offer(
         evidence=evidence,
         reconciliation=recon,
         blocker=blocker,
+        occupancy_mismatch=occupancy_mismatch,
+        currency_mismatch=currency_mismatch,
     )
 
-    leak = fee_leak_pct(price_listing, price_payable) if status == "verified" else None
+    leak = fee_leak_pct(price_listing, price_payable, same_room=same_room) if status == "verified" else None
 
 
     if not is_mock:
