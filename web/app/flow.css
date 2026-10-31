@@ -221,3 +221,12 @@
 .tt .gloss p{position:absolute;z-index:5;left:0;top:26px;width:min(280px,70vw);background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--fg);box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:normal;text-align:left;font-family:var(--font-body),system-ui,sans-serif;letter-spacing:0;text-transform:none}
 .tt textarea.draft{width:100%;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:12px;font:14px/1.5 var(--font-body),system-ui,sans-serif;resize:vertical}
 .tt .seg{flex-wrap:wrap;max-width:100%}
+/* place suggestions */
+.tt .place{position:relative;min-width:0}
+.tt .place>input{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font:500 16px var(--font-body),system-ui,sans-serif}
+.tt .place>input:focus-visible{outline:2px solid var(--brass-hi);outline-offset:1px}
+.tt .place-list{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 6px);margin:0;padding:6px;list-style:none;background:var(--surface2);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 32px rgba(0,0,0,.4);max-height:300px;overflow:auto}
+.tt .place-list li{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;cursor:pointer;font-size:15px}
+.tt .place-list li small{color:var(--muted);font-size:12px;white-space:nowrap}
+.tt .place-list li[aria-selected=true]{background:color-mix(in oklab,var(--brass) 18%,var(--surface2))}
+.tt .nlrow .place{flex:1}

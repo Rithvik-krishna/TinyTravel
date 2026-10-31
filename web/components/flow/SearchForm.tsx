@@ -5,6 +5,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
 import { useBackendMode } from "@/lib/extras";
+import { PlaceInput } from "@/components/flow/PlaceInput";
+import { placeLabel } from "@/lib/places";
 import { inr } from "@/lib/format";
 import { applySentence, buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
 
@@ -155,14 +157,14 @@ export function SearchForm() {
     <form className="sform" onSubmit={submit} noValidate aria-label="Search hotels">
       <h2 className="sf-title">Find your stay</h2>
       <div className="nlrow">
-        <input type="text" aria-label="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(e) => { setNl(e.target.value); setNlMsg(""); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); fillIn(); } }} />
+        <PlaceInput freeText ariaLabel="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(v) => { setNl(v); setNlMsg(""); }} onPick={(p) => { setReq((r) => ({ ...r, destination: p.city, area_hint: p.area ?? "" })); setNl(""); setNlMsg(`Destination set to ${placeLabel(p)}. Now pick your dates below, or type more details here.`); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); fillIn(); } }} />
         <button className="btn ghost sm" type="button" onClick={fillIn}>Fill in</button>
       </div>
       {nlMsg && <p className="fine" role="status">{nlMsg}</p>}
       <div className="fgrid">
         <div className="field f-wide">
           <label htmlFor="dest">Where to?</label>
-          <input id="dest" type="text" autoComplete="off" placeholder="City or area, e.g. Bengaluru" value={req.destination} onChange={(e) => set("destination", e.target.value)} aria-invalid={!!show("destination")} aria-describedby="e-dest" />
+          <PlaceInput id="dest" placeholder="City or area, e.g. Bengaluru" value={req.destination} onChange={(v) => setReq((r) => ({ ...r, destination: v, area_hint: "" }))} onPick={(p) => setReq((r) => ({ ...r, destination: p.city, area_hint: p.area ?? "" }))} invalid={!!show("destination")} describedBy="e-dest" />
           <span id="e-dest" className="err" role="alert">{show("destination")}</span>
         </div>
         <div className="field">
