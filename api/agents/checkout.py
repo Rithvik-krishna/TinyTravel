@@ -15,6 +15,7 @@ try:
         reconciliation_status,
         cancellation_category,
         determine_status,
+        transparency_score,
     )
 except ImportError:
     from models import ProbeResult, Offer
@@ -25,6 +26,7 @@ except ImportError:
         reconciliation_status,
         cancellation_category,
         determine_status,
+        transparency_score,
     )
 
 IST = timezone(timedelta(hours=5, minutes=30))
@@ -241,5 +243,15 @@ async def verify_offer(
         "mock": is_mock,
         "listing_page_text": listing_page_text,
         "payment_page_text": payment_page_text,
-        "transparency": run.raw.get("transparency") if isinstance(run.raw, dict) else None,
+        "transparency": (
+            run.raw.get("transparency")
+            if isinstance(run.raw, dict) and run.raw.get("transparency")
+            else transparency_score({
+                "status": status,
+                "fee_leak_pct": leak,
+                "preselected_addons": probe_data.get("preselected_addons", []),
+                "urgency_or_scarcity_messages": probe_data.get("urgency_or_scarcity_messages", []),
+                "evidence": evidence,
+            })
+        ),
     }
