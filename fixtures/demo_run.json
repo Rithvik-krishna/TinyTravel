@@ -1,0 +1,1210 @@
+{
+ "_meta": {
+  "mock": true,
+  "label": "MOCK DATA - not a real run",
+  "saved_run_label": "Saved run (mock), 30 Oct 10:08 PM",
+  "note": "Only h1_cleartrip uses real probe numbers. Everything else is invented to exercise every UI state."
+ },
+ "search_request": {
+  "destination": "Bengaluru",
+  "area_hint": "HSR Layout / Koramangala",
+  "check_in": "2026-11-20",
+  "check_out": "2026-11-21",
+  "guests": 2,
+  "rooms": 1,
+  "budget_per_night": 12000,
+  "must_have": {
+   "breakfast": true,
+   "free_cancellation": true,
+   "parking": false,
+   "wifi": true
+  },
+  "deal_mode": "best_value",
+  "currency": "INR",
+  "mock": true,
+  "raw_text": "Bengaluru, 20-21 Nov, 2 people, breakfast, free cancellation, under 12k"
+ },
+ "travel_profile": {
+  "traveller_type": "family",
+  "budget_min": 3000,
+  "budget_max": 12000,
+  "hotel_type": "any",
+  "min_rating": 3.8,
+  "must_have": [
+   "breakfast",
+   "wifi"
+  ],
+  "prefers_refundable": true,
+  "deal_mode": "best_value"
+ },
+ "hotels": [
+  {
+   "hotel_id": "h1",
+   "canonical_name": "La Marvella",
+   "area": "HSR Layout",
+   "rating": 4.2
+  },
+  {
+   "hotel_id": "h2",
+   "canonical_name": "Lemon Leaf Suites",
+   "area": "Koramangala",
+   "rating": 4.0
+  },
+  {
+   "hotel_id": "h3",
+   "canonical_name": "Urban Nest Inn",
+   "area": "HSR Layout",
+   "rating": 3.9
+  }
+ ],
+ "listings": [
+  {
+   "listing_id": "cleartrip_001",
+   "platform": "Cleartrip",
+   "hotel_name": "La Marvella",
+   "address": null,
+   "area": "HSR Layout",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.2,
+   "shown_price": 8210,
+   "currency": "INR",
+   "source_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "agoda_002",
+   "platform": "Agoda",
+   "hotel_name": "La Marvella",
+   "address": null,
+   "area": "HSR Layout",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.2,
+   "shown_price": 8950,
+   "currency": "INR",
+   "source_url": "https://www.agoda.com/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "booking_003",
+   "platform": "Booking.com",
+   "hotel_name": "La Marvella",
+   "address": null,
+   "area": "HSR Layout",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.2,
+   "shown_price": 8700,
+   "currency": "INR",
+   "source_url": "https://www.booking.com/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "cleartrip_004",
+   "platform": "Cleartrip",
+   "hotel_name": "Lemon Leaf Suites",
+   "address": null,
+   "area": "Koramangala",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.0,
+   "shown_price": 6400,
+   "currency": "INR",
+   "source_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "agoda_005",
+   "platform": "Agoda",
+   "hotel_name": "Lemon Leaf Suites",
+   "address": null,
+   "area": "Koramangala",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.0,
+   "shown_price": 6900,
+   "currency": "INR",
+   "source_url": "https://www.agoda.com/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "booking_006",
+   "platform": "Booking.com",
+   "hotel_name": "Lemon Leaf Suites",
+   "address": null,
+   "area": "Koramangala",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 4.0,
+   "shown_price": 6750,
+   "currency": "INR",
+   "source_url": "https://www.booking.com/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "cleartrip_007",
+   "platform": "Cleartrip",
+   "hotel_name": "Urban Nest Inn",
+   "address": null,
+   "area": "HSR Layout",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 3.9,
+   "shown_price": 5200,
+   "currency": "INR",
+   "source_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  },
+  {
+   "listing_id": "booking_008",
+   "platform": "Booking.com",
+   "hotel_name": "Urban Nest Inn & Suites",
+   "address": null,
+   "area": "HSR Layout",
+   "lat": null,
+   "lng": null,
+   "phone": null,
+   "rating": 3.9,
+   "shown_price": 5400,
+   "currency": "INR",
+   "source_url": "https://www.booking.com/?mock=1",
+   "captured_at": "2026-10-30T22:05:00+05:30",
+   "mock": true
+  }
+ ],
+ "hotel_groups": [
+  {
+   "hotel_id": "h1",
+   "canonical_name": "La Marvella",
+   "area": "HSR Layout",
+   "match_status": "merged",
+   "confidence": 0.96,
+   "why": "Name 100%, same area, phone match",
+   "offer_ids": [
+    "h1_cleartrip",
+    "h1_agoda",
+    "h1_booking"
+   ]
+  },
+  {
+   "hotel_id": "h2",
+   "canonical_name": "Lemon Leaf Suites",
+   "area": "Koramangala",
+   "match_status": "merged",
+   "confidence": 0.93,
+   "why": "Name 96%, same area",
+   "offer_ids": [
+    "h2_cleartrip",
+    "h2_agoda",
+    "h2_booking"
+   ]
+  },
+  {
+   "hotel_id": "h3",
+   "canonical_name": "Urban Nest Inn",
+   "area": "HSR Layout",
+   "match_status": "suggested",
+   "confidence": 0.82,
+   "why": "Name 82% (\"Urban Nest Inn\" vs \"Urban Nest Inn & Suites\"), same area. Possible match: not merged in pricing",
+   "offer_ids": [
+    "h3_cleartrip",
+    "h3_booking"
+   ]
+  }
+ ],
+ "offers": [
+  {
+   "offer_id": "h1_cleartrip",
+   "hotel_id": "h1",
+   "run_id": "mock_run_h1_cleartrip",
+   "streaming_url": "/mock/tile-cleartrip.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:10:33+05:30",
+   "steps": 18,
+   "cost_usd": 0.29,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "free",
+   "site": "Cleartrip",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "La Marvella",
+   "hotel_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "room_type": "Deluxe Double",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Free cancellation until 18 Nov 2026, 12:00",
+   "price_shown_on_listing": 8210,
+   "price_shown_on_room_selection": 8210,
+   "price_final_payable": 11276,
+   "fee_lines": [
+    {
+     "label": "Room price (base)",
+     "amount": 15639
+    },
+    {
+     "label": "Taxes & fees",
+     "amount": 1971
+    },
+    {
+     "label": "Discount",
+     "amount": -4692
+    },
+    {
+     "label": "Offer / coupon",
+     "amount": -2737
+    },
+    {
+     "label": "Convenience fee",
+     "amount": 1095
+    }
+   ],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 8210,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 8210,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 10181,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 11276,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Real probe numbers (Cleartrip). Line labels are placeholders.",
+   "fee_leak_pct": 37.3,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8210,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8210,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 11276,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 42,
+    "breakdown": {
+     "fee_leak": 3.4,
+     "addons_pressure": 20,
+     "price_stability": null,
+     "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+   }
+  },
+  {
+   "offer_id": "h1_agoda",
+   "hotel_id": "h1",
+   "run_id": "mock_run_h1_agoda",
+   "streaming_url": "/mock/tile-agoda.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:12:28+05:30",
+   "steps": 23,
+   "cost_usd": 0.37,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "free",
+   "site": "Agoda",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "La Marvella",
+   "hotel_url": "https://www.agoda.com/?mock=1",
+   "room_type": "Deluxe Double",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Free cancellation until 18 Nov 2026, 12:00",
+   "price_shown_on_listing": 8950,
+   "price_shown_on_room_selection": 8950,
+   "price_final_payable": 10412,
+   "fee_lines": [
+    {
+     "label": "Room price",
+     "amount": 8950
+    },
+    {
+     "label": "Taxes & service fees",
+     "amount": 1462
+    }
+   ],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [
+    "Last 3 rooms left at this price",
+    "Price may change"
+   ],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 8950,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 8950,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 10412,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 10412,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock numbers. Pressure messages copied from real probe.",
+   "fee_leak_pct": 16.3,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8950,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8950,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 10412,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 64,
+    "breakdown": {
+     "fee_leak": 29.6,
+     "addons_pressure": 10,
+     "price_stability": 14.7,
+     "evidence": 10
+    },
+    "note": "observed on this run"
+   }
+  },
+  {
+   "offer_id": "h1_booking",
+   "hotel_id": "h1",
+   "run_id": "mock_run_h1_booking",
+   "streaming_url": "/mock/tile-booking.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:12:57+05:30",
+   "steps": 23,
+   "cost_usd": 0.37,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "non_refundable",
+   "site": "Booking.com",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "La Marvella",
+   "hotel_url": "https://www.booking.com/?mock=1",
+   "room_type": "Deluxe Double Room",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Non-refundable",
+   "price_shown_on_listing": 8700,
+   "price_shown_on_room_selection": 8700,
+   "price_final_payable": 9821,
+   "fee_lines": [
+    {
+     "label": "Room price",
+     "amount": 8700
+    },
+    {
+     "label": "Taxes & charges",
+     "amount": 1121
+    }
+   ],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [
+    "Only 2 rooms left on our site"
+   ],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 8700,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 8700,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 9821,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 9821,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock numbers. Non-refundable: not comparable with free-cancellation offers.",
+   "fee_leak_pct": 12.9,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8700,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 8700,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 9821,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 74,
+    "breakdown": {
+     "fee_leak": 33.9,
+     "addons_pressure": 15,
+     "price_stability": null,
+     "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+   }
+  },
+  {
+   "offer_id": "h2_cleartrip",
+   "hotel_id": "h2",
+   "run_id": "mock_run_h2_cleartrip",
+   "streaming_url": "/mock/tile-cleartrip.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:10:41+05:30",
+   "steps": 19,
+   "cost_usd": 0.3,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "free",
+   "site": "Cleartrip",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "Lemon Leaf Suites",
+   "hotel_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "room_type": "Superior Room",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Free cancellation until 19 Nov 2026, 18:00",
+   "price_shown_on_listing": 6400,
+   "price_shown_on_room_selection": 6400,
+   "price_final_payable": 7712,
+   "fee_lines": [
+    {
+     "label": "Room price",
+     "amount": 6400
+    },
+    {
+     "label": "Taxes & fees",
+     "amount": 768
+    },
+    {
+     "label": "Convenience fee",
+     "amount": 544
+    }
+   ],
+   "preselected_addons": [
+    "Trip protection (pre-ticked)"
+   ],
+   "urgency_or_scarcity_messages": [],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 6400,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 6400,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 7168,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 7712,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock numbers.",
+   "fee_leak_pct": 20.5,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 6400,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 6400,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 7712,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 62,
+    "breakdown": {
+     "fee_leak": 24.4,
+     "addons_pressure": 15,
+     "price_stability": null,
+     "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+   }
+  },
+  {
+   "offer_id": "h2_agoda",
+   "hotel_id": "h2",
+   "run_id": "mock_run_h2_agoda",
+   "streaming_url": "/mock/tile-agoda.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:12:15+05:30",
+   "steps": 22,
+   "cost_usd": 0.35,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "free",
+   "site": "Agoda",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "Lemon Leaf Suites",
+   "hotel_url": "https://www.agoda.com/?mock=1",
+   "room_type": "Superior Room",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Free cancellation until 19 Nov 2026, 18:00",
+   "price_shown_on_listing": 6900,
+   "price_shown_on_room_selection": 6900,
+   "price_final_payable": 7728,
+   "fee_lines": [
+    {
+     "label": "Room price",
+     "amount": 6900
+    },
+    {
+     "label": "Taxes & service fees",
+     "amount": 828
+    }
+   ],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [
+    "Price may change"
+   ],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 6900,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 6900,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 7728,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 7728,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock numbers.",
+   "fee_leak_pct": 12.0,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 6900,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 6900,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 7728,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 75,
+    "breakdown": {
+     "fee_leak": 35.0,
+     "addons_pressure": 15,
+     "price_stability": null,
+     "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+   }
+  },
+  {
+   "offer_id": "h2_booking",
+   "hotel_id": "h2",
+   "run_id": "mock_run_h2_booking",
+   "streaming_url": "/mock/tile-booking.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:10:20+05:30",
+   "steps": 9,
+   "cost_usd": 0.14,
+   "status": "blocked",
+   "reconciliation": null,
+   "cancellation_category": null,
+   "site": "Booking.com",
+   "reached_payment_page": false,
+   "furthest_step": "blocked",
+   "blocker": "captcha",
+   "hotel_name": "Lemon Leaf Suites",
+   "hotel_url": "https://www.booking.com/?mock=1",
+   "room_type": "",
+   "max_occupancy": null,
+   "meal_plan": "",
+   "cancellation_policy": "",
+   "price_shown_on_listing": 6750,
+   "price_shown_on_room_selection": null,
+   "price_final_payable": null,
+   "fee_lines": [],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 6750,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock: blocked at captcha. Shown honestly, never scored.",
+   "fee_leak_pct": null,
+   "evidence": [],
+   "mock": true,
+   "transparency": {
+    "score": null,
+    "breakdown": null,
+    "note": "N/A (not verified)"
+   }
+  },
+  {
+   "offer_id": "h3_cleartrip",
+   "hotel_id": "h3",
+   "run_id": "mock_run_h3_cleartrip",
+   "streaming_url": "/mock/tile-cleartrip.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:10:28+05:30",
+   "steps": 17,
+   "cost_usd": 0.27,
+   "status": "verified",
+   "reconciliation": "ok",
+   "cancellation_category": "free",
+   "site": "Cleartrip",
+   "reached_payment_page": true,
+   "furthest_step": "payment",
+   "blocker": null,
+   "hotel_name": "Urban Nest Inn",
+   "hotel_url": "https://www.cleartrip.com/hotels/?mock=1",
+   "room_type": "Standard Double",
+   "max_occupancy": 2,
+   "meal_plan": "Breakfast included",
+   "cancellation_policy": "Free cancellation until 19 Nov 2026, 12:00",
+   "price_shown_on_listing": 5200,
+   "price_shown_on_room_selection": 5200,
+   "price_final_payable": 6106,
+   "fee_lines": [
+    {
+     "label": "Room price",
+     "amount": 5200
+    },
+    {
+     "label": "Taxes & fees",
+     "amount": 624
+    },
+    {
+     "label": "Convenience fee",
+     "amount": 282
+    }
+   ],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 5200,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 5200,
+     "currency": "INR"
+    },
+    {
+     "step": "traveller_details",
+     "amount": 5824,
+     "currency": "INR"
+    },
+    {
+     "step": "payment",
+     "amount": 6106,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock numbers.",
+   "fee_leak_pct": 17.4,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "listing",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 5200,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 5200,
+     "currency": "INR",
+     "mock": true
+    },
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "payment",
+     "captured_at": "2026-10-30T22:10:00+05:30",
+     "extracted_value": 6106,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": 73,
+    "breakdown": {
+     "fee_leak": 28.3,
+     "addons_pressure": 20,
+     "price_stability": null,
+     "evidence": 10
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
+   }
+  },
+  {
+   "offer_id": "h3_booking",
+   "hotel_id": "h3",
+   "run_id": "mock_run_h3_booking",
+   "streaming_url": "/mock/tile-booking.html",
+   "started_at": "2026-10-30T22:08:00+05:30",
+   "finished_at": "2026-10-30T22:13:00+05:30",
+   "steps": 25,
+   "cost_usd": 0.4,
+   "status": "unverified",
+   "reconciliation": null,
+   "cancellation_category": null,
+   "site": "Booking.com",
+   "reached_payment_page": false,
+   "furthest_step": "room",
+   "blocker": "timeout",
+   "hotel_name": "Urban Nest Inn & Suites",
+   "hotel_url": "https://www.booking.com/?mock=1",
+   "room_type": "Standard Double Room",
+   "max_occupancy": 2,
+   "meal_plan": "",
+   "cancellation_policy": "",
+   "price_shown_on_listing": 5400,
+   "price_shown_on_room_selection": 5400,
+   "price_final_payable": null,
+   "fee_lines": [],
+   "preselected_addons": [],
+   "urgency_or_scarcity_messages": [],
+   "price_trail": [
+    {
+     "step": "listing",
+     "amount": 5400,
+     "currency": "INR"
+    },
+    {
+     "step": "room",
+     "amount": 5400,
+     "currency": "INR"
+    }
+   ],
+   "currency": "INR",
+   "notes": "Mock: stopped at room step, no payable price. Possible match only (0.82).",
+   "fee_leak_pct": null,
+   "evidence": [
+    {
+     "type": "screenshot",
+     "url": "/mock/evidence-placeholder.svg",
+     "step": "room",
+     "captured_at": "2026-10-30T22:12:00+05:30",
+     "extracted_value": 5400,
+     "currency": "INR",
+     "mock": true
+    }
+   ],
+   "mock": true,
+   "transparency": {
+    "score": null,
+    "breakdown": null,
+    "note": "N/A (not verified)"
+   }
+  }
+ ],
+ "verdicts": {
+  "deal_mode": "best_value",
+  "hero_hotel_id": "h1",
+  "ranking": [
+   {
+    "offer_id": "h3_cleartrip",
+    "total": 95.1,
+    "components": {
+     "price": 100.0,
+     "prefs": 100.0,
+     "cancellation": 100,
+     "quality": 78.0,
+     "transparency": 73
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   },
+   {
+    "offer_id": "h2_agoda",
+    "total": 88.2,
+    "components": {
+     "price": 79.0,
+     "prefs": 100.0,
+     "cancellation": 100,
+     "quality": 80.0,
+     "transparency": 75
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   },
+   {
+    "offer_id": "h2_cleartrip",
+    "total": 86.9,
+    "components": {
+     "price": 79.2,
+     "prefs": 100.0,
+     "cancellation": 100,
+     "quality": 80.0,
+     "transparency": 62
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   },
+   {
+    "offer_id": "h1_agoda",
+    "total": 80.3,
+    "components": {
+     "price": 58.6,
+     "prefs": 100.0,
+     "cancellation": 100,
+     "quality": 84.0,
+     "transparency": 64
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   },
+   {
+    "offer_id": "h1_cleartrip",
+    "total": 76.6,
+    "components": {
+     "price": 54.2,
+     "prefs": 100.0,
+     "cancellation": 100,
+     "quality": 84.0,
+     "transparency": 42
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   },
+   {
+    "offer_id": "h1_booking",
+    "total": 50.1,
+    "components": {
+     "price": 62.2,
+     "prefs": 50.0,
+     "cancellation": 0,
+     "quality": 84.0,
+     "transparency": 74
+    },
+    "weights": {
+     "price": 35,
+     "prefs": 25,
+     "cancellation": 20,
+     "quality": 10,
+     "transparency": 10
+    }
+   }
+  ],
+  "overall": {
+   "cheapest_verified": "h3_cleartrip",
+   "safe_cheapest": "h3_cleartrip",
+   "best_for_you": "h3_cleartrip",
+   "headlines": {
+    "cheapest_verified": "Urban Nest Inn on Cleartrip: you pay INR 6,106, listing showed INR 5,200",
+    "safe_cheapest": "Urban Nest Inn on Cleartrip: INR 6,106 with free cancellation",
+    "best_for_you": "Urban Nest Inn on Cleartrip: INR 6,106"
+   }
+  },
+  "per_hotel": {
+   "h1": {
+    "cheapest_verified": "h1_booking",
+    "safe_cheapest": "h1_agoda",
+    "best_for_you": "h1_agoda",
+    "headlines": {
+     "cheapest_verified": "La Marvella on Booking.com: you pay INR 9,821, listing showed INR 8,700",
+     "safe_cheapest": "La Marvella on Agoda: INR 10,412 with free cancellation",
+     "best_for_you": "La Marvella on Agoda: INR 10,412"
+    }
+   },
+   "h2": {
+    "cheapest_verified": "h2_cleartrip",
+    "safe_cheapest": "h2_cleartrip",
+    "best_for_you": "h2_agoda",
+    "headlines": {
+     "cheapest_verified": "Lemon Leaf Suites on Cleartrip: you pay INR 7,712, listing showed INR 6,400",
+     "safe_cheapest": "Lemon Leaf Suites on Cleartrip: INR 7,712 with free cancellation",
+     "best_for_you": "Lemon Leaf Suites on Agoda: INR 7,728"
+    }
+   },
+   "h3": {
+    "cheapest_verified": "h3_cleartrip",
+    "safe_cheapest": "h3_cleartrip",
+    "best_for_you": "h3_cleartrip",
+    "headlines": {
+     "cheapest_verified": "Urban Nest Inn on Cleartrip: you pay INR 6,106, listing showed INR 5,200",
+     "safe_cheapest": "Urban Nest Inn on Cleartrip: INR 6,106 with free cancellation",
+     "best_for_you": "Urban Nest Inn on Cleartrip: INR 6,106"
+    }
+   }
+  },
+  "non_comparable_warnings": [
+   {
+    "hotel_id": "h1",
+    "offer_id": "h1_booking",
+    "message": "Booking.com room is non-refundable; not comparable with the free-cancellation rooms on Cleartrip and Agoda."
+   }
+  ],
+  "mock": true
+ },
+ "handoff": {
+  "offer_id": "h1_agoda",
+  "platform": "Agoda",
+  "deep_link": "https://www.agoda.com/",
+  "qr_png_base64": "",
+  "qr_note": "Mock: UI renders QR from deep_link client-side (qrcode lib). Backend fills qr_png_base64 in live mode.",
+  "selection_card": {
+   "hotel": "La Marvella",
+   "room_type": "Deluxe Double",
+   "meal_plan": "Breakfast included",
+   "cancellation": "Free cancellation until 18 Nov 2026, 12:00",
+   "dates": "20-21 Nov 2026 (1 night)",
+   "guests": 2,
+   "expected_final_payable": 10412,
+   "currency": "INR",
+   "verified_at": "2026-10-30T22:13:00+05:30"
+  },
+  "copy_paste": {
+   "name": "Test Guest",
+   "email": "test.guest+probe@example.com",
+   "phone": "9000000000"
+  },
+  "disclaimer": "Price verified at 10:13 PM. Re-check before paying; prices can change.",
+  "mock": true
+ },
+ "rechecks": [
+  {
+   "recheck_id": "mock_recheck_h1_agoda",
+   "offer_id": "h1_agoda",
+   "status": "done",
+   "previous": {
+    "amount": 10412,
+    "at": "2026-10-30T22:08:00+05:30"
+   },
+   "current": {
+    "amount": 10690,
+    "at": "2026-10-30T22:31:00+05:30"
+   },
+   "delta": 278,
+   "delta_pct": 2.7,
+   "elapsed_minutes": 23,
+   "trail_diff": [
+    {
+     "step": "payment",
+     "before": 10412,
+     "after": 10690
+    }
+   ],
+   "message": "Price moved INR 10,412 -> INR 10,690 in 23 min (observed).",
+   "mock": true
+  }
+ ],
+ "summary_strip": {
+  "listings_found": 24,
+  "unique_hotels": 3,
+  "verified": 6,
+  "unverified": 1,
+  "blocked": 1,
+  "avg_fee_leak_pct": 19.4
+ }
+}
