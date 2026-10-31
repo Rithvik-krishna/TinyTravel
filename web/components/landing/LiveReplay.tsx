@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useCallback, useEffect, useMemo, useRef } from "react";
-import { MOCK, openStream } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
 import { TagItem } from "@/lib/tags";
 import { countsOf, emptyStream, replayAll, StreamEvent, useInvestigationStream } from "@/lib/useInvestigationStream";
@@ -17,10 +16,14 @@ interface Props {
 }
 
 export function LiveReplay({ tiles, total, events }: Props) {
-  const finalState = useMemo(() => (MOCK ? replayAll(events) : emptyStream), [events]);
+  const finalState = useMemo(() => replayAll(events), [events]);
   const open = useCallback(
-    (onEvent: (event: string, data: unknown) => void) => openStream("demo", onEvent, MOCK ? 2 : 1),
-    [],
+    // The landing replay always plays the bundled sample script locally at 2x, independent of the data mode.
+    (onEvent: (event: string, data: unknown) => void) => {
+      const timers = (events as Array<StreamEvent & { t_ms?: number }>).map((ev) => window.setTimeout(() => onEvent(ev.event, ev.data), (ev.t_ms ?? 0) / 2));
+      return () => timers.forEach(clearTimeout);
+    },
+    [events],
   );
   const { state, start } = useInvestigationStream(open, finalState);
   const box = useRef<HTMLDivElement>(null);

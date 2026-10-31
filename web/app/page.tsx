@@ -1,7 +1,7 @@
 import React from "react";
 import script from "@fixtures/sse_script.json";
 import "./landing.css";
-import { getHandoff, getResults } from "@/lib/dataSource";
+import demo from "@fixtures/demo_run.json";
 import { offersToTags } from "@/lib/tags";
 import { Handoff, LandingResults } from "@/lib/landing";
 import type { StreamEvent } from "@/lib/useInvestigationStream";
@@ -26,7 +26,8 @@ interface SearchRequest {
 }
 
 export default async function Home() {
-  const results: LandingResults & { search_request?: SearchRequest } = await getResults("demo");
+  // The landing page always shows the bundled sample run, whatever data mode the product flow uses.
+  const results = demo as unknown as LandingResults & { search_request?: SearchRequest };
   const tags = offersToTags(results);
   const groups = results.hotel_groups ?? [];
 
@@ -38,7 +39,7 @@ export default async function Home() {
   const proofOffer = heroTags.find((t) => t.status === "verified" && t.price_trail.length > 0);
 
   const handoffId = pick?.best_for_you ?? pick?.safe_cheapest ?? undefined;
-  const handoff: Handoff | null = handoffId ? await getHandoff(handoffId) : null;
+  const handoff: Handoff | null = handoffId && demo.handoff.offer_id === handoffId ? (demo.handoff as Handoff) : null;
 
   const platforms = Array.from(new Set(tags.map((t) => t.platform)));
   const events = (script as { events: StreamEvent[] }).events;
