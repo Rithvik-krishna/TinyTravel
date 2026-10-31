@@ -1,115 +1,117 @@
 {
-  "offer_id": "off_agoda_la_marve",
-  "hotel_id": "h_la_marve",
-  "run_id": "fa06526f-50d0-4047-94f3-80bfed954758",
-  "streaming_url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-7556d027-0b76-4814-af8e-e29be68e16ae/stream/1",
-  "started_at": "2026-10-31T16:22:27.250205+05:30",
-  "finished_at": "2026-10-31T16:27:53.583729+05:30",
-  "steps": 30,
-  "cost_usd": 0.48,
-  "status": "unverified",
+  "offer_id": "h1_agoda",
+  "hotel_id": "h1",
+  "run_id": "9b3e96a7-adbc-49b8-b0fb-6ab360a724cf",
+  "streaming_url": "https://ip-18-144-154-238.tetra-data.production.tinyfish.io/tf-5aa4cdb8-d4df-4ed6-80ac-6417e64a6a85/stream/2",
+  "started_at": "2026-10-31T17:31:13.169397+05:30",
+  "finished_at": "2026-10-31T17:36:45.086163+05:30",
+  "steps": 32,
+  "cost_usd": 0.512,
+  "status": "verified",
   "reconciliation": "ok",
-  "cancellation_category": "partial",
+  "cancellation_category": "non_refundable",
   "site": "agoda",
   "reached_payment_page": true,
   "furthest_step": "payment",
   "blocker": null,
   "hotel_name": "La Marvella",
-  "hotel_url": "https://www.agoda.com/accom/property?propertyId=261499&countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&flightSearchCriteria=%5Bobject+Object%5D&tspTypes=6&los=1&searchrequestid=5c3ff86f-d290-48a7-9a35-6bbfadaa2f22",
+  "hotel_url": "https://www.agoda.com/accom/property?propertyId=261499&countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&flightSearchCriteria=[object%20Object]&los=1&searchrequestid=85303fd9-43d2-4396-97eb-8ab3230e19c3",
   "room_type": "Executive Twin",
-  "max_occupancy": 1,
-  "meal_plan": "Breakfast available for an additional 999 INR/person (not included)",
-  "cancellation_policy": "Fully refundable - cancel for free before 17 November 2026",
-  "price_shown_on_listing": 20339.0,
-  "price_shown_on_room_selection": 15153.37,
-  "price_final_payable": 15153.37,
+  "max_occupancy": 2,
+  "meal_plan": "Breakfast included",
+  "cancellation_policy": "Non-refundable",
+  "price_shown_on_listing": 10948.0,
+  "price_shown_on_room_selection": 10948.0,
+  "price_final_payable": 12936.93,
   "fee_lines": [
     {
-      "label": "Base price",
-      "amount": 15153.37,
+      "label": "Room price (1 room x 1 night)",
+      "amount": 12936.93,
       "fee_kind": "tax"
     },
     {
-      "label": "Booking fee",
+      "label": "Booking fees",
       "amount": 0.0,
-      "fee_kind": "tax"
+      "fee_kind": "add_on"
     },
     {
-      "label": "Tax (18%)",
+      "label": "18% tax",
       "amount": 0.0,
       "fee_kind": "tax"
     }
   ],
-  "preselected_addons": [
-    "Non-smoking (pre-selected)",
-    "I'd like a large bed (pre-selected)"
-  ],
+  "preselected_addons": [],
   "urgency_or_scarcity_messages": [
-    "Hurry up! 1 room type has already sold out for your dates!",
-    "Our last room! Book now and it's yours.",
-    "Need flight? Get up to 8% off",
-    "Last room for your dates at this price"
+    "Current price may change in 00:19:48",
+    "Extra low price! (non-refundable)",
+    "We have limited availability at this price - book now!",
+    "You won't be charged yet."
   ],
   "price_trail": [
     {
       "step": "listing",
-      "amount": 20339.0,
+      "amount": 10948.0,
       "currency": "INR"
     },
     {
       "step": "room",
-      "amount": 15153.37,
+      "amount": 10948.0,
       "currency": "INR"
     },
     {
       "step": "traveller_details",
-      "amount": 15153.37,
+      "amount": 12936.93,
       "currency": "INR"
     },
     {
       "step": "payment",
-      "amount": 15153.37,
+      "amount": 12936.93,
       "currency": "INR"
     }
   ],
   "currency": "INR",
-  "notes": "La Marvella was found. The cheapest room fitting 2 adults is 'Executive Twin' (201010091630563309) at Rs. 15,153.37, which has breakfast NOT included (available for 999 INR extra) and free cancellation before 17 Nov 2026. Another cheaper room (Executive Twin 2587) at Rs. 9,659 was identified but its max occupancy is only 1 adult, so it does not fit the requirement of 2 adults. Booked as guest: Test Guest, test.guest+probe@example.com, +91-9000000000. [Occupancy mismatch: room fits 1 adults but search requested 2]",
-  "fee_leak_pct": null,
+  "notes": "Room name on booking summary page: '1 x Executive Twin' with 2 adults. Total price Rs. 12,936.93. Listing price for this same room was Rs. 10,948.00 (matches). Payment page shows room price Rs. 12,936.93 (1 room x 1 night), booking fees FREE, 18% tax included. Meal plan: Breakfast included. Cancellation: Non-refundable. No pre-selected add-ons. Guest details entered: Test Guest, test.guest+probe@example.com, 9000000000.",
+  "fee_leak_pct": 18.2,
   "evidence": [
     {
       "type": "recording",
-      "url": "https://ip-18-144-215-115.tetra-data.production.tinyfish.io/tf-7556d027-0b76-4814-af8e-e29be68e16ae/stream/1",
+      "url": "https://ip-18-144-154-238.tetra-data.production.tinyfish.io/tf-5aa4cdb8-d4df-4ed6-80ac-6417e64a6a85/stream/2",
       "step": "payment",
-      "captured_at": "2026-10-31T16:27:53.583729+05:30",
-      "extracted_value": 15153.37,
+      "captured_at": "2026-10-31T17:36:45.086163+05:30",
+      "extracted_value": 12936.93,
       "currency": "INR",
       "mock": false
     },
     {
       "type": "page_text",
-      "url": "/evidence/off_agoda_la_marve_listing.txt",
+      "url": "/evidence/h1_agoda_listing.txt",
       "step": "listing",
-      "captured_at": "2026-10-31T16:22:27.250205+05:30",
-      "extracted_value": 20339.0,
+      "captured_at": "2026-10-31T17:31:13.169397+05:30",
+      "extracted_value": 10948.0,
       "currency": "INR",
       "mock": false
     },
     {
       "type": "page_text",
-      "url": "/evidence/off_agoda_la_marve_payment.txt",
+      "url": "/evidence/h1_agoda_payment.txt",
       "step": "payment",
-      "captured_at": "2026-10-31T16:27:53.583729+05:30",
-      "extracted_value": 15153.37,
+      "captured_at": "2026-10-31T17:36:45.086163+05:30",
+      "extracted_value": 12936.93,
       "currency": "INR",
       "mock": false
     }
   ],
   "mock": false,
-  "listing_page_text": "La Marvella \u00b7 Jayanagar, Bangalore, India \u00b7 8.2 Excellent \u00b7 722 reviews",
-  "payment_page_text": "La Marvella\nFri, Nov 20 - Sat, Nov 21 \u2022 1 night \u2022 1 x Executive Twin\nBase price (1 room x 1 night): Rs. 15,153.37\nBooking fees: Rs. 0.0\nTax (18%): Included in total\nTotal Price: Rs. 15,153.37\nFull refund if you cancel before 17 Nov\nLast room! Book now and it's yours.",
+  "listing_page_text": "La Marvella - 5 stars out of 5 - From Rs. 10,948",
+  "payment_page_text": "1 x Executive Twin - La Marvella, Bangalore, India. 2 adults, 1 room, 1 night (Nov 20-21, 2026). Room price (1 room x 1 night): Rs. 12,936.93. Booking fees: FREE. Total price: Rs. 12,936.93 (includes 18% tax). Extra low price! (non-refundable). Current price may change in 00:18:11.",
   "transparency": {
-    "score": null,
-    "breakdown": null,
-    "note": "N/A (not verified)"
+    "score": 42,
+    "breakdown": {
+      "fee_leak": 27.3,
+      "addons_pressure": 0,
+      "price_stability": null,
+      "evidence": 6.7
+    },
+    "note": "observed on this run; stability N/A, weights re-normalised"
   }
 }

@@ -100,6 +100,8 @@ async def main_async(args: argparse.Namespace) -> int:
             return 1
         os.environ["DATA_MODE"] = "live"
         os.environ.pop("TINYFISH_FAKE", None)
+        if "AGENT_TIMEOUT_S" not in os.environ:
+            os.environ["AGENT_TIMEOUT_S"] = "600"
         print(">>> RUNNING IN LIVE MODE with real TinyFish agents <<<\n")
     else:
         os.environ["DATA_MODE"] = "fake"
@@ -248,7 +250,7 @@ def main():
 
     args = parser.parse_args()
     ret = asyncio.run(main_async(args))
-    sys.exit(ret)
+    os._exit(ret)
 
 
 if __name__ == "__main__":
