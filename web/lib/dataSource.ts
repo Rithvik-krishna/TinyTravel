@@ -5,9 +5,9 @@ export const MOCK = process.env.NEXT_PUBLIC_DATA_MODE !== "live";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 export const EVENTS = ["parsed","discovery_started","listings_found","hotels_grouped","agent_started","agent_progress","agent_done","ranking_ready","error"];
 
-export async function startSearch(text: string) {
+export async function startSearch(text: string, request?: Record<string, unknown>) {
   if (MOCK) return { search_id: "mock_search" };
-  return (await fetch(`${API}/api/search`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ text }) })).json();
+  return (await fetch(`${API}/api/search`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(request ? { text, ...request } : { text }) })).json();
 }
 export async function getResults(id: string): Promise<any> {
   return MOCK ? demo : (await fetch(`${API}/api/search/${id}/results`)).json();

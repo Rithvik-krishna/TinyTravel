@@ -1,2 +1,99 @@
-@tailwind base; @tailwind components; @tailwind utilities;
-body { @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --text-muted: #64748b;
+  --brand: #0284c7;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+  --info: #2563eb;
+
+  /* Aliases for reference component and shadcn tokens */
+  --color-foreground: var(--text);
+  --color-background: var(--surface);
+  --color-card: var(--surface-2);
+  --color-card-foreground: var(--text);
+  --color-muted: var(--surface-2);
+  --color-muted-foreground: var(--text-muted);
+  --color-border: var(--border);
+  --color-ring: var(--brand);
+  --color-chart-2: var(--success);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0b0f19;
+    --surface-2: #131b2e;
+    --border: #1e293b;
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+    --brand: #38bdf8;
+    --success: #22c55e;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+    --info: #60a5fa;
+
+    --color-foreground: var(--text);
+    --color-background: var(--surface);
+    --color-card: var(--surface-2);
+    --color-card-foreground: var(--text);
+    --color-muted: var(--surface-2);
+    --color-muted-foreground: var(--text-muted);
+    --color-border: var(--border);
+    --color-ring: var(--brand);
+    --color-chart-2: var(--success);
+  }
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text);
+}
+
+/* Landing ("/") tokens. Scoped to .tt so the other pages' --surface/--info etc. are not overridden. */
+.tt {
+  --bg:#0a0f1e; --surface:#121a30; --surface2:#1a2540; --line:#27345a;
+  --fg:#eaeef8; --muted:#9aa6c2; --brass:#d9a441; --brass-hi:#f2c970; --brass-lo:#8a6420;
+  --ok:#3ecf8e; --warn:#f2b84b; --bad:#f07a7a; --info:#6db3ff;
+  --tag-bg:#eee9dc; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#cfc8b6;
+  --on-brass:#1b1405;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .tt {
+    --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
+    --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
+    --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
+    --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
+    --on-brass:#fff; color-scheme: light;
+  }
+}
+:root[data-theme="light"] .tt, .tt[data-theme="light"] {
+  --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
+  --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
+  --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
+  --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
+  --on-brass:#fff; color-scheme: light;
+}
+/* Booking/flow theme (.tb on top of .tt): teal action colour, calm light-first palette. Re-maps the same token names. */
+.tt.tb { --font-body: var(--font-figtree);
+  /* Midnight Navy / Deep Slate / Steel Blue / Electric Teal / Soft Coral / Snow White / Muted Blue / Success Green / Warning Amber */
+  --bg:#0B1220; --surface:#172438; --surface2:#1d2e47; --line:#263B52;
+  --fg:#F8FAFC; --muted:#9BAFC5; --brass:#2DD4BF; --brass-hi:#2DD4BF; --brass-lo:#14998a; --on-brass:#06231f;
+  --ok:#4ADE80; --warn:#FBBF24; --bad:#FF8B72; --info:#7dd3fc; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .tt.tb {
+    --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
+    --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
+    --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
+}
+:root[data-theme="light"] .tt.tb {
+  --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
+  --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
+  --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
