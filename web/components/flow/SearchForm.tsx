@@ -46,6 +46,16 @@ function initial(): SearchRequest {
   };
 }
 
+/**
+ * The API reads structured fields directly. Sending a sentence too makes its text parser re-read the dates
+ * and it mangles ISO dates, so only the structured fields are sent (no `text`, no `raw_text`).
+ */
+function structured(r: SearchRequest): Record<string, unknown> {
+  const { raw_text: _raw, ...rest } = r;
+  void _raw;
+  return rest;
+}
+
 type Errors = Partial<Record<"destination" | "check_in" | "check_out" | "budget_per_night", string>>;
 
 export function validate(r: SearchRequest, today: string): Errors {
@@ -80,6 +90,17 @@ export function SearchForm() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [nl, setNl] = useState("");
+  const [nlMsg, setNlMsg] = useState("");
+  const fillIn = () => {
+    if (!nl.trim()) return;
+    const next = applySentence(req, nl, today);
+    if (JSON.stringify(next) === JSON.stringify(req)) {
+      setNlMsg("We could not read details from that. Try something like: Bengaluru, 20-21 Nov, 2 people, under 12k.");
+      return;
+    }
+    setReq(next);
+    setNlMsg("Filled in. Check the details below, then press Verify prices.");
+  };
   const dlg = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -101,12 +122,13 @@ export function SearchForm() {
     setError(null);
     const full = { ...req, destination: req.destination.trim(), raw_text: buildSentence(req) };
     try {
-      const res: { search_id?: string } = await startSearch(full.raw_text, { ...full });
-      if (!res?.search_id) throw new Error("no id");
+      const res: { search_id?: string; detail?: unknown } = await startSearch("", structured(full));
+      if (!res?.search_id) throw new Error(res?.detail ? JSON.stringify(res.detail).slice(0, 160) : "the service did not return a search id");
       saveSearch(full, res.search_id);
       router.push(`/investigation?id=${encodeURIComponent(res.search_id)}`);
-    } catch {
-      setError("Couldn't start the search. Check your connection and try again.");
+    } catch (e) {
+      const why = e instanceof Error ? e.message : "";
+      setError(`Couldn't start the search${why ? ` (${why})` : ""}. Check that the booking service is running and try again.`);
       setBusy(false);
     }
   };
@@ -115,9 +137,10 @@ export function SearchForm() {
     <form className="sform" onSubmit={submit} noValidate aria-label="Search hotels">
       <h2 className="sf-title">Find your stay</h2>
       <div className="nlrow">
-        <input type="text" aria-label="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(e) => setNl(e.target.value)} />
-        <button className="btn ghost sm" type="button" onClick={() => nl.trim() && setReq((r) => applySentence(r, nl, today))}>Fill in</button>
+        <input type="text" aria-label="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(e) => { setNl(e.target.value); setNlMsg(""); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); fillIn(); } }} />
+        <button className="btn ghost sm" type="button" onClick={fillIn}>Fill in</button>
       </div>
+      {nlMsg && <p className="fine" role="status">{nlMsg}</p>}
       <div className="fgrid">
         <div className="field f-wide">
           <label htmlFor="dest">Where to?</label>
@@ -168,10 +191,7 @@ export function SearchForm() {
         </div>
       </fieldset>
 
-      <details className="req">
-        <summary>What we&apos;ll check</summary>
-        <pre>{JSON.stringify({ ...req, raw_text: buildSentence(req) }, null, 2)}</pre>
-      </details>
+      
 
       {error && <div className="notice bad" role="alert">{error}</div>}
 
