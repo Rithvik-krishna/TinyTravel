@@ -132,8 +132,18 @@ const MONTHS: Record<string, number> = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5,
 export function applySentence(r: SearchRequest, text: string, today: string): SearchRequest {
   const t = text.toLowerCase();
   const next: SearchRequest = { ...r, must_have: { ...r.must_have } };
-  const city = text.split(",")[0].trim();
-  if (city && city.length < 30 && !/\d/.test(city)) next.destination = city;
+  // Destination: the first comma-separated part if it is plain text, otherwise whatever is left after removing the other details.
+  const first = text.split(",")[0].trim();
+  const rest = text
+    .replace(/(\d{1,2})\s*(?:-|–|to)\s*(\d{1,2})\s*[a-z]{3}[a-z]*/gi, " ")
+    .replace(/(?:for\s+)?\d+\s*(?:people|guests|adults|persons)/gi, " ")
+    .replace(/(?:under|below|max)\s*\d+\s*k/gi, " ")
+    .replace(/breakfast|free cancell?ation|wi-?fi|parking/gi, " ")
+    .replace(/[,.]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const city = text.includes(",") && first && !/\d/.test(first) ? first : rest;
+  if (city && city.length < 40 && !/\d/.test(city)) next.destination = city.replace(/\b\w/g, (c) => c.toUpperCase());
   const d = t.match(/(\d{1,2})\s*(?:-|–|to)\s*(\d{1,2})\s*([a-z]{3})/);
   if (d && MONTHS[d[3]]) {
     const mo = String(MONTHS[d[3]]).padStart(2, "0");
