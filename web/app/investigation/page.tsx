@@ -54,7 +54,7 @@ function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
             {tag.listing != null && <s>listing {inr(tag.listing, tag.currency)}</s>}
           </div>
         )}
-        {a.status === "blocked" && <p style={{ color: "var(--muted)", fontSize: 14 }}>{blockerLabel(tag?.blocker)}. We never solve captchas or log in, so there is no price for this one.</p>}
+        {a.status === "blocked" && <p style={{ color: "var(--muted)", fontSize: 14 }}>{blockerLabel(tag?.blocker)}. {tag?.blocker === "captcha" || tag?.blocker === "login" || tag?.blocker === "otp" ? "We never solve captchas, log in or enter an OTP, so there is no price for this one." : "No price was captured for this site."}</p>}
         {a.status === "unverified" && <p style={{ color: "var(--muted)", fontSize: 14 }}>Not verified: no payable price was captured.</p>}
       </div>
     </div>
