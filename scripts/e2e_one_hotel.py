@@ -254,6 +254,8 @@ def main():
 
     args = parser.parse_args()
     ret = asyncio.run(main_async(args))
+    sys.stdout.flush()
+    sys.stderr.flush()
     os._exit(ret)
 
 
