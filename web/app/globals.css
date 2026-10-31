@@ -81,3 +81,18 @@ body {
   --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
   --on-brass:#fff; color-scheme: light;
 }
+/* Booking/flow theme (.tb on top of .tt): teal action colour, calm light-first palette. Re-maps the same token names. */
+.tt.tb { --font-body: var(--font-figtree);
+  --bg:#0a1211; --surface:#111c1a; --surface2:#172624; --line:#243633;
+  --fg:#e6f0ee; --muted:#94a9a5; --brass:#38c6b0; --brass-hi:#38c6b0; --brass-lo:#1f8d7c; --on-brass:#04201b;
+  --ok:#4cd391; --warn:#f0b366; --bad:#f28e8e; --info:#82b6ff; }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .tt.tb {
+    --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
+    --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
+    --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
+}
+:root[data-theme="light"] .tt.tb {
+  --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
+  --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
+  --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }

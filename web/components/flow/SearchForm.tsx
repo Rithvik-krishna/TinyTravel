@@ -4,7 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
-import { buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
+import { inr } from "@/lib/format";
+import { applySentence, buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
 
 const MUST: Array<[keyof MustHave, string]> = [
   ["breakfast", "Breakfast"],
@@ -37,7 +38,7 @@ function initial(): SearchRequest {
     check_out: "",
     guests: 2,
     rooms: 1,
-    budget_per_night: 0,
+    budget_per_night: 12000,
     must_have: { breakfast: false, free_cancellation: false, wifi: false, parking: false },
     deal_mode: "best_value",
     currency: "INR",
@@ -78,6 +79,7 @@ export function SearchForm() {
   const [touched, setTouched] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [nl, setNl] = useState("");
   const dlg = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -111,6 +113,11 @@ export function SearchForm() {
 
   return (
     <form className="sform" onSubmit={submit} noValidate aria-label="Search hotels">
+      <h2 className="sf-title">Find your stay</h2>
+      <div className="nlrow">
+        <input type="text" aria-label="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(e) => setNl(e.target.value)} />
+        <button className="btn ghost sm" type="button" onClick={() => nl.trim() && setReq((r) => applySentence(r, nl, today))}>Fill in</button>
+      </div>
       <div className="fgrid">
         <div className="field f-wide">
           <label htmlFor="dest">Where to?</label>
@@ -133,11 +140,8 @@ export function SearchForm() {
         <Counter label="Guests" value={req.guests} min={1} max={12} onChange={(n) => set("guests", n)} />
         <Counter label="Rooms" value={req.rooms} min={1} max={6} onChange={(n) => set("rooms", n)} />
         <div className="field">
-          <label htmlFor="budget">Budget per night</label>
-          <div className="money">
-            <span aria-hidden="true">₹</span>
-            <input id="budget" type="number" inputMode="numeric" min={1} step={100} value={req.budget_per_night || ""} onChange={(e) => set("budget_per_night", Number(e.target.value))} aria-invalid={!!show("budget_per_night")} aria-describedby="e-bud" />
-          </div>
+          <label htmlFor="budget">Budget per night: <span className="num" style={{ color: "var(--fg)", textTransform: "none", letterSpacing: 0 }}>{inr(req.budget_per_night)}</span></label>
+          <input id="budget" type="range" min={2000} max={20000} step={500} value={Math.min(20000, Math.max(2000, req.budget_per_night || 12000))} onChange={(e) => set("budget_per_night", Number(e.target.value))} aria-describedby="e-bud" />
           <span id="e-bud" className="err" role="alert">{show("budget_per_night")}</span>
         </div>
       </div>

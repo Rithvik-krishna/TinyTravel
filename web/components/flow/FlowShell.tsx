@@ -9,7 +9,7 @@ import { Footer } from "@/components/landing/Footer";
 import { useSearchId, withId } from "@/lib/flow";
 
 const STEPS: Array<{ href: string; label: string }> = [
-  { href: "/", label: "Search" },
+  { href: "/book", label: "Search" },
   { href: "/investigation", label: "Investigate" },
   { href: "/compare", label: "Results" },
   { href: "/evidence", label: "Proof" },
@@ -35,7 +35,7 @@ function Stepper() {
         const reachable = i === 0 || id != null;
         return (
           <li key={s.href} className={cls} aria-current={i === current ? "step" : undefined}>
-            {reachable ? <Link href={i === 0 ? "/" : withId(s.href, id)}>{inner}</Link> : <span className="st">{inner}</span>}
+            {reachable ? <Link href={withId(s.href, i === 0 ? null : id)}>{inner}</Link> : <span className="st">{inner}</span>}
           </li>
         );
       })}
@@ -45,7 +45,7 @@ function Stepper() {
 
 export function FlowShell({ children, showSteps = true }: { children: React.ReactNode; showSteps?: boolean }) {
   return (
-    <div className="tt">
+    <div className="tt tb">
       <header className="nav">
         <div className="wrap">
           <Link className="logo" href="/">
@@ -57,7 +57,7 @@ export function FlowShell({ children, showSteps = true }: { children: React.Reac
             <Link href="/#safety">Safety</Link>
             <Link href="/#faq">FAQ</Link>
           </nav>
-          <Link className="btn sm" href="/">New search</Link>
+          <Link className="btn sm" href="/book">New search</Link>
         </div>
       </header>
       {showSteps && (
@@ -75,7 +75,7 @@ export function FlowShell({ children, showSteps = true }: { children: React.Reac
   );
 }
 
-export function EmptyState({ title, body, href = "/", cta = "Start a search" }: { title: string; body: string; href?: string; cta?: string }) {
+export function EmptyState({ title, body, href = "/book", cta = "Start a search" }: { title: string; body: string; href?: string; cta?: string }) {
   return (
     <div className="empty">
       <h2>{title}</h2>

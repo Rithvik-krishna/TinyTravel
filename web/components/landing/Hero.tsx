@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { TagItem } from "@/lib/tags";
 import { LandingMeta } from "@/lib/landing";
 import { KeyTagRail } from "./KeyTagRail";
@@ -38,7 +39,7 @@ export function Hero({ tags, meta, checkIn, checkOut }: HeroProps) {
           TinyTravel sends browser agents through real hotel checkouts as a guest, follows the price to the payment page, and shows you the proof.
         </p>
         <div className="cta-row">
-          <a className="btn" href="#verdict">Verify prices</a>
+          <Link className="btn" href="/book">Book now</Link>
           <a className="btn ghost" href="#how">See how it works</a>
         </div>
         {tags.length > 0 && (

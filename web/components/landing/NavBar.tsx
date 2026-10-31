@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 export function NavBar() {
   return (
@@ -14,9 +15,9 @@ export function NavBar() {
           <a href="#safety">Safety</a>
           <a href="#faq">FAQ</a>
         </nav>
-        <a className="btn sm" href="#verdict">
-          Verify prices
-        </a>
+        <Link className="btn sm" href="/book">
+          Book now
+        </Link>
       </div>
     </header>
   );
