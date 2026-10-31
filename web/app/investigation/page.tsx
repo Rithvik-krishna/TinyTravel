@@ -156,7 +156,14 @@ function Inner() {
           <div><b>{c.blocked}</b><span>blocked</span></div>
           <div><b>{c.running}</b><span>running</span></div>
         </div>
-        {story && <p className="story">{story}</p>}
+        {state.phase === "done" && agents.length === 0 ? (
+          <div className="notice warn" role="status" style={{ marginBottom: 20 }}>
+            <strong>No hotels were found for this search.</strong> The run finished without finding any listings on Cleartrip, Agoda or Booking.com, so there is nothing to compare and no price is shown. The sites may not have answered in time. Try again, or change the destination or dates.{" "}
+            <Link className="linkish" href="/book">Start a new search</Link>
+          </div>
+        ) : (
+          story && <p className="story">{story}</p>
+        )}
 
         {state.phase === "error" && (
           <div className="notice bad" role="alert" style={{ marginBottom: 20 }}>
@@ -200,7 +207,9 @@ function Inner() {
         ))}
 
         <div className="cta-bar">
-          {state.phase === "done" ? (
+          {state.phase === "done" && agents.length === 0 ? (
+            <Link className="btn" href="/book">Try another search</Link>
+          ) : state.phase === "done" ? (
             <>
               <Link className="btn" href={withId("/compare", id)}>See results</Link>
               <Link className="btn ghost" href={withId("/verdict", id)}>Go to verdict</Link>
