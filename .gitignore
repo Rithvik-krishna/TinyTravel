@@ -9,3 +9,6 @@ __pycache__/
 *.db
 evidence/
 *.tsbuildinfo
+
+# the web evidence route is source, not evidence output
+!web/app/evidence/
