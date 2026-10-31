@@ -64,9 +64,9 @@ const IMPULSE_FORCE = 10;
 const DEG_TO_RAD = 180 / Math.PI;
 
 const BRASS_GRADIENT_HOOK =
-  "linear-gradient(to bottom, color-mix(in oklab, #facc15 50%, white) 0%, color-mix(in oklab, #ca8a04 80%, white) 30%, color-mix(in oklab, #854d0e 85%, black) 70%, color-mix(in oklab, #713f12 60%, black) 100%)";
+  "linear-gradient(to bottom, color-mix(in oklab, var(--sand) 50%, white) 0%, color-mix(in oklab, var(--brand) 80%, white) 30%, color-mix(in oklab, var(--brand-hover) 85%, black) 70%, color-mix(in oklab, var(--brand-hover) 60%, black) 100%)";
 const BRASS_GRADIENT_STEM =
-  "linear-gradient(to right, color-mix(in oklab, #facc15 70%, white), color-mix(in oklab, #a16207 80%, black) 70%, color-mix(in oklab, #713f12 50%, black))";
+  "linear-gradient(to right, color-mix(in oklab, var(--sand) 70%, white), color-mix(in oklab, var(--brand-hover) 80%, black) 70%, color-mix(in oklab, var(--brand-hover) 50%, black))";
 
 function stamp(e: React.PointerEvent | PointerEvent | Event): number {
   const now = performance.now();
@@ -1159,21 +1159,21 @@ export function KeyTagRail({
           style={{ top: layout.railTop, height: layout.railT }}
         >
           {/* Subtle warm rail cast shadow */}
-          <div className="absolute inset-x-0 top-full h-4 bg-black/15 blur-[6px] dark:bg-black/50" />
+          <div className="absolute inset-x-0 top-full h-4 bg-ink/15 blur-[6px] dark:bg-ink/50" />
 
           {/* Brass extrusion bar */}
           <div
             className="absolute inset-0 rounded-[2px]"
             style={{
               background:
-                "linear-gradient(to bottom, #fef08a 0%, #eab308 14%, #ca8a04 36%, #a16207 58%, #713f12 82%, #451a03 100%)",
+                "linear-gradient(to bottom, var(--sand) 0%, var(--accent) 14%, var(--brand) 36%, var(--brand-hover) 58%, var(--brand-hover) 82%, var(--ink) 100%)",
               boxShadow:
-                "0 3px 6px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.8), inset 0 -1px 0 rgba(0,0,0,0.45)",
+                "0 3px 6px var(--shadow-color), inset 0 1px 0 var(--paper), inset 0 -1px 0 var(--shadow-color)",
             }}
           />
           {/* Polished brass highlight reflection */}
-          <div className="absolute inset-x-0 top-[22%] h-[1.5px] bg-white/75" />
-          <div className="absolute inset-x-0 bottom-0 h-px bg-black/40" />
+          <div className="absolute inset-x-0 top-[22%] h-[1.5px] bg-surface/75" />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-ink/40" />
         </div>
 
         {/* Dynamic drop shadows beneath swinging tags */}
@@ -1215,7 +1215,7 @@ export function KeyTagRail({
                     ref={(el) => {
                       shadowInnerRefs.current[i] = el;
                     }}
-                    className="absolute inset-0 rounded-2xl bg-black"
+                    className="absolute inset-0 rounded-2xl bg-ink"
                   />
                 </span>
               </div>
@@ -1293,7 +1293,7 @@ export function KeyTagRail({
                     y1={layout.pivotY}
                     x2={fw / 2 - 0.7}
                     y2={stringTargetY}
-                    stroke="#b45309"
+                    stroke="var(--brand)"
                     strokeWidth="1.8"
                     strokeDasharray="4 2"
                   />
@@ -1302,7 +1302,7 @@ export function KeyTagRail({
                     y1={layout.pivotY}
                     x2={fw / 2 + 0.7}
                     y2={stringTargetY}
-                    stroke="#d97706"
+                    stroke="var(--accent)"
                     strokeWidth="1.8"
                     strokeDasharray="2 4"
                   />
@@ -1311,7 +1311,7 @@ export function KeyTagRail({
                     y1={layout.pivotY}
                     x2={fw / 2}
                     y2={stringTargetY}
-                    stroke="#fef3c7"
+                    stroke="var(--sand)"
                     strokeOpacity="0.5"
                     strokeWidth="0.9"
                   />
@@ -1459,7 +1459,7 @@ function RailRingHook({
         style={{
           height: 6,
           background: BRASS_GRADIENT_HOOK,
-          boxShadow: "0 1px 3px rgba(0,0,0,0.35)",
+          boxShadow: "0 1px 3px var(--shadow-color)",
         }}
       />
       {/* Vertical brass drop tab */}
@@ -1470,7 +1470,7 @@ function RailRingHook({
           width: ringRadius,
           bottom: 6,
           background: BRASS_GRADIENT_STEM,
-          boxShadow: "1px 1px 2px rgba(0,0,0,0.25)",
+          boxShadow: "1px 1px 2px var(--shadow-color)",
         }}
       />
       {/* Eyelet ring hole at bottom of hook */}
@@ -1485,10 +1485,10 @@ function RailRingHook({
           cy={5}
           r={ringRadius * 0.82}
           fill="none"
-          stroke="#ca8a04"
+          stroke="var(--brand)"
           strokeWidth="2.2"
         />
-        <circle cx={ringRadius} cy={5} r={ringRadius * 0.4} fill="#451a03" />
+        <circle cx={ringRadius} cy={5} r={ringRadius * 0.4} fill="var(--ink)" />
       </svg>
     </span>
   );
@@ -1522,10 +1522,10 @@ export function TagFront({
     : "border border-border/80 bg-surface-2";
 
   return (
-    <div className={`relative h-full w-full select-none rounded-2xl ${cardBorderClass} shadow-[0_10px_30px_rgba(0,0,0,0.08),0_2px_4px_rgba(0,0,0,0.04)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.55)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5 transition-colors`}>
+    <div className={`relative h-full w-full select-none rounded-2xl ${cardBorderClass} shadow-[0_10px_30px_var(--shadow-color),0_2px_4px_var(--shadow-color)] dark:shadow-[0_12px_36px_var(--shadow-color)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5 transition-colors`}>
       {/* Subtle hotel cardstock texture & inner border bevel */}
       <div className="pointer-events-none absolute inset-1.5 sm:inset-2 rounded-[14px] border border-border/40" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-white/15 via-transparent to-black/5 dark:from-white/5 dark:to-black/30" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-surface/15 via-transparent to-ink/5 dark:from-surface/5 dark:to-ink/30" />
 
       {/* Top area: Punched Brass Eyelet */}
       <div
@@ -1538,9 +1538,9 @@ export function TagFront({
             width: eyeletSize,
             height: eyeletSize,
             background:
-              "radial-gradient(circle, #fef08a 0%, #eab308 35%, #ca8a04 65%, #713f12 100%)",
+              "radial-gradient(circle, var(--sand) 0%, var(--accent) 35%, var(--brand) 65%, var(--brand-hover) 100%)",
             boxShadow:
-              "0 1.5px 3px rgba(0,0,0,0.4), inset 0 1px 1px rgba(255,255,255,0.9), inset 0 -1px 1px rgba(0,0,0,0.6)",
+              "0 1.5px 3px var(--shadow-color), inset 0 1px 1px var(--paper), inset 0 -1px 1px var(--shadow-color)",
           }}
         >
           {/* Eyelet hole cutout */}
@@ -1549,7 +1549,7 @@ export function TagFront({
             style={{
               width: Math.round(eyeletSize * 0.44),
               height: Math.round(eyeletSize * 0.44),
-              boxShadow: "inset 0 1.5px 3px rgba(0,0,0,0.7)",
+              boxShadow: "inset 0 1.5px 3px var(--shadow-color)",
             }}
           />
         </div>
@@ -1659,7 +1659,7 @@ export function TagBack({
   const verifiedStr = item.verifiedAt ? `Verified at ${shortTime(item.verifiedAt)}` : "Observed on this run";
 
   return (
-    <div className="relative h-full w-full select-none rounded-2xl bg-surface border border-border/80 shadow-[0_10px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_12px_36px_rgba(0,0,0,0.6)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5">
+    <div className="relative h-full w-full select-none rounded-2xl bg-surface border border-border/80 shadow-[0_10px_30px_var(--shadow-color)] dark:shadow-[0_12px_36px_var(--shadow-color)] overflow-hidden flex flex-col justify-between p-3.5 sm:p-5">
       {/* Punched Eyelet on Back */}
       <div
         className="relative z-10 flex flex-col items-center flex-shrink-0"
@@ -1671,8 +1671,8 @@ export function TagBack({
             width: eyeletSize,
             height: eyeletSize,
             background:
-              "radial-gradient(circle, #eab308 0%, #ca8a04 50%, #713f12 100%)",
-            boxShadow: "0 1.5px 3px rgba(0,0,0,0.35)",
+              "radial-gradient(circle, var(--accent) 0%, var(--brand) 50%, var(--brand-hover) 100%)",
+            boxShadow: "0 1.5px 3px var(--shadow-color)",
           }}
         >
           <div
@@ -2028,7 +2028,7 @@ function TagDetailModal({
     >
       <div
         aria-hidden="true"
-        className={`absolute inset-0 bg-black/60 backdrop-blur-xl transition-opacity duration-300 motion-reduce:transition-none ${
+        className={`absolute inset-0 bg-ink/60 backdrop-blur-xl transition-opacity duration-300 motion-reduce:transition-none ${
           mounted ? "opacity-100" : "opacity-0"
         }`}
         onClick={requestClose}
@@ -2065,7 +2065,7 @@ function TagDetailModal({
         >
           <div
             aria-hidden="true"
-            className="absolute inset-x-[10%] -bottom-[8%] h-[18%] rounded-[50%] bg-black opacity-20 blur-xl dark:opacity-60"
+            className="absolute inset-x-[10%] -bottom-[8%] h-[18%] rounded-[50%] bg-ink opacity-20 blur-xl dark:opacity-60"
           />
 
           <div

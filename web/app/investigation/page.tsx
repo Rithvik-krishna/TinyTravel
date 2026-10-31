@@ -2,7 +2,7 @@
 
 import React, { Suspense, useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { MOCK, openStream } from "@/lib/dataSource";
+import { getResults, MOCK, openStream } from "@/lib/dataSource";
 import { inr } from "@/lib/format";
 import { offersToTags, blockerLabel, siteLabel, TagItem } from "@/lib/tags";
 import { loadRequest, stayLabel, useResults, useSearchId, withId } from "@/lib/flow";
@@ -16,7 +16,7 @@ const PHASE_TEXT: Record<Phase, string> = {
   parsing: "Reading your request",
   discovering: "Finding listings on 3 sites",
   grouping: "Matching the same hotel across sites",
-  verifying: "Checking like a real buyer. This usually takes 3 to 5 minutes.",
+  verifying: "Checking each site like a real buyer. This can take several minutes.",
   done: "Investigation complete",
   error: "The investigation hit an error",
 };
@@ -54,7 +54,7 @@ function Tile({ a, tag }: { a: AgentState; tag?: TagItem }) {
             {tag.listing != null && <s>listing {inr(tag.listing, tag.currency)}</s>}
           </div>
         )}
-        {a.status === "blocked" && <p style={{ color: "var(--muted)", fontSize: 14 }}>{blockerLabel(tag?.blocker)}. We never solve captchas or log in, so there is no price for this one.</p>}
+        {a.status === "blocked" && <p style={{ color: "var(--muted)", fontSize: 14 }}>{blockerLabel(tag?.blocker)}. {tag?.blocker === "captcha" || tag?.blocker === "login" || tag?.blocker === "otp" ? "We never solve captchas, log in or enter an OTP, so there is no price for this one." : "No price was captured for this site."}</p>}
         {a.status === "unverified" && <p style={{ color: "var(--muted)", fontSize: 14 }}>Not verified: no payable price was captured.</p>}
       </div>
     </div>
@@ -67,6 +67,8 @@ function Inner() {
   const [elapsed, setElapsed] = useState(0);
   const [run, setRun] = useState(0);
   const [summary, setSummary] = useState("");
+  // Set when the service does not know this search id (old link, wrong data mode), so we stop waiting.
+  const [missing, setMissing] = useState(false);
   useEffect(() => {
     const r = loadRequest();
     if (r) setSummary(`${r.destination} · ${stayLabel({ check_in: r.check_in, check_out: r.check_out, guests: r.guests })}`);
@@ -91,6 +93,18 @@ function Inner() {
     const t = window.setInterval(() => setElapsed((s) => s + 1), 1000);
     return () => window.clearInterval(t);
   }, [finished, ready, id, run]);
+
+  useEffect(() => {
+    if (!id || MOCK || state.phase !== "idle") return;
+    const t = window.setTimeout(() => {
+      getResults(id)
+        .then((r: { detail?: unknown; offers?: unknown }) => {
+          if (!r || r.detail || !Array.isArray(r.offers)) setMissing(true);
+        })
+        .catch(() => setMissing(true));
+    }, 6000);
+    return () => window.clearTimeout(t);
+  }, [id, state.phase, run]);
 
   const results = useResults(id, MOCK || state.phase === "done");
   const tags = useMemo(() => offersToTags(results.data), [results.data]);
@@ -123,7 +137,6 @@ function Inner() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <span className="eyebrow">Step 2 of 5</span>
           <h1>{siteCount > 0 ? `Checking prices on ${siteCount} site${siteCount === 1 ? "" : "s"}` : "Checking prices"}</h1>
           <p className="lede">
             {summary ? `${summary}. ` : ""}Each agent opens a site as a guest, picks the room, fills in placeholder guest details and stops at the payment page, so you see the real total. Nothing is booked.
@@ -156,6 +169,23 @@ function Inner() {
           </div>
         )}
 
+        {missing && agents.length === 0 && (
+          <div className="notice bad" role="alert" style={{ marginBottom: 16 }}>
+            We could not find this search. The link may be old, or it was made in a different data mode.{" "}
+            <Link className="linkish" href="/book">Start a new search</Link>
+          </div>
+        )}
+        {!missing && agents.length === 0 && !finished && elapsed > 15 && (
+          <div className="notice" role="status" style={{ marginBottom: 16 }}>
+            Finding hotels on each site first. With real browser agents this step alone can take 3 to 5 minutes, and nothing is shown until it finishes.
+          </div>
+        )}
+        {!finished && elapsed > 600 && (
+          <div className="notice warn" role="status" style={{ marginBottom: 16 }}>
+            This is taking longer than usual ({Math.floor(elapsed / 60)} minutes). Real runs usually finish in 5 to 15 minutes. You can leave this page and come back to the same link later; results fill in as agents finish.{" "}
+            <Link className="linkish" href="/book">Start a new search</Link>
+          </div>
+        )}
         {agents.length === 0 && state.phase !== "error" && <LoadingBlock label="Waiting for agents to start" />}
 
         {groups.map((g) => (

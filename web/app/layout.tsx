@@ -1,13 +1,14 @@
 import "./globals.css";
+import "./glass.css";
 import React from "react";
-import { Bricolage_Grotesque, IBM_Plex_Sans, IBM_Plex_Mono, Figtree } from "next/font/google";
 import { DevHeader } from "@/components/DevHeader";
 import { MainWrapper } from "@/components/MainWrapper";
+import { AppBackground } from "@/components/ui/AppBackground";
 
-const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["500", "700", "800"], variable: "--font-display", display: "swap" });
-const body = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-body", display: "swap" });
-const figtree = Figtree({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-figtree", display: "swap" });
-const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
+// Fonts load in the browser (see the stylesheet link below) instead of at build time, so `next build`
+// never needs network access to Google Fonts. The --font-* variables are defined in globals.css.
+const FONTS_URL =
+  "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600&display=swap";
 
 export const metadata = {
   title: "TinyTravel — The price you see isn't the price you pay.",
@@ -18,6 +19,8 @@ export const viewport = {
   width: "device-width",
   initialScale: 1,
   viewportFit: "cover",
+  // Single dark-blue theme. meta theme-color cannot use CSS variables; this is the sky-night base.
+  themeColor: "#045A82",
 };
 
 export default function RootLayout({
@@ -26,8 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable} ${figtree.variable}`}>
-      <body className="min-h-screen bg-surface text-text antialiased selection:bg-brand/20 selection:text-brand">
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+        <link rel="stylesheet" href={FONTS_URL} />
+      </head>
+      <body className="min-h-screen text-text-1 antialiased selection:bg-glass-strong selection:text-text-1">
+        <AppBackground />
         <DevHeader />
         <MainWrapper>{children}</MainWrapper>
       </body>

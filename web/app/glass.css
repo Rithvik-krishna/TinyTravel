@@ -1,0 +1,241 @@
+/*
+ * Sky-blue fluted glass: background, surfaces, controls, typography.
+ * Loaded after landing.css/flow.css; selectors are prefixed with `body .tt` so they win over those files.
+ * Colours come only from the tokens in globals.css.
+ */
+
+/* ---------- global background (AppBackground) ---------- */
+.appbg{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:linear-gradient(160deg,var(--sky) 0%,var(--sky-deep) 55%,var(--sky-night) 100%)}
+.appbg .blob{position:absolute;border-radius:50%;will-change:transform}
+.appbg .b1{width:52vw;height:52vw;left:-14vw;top:-16vw;background:var(--sky-light);opacity:.42;filter:blur(110px)}
+.appbg .b2{width:44vw;height:44vw;left:28vw;top:22vh;background:var(--white);opacity:.18;filter:blur(120px)}
+.appbg .b3{width:56vw;height:56vw;right:-18vw;bottom:-22vw;background:var(--sky-night);opacity:.9;filter:blur(100px)}
+.appbg .b4{width:50vw;height:50vw;left:-14vw;bottom:-12vw;background:var(--pink);opacity:.5;filter:blur(110px)}
+.appbg .b5{width:26vw;height:26vw;left:0;bottom:-2vw;background:var(--pink-soft);opacity:.65;filter:blur(80px)}
+.appbg .b6{width:34vw;height:34vw;right:-8vw;top:38vh;background:var(--pink);opacity:.28;filter:blur(120px)}
+@keyframes drift-a{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(6vw,5vh,0) scale(1.12)}}
+@keyframes drift-b{from{transform:translate3d(0,0,0) scale(1.05)}to{transform:translate3d(-5vw,6vh,0) scale(.92)}}
+@media (prefers-reduced-motion:no-preference){
+  .appbg .b1{animation:drift-a 42s ease-in-out infinite alternate}
+  .appbg .b2{animation:drift-b 50s ease-in-out infinite alternate}
+  .appbg .b3{animation:drift-a 38s ease-in-out infinite alternate-reverse}
+  .appbg .b4{animation:drift-b 46s ease-in-out infinite alternate}
+  .appbg .b5{animation:drift-a 35s ease-in-out infinite alternate-reverse}
+  .appbg .b6{animation:drift-b 44s ease-in-out infinite alternate}
+}
+.appbg .flutes{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.10) 0 2px,rgba(255,255,255,0) 2px 9px),repeating-linear-gradient(90deg,rgba(4,60,95,.10) 0 1px,rgba(0,0,0,0) 1px 9px);-webkit-backdrop-filter:blur(1.5px);backdrop-filter:blur(1.5px)}
+/* Darkens the whole field a little and more toward the bottom so small white text stays readable. */
+.appbg .vignette{position:absolute;inset:0;background:linear-gradient(to top,rgba(4,70,105,.5),rgba(4,70,105,.42) 60%,rgba(4,70,105,.38))}
+.appbg .grain{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
+
+/* ---------- typography ---------- */
+body .tt{font-family:var(--font-body);font-weight:400;color:var(--text-2)}
+body .tt h1,body .tt h2,body .tt h3{font-family:var(--font-display);color:var(--text-1);font-weight:300;letter-spacing:-.03em;line-height:1.05}
+body .tt h3{font-weight:400;letter-spacing:-.02em}
+body .tt h2{font-size:clamp(34px,5vw,64px)}
+body .tt .page-head h1{font-size:clamp(30px,4.5vw,52px)}
+body .tt .bk-hero h1,body .tt .search-hero h1{font-size:clamp(36px,5.6vw,72px);font-weight:300}
+body .tt .bk-hero h1 em,body .tt .search-hero h1 em{color:var(--text-1);font-weight:400}
+body .tt p,body .tt li,body .tt dd,body .tt td,body .tt dt{color:var(--text-2)}
+body .tt .lede,body .tt .note,body .tt .muted,body .tt .fine,body .tt .sub{color:var(--text-2)}
+body .tt .eyebrow,body .tt .lab,body .tt .mono,body .tt .counters span,body .tt .field>label,body .tt .field>span.fl,body .tt fieldset legend{font-family:var(--font-body);font-size:14px;letter-spacing:0;color:var(--text-3);font-weight:400}
+body .tt .big,body .tt .price,body .tt .pay,body .tt .n,body .tt .counters b{font-weight:300;font-variant-numeric:tabular-nums;color:var(--text-1)}
+body .tt .big,body .tt .panel .big{font-size:clamp(40px,6vw,72px)}
+body .tt s,body .tt .was{color:var(--text-3)}
+body .tt a{color:var(--text-1)}
+body .tt footer,body .tt footer *{color:var(--text-3)}
+
+/* ---------- glass surfaces ---------- */
+body .tt .panel,body .tt .vcard,body .tt .phone,body .tt .trail,body .tt .fees,body .tt .facts,body .tt .live,
+body .tt .safe div,body .tt .trio div,body .tt .example .box,body .tt .sform,body .tt .hotel-card,body .tt .itile,
+body .tt .dhead,body .tt .aside,body .tt .statusbar,body .tt .empty,body .tt .steps,body .tt .glasscard,body .tt .final-card{
+  background-color:var(--glass-text);
+  background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 2px,rgba(255,255,255,0) 2px 9px);
+  border:1px solid var(--line);border-radius:24px;box-shadow:0 8px 32px var(--shadow-color);
+  -webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);color:var(--text-2)}
+body .tt .steps{overflow:hidden}
+body .tt .step,body .tt .steps .step{border-color:var(--line)}
+body .tt .offer,body .tt .orow,body .tt .tile,body .tt .notice,body .tt details.req{
+  background-color:var(--glass-dark);border:1px solid var(--line);border-radius:18px;color:var(--text-2);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+body .tt .notice.warn{background-color:var(--glass-dark);border-color:var(--unverified);color:var(--text-1)}
+body .tt .notice.bad{background-color:var(--glass-dark);border-color:var(--blocked);color:var(--text-1)}
+body .tt .vcard.best,body .tt .panel.pay,body .tt .offer.best{border-color:var(--pink);box-shadow:0 0 0 1px var(--pink),0 8px 40px color-mix(in oklab,var(--pink) 38%,transparent)}
+body .tt .orow[aria-checked=true]{border-color:var(--white);box-shadow:0 0 0 2px color-mix(in oklab,var(--white) 35%,transparent)}
+body .tt .orow[aria-disabled=true]{opacity:.85;border-style:dashed}
+body .tt .hotel-card.suggested,body .tt .offer.na{border-style:dashed}
+body .tt .gloss p,body .tt .place-list{background-color:var(--sky-night);border:1px solid var(--line);color:var(--text-1)}
+body .tt .place-list li[aria-selected=true]{background:var(--glass-strong)}
+body .tt dialog{background-color:var(--glass-dark);-webkit-backdrop-filter:blur(28px);backdrop-filter:blur(28px);border:1px solid var(--line);border-radius:24px;color:var(--text-2)}
+body .tt dialog::backdrop{background:var(--scrim)}
+body .tt .dlg h3{color:var(--text-1)}
+body .tt .sumcard{background:var(--glass-dark);border:1px solid var(--line)}
+body .tt .shot,body .tt .ptext{background:var(--glass-dark);border:1px solid var(--line);color:var(--text-2)}
+body .tt .qr{background:var(--paper);color:var(--sky-night)}
+body .tt .skel{background:linear-gradient(90deg,rgba(255,255,255,.10),rgba(255,255,255,.25),rgba(255,255,255,.10));background-size:200% 100%;border-radius:18px}
+body .tt .faq details{border-color:var(--line);background:transparent}
+body .tt .faq summary{color:var(--text-1);font-weight:400}
+body .tt .faq summary::after{color:var(--text-1)}
+body .tt .strip .wrap{border-color:var(--line)}
+body .tt .strip .cell{border-color:var(--line)}
+body .tt .trail li::before{background:var(--line)}
+body .tt .trail .dot{border:2px solid var(--white);background:transparent}
+body .tt .gbar{background:var(--white);opacity:.7}
+body .tt .group.suggested .gbar{background:repeating-linear-gradient(90deg,var(--white) 0 12px,transparent 12px 20px)}
+body .tt .final{background:none}
+body .tt .tile .bar,body .tt .itile .ihead{border-color:var(--line)}
+body .tt .itile iframe{background:var(--glass-dark)}
+body .tt .itile .ihead,body .tt .tile .bar{background:transparent}
+
+/* ---------- buttons ---------- */
+body .tt .btn{background:var(--white);color:var(--sky-night);border:1px solid var(--white);font-weight:500;transition:transform .2s ease,box-shadow .2s ease}
+body .tt .btn:hover{background:var(--white);transform:scale(1.02);box-shadow:0 0 28px color-mix(in oklab,var(--white) 45%,transparent)}
+body .tt .btn.ghost{background:var(--glass);color:var(--text-1);border:1px solid var(--white);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+body .tt .btn.ghost:hover{background:var(--glass-strong)}
+body .tt .btn.pink{background:var(--pink-fill);border-color:var(--pink);color:var(--white)}
+body .tt .btn.pink:hover{box-shadow:0 0 28px color-mix(in oklab,var(--pink) 60%,transparent);background:var(--pink-fill)}
+body .tt .btn:disabled{opacity:.5;transform:none;box-shadow:none}
+body .tt .linkish,body .tt .link{color:var(--text-1);text-decoration:underline;text-underline-offset:3px}
+@media (prefers-reduced-motion:reduce){body .tt .btn,body .tt .btn:hover{transition:none;transform:none}}
+
+/* ---------- inputs ---------- */
+body .tt .field input[type=text],body .tt .field input[type=date],body .tt .field input[type=number],body .tt .field select,
+body .tt .place>input,body .tt .tools select,body .tt .picker select,body .tt .money,body .tt .stepper-num,body .tt textarea.draft{
+  background:var(--glass-strong);color:var(--text-1);border:1px solid var(--line);border-radius:16px;color-scheme:dark}
+body .tt .place>input::placeholder,body .tt .field input::placeholder{color:rgba(252,255,255,.62)}
+body .tt .field input:focus-visible,body .tt .field select:focus-visible,body .tt .place>input:focus-visible,body .tt .money:focus-within,body .tt textarea.draft:focus-visible,body .tt .picker select:focus-visible{
+  outline:2px solid var(--white);outline-offset:2px;box-shadow:0 0 0 6px color-mix(in oklab,var(--pink) 40%,transparent)}
+body .tt .money input{background:transparent!important;border:0!important}
+body .tt .stepper-num button{color:var(--text-1)}
+body .tt .stepper-num button:hover:not(:disabled){background:var(--glass-strong)}
+body .tt input[type=range]{accent-color:var(--pink);background:transparent}
+body .tt .chip-btn,body .tt .toggle{background:var(--glass);color:var(--text-1);border:1px solid var(--line)}
+body .tt .chip-btn[aria-pressed=true],body .tt .chip-btn[aria-checked=true]{background:var(--white);color:var(--sky-night);border-color:var(--white)}
+body .tt .chip-btn[aria-pressed=true]::before,body .tt .chip-btn[aria-checked=true]::before{color:var(--sky-night)}
+body .tt .seg{background:var(--glass);border:1px solid var(--line)}
+body .tt .seg button{color:var(--text-1)}
+body .tt .seg button[aria-pressed=true]{background:var(--white);color:var(--sky-night)}
+body .tt .place-list li{color:var(--text-1)}
+body .tt .place-list li small{color:var(--text-3)}
+
+/* ---------- status pills (colour + icon + label, never colour alone) ---------- */
+body .tt .badge{background:var(--glass-dark);border:1px solid var(--line);color:var(--text-2);font-family:var(--font-body);font-size:12px;font-weight:500;letter-spacing:0}
+body .tt .badge.ok{color:var(--verified);border-color:var(--verified)}
+body .tt .badge.ok::before{content:"✓"}
+body .tt .badge.warn{color:var(--unverified);border-color:var(--unverified)}
+body .tt .badge.warn::before{content:"!"}
+body .tt .badge.bad{color:var(--blocked);border-color:var(--blocked)}
+body .tt .badge.bad::before{content:"🔒"}
+body .tt .badge.nc{background:rgba(255,255,255,.2);color:var(--white);border-color:var(--line)}
+body .tt .badge.mock{color:var(--text-2)}
+body .tt .badge.gap{background:var(--pink-fill);border-color:var(--pink);color:var(--white)}
+body .tt .stamp{font-family:var(--font-body);letter-spacing:0}
+body .tt .stamp.nc{background:rgba(255,255,255,.2);color:var(--white);border-color:var(--line)}
+/* Gap accents (what you actually pay) are the only pink on content. */
+body .tt .pill,body .tt .arrow .pill,body .tt .delta,body .tt .example .mid b{background:var(--pink-fill);border-color:var(--pink);color:var(--white);font-family:var(--font-body);font-size:14px;font-weight:500;padding:6px 12px;border-radius:999px}
+body .tt .delta{border-radius:10px;font-size:12px}
+body .tt .d{display:inline-block;margin-top:6px;padding:2px 10px;border-radius:999px;background:var(--pink-fill);color:var(--white);font-family:var(--font-body);font-size:13px}
+body .tt .vcard .pay,body .tt .example .big{color:var(--text-1)}
+
+/* ---------- progress, tags, rail ---------- */
+body .tt .prog{background:rgba(255,255,255,.2)}
+body .tt .prog i,body .tt .itile .prog i,body .tt .tile .prog i{background:var(--white)}
+body .tt .tile.done .prog i,body .tt .itile.verified .prog i{background:var(--verified)}
+body .tt .rail::before{background:rgba(255,255,255,.7);box-shadow:0 6px 14px var(--shadow-color)}
+body .tt .hang .hook{background:var(--white)}
+body .tt .hang .string path{stroke:rgba(255,255,255,.6)}
+body .tt .eyelet{border-color:var(--white);background:var(--sky-night)}
+body .tt .face{background-color:var(--tag-bg);background-image:repeating-linear-gradient(90deg,rgba(255,255,255,.07) 0 2px,rgba(255,255,255,0) 2px 9px);border:1px solid var(--line)}
+body .tt .chip{background:var(--white);color:var(--sky-night);font-family:var(--font-body);letter-spacing:0;font-weight:500}
+body .tt .amt{background:var(--glass-strong);color:var(--text-1);border:1px solid var(--line);font-family:var(--font-body)}
+body .tt .amt:hover{border-color:var(--white)}
+body .tt .amt.none{color:var(--text-1)}
+body .tt .fees tr.grp td{color:var(--text-3);font-family:var(--font-body);font-size:13px}
+body .tt .fees td{border-color:var(--line)}
+body .tt .fees .ok{color:var(--verified)}
+body .tt .gloss summary{border-color:var(--line);color:var(--text-2);font-family:var(--font-body)}
+body .tt .proof-note{color:var(--text-3)}
+body .tt .tags .badge{font-size:12px}
+body .tt .offer s,body .tt .vcard s{font-family:var(--font-body);font-size:15px}
+/* ---------- nav pill ---------- */
+body .tt header.nav{position:sticky;top:max(10px,env(safe-area-inset-top,0px));z-index:50;background:transparent;border:0;-webkit-backdrop-filter:none;backdrop-filter:none}
+body .tt header.nav .wrap{position:relative}
+body .tt .navpill{display:flex;align-items:center;gap:16px;min-height:60px;padding:8px 8px 8px 22px;background-color:rgba(4,70,105,.5);border:1px solid rgba(255,255,255,.25);border-radius:999px;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 8px 32px var(--shadow-color)}
+body .tt .logo{color:var(--text-1);font-weight:400}
+body .tt .logo i{border:3px solid var(--white)}
+body .tt .navlinks{display:flex;gap:2px;margin:0 auto;padding:4px;background:rgba(255,255,255,.08);border-radius:999px}
+body .tt .navlinks a{padding:8px 16px;border-radius:999px;color:var(--text-1);text-decoration:none;font-size:14px;font-weight:400;min-height:40px;display:inline-flex;align-items:center}
+body .tt .navlinks a:hover{background:var(--glass-strong);color:var(--text-1)}
+body .tt .menubtn{display:none;margin-left:auto;min-width:44px;min-height:44px;border-radius:999px;border:1px solid var(--line);background:var(--glass);color:var(--text-1);font-size:18px;cursor:pointer}
+body .tt .navsheet{position:absolute;left:0;right:0;top:calc(100% + 8px);display:grid;gap:6px;padding:12px;background:var(--glass-dark);border:1px solid var(--line);border-radius:24px;-webkit-backdrop-filter:blur(28px);backdrop-filter:blur(28px);box-shadow:0 8px 32px var(--shadow-color)}
+body .tt .navsheet a:not(.btn){display:flex;align-items:center;min-height:44px;padding:0 14px;border-radius:14px;color:var(--text-1);text-decoration:none}
+body .tt .navsheet a:not(.btn):hover{background:var(--glass-strong)}
+@media (max-width:760px){
+  body .tt .navlinks{display:none}
+  body .tt .navcta{display:none}
+  body .tt .menubtn{display:inline-grid;place-items:center}
+  body .tt .navpill{padding-left:18px}
+}
+
+/* ---------- step dots ---------- */
+body .tt .flow-top{border:0;background:transparent}
+body .tt .stepper{display:flex;gap:0;justify-content:center;align-items:center;padding:6px 0}
+body .tt .stepper li{flex:0 0 auto}
+body .tt .stepper a,body .tt .stepper span.st{display:grid;place-items:center;width:44px;height:44px;min-height:44px;padding:0;border:0;border-radius:999px;background:transparent;opacity:1}
+body .tt .stepper b{display:block;width:10px;height:10px;border:0;border-radius:999px;background:rgba(255,255,255,.38);font-size:0;color:transparent;transition:width .25s ease,background .25s ease}
+body .tt .stepper .past b{background:var(--white);opacity:.8;border:0}
+body .tt .stepper .on b{width:30px;background:var(--white);border:0;color:transparent}
+body .tt .stepper .on a,body .tt .stepper .on span.st{background:transparent;border:0}
+body .tt .stepper .lbl,body .tt .stepper .on .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;display:inline}
+body .tt .stepper li{position:relative}
+body .tt .stepper a:hover b{background:var(--white)}
+@media (prefers-reduced-motion:reduce){body .tt .stepper b{transition:none}}
+
+/* ---------- landing hero ---------- */
+body .tt .hero2{min-height:calc(100svh - 90px);display:grid;grid-template-rows:1fr auto;padding:clamp(20px,4vw,40px) 0 0;text-align:left}
+body .tt .hero2 .hero-main{display:grid;grid-template-columns:1fr minmax(280px,380px);gap:32px;align-items:end;padding-bottom:clamp(28px,5vw,56px)}
+body .tt .hero2 .hero-copy{display:grid;gap:22px;align-self:end}
+body .tt .hero2 h1{font-size:clamp(44px,7.5vw,112px);font-weight:300;letter-spacing:-.03em;line-height:1.02;max-width:12ch;margin:0}
+body .tt .hero2 h1 em{font-style:normal;color:var(--text-1);font-weight:300}
+body .tt .hero2 .lede{max-width:46ch;font-size:clamp(16px,1.6vw,19px);color:var(--text-2)}
+body .tt .hero2 .cta-row{justify-content:flex-start;align-items:center;gap:18px}
+body .tt .hero2 .cta-row .textlink{color:var(--text-1);text-decoration:underline;text-underline-offset:4px;min-height:44px;display:inline-flex;align-items:center}
+body .tt .hero2 .hero-card{align-self:start;display:grid;gap:12px;padding:22px;order:2}
+body .tt .hero-card .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+body .tt .hero-card .row b{font-size:clamp(26px,3vw,36px);font-weight:300;font-variant-numeric:tabular-nums;color:var(--text-1)}
+body .tt .hero-card .head{font-size:15px;color:var(--text-2)}
+body .tt .hero-card .foot{font-size:13px;color:var(--text-3)}
+body .tt .trust{list-style:none;margin:0;padding:22px 0 26px;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+body .tt .trust li{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--text-2);line-height:1.35}
+body .tt .trust svg{flex:none;width:24px;height:24px;stroke:var(--white);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:900px){
+  body .tt .hero2 .hero-main{grid-template-columns:1fr}
+  body .tt .hero2 .hero-card{order:0;width:100%}
+  body .tt .trust{grid-template-columns:repeat(2,1fr)}
+}
+body .tt .tag-section{padding-top:clamp(40px,6vw,80px)}
+body .tt .tag-section .wrap{display:grid;gap:18px;justify-items:center;text-align:center}
+body .tt .tag-section .rail-note{color:var(--text-2)}
+body .tt header.nav .wrap{display:block}
+body .tt header.nav .navpill{width:100%}
+
+/* three-step "how it works" */
+body .tt .steps{grid-template-columns:repeat(3,1fr)}
+@media (max-width:900px){
+  body .tt .steps{grid-template-columns:1fr}
+  body .tt .steps .step{border-left:0;border-top:1px solid var(--line)}
+  body .tt .steps .step:first-child{border-top:0}
+}
+/* nav pill: win over the legacy .nav rules in landing.css and centre the links exactly */
+body .tt header.nav .navpill{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+body .tt header.nav .navpill .logo{justify-self:start}
+body .tt header.nav .navpill .navlinks{display:flex;gap:2px;margin:0;justify-self:center;position:relative;left:-7px}
+body .tt header.nav .navpill .navlinks a{color:var(--text-1);font-weight:400;font-size:15px;padding:8px 18px;opacity:1}
+body .tt header.nav .navpill .navlinks a:hover{background:var(--glass-strong)}
+body .tt header.nav .navpill .navcta{justify-self:end;margin:0}
+body .tt header.nav .navpill .menubtn{justify-self:end;margin:0}
+@media (max-width:760px){
+  body .tt header.nav .navpill{grid-template-columns:1fr auto}
+  body .tt header.nav .navpill .navlinks,body .tt header.nav .navpill .navcta{display:none}
+  body .tt header.nav .navpill .menubtn{display:inline-grid}
+}

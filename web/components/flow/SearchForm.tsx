@@ -1,11 +1,13 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import demo from "@fixtures/demo_run.json";
 import { MOCK, startSearch } from "@/lib/dataSource";
+import { useBackendMode } from "@/lib/extras";
+import { PlaceInput } from "@/components/flow/PlaceInput";
 import { inr } from "@/lib/format";
-import { applySentence, buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
+import { buildSentence, DEAL_LABEL, DealMode, loadRequest, MustHave, saveSearch, SearchRequest } from "@/lib/flow";
 
 const MUST: Array<[keyof MustHave, string]> = [
   ["breakfast", "Breakfast"],
@@ -89,22 +91,9 @@ export function SearchForm() {
   const [touched, setTouched] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [nl, setNl] = useState("");
-  const [nlMsg, setNlMsg] = useState("");
-  // Single-hotel check: opened with /book?target=1. Skips broad discovery, so a live run is one hotel on the chosen sites.
-  const targetMode = useSearchParams().get("target") === "1";
-  const [hotelName, setHotelName] = useState("");
-  const [sites, setSites] = useState<string[]>(["cleartrip"]);
-  const fillIn = () => {
-    if (!nl.trim()) return;
-    const next = applySentence(req, nl, today);
-    if (JSON.stringify(next) === JSON.stringify(req)) {
-      setNlMsg("We could not read details from that. Try something like: Bengaluru, 20-21 Nov, 2 people, under 12k.");
-      return;
-    }
-    setReq(next);
-    setNlMsg("Filled in. Check the details below, then press Verify prices.");
-  };
+  const mode = useBackendMode();
+  const live = mode === "live";
+
   const dlg = useRef<HTMLDialogElement>(null);
 
   useEffect(() => {
@@ -122,15 +111,16 @@ export function SearchForm() {
     ev.preventDefault();
     setTouched(true);
     if (!valid || busy) return;
-    if (targetMode && hotelName.trim() && sites.length === 0) {
-      setError("Pick at least one site to check.");
-      return;
+    if (live) {
+      // Every search checks all three sites, so a live run is long and uses TinyFish credits.
+      const ok = window.confirm("This checks Cleartrip, Agoda and Booking.com with real browser agents.\n\nA full search can take 15 minutes or more and uses TinyFish credits (about $4).\n\nStart the search?");
+      if (!ok) return;
     }
     setBusy(true);
     setError(null);
     const full = { ...req, destination: req.destination.trim(), raw_text: buildSentence(req) };
     try {
-      const res: { search_id?: string; detail?: unknown } = await startSearch("", { ...structured(full), ...(targetMode && hotelName.trim() ? { hotel_name: hotelName.trim(), platforms: sites } : {}) });
+      const res: { search_id?: string; detail?: unknown } = await startSearch("", { ...structured(full) });
       if (!res?.search_id) throw new Error(res?.detail ? JSON.stringify(res.detail).slice(0, 160) : "the service did not return a search id");
       saveSearch(full, res.search_id);
       router.push(`/investigation?id=${encodeURIComponent(res.search_id)}`);
@@ -144,15 +134,11 @@ export function SearchForm() {
   return (
     <form className="sform" onSubmit={submit} noValidate aria-label="Search hotels">
       <h2 className="sf-title">Find your stay</h2>
-      <div className="nlrow">
-        <input type="text" aria-label="Describe your stay" placeholder="Or type it: Bengaluru, 20-21 Nov, 2 people, under 12k" value={nl} onChange={(e) => { setNl(e.target.value); setNlMsg(""); }} onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); fillIn(); } }} />
-        <button className="btn ghost sm" type="button" onClick={fillIn}>Fill in</button>
-      </div>
-      {nlMsg && <p className="fine" role="status">{nlMsg}</p>}
+      
       <div className="fgrid">
         <div className="field f-wide">
           <label htmlFor="dest">Where to?</label>
-          <input id="dest" type="text" autoComplete="off" placeholder="City or area, e.g. Bengaluru" value={req.destination} onChange={(e) => set("destination", e.target.value)} aria-invalid={!!show("destination")} aria-describedby="e-dest" />
+          <PlaceInput id="dest" placeholder="City or area, e.g. Bengaluru" value={req.destination} onChange={(v) => setReq((r) => ({ ...r, destination: v, area_hint: "" }))} onPick={(p) => setReq((r) => ({ ...r, destination: p.city, area_hint: p.area ?? "" }))} invalid={!!show("destination")} describedBy="e-dest" />
           <span id="e-dest" className="err" role="alert">{show("destination")}</span>
         </div>
         <div className="field">
@@ -177,22 +163,7 @@ export function SearchForm() {
         </div>
       </div>
 
-      {targetMode && (
-        <fieldset>
-          <legend>Check one hotel</legend>
-          <div className="field">
-            <input type="text" aria-label="Hotel name" placeholder="Hotel name, e.g. La Marvella" value={hotelName} onChange={(e) => setHotelName(e.target.value)} />
-          </div>
-          <div className="chips">
-            {[["cleartrip", "Cleartrip"], ["agoda", "Agoda"], ["booking", "Booking.com"]].map(([v, label]) => (
-              <button key={v} type="button" className="chip-btn" aria-pressed={sites.includes(v)} onClick={() => setSites((s) => (s.includes(v) ? s.filter((x) => x !== v) : [...s, v]))}>
-                {label}
-              </button>
-            ))}
-          </div>
-          <p className="fine">Checks only this hotel on the sites you pick. Fewer sites means a shorter, cheaper run.</p>
-        </fieldset>
-      )}
+      
 
       <fieldset>
         <legend>Must have</legend>
@@ -218,14 +189,19 @@ export function SearchForm() {
 
       
 
+      {mode === "down" && (
+        <div className="notice bad" role="alert">
+          The booking service is not running, so searches cannot start yet. Start the API, then reload this page.
+        </div>
+      )}
       {error && <div className="notice bad" role="alert">{error}</div>}
 
       <div className="form-foot">
         <p>
-          We check 3 sites like a real buyer, as a guest, and never pay. About 3–5 minutes.{" "}
+          We check Cleartrip, Agoda and Booking.com like a real buyer, as a guest, and never pay. This can take several minutes.{" "}
           <button type="button" className="linkish" onClick={() => dlg.current?.showModal()}>How we stay safe</button>
         </p>
-        <button className="btn" type="submit" disabled={busy || (touched && !valid)}>
+        <button className="btn" type="submit" disabled={busy || mode === "down" || (touched && !valid)}>
           {busy ? "Starting…" : "Verify prices"}
         </button>
       </div>

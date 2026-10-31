@@ -40,7 +40,7 @@ function HangingTag({ tag, width, index, setNode, kick }: TagProps) {
   const lastPointer = useRef<string>("");
   const verified = tag.status === "verified" && tag.payable != null;
   const nonRefundable = tag.cancellation_category === "non_refundable";
-  const extra = nonRefundable ? <span className="stamp warn">Non-refundable · not comparable</span> : null;
+  const extra = nonRefundable ? <span className="stamp nc">Non-refundable · not comparable</span> : null;
   const gap = gapAmount(tag.listing, tag.payable);
   const pct = tag.fee_leak_pct ?? gapPct(tag.listing, tag.payable);
   const dir = () => (Math.random() > 0.5 ? 1 : -1);

@@ -1239,7 +1239,7 @@ export default function PictureRailGallery({
           className="pointer-events-none absolute inset-x-0 z-[1]"
           style={{ top: layout.railTop, height: layout.railT }}
         >
-          <div className="absolute inset-x-0 top-full h-3 bg-black opacity-[0.07] blur-[5px] dark:opacity-40" />
+          <div className="absolute inset-x-0 top-full h-3 bg-ink opacity-[0.07] blur-[5px] dark:opacity-40" />
           <div
             className="absolute inset-0"
             style={{
@@ -1249,8 +1249,8 @@ export default function PictureRailGallery({
                 "0 1px 0 color-mix(in oklab, var(--color-foreground) 14%, transparent), 0 -1px 0 color-mix(in oklab, var(--color-foreground) 8%, transparent)",
             }}
           />
-          <div className="absolute inset-x-0 top-[30%] h-px bg-black opacity-10 dark:opacity-40" />
-          <div className="absolute inset-x-0 top-0 h-px bg-white opacity-80 dark:opacity-15" />
+          <div className="absolute inset-x-0 top-[30%] h-px bg-ink opacity-10 dark:opacity-40" />
+          <div className="absolute inset-x-0 top-0 h-px bg-surface opacity-80 dark:opacity-15" />
         </div>
 
         {/* Ambient shadows / lights */}
@@ -1306,7 +1306,7 @@ export default function PictureRailGallery({
                     ref={(el) => {
                       shadowInnerRefs.current[i] = el;
                     }}
-                    className="absolute inset-0 rounded-[2px] bg-black"
+                    className="absolute inset-0 rounded-[2px] bg-ink"
                   />
                 </span>
               </div>
@@ -1749,7 +1749,7 @@ function Fixture({
         }}
       />
       <span
-        className="absolute top-0 rounded-full bg-white opacity-30"
+        className="absolute top-0 rounded-full bg-surface opacity-30"
         style={{
           left: "8%",
           right: "8%",
@@ -1946,7 +1946,7 @@ function FrameArt({
           ref={dimRef}
           data-dim
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 block bg-black opacity-0"
+          className="pointer-events-none absolute inset-0 block bg-ink opacity-0"
         />
       </span>
     </>
@@ -2443,7 +2443,7 @@ function Detail({
         >
           <div
             aria-hidden="true"
-            className="absolute inset-x-[10%] -bottom-[7%] h-[16%] rounded-[50%] bg-black opacity-[0.18] blur-xl dark:opacity-60"
+            className="absolute inset-x-[10%] -bottom-[7%] h-[16%] rounded-[50%] bg-ink opacity-[0.18] blur-xl dark:opacity-60"
           />
 
           <div

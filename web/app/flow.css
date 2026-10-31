@@ -1,4 +1,4 @@
-﻿/* Product flow (search -> investigation -> results -> proof -> verdict). Scoped under .tt like landing.css. */
+/* Product flow (search -> investigation -> results -> proof -> verdict). Scoped under .tt like landing.css. */
 .tt .flow-top{border-bottom:1px solid var(--line);background:var(--bg)}
 .tt .stepper{display:flex;gap:6px;list-style:none;margin:0;padding:14px 0;overflow:hidden}
 .tt .stepper li{flex:1;min-width:0}
@@ -22,13 +22,13 @@
 .tt .search-hero h1 em{font-style:normal;color:var(--brass-hi)}
 :root[data-theme="light"] .tt .search-hero h1 em{color:var(--brass)}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]) .tt .search-hero h1 em{color:var(--brass)}}
-.tt .sform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,3vw,28px);display:grid;gap:20px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
+.tt .sform{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(16px,3vw,28px);display:grid;gap:20px;box-shadow:0 18px 40px var(--shadow-color)}
 .tt .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
 .tt .fgrid2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
 @media (max-width:820px){.tt .fgrid,.tt .fgrid2{grid-template-columns:1fr 1fr}.tt .fgrid .f-wide{grid-column:1/-1}}
 @media (max-width:520px){.tt .fgrid,.tt .fgrid2{grid-template-columns:1fr}}
 .tt .field{display:grid;gap:6px;min-width:0}
-.tt .field>label,.tt .field>span.fl,.tt fieldset legend{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0}
+.tt .field>label,.tt .field>span.fl,.tt fieldset legend{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:0;color:var(--muted);padding:0}
 .tt .field input[type=text],.tt .field input[type=date],.tt .field input[type=number],.tt .field select{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font:500 16px var(--font-body),system-ui,sans-serif;color-scheme:inherit}
 .tt .field input:focus-visible,.tt .field select:focus-visible{outline:2px solid var(--brass-hi);outline-offset:1px}
 .tt .field .err{color:var(--bad);font-size:13px}
@@ -122,7 +122,7 @@
 .tt .picker select{min-height:48px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:0 14px;font:500 16px var(--font-body),system-ui,sans-serif;max-width:100%}
 .tt .facts{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;margin-top:20px;display:grid;gap:12px}
 .tt .facts dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.tt .facts dt{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.tt .facts dt{font-family:var(--font-mono),ui-monospace,monospace;font-size:11px;letter-spacing:0;color:var(--muted)}
 .tt .facts dd{margin:2px 0 0}
 
 /* hotel detail */
@@ -207,7 +207,7 @@
 .tt .page-head .eyebrow{display:block}
 .tt .ptext{margin:0;max-height:240px;overflow:auto;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;font:12px/1.5 var(--font-mono),ui-monospace,monospace;white-space:pre-wrap;overflow-wrap:anywhere}
 .tt .itile iframe,.tt .itile .ihead{background:var(--surface)}
-.tt .hotel-card{box-shadow:0 1px 0 rgba(255,255,255,.02)}
+.tt .hotel-card{box-shadow:0 1px 0 transparent}
 .tt .offer{transition:border-color .15s}
 .tt .offer:hover{border-color:color-mix(in oklab,var(--brass) 55%,var(--line))}
 .tt .cta-bar{margin-top:28px}
@@ -218,6 +218,35 @@
 .tt .gloss summary{list-style:none;cursor:pointer;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:inline-grid;place-items:center;font:600 11px var(--font-mono),monospace;color:var(--muted);user-select:none}
 .tt .gloss summary::-webkit-details-marker{display:none}
 .tt .gloss[open] summary{border-color:var(--brass);color:var(--brass)}
-.tt .gloss p{position:absolute;z-index:5;left:0;top:26px;width:min(280px,70vw);background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--fg);box-shadow:0 8px 24px rgba(0,0,0,.35);white-space:normal;text-align:left;font-family:var(--font-body),system-ui,sans-serif;letter-spacing:0;text-transform:none}
+.tt .gloss p{position:absolute;z-index:5;left:0;top:26px;width:min(280px,70vw);background:var(--surface2);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--fg);box-shadow:0 8px 24px var(--shadow-color);white-space:normal;text-align:left;font-family:var(--font-body),system-ui,sans-serif;letter-spacing:0;text-transform:none}
 .tt textarea.draft{width:100%;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);padding:12px;font:14px/1.5 var(--font-body),system-ui,sans-serif;resize:vertical}
 .tt .seg{flex-wrap:wrap;max-width:100%}
+/* place suggestions */
+.tt .place{position:relative;min-width:0}
+.tt .place>input{width:100%;min-height:48px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--fg);font:500 16px var(--font-body),system-ui,sans-serif}
+.tt .place>input:focus-visible{outline:2px solid var(--brass-hi);outline-offset:1px}
+.tt .place-list{position:absolute;z-index:30;left:0;right:0;top:calc(100% + 6px);margin:0;padding:6px;list-style:none;background:var(--surface2);border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 32px var(--shadow-color);max-height:300px;overflow:auto}
+.tt .place-list li{display:flex;justify-content:space-between;gap:12px;align-items:center;min-height:44px;padding:0 12px;border-radius:10px;cursor:pointer;font-size:15px}
+.tt .place-list li small{color:var(--muted);font-size:12px;white-space:nowrap}
+.tt .place-list li[aria-selected=true]{background:color-mix(in oklab,var(--brass) 18%,var(--surface2))}
+.tt .nlrow .place{flex:1}
+/* ---- Coastal Minimal usage rules ---- */
+/* Teal is for fills, borders, icons and progress; text links and buttons use Ocean (--brand). */
+.tt .prog i,.tt .itile .prog i,.tt .tile .prog i{background:var(--accent)}
+.tt .tile.done .prog i,.tt .itile.verified .prog i{background:var(--ok)}
+.tt .chip-btn[aria-pressed=true],.tt .chip-btn[aria-checked=true]{border-color:var(--accent);background:var(--accent-soft);color:var(--ink)}
+.tt .chip-btn[aria-pressed=true]::before,.tt .chip-btn[aria-checked=true]::before{color:var(--brand)}
+.tt .orow[aria-checked=true]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+.tt .orow[aria-checked=true] .radio{border-color:var(--accent)}
+.tt .orow[aria-checked=true] .radio::after{background:var(--accent)}
+.tt .stepper .on a,.tt .stepper .on span.st{border-color:var(--accent);background:var(--accent-soft)}
+.tt .stepper .on b{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.tt .btn:hover{background:var(--brand-hover)}
+.tt .btn.ghost{background:transparent;color:var(--ink)}
+.tt .btn.ghost:hover{background:var(--surface-2)}
+/* Non-comparable notes: Sand with Slate text, so they read differently from unverified (Clay family). */
+.tt .badge.nc{background:var(--sand);color:var(--slate);border-color:var(--sand-line)}
+.tt .stamp.nc{color:var(--tag-fg);background:var(--sand);border-color:var(--sand-line)}
+.tt .notice.warn{background:var(--warn-soft);border-color:var(--gap);color:var(--ink)}
+.tt .arrow .pill,.tt .pill{background:var(--warn-soft);border-color:var(--gap);color:var(--warn)}
+.tt .vcard.best,.tt .panel.pay{border-color:var(--accent)}

@@ -49,7 +49,6 @@ function Inner() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <span className="eyebrow">Step 4 of 5</span>
           <h1>Every number links to its page</h1>
           <div className="row"><Provenance meta={data._meta} /></div>
         </div>
@@ -76,7 +75,7 @@ function Inner() {
           <div className="facts">
             <h2 style={{ fontSize: 22 }}>{offer.status === "blocked" ? "This run was blocked" : "This price was not verified"}</h2>
             <p className="lede">
-              {offer.status === "blocked" ? `${blockerLabel(offer.blocker)}. We never solve captchas, log in or enter an OTP.` : "No payable price was captured at the payment page."}{" "}
+              {offer.status === "blocked" ? `${blockerLabel(offer.blocker)}.${offer.blocker === "captcha" || offer.blocker === "login" || offer.blocker === "otp" ? " We never solve captchas, log in or enter an OTP." : ""}` : "No payable price was captured at the payment page."}{" "}
               There is no fee gap and no score for this offer.
               {offer.price_trail.some((p) => p.step === "payment") && " The payment-page amount in the trail below was observed but not confirmed, so treat it as unverified."}
             </p>

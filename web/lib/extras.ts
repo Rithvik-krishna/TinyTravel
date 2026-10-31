@@ -73,3 +73,16 @@ export function useHistory(hotel: string | undefined, platform: string | undefin
 export function fetchFeeDraft(offerId: string): Promise<FeeDraft | null> {
   return getJson<FeeDraft>(`/api/offers/${encodeURIComponent(offerId)}/report-fee-draft`);
 }
+/** "live" | "fake" | "mock" | "saved" from /api/health, "down" when the API does not answer, null while loading or in the mock frontend. */
+export function useBackendMode(): string | null {
+  const [mode, setMode] = useState<string | null>(null);
+  useEffect(() => {
+    let alive = true;
+    // "down" means the API did not answer, which the form reports instead of failing on submit.
+    getJson<{ mode?: string }>("/api/health").then((h) => alive && setMode(MOCK ? null : (h?.mode ?? "down")));
+    return () => {
+      alive = false;
+    };
+  }, []);
+  return mode;
+}

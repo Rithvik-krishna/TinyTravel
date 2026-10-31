@@ -33,7 +33,6 @@ function Inner() {
     <main className="page">
       <div className="wrap">
         <div className="page-head">
-          <span className="eyebrow">Step 3 of 5</span>
           <h1>Every hotel we checked</h1>
           <p className="lede">Listing price against the price at the payment page, observed on this run. Blocked and unverified offers stay visible with the reason and never get a price or a score.</p>
           <div className="row">

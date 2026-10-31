@@ -2,98 +2,140 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Sky-blue fluted glass theme. The ONLY place colours are defined.
+ * One theme (dark colour-scheme so native date pickers and scrollbars render light-on-dark).
+ */
 :root {
-  --surface: #ffffff;
-  --surface-2: #f8fafc;
-  --border: #e2e8f0;
-  --text: #0f172a;
-  --text-muted: #64748b;
-  --brand: #0284c7;
-  --success: #16a34a;
-  --warning: #d97706;
-  --danger: #dc2626;
-  --info: #2563eb;
+  /* raw palette */
+  --sky: #0593C6;
+  --sky-deep: #0577A8;
+  --sky-night: #045A82;
+  --sky-light: #4FC3F0;
+  --white: #FCFFFF;
+  --pink: #D83995;
+  --pink-soft: #F27AC0;
+  /* Pink used as a fill behind white text: slightly deeper than --pink so small text reaches 4.5:1. */
+  --pink-fill: #C72C88;
 
-  /* Aliases for reference component and shadcn tokens */
-  --color-foreground: var(--text);
-  --color-background: var(--surface);
-  --color-card: var(--surface-2);
-  --color-card-foreground: var(--text);
-  --color-muted: var(--surface-2);
-  --color-muted-foreground: var(--text-muted);
-  --color-border: var(--border);
-  --color-ring: var(--brand);
-  --color-chart-2: var(--success);
-}
+  /* glass and lines */
+  --glass: rgba(255, 255, 255, 0.14);
+  --glass-strong: rgba(255, 255, 255, 0.22);
+  --glass-dark: rgba(4, 70, 105, 0.35);
+  --glass-text: rgba(4, 70, 105, 0.48);
+  --line: rgba(255, 255, 255, 0.28);
+  --scrim: rgba(3, 40, 62, 0.6);
+  --shadow-color: rgba(4, 70, 105, 0.25);
+  --glass-fallback: rgba(4, 90, 130, 0.85);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --surface: #0b0f19;
-    --surface-2: #131b2e;
-    --border: #1e293b;
-    --text: #f8fafc;
-    --text-muted: #94a3b8;
-    --brand: #38bdf8;
-    --success: #22c55e;
-    --warning: #f59e0b;
-    --danger: #ef4444;
-    --info: #60a5fa;
+  /* text */
+  --text-1: #FCFFFF;
+  --text-2: rgba(252, 255, 255, 0.86);
+  --text-3: rgba(252, 255, 255, 0.72);
 
-    --color-foreground: var(--text);
-    --color-background: var(--surface);
-    --color-card: var(--surface-2);
-    --color-card-foreground: var(--text);
-    --color-muted: var(--surface-2);
-    --color-muted-foreground: var(--text-muted);
-    --color-border: var(--border);
-    --color-ring: var(--brand);
-    --color-chart-2: var(--success);
-  }
-}
+  /* status (always paired with an icon and a label) */
+  --verified: #8DF0B5;
+  --unverified: #FFD27A;
+  --blocked: #FF9B9B;
 
-body {
-  background-color: var(--surface);
-  color: var(--text);
-}
-
-/* Landing ("/") tokens. Scoped to .tt so the other pages' --surface/--info etc. are not overridden. */
-.tt {
-  --bg:#0a0f1e; --surface:#121a30; --surface2:#1a2540; --line:#27345a;
-  --fg:#eaeef8; --muted:#9aa6c2; --brass:#d9a441; --brass-hi:#f2c970; --brass-lo:#8a6420;
-  --ok:#3ecf8e; --warn:#f2b84b; --bad:#f07a7a; --info:#6db3ff;
-  --tag-bg:#eee9dc; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#cfc8b6;
-  --on-brass:#1b1405;
   color-scheme: dark;
 }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .tt {
-    --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
-    --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
-    --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
-    --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
-    --on-brass:#fff; color-scheme: light;
+
+/*
+ * Aliases. Older pages and the landing/flow stylesheets use these names; they all resolve to the tokens above.
+ */
+:root {
+  --background: var(--sky-deep);
+  --ink: var(--text-1);
+  --muted: var(--text-3);
+  --brand: var(--white);
+  --brand-hover: var(--white);
+  --brand-soft: var(--glass);
+  --brand-ink: var(--sky-night);
+  --accent: var(--white);
+  --accent-soft: var(--glass-strong);
+  --gap: var(--pink);
+  --warn: var(--unverified);
+  --warn-soft: var(--glass-dark);
+  --ok: var(--verified);
+  --ok-soft: var(--glass-dark);
+  --bad: var(--blocked);
+  --bad-soft: var(--glass-dark);
+  --info: var(--sky-light);
+  --surface: var(--glass-text);
+  --surface-2: var(--glass-strong);
+  --sand: var(--glass-strong);
+  --sand-line: var(--line);
+  --paper: #FFFFFF;
+
+  --text: var(--text-1);
+  --text-muted: var(--text-3);
+  --border: var(--line);
+  --success: var(--verified);
+  --warning: var(--unverified);
+  --danger: var(--blocked);
+  --surface2: var(--glass-strong);
+
+  --bg: transparent;
+  --fg: var(--text-1);
+  --brass: var(--white);
+  --brass-hi: var(--white);
+  --brass-lo: var(--sky-night);
+  --on-brass: var(--sky-night);
+
+  /* key tags are glass cards too */
+  --tag-bg: rgba(4, 70, 105, 0.62);
+  --tag-fg: var(--text-1);
+  --tag-muted: var(--text-2);
+  --tag-line: var(--line);
+  --tag-ok: var(--verified);
+  --tag-warn: var(--unverified);
+  --tag-bad: var(--blocked);
+  --tag-delta-bg: var(--pink);
+
+  --color-foreground: var(--text-1);
+  --color-background: var(--sky-deep);
+  --color-card: var(--glass);
+  --color-card-foreground: var(--text-1);
+  --color-muted: var(--glass);
+  --color-muted-foreground: var(--text-3);
+  --color-border: var(--line);
+  --color-ring: var(--white);
+  --color-chart-2: var(--verified);
+}
+
+/* One family everywhere (loaded by the stylesheet link in layout.tsx). */
+:root {
+  --font-display: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-figtree: 'Inter Tight', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+html {
+  background-color: var(--sky-night);
+  scrollbar-color: var(--line) transparent;
+}
+body {
+  background-color: transparent;
+  color: var(--text-1);
+  font-family: var(--font-body);
+}
+
+/* Focus ring: 2px white with an offset on every interactive element. */
+:focus-visible {
+  outline: 2px solid var(--white);
+  outline-offset: 3px;
+}
+
+/* No backdrop-filter support: use a solid translucent blue instead of glass. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root {
+    --glass: var(--glass-fallback);
+    --glass-strong: var(--glass-fallback);
+    --glass-dark: var(--glass-fallback);
+    --glass-text: var(--glass-fallback);
+    --surface: var(--glass-fallback);
+    --surface-2: var(--glass-fallback);
   }
 }
-:root[data-theme="light"] .tt, .tt[data-theme="light"] {
-  --bg:#f4f5f9; --surface:#ffffff; --surface2:#eceff6; --line:#d3d9e6;
-  --fg:#111833; --muted:#566079; --brass:#a9741a; --brass-hi:#d9a441; --brass-lo:#6f4b0e;
-  --ok:#0f8a55; --warn:#9a6700; --bad:#c43c3c; --info:#1d5fb8;
-  --tag-bg:#fbf8ef; --tag-fg:#1a1f2e; --tag-muted:#5d6475; --tag-line:#d8d0bb;
-  --on-brass:#fff; color-scheme: light;
-}
-/* Booking/flow theme (.tb on top of .tt): teal action colour, calm light-first palette. Re-maps the same token names. */
-.tt.tb { --font-body: var(--font-figtree);
-  /* Midnight Navy / Deep Slate / Steel Blue / Electric Teal / Soft Coral / Snow White / Muted Blue / Success Green / Warning Amber */
-  --bg:#0B1220; --surface:#172438; --surface2:#1d2e47; --line:#263B52;
-  --fg:#F8FAFC; --muted:#9BAFC5; --brass:#2DD4BF; --brass-hi:#2DD4BF; --brass-lo:#14998a; --on-brass:#06231f;
-  --ok:#4ADE80; --warn:#FBBF24; --bad:#FF8B72; --info:#7dd3fc; }
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .tt.tb {
-    --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
-    --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
-    --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }
-}
-:root[data-theme="light"] .tt.tb {
-  --bg:#f3f6f5; --surface:#ffffff; --surface2:#eaf0ee; --line:#d9e2df;
-  --fg:#0e1f1c; --muted:#566865; --brass:#0a7c6e; --brass-hi:#0a7c6e; --brass-lo:#066357; --on-brass:#ffffff;
-  --ok:#087a47; --warn:#a55200; --bad:#b02525; --info:#1d5cab; }

@@ -13,13 +13,13 @@ export default function HandoffPack({ pack, onRecheck, recheckResult }: any) {
           <div>{c.cancellation}</div>
           <div>{c.dates} · {c.guests} guests</div>
           <div className="font-semibold">Expect to pay {inr(c.expected_final_payable)}</div>
-          <a className="text-blue-600 underline" href={pack.deep_link} target="_blank">Open on {pack.platform}</a>
+          <a className="text-brand underline" href={pack.deep_link} target="_blank">Open on {pack.platform}</a>
         </div>
       </div>
-      <div className="text-xs bg-slate-100 dark:bg-slate-800 rounded p-2">
+      <div className="text-xs bg-surface-2 rounded p-2">
         Copy-paste: {pack.copy_paste.name} · {pack.copy_paste.email} · {pack.copy_paste.phone}
       </div>
-      <div className="text-xs text-slate-500">{pack.disclaimer}</div>
+      <div className="text-xs text-text-muted">{pack.disclaimer}</div>
       <button className="border rounded px-3 py-1 text-sm" onClick={onRecheck}>Re-check before paying</button>
       {recheckResult && <div className="text-sm">{recheckResult.message}</div>}
     </div>

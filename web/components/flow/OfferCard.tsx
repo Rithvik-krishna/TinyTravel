@@ -31,7 +31,7 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
   const score = transparencyScore(t);
   const pct = (n: number | null) => (n != null && scaleMax > 0 ? Math.max(4, Math.round((n / scaleMax) * 100)) : 0);
   return (
-    <article className={`offer${verified ? "" : " na"}`} aria-label={`${t.title} on ${t.platform}`}>
+    <article className={`offer${verified ? "" : " na"}${labels.length > 0 ? " best" : ""}`} aria-label={`${t.title} on ${t.platform}`}>
       <div className="top">
         <b>{t.platform}</b>
         <span className={`badge ${t.status === "verified" ? "ok" : t.status === "blocked" ? "bad" : "warn"}`}>{t.status}</span>
@@ -49,7 +49,7 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
         </div>
       )}
       {verified && t.fee_leak_pct != null && (
-        <span className="badge" style={{ justifySelf: "start" }}>+{t.fee_leak_pct}% vs listing, observed on this run</span>
+        <span className="badge gap" style={{ justifySelf: "start" }}>+{t.fee_leak_pct}% vs listing, observed on this run</span>
       )}
       {!verified && (
         <p className="why">
@@ -57,8 +57,8 @@ export function OfferCard({ t, searchId, scaleMax, labels = [], notComparable, s
         </p>
       )}
       <div className="tags">
-        <span className={`badge ${t.cancellation_category === "free" ? "ok" : "warn"}`}>{CANCEL[t.cancellation_category]}</span>
-        {notComparable && <span className="badge warn">Not comparable</span>}
+        {verified && <span className={`badge ${t.cancellation_category === "free" ? "ok" : "warn"}`}>{CANCEL[t.cancellation_category]}</span>}
+        {notComparable && <span className="badge nc">Not comparable</span>}
       </div>
       <dl>
         {t.meal_plan && (<><dt>Meal plan</dt><dd>{t.meal_plan}</dd></>)}
