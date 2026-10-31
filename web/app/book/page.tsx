@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { getResults, MOCK } from "@/lib/dataSource";
+import demo from "@fixtures/demo_run.json";
 import { gapAmount, gapPct, inr, shortTime, signedInr } from "@/lib/format";
 import { LandingResults } from "@/lib/landing";
 import { offersToTags } from "@/lib/tags";
@@ -16,10 +16,10 @@ const Tick = () => (
 );
 
 export default async function Book() {
-  // The "what you see / what you pay" example comes from the demo run, so it only exists in mock mode.
+  // The "what you see / what you pay" example is an illustration taken from the bundled sample run.
   let example: { listing: number; payable: number; platform: string; hotel: string; at: string; currency: string } | null = null;
-  if (MOCK) {
-    const results: LandingResults = await getResults("demo");
+  {
+    const results = demo as unknown as LandingResults;
     const heroId = results.verdicts?.hero_hotel_id;
     const t = offersToTags(results).find((x) => x.hotelId === heroId && x.status === "verified" && x.listing != null && x.payable != null);
     if (t && t.listing != null && t.payable != null) example = { listing: t.listing, payable: t.payable, platform: t.platform, hotel: t.title, at: shortTime(t.verifiedAt), currency: t.currency };

@@ -46,7 +46,7 @@ export function Hero({ tags, meta, checkIn, checkOut }: HeroProps) {
           <>
             <KeyTagRail tags={tags} width="clamp(190px, 20vw, 240px)" variant="hero" ariaLabel={`${first?.title ?? "Hotel"} offers on ${tags.length} sites`} />
             <p className="rail-note">
-              {where ? `${where}. ` : ""}Touch a tag to swing it. Tap to flip it and see the price at the payment page.
+              {where ? `${where}. ` : ""}Hover over a tag (or tap it) to flip it and see the price at the payment page.
             </p>
           </>
         )}

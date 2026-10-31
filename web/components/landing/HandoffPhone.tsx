@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import qrcode from "qrcode-generator";
@@ -54,7 +54,7 @@ export function Qr({ link, png, platform }: { link: string; png?: string; platfo
   );
 }
 
-export function HandoffPhone({ handoff }: { handoff?: Handoff | null }) {
+export function HandoffPhone({ handoff, hideVerifiedTime = false }: { handoff?: Handoff | null; hideVerifiedTime?: boolean }) {
   if (!handoff) return null;
   const platform = handoff.platform ?? "the site";
   const link = handoff.deep_link ?? "";
@@ -75,7 +75,7 @@ export function HandoffPhone({ handoff }: { handoff?: Handoff | null }) {
       <div className="copyrow">
         {fields.map(([k, v]) => (v ? <CopyButton key={k} label={k} value={v} /> : null))}
       </div>
-      <p style={{ fontSize: 12 }}>Dummy test details.{handoff.disclaimer ? ` ${handoff.disclaimer}` : ""}</p>
+      <p style={{ fontSize: 12 }}>Dummy test details.{handoff.disclaimer ? ` ${hideVerifiedTime ? handoff.disclaimer.replace(/Price verified at [^.]*\.\s*/i, "") : handoff.disclaimer}` : ""}</p>
     </div>
   );
 }
