@@ -1,0 +1,95 @@
+{
+  "run_id": "83f6e966-369e-4d96-bc74-ac5702dd6b91",
+  "hotel_name": "Hotel City Centaur",
+  "platform": "agoda",
+  "started_at": "2026-11-14T13:21:45.850805+05:30",
+  "finished_at": "2026-11-14T13:24:17.697310+05:30",
+  "elapsed_seconds": 151.846505,
+  "steps": 15,
+  "cost_usd": 0.24,
+  "status": "unverified",
+  "offer": {
+    "offer_id": "off_agoda_hotel_ci",
+    "hotel_id": "h_hotel_ci",
+    "run_id": "83f6e966-369e-4d96-bc74-ac5702dd6b91",
+    "streaming_url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-311143d3-1802-4eea-9885-723a9d83967d/stream/1",
+    "started_at": "2026-11-14T13:21:45.864065+05:30",
+    "finished_at": "2026-11-14T13:24:17.697310+05:30",
+    "steps": 15,
+    "cost_usd": 0.24,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "partial",
+    "site": "Agoda",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Hotel City Centaur",
+    "hotel_url": "https://www.agoda.com/hotel-city-centaur/hotel/bangalore-in.html?countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&flightSearchCriteria=%5Bobject+Object%5D&los=1&searchrequestid=c3449f93-142f-432d-ba6d-878a0ab05a68&ds=QT%2BUlCElrt5psetO",
+    "room_type": "N/A",
+    "max_occupancy": 0,
+    "meal_plan": "N/A",
+    "cancellation_policy": "N/A",
+    "price_shown_on_listing": 0.0,
+    "price_shown_on_room_selection": 0.0,
+    "price_final_payable": 0.0,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "Sold out! Our last room is already booked"
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 0.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 0.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 0.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 0.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Hotel City Centaur was located in the search results for Bengaluru (2026-11-20 to 2026-11-21, 2 adults, 1 room). However, the property is completely sold out for the requested dates, displaying 'Sold out! Our last room is already booked'. No rooms are available for selection, so the booking process cannot proceed past the listing page. Cannot proceed to room selection, traveller details, or payment page. [Occupancy mismatch: room fits 0 adults but search requested 2]",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-311143d3-1802-4eea-9885-723a9d83967d/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:24:17.697310+05:30",
+        "extracted_value": 0.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_hotel_ci_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:21:45.864065+05:30",
+        "extracted_value": 0.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Hotel City Centaur, 2.5 stars, Agoda Preferred, 6.5 Good (748 reviews), 74-79, G.T Road, Off KSR Railway Station, Opposite to KSRTC Bus Terminal, Bangalore",
+    "payment_page_text": "",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

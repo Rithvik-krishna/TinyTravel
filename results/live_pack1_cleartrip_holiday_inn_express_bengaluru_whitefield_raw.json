@@ -1,0 +1,120 @@
+{
+  "run_id": "d8296784-6869-453c-9da3-a2e8fd5e729c",
+  "hotel_name": "Holiday Inn Express Bengaluru Whitefield",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T13:24:17.704450+05:30",
+  "finished_at": "2026-11-14T13:28:39.949665+05:30",
+  "elapsed_seconds": 262.245215,
+  "steps": 33,
+  "cost_usd": 0.528,
+  "status": "blocked",
+  "offer": {
+    "offer_id": "off_cleartrip_holiday_",
+    "hotel_id": "h_holiday_",
+    "run_id": "d8296784-6869-453c-9da3-a2e8fd5e729c",
+    "streaming_url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-4aefd372-b2a8-4eef-b953-1ff2c3c5b071/stream/2",
+    "started_at": "2026-11-14T13:24:17.705963+05:30",
+    "finished_at": "2026-11-14T13:28:39.947588+05:30",
+    "steps": 33,
+    "cost_usd": 0.528,
+    "status": "blocked",
+    "reconciliation": "ok",
+    "cancellation_category": "partial",
+    "site": "cleartrip",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "other",
+    "hotel_name": "Holiday Inn Express BENGALURU WHITEFIELD ITPL by IHG",
+    "hotel_url": "https://www.cleartrip.com/hotels/itinerary/75c9dba1e4-b553-4e21-b4c7-261114132639/info",
+    "room_type": "1 Queen Standard",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast included",
+    "cancellation_policy": "Fully refundable for cancellations done before 16 Nov, 00:00 IST. Cancel between 16 Nov, 00:00 IST and 20 Nov, 15:00 IST to get a refund of Rs 0.",
+    "price_shown_on_listing": 3506.0,
+    "price_shown_on_room_selection": 3506.0,
+    "price_final_payable": 3506.0,
+    "fee_lines": [
+      {
+        "label": "Room (1 night)",
+        "amount": 3339.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 167.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "Elite Membership: Minimum 20% off on domestic hotels"
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 3506.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 3506.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 3506.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 3506.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking is at the traveller_details step with guest information filled (Name: Test Guest, Email: test.guest+probe@example.com, Phone: 9000000000). The hotel 'Holiday Inn Express Bengaluru Whitefield' was found and the cheapest room with free cancellation ('1 Queen Standard') was selected. No login/OTP/CAPTCHA block was encountered, but the task requires reaching the payment page which is the next step. The price trail shows INR throughout. Booking was NOT completed (no payment details entered). Listing page text from card: 'Holiday Inn Express BENGALURU WHITEFIELD ITPL by IHG | 3-star Hotel \u00b7 Bangalore | 3.7 rating with 1k+ ratings | Central Location'. Payment page text: '1 room x 1 night: 3339.0, Hotel taxes: 167.0, Convenience fee: 0.0, Total: 3506.0'.",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-4aefd372-b2a8-4eef-b953-1ff2c3c5b071/stream/2",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:28:39.947588+05:30",
+        "extracted_value": 3506.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_holiday__listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:24:17.705963+05:30",
+        "extracted_value": 3506.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_holiday__payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:28:39.947588+05:30",
+        "extracted_value": 3506.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Holiday Inn Express BENGALURU WHITEFIELD ITPL by IHG \u00b7 3-star Hotel \u00b7 Bangalore \u00b7 3.7 rating with 1k+ ratings \u00b7 Central Location \u00b7 Guest highly compliments the hotel's convenient location \u00b7 Free breakfast on select plans \u00b7 Free cancellation",
+    "payment_page_text": "Total price: 3506.0 (1 room x 1 night: 3339.0, Hotel taxes: 167.0, Convenience fee: 0.0)",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

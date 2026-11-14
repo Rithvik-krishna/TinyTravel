@@ -1,0 +1,132 @@
+{
+  "run_id": "120cab24-9b55-497c-aecd-9e8892ef0cfc",
+  "hotel_name": "Holiday Inn Express Bengaluru Whitefield",
+  "platform": "agoda",
+  "started_at": "2026-11-14T13:28:39.951478+05:30",
+  "finished_at": "2026-11-14T13:32:31.676768+05:30",
+  "elapsed_seconds": 231.72529,
+  "steps": 23,
+  "cost_usd": 0.368,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_agoda_holiday_",
+    "hotel_id": "h_holiday_",
+    "run_id": "120cab24-9b55-497c-aecd-9e8892ef0cfc",
+    "streaming_url": "https://ip-204-236-184-33.tetra-data.production.tinyfish.io/tf-50aebf2a-77e7-4853-b7ba-9275254969b4/stream/1",
+    "started_at": "2026-11-14T13:28:39.961958+05:30",
+    "finished_at": "2026-11-14T13:32:31.674750+05:30",
+    "steps": 23,
+    "cost_usd": 0.368,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "/search",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Holiday Inn Express Bengaluru Whitefield Itpl By IHG",
+    "hotel_url": "https://www.agoda.com/accom/property?propertyId=5500137&countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false",
+    "room_type": "1 Queen Accessible with free laundromat",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast included",
+    "cancellation_policy": "Free cancellation before Nov 16, 2026",
+    "price_shown_on_listing": 3270.0,
+    "price_shown_on_room_selection": 3270.0,
+    "price_final_payable": 3434.5,
+    "fee_lines": [
+      {
+        "label": "Room price",
+        "amount": 2909.5,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Booking fees",
+        "amount": 0.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Extra Person Fee",
+        "amount": 525.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Tax",
+        "amount": 0.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "This price is guaranteed for...",
+      "Hurry! Our last room for your dates at this price",
+      "It's only 6 days until your check-in. Rates may rise if you don't book now"
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 3270.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 3270.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 3434.5,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 3434.5,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Room name + guest count verbatim from booking summary: '1 x 1 Queen Accessible with free laundromat', 2 adults. Booking fees: FREE. Urgency: 'Hurry! Our last room for your dates at this price', countdown timer on price guarantee.",
+    "fee_leak_pct": 5.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-204-236-184-33.tetra-data.production.tinyfish.io/tf-50aebf2a-77e7-4853-b7ba-9275254969b4/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:32:31.674750+05:30",
+        "extracted_value": 3434.5,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_holiday__listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:28:39.961958+05:30",
+        "extracted_value": 3270.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_holiday__payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:32:31.674750+05:30",
+        "extracted_value": 3434.5,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Holiday Inn Express Bengaluru Whitefield Itpl By IHG",
+    "payment_page_text": "Total Price: Rs. 3,434.50 (Room price (1 room x 1 night): Rs. 2,909.50, Booking fees: FREE, Extra Person Fee: Rs. 525.00, Tax: 5%)",
+    "transparency": {
+      "score": 69,
+      "breakdown": {
+        "fee_leak": 43.8,
+        "addons_pressure": 5,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

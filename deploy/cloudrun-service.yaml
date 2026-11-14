@@ -1,0 +1,50 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: tinytravel-api
+  labels:
+    cloud.googleapis.com/location: asia-south1
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/description: "TinyTravel Verified Hotel Rate API"
+spec:
+  template:
+    metadata:
+      annotations:
+        # Crucial for autonomous headless Chromium browser execution:
+        run.googleapis.com/cpu-throttling: "false"
+        run.googleapis.com/timeout: "600s"
+        run.googleapis.com/startup-cpu-boost: "true"
+        autoscaling.knative.dev/minScale: "1"
+        autoscaling.knative.dev/maxScale: "10"
+    spec:
+      containerConcurrency: 10
+      timeoutSeconds: 600
+      containers:
+        - image: asia-south1-docker.pkg.dev/PROJECT_ID/tinytravel-repo/tinytravel-api:latest
+          ports:
+            - name: http1
+              containerPort: 8080
+          resources:
+            limits:
+              cpu: "2000m"
+              memory: "2Gi"
+          env:
+            - name: DATA_MODE
+              value: "live"
+            - name: INTAKE_PROVIDER
+              value: "gemini"
+            - name: GEMINI_INTAKE_MODEL
+              value: "gemini-1.5-flash"
+            - name: AGENT_TIMEOUT_S
+              value: "600"
+            - name: GEMINI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: gemini-api-key
+                  key: latest
+            - name: TINYFISH_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: tinyfish-api-key
+                  key: latest

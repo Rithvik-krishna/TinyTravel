@@ -1,0 +1,123 @@
+{
+  "run_id": "5c6b01be-96fc-4e2d-a033-1970e76e5ddb",
+  "hotel_name": "Taj Yeshwantpur",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T13:32:31.680619+05:30",
+  "finished_at": "2026-11-14T13:37:04.349253+05:30",
+  "elapsed_seconds": 272.668634,
+  "steps": 31,
+  "cost_usd": 0.496,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_cleartrip_taj_yesh",
+    "hotel_id": "h_taj_yesh",
+    "run_id": "5c6b01be-96fc-4e2d-a033-1970e76e5ddb",
+    "streaming_url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-0c794e1a-41c8-4c24-a365-aac5ad16b48b/stream/1",
+    "started_at": "2026-11-14T13:32:31.690731+05:30",
+    "finished_at": "2026-11-14T13:37:04.344817+05:30",
+    "steps": 31,
+    "cost_usd": 0.496,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "non_refundable",
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Taj Yeshwantpur",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/taj-yeshwantpur-4290278",
+    "room_type": "Superior Room City View Twin Bed",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 14600.0,
+    "price_shown_on_room_selection": 14600.0,
+    "price_final_payable": 17228.0,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 14600.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 2628.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 14600.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 17228.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 17228.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 17228.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Reached payment page successfully. Guest details (Test Guest, test.guest+probe@example.com, 9000000000) were filled in the traveller details form. The cheapest room selected was 'Superior Room City View Twin Bed' at Rs 14600 with non-refundable cancellation policy. No pre-selected add-ons or urgency/scarcity messages were present. Total payable amount is Rs 17,228 inclusive of Rs 2,628 hotel taxes. Stopped at payment page without entering any payment details.",
+    "fee_leak_pct": 18.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-0c794e1a-41c8-4c24-a365-aac5ad16b48b/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:37:04.344817+05:30",
+        "extracted_value": 17228.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_taj_yesh_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:32:31.690731+05:30",
+        "extracted_value": 14600.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_taj_yesh_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:37:04.344817+05:30",
+        "extracted_value": 17228.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Taj Yeshwantpur - 5-star Hotel, Yeswanthpur, Bangalore - 4.9 rating, 22k+ ratings, price Rs 14,600 (+ Rs 2,628 taxes & fees / night)",
+    "payment_page_text": "Pay to complete your booking. Base fare Rs 14,600, Hotel taxes Rs 2,628, Convenience fee Rs 0, Total Rs 17,228. Booking: Taj Yeshwantpur, 1 Rooms | 2 Adults, 0 Children, Fri 20 Nov 2026 - Sat 21 Nov 2026, Guest: Test Guest (M)",
+    "transparency": {
+      "score": 68,
+      "breakdown": {
+        "fee_leak": 27.5,
+        "addons_pressure": 20,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

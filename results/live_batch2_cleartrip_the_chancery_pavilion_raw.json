@@ -1,0 +1,122 @@
+{
+  "run_id": "ccfbbe11-4111-4efd-920e-6eef9f767f93",
+  "hotel_name": "The Chancery Pavilion",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T16:54:55.246306+05:30",
+  "finished_at": "2026-11-14T16:58:46.372895+05:30",
+  "elapsed_seconds": 231.126589,
+  "steps": 39,
+  "cost_usd": 0.624,
+  "status": "unverified",
+  "offer": {
+    "offer_id": "off_cleartrip_the_chan",
+    "hotel_id": "h_the_chan",
+    "run_id": "ccfbbe11-4111-4efd-920e-6eef9f767f93",
+    "streaming_url": "https://ip-13-57-226-244.tetra-data.production.tinyfish.io/tf-b1484024-bf9a-4803-b8d3-71f61b7e6f26/stream/1",
+    "started_at": "2026-11-14T16:54:55.990233+05:30",
+    "finished_at": "2026-11-14T16:58:46.354543+05:30",
+    "steps": 39,
+    "cost_usd": 0.624,
+    "status": "unverified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "The Chancery Pavillion",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/the-chancery-pavillion-40140",
+    "room_type": "Superior Room",
+    "max_occupancy": 1,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov (fully refundable before 19 Nov, 14:00 IST)",
+    "price_shown_on_listing": 5000.0,
+    "price_shown_on_room_selection": 5000.0,
+    "price_final_payable": 5250.0,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 5000.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 250.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 5000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 5000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 5250.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 5250.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "The Chancery Pavilion (spelled \"The Chancery Pavillion\" on Cleartrip) was located and opened. Selected the cheapest room with free cancellation: Superior Room - Room Only at \u20b95,000 (free cancellation till 19 Nov). Total payable: \u20b95,250 (includes \u20b9250 hotel taxes, \u20b90 convenience fee). No pay_at_hotel split - full amount due now (pay_now: \u20b95,250). No add-ons, no urgency/scarcity messages. Booking flow reached payment page after entering guest details (Name: Test Guest, Email: testguest@example.com, Phone: 9000000000). Step 38 of 40 used, task complete. [Occupancy mismatch: room fits 1 adults but search requested 2]",
+    "fee_leak_pct": null,
+    "pay_now": 5250.0,
+    "pay_at_hotel": 0.0,
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5250.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-13-57-226-244.tetra-data.production.tinyfish.io/tf-b1484024-bf9a-4803-b8d3-71f61b7e6f26/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T16:58:46.354543+05:30",
+        "extracted_value": 5250.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_the_chan_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T16:54:55.990233+05:30",
+        "extracted_value": 5000.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_the_chan_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T16:58:46.354543+05:30",
+        "extracted_value": 5250.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Superior Room - Room assigned on arrival (340 sq.ft, City View). Room Only (\u20b95,000, free cancellation till 19 Nov, 2 Adults)",
+    "payment_page_text": "Base fare \u20b95,000, Hotel taxes \u20b9250, Convenience fee \u20b90, Total \u20b95,250. Pay to complete your booking.",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

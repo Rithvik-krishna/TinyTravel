@@ -1,0 +1,106 @@
+{
+  "run_id": "8986cd9c-7c80-4740-adba-03f66a9565eb",
+  "hotel_name": "Taj Yeshwantpur",
+  "platform": "agoda",
+  "started_at": "2026-11-14T13:37:04.352075+05:30",
+  "finished_at": "2026-11-14T13:42:19.523874+05:30",
+  "elapsed_seconds": 315.171799,
+  "steps": 33,
+  "cost_usd": 0.528,
+  "status": "unverified",
+  "offer": {
+    "offer_id": "off_agoda_taj_yesh",
+    "hotel_id": "h_taj_yesh",
+    "run_id": "8986cd9c-7c80-4740-adba-03f66a9565eb",
+    "streaming_url": "https://ip-204-236-184-33.tetra-data.production.tinyfish.io/tf-f014e5b4-ab42-4e9f-8b82-97919ca8d1de/stream/0",
+    "started_at": "2026-11-14T13:37:04.359991+05:30",
+    "finished_at": "2026-11-14T13:42:19.521014+05:30",
+    "steps": 33,
+    "cost_usd": 0.528,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "partial",
+    "site": "agoda",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Taj Yeshwantpur, Bengaluru",
+    "hotel_url": "https://www.agoda.com/vivanta-by-taj-yeshwantpur/hotel/bangalore-in.html?countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&los=1&searchrequestid=bc40cc6d-4e2b-43ff-81e7-96845837c108",
+    "room_type": "Superior Room Twin Bed",
+    "max_occupancy": 1,
+    "meal_plan": "No Breakfast",
+    "cancellation_policy": "Fully refundable - Cancel for free before 17 November 2026",
+    "price_shown_on_listing": 13140.0,
+    "price_shown_on_room_selection": 15505.2,
+    "price_final_payable": 15505.2,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "This price is guaranteed for.....",
+      "We have limited availability at this price - book now!",
+      "Final step! Your card will not be charged today."
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 13140.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 15505.2,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 15505.2,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 15505.2,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing card showed 'Taj Yeshwantpur, Bengaluru' at Rs. 13,140. Cheapest room fitting 2 adults with free cancellation was Superior Room Twin Bed. Booking summary shows '1 x Superior Room Twin Bed' - only 1 adult mentioned in summary (room may be designed for 1 adult despite selection allowing 2). Price increased from listing (13,140) to room selection (15,505.20). Payment page shows Rs. 15,505.20 total with 18% tax included, free booking fees, no payment until 14 Nov 2026. Booking button: 'BOOK NOW & PAY LATER!'. Guest details entered: Test Guest, test.guest+probe@example.com, 9000000000. Stopped at payment page - no payment details entered. Note: Room fits 1 adult per booking summary ('1 x Superior Room Twin Bed'), though listing showed it fits 2 adults. [Occupancy mismatch: room fits 1 adults but search requested 2]",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-204-236-184-33.tetra-data.production.tinyfish.io/tf-f014e5b4-ab42-4e9f-8b82-97919ca8d1de/stream/0",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:42:19.521014+05:30",
+        "extracted_value": 15505.2,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_taj_yesh_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:37:04.359991+05:30",
+        "extracted_value": 13140.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_taj_yesh_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:42:19.521014+05:30",
+        "extracted_value": 15505.2,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Taj Yeshwantpur, Bengaluru - 8.8 Excellent (1442 reviews) - Bengaluru, India - Rs. 13,140.0",
+    "payment_page_text": "Taj Yeshwantpur, Bengaluru | Fri, Nov 20 - Sat, Nov 21 \u2022 1 night \u2022 1 x Superior Room Twin Bed | Room price: Rs. 15,505.20 | Booking fees: FREE | Tax: 18% | Total Price: Rs. 15,505.20 | Cancel for free before 17 Nov 2026",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

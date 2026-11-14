@@ -1,0 +1,57 @@
+[
+  {
+    "hotel": "La Marvella",
+    "platform": "cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "error": "Hotel 'La Marvella' not visible on first page.",
+    "seconds": 21.104062,
+    "steps": 2,
+    "llm_tokens": 0,
+    "cost_usd": 0.0
+  },
+  {
+    "hotel": "Hotel City Centaur",
+    "platform": "cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "error": "Hotel 'Hotel City Centaur' not visible on first page.",
+    "seconds": 6.624115,
+    "steps": 2,
+    "llm_tokens": 0,
+    "cost_usd": 0.0
+  },
+  {
+    "hotel": "Holiday Inn Express Bengaluru Whitefield",
+    "platform": "cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "error": "Hotel 'Holiday Inn Express Bengaluru Whitefield' not visible on first page.",
+    "seconds": 7.182303,
+    "steps": 2,
+    "llm_tokens": 0,
+    "cost_usd": 0.0
+  },
+  {
+    "hotel": "Taj Yeshwantpur",
+    "platform": "cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "error": "Hotel 'Taj Yeshwantpur' not visible on first page.",
+    "seconds": 6.956487,
+    "steps": 2,
+    "llm_tokens": 0,
+    "cost_usd": 0.0
+  },
+  {
+    "hotel": "Holiday Inn Bengaluru Racecourse",
+    "platform": "cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "error": "Hotel 'Holiday Inn Bengaluru Racecourse' not visible on first page.",
+    "seconds": 6.961474,
+    "steps": 2,
+    "llm_tokens": 0,
+    "cost_usd": 0.0
+  }
+]

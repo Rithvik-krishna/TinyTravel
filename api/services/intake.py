@@ -267,20 +267,91 @@ def parse_request_llm(text: str, api_key: str, model_name: str) -> dict:
         raise ValueError("Could not parse JSON from Anthropic response.")
 
 
+def parse_request_gemini(text: str, api_key: str, model_name: str = "gemini-1.5-flash") -> dict:
+    """Parse search query using Google Gemini generateContent REST API."""
+    import urllib.request
+    import ssl
+
+    prompt = (
+        "You are the travel intake parser for TinyTravel.\n"
+        "Parse the user's natural language hotel query into a strict JSON object with fields:\n"
+        "- destination (str, default 'Bengaluru')\n"
+        "- area_hint (str or null, e.g. 'HSR Layout / Koramangala')\n"
+        "- check_in (str 'YYYY-MM-DD', default year 2026)\n"
+        "- check_out (str 'YYYY-MM-DD', default year 2026)\n"
+        "- guests (int >= 1, default 2)\n"
+        "- rooms (int >= 1, default 1)\n"
+        "- budget_per_night (float or null, in INR, e.g. 12k -> 12000)\n"
+        "- must_have (dict with bool keys: breakfast, free_cancellation, parking, wifi)\n"
+        "- deal_mode (one of: 'lowest_price', 'best_value', 'most_transparent', default 'best_value')\n"
+        "- currency (str, default 'INR')\n"
+        "Return ONLY the JSON object without markdown code fences."
+    )
+
+    req_data = {
+        "contents": [
+            {
+                "parts": [
+                    {"text": f"{prompt}\n\nQuery: {text}"}
+                ]
+            }
+        ],
+        "generationConfig": {
+            "temperature": 0.0,
+            "responseMimeType": "application/json"
+        }
+    }
+
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(req_data).encode("utf-8"),
+        headers={"content-type": "application/json"},
+        method="POST",
+    )
+
+    ctx = ssl.create_default_context()
+    with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
+        res_json = json.loads(resp.read().decode("utf-8"))
+        candidates = res_json.get("candidates", [])
+        if not candidates:
+            raise ValueError("No candidates returned from Gemini API.")
+        parts = candidates[0].get("content", {}).get("parts", [])
+        raw_text_out = "".join(p.get("text", "") for p in parts)
+        match = re.search(r"\{.*\}", raw_text_out, re.DOTALL)
+        if match:
+            parsed = json.loads(match.group(0))
+            parsed["raw_text"] = text
+            parsed["mock"] = False
+            return parsed
+        raise ValueError("Could not parse JSON from Gemini response.")
+
+
 def parse_request(text: str) -> SearchRequestOut:
     """Parse natural language query into a validated SearchRequestOut model."""
     if not text or not text.strip():
         raise ValueError("Query text cannot be empty.")
 
-    api_key = os.getenv("ANTHROPIC_API_KEY")
-    model_name = os.getenv("INTAKE_MODEL", DEFAULT_INTAKE_MODEL)
+    provider = os.getenv(
+        "INTAKE_PROVIDER",
+        "gemini" if os.getenv("GEMINI_API_KEY") else ("anthropic" if os.getenv("ANTHROPIC_API_KEY") else "heuristic")
+    ).lower()
+
+    gemini_key = os.getenv("GEMINI_API_KEY")
+    anthropic_key = os.getenv("ANTHROPIC_API_KEY")
 
     data = None
-    if api_key:
+    if provider == "gemini" and gemini_key:
+        gemini_model = os.getenv("GEMINI_INTAKE_MODEL", "gemini-1.5-flash")
         try:
-            data = parse_request_llm(text, api_key, model_name)
+            data = parse_request_gemini(text, gemini_key, gemini_model)
         except Exception:
-            # Fall back safely to offline heuristics
+            data = None
+    elif provider == "anthropic" and anthropic_key:
+        anthropic_model = os.getenv("INTAKE_MODEL", DEFAULT_INTAKE_MODEL)
+        try:
+            data = parse_request_llm(text, anthropic_key, anthropic_model)
+        except Exception:
             data = None
 
     if data is None:

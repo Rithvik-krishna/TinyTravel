@@ -1,0 +1,133 @@
+{
+  "run_id": "e7b2edae-0f1d-42fe-b3a7-4ec44bc2a765",
+  "hotel_name": "La Marvella",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T13:01:23.621830+05:30",
+  "finished_at": "2026-11-14T13:05:23.603464+05:30",
+  "elapsed_seconds": 239.981634,
+  "steps": 33,
+  "cost_usd": 0.528,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_cleartrip_la_marve",
+    "hotel_id": "h_la_marve",
+    "run_id": "e7b2edae-0f1d-42fe-b3a7-4ec44bc2a765",
+    "streaming_url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-b841e327-c6e9-4976-a001-fda8137a55af/stream/2",
+    "started_at": "2026-11-14T13:01:24.146219+05:30",
+    "finished_at": "2026-11-14T13:05:23.599265+05:30",
+    "steps": 33,
+    "cost_usd": 0.528,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "non_refundable",
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-bengaluru-2050898",
+    "room_type": "Executive Twin",
+    "max_occupancy": 3,
+    "meal_plan": "Room with Breakfast",
+    "cancellation_policy": "No Refund (Non-refundable)",
+    "price_shown_on_listing": 11495.0,
+    "price_shown_on_room_selection": 11495.0,
+    "price_final_payable": 11495.0,
+    "fee_lines": [
+      {
+        "label": "Room (1 night)",
+        "amount": 15639.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1971.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2518.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 11495.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 11495.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11495.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11495.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Task completed successfully. The cheapest room (Executive Twin, 330 sq.ft, City View, max 3 adults, Room with Breakfast) was selected. The booking was for 2 adults from 2026-11-20 to 2026-11-21. The cancellation policy is non-refundable. Guest details (Name: Test Guest, Email: test.guest+probe@example.com, Phone: 9000000000) were filled on the traveller details page. The task stopped at the payment page without entering payment details. The total payable amount was \u20b911,495 INR.",
+    "fee_leak_pct": 0.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-b841e327-c6e9-4976-a001-fda8137a55af/stream/2",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:05:23.599265+05:30",
+        "extracted_value": 11495.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_la_marve_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:01:24.146219+05:30",
+        "extracted_value": 11495.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_la_marve_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:05:23.599265+05:30",
+        "extracted_value": 11495.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "5-star Resort in Jayanagar, La Marvella, 4.8 rating, 1940+ ratings, + \u20b93,065 taxes & fees",
+    "payment_page_text": "La Marvella, 5-star Resort in Jayanagar, 4.8, 1940+ ratings, Check-in 20 Nov (Fri, 02 PM), Check-out 21 Nov (Sat, 12 PM), 1 room, 2 guests, Total amount to be paid: 11495.0, Total saving of 7210.0",
+    "transparency": {
+      "score": 96,
+      "breakdown": {
+        "fee_leak": 50.0,
+        "addons_pressure": 20,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

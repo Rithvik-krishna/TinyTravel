@@ -1,0 +1,123 @@
+{
+  "run_id": "325360d5-2a50-4c23-8965-04eea2df6087",
+  "hotel_name": "Holiday Inn Bengaluru Racecourse",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T13:42:19.523874+05:30",
+  "finished_at": "2026-11-14T13:47:25.863259+05:30",
+  "elapsed_seconds": 306.339385,
+  "steps": 39,
+  "cost_usd": 0.624,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_cleartrip_holiday_",
+    "hotel_id": "h_holiday_",
+    "run_id": "325360d5-2a50-4c23-8965-04eea2df6087",
+    "streaming_url": "https://ip-54-219-174-64.tetra-data.production.tinyfish.io/tf-076fa94c-fde3-4c83-8968-fda315613fc9/stream/5",
+    "started_at": "2026-11-14T13:42:19.535056+05:30",
+    "finished_at": "2026-11-14T13:47:25.862427+05:30",
+    "steps": 39,
+    "cost_usd": 0.624,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "partial",
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Holiday Inn BENGALURU RACECOURSE by IHG",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/holiday-inn-bengaluru-racecourse",
+    "room_type": "Standard Room, Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable for cancellations done before 16 Nov, 00:00 IST. Cancel between 16 Nov, 00:00 IST and 20 Nov, 15:00 IST to get a refund of Rs 0.",
+    "price_shown_on_listing": 10218.0,
+    "price_shown_on_room_selection": 10218.0,
+    "price_final_payable": 10729.0,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 10219.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 511.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 10218.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 10218.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 10729.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 10729.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Email field had issues with special characters like '+' and '-'. Had to use simpler email format. Proceeded to payment page. Payment page shows total of Rs 10,729 inclusive of all taxes. No urgency or scarcity messages displayed. No pre-selected add-ons.",
+    "fee_leak_pct": 5.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-219-174-64.tetra-data.production.tinyfish.io/tf-076fa94c-fde3-4c83-8968-fda315613fc9/stream/5",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:47:25.862427+05:30",
+        "extracted_value": 10729.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_holiday__listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:42:19.535056+05:30",
+        "extracted_value": 10218.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_holiday__payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:47:25.862427+05:30",
+        "extracted_value": 10729.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Holiday Inn BENGALURU RACECOURSE by IHG - Standard Room, 1 Room, 2 Guests, 2 adults, Room Only - Rs 10,218 + Rs 511 taxes & fees / night",
+    "payment_page_text": "Holiday Inn BENGALURU RACECOURSE by IHG, Fri 20 Nov 2026 - Sat 21 Nov 2026, 1 room, 2 adults. Base fare: Rs 10,219.0, Hotel taxes: Rs 511.0, Convenience fee: Rs 0.0, Total: Rs 10,729.0. Total, inclusive of all taxes.",
+    "transparency": {
+      "score": 88,
+      "breakdown": {
+        "fee_leak": 43.8,
+        "addons_pressure": 20,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

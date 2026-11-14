@@ -47,7 +47,8 @@ def build_discovery_goal(req: dict) -> str:
 
     return (
         f"Open the provided URL. Search for hotels in {city} for {check_in} to {check_out}, {guests} adults, {rooms} room.\n"
-        "Extract up to 8 hotel search results displayed on the first page.\n"
+        "Extract up to 8 hotel search results displayed on the first page that have available rooms.\n"
+        "Do NOT extract hotels that are sold out, fully booked, or have zero available rooms for the dates.\n"
         "For each hotel, extract: hotel_name, address, area, lat, lng, phone, rating (numeric score out of 5), "
         "shown_price (the initial total or nightly price shown on the card), currency, and source_url (the direct link to the hotel).\n"
         "Missing fields must be null, never guessed or fabricated.\n"
@@ -118,6 +119,14 @@ async def discover(
 
         for idx, item in enumerate(raw_list[:8]):
             if not isinstance(item, dict):
+                continue
+            # Skip sold-out properties
+            sp = item.get("shown_price")
+            addr_lower = (item.get("address") or "").lower()
+            name_lower = (item.get("hotel_name") or "").lower()
+            if sp is not None and sp <= 0:
+                continue
+            if any(term in addr_lower or term in name_lower for term in ["sold out", "no rooms", "fully booked"]):
                 continue
             listing_id = f"{platform_slug}_{idx + 1:03d}"
             listing_dict = {

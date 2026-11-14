@@ -1,0 +1,126 @@
+{
+  "run_id": "d14bdd0b-39bd-47be-91c4-1459671dc0e1",
+  "hotel_name": "Holiday Inn Bengaluru Racecourse",
+  "platform": "agoda",
+  "started_at": "2026-11-14T13:47:25.866361+05:30",
+  "finished_at": "2026-11-14T13:51:24.176282+05:30",
+  "elapsed_seconds": 238.309921,
+  "steps": 32,
+  "cost_usd": 0.512,
+  "status": "unverified",
+  "offer": {
+    "offer_id": "off_agoda_holiday_",
+    "hotel_id": "h_holiday_",
+    "run_id": "d14bdd0b-39bd-47be-91c4-1459671dc0e1",
+    "streaming_url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-f6ed68e4-9ee7-49bf-a9b6-0519239770bb/stream/1",
+    "started_at": "2026-11-14T13:47:25.876461+05:30",
+    "finished_at": "2026-11-14T13:51:24.175487+05:30",
+    "steps": 32,
+    "cost_usd": 0.512,
+    "status": "unverified",
+    "reconciliation": "mismatch",
+    "cancellation_category": "free",
+    "site": "agoda",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Holiday Inn Bengaluru Racecourse By IHG",
+    "hotel_url": "https://www.agoda.com/accom/property?propertyId=2614687",
+    "room_type": "1 Queen Standard Turf View",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Cancel for free before 22 November 2026 (Free cancellation)",
+    "price_shown_on_listing": 15961.0,
+    "price_shown_on_room_selection": 20659.28,
+    "price_final_payable": 20659.28,
+    "fee_lines": [
+      {
+        "label": "City Tax (Pay at the property)",
+        "amount": 12.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Service Charge (Pay at the property)",
+        "amount": 2.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Tax (Pay at the property)",
+        "amount": 18.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Extra Person Fee",
+        "amount": 590.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "We only have 5 rooms left at this price!",
+      "It's only 9 days until your check-in. Rates may rise if you don't book now."
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 15961.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 20659.28,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 20659.28,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 20659.28,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking summary shows '1 x 1 Queen Standard Turf View' with 2 adults. Payment split: 'Pay at the Property: Rs. 2,128.56' (City Tax 12%, Service Charge 2%, Tax 18%) and 'Pay to Agoda later: Rs. 18,530.72' (Room price Rs. 17,940.72). Total: Rs. 20,659.28 (includes Extra Person Fee Rs. 590). Stayed at payment page, did not enter payment details. Dates used: 2026-11-23 to 2026-11-24 (not the requested 2026-11-20 to 2026-11-21).",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-f6ed68e4-9ee7-49bf-a9b6-0519239770bb/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:51:24.175487+05:30",
+        "extracted_value": 20659.28,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_holiday__listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:47:25.876461+05:30",
+        "extracted_value": 15961.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_holiday__payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:51:24.175487+05:30",
+        "extracted_value": 20659.28,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Holiday Inn Bengaluru Racecourse By IHG - Standard Room from Rs. 15,961 - Free cancellation",
+    "payment_page_text": "Total Price: Rs. 20,659.28 (Pay at the Property: Rs. 2,128.56 | Pay to Agoda later: Rs. 18,530.72)",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

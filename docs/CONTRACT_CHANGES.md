@@ -49,6 +49,12 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Why**: Allows partial results inspection via `GET /api/search/:id/results` while runs are in progress, signaling completion status additively.
 - **Fixtures updated**: No (purely additive optional field, existing fixtures validate with extra="forbid").
 
+### 2026-11-14 - Nikhil
+- **Split Payment and Rate Cohort Fields**: Added optional `pay_now: Optional[float] = None`, `pay_at_hotel: Optional[float] = None`, `rate_cohort: Optional[str] = "cheapest_free_cancellation"`, and `cheapest_any_payable: Optional[float] = None` to `ProbeResult` and `Offer`.
+- **Type**: `Optional[float]` / `Optional[str]`
+- **Why**: Supports split payment structures (e.g. Agoda online prepay vs property collection) in fee reconciliation; records deterministic rate-plan cohort on every offer.
+- **Fixtures updated**: Purely additive with default values; validates 100% against existing fixtures and tests.
+
 ### 2026-10-31 - Nikhil
 - **Fee Classification and Remaining Endpoints**:
   - **Fee Kind Attribute**: Added `fee_kind: Optional[FeeKind] = "other"` to `FeeLine` (`"tax"` | `"platform_fee"` | `"property_fee"` | `"add_on"` | `"other"`).

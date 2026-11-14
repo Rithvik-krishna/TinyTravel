@@ -169,6 +169,14 @@ class ProbeResult(BaseModelForbid):
     notes: str = ""
     listing_page_text: Optional[str] = None
     payment_page_text: Optional[str] = None
+    rate_cohort: Optional[str] = "cheapest_free_cancellation"
+    cheapest_any_payable: Optional[float] = None
+    pay_now: Optional[float] = None
+    pay_at_hotel: Optional[float] = None
+    rate_cohort: Optional[str] = "cheapest_free_cancellation"
+    cheapest_any_payable: Optional[float] = None
+    pay_now: Optional[float] = None
+    pay_at_hotel: Optional[float] = None
 
 
 class Offer(BaseModelForbid):
@@ -208,6 +216,10 @@ class Offer(BaseModelForbid):
     transparency: Optional[Transparency] = None
     listing_page_text: Optional[str] = None
     payment_page_text: Optional[str] = None
+    rate_cohort: Optional[str] = "cheapest_free_cancellation"
+    cheapest_any_payable: Optional[float] = None
+    pay_now: Optional[float] = None
+    pay_at_hotel: Optional[float] = None
 
 
 class RankingItem(BaseModelForbid):

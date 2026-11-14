@@ -101,6 +101,12 @@ def test_site_url_confirmed_platforms():
     assert "Ignore rooms showing max 1 adult" in agoda_goal
     assert "set max_occupancy from that text, never from rejected rooms" in agoda_goal
 
+    # Cleartrip specific goal clauses & step cap 40
+    ct_goal = build_goal("La Marvella", req, platform="cleartrip")
+    assert "Cleartrip specific:" in ct_goal
+    assert "Continue to Payment" in ct_goal
+    assert "Use at most 40 steps." in ct_goal
+
 
 def test_site_url_not_implemented_platforms():
     req = {"destination": "Bengaluru"}

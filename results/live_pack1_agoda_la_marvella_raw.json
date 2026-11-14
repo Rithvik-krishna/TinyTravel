@@ -1,0 +1,117 @@
+{
+  "run_id": "bbd08347-96b5-4dba-9938-1eec71b5fbee",
+  "hotel_name": "La Marvella",
+  "platform": "agoda",
+  "started_at": "2026-11-14T13:05:23.606259+05:30",
+  "finished_at": "2026-11-14T13:11:50.965933+05:30",
+  "elapsed_seconds": 387.359674,
+  "steps": 35,
+  "cost_usd": 0.56,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_agoda_la_marve",
+    "hotel_id": "h_la_marve",
+    "run_id": "bbd08347-96b5-4dba-9938-1eec71b5fbee",
+    "streaming_url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-96fb2da2-21d2-4049-a18c-cc0de6af6d0f/stream/1",
+    "started_at": "2026-11-14T13:05:23.612712+05:30",
+    "finished_at": "2026-11-14T13:11:50.961934+05:30",
+    "steps": 35,
+    "cost_usd": 0.56,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "partial",
+    "site": "Agoda",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.agoda.com/accom/property?propertyId=261499",
+    "room_type": "Executive Twin",
+    "max_occupancy": 2,
+    "meal_plan": "Room only",
+    "cancellation_policy": "Stay flexible! Cancel for free before 17 Nov 2026.",
+    "price_shown_on_listing": 10967.0,
+    "price_shown_on_room_selection": 15175.27,
+    "price_final_payable": 15175.27,
+    "fee_lines": [
+      {
+        "label": "Room price (1 room x 1 night)",
+        "amount": 15175.27,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "This price is guaranteed for 00:19:43",
+      "Hurry! Our last room for your dates at this price",
+      "It's only 6 days until your check-in. Rates may rise if you don't book now."
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 10967.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 15175.27,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 15175.27,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 15175.27,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Guest name: Test Guest. Email: test.guest+probe@example.com. Phone: 9000000000. Listing card price (Rs. 10,967) was for a different room than the one ultimately selected. The selected room (Executive Twin, 1 x 2 adults, with free cancellation) had a final payable price of Rs. 15,175.27. Booking fees: FREE. Tax: 18% included in total. Listing page text: \"La Marvella / 5 stars out of 5 / 5-star Hotel / Jayanagar, Bangalore - 3.2 km to center / Average rating Excellent 8.2 out of 10 with 722 reviews / Rs. 10,967 / Per night before taxes\". Payment page text: \"Room price (1 room x 1 night) Rs. 15,175.27 / Booking fees FREE / Total Price Rs. 15,175.27 / Included in total price: Tax 18%\".",
+    "fee_leak_pct": 38.4,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-176-65-93.tetra-data.production.tinyfish.io/tf-96fb2da2-21d2-4049-a18c-cc0de6af6d0f/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:11:50.961934+05:30",
+        "extracted_value": 15175.27,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_la_marve_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:05:23.612712+05:30",
+        "extracted_value": 10967.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_la_marve_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:11:50.961934+05:30",
+        "extracted_value": 15175.27,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "La Marvella\n5 stars out of 5\n5-star Hotel\nJayanagar, Bangalore - 3.2 km to center\nAverage rating Excellent 8.2 out of 10 with 722 reviews\nRs. 10,967\nPer night before taxes",
+    "payment_page_text": "Room price (1 room x 1 night) Rs. 15,175.27\nBooking fees FREE\nTotal Price Rs. 15,175.27\nIncluded in total price: Tax 18%",
+    "transparency": {
+      "score": 17,
+      "breakdown": {
+        "fee_leak": 2.0,
+        "addons_pressure": 5,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

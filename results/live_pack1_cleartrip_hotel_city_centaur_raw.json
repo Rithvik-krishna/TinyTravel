@@ -1,0 +1,102 @@
+{
+  "run_id": "1486cdc4-d6fd-4180-8792-6daf43e21b40",
+  "hotel_name": "Hotel City Centaur",
+  "platform": "cleartrip",
+  "started_at": "2026-11-14T13:11:50.968928+05:30",
+  "finished_at": "2026-11-14T13:21:45.849201+05:30",
+  "elapsed_seconds": 594.880273,
+  "steps": 34,
+  "cost_usd": 0.544,
+  "status": "blocked",
+  "offer": {
+    "offer_id": "off_cleartrip_hotel_ci",
+    "hotel_id": "h_hotel_ci",
+    "run_id": "1486cdc4-d6fd-4180-8792-6daf43e21b40",
+    "streaming_url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-52a1cdb8-0b39-4d6d-a572-698295de0a86/stream/0",
+    "started_at": "2026-11-14T13:11:50.981323+05:30",
+    "finished_at": "2026-11-14T13:21:45.844364+05:30",
+    "steps": 34,
+    "cost_usd": 0.544,
+    "status": "blocked",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "https://www.cleartrip.com/hotels",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": "other",
+    "hotel_name": "Hotel City Centaur and Convention Center",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/hotel-city-centaur-and-convention-center-2626688",
+    "room_type": ">listing_page_text",
+    "max_occupancy": 2,
+    "meal_plan": "Free Breakfast",
+    "cancellation_policy": "Free Cancellation",
+    "price_shown_on_listing": 1341.0,
+    "price_shown_on_room_selection": 1341.0,
+    "price_final_payable": 1341.0,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 1341.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 1341.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 1341.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 1341.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "No rooms available for the selected dates (2026-11-20 to 2026-11-21) for 2 adults, 1 room. The hotel exists and was found on the listing page, but there is no inventory available for booking. This prevents completing the booking flow to the payment page.",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-52a1cdb8-0b39-4d6d-a572-698295de0a86/stream/0",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:21:45.844364+05:30",
+        "extracted_value": 1341.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_hotel_ci_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T13:11:50.981323+05:30",
+        "extracted_value": 1341.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_hotel_ci_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T13:21:45.844364+05:30",
+        "extracted_value": 1341.0,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "Hotel City Centaur and Convention Center - 3-star Hotel \u00b7 Bangalore - 3.3 - 100+ ratings - IN THE SPOTLIGHT Clean And Spacious \u00b7 Convenient",
+    "payment_page_text": "N/A - Could not reach payment page due to no room availability",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

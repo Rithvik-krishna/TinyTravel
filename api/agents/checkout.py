@@ -83,25 +83,43 @@ def build_goal(hotel_name: str, req: dict, platform: Optional[str] = None) -> st
         platform_notes = (
             f"Agoda specific:\n"
             f"- Search for \"{hotel_name}\" in the Agoda search box to locate and open \"{hotel_name}\".\n"
-            "- Ignore rooms showing max 1 adult; select only a room fitting 2 adults.\n"
+            "- Ignore rooms showing max 1 adult; select only a room fitting 2 adults (explicitly check room selection card >= 2 adults).\n"
             "- On the booking summary page, copy the room name + guest count text verbatim into notes, and set max_occupancy from that text, never from rejected rooms.\n"
         )
+    elif p == "cleartrip":
+        platform_notes = (
+            f"Cleartrip specific:\n"
+            f"- Search for \"{hotel_name}\" in Cleartrip search input to locate and open \"{hotel_name}\".\n"
+            "- On the traveller details step, immediately after entering guest details (Name, Email, Phone), click the 'Continue to Payment' button to proceed to the payment review page.\n"
+            "- STOP at the payment page and extract the exact breakdown.\n"
+        )
+
+    rate_plan_clause = (
+        "Deterministic rate-plan rule:\n"
+        "- Primary cohort ('cheapest_free_cancellation'): Select the cheapest available room rate plan with FREE CANCELLATION.\n"
+        "- Secondary cohort ('cheapest_any'): In notes or secondary field, record the price and room type of the cheapest available rate plan overall if different from primary.\n"
+        "- Set rate_cohort to 'cheapest_free_cancellation'.\n"
+    )
+
+    step_cap = 40 if p == "cleartrip" else 30
 
     return (
         f"Open the provided URL. Search for \"{hotel_name}\" in {city} for {check_in} to {check_out}, {guests} adults, {rooms} room.\n"
         f"Type \"{hotel_name}\" into the search input if needed to locate and select the hotel named \"{hotel_name}\" (if not found after searching, return blocker \"other\" with notes).\n"
         f"Select the cheapest room that fits {guests} adults. {prefs_clause}\n"
+        f"{rate_plan_clause}"
         f"{platform_notes}"
         "Proceed as a GUEST through checkout using: Name \"Test Guest\", email \"test.guest+probe@example.com\", phone \"9000000000\".\n"
         "Record the displayed total at each step in price_trail with the currency shown on screen. Do not convert currencies.\n"
         "Record every fee line, pre-selected add-on, and any urgency/scarcity message.\n"
+        "Record split payment breakdown (pay_now vs pay_at_hotel) if present.\n"
         "Extract hotel_url, listing_page_text (text from listing card), and payment_page_text (price breakdown text from payment page).\n"
         "max_occupancy and room_type must describe the room in the final booking summary, copying the \"X adults\" text from that page.\n"
         "price_shown_on_listing must be the price of the same room as the final payable, or null. Never record a listing price from a different room.\n"
         "Ensure price_trail includes each observed step: 'listing', 'room', 'traveller_details', 'payment'.\n"
         "STOP at the payment page. Never enter payment details, never click pay/confirm/book, never log in, never enter an OTP, never create an account.\n"
         "If blocked (login, OTP, captcha, empty page), stop and return the blocker.\n"
-        "Use at most 30 steps. Return ONLY JSON in the given schema."
+        f"Use at most {step_cap} steps. Return ONLY JSON in the given schema."
     )
 
 
@@ -268,7 +286,34 @@ async def verify_offer(
         price_listing = None
 
     c_cat = cancellation_category(policy)
-    recon = reconciliation_status(fee_lines, price_payable)
+
+    pay_now = probe_data.get("pay_now")
+    pay_at_hotel = probe_data.get("pay_at_hotel")
+    rate_cohort = probe_data.get("rate_cohort") or "cheapest_free_cancellation"
+    cheapest_any_payable = probe_data.get("cheapest_any_payable")
+
+    # If pay_now/pay_at_hotel not directly in probe_data, detect from fee lines or notes
+    if (pay_now is None or pay_at_hotel is None) and fee_lines:
+        for fl in fee_lines:
+            lbl = fl.get("label", "").lower()
+            amt = fl.get("amount", 0)
+            if any(k in lbl for k in ["pay now", "pay to agoda", "pay online", "payable now"]):
+                pay_now = amt
+            elif any(k in lbl for k in ["pay at", "pay to property", "pay at hotel", "payable at hotel"]):
+                pay_at_hotel = amt
+
+    if (pay_now is None or pay_at_hotel is None) and notes:
+        import re
+        m_prop = re.search(r"pay at (?:the )?property:\s*(?:rs\.?|inr)?\s*([0-9,]+(?:\.[0-9]+)?)", notes, re.IGNORECASE)
+        m_online = re.search(r"pay to (?:agoda|cleartrip)(?: later)?:\s*(?:rs\.?|inr)?\s*([0-9,]+(?:\.[0-9]+)?)", notes, re.IGNORECASE)
+        if m_prop and m_online:
+            try:
+                pay_at_hotel = float(m_prop.group(1).replace(",", ""))
+                pay_now = float(m_online.group(1).replace(",", ""))
+            except ValueError:
+                pass
+
+    recon = reconciliation_status(fee_lines, price_payable, pay_now=pay_now, pay_at_hotel=pay_at_hotel)
 
     hotel_slug = hotel_name.lower().replace(" ", "_")
     site_slug = platform.lower().replace(".", "").replace(" ", "")
@@ -364,6 +409,10 @@ async def verify_offer(
         "currency": currency,
         "notes": notes,
         "fee_leak_pct": leak,
+        "pay_now": pay_now,
+        "pay_at_hotel": pay_at_hotel,
+        "rate_cohort": rate_cohort,
+        "cheapest_any_payable": cheapest_any_payable,
 
         "evidence": evidence,
         "mock": is_mock,

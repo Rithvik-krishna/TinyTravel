@@ -31,18 +31,38 @@ def fee_leak_pct(
     return round((final - listing) / listing * 100, 1)
 
 
-def reconciles(fee_lines: Optional[list[dict]], final: Optional[float], tol: float = 0.01) -> bool:
-    """Check if itemized fee lines sum to final payable price within tolerance."""
-    if final is None or not fee_lines:
+def reconciles(
+    fee_lines: Optional[list[dict]],
+    final: Optional[float],
+    tol: float = 0.01,
+    pay_now: Optional[float] = None,
+    pay_at_hotel: Optional[float] = None,
+) -> bool:
+    """Check if itemized fee lines OR split payments (pay_now + pay_at_hotel) sum to final payable price within tolerance."""
+    if final is None:
+        return False
+    # Check split payment match first
+    if pay_now is not None and pay_at_hotel is not None:
+        if abs((pay_now + pay_at_hotel) - final) <= tol * final:
+            return True
+    if not fee_lines:
         return False
     return abs(sum(l["amount"] for l in fee_lines) - final) <= tol * final
 
 
-def reconciliation_status(fee_lines: Optional[list[dict]], final: Optional[float], tol: float = 0.01) -> Optional[Reconciliation]:
+def reconciliation_status(
+    fee_lines: Optional[list[dict]],
+    final: Optional[float],
+    tol: float = 0.01,
+    pay_now: Optional[float] = None,
+    pay_at_hotel: Optional[float] = None,
+) -> Optional[Reconciliation]:
     """Return 'ok', 'mismatch', or None if fee lines / final price are absent."""
-    if final is None or not fee_lines:
+    if final is None:
         return None
-    if reconciles(fee_lines, final, tol=tol):
+    if not fee_lines and pay_now is None and pay_at_hotel is None:
+        return None
+    if reconciles(fee_lines, final, tol=tol, pay_now=pay_now, pay_at_hotel=pay_at_hotel):
         return "ok"
     return "mismatch"
 

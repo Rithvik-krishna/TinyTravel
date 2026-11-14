@@ -1,0 +1,117 @@
+{
+  "run_id": "964761d6-f1ff-4274-ba06-9f36d125396a",
+  "started_at": "2026-11-14T16:29:01.957051+05:30",
+  "finished_at": "2026-11-14T16:34:38.128280+05:30",
+  "elapsed_seconds": 336.171229,
+  "offer": {
+    "offer_id": "off_agoda_la_marve",
+    "hotel_id": "h_la_marve",
+    "run_id": "964761d6-f1ff-4274-ba06-9f36d125396a",
+    "streaming_url": "https://ip-18-145-44-115.tetra-data.production.tinyfish.io/tf-8e65dd8e-43d9-4c43-a227-c94d70da3b90/stream/1",
+    "started_at": "2026-11-14T16:29:02.722945+05:30",
+    "finished_at": "2026-11-14T16:34:38.120732+05:30",
+    "steps": 30,
+    "cost_usd": 0.48,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "agoda",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.agoda.com/la-marvella-a-sarovar-premiere-hotel/hotel/bangalore-in.html",
+    "room_type": "Executive Twin",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast not included",
+    "cancellation_policy": "Free cancellation before Nov 17, 2026",
+    "price_shown_on_listing": 12860.0,
+    "price_shown_on_room_selection": 12860.0,
+    "price_final_payable": 15175.27,
+    "fee_lines": [
+      {
+        "label": "Room price (1 room x 1 night)",
+        "amount": 15175.27,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Booking fees",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "Your price is held for 00:17:24",
+      "Hurry! Our last room for your dates at this price",
+      "It's only 6 days until your check-in. Rates may rise if you don't book now."
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 12860.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 12860.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 15175.27,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 15175.27,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Room name verbatim: 1 x Executive Twin, 2 adults. Selected cheapest room with free cancellation. Executive Twin Offer 2 at Rs. 12,860/night with free cancellation before Nov 17 2026. Total payable Rs. 15,175.27 (includes 18% tax). Stopped at payment page - did not enter payment details. Listing page text: 'La Marvella - Sarovar Premiere Hotel' 5 stars, Jayanagar Bangalore. Payment page text: '1 x Executive Twin', '2 adults', 'Total Price: Rs. 15,175.27'. Urgency: 'Your price is held for 00:17:24', 'Hurry! Our last room for your dates at this price'.",
+    "fee_leak_pct": 18.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-18-145-44-115.tetra-data.production.tinyfish.io/tf-8e65dd8e-43d9-4c43-a227-c94d70da3b90/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-14T16:34:38.120732+05:30",
+        "extracted_value": 15175.27,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_la_marve_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-14T16:29:02.722945+05:30",
+        "extracted_value": 12860.0,
+        "currency": "INR",
+        "mock": true
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_la_marve_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-14T16:34:38.120732+05:30",
+        "extracted_value": 15175.27,
+        "currency": "INR",
+        "mock": true
+      }
+    ],
+    "mock": true,
+    "listing_page_text": "La Marvella - Sarovar Premiere Hotel, 5 stars, Jayanagar, Bangalore, India",
+    "payment_page_text": "1 x Executive Twin | 2 adults | 1 room | 1 night | Total Price: Rs. 15,175.27",
+    "transparency": {
+      "score": 49,
+      "breakdown": {
+        "fee_leak": 27.5,
+        "addons_pressure": 5,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}
