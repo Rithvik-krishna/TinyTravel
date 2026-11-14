@@ -141,7 +141,52 @@ def test_invalid_json_handling():
 
 
 def test_get_balance_fake():
-    """Verify get_balance() returns mock balance in fake/mock mode."""
+    """Verify get_balance() and get_wallet_balance() return mock balance in fake/mock mode."""
     os.environ["TINYFISH_FAKE"] = "1"
+    from services.tinyfish import get_wallet_balance
     bal = asyncio.run(get_balance())
     assert bal == 50.0
+    sync_bal = get_wallet_balance()
+    assert sync_bal == 50.0
+
+
+def test_budget_guard_blocks_on_insufficient_funds():
+    """Verify budget guard blocks run_agent immediately when wallet balance is <= 0."""
+    orig_fake = os.environ.get("TINYFISH_FAKE")
+    orig_data = os.environ.get("DATA_MODE")
+    orig_key = os.environ.get("TINYFISH_API_KEY")
+    try:
+        os.environ["TINYFISH_FAKE"] = "0"
+        os.environ["DATA_MODE"] = "live"
+        os.environ["TINYFISH_API_KEY"] = "test_key_dummy"
+
+        mock_wallet = MagicMock()
+        mock_wallet.available_balance = -0.336
+        mock_wallet.currency = "USD"
+
+        mock_client = MagicMock()
+        mock_client.wallet.get.return_value = mock_wallet
+
+        with patch("tinyfish.TinyFish", return_value=mock_client):
+            run = asyncio.run(run_agent(
+                url="https://example.com",
+                goal="test budget guard",
+                timeout_s=5,
+            ))
+
+            assert run.status == "failed"
+            assert "budget guard" in run.error.lower()
+            assert "insufficient funds" in run.error.lower()
+    finally:
+        if orig_fake is not None:
+            os.environ["TINYFISH_FAKE"] = orig_fake
+        else:
+            os.environ.pop("TINYFISH_FAKE", None)
+        if orig_data is not None:
+            os.environ["DATA_MODE"] = orig_data
+        else:
+            os.environ.pop("DATA_MODE", None)
+        if orig_key is not None:
+            os.environ["TINYFISH_API_KEY"] = orig_key
+        else:
+            os.environ.pop("TINYFISH_API_KEY", None)

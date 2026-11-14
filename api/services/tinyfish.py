@@ -324,6 +324,20 @@ async def run_agent(
     def _sync_worker():
         c = TinyFish(api_key=api_key)
 
+        # Budget guard: verify real wallet available balance before initiating stream
+        try:
+            w = c.wallet.get()
+            avail = float(w.available_balance)
+            logger.info(f"TinyFish wallet check: available_balance=${avail:.4f} {w.currency}")
+            if avail <= 0:
+                raise RuntimeError(
+                    f"TinyFish budget guard: wallet balance too low (${avail:.2f}). Insufficient funds to execute run."
+                )
+        except Exception as wallet_err:
+            if "budget guard" in str(wallet_err):
+                raise
+            logger.warning(redact(f"Could not verify wallet balance before run: {wallet_err}"))
+
         def _handle_stream_url(event):
             url_str = getattr(event, "streaming_url", None)
             if url_str:
@@ -457,6 +471,25 @@ async def get_balance() -> float | None:
             return float(w.available_balance)
 
         return await asyncio.to_thread(_fetch_balance)
+    except Exception as exc:
+        logger.warning(redact(f"Failed to fetch TinyFish wallet balance: {exc}"))
+        return None
+
+
+def get_wallet_balance() -> float | None:
+    """Synchronously fetch current real available balance in USD from TinyFish wallet."""
+    if os.getenv("TINYFISH_FAKE") == "1" or os.getenv("DATA_MODE", "mock") == "mock":
+        return 50.0
+
+    api_key = os.getenv("TINYFISH_API_KEY")
+    if not api_key:
+        return None
+
+    try:
+        from tinyfish import TinyFish
+        c = TinyFish(api_key=api_key)
+        w = c.wallet.get()
+        return float(w.available_balance)
     except Exception as exc:
         logger.warning(redact(f"Failed to fetch TinyFish wallet balance: {exc}"))
         return None

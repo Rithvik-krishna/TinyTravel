@@ -115,9 +115,14 @@ def load_evidence_csv(file_path: str | Path) -> Tuple[List[Dict[str, Any]], List
             run_id = cleaned.get("run_id", "").strip()
             evidence_file = cleaned.get("evidence_file", "").strip()
 
-            # Strict rule: reject rows without run_id + evidence_file
+            # Strict rule: reject rows without a valid real run_id + evidence_file
             if not run_id or not evidence_file:
                 cleaned["rejection_reason"] = "Missing run_id or evidence_file"
+                cleaned["row_num"] = idx
+                rejected_rows.append(cleaned)
+                continue
+            elif run_id.lower().startswith("pending") or run_id.lower() in ("null", "none", "n/a"):
+                cleaned["rejection_reason"] = "Pending or invalid run_id"
                 cleaned["row_num"] = idx
                 rejected_rows.append(cleaned)
                 continue
