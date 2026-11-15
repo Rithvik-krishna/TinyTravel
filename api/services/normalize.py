@@ -51,7 +51,15 @@ def cohort_key(offer: dict) -> tuple:
     room_tier = normalize_room_tier(offer.get("room_type"))
     occupancy = int(offer.get("max_occupancy") or 2)
     meal = normalize_meal_plan(offer.get("meal_plan"))
-    cancellation = offer.get("cancellation_category") or "unknown"
+    cancellation = offer.get("cancellation_category")
+    if not cancellation or cancellation == "unknown":
+        pol = (offer.get("cancellation_policy") or "").lower()
+        if "free" in pol or "refundable" in pol:
+            cancellation = "free"
+        elif "non" in pol or "penalty" in pol or "no refund" in pol:
+            cancellation = "non_refundable"
+        else:
+            cancellation = "unknown"
     return (room_tier, occupancy, meal, cancellation)
 
 

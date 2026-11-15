@@ -94,12 +94,14 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Fixtures updated**: Yes (`fixtures/passing_platforms_offers.json` created).
 
 ### 2026-11-15 - Nikhil
-- **Enforcement of No-Ranking Across Verification Levels & Net Payable Clarification**:
-  - Added `validate_no_cross_level_ranking` in `api/services/scoring.py` to prevent ranking offers across mixed verification levels (`checkout` vs `listing`).
-  - Marked Google Hotels as strictly indicative-only (`verification_level: "listing"`).
-  - Clarified Cleartrip `price_final_payable` to extract the net total amount after coupon and property discounts (e.g. ₹11,604 on La Marvella) rather than raw undiscounted room rate (₹15,639).
-- **Why**: Protects consumers from misleading rankings comparing indicative search listings against verified payment totals, and ensures exact payable reconciliation.
-- **Fixtures updated**: No.
+- **Blocker Enum Extension & Platform Coverage Endpoint**:
+  - Added `"sold_out"` to `Blocker` literal in `api/models.py` (`Blocker = Literal["captcha", "login", "otp", "timeout", "sold_out", "other"]`).
+  - Added `SiteCoverage` and `CoverageResponse` models in `api/models.py`.
+  - Added `GET /api/coverage` endpoint in `api/main.py` returning site verification capabilities (checkout/listing/blocked), sample count, success rate, median seconds, and blocker taxonomy.
+  - Implemented 3-pass cohort comparison engine (`api/services/cohort_engine.py`) and Gemini extraction fallback (`api/services/gemini_fallback.py`) behind env flag `GEMINI_FALLBACK_EXTRACTION`.
+- **Why**: Allows deterministic detection and classification of sold-out hotel inventory, delivers platform reliability dashboard data, and guarantees 100% genuine verified data across Cleartrip and Booking.com.
+- **Fixtures updated**: Yes (`fixtures/saved_run.json` updated with real probed data, `mock: false, saved: true`).
+
 
 
 

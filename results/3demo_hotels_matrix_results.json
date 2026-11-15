@@ -1,0 +1,1260 @@
+[
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 5981.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 18 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 20.43,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6400.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 285.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -704.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 5760.0,
+      "room_type": "Standard Double Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 28.71,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 5760.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 5981.0,
+      "bookingcom_payable": 5760.0,
+      "spread_inr": 221.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 49.14
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 5981.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 18 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 20.31,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6400.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 285.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -704.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 5760.0,
+      "room_type": "Standard Double Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 18.35,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 5760.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 5981.0,
+      "bookingcom_payable": 5760.0,
+      "spread_inr": 221.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 38.66
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 5981.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 18 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 20.52,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6400.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 285.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -704.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 5760.0,
+      "room_type": "Standard Double Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 19.41,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 5760.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 5981.0,
+      "bookingcom_payable": 5760.0,
+      "spread_inr": 221.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 39.93
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 6728.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 25 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 34.92,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 7200.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 320.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -792.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 6480.0,
+      "room_type": "Standard Twin Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 21.12,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6480.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 6728.0,
+      "bookingcom_payable": 6480.0,
+      "spread_inr": 248.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 56.04
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 6728.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 25 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 20.62,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 7200.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 320.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -792.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 6480.0,
+      "room_type": "Standard Twin Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 27.67,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6480.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 6728.0,
+      "bookingcom_payable": 6480.0,
+      "spread_inr": 248.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 48.29
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 6728.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 25 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 22.41,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 7200.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 320.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -792.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 6480.0,
+      "room_type": "Standard Twin Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 29.05,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6480.0,
+          "fee_kind": "other"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Bloomrooms City Centre",
+      "status": "COMPARABLE",
+      "comparable": true,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 6728.0,
+      "bookingcom_payable": 6480.0,
+      "spread_inr": 248.0,
+      "spread_pct": 3.8,
+      "cheaper_platform": "Booking.com",
+      "reason": null
+    },
+    "total_seconds": 51.46
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11077.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 21.89,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 9500.0,
+      "room_type": "Superior Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('deluxe', 2, 'room_only', 'free')",
+      "seconds": 30.25,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 8550,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 950.0,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('deluxe', 2, 'room_only', 'free')",
+      "cleartrip_payable": 11077.0,
+      "bookingcom_payable": 9500.0,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs deluxe)"
+    },
+    "total_seconds": 52.14
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11077.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 23.15,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 9500.0,
+      "room_type": "Superior Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('deluxe', 2, 'room_only', 'free')",
+      "seconds": 28.75,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 8550,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 950.0,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('deluxe', 2, 'room_only', 'free')",
+      "cleartrip_payable": 11077.0,
+      "bookingcom_payable": 9500.0,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs deluxe)"
+    },
+    "total_seconds": 51.91
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11077.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 20.75,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": false,
+      "payable": null,
+      "room_type": null,
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 5.99,
+      "blocker": "other",
+      "fee_lines": []
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "UNVERIFIED PAIR",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 11077.0,
+      "bookingcom_payable": null,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "One or both platforms failed to reach verified payment page"
+    },
+    "total_seconds": 26.74
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 14633.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 26 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 23.56,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 12401.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 2232.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": false,
+      "payable": null,
+      "room_type": null,
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 5.92,
+      "blocker": "other",
+      "fee_lines": []
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "UNVERIFIED PAIR",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('standard', 2, 'room_only', 'free')",
+      "cleartrip_payable": 14633.0,
+      "bookingcom_payable": null,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "One or both platforms failed to reach verified payment page"
+    },
+    "total_seconds": 29.48
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 14633.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 26 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 22.0,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 12401.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 2232.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 12550.0,
+      "room_type": "Superior Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('deluxe', 2, 'room_only', 'free')",
+      "seconds": 24.42,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 11295,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 1255.0,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('deluxe', 2, 'room_only', 'free')",
+      "cleartrip_payable": 14633.0,
+      "bookingcom_payable": 12550.0,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs deluxe)"
+    },
+    "total_seconds": 46.42
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 14633.0,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 26 Nov",
+      "cohort": "('standard', 2, 'room_only', 'free')",
+      "seconds": 24.1,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 12401.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 2232.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": false,
+      "payable": null,
+      "room_type": "Superior Room",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('deluxe', 2, 'room_only', 'free')",
+      "seconds": 18.83,
+      "blocker": "other",
+      "fee_lines": []
+    },
+    "comparison": {
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'room_only', 'free')",
+      "cohort_bookingcom": "('deluxe', 2, 'room_only', 'free')",
+      "cleartrip_payable": 14633.0,
+      "bookingcom_payable": null,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs deluxe)"
+    },
+    "total_seconds": 42.93
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 21.16,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": false,
+      "payable": null,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 18.9,
+      "blocker": "other",
+      "fee_lines": []
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": null,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 40.06
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 21.1,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 15299.1,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 24.87,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 10662.86,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4636.24,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": 15299.1,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 45.97
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 20.25,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 15299.1,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 25.49,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 10662.86,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4636.24,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": 15299.1,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 45.73
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 1,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 22.58,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 15299.1,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 24.73,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 10662.86,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4636.24,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": 15299.1,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 47.31
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 2,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 20.96,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 15299.1,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 26.02,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 12116.89,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 3182.21,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": 15299.1,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 46.98
+  },
+  {
+    "hotel": "La Marvella",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "run_index": 3,
+    "cleartrip": {
+      "reached_payment": true,
+      "payable": 11495.0,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "cohort": "('standard', 2, 'breakfast', 'free')",
+      "seconds": 20.62,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 15639.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1971.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 1095.0,
+          "fee_kind": "platform_fee"
+        }
+      ]
+    },
+    "bookingcom": {
+      "reached_payment": true,
+      "payable": 15299.1,
+      "room_type": "Executive Room",
+      "meal_plan": "Breakfast Included",
+      "cancellation_policy": "Free cancellation",
+      "cohort": "('executive', 2, 'breakfast', 'free')",
+      "seconds": 26.2,
+      "blocker": null,
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 10662.86,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4636.24,
+          "fee_kind": "tax"
+        }
+      ]
+    },
+    "comparison": {
+      "hotel_name": "La Marvella",
+      "status": "NOT COMPARABLE",
+      "comparable": false,
+      "cohort_cleartrip": "('standard', 2, 'breakfast', 'free')",
+      "cohort_bookingcom": "('executive', 2, 'breakfast', 'free')",
+      "cleartrip_payable": 11495.0,
+      "bookingcom_payable": 15299.1,
+      "spread_inr": null,
+      "spread_pct": null,
+      "cheaper_platform": null,
+      "reason": "not comparable: room tier mismatch (standard vs executive)"
+    },
+    "total_seconds": 46.82
+  }
+]

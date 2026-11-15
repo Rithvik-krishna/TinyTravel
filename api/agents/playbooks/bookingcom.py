@@ -19,16 +19,20 @@ IST = timezone(timedelta(hours=5, minutes=30))
 KNOWN_BOOKING_HOTELS = {
     "radisson blu atria": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
     "radisson blu atria bengaluru": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
-    "sterlings mac hotel": "https://www.booking.com/hotel/in/sterlings-mac.html",
-    "sterlings mac": "https://www.booking.com/hotel/in/sterlings-mac.html",
+    "sterlings mac hotel": "https://www.booking.com/hotel/in/matthan.html",
+    "sterlings mac": "https://www.booking.com/hotel/in/matthan.html",
     "la marvella": "https://www.booking.com/hotel/in/la-marvella.html",
     "the chancery pavilion": "https://www.booking.com/hotel/in/the-chancery-pavillion.html",
     "the pride hotel": "https://www.booking.com/hotel/in/pride-hotel-bangalore.html",
-    "bloomrooms city centre": "https://www.booking.com/hotel/in/bloomrooms-city-centre.html",
+    "bloomrooms city centre": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
+    "bloomrooms": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
     "treebo tiba": "https://www.booking.com/hotel/in/treebo-trend-tiba.html",
     "ibis bengaluru city centre": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.html",
     "the oberoi bengaluru": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
+    "the oberoi": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
     "the leela palace bengaluru": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
+    "the leela palace": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
+    "taj west end": "https://www.booking.com/hotel/in/taj-west-end.html",
 }
 
 
@@ -168,83 +172,175 @@ async def run_bookingcom_playbook(
 
             result["furthest_step"] = "room_selection"
 
-            try:
-                await page.wait_for_selector("#hprt-table, table.hprt-table, select.hprt-nos-select, button.js-reservation-button", timeout=12000)
-            except Exception:
-                await asyncio.sleep(3.0)
+            # State: ROOM_SELECTION - Check sold-out and parse rates JSON-first
+            state = await page.evaluate('''() => {
+                const env = window.booking ? window.booking.env : null;
+                const bodyTxt = document.body ? document.body.innerText : '';
+                const isSoldOut = (env && env.b_has_available_rooms === false) ||
+                                  bodyTxt.includes('We have no rooms available') ||
+                                  bodyTxt.includes('Sold out on our site') ||
+                                  bodyTxt.includes('no available rooms at this property');
+                if (isSoldOut) {
+                    return { isSoldOut: true, rates: [] };
+                }
 
-            # Parse rates and select room matching cohort (cheapest free-cancellation for 2 adults)
-            rate_info = await page.evaluate('''() => {
-                const table = document.querySelector('#hprt-table, table.hprt-table');
-                if (!table) return null;
-                const trs = Array.from(table.querySelectorAll('tbody tr'));
-                let currentRoomName = "Standard Room";
                 const rates = [];
+                // Strategy 1: JSON-first from window.booking.env
+                if (env && env.b_rooms_available_and_soldout && env.b_rooms_available_and_soldout.length > 0) {
+                    env.b_rooms_available_and_soldout.forEach(room => {
+                        const roomName = room.b_name || "Standard Room";
+                        (room.b_blocks || []).forEach(block => {
+                            const blockId = String(block.b_block_id || "");
+                            const occ = block.b_can_fit_them_all || room.b_max_persons || 2;
+                            const basePrice = parseFloat(block.b_raw_price || 0);
+                            let totalPrice = basePrice;
+                            let taxes = 0;
+                            if (block.b_price_breakdown_simplified && block.b_price_breakdown_simplified.b_total_price && block.b_price_breakdown_simplified.b_total_price.length > 0) {
+                                totalPrice = parseFloat(block.b_price_breakdown_simplified.b_total_price[0].b_raw_value_user_currency || basePrice);
+                                taxes = Math.round((totalPrice - basePrice) * 100) / 100;
+                            }
+                            const isFreeCancel = block.b_cancellation_type === "free_cancellation";
+                            const mealRaw = (block.b_mealplan_included_name || "").toLowerCase();
+                            let meal = "Room Only";
+                            if (mealRaw.includes("breakfast")) meal = "Breakfast Included";
+                            else if (mealRaw.includes("half")) meal = "Half Board";
+                            else if (mealRaw.includes("all")) meal = "All Inclusive";
 
-                trs.forEach((tr, idx) => {
-                    const roomHeader = tr.querySelector('.hprt-roomtype-link, .hprt-roomtype-icon-link, .room-name');
-                    if (roomHeader && roomHeader.innerText.trim()) {
-                        currentRoomName = roomHeader.innerText.trim();
-                    }
-                    const text = tr.innerText;
-                    const select = tr.querySelector('select');
-                    if (!select) return;
-
-                    const isFreeCancel = /free cancellation/i.test(text);
-                    const hasBreakfast = /breakfast included/i.test(text);
-
-                    // Extract prices
-                    const priceMatches = Array.from(text.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
-                    if (priceMatches.length === 0) return;
-
-                    const roomPrices = priceMatches.filter(p => p >= 3000);
-                    const basePrice = roomPrices.length > 0 ? roomPrices[0] : Math.max(...priceMatches);
-                    rates.push({
-                        rowIdx: idx,
-                        roomName: currentRoomName,
-                        isFreeCancel: isFreeCancel,
-                        hasBreakfast: hasBreakfast,
-                        basePrice: basePrice,
+                            rates.push({
+                                blockId: blockId,
+                                roomName: roomName,
+                                occupancy: occ,
+                                basePrice: basePrice,
+                                totalPrice: totalPrice,
+                                taxes: taxes,
+                                isFreeCancel: isFreeCancel,
+                                mealPlan: meal,
+                                source: "json"
+                            });
+                        });
                     });
-                });
-                return rates;
+                }
+
+                // Strategy 2: DOM Layout 1 - #hprt-table
+                if (rates.length === 0) {
+                    const trs = Array.from(document.querySelectorAll('#hprt-table tbody tr, table.hprt-table tbody tr'));
+                    let curRoom = "Standard Room";
+                    trs.forEach((tr, idx) => {
+                        const rh = tr.querySelector('.hprt-roomtype-link, .hprt-roomtype-icon-link, .room-name');
+                        if (rh && rh.innerText.trim()) curRoom = rh.innerText.trim();
+                        const sel = tr.querySelector('select');
+                        if (!sel) return;
+                        const txt = tr.innerText;
+                        const isFreeCancel = /free cancellation/i.test(txt);
+                        const hasBreakfast = /breakfast/i.test(txt);
+                        const priceMatches = Array.from(txt.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
+                        if (priceMatches.length === 0) return;
+                        const base = priceMatches.find(p => p >= 2000) || priceMatches[0];
+                        rates.push({
+                            blockId: sel.name ? sel.name.replace('nr_rooms_', '') : `row_${idx}`,
+                            roomName: curRoom,
+                            occupancy: 2,
+                            basePrice: base,
+                            totalPrice: base * 1.18,
+                            taxes: base * 0.18,
+                            isFreeCancel: isFreeCancel,
+                            mealPlan: hasBreakfast ? "Breakfast Included" : "Room Only",
+                            source: "dom_table"
+                        });
+                    });
+                }
+
+                // Strategy 3: DOM Layout 2 - [data-testid='room-card']
+                if (rates.length === 0) {
+                    const cards = Array.from(document.querySelectorAll("[data-testid='room-card'], div[data-testid='property-section--rooms'] > div"));
+                    cards.forEach((card, idx) => {
+                        const titleElem = card.querySelector("[data-testid='room-title'], h3, h4");
+                        const curRoom = titleElem ? titleElem.innerText.trim() : `Room ${idx+1}`;
+                        const txt = card.innerText;
+                        const priceMatches = Array.from(txt.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
+                        if (priceMatches.length === 0) return;
+                        const base = priceMatches.find(p => p >= 2000) || priceMatches[0];
+                        const isFreeCancel = /free cancellation/i.test(txt);
+                        const hasBreakfast = /breakfast/i.test(txt);
+                        const sel = card.querySelector('select');
+                        const blockId = sel && sel.name ? sel.name.replace('nr_rooms_', '') : `card_${idx}`;
+                        rates.push({
+                            blockId: blockId,
+                            roomName: curRoom,
+                            occupancy: 2,
+                            basePrice: base,
+                            totalPrice: base * 1.18,
+                            taxes: base * 0.18,
+                            isFreeCancel: isFreeCancel,
+                            mealPlan: hasBreakfast ? "Breakfast Included" : "Room Only",
+                            source: "dom_card"
+                        });
+                    });
+                }
+
+                return { isSoldOut: false, rates: rates };
             }''')
 
-            logger.info("Booking.com page url: %s, rate_info: %s", page.url, len(rate_info) if rate_info else None)
-            selected_rate = None
-            if rate_info:
-                free_cancels = [r for r in rate_info if r["isFreeCancel"]]
-                if free_cancels:
-                    selected_rate = min(free_cancels, key=lambda x: x["basePrice"])
-                    result["cancellation_policy"] = "Free cancellation"
-                else:
-                    selected_rate = min(rate_info, key=lambda x: x["basePrice"])
-                    result["cancellation_policy"] = "Non-refundable"
-
-            rate_amount = selected_rate["basePrice"] if selected_rate else None
-            if not rate_amount:
-                # fallback parse from price cells
-                price_cells = await page.query_selector_all(".prco-valign-middle-helper, .bui-price-display__value, span[data-testid='price-and-discounted-price']")
-                if price_cells:
-                    try:
-                        text = await price_cells[0].inner_text()
-                        match = re.search(r"[\d,]+", text)
-                        if match:
-                            rate_amount = float(match.group(0).replace(",", ""))
-                    except Exception:
-                        pass
-
-            if not rate_amount:
-                result["blocker"] = "layout"
+            if state.get("isSoldOut"):
+                result["blocker"] = "sold_out"
+                result["status"] = "blocked"
+                result["furthest_step"] = "room_selection"
+                result["notes"] = "Property has no available rooms (sold out) on Booking.com for selected dates."
                 result["reached_payment_page"] = False
-                result["notes"] = "Could not parse real room rate from Booking.com room selection table."
                 await browser.close()
                 return to_probe_result_dict(result)
 
-            if selected_rate:
-                result["room_type"] = selected_rate["roomName"]
-                result["meal_plan"] = "Breakfast Included" if selected_rate["hasBreakfast"] else "Room Only"
+            rates = state.get("rates", [])
+            logger.info("Booking.com page url: %s, rates found: %d", page.url, len(rates))
 
+            if not rates:
+                result["blocker"] = "other"
+                result["status"] = "unverified"
+                result["reached_payment_page"] = False
+                result["notes"] = "Could not parse real room rate from Booking.com JSON state or tables/cards."
+                await browser.close()
+                return to_probe_result_dict(result)
+
+            # Target cohort or block ID matching
+            target_block_id = search_params.get("target_block_id")
+            target_cohort = search_params.get("target_cohort")
+            selected_rate = None
+
+            if target_block_id:
+                for r in rates:
+                    if str(r.get("blockId")) == str(target_block_id):
+                        selected_rate = r
+                        break
+
+            if not selected_rate and target_cohort:
+                # target_cohort is (room_tier, occupancy, meal_plan, cancellation)
+                for r in rates:
+                    # check if tier, meal, cancellation match
+                    is_free = r["isFreeCancel"]
+                    canc_cat = "free" if is_free else "non_refundable"
+                    mp_cat = "breakfast" if "breakfast" in r["mealPlan"].lower() else "room_only"
+                    if canc_cat == target_cohort[3] and mp_cat == target_cohort[2]:
+                        selected_rate = r
+                        break
+
+            if not selected_rate:
+                # Deterministic rule: occupancy >= guests, prefer cheapest free cancellation, else cheapest
+                valid_occ = [r for r in rates if r.get("occupancy", 2) >= guests]
+                if not valid_occ:
+                    valid_occ = rates
+                free_cancels = [r for r in valid_occ if r["isFreeCancel"]]
+                if free_cancels:
+                    selected_rate = min(free_cancels, key=lambda x: x["totalPrice"])
+                else:
+                    selected_rate = min(valid_occ, key=lambda x: x["totalPrice"])
+
+            cheapest_any = min(rates, key=lambda x: x["totalPrice"])
+            result["cheapest_any_payable"] = cheapest_any["totalPrice"]
+
+            rate_amount = selected_rate["basePrice"]
+            result["room_type"] = selected_rate["roomName"]
+            result["meal_plan"] = selected_rate["mealPlan"]
+            result["cancellation_policy"] = "Free cancellation" if selected_rate["isFreeCancel"] else "Non-refundable"
             result["price_shown_on_room_selection"] = rate_amount
             result["price_trail"].append({
                 "step": "room_selection",
@@ -253,33 +349,48 @@ async def run_bookingcom_playbook(
             })
 
             # Advance to guest details / book.html
-            if selected_rate:
-                row_idx = selected_rate["rowIdx"]
-                select_locator = page.locator(f"#hprt-table tbody tr:nth-child({row_idx + 1}) select, table.hprt-table tbody tr:nth-child({row_idx + 1}) select").first
-                if await select_locator.count() > 0:
-                    await select_locator.select_option("1")
-                    await asyncio.sleep(1.0)
-            else:
-                selects = page.locator("select[data-testid='select-room-trigger'], select[name*='nr_rooms']")
-                if await selects.count() > 0:
-                    await selects.first.select_option("1")
-                    await asyncio.sleep(1.0)
+            block_id = selected_rate.get("blockId")
+            selected_dropdown = False
+            if block_id:
+                try:
+                    target_sel = page.locator(f"select[name*='{block_id}']").first
+                    if await target_sel.count() > 0:
+                        await target_sel.scroll_into_view_if_needed()
+                        await target_sel.select_option("1")
+                        selected_dropdown = True
+                        logger.info("Selected 1 room for block_id: %s", block_id)
+                except Exception as e:
+                    logger.warning("Failed to select block_id %s: %s", block_id, e)
 
-            reserve_btn = page.locator("button.js-reservation-button, button[type='submit'].hp_rt_input, button:has-text('I\\'ll reserve'), button:has-text('Reserve')").first
-            if await reserve_btn.is_visible():
+            if not selected_dropdown:
+                selects = page.locator("select.hprt-nos-select, select[name*='nr_rooms'], select[data-testid='select-room-trigger']")
+                if await selects.count() > 0:
+                    sel = selects.first
+                    await sel.scroll_into_view_if_needed()
+                    await sel.select_option("1")
+                    selected_dropdown = True
+                    logger.info("Selected 1 room from fallback dropdown")
+                    await asyncio.sleep(1.5)
+
+            reserve_btn = page.locator("button.js-reservation-button, button[type='submit'].hp_rt_input, button[data-testid='reserve-button'], button:has-text('reserve'), button:has-text('Reserve')").first
+            if await reserve_btn.count() > 0:
+                await reserve_btn.scroll_into_view_if_needed()
                 await reserve_btn.click()
+                logger.info("Clicked reserve button")
             
-            try:
-                await page.wait_for_url("**/book.html**", timeout=15000)
-                book_page = page
-            except Exception:
-                await asyncio.sleep(5.0)
-                book_page = page
+            book_page = None
+            for _ in range(12):
+                await asyncio.sleep(1.0)
                 for p_curr in context.pages:
                     if "book.html" in p_curr.url:
                         book_page = p_curr
                         break
-                await book_page.bring_to_front()
+                if book_page:
+                    break
+
+            if not book_page:
+                book_page = page
+            await book_page.bring_to_front()
 
             # Fill guest details
             fn = book_page.locator("input[name='firstname'], input#firstname").first
@@ -299,16 +410,28 @@ async def run_bookingcom_playbook(
             next_btn = book_page.locator("button[name='submit_step_1'], button:has-text('Next: Final details'), button:has-text('Next')").first
             if await next_btn.is_visible():
                 await next_btn.click()
-                await asyncio.sleep(5.0)
+                try:
+                    await book_page.wait_for_load_state("domcontentloaded", timeout=10000)
+                except Exception:
+                    pass
+                await asyncio.sleep(4.0)
 
             # Step 3: Finish booking / payment review
-            fin_text = await book_page.evaluate("() => document.body.innerText")
+            fin_text = ""
+            for _ in range(3):
+                try:
+                    fin_text = await book_page.evaluate("() => document.body.innerText")
+                    if fin_text:
+                        break
+                except Exception:
+                    await asyncio.sleep(2.0)
+
             reached_fin = "book.html" in book_page.url
             
             prices_fin = re.findall(r'₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text)
             logger.info("Step 3 reached_fin=%s, book_page.url=%s, prices_fin count=%s", reached_fin, book_page.url, len(prices_fin))
             if not prices_fin or not reached_fin:
-                result["blocker"] = "layout"
+                result["blocker"] = "other"
                 result["reached_payment_page"] = False
                 result["furthest_step"] = "traveller_details"
                 result["price_final_payable"] = None

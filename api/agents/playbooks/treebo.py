@@ -154,7 +154,7 @@ async def run_treebo_playbook(
             # Look for Book / Select room button
             book_btn = page.locator("button:has-text('Book Now'), button:has-text('Select Room'), button:has-text('Book')").first
             if not await book_btn.is_visible():
-                result["blocker"] = "layout"
+                result["blocker"] = "other"
                 result["reached_payment_page"] = False
                 result["furthest_step"] = "listing"
                 result["price_final_payable"] = None

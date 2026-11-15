@@ -193,7 +193,7 @@ async def run_cleartrip_playbook(
                     return {
                         "site": "Cleartrip",
                         "status": "unverified",
-                        "blocker": "layout",
+                        "blocker": "other",
                         "hotel_name": hotel_name,
                         "hotel_url": page.url,
                         "reached_payment_page": False,
@@ -224,15 +224,15 @@ async def run_cleartrip_playbook(
                 await browser.close()
                 return {
                     "site": "Cleartrip",
-                    "status": "unverified",
-                    "blocker": "layout",
+                    "status": "blocked",
+                    "blocker": "sold_out",
                     "hotel_name": hotel_name,
                     "hotel_url": page.url,
                     "reached_payment_page": False,
                     "furthest_step": "room",
                     "steps": steps,
                     "seconds": (datetime.now(IST) - t0).total_seconds(),
-                    "notes": "No available rooms/rates with 'Book' buttons found.",
+                    "notes": "No available rooms/rates with 'Book' buttons found (sold out).",
                     "cost_usd": 0.0,
                 }
 
@@ -313,7 +313,7 @@ async def run_cleartrip_playbook(
                 return {
                     "site": "Cleartrip",
                     "status": "unverified",
-                    "blocker": "layout",
+                    "blocker": "other",
                     "hotel_name": hotel_name,
                     "hotel_url": page.url,
                     "reached_payment_page": False,
@@ -329,14 +329,47 @@ async def run_cleartrip_playbook(
             cheapest_any = min(parsed_rates, key=lambda x: x["total_price"])
             cheapest_any_payable = cheapest_any["total_price"]
 
-            # 2. Cheapest free cancellation
-            free_cancel_rates = [r for r in parsed_rates if r["free_cancellation"]]
-            if free_cancel_rates:
-                target_rate = min(free_cancel_rates, key=lambda x: x["total_price"])
-                rate_cohort = "cheapest_free_cancellation"
+            # Check if coordinated cohort or button index was passed
+            target_button_index = req.get("target_button_index")
+            target_cohort = req.get("target_cohort")
+            target_rate = None
+
+            if target_button_index is not None:
+                for r in parsed_rates:
+                    if r["button_index"] == target_button_index:
+                        target_rate = r
+                        break
+
+            if not target_rate and target_cohort:
+                # target_cohort is (room_tier, occupancy, meal_plan, cancellation)
+                for r in parsed_rates:
+                    r_tier = "standard"
+                    rt = r["room_name"].lower()
+                    if any(k in rt for k in ["suite", "presidential", "penthouse"]):
+                        r_tier = "suite"
+                    elif any(k in rt for k in ["executive", "club"]):
+                        r_tier = "executive"
+                    elif any(k in rt for k in ["deluxe", "superior", "premium"]):
+                        r_tier = "deluxe"
+
+                    r_meal = "breakfast" if "breakfast" in r["meal_plan"].lower() else "room_only"
+                    r_canc = "free" if r["free_cancellation"] else "non_refundable"
+
+                    if r_tier == target_cohort[0] and r_meal == target_cohort[2] and r_canc == target_cohort[3]:
+                        target_rate = r
+                        break
+
+            # 2. Cheapest free cancellation fallback
+            if not target_rate:
+                free_cancel_rates = [r for r in parsed_rates if r["free_cancellation"]]
+                if free_cancel_rates:
+                    target_rate = min(free_cancel_rates, key=lambda x: x["total_price"])
+                    rate_cohort = "cheapest_free_cancellation"
+                else:
+                    target_rate = cheapest_any
+                    rate_cohort = "cheapest_free_cancellation"
             else:
-                target_rate = cheapest_any
-                rate_cohort = "cheapest_free_cancellation"
+                rate_cohort = f"{target_rate['room_name']}_{target_rate['meal_plan']}"
 
             logger.info("Target rate selected: btn_idx=%d room=%s total=%.2f free_cancel=%s",
                         target_rate["button_index"], target_rate["room_name"], target_rate["total_price"], target_rate["free_cancellation"])
@@ -469,7 +502,7 @@ async def run_cleartrip_playbook(
                 return {
                     "site": "Cleartrip",
                     "status": "unverified",
-                    "blocker": "layout",
+                    "blocker": "other",
                     "hotel_name": hotel_name,
                     "hotel_url": target_url,
                     "reached_payment_page": False,

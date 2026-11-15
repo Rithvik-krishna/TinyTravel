@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict, Field
 Status = Literal["verified", "unverified", "blocked"]
 CancelCategory = Literal["free", "partial", "non_refundable"]
 Reconciliation = Literal["ok", "mismatch"]
-Blocker = Literal["captcha", "login", "otp", "timeout", "other"]
+Blocker = Literal["captcha", "login", "otp", "timeout", "sold_out", "other"]
 DealMode = Literal["lowest_price", "best_value", "most_transparent"]
 MatchStatus = Literal["merged", "suggested"]
 TravellerType = Literal["solo", "couple", "friends", "family", "business"]
@@ -365,4 +365,27 @@ class BudgetInfo(BaseModelForbid):
     spend_cap: float = 4.0
     currency: str = "USD"
     status: str = "ok"
+
+
+class SiteCoverage(BaseModelForbid):
+    site: str
+    verification_level: str
+    checkout_capable: bool
+    listing_capable: bool
+    status: Status
+    blocker: Optional[Blocker] = None
+    reason: Optional[str] = None
+    n_samples: int = 0
+    success_rate: float = 0.0
+    median_seconds: Optional[float] = None
+    blocked_reasons: dict[str, int] = {}
+
+
+class CoverageResponse(BaseModelForbid):
+    sites: list[SiteCoverage]
+    captured_at: str
+    total_sites: int
+    checkout_capable_sites: int
+    listing_capable_sites: int
+    blocked_sites: int
 

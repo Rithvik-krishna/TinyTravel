@@ -1,0 +1,116 @@
+[
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "status": "verified",
+    "blocker": null,
+    "rates": 48,
+    "cheapest": 9186.3001,
+    "seconds": 6.61,
+    "sample": {
+      "blockId": "111844102_95900508_2_42_0_1117061",
+      "roomName": "Superior Room",
+      "occupancy": 2,
+      "basePrice": 8190,
+      "totalPrice": 9664.2001,
+      "taxes": 1474.2,
+      "isFreeCancel": false,
+      "mealPlan": "Room Only",
+      "source": "json"
+    }
+  },
+  {
+    "hotel": "Sterlings Mac Hotel",
+    "status": "verified",
+    "blocker": null,
+    "rates": 12,
+    "cheapest": 32265.3402,
+    "seconds": 7.07,
+    "sample": {
+      "blockId": "35706404_429276038_2_42_0_1410219",
+      "roomName": "Executive Suite with Complimentary evening Hi Tea (from 4pm to 6pm) and 15% Discount on F&B",
+      "occupancy": 2,
+      "basePrice": 28106.32,
+      "totalPrice": 33855.3402,
+      "taxes": 5749.02,
+      "isFreeCancel": true,
+      "mealPlan": "Room Only",
+      "source": "json"
+    }
+  },
+  {
+    "hotel": "La Marvella",
+    "status": "verified",
+    "blocker": null,
+    "rates": 6,
+    "cheapest": 11332.7723,
+    "seconds": 7.16,
+    "sample": {
+      "blockId": "25669401_443103116_2_1_0_1167160",
+      "roomName": "Executive Room",
+      "occupancy": 2,
+      "basePrice": 10662.86,
+      "totalPrice": 12843.9003,
+      "taxes": 2181.04,
+      "isFreeCancel": true,
+      "mealPlan": "Breakfast Included",
+      "source": "json"
+    }
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "status": "verified",
+    "blocker": null,
+    "rates": 12,
+    "cheapest": 5859,
+    "seconds": 7.26,
+    "sample": {
+      "blockId": "603040401_397121283_2_0_0",
+      "roomName": "Standard Double Room",
+      "occupancy": 2,
+      "basePrice": 5760,
+      "totalPrice": 6048,
+      "taxes": 288,
+      "isFreeCancel": true,
+      "mealPlan": "Room Only",
+      "source": "json"
+    }
+  },
+  {
+    "hotel": "Treebo Tiba",
+    "status": "verified",
+    "blocker": null,
+    "rates": 5,
+    "cheapest": 1876.4655,
+    "seconds": 6.35,
+    "sample": {
+      "blockId": "1110505102_432088013_2_1_0",
+      "roomName": "Standard Double Room",
+      "occupancy": 2,
+      "basePrice": 2163.56,
+      "totalPrice": 2286.4895,
+      "taxes": 122.93,
+      "isFreeCancel": true,
+      "mealPlan": "Breakfast Included",
+      "source": "json"
+    }
+  },
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "status": "verified",
+    "blocker": null,
+    "rates": 16,
+    "cheapest": 44250.0003,
+    "seconds": 9.66,
+    "sample": {
+      "blockId": "7880012_364831211_2_2_0",
+      "roomName": "Executive Room with Private Balcony",
+      "occupancy": 2,
+      "basePrice": 38500,
+      "totalPrice": 45430.0003,
+      "taxes": 6930,
+      "isFreeCancel": true,
+      "mealPlan": "Room Only",
+      "source": "json"
+    }
+  }
+]

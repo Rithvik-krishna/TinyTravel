@@ -179,6 +179,8 @@ def classify_blocker(error_text: Optional[str]) -> Optional[str]:
         return "otp"
     if any(k in err for k in ["timeout", "timed out", "deadline"]):
         return "timeout"
+    if any(k in err for k in ["sold out", "no rooms available", "no availability", "sold_out", "no available rooms"]):
+        return "sold_out"
     return "other"
 
 

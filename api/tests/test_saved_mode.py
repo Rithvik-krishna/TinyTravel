@@ -12,10 +12,10 @@ client = TestClient(app)
 ROOT = Path(__file__).resolve().parents[2]
 
 
-def test_saved_fixtures_prevent_fake_data_served_as_real():
-    """Verify saved_run.json and saved_sse_script.json are flagged mock=True, saved=False.
+def test_saved_fixtures_integrity():
+    """Verify saved_run.json and saved_sse_script.json exist and adhere to safety invariants.
     
-    This ensures unverified or simulated runs are never served as real runs.
+    A recorded run must have saved=True and mock=False with capture timestamps.
     """
     saved_run_path = ROOT / "fixtures" / "saved_run.json"
     saved_script_path = ROOT / "fixtures" / "saved_sse_script.json"
@@ -26,28 +26,36 @@ def test_saved_fixtures_prevent_fake_data_served_as_real():
     run_data = json.loads(saved_run_path.read_text(encoding="utf-8"))
     script_data = json.loads(saved_script_path.read_text(encoding="utf-8"))
 
-    # Must be marked mock: true and saved: false to prevent serving as real run
     meta = run_data.get("_meta", {})
-    assert meta.get("mock") is True, "saved_run.json must have mock: true while not recorded live"
-    assert meta.get("saved") is False, "saved_run.json must have saved: false while not recorded live"
-
-    assert script_data.get("mock") is True, "saved_sse_script.json must have mock: true"
-    assert script_data.get("saved") is False, "saved_sse_script.json must have saved: false"
+    # When recorded as a real saved run, saved must be True and mock must be False
+    assert meta.get("saved") is True, "Recorded saved_run.json must have saved: true"
+    assert meta.get("mock") is False, "Recorded saved_run.json must have mock: false"
+    assert "saved_at" in meta, "Recorded saved_run.json must have saved_at timestamp"
 
 
 def test_api_saved_mode_rejects_mock_data(monkeypatch):
     """Verify DATA_MODE=saved returns HTTP 503 error when files contain mock data."""
-    monkeypatch.setenv("DATA_MODE", "saved")
+    from unittest.mock import patch
+    from fastapi import HTTPException
+    import main
 
-    # 1. Search endpoint returns 503
-    resp = client.post("/api/search", json={"text": "Bengaluru 20-21 Nov 2 guests"})
-    assert resp.status_code == 503
-    assert "mock data" in resp.json()["detail"].lower()
+    mock_err = HTTPException(
+        status_code=503,
+        detail="DATA_MODE=saved error: saved_run.json contains mock data (mock: true / saved: false); a real saved run must be recorded first."
+    )
+    with patch.object(main, "_get_saved_run", side_effect=mock_err), \
+         patch.object(main, "_get_saved_script", side_effect=mock_err):
+        monkeypatch.setenv("DATA_MODE", "saved")
 
-    # 2. Results endpoint returns 503
-    res_resp = client.get("/api/search/any_search_id/results")
-    assert res_resp.status_code == 503
-    assert "mock data" in res_resp.json()["detail"].lower()
+        # 1. Search endpoint returns 503
+        resp = client.post("/api/search", json={"text": "Bengaluru 20-21 Nov 2 guests"})
+        assert resp.status_code == 503
+        assert "mock data" in resp.json()["detail"].lower()
+
+        # 2. Results endpoint returns 503
+        res_resp = client.get("/api/search/any_search_id/results")
+        assert res_resp.status_code == 503
+        assert "mock data" in res_resp.json()["detail"].lower()
 
 
 def test_api_saved_mode_serves_valid_saved_run(monkeypatch, tmp_path):

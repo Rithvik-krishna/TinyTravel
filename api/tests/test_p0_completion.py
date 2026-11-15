@@ -190,6 +190,8 @@ def test_recheck_diff_math_price_stable():
         ("SMS OTP verification code required", "otp"),
         ("2FA code prompt on checkout", "otp"),
         ("Page navigation timed out after 300000ms", "timeout"),
+        ("Sold out on our site for these dates", "sold_out"),
+        ("We have no rooms available at this property", "sold_out"),
         ("Hotel no longer available", "other"),
         (None, None),
     ],
