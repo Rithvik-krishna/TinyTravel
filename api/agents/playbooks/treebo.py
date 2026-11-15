@@ -118,7 +118,7 @@ async def run_treebo_playbook(
                 return to_probe_result_dict(result)
 
             prices = re.findall(r"₹\s*([0-9,]+)", html)
-            rate_amount = 2200.0
+            rate_amount = None
             if prices:
                 cleaned_prices = [float(p.replace(",", "")) for p in prices if len(p.replace(",", "")) >= 3]
                 if cleaned_prices:

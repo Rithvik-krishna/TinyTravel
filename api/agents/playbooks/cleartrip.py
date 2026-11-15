@@ -427,11 +427,20 @@ async def run_cleartrip_playbook(
                     }
                 });
 
-                return { total: explicitTotal, lines: rawLines };
+                return { total: explicitTotal, lines: rawLines, bodyText: (document.body.innerText || '') };
             }""")
 
             explicit_total = breakdown_data.get("total")
             raw_lines = breakdown_data.get("lines", [])
+            itin_body_text = breakdown_data.get("bodyText", "")
+
+            # Parse verified dates on payment page
+            m_cin = re.search(r'Check-in\s*(\d{1,2}\s+[A-Za-z]{3})', itin_body_text)
+            m_cout = re.search(r'Check-out\s*(\d{1,2}\s+[A-Za-z]{3})', itin_body_text)
+            page_cin = m_cin.group(1) if m_cin else ""
+            page_cout = m_cout.group(1) if m_cout else ""
+            verified_dates_str = f"{page_cin} to {page_cout}".strip()
+            logger.info("Verified dates on Cleartrip payment page: '%s' (Requested: %s to %s)", verified_dates_str, check_in, check_out)
 
             # Filter relevant fee breakdown lines, ignoring cancellation penalty text
             allowed_labels = ['1 room x 1 night', 'base fare', 'room rate', 'hotel taxes', 'taxes', 'property discount', 'convenience fee', 'coupon discount', 'discount']
@@ -450,13 +459,28 @@ async def run_cleartrip_playbook(
                             kind = "platform_fee"
                         parsed_fee_lines.append({"label": lbl, "amount": float(r["amount"]), "fee_kind": kind})
 
-            # Determine final payable
+            # Determine final payable strictly from page elements
             if explicit_total is not None:
                 payable = explicit_total
             elif parsed_fee_lines:
                 payable = sum(l["amount"] for l in parsed_fee_lines)
             else:
-                payable = target_rate["total_price"]
+                await browser.close()
+                return {
+                    "site": "Cleartrip",
+                    "status": "unverified",
+                    "blocker": "layout",
+                    "hotel_name": hotel_name,
+                    "hotel_url": target_url,
+                    "reached_payment_page": False,
+                    "furthest_step": "payment",
+                    "steps": steps,
+                    "seconds": (datetime.now(IST) - t0).total_seconds(),
+                    "notes": "Failed to parse real total payable or fee breakdown lines from Cleartrip payment review page.",
+                    "cost_usd": 0.0,
+                    "price_final_payable": None,
+                    "fee_lines": [],
+                }
 
             if parsed_fee_lines:
                 fee_lines = parsed_fee_lines
@@ -468,7 +492,6 @@ async def run_cleartrip_playbook(
                 fee_lines = [
                     {"label": "Base fare", "amount": float(base), "fee_kind": "other"},
                     {"label": "Hotel taxes", "amount": float(taxes), "fee_kind": "tax"},
-                    {"label": "Convenience fee", "amount": 0.0, "fee_kind": "platform_fee"}
                 ]
 
             payment_page_text = (
@@ -523,6 +546,7 @@ async def run_cleartrip_playbook(
                 "cheapest_any_payable": float(cheapest_any_payable),
                 "pay_now": float(payable),
                 "pay_at_hotel": 0.0,
+                "payment_page_dates": verified_dates_str,
                 # Operational stats for runner
                 "steps": steps,
                 "seconds": elapsed,

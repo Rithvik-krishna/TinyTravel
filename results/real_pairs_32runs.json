@@ -1,0 +1,1574 @@
+[
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 9387.0,
+    "price_shown_on_room_selection": 9387.0,
+    "price_final_payable": 11077.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 9387.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1690.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11077.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11077.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 27.2s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Radisson Blu Atria Bengaluru \u00b7 Room Only \u00b7 INR 9387 + INR 1690 taxes & fees",
+    "payment_page_text": "Booking: Radisson Blu Atria Bengaluru. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 9387. Hotel taxes: INR 1690. Total: INR 11077. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 10611.0,
+    "pay_now": 11077.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 27.208629,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 27.25
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/sterlings-mac-hotel-bengaluru-327940?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 32819.0,
+    "price_shown_on_room_selection": 32819.0,
+    "price_final_payable": 38726.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 32819.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 5907.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 32819.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 32819.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 38726.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 38726.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 24.4s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Sterlings Mac Hotel \u00b7 Room Only \u00b7 INR 32819 + INR 5907 taxes & fees",
+    "payment_page_text": "Booking: Sterlings Mac Hotel. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 32819. Hotel taxes: INR 5907. Total: INR 38726. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 38726.0,
+    "pay_now": 38726.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 24.352348,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 24.4
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room with Breakfast",
+    "max_occupancy": 2,
+    "meal_plan": "Room with Breakfast",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 8429.0,
+    "price_shown_on_room_selection": 8429.0,
+    "price_final_payable": 11495.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 15639.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1971.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2518.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 8429.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 8429.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11495.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11495.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 21.7s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "La Marvella \u00b7 Room with Breakfast \u00b7 INR 8429 + INR 3066 taxes & fees",
+    "payment_page_text": "Booking: La Marvella. Room: Room with Breakfast. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 15639. Hotel taxes: INR 1971. Total: INR 11495. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 11495.0,
+    "pay_now": 11495.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 21.668835,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.71
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "The Chancery Pavilion",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/the-chancery-pavillion-40140?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 5500.0,
+    "price_shown_on_room_selection": 5500.0,
+    "price_final_payable": 5775.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5500.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 275.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 5500.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 5500.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 5775.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 5775.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 22.0s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "The Chancery Pavilion \u00b7 Room Only \u00b7 INR 5500 + INR 275 taxes & fees",
+    "payment_page_text": "Booking: The Chancery Pavilion. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 5500. Hotel taxes: INR 275. Total: INR 5775. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5775.0,
+    "pay_now": 5775.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 22.009544,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 22.03
+  },
+  {
+    "site": "Cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "hotel_name": "The Pride Hotel",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/the-pride-hotel-349942?c=201126%7C211126&r=2%2C0",
+    "reached_payment_page": false,
+    "furthest_step": "room",
+    "steps": 3,
+    "seconds": 10.987223,
+    "notes": "No available rooms/rates with 'Book' buttons found.",
+    "cost_usd": 0.0,
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 11.01
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Bloomrooms City Centre",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/3919535?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 18 Nov",
+    "price_shown_on_listing": 5696.0,
+    "price_shown_on_room_selection": 5696.0,
+    "price_final_payable": 5981.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 6400.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 285.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -704.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 5696.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 5696.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 5981.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 5981.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 21.7s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Bloomrooms City Centre \u00b7 Room Only \u00b7 INR 5696 + INR 285 taxes & fees",
+    "payment_page_text": "Booking: Bloomrooms City Centre. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 6400. Hotel taxes: INR 285. Total: INR 5981. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5981.0,
+    "pay_now": 5981.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 21.677798,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.7
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Treebo Tiba",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/4280268?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room with Breakfast",
+    "max_occupancy": 2,
+    "meal_plan": "Room with Breakfast",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 1893.0,
+    "price_shown_on_room_selection": 1893.0,
+    "price_final_payable": 2216.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5587.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 108.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -3436.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -258.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 215.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 1893.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 1893.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 2216.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 2216.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 21.7s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Treebo Tiba \u00b7 Room with Breakfast \u00b7 INR 1893 + INR 323 taxes & fees",
+    "payment_page_text": "Booking: Treebo Tiba. Room: Room with Breakfast. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 5587. Hotel taxes: INR 108. Total: INR 2216. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 2216.0,
+    "pay_now": 2216.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 21.685253,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.72
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "ibis Bengaluru City Centre",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/725958?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 7200.0,
+    "price_shown_on_room_selection": 7200.0,
+    "price_final_payable": 7560.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 7200.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 360.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 7200.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 7200.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 7560.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 7560.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 22.3s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "ibis Bengaluru City Centre \u00b7 Room Only \u00b7 INR 7200 + INR 360 taxes & fees",
+    "payment_page_text": "Booking: ibis Bengaluru City Centre. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Base fare: INR 7200. Hotel taxes: INR 360. Total: INR 7560. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 7182.0,
+    "pay_now": 7560.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "steps": 7,
+    "seconds": 22.258884,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 22.28
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "layout",
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Superior Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": 9000,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "room_selection",
+        "price_shown": 9000,
+        "timestamp": "2026-11-15T20:21:42.554134+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Could not parse real total payable from Booking.com finish booking page.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 36.13
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.booking.com/hotel/in/sterlings-mac.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 24.12
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Executive Room",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast Included",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 1282.0,
+    "price_shown_on_room_selection": 13499,
+    "price_final_payable": 13499.1,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 13499,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 0.1,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 1282.0,
+        "timestamp": "2026-11-15T20:22:41.212894+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 13499,
+        "timestamp": "2026-11-15T20:22:41.610952+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 13499.1,
+        "timestamp": "2026-11-15T20:23:04.699547+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for La Marvella. Total payable: INR 13499.1. Dates: 2026-11-20 to 2026-11-21. Room: Executive Room. Meal: Breakfast Included. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 13499.1,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 30.74
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "The Chancery Pavilion",
+    "hotel_url": "https://www.booking.com/hotel/in/the-chancery-pavillion.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.53
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "The Pride Hotel",
+    "hotel_url": "https://www.booking.com/hotel/in/pride-hotel-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.45
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "Bloomrooms City Centre",
+    "hotel_url": "https://www.booking.com/hotel/in/bloomrooms-city-centre.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 21.25
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Treebo Tiba",
+    "hotel_url": "https://www.booking.com/hotel/in/treebo-trend-tiba.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Economy Double Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 100.0,
+    "price_shown_on_room_selection": 4586,
+    "price_final_payable": 2118.6,
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 2118.6,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 100.0,
+        "timestamp": "2026-11-15T20:24:28.174517+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 4586,
+        "timestamp": "2026-11-15T20:24:28.404093+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 2118.6,
+        "timestamp": "2026-11-15T20:24:51.017187+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for Treebo Tiba. Total payable: INR 2118.6. Dates: 2026-11-20 to 2026-11-21. Room: Economy Double Room. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 2118.6,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 30.89
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "other",
+    "hotel_name": "ibis Bengaluru City Centre",
+    "hotel_url": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Standard Queen Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 342.0,
+    "price_shown_on_room_selection": 7200,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 342.0,
+        "timestamp": "2026-11-15T20:25:02.449629+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 7200,
+        "timestamp": "2026-11-15T20:25:02.543339+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Execution error: Page.evaluate: Execution context was destroyed, most likely because of a navigation",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 20-21",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "duration_seconds": 24.46
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=271126%7C281126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 26 Nov",
+    "price_shown_on_listing": 12401.0,
+    "price_shown_on_room_selection": 12401.0,
+    "price_final_payable": 14633.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 12401.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 2232.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 12401.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 12401.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 14633.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 14633.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 22.3s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Radisson Blu Atria Bengaluru \u00b7 Room Only \u00b7 INR 12401 + INR 2232 taxes & fees",
+    "payment_page_text": "Booking: Radisson Blu Atria Bengaluru. Room: Room Only. Dates: 2026-11-27 to 2026-11-28, Occupancy: 1 Room, 2 Adults. Base fare: INR 12401. Hotel taxes: INR 2232. Total: INR 14633. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 12417.0,
+    "pay_now": 14633.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "steps": 7,
+    "seconds": 22.289228,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 22.32
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/sterlings-mac-hotel-bengaluru-327940?c=271126%7C281126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 26 Nov",
+    "price_shown_on_listing": 7249.0,
+    "price_shown_on_room_selection": 7249.0,
+    "price_final_payable": 7611.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 7249.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 362.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 7249.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 7249.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 7611.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 7611.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 25.2s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "Sterlings Mac Hotel \u00b7 Room Only \u00b7 INR 7249 + INR 362 taxes & fees",
+    "payment_page_text": "Booking: Sterlings Mac Hotel. Room: Room Only. Dates: 2026-11-27 to 2026-11-28, Occupancy: 1 Room, 2 Adults. Base fare: INR 7249. Hotel taxes: INR 362. Total: INR 7611. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 7611.0,
+    "pay_now": 7611.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "steps": 7,
+    "seconds": 25.211618,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 25.26
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898?c=271126%7C281126&r=2%2C0",
+    "room_type": "Room with Breakfast",
+    "max_occupancy": 2,
+    "meal_plan": "Room with Breakfast",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 8429.0,
+    "price_shown_on_room_selection": 8429.0,
+    "price_final_payable": 11495.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 15639.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1971.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2518.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 8429.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 8429.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11495.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11495.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 33.9s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "La Marvella \u00b7 Room with Breakfast \u00b7 INR 8429 + INR 3066 taxes & fees",
+    "payment_page_text": "Booking: La Marvella. Room: Room with Breakfast. Dates: 2026-11-27 to 2026-11-28, Occupancy: 1 Room, 2 Adults. Base fare: INR 15639. Hotel taxes: INR 1971. Total: INR 11495. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 11495.0,
+    "pay_now": 11495.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "steps": 7,
+    "seconds": 33.866297,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 33.9
+  },
+  {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "The Chancery Pavilion",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/the-chancery-pavillion-40140?c=271126%7C281126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 26 Nov",
+    "price_shown_on_listing": 5000.0,
+    "price_shown_on_room_selection": 5000.0,
+    "price_final_payable": 5250.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5000.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 250.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 5000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 5000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 5250.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 5250.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 26.8s (7 steps). STOPPED at payment page.",
+    "listing_page_text": "The Chancery Pavilion \u00b7 Room Only \u00b7 INR 5000 + INR 250 taxes & fees",
+    "payment_page_text": "Booking: The Chancery Pavilion. Room: Room Only. Dates: 2026-11-27 to 2026-11-28, Occupancy: 1 Room, 2 Adults. Base fare: INR 5000. Hotel taxes: INR 250. Total: INR 5250. Guest: Test Guest (test.guest+probe@example.com).",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5250.0,
+    "pay_now": 5250.0,
+    "pay_at_hotel": 0.0,
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "steps": 7,
+    "seconds": 26.822187,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 26.85
+  },
+  {
+    "site": "Cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "hotel_name": "The Pride Hotel",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/the-pride-hotel-349942?c=271126%7C281126&r=2%2C0",
+    "reached_payment_page": false,
+    "furthest_step": "room",
+    "steps": 3,
+    "seconds": 10.130795,
+    "notes": "No available rooms/rates with 'Book' buttons found.",
+    "cost_usd": 0.0,
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 10.16
+  },
+  {
+    "site": "Cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "hotel_name": "Bloomrooms City Centre",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/3919535?c=271126%7C281126&r=2%2C0",
+    "reached_payment_page": false,
+    "furthest_step": "payment",
+    "steps": 6,
+    "seconds": 32.150074,
+    "notes": "Failed to parse real total payable or fee breakdown lines from Cleartrip payment review page.",
+    "cost_usd": 0.0,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 32.18
+  },
+  {
+    "site": "Cleartrip",
+    "status": "unverified",
+    "blocker": "layout",
+    "hotel_name": "Treebo Tiba",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/4280268?c=271126%7C281126&r=2%2C0",
+    "reached_payment_page": false,
+    "furthest_step": "payment",
+    "steps": 6,
+    "seconds": 27.011787,
+    "notes": "Failed to parse real total payable or fee breakdown lines from Cleartrip payment review page.",
+    "cost_usd": 0.0,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 27.05
+  },
+  {
+    "site": "Cleartrip",
+    "status": "unverified",
+    "blocker": "other",
+    "hotel_name": "ibis Bengaluru City Centre",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/725958?c=271126%7C281126&r=2%2C0",
+    "reached_payment_page": false,
+    "furthest_step": "navigate_search",
+    "steps": 2,
+    "seconds": 43.014186,
+    "notes": "Playbook failed at state NAVIGATE_SEARCH: Page.goto: Timeout 40000ms exceeded.\nCall log:\n  - navigating to \"https://www.cleartrip.com/hotels/details/725958?c=271126%7C281126&r=2%2C0\", waiting until \"domcontentloaded\"\n",
+    "cost_usd": 0.0,
+    "error": "Page.goto: Timeout 40000ms exceeded.\nCall log:\n  - navigating to \"https://www.cleartrip.com/hotels/details/725958?c=271126%7C281126&r=2%2C0\", waiting until \"domcontentloaded\"\n",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 43.01
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "layout",
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Superior Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": 12050,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "room_selection",
+        "price_shown": 12050,
+        "timestamp": "2026-11-15T20:29:43.603814+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Could not parse real total payable from Booking.com finish booking page.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 45.82
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.booking.com/hotel/in/sterlings-mac.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 22.41
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "layout",
+    "hotel_name": "La Marvella",
+    "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Executive Room",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast Included",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": 13499,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "room_selection",
+        "price_shown": 13499,
+        "timestamp": "2026-11-15T20:30:44.537073+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Could not parse real total payable from Booking.com finish booking page.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 31.84
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "The Chancery Pavilion",
+    "hotel_url": "https://www.booking.com/hotel/in/the-chancery-pavillion.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 23.48
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "The Pride Hotel",
+    "hotel_url": "https://www.booking.com/hotel/in/pride-hotel-bangalore.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 21.54
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "Bloomrooms City Centre",
+    "hotel_url": "https://www.booking.com/hotel/in/bloomrooms-city-centre.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 22.92
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Treebo Tiba",
+    "hotel_url": "https://www.booking.com/hotel/in/treebo-trend-tiba.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Economy Double Room",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast Included",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": 4609,
+    "price_final_payable": 4609.38,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 4609,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 0.38,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "room_selection",
+        "price_shown": 4609,
+        "timestamp": "2026-11-15T20:32:38.470961+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 4609.38,
+        "timestamp": "2026-11-15T20:32:58.824210+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for Treebo Tiba. Total payable: INR 4609.38. Dates: 2026-11-27 to 2026-11-28. Room: Economy Double Room. Meal: Breakfast Included. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 4609.38,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 33.85
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "layout",
+    "hotel_name": "ibis Bengaluru City Centre",
+    "hotel_url": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.html?checkin=2026-11-27&checkout=2026-11-28&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com room selection table.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "screenshot_path": null,
+    "date_label": "Nov 27-28",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "duration_seconds": 24.53
+  }
+]

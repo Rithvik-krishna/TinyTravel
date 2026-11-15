@@ -1,0 +1,342 @@
+[
+  {
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 11077.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 19 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": "Superior Room",
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Sterlings Mac Hotel",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 38726.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 19 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "La Marvella",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 11495.0,
+    "bookingcom_payable": 13499.1,
+    "status": "NOT COMPARABLE",
+    "comparable": false,
+    "reason": "Mismatch in room tier (standard vs executive), cancellation (non_refundable vs free)",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room with Breakfast",
+      "tier": "standard",
+      "meal": "breakfast",
+      "cancel": "non_refundable"
+    },
+    "bookingcom_cohort": {
+      "room": "Executive Room",
+      "tier": "executive",
+      "meal": "breakfast",
+      "cancel": "free"
+    }
+  },
+  {
+    "hotel_name": "The Chancery Pavilion",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 5775.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 19 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "The Pride Hotel",
+    "date": "Nov 20-21",
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=False, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": null,
+      "meal": null,
+      "cancel": null
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Bloomrooms City Centre",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 5981.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 18 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Treebo Tiba",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 2216.0,
+    "bookingcom_payable": 2118.6,
+    "status": "NOT COMPARABLE",
+    "comparable": false,
+    "reason": "Mismatch in meal (breakfast vs room_only)",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room with Breakfast",
+      "tier": "standard",
+      "meal": "breakfast",
+      "cancel": "free"
+    },
+    "bookingcom_cohort": {
+      "room": "Economy Double Room",
+      "tier": "standard",
+      "meal": "room_only",
+      "cancel": "free"
+    }
+  },
+  {
+    "hotel_name": "ibis Bengaluru City Centre",
+    "date": "Nov 20-21",
+    "cleartrip_payable": 7560.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 19 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": "Standard Queen Room",
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "date": "Nov 27-28",
+    "cleartrip_payable": 14633.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 26 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": "Superior Room",
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Sterlings Mac Hotel",
+    "date": "Nov 27-28",
+    "cleartrip_payable": 7611.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 26 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "La Marvella",
+    "date": "Nov 27-28",
+    "cleartrip_payable": 11495.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room with Breakfast",
+      "meal": "Room with Breakfast",
+      "cancel": "Non-refundable"
+    },
+    "bookingcom_cohort": {
+      "room": "Executive Room",
+      "meal": "Breakfast Included",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "The Chancery Pavilion",
+    "date": "Nov 27-28",
+    "cleartrip_payable": 5250.0,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=True, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": "Room Only",
+      "meal": "Room Only",
+      "cancel": "Free cancellation till 26 Nov"
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "The Pride Hotel",
+    "date": "Nov 27-28",
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=False, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": null,
+      "meal": null,
+      "cancel": null
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Bloomrooms City Centre",
+    "date": "Nov 27-28",
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=False, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": null,
+      "meal": null,
+      "cancel": null
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "Treebo Tiba",
+    "date": "Nov 27-28",
+    "cleartrip_payable": null,
+    "bookingcom_payable": 4609.38,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=False, Booking.com ver=True",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": null,
+      "meal": null,
+      "cancel": null
+    },
+    "bookingcom_cohort": {
+      "room": "Economy Double Room",
+      "meal": "Breakfast Included",
+      "cancel": "Free cancellation"
+    }
+  },
+  {
+    "hotel_name": "ibis Bengaluru City Centre",
+    "date": "Nov 27-28",
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "status": "UNMEASURED_OR_BLOCKED",
+    "comparable": false,
+    "reason": "Cleartrip ver=False, Booking.com ver=False",
+    "spread_inr": null,
+    "spread_pct": null,
+    "cleartrip_cohort": {
+      "room": null,
+      "meal": null,
+      "cancel": null
+    },
+    "bookingcom_cohort": {
+      "room": null,
+      "meal": "Room Only",
+      "cancel": "Free cancellation"
+    }
+  }
+]

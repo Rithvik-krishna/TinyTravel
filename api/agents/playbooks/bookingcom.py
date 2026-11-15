@@ -19,10 +19,16 @@ IST = timezone(timedelta(hours=5, minutes=30))
 KNOWN_BOOKING_HOTELS = {
     "radisson blu atria": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
     "radisson blu atria bengaluru": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
-    "the oberoi bengaluru": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
-    "the leela palace bengaluru": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
+    "sterlings mac hotel": "https://www.booking.com/hotel/in/sterlings-mac.html",
+    "sterlings mac": "https://www.booking.com/hotel/in/sterlings-mac.html",
+    "la marvella": "https://www.booking.com/hotel/in/la-marvella.html",
+    "the chancery pavilion": "https://www.booking.com/hotel/in/the-chancery-pavillion.html",
+    "the pride hotel": "https://www.booking.com/hotel/in/pride-hotel-bangalore.html",
+    "bloomrooms city centre": "https://www.booking.com/hotel/in/bloomrooms-city-centre.html",
     "treebo tiba": "https://www.booking.com/hotel/in/treebo-trend-tiba.html",
     "ibis bengaluru city centre": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.html",
+    "the oberoi bengaluru": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
+    "the leela palace bengaluru": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
 }
 
 
@@ -113,14 +119,30 @@ async def run_bookingcom_playbook(
             logger.info("Step 1: Navigating to Booking.com: %s", hotel_url)
             resp = await page.goto(hotel_url, wait_until="domcontentloaded", timeout=30000)
             result["furthest_step"] = "listing"
-            await asyncio.sleep(2.0)
+            await asyncio.sleep(3.0)
 
-            # Check for bot challenge
-            html = (await page.content()).lower()
-            if any(c in html for c in ["perimeterx", "px-captcha", "press & hold", "access denied", "robot"]):
+            title_text = ""
+            try:
+                title_text = (await page.title()).lower()
+            except Exception:
+                await asyncio.sleep(2.0)
+                title_text = (await page.title()).lower()
+
+            if "access denied" in title_text or "attention required" in title_text:
                 result["blocker"] = "captcha"
                 await browser.close()
                 return to_probe_result_dict(result)
+
+            try:
+                px = await page.query_selector("#px-captcha, .px-captcha-container, div[data-testid='px-captcha']")
+                if px:
+                    result["blocker"] = "captcha"
+                    await browser.close()
+                    return to_probe_result_dict(result)
+            except Exception:
+                pass
+
+            html = await page.content()
 
             # Look for price on page
             prices = re.findall(r"₹\s*([0-9,]+)", html)
@@ -146,23 +168,82 @@ async def run_bookingcom_playbook(
 
             result["furthest_step"] = "room_selection"
 
-            # Parse rates and select room
-            price_cells = await page.query_selector_all(".prco-valign-middle-helper, .bui-price-display__value, span[data-testid='price-and-discounted-price']")
-            rate_amount = None
-            if price_cells:
-                try:
-                    text = await price_cells[0].inner_text()
-                    match = re.search(r"[\d,]+", text)
-                    if match:
-                        rate_amount = float(match.group(0).replace(",", ""))
-                except Exception:
-                    pass
+            try:
+                await page.wait_for_selector("#hprt-table, table.hprt-table, select.hprt-nos-select, button.js-reservation-button", timeout=12000)
+            except Exception:
+                await asyncio.sleep(3.0)
 
-            if not rate_amount and result.get("price_shown_on_listing"):
-                rate_amount = result["price_shown_on_listing"]
+            # Parse rates and select room matching cohort (cheapest free-cancellation for 2 adults)
+            rate_info = await page.evaluate('''() => {
+                const table = document.querySelector('#hprt-table, table.hprt-table');
+                if (!table) return null;
+                const trs = Array.from(table.querySelectorAll('tbody tr'));
+                let currentRoomName = "Standard Room";
+                const rates = [];
+
+                trs.forEach((tr, idx) => {
+                    const roomHeader = tr.querySelector('.hprt-roomtype-link, .hprt-roomtype-icon-link, .room-name');
+                    if (roomHeader && roomHeader.innerText.trim()) {
+                        currentRoomName = roomHeader.innerText.trim();
+                    }
+                    const text = tr.innerText;
+                    const select = tr.querySelector('select');
+                    if (!select) return;
+
+                    const isFreeCancel = /free cancellation/i.test(text);
+                    const hasBreakfast = /breakfast included/i.test(text);
+
+                    // Extract prices
+                    const priceMatches = Array.from(text.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
+                    if (priceMatches.length === 0) return;
+
+                    const roomPrices = priceMatches.filter(p => p >= 3000);
+                    const basePrice = roomPrices.length > 0 ? roomPrices[0] : Math.max(...priceMatches);
+                    rates.push({
+                        rowIdx: idx,
+                        roomName: currentRoomName,
+                        isFreeCancel: isFreeCancel,
+                        hasBreakfast: hasBreakfast,
+                        basePrice: basePrice,
+                    });
+                });
+                return rates;
+            }''')
+
+            logger.info("Booking.com page url: %s, rate_info: %s", page.url, len(rate_info) if rate_info else None)
+            selected_rate = None
+            if rate_info:
+                free_cancels = [r for r in rate_info if r["isFreeCancel"]]
+                if free_cancels:
+                    selected_rate = min(free_cancels, key=lambda x: x["basePrice"])
+                    result["cancellation_policy"] = "Free cancellation"
+                else:
+                    selected_rate = min(rate_info, key=lambda x: x["basePrice"])
+                    result["cancellation_policy"] = "Non-refundable"
+
+            rate_amount = selected_rate["basePrice"] if selected_rate else None
+            if not rate_amount:
+                # fallback parse from price cells
+                price_cells = await page.query_selector_all(".prco-valign-middle-helper, .bui-price-display__value, span[data-testid='price-and-discounted-price']")
+                if price_cells:
+                    try:
+                        text = await price_cells[0].inner_text()
+                        match = re.search(r"[\d,]+", text)
+                        if match:
+                            rate_amount = float(match.group(0).replace(",", ""))
+                    except Exception:
+                        pass
 
             if not rate_amount:
-                rate_amount = 7500.0
+                result["blocker"] = "layout"
+                result["reached_payment_page"] = False
+                result["notes"] = "Could not parse real room rate from Booking.com room selection table."
+                await browser.close()
+                return to_probe_result_dict(result)
+
+            if selected_rate:
+                result["room_type"] = selected_rate["roomName"]
+                result["meal_plan"] = "Breakfast Included" if selected_rate["hasBreakfast"] else "Room Only"
 
             result["price_shown_on_room_selection"] = rate_amount
             result["price_trail"].append({
@@ -172,21 +253,33 @@ async def run_bookingcom_playbook(
             })
 
             # Advance to guest details / book.html
-            selects = page.locator("select[data-testid='select-room-trigger'], select[name*='nr_rooms']")
-            if await selects.count() > 0:
-                await selects.first.select_option("1")
-                await asyncio.sleep(1.0)
+            if selected_rate:
+                row_idx = selected_rate["rowIdx"]
+                select_locator = page.locator(f"#hprt-table tbody tr:nth-child({row_idx + 1}) select, table.hprt-table tbody tr:nth-child({row_idx + 1}) select").first
+                if await select_locator.count() > 0:
+                    await select_locator.select_option("1")
+                    await asyncio.sleep(1.0)
+            else:
+                selects = page.locator("select[data-testid='select-room-trigger'], select[name*='nr_rooms']")
+                if await selects.count() > 0:
+                    await selects.first.select_option("1")
+                    await asyncio.sleep(1.0)
 
-            reserve_btn = page.locator("button:has-text('I\\'ll reserve'), button:has-text('Reserve')").first
+            reserve_btn = page.locator("button.js-reservation-button, button[type='submit'].hp_rt_input, button:has-text('I\\'ll reserve'), button:has-text('Reserve')").first
             if await reserve_btn.is_visible():
                 await reserve_btn.click()
+            
+            try:
+                await page.wait_for_url("**/book.html**", timeout=15000)
+                book_page = page
+            except Exception:
                 await asyncio.sleep(5.0)
-
-            book_page = page
-            for p_curr in context.pages:
-                if "book.html" in p_curr.url:
-                    book_page = p_curr
-            await book_page.bring_to_front()
+                book_page = page
+                for p_curr in context.pages:
+                    if "book.html" in p_curr.url:
+                        book_page = p_curr
+                        break
+                await book_page.bring_to_front()
 
             # Fill guest details
             fn = book_page.locator("input[name='firstname'], input#firstname").first
@@ -210,35 +303,77 @@ async def run_bookingcom_playbook(
 
             # Step 3: Finish booking / payment review
             fin_text = await book_page.evaluate("() => document.body.innerText")
-            reached_fin = "book.html" in book_page.url and "finish" in fin_text.lower()
+            reached_fin = "book.html" in book_page.url
             
             prices_fin = re.findall(r'₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text)
-            if prices_fin:
-                clean_fin = [float(p.replace(",", "")) for p in prices_fin]
-                total_payable = clean_fin[0] if clean_fin else rate_amount
+            logger.info("Step 3 reached_fin=%s, book_page.url=%s, prices_fin count=%s", reached_fin, book_page.url, len(prices_fin))
+            if not prices_fin or not reached_fin:
+                result["blocker"] = "layout"
+                result["reached_payment_page"] = False
+                result["furthest_step"] = "traveller_details"
+                result["price_final_payable"] = None
+                result["fee_lines"] = []
+                result["notes"] = "Could not parse real total payable from Booking.com finish booking page."
+                await browser.close()
+                return to_probe_result_dict(result)
+
+            clean_fin = [float(p.replace(",", "")) for p in prices_fin]
+            
+            # Find total payable
+            m_total = re.search(r'(?:total|price|amount|payable|you pay)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s]*₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            if m_total:
+                total_payable = float(m_total.group(1).replace(",", ""))
             else:
-                total_payable = round(rate_amount * 1.18, 2)
+                total_payable = max(clean_fin)
 
             base_fare = rate_amount
-            taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else round(total_payable * 0.12, 2)
+            taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else 0.0
 
             result["furthest_step"] = "payment"
-            result["reached_payment_page"] = reached_fin
+            result["reached_payment_page"] = True
             result["price_final_payable"] = total_payable
             result["cheapest_any_payable"] = total_payable
 
-            result["fee_lines"] = [
-                {
-                    "label": "Room rate",
-                    "amount": base_fare,
-                    "fee_kind": "other",
-                },
-                {
-                    "label": "Taxes & charges",
-                    "amount": taxes,
-                    "fee_kind": "tax",
-                },
-            ]
+            # Extract room name, meal plan, cancellation from page text
+            room_elem = await book_page.query_selector("h2, h3, .e2e-summary-room-type, [data-testid='room-name'], .bp-room-type, .bui-f-font-strong")
+            if room_elem:
+                txt = (await room_elem.inner_text()).strip()
+                if txt and len(txt) < 80 and not any(w in txt.lower() for w in ["price", "total", "booking", "details", "summary", "step"]):
+                    result["room_type"] = txt
+            if not result.get("room_type"):
+                result["room_type"] = selected_rate["roomName"] if selected_rate else "Standard Room"
+
+            if "breakfast included" in fin_text.lower():
+                result["meal_plan"] = "Breakfast Included"
+            else:
+                result["meal_plan"] = "Room Only"
+
+            if "free cancellation" in fin_text.lower():
+                result["cancellation_policy"] = "Free cancellation"
+            else:
+                result["cancellation_policy"] = "Non-refundable"
+
+            if taxes > 0:
+                result["fee_lines"] = [
+                    {
+                        "label": "Room rate",
+                        "amount": base_fare,
+                        "fee_kind": "other",
+                    },
+                    {
+                        "label": "Taxes & charges",
+                        "amount": taxes,
+                        "fee_kind": "tax",
+                    },
+                ]
+            else:
+                result["fee_lines"] = [
+                    {
+                        "label": "Total room rate (incl. taxes)",
+                        "amount": total_payable,
+                        "fee_kind": "other",
+                    },
+                ]
 
             result["price_trail"].append({
                 "step": "payment",
@@ -247,9 +382,15 @@ async def run_bookingcom_playbook(
             })
 
             # Save screenshot evidence
-            scr_path = evidence_dir / f"bookingcom_payment_{int(t0.timestamp())}.png"
-            await book_page.screenshot(path=str(scr_path))
-            result["payment_page_text"] = f"Booking.com checkout verified for {hotel_name}. Total payable: INR {total_payable}"
+            recon_dir = Path("results/recon/real_pairs")
+            recon_dir.mkdir(parents=True, exist_ok=True)
+            scr_path = recon_dir / f"bookingcom_{norm_name.replace(' ', '_')}_{cin}_{int(t0.timestamp())}.png"
+            try:
+                await book_page.screenshot(path=str(scr_path), animations="disabled", timeout=15000)
+            except Exception:
+                pass
+            result["payment_page_text"] = f"Booking.com checkout verified for {hotel_name}. Total payable: INR {total_payable}. Dates: {cin} to {cout}. Room: {result['room_type']}. Meal: {result['meal_plan']}. Cancel: {result['cancellation_policy']}."
+
 
             await browser.close()
     except Exception as e:

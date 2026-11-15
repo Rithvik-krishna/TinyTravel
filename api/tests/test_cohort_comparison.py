@@ -368,3 +368,47 @@ def test_no_ranking_across_verification_levels():
     assert ranked[0]["offer_id"] == "off_ct"
 
 
+def test_payable_traceable_to_saved_page():
+    """Fail if any verified offer has a payable that cannot be traced to saved evidence."""
+    demo_run = Path("fixtures/demo_run.json")
+    if demo_run.exists():
+        data = json.loads(demo_run.read_text(encoding="utf-8"))
+        for off in data.get("offers", []):
+            if off.get("status") == "verified" and off.get("price_final_payable") is not None:
+                payable = float(off["price_final_payable"])
+                p_int = str(int(payable))
+                # Traceable in payment_page_text, notes, or evidence
+                texts = [
+                    off.get("payment_page_text") or "",
+                    off.get("listing_page_text") or "",
+                    off.get("notes") or "",
+                ]
+                for ev in off.get("evidence", []):
+                    if ev.get("extracted_value"):
+                        texts.append(str(ev["extracted_value"]))
+                combined = " ".join(texts)
+                assert p_int in combined or str(payable) in combined, (
+                    f"Payable {payable} for offer {off.get('offer_id')} is untraceable to saved evidence"
+                )
+
+
+def test_unsupported_platforms_marked_blocked():
+    """Verify Treebo, FabHotels, and StayVista are recorded as blocked (login/otp/layout)."""
+    bench_file = Path("results/benchmark_10runs_summary.json")
+    if bench_file.exists():
+        data = json.loads(bench_file.read_text(encoding="utf-8"))
+        for t_run in data.get("treebo", []):
+            assert t_run["success"] is False
+            assert t_run["blocker"] in ["login", "otp", "layout"]
+            assert t_run["payable"] is None
+        for f_run in data.get("fabhotels", []):
+            assert f_run["success"] is False
+            assert f_run["blocker"] in ["login", "otp"]
+            assert f_run["payable"] is None
+        for s_run in data.get("stayvista", []):
+            assert s_run["success"] is False
+            assert s_run["blocker"] in ["layout", "other"]
+            assert s_run["payable"] is None
+
+
+

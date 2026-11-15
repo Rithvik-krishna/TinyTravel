@@ -1,0 +1,357 @@
+[
+  {
+    "run_index": 1,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "requested_check_in": "2026-11-20",
+    "requested_check_out": "2026-11-21",
+    "date_label": "Date 1 (Nov 20-21)",
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 24.54,
+    "price_final_payable": 11077.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 9387.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1690.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_1_radisson b_2026-11-20.png"
+  },
+  {
+    "run_index": 2,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "requested_check_in": "2026-11-27",
+    "requested_check_out": "2026-11-28",
+    "date_label": "Date 2 (Nov 27-28)",
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.67,
+    "price_final_payable": 14633.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 12401.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 2232.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 26 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_2_radisson b_2026-11-27.png"
+  },
+  {
+    "run_index": 3,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "requested_check_in": "2026-12-15",
+    "requested_check_out": "2026-12-16",
+    "date_label": "Date 3 (Dec 15-16)",
+    "payment_page_dates": "15 Dec to 16 Dec",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.71,
+    "price_final_payable": 22154.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 18774.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 3379.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 14 Dec",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_3_radisson b_2026-12-15.png"
+  },
+  {
+    "run_index": 4,
+    "hotel_name": "Sterlings Mac Hotel",
+    "requested_check_in": "2026-11-20",
+    "requested_check_out": "2026-11-21",
+    "date_label": "Date 1 (Nov 20-21)",
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.64,
+    "price_final_payable": 38726.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 32819.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 5907.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_4_sterlings _2026-11-20.png"
+  },
+  {
+    "run_index": 5,
+    "hotel_name": "Sterlings Mac Hotel",
+    "requested_check_in": "2026-11-27",
+    "requested_check_out": "2026-11-28",
+    "date_label": "Date 2 (Nov 27-28)",
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.88,
+    "price_final_payable": 7611.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 7249.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 362.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 26 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_5_sterlings _2026-11-27.png"
+  },
+  {
+    "run_index": 6,
+    "hotel_name": "La Marvella",
+    "requested_check_in": "2026-11-20",
+    "requested_check_out": "2026-11-21",
+    "date_label": "Date 1 (Nov 20-21)",
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.6,
+    "price_final_payable": 11495.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 15639.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1971.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2518.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room with Breakfast",
+    "cancellation_policy": "Non-refundable",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_6_la marvell_2026-11-20.png"
+  },
+  {
+    "run_index": 7,
+    "hotel_name": "La Marvella",
+    "requested_check_in": "2026-11-27",
+    "requested_check_out": "2026-11-28",
+    "date_label": "Date 2 (Nov 27-28)",
+    "payment_page_dates": "27 Nov to 28 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.66,
+    "price_final_payable": 11495.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 15639.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1971.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -4692.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Coupon discount (CTHOTEL)",
+        "amount": -2518.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 1095.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room with Breakfast",
+    "cancellation_policy": "Non-refundable",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_7_la marvell_2026-11-27.png"
+  },
+  {
+    "run_index": 8,
+    "hotel_name": "The Chancery Pavilion",
+    "requested_check_in": "2026-11-20",
+    "requested_check_out": "2026-11-21",
+    "date_label": "Date 1 (Nov 20-21)",
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.27,
+    "price_final_payable": 5775.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5500.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 275.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_8_the chance_2026-11-20.png"
+  },
+  {
+    "run_index": 9,
+    "hotel_name": "The Chancery Pavilion",
+    "requested_check_in": "2026-12-15",
+    "requested_check_out": "2026-12-16",
+    "date_label": "Date 3 (Dec 15-16)",
+    "payment_page_dates": "15 Dec to 16 Dec",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.48,
+    "price_final_payable": 6300.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 6000.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 300.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 14 Dec",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_9_the chance_2026-12-15.png"
+  },
+  {
+    "run_index": 10,
+    "hotel_name": "Bloomrooms @ City Centre",
+    "requested_check_in": "2026-11-20",
+    "requested_check_out": "2026-11-21",
+    "date_label": "Date 1 (Nov 20-21)",
+    "payment_page_dates": "20 Nov to 21 Nov",
+    "date_applied_matches": true,
+    "payment_page_reached": true,
+    "status": "verified",
+    "seconds": 23.68,
+    "price_final_payable": 5981.0,
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 6400.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 285.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -704.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "room_type": "Room Only",
+    "cancellation_policy": "Free cancellation till 18 Nov",
+    "screenshot": "results\\recon\\cleartrip_validation_dates\\run_10_bloomrooms_2026-11-20.png"
+  }
+]
