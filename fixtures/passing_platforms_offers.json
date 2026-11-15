@@ -1,0 +1,678 @@
+[
+  {
+    "offer_id": "off_cleartrip_radisson",
+    "hotel_id": "h_radisson_blu_atria",
+    "run_id": "run_docker_001",
+    "started_at": "2026-11-20T10:00:00+05:30",
+    "finished_at": "2026-11-20T10:00:20+05:30",
+    "steps": 12,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/2043762",
+    "room_type": "Deluxe Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation until 24 hours prior to check-in",
+    "price_shown_on_listing": 10500.0,
+    "price_shown_on_room_selection": 10500.0,
+    "price_final_payable": 11077.0,
+    "fee_lines": [
+      {
+        "label": "Base Rate",
+        "amount": 9500.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Taxes & Service Fees",
+        "amount": 1577.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 10500.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11077.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Verified own guest checkout via Docker container",
+    "fee_leak_pct": 5.49,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/cleartrip/payment_page.png",
+        "step": "payment",
+        "captured_at": "2026-11-20T10:00:20+05:30",
+        "extracted_value": 11077.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": 85.0,
+      "breakdown": {
+        "fee_leak": 80.0,
+        "addons_pressure": 100.0,
+        "price_stability": 90.0,
+        "evidence": 100.0
+      },
+      "note": "Verified with full fee reconciliation"
+    },
+    "verification_level": "checkout"
+  },
+  {
+    "offer_id": "off_bookingcom_treebo_tiba",
+    "hotel_id": "h_treebo_tiba",
+    "run_id": "run_bookingcom_001",
+    "started_at": "2026-11-20T10:01:00+05:30",
+    "finished_at": "2026-11-20T10:01:25+05:30",
+    "steps": 10,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "non_refundable",
+    "site": "booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Treebo Trend Tiba Indiranagar",
+    "hotel_url": "https://www.booking.com/hotel/in/treebo-trend-tiba.html",
+    "room_type": "Standard Double Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 2000.0,
+    "price_shown_on_room_selection": 2000.0,
+    "price_final_payable": 2240.0,
+    "fee_lines": [
+      {
+        "label": "Base Price",
+        "amount": 2000.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "GST",
+        "amount": 240.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 2000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 2240.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Verified checkout flow on Booking.com",
+    "fee_leak_pct": 12.0,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/bookingcom/run_1_screen.png",
+        "step": "payment",
+        "captured_at": "2026-11-20T10:01:25+05:30",
+        "extracted_value": 2240.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": 80.0,
+      "breakdown": {
+        "fee_leak": 70.0,
+        "addons_pressure": 100.0,
+        "price_stability": 90.0,
+        "evidence": 100.0
+      },
+      "note": "Verified with full fee reconciliation"
+    },
+    "verification_level": "checkout"
+  },
+  {
+    "offer_id": "off_treebo_treebo_tiba",
+    "hotel_id": "h_treebo_tiba",
+    "run_id": "run_docker_002",
+    "started_at": "2026-11-20T10:02:00+05:30",
+    "finished_at": "2026-11-20T10:02:04+05:30",
+    "steps": 5,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "non_refundable",
+    "site": "Treebo Hotels",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Treebo Trend Tiba Indiranagar",
+    "hotel_url": "https://www.treebo.com/hotels-in-bangalore/treebo-trend-tiba-indiranagar-1748/",
+    "room_type": "Standard Double Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 2000.0,
+    "price_shown_on_room_selection": 2000.0,
+    "price_final_payable": 2240.0,
+    "fee_lines": [
+      {
+        "label": "Room Base",
+        "amount": 2000.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Taxes (GST 12%)",
+        "amount": 240.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 2000.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 2240.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Verified brand-direct Treebo guest checkout",
+    "fee_leak_pct": 12.0,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/treebo/run_1_screen.png",
+        "step": "payment",
+        "captured_at": "2026-11-20T10:02:04+05:30",
+        "extracted_value": 2240.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": 88.0,
+      "breakdown": {
+        "fee_leak": 75.0,
+        "addons_pressure": 100.0,
+        "price_stability": 95.0,
+        "evidence": 100.0
+      },
+      "note": "Verified with full fee reconciliation"
+    },
+    "verification_level": "checkout"
+  },
+  {
+    "offer_id": "off_fabhotels_prime",
+    "hotel_id": "h_fabhotel_prime",
+    "run_id": "run_fabhotels_001",
+    "started_at": "2026-11-20T10:03:00+05:30",
+    "finished_at": "2026-11-20T10:03:07+05:30",
+    "steps": 6,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "non_refundable",
+    "site": "FabHotels",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "FabHotel Prime Koramangala",
+    "hotel_url": "https://www.fabhotels.com/hotels-in-bangalore",
+    "room_type": "Deluxe Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 1650.0,
+    "price_shown_on_room_selection": 1650.0,
+    "price_final_payable": 1850.0,
+    "fee_lines": [
+      {
+        "label": "Room Price",
+        "amount": 1650.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Taxes",
+        "amount": 200.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 1650.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 1850.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Verified brand-direct FabHotels checkout",
+    "fee_leak_pct": 12.12,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/fabhotels/run_1_screen.png",
+        "step": "payment",
+        "captured_at": "2026-11-20T10:03:07+05:30",
+        "extracted_value": 1850.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": 85.0,
+      "breakdown": {
+        "fee_leak": 75.0,
+        "addons_pressure": 100.0,
+        "price_stability": 90.0,
+        "evidence": 100.0
+      },
+      "note": "Verified with full fee reconciliation"
+    },
+    "verification_level": "checkout"
+  },
+  {
+    "offer_id": "off_stayvista_villa",
+    "hotel_id": "h_vista_villa_blr",
+    "run_id": "run_stayvista_001",
+    "started_at": "2026-11-20T10:04:00+05:30",
+    "finished_at": "2026-11-20T10:04:08+05:30",
+    "steps": 5,
+    "cost_usd": 0.0,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "StayVista",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "StayVista Luxury Villa",
+    "hotel_url": "https://www.stayvista.com/villa",
+    "room_type": "Entire Villa",
+    "max_occupancy": 4,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation 7 days before checkin",
+    "price_shown_on_listing": 12500.0,
+    "price_shown_on_room_selection": 12500.0,
+    "price_final_payable": 14500.0,
+    "fee_lines": [
+      {
+        "label": "Base Rent",
+        "amount": 12500.0,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Cleaning & Taxes",
+        "amount": 2000.0,
+        "fee_kind": "property_fee"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 12500.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 14500.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Verified villa checkout on StayVista",
+    "fee_leak_pct": 16.0,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/stayvista/run_1_screen.png",
+        "step": "payment",
+        "captured_at": "2026-11-20T10:04:08+05:30",
+        "extracted_value": 14500.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": 82.0,
+      "breakdown": {
+        "fee_leak": 70.0,
+        "addons_pressure": 100.0,
+        "price_stability": 90.0,
+        "evidence": 100.0
+      },
+      "note": "Verified with full fee reconciliation"
+    },
+    "verification_level": "checkout"
+  },
+  {
+    "offer_id": "off_googlehotels_hyatt",
+    "hotel_id": "h_hyatt_centric_blr",
+    "run_id": "run_googlehotels_001",
+    "started_at": "2026-11-20T10:05:00+05:30",
+    "finished_at": "2026-11-20T10:05:08+05:30",
+    "steps": 1,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "Google Hotels",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Hyatt Centric MG Road Bangalore",
+    "hotel_url": "https://www.google.com/travel/hotels/Bengaluru",
+    "room_type": "Standard 1 King Bed",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation available via partners",
+    "price_shown_on_listing": 12036.0,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 12036.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level meta rate aggregated across partners",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/googlehotels/run_1_screen.png",
+        "step": "listing",
+        "captured_at": "2026-11-20T10:05:08+05:30",
+        "extracted_value": 12036.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (listing-level only; checkout unverified)"
+    },
+    "verification_level": "listing"
+  },
+  {
+    "offer_id": "off_tripcom_radisson",
+    "hotel_id": "h_radisson_blu_atria",
+    "run_id": "run_tripcom_001",
+    "started_at": "2026-11-20T10:06:00+05:30",
+    "finished_at": "2026-11-20T10:06:08+05:30",
+    "steps": 2,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "Trip.com",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.trip.com/hotels/detail/?hotelId=123",
+    "room_type": "Deluxe Room",
+    "max_occupancy": 2,
+    "meal_plan": "Breakfast included",
+    "cancellation_policy": "Free cancellation before 18:00 on check-in day",
+    "price_shown_on_listing": 10500.0,
+    "price_shown_on_room_selection": 10500.0,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 10500.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level rate on Trip.com",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/tripcom/run_1_screen.png",
+        "step": "listing",
+        "captured_at": "2026-11-20T10:06:08+05:30",
+        "extracted_value": 10500.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (listing-level only; checkout unverified)"
+    },
+    "verification_level": "listing"
+  },
+  {
+    "offer_id": "off_hostelworld_panda",
+    "hotel_id": "h_hostelworld_panda",
+    "run_id": "run_hostelworld_001",
+    "started_at": "2026-11-20T10:07:00+05:30",
+    "finished_at": "2026-11-20T10:07:08+05:30",
+    "steps": 2,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "non_refundable",
+    "site": "Hostelworld",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Backpackers Panda Hostel",
+    "hotel_url": "https://www.hostelworld.com/pwa/hosteldetails.php/123",
+    "room_type": "Standard Dorm 6-bed",
+    "max_occupancy": 1,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 650.0,
+    "price_shown_on_room_selection": 650.0,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 650.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level dorm rate on Hostelworld",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/hostelworld/run_1_screen.png",
+        "step": "listing",
+        "captured_at": "2026-11-20T10:07:08+05:30",
+        "extracted_value": 650.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (listing-level only; checkout unverified)"
+    },
+    "verification_level": "listing"
+  },
+  {
+    "offer_id": "off_onefinerate_chancery",
+    "hotel_id": "h_chancery_pavilion",
+    "run_id": "run_onefinerate_001",
+    "started_at": "2026-11-20T10:08:00+05:30",
+    "finished_at": "2026-11-20T10:08:06+05:30",
+    "steps": 2,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "OneFineRate",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "The Chancery Pavilion",
+    "hotel_url": "https://www.onefinerate.com/hotel/123",
+    "room_type": "Deluxe Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation available",
+    "price_shown_on_listing": 4200.0,
+    "price_shown_on_room_selection": 4200.0,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 4200.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level rate on OneFineRate",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/onefinerate/run_1_screen.png",
+        "step": "listing",
+        "captured_at": "2026-11-20T10:08:06+05:30",
+        "extracted_value": 4200.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (listing-level only; checkout unverified)"
+    },
+    "verification_level": "listing"
+  },
+  {
+    "offer_id": "off_agoda_oakwood",
+    "hotel_id": "h_agoda_1785304",
+    "run_id": "run_agoda_list_001",
+    "started_at": "2026-11-20T10:09:00+05:30",
+    "finished_at": "2026-11-20T10:09:05+05:30",
+    "steps": 2,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "non_refundable",
+    "site": "Agoda",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Hotel Oakwood",
+    "hotel_url": "https://www.agoda.com/en-in/search?hotel=1785304",
+    "room_type": "Deluxe Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Non-refundable",
+    "price_shown_on_listing": 197.86,
+    "price_shown_on_room_selection": 197.86,
+    "price_final_payable": null,
+    "fee_lines": [
+      {
+        "label": "Base Price (Excl. Tax)",
+        "amount": 197.86,
+        "fee_kind": "property_fee"
+      },
+      {
+        "label": "Estimated Taxes & Fees",
+        "amount": 1015.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 1212.86,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level rate from Agoda graphql/search",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/agoda/run_1_screen.png",
+        "step": "listing",
+        "captured_at": "2026-11-20T10:09:05+05:30",
+        "extracted_value": 1212.86,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (listing-level only; checkout unverified)"
+    },
+    "verification_level": "listing"
+  }
+]

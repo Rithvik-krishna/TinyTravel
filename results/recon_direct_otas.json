@@ -1,0 +1,765 @@
+{
+  "expedia": {
+    "name": "Expedia",
+    "category": "Global OTA",
+    "slug": "expedia",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 8.18,
+        "status_code": 429,
+        "page_title": "Bot or Not?",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 1,
+        "endpoints_sample": [
+          {
+            "url": "https://www.expedia.co.in/cgp/simple/challenge.hydrated.styles",
+            "status": 204
+          }
+        ],
+        "screenshot": "results/recon/expedia/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.04,
+        "status_code": 429,
+        "page_title": "Bot or Not?",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 1,
+        "endpoints_sample": [
+          {
+            "url": "https://www.expedia.co.in/cgp/simple/challenge.hydrated.styles",
+            "status": 204
+          }
+        ],
+        "screenshot": "results/recon/expedia/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.9,
+        "status_code": 429,
+        "page_title": "Bot or Not?",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 1,
+        "endpoints_sample": [
+          {
+            "url": "https://www.expedia.co.in/cgp/simple/challenge.hydrated.styles",
+            "status": 204
+          }
+        ],
+        "screenshot": "results/recon/expedia/run_3_screen.png"
+      }
+    ]
+  },
+  "hotelscom": {
+    "name": "Hotels.com",
+    "category": "Global OTA",
+    "slug": "hotelscom",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.65,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/hotelscom/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.46,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/hotelscom/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.49,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/hotelscom/run_3_screen.png"
+      }
+    ]
+  },
+  "tripcom": {
+    "name": "Trip.com",
+    "category": "Global OTA",
+    "slug": "tripcom",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 9.64,
+        "status_code": 200,
+        "page_title": "Wannian Hotels - Where to stay in Wannian | Trip.com",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 105.0,
+        "endpoints_captured_count": 3,
+        "endpoints_sample": [
+          {
+            "url": "https://in.trip.com/hotels/list?city=1028&checkIn=2026-11-20&checkOut=2026-11-21&crn=1&adult=2",
+            "status": 200
+          },
+          {
+            "url": "https://ak-s-cw.tripcdn.com/NFES/trip-online-search/1794410510301/_next/static/imgs/builds/IBUHotelFrontEnd/trip-online-",
+            "status": 200
+          },
+          {
+            "url": "https://webresource.tripcdn.com/NFES/nfes-iconfont/project-hotel_desktop_trip-0.0.62/hotel_desktop_trip.woff2",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/tripcom/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.18,
+        "status_code": 200,
+        "page_title": "Wannian Hotels - Where to stay in Wannian | Trip.com",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 101.0,
+        "endpoints_captured_count": 4,
+        "endpoints_sample": [
+          {
+            "url": "https://in.trip.com/hotels/list?city=1028&checkIn=2026-12-05&checkOut=2026-12-06&crn=1&adult=2",
+            "status": 200
+          },
+          {
+            "url": "https://ak-s-cw.tripcdn.com/NFES/trip-online-search/1794410510301/_next/static/imgs/builds/IBUHotelFrontEnd/trip-online-",
+            "status": 200
+          },
+          {
+            "url": "https://webresource.tripcdn.com/NFES/nfes-iconfont/project-hotel_desktop_trip-0.0.62/hotel_desktop_trip.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://ak-s-cw.tripcdn.com/NFES/trip-online-search/1794410510301/_next/static/imgs/builds/IBUHotelFrontEnd/trip-online-",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/tripcom/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.55,
+        "status_code": 200,
+        "page_title": "Wannian Hotels - Where to stay in Wannian | Trip.com",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 4,
+        "endpoints_sample": [
+          {
+            "url": "https://in.trip.com/hotels/list?city=1028&checkIn=2026-11-20&checkOut=2026-11-21&crn=1&adult=2",
+            "status": 200
+          },
+          {
+            "url": "https://ak-s-cw.tripcdn.com/NFES/trip-online-search/1794410510301/_next/static/imgs/builds/IBUHotelFrontEnd/trip-online-",
+            "status": 200
+          },
+          {
+            "url": "https://webresource.tripcdn.com/NFES/nfes-iconfont/project-hotel_desktop_trip-0.0.62/hotel_desktop_trip.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://ak-s-cw.tripcdn.com/NFES/trip-online-search/1794410510301/_next/static/imgs/builds/IBUHotelFrontEnd/trip-online-",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/tripcom/run_3_screen.png"
+      }
+    ]
+  },
+  "priceline": {
+    "name": "Priceline",
+    "category": "Global OTA",
+    "slug": "priceline",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.04,
+        "status_code": 403,
+        "page_title": "Access to this page has been denied",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 11,
+        "endpoints_sample": [
+          {
+            "url": "https://www.priceline.com/relax/in/bengaluru/hotels?check-in=20261120&check-out=20261121&rooms=1&adults=2",
+            "status": 403
+          },
+          {
+            "url": "https://www.priceline.com/cdn-cgi/challenge-platform/h/b/jsd/oneshot/f8df4d4a0cd6/0.26105390592403577:1794741017:XDIQIG-",
+            "status": 200
+          },
+          {
+            "url": "https://www.priceline.com/9aTjSd0n/xhr/assets/js/bundle",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/b9e0339f-305f-4e69-b67c-ea7b1507d4a6",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/8741bab1-4c98-4798-8832-3ecdd145c251",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/priceline/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.87,
+        "status_code": 403,
+        "page_title": "Access to this page has been denied",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 11,
+        "endpoints_sample": [
+          {
+            "url": "https://www.priceline.com/relax/in/bengaluru/hotels?check-in=20261205&check-out=20261206&rooms=1&adults=2",
+            "status": 403
+          },
+          {
+            "url": "https://www.priceline.com/cdn-cgi/challenge-platform/h/b/jsd/oneshot/f8df4d4a0cd6/0.26105390592403577:1794741017:XDIQIG-",
+            "status": 200
+          },
+          {
+            "url": "https://www.priceline.com/9aTjSd0n/xhr/assets/js/bundle",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/89b9907d-4b18-4066-b175-31661bbfbb77",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/3e8dde54-a7df-4cd4-9840-b848742e6680",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/priceline/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.67,
+        "status_code": 403,
+        "page_title": "Access to this page has been denied",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 11,
+        "endpoints_sample": [
+          {
+            "url": "https://www.priceline.com/relax/in/bengaluru/hotels?check-in=20261120&check-out=20261121&rooms=1&adults=2",
+            "status": 403
+          },
+          {
+            "url": "https://www.priceline.com/cdn-cgi/challenge-platform/h/b/jsd/oneshot/f8df4d4a0cd6/0.26105390592403577:1794741017:XDIQIG-",
+            "status": 200
+          },
+          {
+            "url": "https://www.priceline.com/9aTjSd0n/xhr/assets/js/bundle",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/9e274109-6fe8-416c-a8e0-d1d6e5dd0e4d",
+            "status": 200
+          },
+          {
+            "url": "blob:https://www.priceline.com/29ad8378-0828-4bc8-a820-2467286d96f2",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/priceline/run_3_screen.png"
+      }
+    ]
+  },
+  "yatra": {
+    "name": "Yatra",
+    "category": "Domestic OTA",
+    "slug": "yatra",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.75,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/yatra/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.7,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/yatra/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.96,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/yatra/run_3_screen.png"
+      }
+    ]
+  },
+  "ixigo": {
+    "name": "ixigo",
+    "category": "Domestic OTA",
+    "slug": "ixigo",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.33,
+        "status_code": 200,
+        "page_title": "Online Hotel Booking | Book Cheap, Budget and Luxury Hotels - ixigo",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.ixigo.com/hotels/search?destination=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.ixigo.com/hotels?destination=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://o494858.ingest.sentry.io/api/4505662429265925/envelope/?sentry_key=325079a6055c89b1071eebead7e3ead5&sentry_versi",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=hotels&identifier=ab-tests&token=config",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=loginSDK&identifier=HOTEL&token=url",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/ixigo/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.4,
+        "status_code": 200,
+        "page_title": "Online Hotel Booking | Book Cheap, Budget and Luxury Hotels - ixigo",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.ixigo.com/hotels/search?destination=Bengaluru&checkin=2026-12-05&checkout=2026-12-06&rooms=1&adults=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.ixigo.com/hotels?destination=Bengaluru&checkin=2026-12-05&checkout=2026-12-06&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://o494858.ingest.sentry.io/api/4505662429265925/envelope/?sentry_key=325079a6055c89b1071eebead7e3ead5&sentry_versi",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=hotels&identifier=ab-tests&token=config",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=loginSDK&identifier=HOTEL&token=url",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/ixigo/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.05,
+        "status_code": 200,
+        "page_title": "Online Hotel Booking | Book Cheap, Budget and Luxury Hotels - ixigo",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.ixigo.com/hotels/search?destination=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.ixigo.com/hotels?destination=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://o494858.ingest.sentry.io/api/4505662429265925/envelope/?sentry_key=325079a6055c89b1071eebead7e3ead5&sentry_versi",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=hotels&identifier=ab-tests&token=config",
+            "status": 200
+          },
+          {
+            "url": "https://www.ixigo.com/action/content?searchFor=cmsContent&page=loginSDK&identifier=HOTEL&token=url",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/ixigo/run_3_screen.png"
+      }
+    ]
+  },
+  "redbus": {
+    "name": "redBus",
+    "category": "Domestic OTA",
+    "slug": "redbus",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.64,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/redbus/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.46,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/redbus/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.56,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": false,
+        "gate": "other",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 0,
+        "endpoints_sample": [],
+        "screenshot": "results/recon/redbus/run_3_screen.png"
+      }
+    ]
+  },
+  "onefinerate": {
+    "name": "OneFineRate",
+    "category": "Domestic OTA",
+    "slug": "onefinerate",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.82,
+        "status_code": 200,
+        "page_title": "OnefineRate- Discover, Compare, Book Hotels Worldwide | OFR",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 25,
+        "endpoints_sample": [
+          {
+            "url": "https://www.onefinerate.com/",
+            "status": 301
+          },
+          {
+            "url": "https://onefinerate.com/",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/47fe1b7cd6e6ed85-s.p.3bh2vc0w-r-ll.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/4b766aa38fdaaae3-s.p.11-gljxdt344a.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/829ba4228c966254-s.p.2mm3nq9i83l-m.woff2",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/onefinerate/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.24,
+        "status_code": 200,
+        "page_title": "OnefineRate- Discover, Compare, Book Hotels Worldwide | OFR",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 25,
+        "endpoints_sample": [
+          {
+            "url": "https://www.onefinerate.com/",
+            "status": 301
+          },
+          {
+            "url": "https://onefinerate.com/",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/47fe1b7cd6e6ed85-s.p.3bh2vc0w-r-ll.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/4b766aa38fdaaae3-s.p.11-gljxdt344a.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/829ba4228c966254-s.p.2mm3nq9i83l-m.woff2",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/onefinerate/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.67,
+        "status_code": 200,
+        "page_title": "OnefineRate- Discover, Compare, Book Hotels Worldwide | OFR",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": 100.0,
+        "endpoints_captured_count": 25,
+        "endpoints_sample": [
+          {
+            "url": "https://www.onefinerate.com/",
+            "status": 301
+          },
+          {
+            "url": "https://onefinerate.com/",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/47fe1b7cd6e6ed85-s.p.3bh2vc0w-r-ll.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/4b766aa38fdaaae3-s.p.11-gljxdt344a.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://onefinerate.com/_next/static/media/829ba4228c966254-s.p.2mm3nq9i83l-m.woff2",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/onefinerate/run_3_screen.png"
+      }
+    ]
+  }
+}

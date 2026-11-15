@@ -1,0 +1,45 @@
+{
+  "container_environment": "Linux Docker (Ubuntu noble, Playwright 1.49.0)",
+  "executed_at": "2026-11-15T12:29:09+05:30",
+  "results": [
+    {
+      "platform": "Cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "status": "PASS",
+      "elapsed_seconds": 20.67,
+      "reached_payment_page": true,
+      "price_final_payable": 11077.0,
+      "fee_lines_sum": 11077.0,
+      "fee_lines_reconciled": true,
+      "max_occupancy": 2,
+      "blocker": null,
+      "verification_level": "checkout"
+    },
+    {
+      "platform": "Booking.com",
+      "hotel_name": "Treebo Tiba",
+      "status": "FAIL",
+      "elapsed_seconds": 4.13,
+      "reached_payment_page": false,
+      "price_final_payable": null,
+      "fee_lines_sum": 0,
+      "fee_lines_reconciled": false,
+      "max_occupancy": 2,
+      "blocker": "captcha",
+      "verification_level": "checkout"
+    },
+    {
+      "platform": "Treebo Hotels",
+      "hotel_name": "Treebo Tiba",
+      "status": "PASS",
+      "elapsed_seconds": 3.98,
+      "reached_payment_page": true,
+      "price_final_payable": 2240.0,
+      "fee_lines_sum": 2240.0,
+      "fee_lines_reconciled": true,
+      "max_occupancy": 2,
+      "blocker": null,
+      "verification_level": "checkout"
+    }
+  ]
+}

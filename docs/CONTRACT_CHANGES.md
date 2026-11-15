@@ -85,6 +85,15 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Why**: Distinguishes listing-level scraped offers (e.g. Agoda pre-challenge search) from verified checkout-level offers; prevents misleading cross-tier or cross-policy price comparisons.
 - **Fixtures updated**: Yes (`fixtures/demo_run.json` updated with `"verification_level": "checkout"` across offers).
 
+### 2026-11-15 - Nikhil
+- **Multi-Platform Passing Cohort Fixtures & Dorm Tier Support**:
+  - Added `"dorm"` tier normalization to `normalize_room_tier` in `api/services/normalize.py` to support hostel/dorm inventory (Hostelworld, Zostel).
+  - Added `fixtures/passing_platforms_offers.json` containing normalized offers across all 10 passing platforms (`Cleartrip`, `Booking.com`, `Treebo Hotels`, `FabHotels`, `StayVista`, `Google Hotels`, `Trip.com`, `Hostelworld`, `OneFineRate`, `Agoda`).
+  - Unit tests in `api/tests/test_cohort_comparison.py` verifying cross-platform cohort comparison and fixture validation.
+- **Why**: Allows ingestion and deterministic cohort comparison across all verified checkout and listing platforms without contract violations.
+- **Fixtures updated**: Yes (`fixtures/passing_platforms_offers.json` created).
+
+
 
 
 

@@ -1,0 +1,1018 @@
+{
+  "oyorooms": {
+    "name": "OYO Rooms",
+    "category": "Brand Chain",
+    "slug": "oyorooms",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 11.36,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore Starting @ \u20b9602 - Upto 82% OFF on 279 Bangalore Hotels",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 128.0,
+        "endpoints_captured_count": 57,
+        "endpoints_sample": [
+          {
+            "url": "https://www.oyorooms.com/hotels-in-bangalore/?checkin=20%2F11%2F2026&checkout=21%2F11%2F2026&rooms=1&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/policy-check?version=1&locale=en",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/wallet?country_iso_a2_code=IN&locale=en",
+            "status": 500
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/cities?fields=id%2Cname%2Cmeta_description%2Cpopular_location%2Ccountry_name%2Cimage_ur",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/measurement/conversion?random=1794745002969&cv=11&tid=G-589V9TZFMV&fst=1794745002969&fmt=8&en=pag",
+            "status": 302
+          }
+        ],
+        "screenshot": "results/recon/oyorooms/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 12.99,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore Starting @ \u20b9662 - Upto 80% OFF on 282 Bangalore Hotels",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 116.0,
+        "endpoints_captured_count": 57,
+        "endpoints_sample": [
+          {
+            "url": "https://www.oyorooms.com/hotels-in-bangalore/?checkin=05%2F12%2F2026&checkout=06%2F12%2F2026&rooms=1&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/policy-check?version=1&locale=en",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/wallet?country_iso_a2_code=IN&locale=en",
+            "status": 500
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/cities?fields=id%2Cname%2Cmeta_description%2Cpopular_location%2Ccountry_name%2Cimage_ur",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/measurement/conversion?random=1794745015005&cv=11&tid=G-589V9TZFMV&fst=1794745015005&fmt=8&en=Eco",
+            "status": 302
+          }
+        ],
+        "screenshot": "results/recon/oyorooms/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 9.21,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore Starting @ \u20b9602 - Upto 82% OFF on 279 Bangalore Hotels",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 128.0,
+        "endpoints_captured_count": 56,
+        "endpoints_sample": [
+          {
+            "url": "https://www.oyorooms.com/hotels-in-bangalore/?checkin=20%2F11%2F2026&checkout=21%2F11%2F2026&rooms=1&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/policy-check?version=1&locale=en",
+            "status": 200
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/wallet?country_iso_a2_code=IN&locale=en",
+            "status": 500
+          },
+          {
+            "url": "https://www.oyorooms.com/api/pwa/cities?fields=id%2Cname%2Cmeta_description%2Cpopular_location%2Ccountry_name%2Cimage_ur",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/measurement/conversion?random=1794745025150&cv=11&tid=G-589V9TZFMV&fst=1794745025150&fmt=8&en=Eco",
+            "status": 302
+          }
+        ],
+        "screenshot": "results/recon/oyorooms/run_3_screen.png"
+      }
+    ]
+  },
+  "treebo": {
+    "name": "Treebo Hotels",
+    "category": "Brand Chain",
+    "slug": "treebo",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.93,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore | Book the Best Bangalore Hotels from \u20b91199",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1199.0,
+        "endpoints_captured_count": 47,
+        "endpoints_sample": [
+          {
+            "url": "https://www.treebo.com/hotels-in-bangalore/?checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/?key=login_interrupt_banner",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/reward/balance/?channel=website",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/landing-page/?keys=promises%2Cbrand_video%2Cpress_release%2Cinitiatives%2Coffers%",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v2/contents/?keys=gdc_customer_care_numbers",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/treebo/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.38,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore | Book the Best Bangalore Hotels from \u20b91199",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1199.0,
+        "endpoints_captured_count": 46,
+        "endpoints_sample": [
+          {
+            "url": "https://www.treebo.com/hotels-in-bangalore/?checkin=2026-12-05&checkout=2026-12-06&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/?key=login_interrupt_banner",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v2/contents/?keys=gdc_customer_care_numbers",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/reward/balance/?channel=website",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/landing-page/?keys=promises%2Cbrand_video%2Cpress_release%2Cinitiatives%2Coffers%",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/treebo/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.17,
+        "status_code": 200,
+        "page_title": "Hotels in Bangalore | Book the Best Bangalore Hotels from \u20b91199",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1199.0,
+        "endpoints_captured_count": 47,
+        "endpoints_sample": [
+          {
+            "url": "https://www.treebo.com/hotels-in-bangalore/?checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/?key=login_interrupt_banner",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/reward/balance/?channel=website",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v2/contents/?keys=gdc_customer_care_numbers",
+            "status": 200
+          },
+          {
+            "url": "https://www.treebo.com/api/v1/contents/landing-page/?keys=promises%2Cbrand_video%2Cpress_release%2Cinitiatives%2Coffers%",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/treebo/run_3_screen.png"
+      }
+    ]
+  },
+  "fabhotels": {
+    "name": "FabHotels",
+    "category": "Brand Chain",
+    "slug": "fabhotels",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.28,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1399.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.fabhotels.com/hotels-in-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/46bdd75a3ff56824-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://www.fabhotels.com//consumer/v1/web/search/cities",
+            "status": 200
+          },
+          {
+            "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs0ZeWCt2QVOIzMB86tvfbZ3seJkmS9so&v=weekly&callback=initMap",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/fabhotels/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.49,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1399.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.fabhotels.com/hotels-in-bangalore.html?checkin=2026-12-05&checkout=2026-12-06&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/46bdd75a3ff56824-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://www.fabhotels.com//consumer/v1/web/search/cities",
+            "status": 200
+          },
+          {
+            "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs0ZeWCt2QVOIzMB86tvfbZ3seJkmS9so&v=weekly&callback=initMap",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/fabhotels/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.13,
+        "status_code": 200,
+        "page_title": "",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 1399.0,
+        "endpoints_captured_count": 16,
+        "endpoints_sample": [
+          {
+            "url": "https://www.fabhotels.com/hotels-in-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&rooms=1&adults=2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/e4af272ccee01ff0-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://static.fabhotels.com/consumer-assets/web/_next/static/media/46bdd75a3ff56824-s.p.woff2",
+            "status": 200
+          },
+          {
+            "url": "https://www.fabhotels.com//consumer/v1/web/search/cities",
+            "status": 200
+          },
+          {
+            "url": "https://maps.googleapis.com/maps/api/js?key=AIzaSyDs0ZeWCt2QVOIzMB86tvfbZ3seJkmS9so&v=weekly&callback=initMap",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/fabhotels/run_3_screen.png"
+      }
+    ]
+  },
+  "airbnb": {
+    "name": "Airbnb",
+    "category": "Homestays / Hostels",
+    "slug": "airbnb",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 8.47,
+        "status_code": 200,
+        "page_title": "Airbnb | Bengaluru \u2013 Holiday Rentals & Places to Stay - Karnataka",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 338.0,
+        "endpoints_captured_count": 19,
+        "endpoints_sample": [
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/house-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/consierge-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/balloon-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v2/get-data-layer-variables?locale=en-IN&currency=INR",
+            "status": 200
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v3/NaviServerAnnouncementsQuery/d42b771c8526e901cc32970b3fb59421f8629a48b88e9eeb84941c2ec9d",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/airbnb/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.93,
+        "status_code": 200,
+        "page_title": "Airbnb | Bengaluru \u2013 Holiday Rentals & Places to Stay - Karnataka",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 940.0,
+        "endpoints_captured_count": 15,
+        "endpoints_sample": [
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/consierge-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/balloon-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/house-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v2/get-data-layer-variables?locale=en-IN&currency=INR",
+            "status": 200
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v3/NaviServerAnnouncementsQuery/d42b771c8526e901cc32970b3fb59421f8629a48b88e9eeb84941c2ec9d",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/airbnb/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.47,
+        "status_code": 200,
+        "page_title": "Airbnb | Bengaluru \u2013 Holiday Rentals & Places to Stay - Karnataka",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 940.0,
+        "endpoints_captured_count": 15,
+        "endpoints_sample": [
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/consierge-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/balloon-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://a0.muscache.com/videos/search-bar-icons/webm/house-selected.webm",
+            "status": 206
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v2/get-data-layer-variables?locale=en-IN&currency=INR",
+            "status": 200
+          },
+          {
+            "url": "https://www.airbnb.co.in/api/v3/NaviServerAnnouncementsQuery/d42b771c8526e901cc32970b3fb59421f8629a48b88e9eeb84941c2ec9d",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/airbnb/run_3_screen.png"
+      }
+    ]
+  },
+  "saffronstays": {
+    "name": "SaffronStays",
+    "category": "Homestays / Hostels",
+    "slug": "saffronstays",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.19,
+        "status_code": 200,
+        "page_title": "Luxury Villas & Estates for Rent | SaffronStays",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 33,
+        "endpoints_sample": [
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://go.saffronstays.com/api/website-nav",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/saffronstays/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.06,
+        "status_code": 200,
+        "page_title": "Luxury Villas & Estates for Rent | SaffronStays",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 23,
+        "endpoints_sample": [
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-12-05&checkOut=2026-12-06&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-12-05&checkOut=2026-12-06&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-12-05&checkOut=2026-12-06&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://go.saffronstays.com/api/website-nav",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-12-05&checkOut=2026-12-06&guests=2&amenities=&events",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/saffronstays/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.61,
+        "status_code": 200,
+        "page_title": "Luxury Villas & Estates for Rent | SaffronStays",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 28,
+        "endpoints_sample": [
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          },
+          {
+            "url": "https://go.saffronstays.com/api/website-nav",
+            "status": 200
+          },
+          {
+            "url": "https://www.saffronstays.com/search?location=Bangalore&checkIn=2026-11-20&checkOut=2026-11-21&guests=2&amenities=&events",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/saffronstays/run_3_screen.png"
+      }
+    ]
+  },
+  "stayvista": {
+    "name": "StayVista",
+    "category": "Homestays / Hostels",
+    "slug": "stayvista",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.72,
+        "status_code": 200,
+        "page_title": "\ud835\uddd5\ud835\uddfc\ud835\uddfc\ud835\uddf8 \ud835\udde9\ud835\uddf6\ud835\uddf9\ud835\uddf9\ud835\uddee\ud835\ude00 \ud835\udddc\ud835\uddfb \ud835\uddd5\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf9\ud835\uddfc\ud835\uddff\ud835\uddf2 | Villas With Modern Amenities for Your Stay.",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 230.0,
+        "endpoints_captured_count": 31,
+        "endpoints_sample": [
+          {
+            "url": "https://www.stayvista.com/villas/bangalore?checkin=2026-11-20&checkout=2026-11-21&adults=2",
+            "status": 307
+          },
+          {
+            "url": "https://www.stayvista.com/karnataka/villas-in-bangalore",
+            "status": 200
+          },
+          {
+            "url": "https://v3api.stayvista.com/api/navigation-links",
+            "status": 200
+          },
+          {
+            "url": "https://www.stayvista.com/api/country/details",
+            "status": 200
+          },
+          {
+            "url": "https://prod-searchapi.vistarooms.com/api/search/filters",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/stayvista/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.2,
+        "status_code": 200,
+        "page_title": "\ud835\uddd5\ud835\uddfc\ud835\uddfc\ud835\uddf8 \ud835\udde9\ud835\uddf6\ud835\uddf9\ud835\uddf9\ud835\uddee\ud835\ude00 \ud835\udddc\ud835\uddfb \ud835\uddd5\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf9\ud835\uddfc\ud835\uddff\ud835\uddf2 | Villas With Modern Amenities for Your Stay.",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 230.0,
+        "endpoints_captured_count": 31,
+        "endpoints_sample": [
+          {
+            "url": "https://www.stayvista.com/villas/bangalore?checkin=2026-12-05&checkout=2026-12-06&adults=2",
+            "status": 307
+          },
+          {
+            "url": "https://www.stayvista.com/karnataka/villas-in-bangalore",
+            "status": 200
+          },
+          {
+            "url": "https://v3api.stayvista.com/api/navigation-links",
+            "status": 200
+          },
+          {
+            "url": "https://prod-searchapi.vistarooms.com/api/search/filters",
+            "status": 200
+          },
+          {
+            "url": "https://prod-searchapi.vistarooms.com/api/search/properties",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/stayvista/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 9.02,
+        "status_code": 200,
+        "page_title": "\ud835\uddd5\ud835\uddfc\ud835\uddfc\ud835\uddf8 \ud835\udde9\ud835\uddf6\ud835\uddf9\ud835\uddf9\ud835\uddee\ud835\ude00 \ud835\udddc\ud835\uddfb \ud835\uddd5\ud835\uddee\ud835\uddfb\ud835\uddf4\ud835\uddee\ud835\uddf9\ud835\uddfc\ud835\uddff\ud835\uddf2 | Villas With Modern Amenities for Your Stay.",
+        "reached_review_page": true,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": 230.0,
+        "endpoints_captured_count": 31,
+        "endpoints_sample": [
+          {
+            "url": "https://www.stayvista.com/villas/bangalore?checkin=2026-11-20&checkout=2026-11-21&adults=2",
+            "status": 307
+          },
+          {
+            "url": "https://www.stayvista.com/karnataka/villas-in-bangalore",
+            "status": 200
+          },
+          {
+            "url": "https://v3api.stayvista.com/api/navigation-links",
+            "status": 200
+          },
+          {
+            "url": "https://prod-searchapi.vistarooms.com/api/search/filters",
+            "status": 200
+          },
+          {
+            "url": "https://prod-searchapi.vistarooms.com/api/search/properties",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/stayvista/run_3_screen.png"
+      }
+    ]
+  },
+  "hostelworld": {
+    "name": "Hostelworld",
+    "category": "Homestays / Hostels",
+    "slug": "hostelworld",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 9.4,
+        "status_code": 200,
+        "page_title": "Best Hostels in Bangalore from \u20ac3.05 | 2026",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 28,
+        "endpoints_sample": [
+          {
+            "url": "https://www.hostelworld.com/st/hostels/asia/india/bangalore/?dateFrom=2026-11-20&dateTo=2026-11-21&number_of_guests=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.hostelworld.com/hostels/asia/india/bangalore/?dateFrom=2026-11-20&dateTo=2026-11-21&number_of_guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://consent.trustarc.com/notice?domain=hostelworld.com&c=teconsent&gtm=1&js=nj&noticeType=bb&language=en&language=tr",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/rmkt/collect/1062231302/?random=1794745139867&cv=11&fst=1794745139867&fmt=8&bg=ffffff&guid=ON&asy",
+            "status": 200
+          },
+          {
+            "url": "https://www.googleadservices.com/ccm/conversion/1062231302/?random=1794745139931&cv=11&fst=1794745139931&fmt=8&bg=ffffff",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/hostelworld/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 8.51,
+        "status_code": 200,
+        "page_title": "Best Hostels in Bangalore from \u20ac3.05 | 2026",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 27,
+        "endpoints_sample": [
+          {
+            "url": "https://www.hostelworld.com/st/hostels/asia/india/bangalore/?dateFrom=2026-12-05&dateTo=2026-12-06&number_of_guests=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.hostelworld.com/hostels/asia/india/bangalore/?dateFrom=2026-12-05&dateTo=2026-12-06&number_of_guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://consent.trustarc.com/notice?domain=hostelworld.com&c=teconsent&gtm=1&js=nj&noticeType=bb&language=en&language=tr",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/ccm/collect?rcb=14&frm=0&apvc=1&ae=g&auid=2121641172.1794745149&dt=Best%20Hostels%20in%20Bangalor",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/rmkt/collect/596639365/?random=1794745149551&cv=11&fst=1794745149551&fmt=8&bg=ffffff&guid=ON&asyn",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/hostelworld/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 8.56,
+        "status_code": 200,
+        "page_title": "Best Hostels in Bangalore from \u20ac3.05 | 2026",
+        "reached_review_page": false,
+        "gate": "none",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meal": true
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 28,
+        "endpoints_sample": [
+          {
+            "url": "https://www.hostelworld.com/st/hostels/asia/india/bangalore/?dateFrom=2026-11-20&dateTo=2026-11-21&number_of_guests=2",
+            "status": 301
+          },
+          {
+            "url": "https://www.hostelworld.com/hostels/asia/india/bangalore/?dateFrom=2026-11-20&dateTo=2026-11-21&number_of_guests=2",
+            "status": 200
+          },
+          {
+            "url": "https://consent.trustarc.com/notice?domain=hostelworld.com&c=teconsent&gtm=1&js=nj&noticeType=bb&language=en&language=tr",
+            "status": 200
+          },
+          {
+            "url": "https://www.google.com/ccm/collect?rcb=18&frm=0&apvc=1&ae=g&auid=487398610.1794745158&dt=Best%20Hostels%20in%20Bangalore",
+            "status": 200
+          },
+          {
+            "url": "https://o1047055.ingest.sentry.io/api/4506502916014080/envelope/?sentry_version=7&sentry_key=16050649d85f0a6af342ff29b78",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/hostelworld/run_3_screen.png"
+      }
+    ]
+  },
+  "zostel": {
+    "name": "Zostel",
+    "category": "Homestays / Hostels",
+    "slug": "zostel",
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.35,
+        "status_code": 404,
+        "page_title": "Page Not Found | Zostel",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 14,
+        "endpoints_sample": [
+          {
+            "url": "https://api.zostel.com/api/v1/stay/destinations/?fields=name,slug,region",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/operators/?operating_model=F&fields=name,slug,type_code,destination",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v2/payment/exchange/currencies/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/auth/anon-login/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/destinations/?fields=name,slug,region",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/zostel/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.16,
+        "status_code": 404,
+        "page_title": "Page Not Found | Zostel",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 18,
+        "endpoints_sample": [
+          {
+            "url": "https://api.zostel.com/api/v2/payment/exchange/currencies/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/destinations/?fields=name,slug,region",
+            "status": 200
+          },
+          {
+            "url": "https://api.io.zo.xyz/api/v1/zoworld/seed/",
+            "status": 200
+          },
+          {
+            "url": "https://api.io.zo.xyz/api/v1/discover/featured-tags/trips/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/operators/?operating_model=F&fields=name,slug,type_code,destination",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/zostel/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 6.38,
+        "status_code": 404,
+        "page_title": "Page Not Found | Zostel",
+        "reached_review_page": false,
+        "gate": "captcha",
+        "fields_found": {
+          "rate": true,
+          "occupancy": true,
+          "cancellation": false,
+          "meal": false
+        },
+        "sample_price": null,
+        "endpoints_captured_count": 17,
+        "endpoints_sample": [
+          {
+            "url": "https://api.zostel.com/api/v2/payment/exchange/currencies/",
+            "status": 200
+          },
+          {
+            "url": "https://api.io.zo.xyz/api/v1/zoworld/seed/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/destinations/?fields=name,slug,region",
+            "status": 200
+          },
+          {
+            "url": "https://api.io.zo.xyz/api/v1/discover/featured-tags/trips/",
+            "status": 200
+          },
+          {
+            "url": "https://api.zostel.com/api/v1/stay/operators/?operating_model=F&fields=name,slug,type_code,destination",
+            "status": 200
+          }
+        ],
+        "screenshot": "results/recon/zostel/run_3_screen.png"
+      }
+    ]
+  }
+}

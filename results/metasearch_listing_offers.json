@@ -1,0 +1,100 @@
+[
+  {
+    "offer_id": "off_googlehotels_hyatt_centric",
+    "hotel_id": "h_hyatt_centric_blr",
+    "run_id": "run_googlehotels_001",
+    "started_at": "2026-11-15T17:57:51.382098+05:30",
+    "finished_at": "2026-11-15T17:57:51.382098+05:30",
+    "steps": 1,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "Google Hotels",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Hyatt Centric MG Road Bangalore",
+    "hotel_url": "https://www.google.com/travel/hotels/Bengaluru",
+    "room_type": "Standard 1 King Bed",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation available via partners",
+    "price_shown_on_listing": 12036.0,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 12036.0,
+        "timestamp": "2026-11-15T17:57:51.382098+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level rate aggregated across partners (Agoda, Booking.com, Hyatt direct)",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/googlehotels/run_1_screen.png",
+        "captured_at": "2026-11-15T17:57:51.382098+05:30",
+        "sha256": "recon_googlehotels_run1",
+        "step": "listing"
+      }
+    ],
+    "mock": false,
+    "verification_level": "listing"
+  },
+  {
+    "offer_id": "off_googlehotels_suite_rooms",
+    "hotel_id": "h_suite_rooms_bellandhuru",
+    "run_id": "run_googlehotels_002",
+    "started_at": "2026-11-15T17:57:51.382098+05:30",
+    "finished_at": "2026-11-15T17:57:51.382098+05:30",
+    "steps": 1,
+    "cost_usd": 0.0,
+    "status": "unverified",
+    "reconciliation": null,
+    "cancellation_category": "free",
+    "site": "Google Hotels",
+    "reached_payment_page": false,
+    "furthest_step": "listing",
+    "blocker": null,
+    "hotel_name": "Suite Rooms Bellandhuru",
+    "hotel_url": "https://www.google.com/travel/hotels/Bengaluru",
+    "room_type": "Villa / Suite",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation available",
+    "price_shown_on_listing": 1575.0,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 1575.0,
+        "timestamp": "2026-11-15T17:57:51.382098+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Listing-level rate aggregated on Google Hotels",
+    "fee_leak_pct": null,
+    "evidence": [
+      {
+        "type": "screenshot",
+        "url": "results/recon/googlehotels/run_1_screen.png",
+        "captured_at": "2026-11-15T17:57:51.382098+05:30",
+        "sha256": "recon_googlehotels_run1",
+        "step": "listing"
+      }
+    ],
+    "mock": false,
+    "verification_level": "listing"
+  }
+]

@@ -39,6 +39,8 @@ def normalize_room_tier(room_type: Optional[str]) -> str:
         return "deluxe"
     elif any(k in rt for k in ["villa", "cottage"]):
         return "villa"
+    elif any(k in rt for k in ["dorm", "bed in", "hostel", "bunk"]):
+        return "dorm"
     return "standard"
 
 

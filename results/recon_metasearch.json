@@ -1,0 +1,307 @@
+{
+  "googlehotels": {
+    "name": "Google Hotels",
+    "slug": "googlehotels",
+    "consecutive_searches_passed": 3,
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.87,
+        "status_code": 200,
+        "page_title": "Search for accommodations in Bengaluru - Google hotels",
+        "gate": "none",
+        "sample_price": 597.0,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 11,
+        "screenshot": "results/recon/googlehotels/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 8.44,
+        "status_code": 200,
+        "page_title": "Search for accommodations in Bengaluru - Google hotels",
+        "gate": "none",
+        "sample_price": 500.0,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 9,
+        "screenshot": "results/recon/googlehotels/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.91,
+        "status_code": 200,
+        "page_title": "Search for accommodations in Bengaluru - Google hotels",
+        "gate": "none",
+        "sample_price": 510.0,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 11,
+        "screenshot": "results/recon/googlehotels/run_3_screen.png"
+      }
+    ]
+  },
+  "trivago": {
+    "name": "Trivago",
+    "slug": "trivago",
+    "consecutive_searches_passed": 0,
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.61,
+        "status_code": 403,
+        "page_title": "Access Denied",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/trivago/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.57,
+        "status_code": 403,
+        "page_title": "Access Denied",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/trivago/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.57,
+        "status_code": 403,
+        "page_title": "Access Denied",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/trivago/run_3_screen.png"
+      }
+    ]
+  },
+  "skyscanner": {
+    "name": "Skyscanner",
+    "slug": "skyscanner",
+    "consecutive_searches_passed": 0,
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.78,
+        "status_code": 200,
+        "page_title": "Skyscanner",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/skyscanner/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 5.84,
+        "status_code": 200,
+        "page_title": "Skyscanner",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/skyscanner/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.92,
+        "status_code": 200,
+        "page_title": "Skyscanner",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 1,
+        "screenshot": "results/recon/skyscanner/run_3_screen.png"
+      }
+    ]
+  },
+  "tripadvisor": {
+    "name": "Tripadvisor",
+    "slug": "tripadvisor",
+    "consecutive_searches_passed": 0,
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.99,
+        "status_code": 403,
+        "page_title": "tripadvisor.in",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 0,
+        "screenshot": "results/recon/tripadvisor/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 6.39,
+        "status_code": 403,
+        "page_title": "tripadvisor.in",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 0,
+        "screenshot": "results/recon/tripadvisor/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 5.83,
+        "status_code": 403,
+        "page_title": "tripadvisor.in",
+        "gate": "captcha",
+        "sample_price": null,
+        "exposes": {
+          "price_incl_taxes": false,
+          "occupancy": false,
+          "cancellation": false,
+          "meals": false,
+          "partner_deeplinks": false
+        },
+        "endpoints_count": 0,
+        "screenshot": "results/recon/tripadvisor/run_3_screen.png"
+      }
+    ]
+  },
+  "kayak": {
+    "name": "Kayak",
+    "slug": "kayak",
+    "consecutive_searches_passed": 0,
+    "runs": [
+      {
+        "run_index": 1,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 7.28,
+        "status_code": 200,
+        "page_title": "Bir\u017cebbu\u0121a, Malta, 20/11 \u2013 21/11",
+        "gate": "captcha",
+        "sample_price": 15000.0,
+        "exposes": {
+          "price_incl_taxes": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 58,
+        "screenshot": "results/recon/kayak/run_1_screen.png"
+      },
+      {
+        "run_index": 2,
+        "stay_dates": "2026-12-05 to 2026-12-06",
+        "elapsed_seconds": 7.49,
+        "status_code": 200,
+        "page_title": "Bir\u017cebbu\u0121a, Malta, 5/12 \u2013 6/12",
+        "gate": "captcha",
+        "sample_price": 15000.0,
+        "exposes": {
+          "price_incl_taxes": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 59,
+        "screenshot": "results/recon/kayak/run_2_screen.png"
+      },
+      {
+        "run_index": 3,
+        "stay_dates": "2026-11-20 to 2026-11-21",
+        "elapsed_seconds": 8.05,
+        "status_code": 200,
+        "page_title": "Bir\u017cebbu\u0121a, Malta, 20/11 \u2013 21/11",
+        "gate": "captcha",
+        "sample_price": 15000.0,
+        "exposes": {
+          "price_incl_taxes": true,
+          "occupancy": true,
+          "cancellation": true,
+          "meals": true,
+          "partner_deeplinks": true
+        },
+        "endpoints_count": 59,
+        "screenshot": "results/recon/kayak/run_3_screen.png"
+      }
+    ]
+  }
+}
