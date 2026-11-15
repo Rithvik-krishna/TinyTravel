@@ -196,12 +196,30 @@ def transparency_score(offer: dict, recheck: Optional[dict] = None) -> dict:
     }
 
 
+def validate_no_cross_level_ranking(offers: list[dict]) -> None:
+    """Enforce invariant: no ranking across verification levels.
+    
+    Raises ValueError if offers to be ranked contain mixed verification_level values.
+    Indicative listing offers (e.g. Google Hotels) must never be ranked alongside checkout-verified offers.
+    """
+    levels = {o.get("verification_level", "checkout") for o in offers if o.get("verification_level")}
+    if len(levels) > 1:
+        raise ValueError(
+            f"Cross-verification-level ranking violation: cannot rank across mixed levels {levels}. "
+            f"Indicative listing offers (e.g. Google Hotels) must never be ranked alongside checkout-verified offers."
+        )
+
+
 def rank_offers(
     offers: list[dict],
     hotels: Union[list[dict], dict],
     deal_mode: str = "best_value",
+    verification_level: Optional[str] = "checkout",
 ) -> list[dict]:
     """Rank VERIFIED offers according to deal mode weights.
+    
+    Enforces invariant: No ranking across verification levels.
+    Listing offers (e.g. Google Hotels) are indicative-only and cannot be ranked alongside checkout offers.
     
     Components (each 0-100):
     - price: 100 * min_payable / payable across verified offers
@@ -217,9 +235,23 @@ def rank_offers(
     
     total = round(sum(c * w) / sum(w present), 1), sorted descending.
     """
+    # Check for cross-level ranking violation among candidate offers with prices
+    eval_levels = {
+        o.get("verification_level", "checkout")
+        for o in offers
+        if o.get("price_final_payable") is not None or o.get("price_shown_on_listing") is not None
+    }
+    if len(eval_levels) > 1:
+        raise ValueError(
+            f"Cross-level ranking violation: cannot rank across mixed verification levels {eval_levels}. "
+            f"Indicative listing offers (e.g. Google Hotels) must never be ranked alongside checkout-verified offers."
+        )
+
+    target_level = verification_level or "checkout"
     currencies = [
         o.get("currency", "INR") for o in offers
         if o.get("status") == "verified" and o.get("price_final_payable") is not None
+        and o.get("verification_level", "checkout") == target_level
     ]
     dominant_currency = Counter(currencies).most_common(1)[0][0] if currencies else "INR"
 
@@ -228,6 +260,7 @@ def rank_offers(
         if o.get("status") == "verified"
         and o.get("price_final_payable") is not None
         and o.get("currency", "INR") == dominant_currency
+        and o.get("verification_level", "checkout") == target_level
     ]
     if not verified_offers:
         return []

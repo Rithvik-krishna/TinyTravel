@@ -139,39 +139,49 @@ async def run_treebo_playbook(
                 "timestamp": datetime.now(IST).isoformat(),
             })
 
-            # Treebo 12% GST calculation on budget category
-            base_fare = round(rate_amount, 2)
-            taxes = round(base_fare * 0.12, 2)
-            total_payable = round(base_fare + taxes, 2)
+            # Check if login overlay or OTP prompt is present
+            if any(k in html for k in ["sign in", "login", "enter mobile", "send otp", "treebo club membership"]):
+                result["blocker"] = "login"
+                result["reached_payment_page"] = False
+                result["furthest_step"] = "listing"
+                result["price_final_payable"] = None
+                result["notes"] = "Treebo requires user login / mobile OTP to proceed to checkout; guest checkout without login is not supported."
+                scr_path = evidence_dir / f"treebo_login_gate_{int(t0.timestamp())}.png"
+                await page.screenshot(path=str(scr_path))
+                await browser.close()
+                return to_probe_result_dict(result)
 
-            result["furthest_step"] = "payment"
-            result["reached_payment_page"] = True
-            result["price_final_payable"] = total_payable
-            result["cheapest_any_payable"] = total_payable
+            # Look for Book / Select room button
+            book_btn = page.locator("button:has-text('Book Now'), button:has-text('Select Room'), button:has-text('Book')").first
+            if not await book_btn.is_visible():
+                result["blocker"] = "layout"
+                result["reached_payment_page"] = False
+                result["furthest_step"] = "listing"
+                result["price_final_payable"] = None
+                result["notes"] = "No guest checkout Book button available on Treebo hotel page."
+                scr_path = evidence_dir / f"treebo_layout_{int(t0.timestamp())}.png"
+                await page.screenshot(path=str(scr_path))
+                await browser.close()
+                return to_probe_result_dict(result)
 
-            result["fee_lines"] = [
-                {
-                    "label": "Base room rate",
-                    "amount": base_fare,
-                    "fee_kind": "other",
-                },
-                {
-                    "label": "Taxes & service fee (GST)",
-                    "amount": taxes,
-                    "fee_kind": "tax",
-                },
-            ]
+            await book_btn.click()
+            await asyncio.sleep(3.0)
 
-            result["price_trail"].append({
-                "step": "payment",
-                "price_shown": total_payable,
-                "timestamp": datetime.now(IST).isoformat(),
-            })
+            # Check if modal opens demanding login
+            post_html = (await page.content()).lower()
+            if any(k in post_html for k in ["otp", "login", "sign in", "mobile number"]):
+                result["blocker"] = "login"
+                result["reached_payment_page"] = False
+                result["furthest_step"] = "room_selection"
+                result["price_final_payable"] = None
+                result["notes"] = "Treebo requires mobile number / OTP login upon clicking Book; guest checkout halted."
+                scr_path = evidence_dir / f"treebo_otp_gate_{int(t0.timestamp())}.png"
+                await page.screenshot(path=str(scr_path))
+                await browser.close()
+                return to_probe_result_dict(result)
 
             scr_path = evidence_dir / f"treebo_payment_{int(t0.timestamp())}.png"
             await page.screenshot(path=str(scr_path))
-            result["payment_page_text"] = f"Treebo guest review reached for {hotel_name}. Total payable: INR {total_payable}"
-
             await browser.close()
     except Exception as e:
         logger.error("Treebo playbook failed: %s", e)

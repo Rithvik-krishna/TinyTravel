@@ -264,3 +264,107 @@ def test_saved_recon_results_exist():
     docker_data = json.loads(docker_path.read_text(encoding="utf-8"))
     assert len(docker_data["results"]) >= 3
 
+
+def test_la_marvella_saved_breakdown_and_payable():
+    """Verify La Marvella breakdown from saved payment review page.
+    Assures that Rs 15,639 is the undiscounted rack price, while final payable is Rs 11,604.
+    """
+    html_path = Path("results/recon/cleartrip/la_marvella_payment_page.html")
+    assert html_path.exists()
+    html = html_path.read_text(encoding="utf-8")
+
+    # 1. Total element extraction
+    import re
+    m_tot = re.search(r'>Total</h4>\s*<h2[^>]*>₹\s*([0-9,]+)', html)
+    assert m_tot is not None
+    payable = float(m_tot.group(1).replace(",", ""))
+    assert payable == 11604.0  # Final amount on payment page, NOT 15639.0
+
+    # 2. Line items extraction
+    pairs = re.findall(r'flex-between[^>]*><p[^>]*>([^<]+)</p><p[^>]*>(-?₹\s*[0-9,]+)</p>', html)
+    allowed = ['1 room x 1 night', 'hotel taxes', 'property discount', 'convenience fee', 'coupon discount']
+    fee_lines = {}
+    for lbl, amt_str in pairs:
+        clean_lbl = lbl.strip()
+        amt = float(amt_str.replace("₹", "").replace(",", ""))
+        if 'penalty' not in clean_lbl.lower() and 'cancellation' not in clean_lbl.lower():
+            if any(k in clean_lbl.lower() for k in allowed):
+                fee_lines[clean_lbl] = amt
+
+    # Check key figures
+    assert fee_lines.get("1 room x 1 night") == 15639.0  # Raw room rate before discounts
+    assert fee_lines.get("Property discount") == -4692.0
+    assert fee_lines.get("Hotel taxes") == 1971.0
+    assert fee_lines.get("Convenience fee") == 1095.0
+    assert fee_lines.get("Coupon discount (CTHOTEL)") == -2408.0
+
+    # Reconciliation
+    lines_sum = sum(fee_lines.values())
+    assert abs(lines_sum - payable) <= 1.0  # 11605 vs 11604
+
+
+def test_cleartrip_dates_variability():
+    """Verify Cleartrip date test results on same hotel across 3 dates."""
+    dates_path = Path("results/cleartrip_dates_test.json")
+    assert dates_path.exists()
+    runs = json.loads(dates_path.read_text(encoding="utf-8"))
+    assert len(runs) == 3
+
+    p1 = runs[0]["max_price"]
+    p2 = runs[1]["max_price"]
+    p3 = runs[2]["max_price"]
+
+    # Verify prices vary
+    assert p1 != p2
+    assert p2 != p3
+    assert p1 == 10610.0
+    assert p2 == 12418.0
+    assert p3 == 18831.0
+
+    # Verify screenshots exist
+    for r in runs:
+        assert Path(r["screenshot"]).exists()
+
+
+def test_no_ranking_across_verification_levels():
+    """Enforce invariant: Google Hotels is indicative-only and ranking across verification levels is rejected."""
+    from api.services.scoring import validate_no_cross_level_ranking, rank_offers
+
+    checkout_offer = {
+        "offer_id": "off_ct",
+        "hotel_id": "h1",
+        "site": "Cleartrip",
+        "status": "verified",
+        "price_final_payable": 11077.0,
+        "currency": "INR",
+        "verification_level": "checkout",
+        "meal_plan": "Room Only",
+        "cancellation_category": "free",
+    }
+    listing_offer = {
+        "offer_id": "off_gh",
+        "hotel_id": "h1",
+        "site": "Google Hotels",
+        "status": "unverified",
+        "price_shown_on_listing": 10500.0,
+        "price_final_payable": None,
+        "currency": "INR",
+        "verification_level": "listing",
+        "meal_plan": "Room Only",
+        "cancellation_category": "free",
+        "notes": "Indicative only",
+    }
+
+    # Attempting to validate or rank mixed levels must raise ValueError
+    with pytest.raises(ValueError, match="Cross-.*ranking violation"):
+        validate_no_cross_level_ranking([checkout_offer, listing_offer])
+
+    with pytest.raises(ValueError, match="Cross-level ranking violation"):
+        rank_offers([checkout_offer, listing_offer], {})
+
+    # Ranking checkout-only offers succeeds
+    ranked = rank_offers([checkout_offer], {})
+    assert len(ranked) == 1
+    assert ranked[0]["offer_id"] == "off_ct"
+
+

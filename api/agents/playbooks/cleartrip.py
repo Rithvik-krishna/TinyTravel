@@ -391,35 +391,85 @@ async def run_cleartrip_playbook(
             reached_payment = "itinerary" in itin_page.url
 
             # Extract exact breakdown from payment review page
-            breakdown_numbers = await itin_page.evaluate("""() => {
-                const nums = [];
-                document.querySelectorAll('div, tr, p, span, h2, h3, h4').forEach(el => {
-                    const txt = el.innerText || '';
-                    if (txt.includes('₹') && txt.length < 50 && !txt.includes('\\n')) {
-                        const m = txt.match(/₹\\s*([0-9,]+(?:\\.[0-9]+)?)/);
-                        if (m) {
-                            nums.push(parseFloat(m[1].replace(/,/g, '')));
+            breakdown_data = await itin_page.evaluate("""() => {
+                let explicitTotal = null;
+                document.querySelectorAll('h1, h2, h3, h4, p, span, div').forEach(el => {
+                    const t = (el.innerText || '').trim();
+                    if (t === 'Total' || t === 'Total amount') {
+                        const next = el.nextElementSibling;
+                        if (next && next.innerText && next.innerText.includes('₹')) {
+                            const m = next.innerText.match(/₹\\s*([0-9,]+(?:\\.[0-9]+)?)/);
+                            if (m) explicitTotal = parseFloat(m[1].replace(/,/g, ''));
+                        }
+                        if (!explicitTotal && el.parentElement) {
+                            const pText = el.parentElement.innerText || '';
+                            const m2 = pText.match(/Total(?:\\s+amount)?[^₹]{0,50}₹\\s*([0-9,]+(?:\\.[0-9]+)?)/i);
+                            if (m2) explicitTotal = parseFloat(m2[1].replace(/,/g, ''));
                         }
                     }
                 });
-                return nums;
+
+                // Extract all rows from breakdown
+                const rawLines = [];
+                document.querySelectorAll('div[class*="flex-between"], tr').forEach(row => {
+                    const txt = row.innerText || '';
+                    if (txt.includes('₹') && !txt.toLowerCase().includes('total saving')) {
+                        const parts = txt.split('\\n').map(s => s.trim()).filter(Boolean);
+                        if (parts.length >= 2) {
+                            const lbl = parts[0];
+                            const amtStr = parts[parts.length - 1];
+                            const m = amtStr.match(/(-?₹\\s*[0-9,]+(?:\\.[0-9]+)?)/);
+                            if (m) {
+                                const amt = parseFloat(m[1].replace(/₹/g, '').replace(/,/g, '').trim());
+                                rawLines.push({ label: lbl, amount: amt });
+                            }
+                        }
+                    }
+                });
+
+                return { total: explicitTotal, lines: rawLines };
             }""")
 
-            # Match final payable, base fare, taxes
-            if breakdown_numbers:
-                payable = max(breakdown_numbers)
-                base = target_rate["base_price"]
-                taxes = payable - base if payable >= base else target_rate["tax_price"]
+            explicit_total = breakdown_data.get("total")
+            raw_lines = breakdown_data.get("lines", [])
+
+            # Filter relevant fee breakdown lines, ignoring cancellation penalty text
+            allowed_labels = ['1 room x 1 night', 'base fare', 'room rate', 'hotel taxes', 'taxes', 'property discount', 'convenience fee', 'coupon discount', 'discount']
+            parsed_fee_lines = []
+            seen_labels = set()
+            for r in raw_lines:
+                lbl = r["label"].strip()
+                lbl_lower = lbl.lower()
+                if any(k in lbl_lower for k in allowed_labels) and 'penalty' not in lbl_lower and 'cancellation charges' not in lbl_lower:
+                    if lbl not in seen_labels and lbl != "Total amount" and lbl != "Total":
+                        seen_labels.add(lbl)
+                        kind = "other"
+                        if "tax" in lbl_lower:
+                            kind = "tax"
+                        elif "convenience" in lbl_lower:
+                            kind = "platform_fee"
+                        parsed_fee_lines.append({"label": lbl, "amount": float(r["amount"]), "fee_kind": kind})
+
+            # Determine final payable
+            if explicit_total is not None:
+                payable = explicit_total
+            elif parsed_fee_lines:
+                payable = sum(l["amount"] for l in parsed_fee_lines)
             else:
                 payable = target_rate["total_price"]
-                base = target_rate["base_price"]
-                taxes = target_rate["tax_price"]
 
-            fee_lines = [
-                {"label": "Base fare", "amount": float(base), "fee_kind": "other"},
-                {"label": "Hotel taxes", "amount": float(taxes), "fee_kind": "tax"},
-                {"label": "Convenience fee", "amount": 0.0, "fee_kind": "other"}
-            ]
+            if parsed_fee_lines:
+                fee_lines = parsed_fee_lines
+                base = next((l["amount"] for l in fee_lines if any(k in l["label"].lower() for k in ["room", "base"])), target_rate["base_price"])
+                taxes = next((l["amount"] for l in fee_lines if "tax" in l["label"].lower()), target_rate["tax_price"])
+            else:
+                base = target_rate["base_price"]
+                taxes = payable - base if payable >= base else target_rate["tax_price"]
+                fee_lines = [
+                    {"label": "Base fare", "amount": float(base), "fee_kind": "other"},
+                    {"label": "Hotel taxes", "amount": float(taxes), "fee_kind": "tax"},
+                    {"label": "Convenience fee", "amount": 0.0, "fee_kind": "platform_fee"}
+                ]
 
             payment_page_text = (
                 f"Booking: {hotel_name}. Room: {target_rate['room_name']}. "

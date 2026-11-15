@@ -1,0 +1,74 @@
+[
+  {
+    "run_index": 1,
+    "label": "Date 1 (Nov 20-21)",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=201126%7C211126&r=2%2C0",
+    "screenshot": "results\\recon\\cleartrip_dates\\run_1_payment_page.png",
+    "observed_dates_sample": [
+      "\n\n20 Nov",
+      "\n\n21 Nov",
+      "\n\n15 Nov",
+      "\n\n20 Nov"
+    ],
+    "prices_sample": [
+      8992.0,
+      1619.0,
+      0.0,
+      10610.0,
+      514.0
+    ],
+    "max_price": 10610.0,
+    "min_price": 0.0,
+    "page_snippet": "Log in / Sign up  1 Review your itinerary  5-star Hotel in Bangalore  Radisson Blu Atria Bengaluru  4.6  2901+ ratings  Check-in  20 Nov  Fri, 02 PM  1 night  Check-out  21 Nov  Sat, 12 PM  Rooms & Guests  1 Room, 2 Guests  2 adults  Details  Superior Room  301 sq.ft  Desk  Trash can  Wardrobe/closet  Dental kit  Free WiFi  See room details  Cancellation policy  This special discounted rate is non-refundable. If you choose to cancel this booking, you will not be refunded any of the payment.  Can"
+  },
+  {
+    "run_index": 2,
+    "label": "Date 2 (Nov 27-28)",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=271126%7C281126&r=2%2C0",
+    "screenshot": "results\\recon\\cleartrip_dates\\run_2_payment_page.png",
+    "observed_dates_sample": [
+      "\n\n27 Nov",
+      "\n\n28 Nov",
+      "\n\n15 Nov",
+      "\n\n27 Nov"
+    ],
+    "prices_sample": [
+      10523.0,
+      1894.0,
+      0.0,
+      12418.0,
+      602.0
+    ],
+    "max_price": 12418.0,
+    "min_price": 0.0,
+    "page_snippet": "Log in / Sign up  1 Review your itinerary  5-star Hotel in Bangalore  Radisson Blu Atria Bengaluru  4.6  2901+ ratings  Check-in  27 Nov  Fri, 02 PM  1 night  Check-out  28 Nov  Sat, 12 PM  Rooms & Guests  1 Room, 2 Guests  2 adults  Details  Superior Room  301 sq.ft  Desk  Trash can  Wardrobe/closet  Dental kit  Free WiFi  See room details  Cancellation policy  This special discounted rate is non-refundable. If you choose to cancel this booking, you will not be refunded any of the payment.  Can"
+  },
+  {
+    "run_index": 3,
+    "label": "Date 3 (Dec 15-16)",
+    "check_in": "2026-12-15",
+    "check_out": "2026-12-16",
+    "url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=151226%7C161226&r=2%2C0",
+    "screenshot": "results\\recon\\cleartrip_dates\\run_3_payment_page.png",
+    "observed_dates_sample": [
+      "\n\n15 Dec",
+      "\n\n16 Dec",
+      "\n\n15 Nov",
+      "\n\n15 Dec"
+    ],
+    "prices_sample": [
+      15958.0,
+      2872.0,
+      0.0,
+      18831.0,
+      913.0
+    ],
+    "max_price": 18831.0,
+    "min_price": 0.0,
+    "page_snippet": "Log in / Sign up  1 Review your itinerary  5-star Hotel in Bangalore  Radisson Blu Atria Bengaluru  4.6  2901+ ratings  Check-in  15 Dec  Tue, 02 PM  1 night  Check-out  16 Dec  Wed, 12 PM  Rooms & Guests  1 Room, 2 Guests  2 adults  Details  Superior Room  301 sq.ft  Desk  Trash can  Wardrobe/closet  Dental kit  Free WiFi  See room details  Cancellation policy  This special discounted rate is non-refundable. If you choose to cancel this booking, you will not be refunded any of the payment.  Can"
+  }
+]

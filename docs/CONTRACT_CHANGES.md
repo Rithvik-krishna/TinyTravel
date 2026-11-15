@@ -93,6 +93,15 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
 - **Why**: Allows ingestion and deterministic cohort comparison across all verified checkout and listing platforms without contract violations.
 - **Fixtures updated**: Yes (`fixtures/passing_platforms_offers.json` created).
 
+### 2026-11-15 - Nikhil
+- **Enforcement of No-Ranking Across Verification Levels & Net Payable Clarification**:
+  - Added `validate_no_cross_level_ranking` in `api/services/scoring.py` to prevent ranking offers across mixed verification levels (`checkout` vs `listing`).
+  - Marked Google Hotels as strictly indicative-only (`verification_level: "listing"`).
+  - Clarified Cleartrip `price_final_payable` to extract the net total amount after coupon and property discounts (e.g. ₹11,604 on La Marvella) rather than raw undiscounted room rate (₹15,639).
+- **Why**: Protects consumers from misleading rankings comparing indicative search listings against verified payment totals, and ensures exact payable reconciliation.
+- **Fixtures updated**: No.
+
+
 
 
 

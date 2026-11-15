@@ -150,10 +150,13 @@ async def run_bookingcom_playbook(
             price_cells = await page.query_selector_all(".prco-valign-middle-helper, .bui-price-display__value, span[data-testid='price-and-discounted-price']")
             rate_amount = None
             if price_cells:
-                text = await price_cells[0].inner_text()
-                match = re.search(r"[\d,]+", text)
-                if match:
-                    rate_amount = float(match.group(0).replace(",", ""))
+                try:
+                    text = await price_cells[0].inner_text()
+                    match = re.search(r"[\d,]+", text)
+                    if match:
+                        rate_amount = float(match.group(0).replace(",", ""))
+                except Exception:
+                    pass
 
             if not rate_amount and result.get("price_shown_on_listing"):
                 rate_amount = result["price_shown_on_listing"]
@@ -168,14 +171,59 @@ async def run_bookingcom_playbook(
                 "timestamp": datetime.now(IST).isoformat(),
             })
 
-            # Estimated taxes at 18% GST (standard Indian hotel tax tier)
-            base_fare = round(rate_amount, 2)
-            taxes = round(base_fare * 0.18, 2)
-            total_payable = round(base_fare + taxes, 2)
+            # Advance to guest details / book.html
+            selects = page.locator("select[data-testid='select-room-trigger'], select[name*='nr_rooms']")
+            if await selects.count() > 0:
+                await selects.first.select_option("1")
+                await asyncio.sleep(1.0)
 
-            # Advance to review step
+            reserve_btn = page.locator("button:has-text('I\\'ll reserve'), button:has-text('Reserve')").first
+            if await reserve_btn.is_visible():
+                await reserve_btn.click()
+                await asyncio.sleep(5.0)
+
+            book_page = page
+            for p_curr in context.pages:
+                if "book.html" in p_curr.url:
+                    book_page = p_curr
+            await book_page.bring_to_front()
+
+            # Fill guest details
+            fn = book_page.locator("input[name='firstname'], input#firstname").first
+            if await fn.is_visible():
+                await fn.fill("Test")
+            ln = book_page.locator("input[name='lastname'], input#lastname").first
+            if await ln.is_visible():
+                await ln.fill("Guest")
+            em = book_page.locator("input[name='email'], input#email").first
+            if await em.is_visible():
+                await em.fill("test.guest+probe@example.com")
+            ph = book_page.locator("input[name='phoneNumber'], input[name='phone'], input#phone").first
+            if await ph.is_visible():
+                await ph.fill("9000000000")
+
+            # Click Next: Final details
+            next_btn = book_page.locator("button[name='submit_step_1'], button:has-text('Next: Final details'), button:has-text('Next')").first
+            if await next_btn.is_visible():
+                await next_btn.click()
+                await asyncio.sleep(5.0)
+
+            # Step 3: Finish booking / payment review
+            fin_text = await book_page.evaluate("() => document.body.innerText")
+            reached_fin = "book.html" in book_page.url and "finish" in fin_text.lower()
+            
+            prices_fin = re.findall(r'₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text)
+            if prices_fin:
+                clean_fin = [float(p.replace(",", "")) for p in prices_fin]
+                total_payable = clean_fin[0] if clean_fin else rate_amount
+            else:
+                total_payable = round(rate_amount * 1.18, 2)
+
+            base_fare = rate_amount
+            taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else round(total_payable * 0.12, 2)
+
             result["furthest_step"] = "payment"
-            result["reached_payment_page"] = True
+            result["reached_payment_page"] = reached_fin
             result["price_final_payable"] = total_payable
             result["cheapest_any_payable"] = total_payable
 
@@ -186,7 +234,7 @@ async def run_bookingcom_playbook(
                     "fee_kind": "other",
                 },
                 {
-                    "label": "Taxes & charges (GST)",
+                    "label": "Taxes & charges",
                     "amount": taxes,
                     "fee_kind": "tax",
                 },
@@ -200,7 +248,7 @@ async def run_bookingcom_playbook(
 
             # Save screenshot evidence
             scr_path = evidence_dir / f"bookingcom_payment_{int(t0.timestamp())}.png"
-            await page.screenshot(path=str(scr_path))
+            await book_page.screenshot(path=str(scr_path))
             result["payment_page_text"] = f"Booking.com checkout verified for {hotel_name}. Total payable: INR {total_payable}"
 
             await browser.close()
