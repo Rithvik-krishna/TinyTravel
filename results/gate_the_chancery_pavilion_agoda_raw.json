@@ -1,0 +1,15 @@
+{
+  "run_id": "def0f993-efa5-4f86-a60d-d665a6bcb3a1",
+  "streaming_url": "https://ip-18-145-7-116.tetra-data.production.tinyfish.io/tf-161ad20c-ba73-4793-b3f7-4cce2f182fd4/stream/1",
+  "status": "timeout",
+  "steps": 44,
+  "cost_usd": 0.704,
+  "started_at": "2026-11-15T11:39:22.721746+05:30",
+  "finished_at": "2026-11-15T11:49:22.729489+05:30",
+  "result": null,
+  "raw": {
+    "timeout": true,
+    "partial": {}
+  },
+  "error": "Agent run timed out after 600s"
+}

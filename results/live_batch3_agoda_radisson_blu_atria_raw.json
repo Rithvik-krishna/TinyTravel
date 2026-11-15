@@ -1,0 +1,120 @@
+{
+  "run_id": "a4b51947-1c2b-403c-947d-d9bee6196f11",
+  "hotel_name": "Radisson Blu Atria",
+  "platform": "agoda",
+  "started_at": "2026-11-15T12:06:53.586745+05:30",
+  "finished_at": "2026-11-15T12:11:20.387170+05:30",
+  "elapsed_seconds": 266.800425,
+  "steps": 34,
+  "cost_usd": 0.5439999999999996,
+  "status": "blocked",
+  "offer": {
+    "offer_id": "off_agoda_radisson",
+    "hotel_id": "h_radisson",
+    "run_id": "a4b51947-1c2b-403c-947d-d9bee6196f11",
+    "streaming_url": "https://ip-204-236-172-229.tetra-data.production.tinyfish.io/tf-3afd1567-cf40-4e65-9832-d705205245d4/stream/1",
+    "started_at": "2026-11-15T12:06:53.609744+05:30",
+    "finished_at": "2026-11-15T12:11:20.381169+05:30",
+    "steps": 34,
+    "cost_usd": 0.544,
+    "status": "blocked",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "agoda",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "other",
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.agoda.com/accom/property?propertyId=1785304",
+    "room_type": "Superior Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room only, breakfast available (Rs.769/person)",
+    "cancellation_policy": "Free cancellation before 19 November 2026",
+    "price_shown_on_listing": 9500.0,
+    "price_shown_on_room_selection": 11210.0,
+    "price_final_payable": 11210.0,
+    "fee_lines": [
+      {
+        "label": "Room price (1 room x 1 night)",
+        "amount": 11210.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Booking fees",
+        "amount": 0.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "18% tax",
+        "amount": 0.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "We have limited availability at this price - book now!",
+      "It's only 5 days until your check-in. Rates may rise if you don't book now."
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 9500.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 11210.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11210.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Selected cheapest room with FREE CANCELLATION - Superior Room at Rs.9,500 (pay at property, room only). The traveller_details page showed price Rs.11,210 (likely includes a surcharge or different rate). Split payment: pay_now=Rs.0, pay_at_hotel=Rs.11,210 (no payment until Nov 16). Listing page text: 'Radisson Blu Atria Bengaluru 5 stars out of 5'. Rate cohort: cheapest_free_cancellation. Secondary cohort (cheapest_any): Rs.9,100 Superior Room non-refundable pay now. The price increased from listing (9500) to traveller details (11210). Task stopped at traveller_details page - no login/payment/OTP required.",
+    "fee_leak_pct": null,
+    "pay_now": 0.0,
+    "pay_at_hotel": 11210.0,
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 9100.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-204-236-172-229.tetra-data.production.tinyfish.io/tf-3afd1567-cf40-4e65-9832-d705205245d4/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-15T12:11:20.381169+05:30",
+        "extracted_value": 11210.0,
+        "currency": "INR",
+        "mock": false
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_radisson_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-15T12:06:53.609744+05:30",
+        "extracted_value": 9500.0,
+        "currency": "INR",
+        "mock": false
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_radisson_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-15T12:11:20.381169+05:30",
+        "extracted_value": 11210.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "listing_page_text": "Radisson Blu Atria Bengaluru 5 stars out of 5 Free Wi-Fi in all rooms and public areas Restaurant Room service",
+    "payment_page_text": "N/A - did not reach payment page",
+    "transparency": {
+      "score": null,
+      "breakdown": null,
+      "note": "N/A (not verified)"
+    }
+  }
+}

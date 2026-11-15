@@ -1,0 +1,140 @@
+{
+  "run_id": "a02fe19b-53c6-41f0-b3c8-675abfeb6559",
+  "streaming_url": "https://ip-54-176-110-9.tetra-data.production.tinyfish.io/tf-82d04327-2fd7-4525-bf07-3cb0f5171209/stream/1",
+  "status": "completed",
+  "steps": 25,
+  "cost_usd": 0.4,
+  "started_at": "2026-11-15T12:11:23.504100+05:30",
+  "finished_at": "2026-11-15T12:15:09.714328+05:30",
+  "result": {
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment_page",
+    "blocker": "other",
+    "hotel_name": "Sterlings Mac Hotel Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/itinerary/75c2e49ccc-83a1-4531-9afc-261115121313/info",
+    "room_type": "Deluxe Suite \u00b7 City view",
+    "max_occupancy": 1,
+    "meal_plan": "Room Only (no meals)",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 32939,
+    "price_shown_on_room_selection": 32939,
+    "price_final_payable": 38869,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 32939,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 5930,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 32939,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 32939,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 38868,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 38869,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Rate plan cohort: cheapest_free_cancellation (Room Only at Rs.32,939 + Rs.5,930 taxes = Rs.38,869, with Free Cancellation till 19 Nov). Room with Breakfast option (Rs.34,139 + Rs.6,145 taxes = Rs.40,284) is more expensive. Both rate plans have free cancellation. No pay_at_hotel option present. Traveller details page showed Rs.38,868; payment page shows Rs.38,869 (convenience fee 0, hotel taxes Rs.5,930 on payment vs Rs.5,929 on traveller page). No preselected add-ons or urgency messages found.",
+    "listing_page_text": "Sterlings Mac Hotel Bengaluru, Kodihalli, Bangalore. One room type available: Deluxe Suite (City view). Room Only: Rs.32,939 + Rs.5,929 taxes & fees (no meals, free cancellation till 19 Nov). Room with Breakfast: Rs.34,139 + Rs.6,145 taxes & fees (breakfast included, free cancellation till 19 Nov).",
+    "payment_page_text": "Pay to complete your booking. Base fare: \u20b932,939. Hotel taxes: \u20b95,930. Convenience fee: \u20b90. Total, inclusive of all taxes: \u20b938,869. 1 Room, 2 Adults, 0 Children. Guest: Test Guest Guest (M). Dates: Fri, 20 Nov 2026 - Sat, 21 Nov 2026.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 38869,
+    "pay_now": 38869,
+    "pay_at_hotel": 0
+  },
+  "raw": {
+    "result_json": {
+      "site": "cleartrip",
+      "reached_payment_page": true,
+      "furthest_step": "payment_page",
+      "blocker": "other",
+      "hotel_name": "Sterlings Mac Hotel Bengaluru",
+      "hotel_url": "https://www.cleartrip.com/hotels/itinerary/75c2e49ccc-83a1-4531-9afc-261115121313/info",
+      "room_type": "Deluxe Suite \u00b7 City view",
+      "max_occupancy": 1,
+      "meal_plan": "Room Only (no meals)",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939,
+      "price_shown_on_room_selection": 32939,
+      "price_final_payable": 38869,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5930,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0,
+          "fee_kind": "tax"
+        }
+      ],
+      "preselected_addons": [],
+      "urgency_or_scarcity_messages": [],
+      "price_trail": [
+        {
+          "step": "listing",
+          "amount": 32939,
+          "currency": "INR"
+        },
+        {
+          "step": "room",
+          "amount": 32939,
+          "currency": "INR"
+        },
+        {
+          "step": "traveller_details",
+          "amount": 38868,
+          "currency": "INR"
+        },
+        {
+          "step": "payment",
+          "amount": 38869,
+          "currency": "INR"
+        }
+      ],
+      "currency": "INR",
+      "notes": "Rate plan cohort: cheapest_free_cancellation (Room Only at Rs.32,939 + Rs.5,930 taxes = Rs.38,869, with Free Cancellation till 19 Nov). Room with Breakfast option (Rs.34,139 + Rs.6,145 taxes = Rs.40,284) is more expensive. Both rate plans have free cancellation. No pay_at_hotel option present. Traveller details page showed Rs.38,868; payment page shows Rs.38,869 (convenience fee 0, hotel taxes Rs.5,930 on payment vs Rs.5,929 on traveller page). No preselected add-ons or urgency messages found.",
+      "listing_page_text": "Sterlings Mac Hotel Bengaluru, Kodihalli, Bangalore. One room type available: Deluxe Suite (City view). Room Only: Rs.32,939 + Rs.5,929 taxes & fees (no meals, free cancellation till 19 Nov). Room with Breakfast: Rs.34,139 + Rs.6,145 taxes & fees (breakfast included, free cancellation till 19 Nov).",
+      "payment_page_text": "Pay to complete your booking. Base fare: \u20b932,939. Hotel taxes: \u20b95,930. Convenience fee: \u20b90. Total, inclusive of all taxes: \u20b938,869. 1 Room, 2 Adults, 0 Children. Guest: Test Guest Guest (M). Dates: Fri, 20 Nov 2026 - Sat, 21 Nov 2026.",
+      "rate_cohort": "cheapest_free_cancellation",
+      "cheapest_any_payable": 38869,
+      "pay_now": 38869,
+      "pay_at_hotel": 0
+    }
+  },
+  "error": null
+}

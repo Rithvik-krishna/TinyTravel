@@ -78,12 +78,18 @@ def append_csv_row(row_dict: dict) -> None:
         "source", "run_id", "evidence_file", "status"
     ]
     # Enforce strictly: never append rows with missing or pending run_id
-    run_id = str(row_dict.get("run_id", "")).strip()
+    run_id = str(row_dict.get("run_id", "") or "").strip()
     if not run_id or run_id.lower().startswith("pending") or run_id.lower() in ("null", "none"):
         logger.warning(f"Rejecting CSV write for row without real run_id: {run_id}")
         return
 
-    line = ",".join(str(row_dict.get(h, "")).replace(",", " ") for h in headers) + "\n"
+    def fmt_val(v):
+        if v is None:
+            return ""
+        s = str(v).replace(",", " ").strip()
+        return "" if s.lower() in ("none", "null") else s
+
+    line = ",".join(fmt_val(row_dict.get(h)) for h in headers) + "\n"
     with open(CSV_PATH, "a", encoding="utf-8") as f:
         f.write(line)
 

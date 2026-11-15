@@ -1,0 +1,116 @@
+{
+  "run_id": "e2434530-6d7d-4bed-be11-14b33c4fb8e3",
+  "hotel_name": "Sterlings Mac Hotel",
+  "platform": "agoda",
+  "started_at": "2026-11-15T12:15:13.389914+05:30",
+  "finished_at": "2026-11-15T12:19:07.717880+05:30",
+  "elapsed_seconds": 234.327966,
+  "steps": 33,
+  "cost_usd": 0.5279999999999996,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_agoda_sterling",
+    "hotel_id": "h_sterling",
+    "run_id": "e2434530-6d7d-4bed-be11-14b33c4fb8e3",
+    "streaming_url": "https://ip-54-215-238-44.tetra-data.production.tinyfish.io/tf-33f560cc-e8f6-413c-8927-3823ed918a85/stream/1",
+    "started_at": "2026-11-15T12:15:13.427939+05:30",
+    "finished_at": "2026-11-15T12:19:07.711890+05:30",
+    "steps": 33,
+    "cost_usd": 0.528,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "agoda",
+    "reached_payment_page": true,
+    "furthest_step": "traveller_details",
+    "blocker": null,
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.agoda.com/sterlings-mac-hotel/hotel/bangalore-in.html",
+    "room_type": "Room standard",
+    "max_occupancy": 2,
+    "meal_plan": "No meals included",
+    "cancellation_policy": "Free cancellation - free cancellation before 19 November 2026",
+    "price_shown_on_listing": 20466.14,
+    "price_shown_on_room_selection": 20466.14,
+    "price_final_payable": 20466.14,
+    "fee_lines": [
+      {
+        "label": "Booking fees",
+        "amount": 0.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "18% tax",
+        "amount": 20466.14,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [
+      "You're booking our last available room at this price",
+      "This rate may rise soon or may no longer be available",
+      "This price is guaranteed for 24:00:00",
+      "Last room for your dates! If you leave now, we can't hold this room and rate.",
+      "No credit card required",
+      "No payment needed today",
+      "This room has been requested by other guests in the last 12 hours"
+    ],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 20466.14,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 20466.14,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 20466.14,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "The room fits 2 adults and is 'Room standard' with free cancellation. Price was INR 20,466.14 throughout the booking flow. Task stopped at traveller details page - could not proceed to payment page due to budget constraints and need for phone number input and additional steps. The hotel was successfully found and the cheapest room with free cancellation was selected.",
+    "fee_leak_pct": 0.0,
+    "pay_now": 20466.14,
+    "pay_at_hotel": 0.0,
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 20466.14,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-215-238-44.tetra-data.production.tinyfish.io/tf-33f560cc-e8f6-413c-8927-3823ed918a85/stream/1",
+        "step": "payment",
+        "captured_at": "2026-11-15T12:19:07.711890+05:30",
+        "extracted_value": 20466.14,
+        "currency": "INR",
+        "mock": false
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_agoda_sterling_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-15T12:15:13.427939+05:30",
+        "extracted_value": 20466.14,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "listing_page_text": "Sterlings Mac Hotel - Bangalore, India - 20,466.14 INR - Free cancellation",
+    "payment_page_text": "",
+    "transparency": {
+      "score": 71,
+      "breakdown": {
+        "fee_leak": 50.0,
+        "addons_pressure": 0,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}

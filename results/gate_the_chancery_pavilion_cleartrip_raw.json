@@ -1,0 +1,140 @@
+{
+  "run_id": "0987a9fe-43c8-4664-8a46-f1f564079611",
+  "streaming_url": "https://ip-54-219-174-64.tetra-data.production.tinyfish.io/tf-51f51b85-6720-4a97-a8a3-e288b667abc4/stream/1",
+  "status": "completed",
+  "steps": 31,
+  "cost_usd": 0.496,
+  "started_at": "2026-11-15T11:35:28.049036+05:30",
+  "finished_at": "2026-11-15T11:39:19.329894+05:30",
+  "result": {
+    "site": "cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment_review",
+    "blocker": "other",
+    "hotel_name": "The Chancery Pavillion",
+    "hotel_url": "https://www.cleartrip.com/hotels/info/the-chancery-pavillion-40140",
+    "room_type": "Superior Room - Room assigned on arrival",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable before 19 Nov 14:00 IST; No Refund for cancellations between 19 Nov 14:00 IST and 20 Nov 14:00 IST",
+    "price_shown_on_listing": 5250,
+    "price_shown_on_room_selection": 5250,
+    "price_final_payable": 5250,
+    "fee_lines": [
+      {
+        "label": "Base rate",
+        "amount": 5000,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 250,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 5250,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 5250,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 5250,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 5250,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Room type: Superior Room - Room assigned on arrival, 340 sq.ft, City view, Bathtub, Shower, Sofa. Meal plan: Room Only. Cancellation: Free cancellation till 19 Nov 14:00 IST. Cheapest room with free cancellation selected: Superior Room Room Only at \u20b95,250 (base \u20b95,000 + taxes \u20b9250). Split payment not available on this property; full amount payable upfront. EMI option available at \u20b9255/mo for 24 months but not pre-selected. No urgency or scarcity messages displayed. Listing page text: \"5-star Hotel in Ashok Nagar, The Chancery Pavillion, 3.9 (5134+ ratings)\". No login required; booking proceeds as guest.",
+    "listing_page_text": "5-star Hotel in Ashok Nagar - The Chancery Pavillion - 3.9 (5134+ ratings) - 20 Nov to 21 Nov - 2 Guests - Superior Room - Room assigned on arrival - \u20b95,250",
+    "payment_page_text": "Review your itinerary - The Chancery Pavillion, Ashok Nagar - Superior Room - Room assigned on arrival - 20 Nov to 21 Nov - 1 Room, 2 Guests - Base rate \u20b95,000 + Hotel taxes \u20b9250 = \u20b95,250 - No Refund between 19-20 Nov - No split payment available - EMI at \u20b9255/mo available - Apply coupon or gift card - Guest: Test Guest - test.guest+probe@example.com - 9000000000 - Continue to Payment",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5250,
+    "pay_now": 5250,
+    "pay_at_hotel": 0
+  },
+  "raw": {
+    "result_json": {
+      "site": "cleartrip",
+      "reached_payment_page": true,
+      "furthest_step": "payment_review",
+      "blocker": "other",
+      "hotel_name": "The Chancery Pavillion",
+      "hotel_url": "https://www.cleartrip.com/hotels/info/the-chancery-pavillion-40140",
+      "room_type": "Superior Room - Room assigned on arrival",
+      "max_occupancy": 2,
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Fully refundable before 19 Nov 14:00 IST; No Refund for cancellations between 19 Nov 14:00 IST and 20 Nov 14:00 IST",
+      "price_shown_on_listing": 5250,
+      "price_shown_on_room_selection": 5250,
+      "price_final_payable": 5250,
+      "fee_lines": [
+        {
+          "label": "Base rate",
+          "amount": 5000,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 250,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0,
+          "fee_kind": "tax"
+        }
+      ],
+      "preselected_addons": [],
+      "urgency_or_scarcity_messages": [],
+      "price_trail": [
+        {
+          "step": "listing",
+          "amount": 5250,
+          "currency": "INR"
+        },
+        {
+          "step": "room",
+          "amount": 5250,
+          "currency": "INR"
+        },
+        {
+          "step": "traveller_details",
+          "amount": 5250,
+          "currency": "INR"
+        },
+        {
+          "step": "payment",
+          "amount": 5250,
+          "currency": "INR"
+        }
+      ],
+      "currency": "INR",
+      "notes": "Room type: Superior Room - Room assigned on arrival, 340 sq.ft, City view, Bathtub, Shower, Sofa. Meal plan: Room Only. Cancellation: Free cancellation till 19 Nov 14:00 IST. Cheapest room with free cancellation selected: Superior Room Room Only at \u20b95,250 (base \u20b95,000 + taxes \u20b9250). Split payment not available on this property; full amount payable upfront. EMI option available at \u20b9255/mo for 24 months but not pre-selected. No urgency or scarcity messages displayed. Listing page text: \"5-star Hotel in Ashok Nagar, The Chancery Pavillion, 3.9 (5134+ ratings)\". No login required; booking proceeds as guest.",
+      "listing_page_text": "5-star Hotel in Ashok Nagar - The Chancery Pavillion - 3.9 (5134+ ratings) - 20 Nov to 21 Nov - 2 Guests - Superior Room - Room assigned on arrival - \u20b95,250",
+      "payment_page_text": "Review your itinerary - The Chancery Pavillion, Ashok Nagar - Superior Room - Room assigned on arrival - 20 Nov to 21 Nov - 1 Room, 2 Guests - Base rate \u20b95,000 + Hotel taxes \u20b9250 = \u20b95,250 - No Refund between 19-20 Nov - No split payment available - EMI at \u20b9255/mo available - Apply coupon or gift card - Guest: Test Guest - test.guest+probe@example.com - 9000000000 - Continue to Payment",
+      "rate_cohort": "cheapest_free_cancellation",
+      "cheapest_any_payable": 5250,
+      "pay_now": 5250,
+      "pay_at_hotel": 0
+    }
+  },
+  "error": null
+}

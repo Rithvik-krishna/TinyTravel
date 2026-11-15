@@ -1,0 +1,127 @@
+{
+  "run_id": "341a9bef-7327-42a2-835e-67825d7b49c2",
+  "hotel_name": "Radisson Blu Atria",
+  "platform": "cleartrip",
+  "started_at": "2026-11-15T12:02:42.425865+05:30",
+  "finished_at": "2026-11-15T12:06:50.304634+05:30",
+  "elapsed_seconds": 247.878769,
+  "steps": 31,
+  "cost_usd": 0.49599999999999955,
+  "status": "verified",
+  "offer": {
+    "offer_id": "off_cleartrip_radisson",
+    "hotel_id": "h_radisson",
+    "run_id": "341a9bef-7327-42a2-835e-67825d7b49c2",
+    "streaming_url": "https://ip-54-219-174-64.tetra-data.production.tinyfish.io/tf-c925db68-696d-456f-8509-0d56c897ee30/stream/2",
+    "started_at": "2026-11-15T12:02:42.451778+05:30",
+    "finished_at": "2026-11-15T12:06:50.293062+05:30",
+    "steps": 31,
+    "cost_usd": 0.496,
+    "status": "verified",
+    "reconciliation": "ok",
+    "cancellation_category": "free",
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
+    "room_type": "Superior Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 9387.0,
+    "price_shown_on_room_selection": 9387.0,
+    "price_final_payable": 11077.0,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 9388.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1690.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11077.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11077.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Cheapest free cancellation room selected: Superior Room (Room Only) at INR 9,387. Cheapest overall is Superior Room (Room Only, non-refundable) at INR 8,992. Base fare shown on payment page is INR 9,388 (INR 1 higher than listing/room selection INR 9,387 due to tax rounding). Total payable: INR 11,077 (Base INR 9,388 + Hotel taxes INR 1,690). No convenience fee. No pre-selected add-ons. No split payment (pay_now vs pay_at_hotel) \u2014 full amount due via Pay now. Guest details: Test Guest Guest, email testguest@example.com, phone 9000000000. Rate cohort: cheapest_free_cancellation. No split payment available \u2014 all amounts due at payment time.",
+    "fee_leak_pct": 18.0,
+    "pay_now": 11077.0,
+    "pay_at_hotel": 0.0,
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 8992.0,
+    "evidence": [
+      {
+        "type": "recording",
+        "url": "https://ip-54-219-174-64.tetra-data.production.tinyfish.io/tf-c925db68-696d-456f-8509-0d56c897ee30/stream/2",
+        "step": "payment",
+        "captured_at": "2026-11-15T12:06:50.293062+05:30",
+        "extracted_value": 11077.0,
+        "currency": "INR",
+        "mock": false
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_radisson_listing.txt",
+        "step": "listing",
+        "captured_at": "2026-11-15T12:02:42.451778+05:30",
+        "extracted_value": 9387.0,
+        "currency": "INR",
+        "mock": false
+      },
+      {
+        "type": "page_text",
+        "url": "/evidence/off_cleartrip_radisson_payment.txt",
+        "step": "payment",
+        "captured_at": "2026-11-15T12:06:50.293062+05:30",
+        "extracted_value": 11077.0,
+        "currency": "INR",
+        "mock": false
+      }
+    ],
+    "mock": false,
+    "listing_page_text": "Radisson Blu Atria Bengaluru \u00b7 5.0 Excellent \u00b7 2.5k+ Ratings \u00b7 Palace Road, Bengaluru \u00b7 INR 9,387 + INR 1,690 taxes & fees",
+    "payment_page_text": "Pay to complete your booking. Base fare: INR 9,388. Hotel taxes: INR 1,690. Convenience fee: INR 0. Total: INR 11,077, inclusive of all taxes. Booking: Radisson Blu Atria Bengaluru, No. 1 Palace Road, Karnataka 560 001, India. Dates: Fri, 20 Nov 2026 - Sat, 21 Nov 2026. Occupancy: 1 Room, 2 Adults. Guest: Test Guest Guest (M).",
+    "transparency": {
+      "score": 68,
+      "breakdown": {
+        "fee_leak": 27.5,
+        "addons_pressure": 20,
+        "price_stability": null,
+        "evidence": 6.7
+      },
+      "note": "observed on this run; stability N/A, weights re-normalised"
+    }
+  }
+}
