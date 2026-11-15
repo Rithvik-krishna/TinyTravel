@@ -1,0 +1,448 @@
+{
+  "url": "https://www.agoda.com/api/cronos/geo/country/topdestinations",
+  "status": 200,
+  "data": {
+    "data": [
+      {
+        "title": "India",
+        "description": "354185 properties",
+        "url": "/en-in/country/india.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/35/3_35_india_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/35/3_35_india_02.jpg?s=200x",
+        "id": 35
+      },
+      {
+        "title": "United Arab Emirates",
+        "description": "44495 properties",
+        "url": "/en-in/country/united-arab-emirates.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/64/3_64_united_arab_emirates_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/64/3_64_united_arab_emirates_02.jpg?s=200x",
+        "id": 64
+      },
+      {
+        "title": "Thailand",
+        "description": "135930 properties",
+        "url": "/en-in/country/thailand.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/106/3_106_thailand_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/106/3_106_thailand_02.jpg?s=200x",
+        "id": 106
+      },
+      {
+        "title": "United States",
+        "description": "541882 properties",
+        "url": "/en-in/country/united-states.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/181/3_181_united_states_of_america_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/181/3_181_united_states_of_america_02.jpg?s=200x",
+        "id": 181
+      },
+      {
+        "title": "Singapore",
+        "description": "1815 properties",
+        "url": "/en-in/country/singapore.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/114/3_114_singapore_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/114/3_114_singapore_02.jpg?s=200x",
+        "id": 114
+      },
+      {
+        "title": "Malaysia",
+        "description": "106513 properties",
+        "url": "/en-in/country/malaysia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/198/3_198_malaysia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/198/3_198_malaysia_02.jpg?s=200x",
+        "id": 198
+      },
+      {
+        "title": "Vietnam",
+        "description": "118009 properties",
+        "url": "/en-in/country/vietnam.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/38/3_38_vietnam_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/38/3_38_vietnam_02.jpg?s=200x",
+        "id": 38
+      },
+      {
+        "title": "Indonesia",
+        "description": "175137 properties",
+        "url": "/en-in/country/indonesia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/192/3_192_indonesia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/192/3_192_indonesia_02.jpg?s=200x",
+        "id": 192
+      },
+      {
+        "title": "United Kingdom",
+        "description": "269384 properties",
+        "url": "/en-in/country/united-kingdom.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/107/3_107_united_kingdom_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/107/3_107_united_kingdom_02.jpg?s=200x",
+        "id": 107
+      },
+      {
+        "title": "Japan",
+        "description": "179808 properties",
+        "url": "/en-in/country/japan.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/3/3_3_japan_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/3/3_3_japan_02.jpg?s=200x",
+        "id": 3
+      },
+      {
+        "title": "Nepal",
+        "description": "6435 properties",
+        "url": "/en-in/country/nepal.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/120/3_120_nepal_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/120/3_120_nepal_02.jpg?s=200x",
+        "id": 120
+      },
+      {
+        "title": "Canada",
+        "description": "38556 properties",
+        "url": "/en-in/country/canada.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/100/3_100_canada_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/100/3_100_canada_02.jpg?s=200x",
+        "id": 100
+      },
+      {
+        "title": "Philippines",
+        "description": "93327 properties",
+        "url": "/en-in/country/philippines.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/70/3_70_philippines_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/70/3_70_philippines_02.jpg?s=200x",
+        "id": 70
+      },
+      {
+        "title": "Hong Kong SAR, China",
+        "description": "2834 properties",
+        "url": "/en-in/country/hong-kong-sar-china.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/132/3_132_hong_kong_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/132/3_132_hong_kong_02.jpg?s=200x",
+        "id": 132
+      },
+      {
+        "title": "Saudi Arabia",
+        "description": "24579 properties",
+        "url": "/en-in/country/saudi-arabia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/74/3_74_saudi_arabia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/74/3_74_saudi_arabia_02.jpg?s=200x",
+        "id": 74
+      },
+      {
+        "title": "Sri Lanka",
+        "description": "31900 properties",
+        "url": "/en-in/country/sri-lanka.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/82/3_82_sri_lanka_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/82/3_82_sri_lanka_02.jpg?s=200x",
+        "id": 82
+      },
+      {
+        "title": "Australia",
+        "description": "101297 properties",
+        "url": "/en-in/country/australia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/139/3_139_australia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/139/3_139_australia_02.jpg?s=200x",
+        "id": 139
+      },
+      {
+        "title": "Bangladesh",
+        "description": "1926 properties",
+        "url": "/en-in/country/bangladesh.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/117/3_117_bangladesh_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/117/3_117_bangladesh_02.jpg?s=200x",
+        "id": 117
+      },
+      {
+        "title": "Germany",
+        "description": "261240 properties",
+        "url": "/en-in/country/germany.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/101/3_101_germany_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/101/3_101_germany_02.jpg?s=200x",
+        "id": 101
+      },
+      {
+        "title": "Qatar",
+        "description": "1176 properties",
+        "url": "/en-in/country/qatar.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/105/3_105_qatar_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/105/3_105_qatar_02.jpg?s=200x",
+        "id": 105
+      },
+      {
+        "title": "Netherlands",
+        "description": "37605 properties",
+        "url": "/en-in/country/netherlands.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/149/3_149_netherlands_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/149/3_149_netherlands_02.jpg?s=200x",
+        "id": 149
+      },
+      {
+        "title": "Oman",
+        "description": "3122 properties",
+        "url": "/en-in/country/oman.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/155/3_155_oman_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/155/3_155_oman_02.jpg?s=200x",
+        "id": 155
+      },
+      {
+        "title": "France",
+        "description": "409189 properties",
+        "url": "/en-in/country/france.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/153/3_153_france_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/153/3_153_france_02.jpg?s=200x",
+        "id": 153
+      },
+      {
+        "title": "South Korea",
+        "description": "82368 properties",
+        "url": "/en-in/country/south-korea.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/212/3_212_south_korea_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/212/3_212_south_korea_02.jpg?s=200x",
+        "id": 212
+      },
+      {
+        "title": "Taiwan",
+        "description": "24901 properties",
+        "url": "/en-in/country/taiwan.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/140/3_140_taiwan_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/140/3_140_taiwan_02.jpg?s=200x",
+        "id": 140
+      },
+      {
+        "title": "Spain",
+        "description": "290512 properties",
+        "url": "/en-in/country/spain.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/167/3_167_spain_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/167/3_167_spain_02.jpg?s=200x",
+        "id": 167
+      },
+      {
+        "title": "South Africa",
+        "description": "63871 properties",
+        "url": "/en-in/country/south-africa.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/62/3_62_south_africa_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/62/3_62_south_africa_02.jpg?s=200x",
+        "id": 62
+      },
+      {
+        "title": "Switzerland",
+        "description": "30490 properties",
+        "url": "/en-in/country/switzerland.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/51/3_51_switzerland_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/51/3_51_switzerland_02.jpg?s=200x",
+        "id": 51
+      },
+      {
+        "title": "T\u00fcrkiye",
+        "description": "65042 properties",
+        "url": "/en-in/country/turkey.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/45/3_45_t\u00fcrkiye_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/45/3_45_t\u00fcrkiye_02.jpg?s=200x",
+        "id": 45
+      },
+      {
+        "title": "Italy",
+        "description": "412260 properties",
+        "url": "/en-in/country/italy.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/205/3_205_italy_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/205/3_205_italy_02.jpg?s=200x",
+        "id": 205
+      },
+      {
+        "title": "Cambodia",
+        "description": "7979 properties",
+        "url": "/en-in/country/cambodia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/163/3_163_cambodia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/163/3_163_cambodia_02.jpg?s=200x",
+        "id": 163
+      },
+      {
+        "title": "Pakistan",
+        "description": "14376 properties",
+        "url": "/en-in/country/pakistan.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/19/3_19_pakistan_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/19/3_19_pakistan_02.jpg?s=200x",
+        "id": 19
+      },
+      {
+        "title": "Ethiopia",
+        "description": "1072 properties",
+        "url": "/en-in/country/ethiopia.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/240/3_240_ethiopia_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/240/3_240_ethiopia_02.jpg?s=200x",
+        "id": 240
+      },
+      {
+        "title": "Maldives",
+        "description": "3531 properties",
+        "url": "/en-in/country/maldives.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/34/3_34_maldives_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/34/3_34_maldives_02.jpg?s=200x",
+        "id": 34
+      },
+      {
+        "title": "Kuwait",
+        "description": "533 properties",
+        "url": "/en-in/country/kuwait.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/43/3_43_kuwait_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/43/3_43_kuwait_02.jpg?s=200x",
+        "id": 43
+      },
+      {
+        "title": "New Zealand",
+        "description": "34574 properties",
+        "url": "/en-in/country/new-zealand.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/25/3_25_new_zealand_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/25/3_25_new_zealand_02.jpg?s=200x",
+        "id": 25
+      },
+      {
+        "title": "Ireland",
+        "description": "11673 properties",
+        "url": "/en-in/country/ireland.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/188/3_188_ireland_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/188/3_188_ireland_02.jpg?s=200x",
+        "id": 188
+      },
+      {
+        "title": "Poland",
+        "description": "104240 properties",
+        "url": "/en-in/country/poland.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/182/3_182_poland_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/182/3_182_poland_02.jpg?s=200x",
+        "id": 182
+      },
+      {
+        "title": "Bahrain",
+        "description": "1002 properties",
+        "url": "/en-in/country/bahrain.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/202/3_202_bahrain_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/202/3_202_bahrain_02.jpg?s=200x",
+        "id": 202
+      },
+      {
+        "title": "Nigeria",
+        "description": "12842 properties",
+        "url": "/en-in/country/nigeria.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/65/3_65_nigeria_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/65/3_65_nigeria_02.jpg?s=200x",
+        "id": 65
+      },
+      {
+        "title": "Egypt",
+        "description": "31968 properties",
+        "url": "/en-in/country/egypt.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/16/3_16_egypt_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/16/3_16_egypt_02.jpg?s=200x",
+        "id": 16
+      },
+      {
+        "title": "Portugal",
+        "description": "85995 properties",
+        "url": "/en-in/country/portugal.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/213/3_213_portugal_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/213/3_213_portugal_02.jpg?s=200x",
+        "id": 213
+      },
+      {
+        "title": "Myanmar",
+        "description": "1814 properties",
+        "url": "/en-in/country/myanmar.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/203/3_203_myanmar_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/203/3_203_myanmar_02.jpg?s=200x",
+        "id": 203
+      },
+      {
+        "title": "Israel",
+        "description": "12330 properties",
+        "url": "/en-in/country/israel.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/144/3_144_israel_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/144/3_144_israel_02.jpg?s=200x",
+        "id": 144
+      },
+      {
+        "title": "Laos",
+        "description": "3744 properties",
+        "url": "/en-in/country/laos.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/190/3_190_laos_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/190/3_190_laos_02.jpg?s=200x",
+        "id": 190
+      },
+      {
+        "title": "Belgium",
+        "description": "30597 properties",
+        "url": "/en-in/country/belgium.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/118/3_118_belgium_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/118/3_118_belgium_02.jpg?s=200x",
+        "id": 118
+      },
+      {
+        "title": "Sweden",
+        "description": "21110 properties",
+        "url": "/en-in/country/sweden.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/49/3_49_sweden_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/49/3_49_sweden_02.jpg?s=200x",
+        "id": 49
+      },
+      {
+        "title": "Uzbekistan",
+        "description": "6100 properties",
+        "url": "/en-in/country/uzbekistan.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/172/3_172_uzbekistan_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/172/3_172_uzbekistan_02.jpg?s=200x",
+        "id": 172
+      },
+      {
+        "title": "Austria",
+        "description": "59181 properties",
+        "url": "/en-in/country/austria.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/130/3_130_austria_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/130/3_130_austria_02.jpg?s=200x",
+        "id": 130
+      },
+      {
+        "title": "Mauritius",
+        "description": "6127 properties",
+        "url": "/en-in/country/mauritius.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/9/3_9_mauritius_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/9/3_9_mauritius_02.jpg?s=200x",
+        "id": 9
+      },
+      {
+        "title": "Brazil",
+        "description": "218620 properties",
+        "url": "/en-in/country/brazil.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/207/3_207_brazil_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/207/3_207_brazil_02.jpg?s=200x",
+        "id": 207
+      },
+      {
+        "title": "Norway",
+        "description": "19418 properties",
+        "url": "/en-in/country/norway.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/129/3_129_norway_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/129/3_129_norway_02.jpg?s=200x",
+        "id": 129
+      },
+      {
+        "title": "Mexico",
+        "description": "58538 properties",
+        "url": "/en-in/country/mexico.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/86/3_86_mexico_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/86/3_86_mexico_02.jpg?s=200x",
+        "id": 86
+      },
+      {
+        "title": "Denmark",
+        "description": "53021 properties",
+        "url": "/en-in/country/denmark.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/158/3_158_denmark_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/158/3_158_denmark_02.jpg?s=200x",
+        "id": 158
+      },
+      {
+        "title": "Tanzania",
+        "description": "6530 properties",
+        "url": "/en-in/country/tanzania.html",
+        "imageUrl": "//pix5.agoda.net/geo/country/199/3_199_tanzania_02.jpg?s=100x",
+        "imageUrl2x": "//pix5.agoda.net/geo/country/199/3_199_tanzania_02.jpg?s=200x",
+        "id": 199
+      }
+    ]
+  }
+}

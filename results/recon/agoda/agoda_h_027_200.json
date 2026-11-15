@@ -1,0 +1,306 @@
+{
+  "url": "https://www.agoda.com/api/card/campaigns",
+  "status": 200,
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "4c9254ab-fa69-4be3-832f-7b6956a7ee1d",
+      "sections": [
+        {
+          "sectionName": "flagship_store",
+          "cards": [
+            {
+              "cardId": 5317,
+              "cardName": "pulse_flagshipstorecampaign_accor",
+              "priority": 136,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260203_accor/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_accor?cid=1925247",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8266,
+              "cardName": "pulse_flagshipstorecampaign_oyo",
+              "priority": 134,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260630_Oyo/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_checkin?cid=1957836",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 5790,
+              "cardName": "pulse_flagshipstorecampaign_clermont_uk",
+              "priority": 126,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20251119_uk_clermont/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_clermont?cid=1925154",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 5819,
+              "cardName": "pulse_flagshipstorecampaign_banyan_th",
+              "priority": 124,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/2026_Q3_FLG_TH_BanyanTree/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_banyangroup?cid=1925140",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 5318,
+              "cardName": "pulse_flagshipstorecampaign_absolute_th",
+              "priority": 122,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260924_TH_Absolute/brandassets/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_absolute?cid=1925068",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8058,
+              "cardName": "pulse_flagshipstorecampaign_sono_th",
+              "priority": 116,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260604_th_sono/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_sono?cid=1957812",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 7492,
+              "cardName": "pulse_flagshipstorecampaign_bwh_th",
+              "priority": 113,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/2026_Q2_FLG_TH_BW/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_bwh?cid=1957740",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 5293,
+              "cardName": "pulse_flagshipstorecampaign_RWG_my",
+              "priority": 111,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260415_my_rwg/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_rwg?cid=1957746",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8528,
+              "cardName": "pulse_flagshipstorecampaign_all",
+              "priority": 102,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 281,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 287,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260803_all_flagship/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/flagship_all?cid=1957847",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            }
+          ],
+          "categories": [
+            {
+              "categoryId": 281,
+              "categoryName": "Uncategorized",
+              "categoryDescription": "Uncategorized",
+              "priority": 287,
+              "parentPriorityId": null
+            }
+          ]
+        }
+      ]
+    },
+    "error": null
+  }
+}

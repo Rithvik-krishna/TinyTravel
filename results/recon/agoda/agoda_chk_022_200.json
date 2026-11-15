@@ -1,0 +1,15 @@
+{
+  "url": "https://www.agoda.com/graphql/search",
+  "status": 200,
+  "data": {
+    "data": {
+      "priceTrendSearch": {
+        "PriceTrendSearchDetails": {
+          "cityId": 4923,
+          "propertyId": 1785304,
+          "prices": []
+        }
+      }
+    }
+  }
+}

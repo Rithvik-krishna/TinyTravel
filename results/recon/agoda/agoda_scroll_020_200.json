@@ -1,0 +1,267 @@
+{
+  "url": "https://www.agoda.com/graphql/npc",
+  "status": 200,
+  "data": {
+    "data": {
+      "SimilarCitySearch": {
+        "similarCities": [
+          {
+            "cityId": 4064,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/4064/1_4064_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/4064/1_4064_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/singapore-sg.html",
+            "cityName": "Singapore",
+            "countryName": "Singapore",
+            "noOfProperties": 1326
+          },
+          {
+            "cityId": 4001,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/4001/092eca9a1f0615374d2fcca17e130b61.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/4001/092eca9a1f0615374d2fcca17e130b61.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/cebu-ph.html",
+            "cityName": "Cebu",
+            "countryName": "Philippines",
+            "noOfProperties": 5254
+          },
+          {
+            "cityId": 14370,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/14370/1_14370_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/14370/1_14370_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/sydney-au.html",
+            "cityName": "Sydney",
+            "countryName": "Australia",
+            "noOfProperties": 5420
+          },
+          {
+            "cityId": 14690,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/14690/0d6f4afc6f404e65092123bead23f8ce.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/14690/0d6f4afc6f404e65092123bead23f8ce.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/seoul-kr.html",
+            "cityName": "Seoul",
+            "countryName": "South Korea",
+            "noOfProperties": 5945
+          },
+          {
+            "cityId": 12772,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/12772/04d2ac37633dbf787ccdf3500be25339.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/12772/04d2ac37633dbf787ccdf3500be25339.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/los-angeles-ca-us.html",
+            "cityName": "Los Angeles (CA)",
+            "countryName": "United States",
+            "noOfProperties": 4491
+          },
+          {
+            "cityId": 17193,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/17193/1_17193_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/17193/1_17193_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/bali-id.html",
+            "cityName": "Bali",
+            "countryName": "Indonesia",
+            "noOfProperties": 32908
+          },
+          {
+            "cityId": 7401,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/7401/1_7401_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/7401/1_7401_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/chiang-mai-th.html",
+            "cityName": "Chiang Mai",
+            "countryName": "Thailand",
+            "noOfProperties": 7193
+          },
+          {
+            "cityId": 3435,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/3435/1_3435_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/3435/1_3435_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/sapporo-jp.html",
+            "cityName": "Sapporo",
+            "countryName": "Japan",
+            "noOfProperties": 2640
+          },
+          {
+            "cityId": 13170,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/13170/1_13170_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/13170/1_13170_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/ho-chi-minh-city-vn.html",
+            "cityName": "Ho Chi Minh City",
+            "countryName": "Vietnam",
+            "noOfProperties": 15546
+          },
+          {
+            "cityId": 21397,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/21397/1_21397_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/21397/1_21397_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/macau-mo.html",
+            "cityName": "Macau",
+            "countryName": "Macau SAR, China",
+            "noOfProperties": 202
+          },
+          {
+            "cityId": 9590,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/9590/1_9590_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/9590/1_9590_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/osaka-jp.html",
+            "cityName": "Osaka",
+            "countryName": "Japan",
+            "noOfProperties": 10018
+          },
+          {
+            "cityId": 1622,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/1622/1_1622_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/1622/1_1622_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/manila-ph.html",
+            "cityName": "Manila",
+            "countryName": "Philippines",
+            "noOfProperties": 13223
+          },
+          {
+            "cityId": 16087,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/16087/1_16087_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/16087/1_16087_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/penang-my.html",
+            "cityName": "Penang",
+            "countryName": "Malaysia",
+            "noOfProperties": 5161
+          },
+          {
+            "cityId": 4951,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/4951/1_4951_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/4951/1_4951_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/taipei-tw.html",
+            "cityName": "Taipei",
+            "countryName": "Taiwan",
+            "noOfProperties": 3566
+          },
+          {
+            "cityId": 1784,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/1784/781e6dd556d97ff5559b56acb76b1d58.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/1784/781e6dd556d97ff5559b56acb76b1d58.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/kyoto-jp.html",
+            "cityName": "Kyoto",
+            "countryName": "Japan",
+            "noOfProperties": 6987
+          }
+        ]
+      }
+    }
+  }
+}

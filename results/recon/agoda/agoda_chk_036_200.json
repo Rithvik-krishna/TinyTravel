@@ -1,0 +1,3238 @@
+{
+  "url": "https://www.agoda.com/api/cronos/property/review/HotelReviews",
+  "status": 200,
+  "data": {
+    "hasReviewsData": true,
+    "pageSize": 5,
+    "hotelId": 1785304,
+    "hotelName": "Radisson Blu Atria Bengaluru",
+    "additionalReviewProviders": [
+      27901,
+      28999,
+      27989
+    ],
+    "recentReviewScores": [
+      {
+        "providerId": 332,
+        "recentReviewScores": [
+          6.4,
+          5.2,
+          10.0,
+          8.4,
+          8.0,
+          9.6,
+          10.0,
+          10.0,
+          10.0,
+          10.0
+        ],
+        "recentReviewScoresFormatted": [
+          "6.4",
+          "5.2",
+          "10",
+          "8.4",
+          "8.0",
+          "9.6",
+          "10",
+          "10",
+          "10",
+          "10"
+        ]
+      },
+      {
+        "providerId": 3038,
+        "recentReviewScores": [
+          9.0,
+          10.0,
+          5.0,
+          8.0,
+          10.0,
+          1.0,
+          1.0,
+          1.0,
+          9.0,
+          3.0
+        ],
+        "recentReviewScoresFormatted": [
+          "9.0",
+          "10",
+          "5.0",
+          "8.0",
+          "10",
+          "1.0",
+          "1.0",
+          "1.0",
+          "9.0",
+          "3.0"
+        ]
+      }
+    ],
+    "commentList": {
+      "reviewPageUrl": "/en-in/radisson-blu-atria-bengaluru/reviews/bangalore-in.html?propertyId=1785304&countryId=35&finalPriceView=1&isShowMobileAppPrice=false&cid=-1&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2026-11-20&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=INR&isFreeOccSearch=false&los=1&searchrequestid=2d0e3551-7113-41a6-ac49-bf0dd47a9c7a&ds=ZGJNsPB0CRHcSyXW",
+      "currentPage": 1,
+      "hotelID": 1785304,
+      "pageSize": 5,
+      "selectedSortOption": 7,
+      "haveMoreThanOneComments": true,
+      "isCrawlablePage": true,
+      "isCurated": false,
+      "isReviewPage": false,
+      "shouldShowProminentLink": false,
+      "pageNumberToPageUrl": {},
+      "reviewsSortOptions": {
+        "1": "Most recent",
+        "2": "Rating, high to low",
+        "3": "Rating, low to high",
+        "7": "Most helpful"
+      },
+      "comments": [
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": true,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1139878781,
+          "providerId": 332,
+          "rating": 10.0,
+          "checkInDateMonthAndYear": "June 2026",
+          "encryptedReviewData": "09L76mVHjd4iymlyZZWpXg==",
+          "formattedRating": "10.0",
+          "formattedReviewDate": "June 30, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "Responded July 08, 2026",
+          "responseText": "Dear Mr. Rajeev,\n\nThank you for your excellent rating and kind feedback.\n\nWe are delighted to know that you appreciated the staff, food, convenient location, spacious rooms, and event facilities. Your encouraging words mean a lot to our team and inspire us to continue delivering memorable experiences to our guests.\n\nWe truly appreciate your recommendation and look forward to welcoming you back to Radisson Blu Atria Bengaluru soon.\n\nWarm regards,\nManagement Team\nRadisson Blu Atria Bengaluru",
+          "responseTranslateSource": "en",
+          "reviewComments": "The Staff and Food at ITC are the best in Bangalore. Location is excellent, rooms are spacious and have everything you could need. Best choice for holding Events as well ",
+          "reviewNegatives": "",
+          "reviewPositives": "",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Agoda",
+          "reviewTitle": "ITC is truly exceptional ",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "checkInDate": "2026-06-28T00:00:00+07:00",
+          "checkOutDate": "2026-06-29T00:00:00+07:00",
+          "responseDate": "2026-07-08T17:30:28.324+07:00",
+          "reviewDate": "2026-06-30T07:23:25+07:00",
+          "reviewerInfo": {
+            "countryName": "United Kingdom",
+            "displayMemberName": "Rajeev",
+            "flagName": "gb",
+            "reviewGroupName": "Couple",
+            "roomTypeName": "Superior Room",
+            "countryId": 107,
+            "lengthOfStay": 1,
+            "reviewGroupId": 2,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": false,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": "2026/07/08 17:30:28"
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1190157249,
+          "providerId": 3038,
+          "rating": 5.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "OPxPgpZASwFfa01Yk6Hg4Q==",
+          "formattedRating": "5.0",
+          "formattedReviewDate": "September 27, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Review score",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Should have cleaned the rooms thoroughly before accommodating the next guest. \nThere was no separate light switch. All lights to one switch and the maintenance after raising complaint said their ups lights having issue. I had to sleep wth all lights ON because there was no possibility to control individual lights.",
+          "reviewPositives": "Unique rooms",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Booking.com",
+          "reviewTitle": "Acceptable",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2026-09-27T00:00:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "RAJA",
+            "flagName": "",
+            "reviewGroupName": "Solo traveler",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 3,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 935509887,
+          "providerId": 28999,
+          "rating": 6.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "VtG0EehHce2rD6bOkORpzg==",
+          "formattedRating": "6.0",
+          "formattedReviewDate": "March 10, 2025",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Good",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Room and bath size were very small. Doesn't qualify as 5-star (rather 3 or 4 star). Internet speed very slow. Staff not proactive in resolving the complaints (i raised regarding slow internet). Called 3-times but the problem remained unsolved.",
+          "reviewPositives": "Breakfast buffet spread was good. Food quality was good.",
+          "reviewProviderLogo": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+          "reviewProviderText": "Priceline.com",
+          "reviewTitle": "Above average",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2025-03-10T16:39:45+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Vikas",
+            "flagName": "",
+            "reviewGroupName": "Group",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 6,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": true,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1183006535,
+          "providerId": 332,
+          "rating": 10.0,
+          "checkInDateMonthAndYear": "September 2026",
+          "encryptedReviewData": "8WexXW00FtupasABlLY7qg==",
+          "formattedRating": "10.0",
+          "formattedReviewDate": "September 19, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "Responded September 21, 2026",
+          "responseText": "Dear Mr. Suresh, \n\nThank you for taking the time to complete our guest satisfaction survey. We are pleased to see that you enjoyed your time at the hotel. On behalf of our entire staff at Radisson Blu Atria Bengaluru, we thank you for your business and we hope to see you again when your travels bring you back to the area! \n\nSincerely, \nAkshay Jugal \nFront Office Manager \nRadisson Blu Atria Bengaluru",
+          "responseTranslateSource": "en",
+          "reviewComments": "We had a wonderful time at Radisson Blu Atria. The staff was courteous and efficient. The hotel is centrally located close to Cubbon park. The breakfast spread was delicious and had a lot of variety. ",
+          "reviewNegatives": "",
+          "reviewPositives": "",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Agoda",
+          "reviewTitle": "Excellent place for a minimum break",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "checkInDate": "2026-09-12T00:00:00+07:00",
+          "checkOutDate": "2026-09-15T00:00:00+07:00",
+          "responseDate": "2026-09-21T18:20:48.638+07:00",
+          "reviewDate": "2026-09-19T10:14:24+07:00",
+          "reviewerInfo": {
+            "countryName": "India",
+            "displayMemberName": "Suresh",
+            "flagName": "in",
+            "reviewGroupName": "Family with young children",
+            "roomTypeName": "Superior Room",
+            "countryId": 35,
+            "lengthOfStay": 3,
+            "reviewGroupId": 4,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": false,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": "2026/09/21 18:20:48"
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1174896756,
+          "providerId": 3038,
+          "rating": 10.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "unatfIkkSxMOMnmIlmKeDg==",
+          "formattedRating": "10.0",
+          "formattedReviewDate": "August 28, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Brakefast not included",
+          "reviewPositives": "Room and staff good",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Booking.com",
+          "reviewTitle": "Exceptional",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2026-08-28T00:00:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Tanam",
+            "flagName": "",
+            "reviewGroupName": "Solo traveler",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 3,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 758018058,
+          "providerId": 28999,
+          "rating": 8.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "AiTW4DA0ItTz1IkR7L2AuQ==",
+          "formattedRating": "8.0",
+          "formattedReviewDate": "January 02, 2024",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Excellent",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Restaurant food was not good.",
+          "reviewPositives": "Cleanliness, Service, Check in Checkout time.",
+          "reviewProviderLogo": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+          "reviewProviderText": "Priceline.com",
+          "reviewTitle": "Very good",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2024-01-02T07:16:17+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Aanchal",
+            "flagName": "",
+            "reviewGroupName": "Group",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 6,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": true,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1159856219,
+          "providerId": 332,
+          "rating": 9.6,
+          "checkInDateMonthAndYear": "August 2026",
+          "encryptedReviewData": "7Rn1x76y2OQ1LFB9ACZf+A==",
+          "formattedRating": "9.6",
+          "formattedReviewDate": "August 06, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "Responded August 11, 2026",
+          "responseText": "Dear Kaoushik,\n\nThank you for your wonderful review and excellent rating.\n\nWe are delighted to know that your stay exceeded expectations and that you appreciated our spacious and comfortable rooms, cleanliness, warm hospitality, breakfast variety, and well-maintained facilities. Your recommendation to both business and leisure travellers means a great deal to us.\n\nIt is especially rewarding to know that you would choose to stay with us again. We look forward to welcoming you back to Radisson Blu Atria Bengaluru for another memorable experience.\n\nWarm regards,\nManagement Team\nRadisson Blu Atria Bengaluru",
+          "responseTranslateSource": "en",
+          "reviewComments": "Had a wonderful stay at Radisson Blu. The hotel was clean, well maintained, and the rooms were spacious, comfortable, and equipped with everything needed for a relaxing stay.\n\nThe staff were warm, professional, and always willing to help, making the overall experience even better. The breakfast spread was excellent with plenty of variety, and the food quality was great. The hotel\u2019s facilities and amenities were also well maintained and added to the comfort of the stay.\n\nOverall, it was a fantastic experience, and I would happily stay here again. Highly recommended for both business and leisure travelers.",
+          "reviewNegatives": "",
+          "reviewPositives": "",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Agoda",
+          "reviewTitle": "A Stay That Exceeded Expectations",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "checkInDate": "2026-08-01T00:00:00+07:00",
+          "checkOutDate": "2026-08-02T00:00:00+07:00",
+          "responseDate": "2026-08-11T16:42:26.823+07:00",
+          "reviewDate": "2026-08-06T07:59:46+07:00",
+          "reviewerInfo": {
+            "countryName": "India",
+            "displayMemberName": "Kaoushik",
+            "flagName": "in",
+            "reviewGroupName": "Couple",
+            "roomTypeName": "Superior Room",
+            "countryId": 35,
+            "lengthOfStay": 1,
+            "reviewGroupId": 2,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": false,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [
+            {
+              "id": 4685076,
+              "providerId": 332,
+              "groupId": "other",
+              "url": "//pix6.agoda.net/generic/bbff8b8c462401bd0eaa78447b877b7a.jpeg?ce=3",
+              "caption": ""
+            },
+            {
+              "id": 4685075,
+              "providerId": 332,
+              "groupId": "other",
+              "url": "//pix6.agoda.net/generic/c079e65979d984c642438dcdfee07e4e.jpeg?ce=3",
+              "caption": ""
+            },
+            {
+              "id": 4685074,
+              "providerId": 332,
+              "groupId": "other",
+              "url": "//pix6.agoda.net/generic/011c1c709e23acce70573dddc076eb22.jpeg?ce=3",
+              "caption": ""
+            },
+            {
+              "id": 4685073,
+              "providerId": 332,
+              "groupId": "other",
+              "url": "//pix6.agoda.net/generic/13ec42ea5cff7c46cb44d00c6d5843d4.jpeg?ce=3",
+              "caption": ""
+            }
+          ],
+          "formattedResponseDate": "2026/08/11 16:42:26"
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1174896758,
+          "providerId": 3038,
+          "rating": 1.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "QbTfe6Dh87/JzpYqAkg/Lg==",
+          "formattedRating": "1.0",
+          "formattedReviewDate": "August 28, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Review score",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "No value for money . Paid 10k and given a corner room . Wifi was very bad. No network at all .",
+          "reviewPositives": "Good room comfortable",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Booking.com",
+          "reviewTitle": "Acceptable",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2026-08-28T00:00:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Melvin",
+            "flagName": "",
+            "reviewGroupName": "Solo traveler",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 3,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 759567531,
+          "providerId": 28999,
+          "rating": 8.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "kM1LtXBkC/5bQ5YH4Rf7eg==",
+          "formattedRating": "8.0",
+          "formattedReviewDate": "January 02, 2024",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Excellent",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Restaurant food was not good.",
+          "reviewPositives": "Cleanliness, Service, Check in Checkout time.",
+          "reviewProviderLogo": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+          "reviewProviderText": "Priceline.com",
+          "reviewTitle": "Very good",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2024-01-02T07:16:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Aanchal",
+            "flagName": "",
+            "reviewGroupName": "Group",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 6,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": true,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1193452529,
+          "providerId": 332,
+          "rating": 10.0,
+          "checkInDateMonthAndYear": "October 2026",
+          "encryptedReviewData": "VC8xhvd/d2D6zwKXfAtxbQ==",
+          "formattedRating": "10.0",
+          "formattedReviewDate": "October 11, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "Responded October 22, 2026",
+          "responseText": "Dear Alwin,\n\nThank you for your perfect 10/10 rating and lovely recommendation!\n\nWe're delighted that you enjoyed your staycation, especially the comfortable room, relaxing bathtub, and welcoming ambience. It's wonderful to know that our hospitality made your experience even more special.\n\nWe look forward to welcoming you back to Radisson Blu Atria Bengaluru for another memorable stay!\n\nWarm regards,\nManagement Team\nRadisson Blu Atria Bengaluru",
+          "responseTranslateSource": "en",
+          "reviewComments": "Had a wonderful stay at Radisson Blu! The room was comfortable, luxurious, and beautifully maintained. The bathtub was definitely a highlight, making the stay even more relaxing and special. The hospitality and overall ambience were excellent. Truly a great experience, and I would love to visit again! Highly recommended. \u2764\ufe0f",
+          "reviewNegatives": "",
+          "reviewPositives": "",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Agoda",
+          "reviewTitle": "Just a perfect staycation ",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "checkInDate": "2026-10-10T00:00:00+07:00",
+          "checkOutDate": "2026-10-11T00:00:00+07:00",
+          "responseDate": "2026-10-22T12:42:44.658+07:00",
+          "reviewDate": "2026-10-11T10:11:05+07:00",
+          "reviewerInfo": {
+            "countryName": "India",
+            "displayMemberName": "Alwin",
+            "flagName": "in",
+            "reviewGroupName": "Couple",
+            "roomTypeName": "Deluxe Room",
+            "countryId": 35,
+            "lengthOfStay": 1,
+            "reviewGroupId": 2,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": false,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": "2026/10/22 12:42:44"
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1156870404,
+          "providerId": 3038,
+          "rating": 9.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "VvMGSPUNr3V5UaPP+0F50w==",
+          "formattedRating": "9.0",
+          "formattedReviewDate": "July 31, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Exceptional",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "I feel the early check in can be considered if u r a good client",
+          "reviewPositives": "I have been connected to Radisson since 2019 and that's my first choice \nIt was very welcoming even in Bangalore and will continue to be a part of the same",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Booking.com",
+          "reviewTitle": "Class over Cost",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2026-07-31T00:00:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Chandan.",
+            "flagName": "",
+            "reviewGroupName": "Solo traveler",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 3,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 719896356,
+          "providerId": 28999,
+          "rating": 2.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "6KOmapgHtwQxnPfTjRPtsg==",
+          "formattedRating": "2.0",
+          "formattedReviewDate": "September 20, 2023",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Review score",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "I was Trapped in the hotel elevator due to a malfunctioning access card, no immediate help despite using the emergency alarm. When tested, the system failed. Extremely distressing experience, especially as a claustrophobe.",
+          "reviewPositives": "",
+          "reviewProviderLogo": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+          "reviewProviderText": "Priceline.com",
+          "reviewTitle": "Acceptable",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2023-09-20T18:49:43+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Himalaya",
+            "flagName": "",
+            "reviewGroupName": "Group",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 6,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": true,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1193449720,
+          "providerId": 332,
+          "rating": 8.4,
+          "checkInDateMonthAndYear": "October 2026",
+          "encryptedReviewData": "H6B7oQr5GvwMQvK/1lP+Rg==",
+          "formattedRating": "8.4",
+          "formattedReviewDate": "October 11, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Excellent",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "Responded October 22, 2026",
+          "responseText": "Dear Anjali,\n\nThank you for sharing your lovely feedback!\n\nWe're delighted that you enjoyed the peaceful ambience and warm hospitality extended by our team. We also appreciate you highlighting the musty smell in the gym shower and sauna areas. Your concern has been shared with our Housekeeping and Engineering teams for review.\n\nWe look forward to welcoming you back to Radisson Blu Atria Bengaluru for an even more comfortable stay!\n\nWarm regards,  \nManagement Team  \nRadisson Blu Atria Bengaluru",
+          "responseTranslateSource": "en",
+          "reviewComments": "Pleasant ambience and affable staff; the enclosures were tidy, except for the gym shower and sauna room, which were musty.",
+          "reviewNegatives": "",
+          "reviewPositives": "",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Agoda",
+          "reviewTitle": "Peaceful Stay",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "checkInDate": "2026-10-03T00:00:00+07:00",
+          "checkOutDate": "2026-10-05T00:00:00+07:00",
+          "responseDate": "2026-10-22T12:43:36.849+07:00",
+          "reviewDate": "2026-10-11T10:04:48+07:00",
+          "reviewerInfo": {
+            "countryName": "India",
+            "displayMemberName": "Anjali",
+            "flagName": "in",
+            "reviewGroupName": "Couple",
+            "roomTypeName": "Deluxe Room",
+            "countryId": 35,
+            "lengthOfStay": 2,
+            "reviewGroupId": 2,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": false,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": "2026/10/22 12:43:36"
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 1156870409,
+          "providerId": 3038,
+          "rating": 3.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "64GoVFrBSoYXUzK5wnwcvg==",
+          "formattedRating": "3.0",
+          "formattedReviewDate": "July 28, 2026",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Review score",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "",
+          "reviewNegatives": "Staff was not good enough trying to make me pay extra money as much as they try",
+          "reviewPositives": "It was bad experience",
+          "reviewProviderLogo": "",
+          "reviewProviderText": "Booking.com",
+          "reviewTitle": "Bad experience",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2026-07-28T00:00:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "MAJID",
+            "flagName": "",
+            "reviewGroupName": "Couple",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 2,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        },
+        {
+          "isHelpfulComment": false,
+          "isReviewVoted": false,
+          "isShowReviewResponse": false,
+          "isShowReviewResponseTranslateButton": false,
+          "isShowReviewTranslateButton": false,
+          "helpfulVotes": 0,
+          "responseLanguageId": 1,
+          "unHelpfulVotes": 0,
+          "hotelReviewId": 759567525,
+          "providerId": 28999,
+          "rating": 2.0,
+          "checkInDateMonthAndYear": "",
+          "encryptedReviewData": "lId7jk3/DvOEwFP42y13mA==",
+          "formattedRating": "2.0",
+          "formattedReviewDate": "September 20, 2023",
+          "formattedReviewHelpfulText": "Did you find this review helpful?",
+          "ratingText": "Review score",
+          "responderName": "Radisson Blu Atria Bengaluru",
+          "responseDateText": "",
+          "responseTranslateSource": "en",
+          "reviewComments": "\"\"",
+          "reviewNegatives": "I was Trapped in the hotel elevator due to a malfunctioning access card, no immediate help despite using the emergency alarm. When tested, the system failed. Extremely distressing experience, especially as a claustrophobe.",
+          "reviewPositives": "\"\"",
+          "reviewProviderLogo": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+          "reviewProviderText": "Priceline.com",
+          "reviewTitle": "Acceptable",
+          "translateSource": "en",
+          "translateTarget": "en",
+          "reviewDate": "2023-09-20T18:49:00+07:00",
+          "reviewerInfo": {
+            "countryName": "",
+            "displayMemberName": "Himalaya",
+            "flagName": "",
+            "reviewGroupName": "Group",
+            "roomTypeName": "",
+            "countryId": 0,
+            "lengthOfStay": 0,
+            "reviewGroupId": 6,
+            "roomTypeId": 0,
+            "reviewerReviewedCount": 0,
+            "isExpertReviewer": false,
+            "isShowGlobalIcon": true,
+            "isShowReviewedCount": false
+          },
+          "originalTitle": "",
+          "originalComment": "",
+          "ugcImages": [],
+          "formattedResponseDate": ""
+        }
+      ],
+      "reviewFilterAndSort": [
+        {
+          "providerId": 332,
+          "selectedSortingOption": 7,
+          "hasSelectedFilters": false,
+          "showLanguageFilter": true,
+          "showRoomTypeFilter": true,
+          "hasCommentsMoreThanOnePage": true,
+          "shouldShowReviewFilters": true,
+          "sortings": [
+            {
+              "sortId": 1,
+              "sortText": "Most recent"
+            },
+            {
+              "sortId": 2,
+              "sortText": "Rating, high to low"
+            },
+            {
+              "sortId": 3,
+              "sortText": "Rating, low to high"
+            },
+            {
+              "sortId": 7,
+              "sortText": "Most helpful"
+            }
+          ],
+          "filters": [
+            {
+              "name": "Language",
+              "filterItemsPerRow": 4,
+              "displayShowMore": true,
+              "type": 2,
+              "filterItems": [
+                {
+                  "id": 1,
+                  "key": "1",
+                  "name": "English",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 15,
+                  "key": "15",
+                  "name": "English / India",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 16,
+                  "key": "16",
+                  "name": "English / United Kingdom",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 2,
+                  "key": "2",
+                  "name": "Fran\u00e7ais",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 20,
+                  "key": "20",
+                  "name": "\u7e41\u9ad4\u4e2d\u6587 (\u53f0\u7063)",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 9,
+                  "key": "9",
+                  "name": "\ud55c\uad6d\uc5b4",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 40,
+                  "key": "40",
+                  "name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 6,
+                  "key": "6",
+                  "name": "\u65e5\u672c\u8a9e",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 31,
+                  "key": "31",
+                  "name": "\u010ce\u0161tina",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 17,
+                  "key": "17",
+                  "name": "English / South-Africa",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 4,
+                  "key": "4",
+                  "name": "Italiano",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 13,
+                  "key": "13",
+                  "name": "Nederlands",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 14,
+                  "key": "14",
+                  "name": "English / Canada",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 19,
+                  "key": "19",
+                  "name": "English / Singapore",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 7,
+                  "key": "7",
+                  "name": "\u7e41\u9ad4\u4e2d\u6587 (\u9999\u6e2f)",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 3,
+                  "key": "3",
+                  "name": "Deutsch",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 18,
+                  "key": "18",
+                  "name": "English / Australia",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 21,
+                  "key": "21",
+                  "name": "English / New Zealand",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 5,
+                  "key": "5",
+                  "name": "Espa\u00f1ol",
+                  "count": 0,
+                  "isSelected": false
+                }
+              ]
+            },
+            {
+              "name": "Room type",
+              "filterItemsPerRow": 4,
+              "displayShowMore": false,
+              "type": 3,
+              "filterItems": [
+                {
+                  "id": 11123074,
+                  "key": "11123074",
+                  "name": "Superior Room",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 11128083,
+                  "key": "11128083",
+                  "name": "Suite",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 11128075,
+                  "key": "11128075",
+                  "name": "Business Class Room",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 11128066,
+                  "key": "11128066",
+                  "name": "Deluxe Room",
+                  "count": 0,
+                  "isSelected": false
+                }
+              ]
+            },
+            {
+              "name": "Rating",
+              "filterItemsPerRow": 4,
+              "displayShowMore": true,
+              "type": 4,
+              "filterItems": [
+                {
+                  "id": 0,
+                  "key": "exceptional",
+                  "name": "9+ Exceptional",
+                  "count": 371,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "excellent",
+                  "name": "8-9 Excellent",
+                  "count": 66,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "very_good",
+                  "name": "7-8 Very Good",
+                  "count": 73,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "good",
+                  "name": "6-7 Good",
+                  "count": 35,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "below_expectation",
+                  "name": "<6 Below Expectation",
+                  "count": 73,
+                  "isSelected": false
+                }
+              ]
+            },
+            {
+              "name": "Time of the year",
+              "filterItemsPerRow": 4,
+              "displayShowMore": false,
+              "type": 5,
+              "filterItems": [
+                {
+                  "id": 0,
+                  "key": "mar_to_may",
+                  "name": "Mar - May",
+                  "count": 175,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "jun_to_aug",
+                  "name": "Jun - Aug",
+                  "count": 174,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "sep_to_nov",
+                  "name": "Sep - Nov",
+                  "count": 123,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "dec_to_feb",
+                  "name": "Dec - Feb",
+                  "count": 146,
+                  "isSelected": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "providerId": 3038,
+          "selectedSortingOption": 7,
+          "hasSelectedFilters": false,
+          "showLanguageFilter": true,
+          "showRoomTypeFilter": false,
+          "hasCommentsMoreThanOnePage": true,
+          "shouldShowReviewFilters": true,
+          "sortings": [
+            {
+              "sortId": 1,
+              "sortText": "Most recent"
+            },
+            {
+              "sortId": 2,
+              "sortText": "Rating, high to low"
+            },
+            {
+              "sortId": 3,
+              "sortText": "Rating, low to high"
+            },
+            {
+              "sortId": 7,
+              "sortText": "Most helpful"
+            }
+          ],
+          "filters": [
+            {
+              "name": "Language",
+              "filterItemsPerRow": 4,
+              "displayShowMore": true,
+              "type": 2,
+              "filterItems": [
+                {
+                  "id": 1,
+                  "key": "1",
+                  "name": "English",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 3,
+                  "key": "3",
+                  "name": "Deutsch",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 6,
+                  "key": "6",
+                  "name": "\u65e5\u672c\u8a9e",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 40,
+                  "key": "40",
+                  "name": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 2,
+                  "key": "2",
+                  "name": "Fran\u00e7ais",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 5,
+                  "key": "5",
+                  "name": "Espa\u00f1ol",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 4,
+                  "key": "4",
+                  "name": "Italiano",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 11,
+                  "key": "11",
+                  "name": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 13,
+                  "key": "13",
+                  "name": "Nederlands",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 8,
+                  "key": "8",
+                  "name": "\u7b80\u4f53\u4e2d\u6587",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 32,
+                  "key": "32",
+                  "name": "T\u00fcrk\u00e7e",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 7,
+                  "key": "7",
+                  "name": "\u7e41\u9ad4\u4e2d\u6587 (\u9999\u6e2f)",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 12,
+                  "key": "12",
+                  "name": "Portugu\u00eas (PT)",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 23,
+                  "key": "23",
+                  "name": "Bahasa Malaysia",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 39,
+                  "key": "39",
+                  "name": "\u05e2\u05d1\u05e8\u05d9\u05ea",
+                  "count": 0,
+                  "isSelected": false
+                }
+              ]
+            },
+            {
+              "name": "Rating",
+              "filterItemsPerRow": 4,
+              "displayShowMore": true,
+              "type": 4,
+              "filterItems": [
+                {
+                  "id": 0,
+                  "key": "exceptional",
+                  "name": "9+ Exceptional",
+                  "count": 196,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "excellent",
+                  "name": "8-9 Excellent",
+                  "count": 147,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "very_good",
+                  "name": "7-8 Very Good",
+                  "count": 157,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "good",
+                  "name": "6-7 Good",
+                  "count": 96,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "below_expectation",
+                  "name": "<6 Below Expectation",
+                  "count": 203,
+                  "isSelected": false
+                }
+              ]
+            },
+            {
+              "name": "Time of the year",
+              "filterItemsPerRow": 4,
+              "displayShowMore": false,
+              "type": 5,
+              "filterItems": [
+                {
+                  "id": 0,
+                  "key": "mar_to_may",
+                  "name": "Mar - May",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "jun_to_aug",
+                  "name": "Jun - Aug",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "sep_to_nov",
+                  "name": "Sep - Nov",
+                  "count": 0,
+                  "isSelected": false
+                },
+                {
+                  "id": 0,
+                  "key": "dec_to_feb",
+                  "name": "Dec - Feb",
+                  "count": 0,
+                  "isSelected": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "providerId": -999,
+          "selectedSortingOption": 7,
+          "hasSelectedFilters": false,
+          "showLanguageFilter": false,
+          "showRoomTypeFilter": false,
+          "hasCommentsMoreThanOnePage": true,
+          "shouldShowReviewFilters": false,
+          "sortings": [],
+          "filters": [
+            {
+              "name": "Language",
+              "filterItemsPerRow": 4,
+              "displayShowMore": false,
+              "type": 2,
+              "filterItems": [
+                {
+                  "id": 1,
+                  "key": "1",
+                  "name": "English",
+                  "count": 0,
+                  "isSelected": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "providerList": [
+        {
+          "id": 332,
+          "isDefaultProvider": true,
+          "totalIndex": 618
+        },
+        {
+          "id": 3038,
+          "isDefaultProvider": false,
+          "totalIndex": 799
+        },
+        {
+          "id": -999,
+          "isDefaultProvider": false,
+          "totalIndex": 12
+        }
+      ],
+      "provider": 332,
+      "searchReview": {
+        "searchKeyword": ""
+      }
+    },
+    "score": {
+      "reviewPageUrl": "/en-in/radisson-blu-atria-bengaluru/reviews/bangalore-in.html?propertyId=1785304&amp;countryId=35&amp;finalPriceView=1&amp;isShowMobileAppPrice=false&amp;cid=-1&amp;numberOfBedrooms=&amp;familyMode=false&amp;adults=2&amp;children=0&amp;rooms=1&amp;maxRooms=0&amp;checkIn=2026-11-20&amp;isCalendarCallout=false&amp;childAges=&amp;numberOfGuest=0&amp;missingChildAges=false&amp;travellerType=1&amp;showReviewSubmissionEntry=false&amp;currencyCode=INR&amp;isFreeOccSearch=false&amp;los=1&amp;searchrequestid=2d0e3551-7113-41a6-ac49-bf0dd47a9c7a&amp;ds=ZGJNsPB0CRHcSyXW",
+      "reviewProviderLogo": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+      "hotelId": 1785304,
+      "hotelName": "Radisson Blu Atria Bengaluru",
+      "providerIdForSeoReviewScore": 332,
+      "providerId": 332,
+      "demographics": [
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.5,
+          "maxScore": 10.0,
+          "id": 0,
+          "count": 2437,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.5",
+          "name": "All guests",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.9",
+            "text": "Excellent cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 8.5,
+              "uid": "cleanliness-8.9-28",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.6,
+              "formattedScore": "8.6",
+              "scale": 10.0,
+              "percentage": 86.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "86.0",
+              "cityAverage": 7.9,
+              "uid": "facilities-8.6-15",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 8.1,
+              "uid": "location-8.9-5",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 8.3,
+              "uid": "staffPerformance-8.9-29",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 7.7,
+              "uid": "valueForMoney-8.5-1",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 1057
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 410
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 119
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 120
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 107
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.6,
+          "maxScore": 10.0,
+          "id": 1,
+          "count": 230,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.6",
+          "name": "Business travelers",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.8",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.7,
+              "formattedScore": "8.7",
+              "scale": 10.0,
+              "percentage": 87.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "87.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.7-0",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.4,
+              "formattedScore": "8.4",
+              "scale": 10.0,
+              "percentage": 84.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "84.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.4-23",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.8,
+              "formattedScore": "8.8",
+              "scale": 10.0,
+              "percentage": 88.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "88.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.8-9",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.8,
+              "formattedScore": "8.8",
+              "scale": 10.0,
+              "percentage": 88.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "88.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.8-18",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.5-12",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 122
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 55
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 15
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 16
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 16
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.8,
+          "maxScore": 10.0,
+          "id": 2,
+          "count": 865,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.8",
+          "name": "Couples",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "9.0",
+            "text": "Excellent cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 9.0,
+              "formattedScore": "9.0",
+              "scale": 10.0,
+              "percentage": 90.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "90.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-9.0-11",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.6,
+              "formattedScore": "8.6",
+              "scale": 10.0,
+              "percentage": 86.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "86.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.6-12",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 9.1,
+              "formattedScore": "9.1",
+              "scale": 10.0,
+              "percentage": 91.0,
+              "scoreText": "Exceptional",
+              "progressBarScoreStyle": "91.0",
+              "cityAverage": 0.0,
+              "uid": "location-9.1-4",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.9-2",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.6,
+              "formattedScore": "8.6",
+              "scale": 10.0,
+              "percentage": 86.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "86.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.6-22",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 518
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 171
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 64
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 50
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 49
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.6,
+          "maxScore": 10.0,
+          "id": 3,
+          "count": 340,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.6",
+          "name": "Solo travelers",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.8",
+            "text": "Excellent cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.8,
+              "formattedScore": "8.8",
+              "scale": 10.0,
+              "percentage": 88.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "88.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.8-23",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.5-12",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.7,
+              "formattedScore": "8.7",
+              "scale": 10.0,
+              "percentage": 87.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "87.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.7-16",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.8,
+              "formattedScore": "8.8",
+              "scale": 10.0,
+              "percentage": 88.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "88.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.8-0",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.4,
+              "formattedScore": "8.4",
+              "scale": 10.0,
+              "percentage": 84.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "84.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.4-6",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 172
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 89
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 24
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 28
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 20
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.7,
+          "maxScore": 10.0,
+          "id": 4,
+          "count": 181,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.7",
+          "name": "Families with young children",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.9",
+            "text": "Excellent cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.9-16",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.5-28",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 9.0,
+              "formattedScore": "9.0",
+              "scale": 10.0,
+              "percentage": 90.0,
+              "scoreText": "Exceptional",
+              "progressBarScoreStyle": "90.0",
+              "cityAverage": 0.0,
+              "uid": "location-9.0-2",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.9-2",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.3,
+              "formattedScore": "8.3",
+              "scale": 10.0,
+              "percentage": 83.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "83.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.3-20",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 100
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 43
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 6
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 10
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.9,
+          "maxScore": 10.0,
+          "id": 5,
+          "count": 85,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.9",
+          "name": "Families with teens",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "9.0",
+            "text": "Exceptional cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 9.0,
+              "formattedScore": "9.0",
+              "scale": 10.0,
+              "percentage": 90.0,
+              "scoreText": "Exceptional",
+              "progressBarScoreStyle": "90.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-9.0-21",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.9-15",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 9.1,
+              "formattedScore": "9.1",
+              "scale": 10.0,
+              "percentage": 91.0,
+              "scoreText": "Exceptional",
+              "progressBarScoreStyle": "91.0",
+              "cityAverage": 0.0,
+              "uid": "location-9.1-7",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.9-22",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.5-24",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 51
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 17
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 6
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 7
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 332,
+              "logoUrl": "https://cdn6.agoda.net/images/default/agoda-logo-review.png",
+              "logoName": "agoda",
+              "logoAltText": "Agoda"
+            }
+          ],
+          "score": 8.8,
+          "maxScore": 10.0,
+          "id": 6,
+          "count": 217,
+          "providerId": 332,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.8",
+          "name": "Groups",
+          "reviewProviderLogoText": "Provided by verified guests of",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "9.0",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.9-4",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.7,
+              "formattedScore": "8.7",
+              "scale": 10.0,
+              "percentage": 87.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "87.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.7-12",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.9-8",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 9.0,
+              "formattedScore": "9.0",
+              "scale": 10.0,
+              "percentage": 90.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "90.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-9.0-1",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 8.6,
+              "formattedScore": "8.6",
+              "scale": 10.0,
+              "percentage": 86.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "86.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-8.6-25",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": [
+            {
+              "id": "exceptional",
+              "scoreText": "9+ Exceptional",
+              "count": 94
+            },
+            {
+              "id": "excellent",
+              "scoreText": "8-9 Excellent",
+              "count": 35
+            },
+            {
+              "id": "very_good",
+              "scoreText": "7-8 Very Good",
+              "count": 4
+            },
+            {
+              "id": "good",
+              "scoreText": "6-7 Good",
+              "count": 9
+            },
+            {
+              "id": "below_expectation",
+              "scoreText": "<6 Below Expectation",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 3038,
+              "logoUrl": "https://cdn6.agoda.net/images/default/b-com-logo.png",
+              "logoName": "booking",
+              "logoAltText": "Booking.com"
+            }
+          ],
+          "score": 8.1,
+          "maxScore": 10.0,
+          "id": 0,
+          "count": 1392,
+          "providerId": 3038,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.1",
+          "name": "All guests",
+          "reviewProviderLogoText": "Verified reviews provided by",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.4",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.2,
+              "formattedScore": "8.2",
+              "scale": 10.0,
+              "percentage": 82.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "82.0",
+              "cityAverage": 8.5,
+              "uid": "cleanliness-8.2-2",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.0,
+              "formattedScore": "8.0",
+              "scale": 10.0,
+              "percentage": 80.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "80.0",
+              "cityAverage": 8.2,
+              "uid": "facilities-8.0-22",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 8.1,
+              "uid": "location-8.5-21",
+              "subGrades": []
+            },
+            {
+              "id": "roomComfort",
+              "name": "Room comfort and quality",
+              "score": 8.2,
+              "formattedScore": "8.2",
+              "scale": 10.0,
+              "percentage": 82.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "82.0",
+              "cityAverage": 8.4,
+              "uid": "roomComfort-8.2-17",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.4,
+              "formattedScore": "8.4",
+              "scale": 10.0,
+              "percentage": 84.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "84.0",
+              "cityAverage": 8.4,
+              "uid": "staffPerformance-8.4-4",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 7.5,
+              "formattedScore": "7.5",
+              "scale": 10.0,
+              "percentage": 75.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "75.0",
+              "cityAverage": 7.6,
+              "uid": "valueForMoney-7.5-3",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": []
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 3038,
+              "logoUrl": "https://cdn6.agoda.net/images/default/b-com-logo.png",
+              "logoName": "booking",
+              "logoAltText": "Booking.com"
+            }
+          ],
+          "score": 8.1,
+          "maxScore": 10.0,
+          "id": 2,
+          "count": 377,
+          "providerId": 3038,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.1",
+          "name": "Couples",
+          "reviewProviderLogoText": "Verified reviews provided by",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.4",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.2,
+              "formattedScore": "8.2",
+              "scale": 10.0,
+              "percentage": 82.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "82.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.2-27",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.1,
+              "formattedScore": "8.1",
+              "scale": 10.0,
+              "percentage": 81.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "81.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.1-16",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.5-19",
+              "subGrades": []
+            },
+            {
+              "id": "roomComfort",
+              "name": "Room comfort and quality",
+              "score": 8.1,
+              "formattedScore": "8.1",
+              "scale": 10.0,
+              "percentage": 81.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "81.0",
+              "cityAverage": 0.0,
+              "uid": "roomComfort-8.1-25",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.4,
+              "formattedScore": "8.4",
+              "scale": 10.0,
+              "percentage": 84.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "84.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.4-0",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 7.6,
+              "formattedScore": "7.6",
+              "scale": 10.0,
+              "percentage": 76.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "76.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-7.6-28",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": []
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 3038,
+              "logoUrl": "https://cdn6.agoda.net/images/default/b-com-logo.png",
+              "logoName": "booking",
+              "logoAltText": "Booking.com"
+            }
+          ],
+          "score": 8.0,
+          "maxScore": 10.0,
+          "id": 3,
+          "count": 412,
+          "providerId": 3038,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.0",
+          "name": "Solo travelers",
+          "reviewProviderLogoText": "Verified reviews provided by",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.3",
+            "text": "Excellent cleanliness",
+            "name": "Cleanliness"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.3,
+              "formattedScore": "8.3",
+              "scale": 10.0,
+              "percentage": 83.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "83.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.3-25",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.0,
+              "formattedScore": "8.0",
+              "scale": 10.0,
+              "percentage": 80.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "80.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.0-14",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.3,
+              "formattedScore": "8.3",
+              "scale": 10.0,
+              "percentage": 83.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "83.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.3-2",
+              "subGrades": []
+            },
+            {
+              "id": "roomComfort",
+              "name": "Room comfort and quality",
+              "score": 8.3,
+              "formattedScore": "8.3",
+              "scale": 10.0,
+              "percentage": 83.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "83.0",
+              "cityAverage": 0.0,
+              "uid": "roomComfort-8.3-8",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.2,
+              "formattedScore": "8.2",
+              "scale": 10.0,
+              "percentage": 82.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "82.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.2-20",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 7.3,
+              "formattedScore": "7.3",
+              "scale": 10.0,
+              "percentage": 73.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "73.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-7.3-20",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": []
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 3038,
+              "logoUrl": "https://cdn6.agoda.net/images/default/b-com-logo.png",
+              "logoName": "booking",
+              "logoAltText": "Booking.com"
+            }
+          ],
+          "score": 8.1,
+          "maxScore": 10.0,
+          "id": 4,
+          "count": 455,
+          "providerId": 3038,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.1",
+          "name": "Families with young children",
+          "reviewProviderLogoText": "Verified reviews provided by",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.4",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.1,
+              "formattedScore": "8.1",
+              "scale": 10.0,
+              "percentage": 81.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "81.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.1-23",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 7.8,
+              "formattedScore": "7.8",
+              "scale": 10.0,
+              "percentage": 78.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "78.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-7.8-17",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.6,
+              "formattedScore": "8.6",
+              "scale": 10.0,
+              "percentage": 86.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "86.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.6-29",
+              "subGrades": []
+            },
+            {
+              "id": "roomComfort",
+              "name": "Room comfort and quality",
+              "score": 8.2,
+              "formattedScore": "8.2",
+              "scale": 10.0,
+              "percentage": 82.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "82.0",
+              "cityAverage": 0.0,
+              "uid": "roomComfort-8.2-13",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.4,
+              "formattedScore": "8.4",
+              "scale": 10.0,
+              "percentage": 84.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "84.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.4-3",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 7.5,
+              "formattedScore": "7.5",
+              "scale": 10.0,
+              "percentage": 75.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "75.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-7.5-9",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": []
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 3038,
+              "logoUrl": "https://cdn6.agoda.net/images/default/b-com-logo.png",
+              "logoName": "booking",
+              "logoAltText": "Booking.com"
+            }
+          ],
+          "score": 8.3,
+          "maxScore": 10.0,
+          "id": 6,
+          "count": 148,
+          "providerId": 3038,
+          "cityAverageText": "Average rating for 5 star properties in Bangalore",
+          "formattedScore": "8.3",
+          "name": "Groups",
+          "reviewProviderLogoText": "Verified reviews provided by",
+          "scoreText": "Excellent",
+          "subReview": {
+            "score": "8.8",
+            "text": "Excellent service",
+            "name": "Service"
+          },
+          "grades": [
+            {
+              "id": "cleanliness",
+              "name": "Cleanliness",
+              "score": 8.1,
+              "formattedScore": "8.1",
+              "scale": 10.0,
+              "percentage": 81.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "81.0",
+              "cityAverage": 0.0,
+              "uid": "cleanliness-8.1-9",
+              "subGrades": []
+            },
+            {
+              "id": "facilities",
+              "name": "Facilities",
+              "score": 8.3,
+              "formattedScore": "8.3",
+              "scale": 10.0,
+              "percentage": 83.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "83.0",
+              "cityAverage": 0.0,
+              "uid": "facilities-8.3-14",
+              "subGrades": []
+            },
+            {
+              "id": "location",
+              "name": "Location",
+              "score": 8.9,
+              "formattedScore": "8.9",
+              "scale": 10.0,
+              "percentage": 89.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "89.0",
+              "cityAverage": 0.0,
+              "uid": "location-8.9-15",
+              "subGrades": []
+            },
+            {
+              "id": "roomComfort",
+              "name": "Room comfort and quality",
+              "score": 8.5,
+              "formattedScore": "8.5",
+              "scale": 10.0,
+              "percentage": 85.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "85.0",
+              "cityAverage": 0.0,
+              "uid": "roomComfort-8.5-17",
+              "subGrades": []
+            },
+            {
+              "id": "staffPerformance",
+              "name": "Service",
+              "score": 8.8,
+              "formattedScore": "8.8",
+              "scale": 10.0,
+              "percentage": 88.0,
+              "scoreText": "Excellent",
+              "progressBarScoreStyle": "88.0",
+              "cityAverage": 0.0,
+              "uid": "staffPerformance-8.8-23",
+              "subGrades": []
+            },
+            {
+              "id": "valueForMoney",
+              "name": "Value for money",
+              "score": 7.9,
+              "formattedScore": "7.9",
+              "scale": 10.0,
+              "percentage": 79.0,
+              "scoreText": "Very good",
+              "progressBarScoreStyle": "79.0",
+              "cityAverage": 0.0,
+              "uid": "valueForMoney-7.9-7",
+              "subGrades": []
+            }
+          ],
+          "scoreDistribution": []
+        },
+        {
+          "reviewProviderLogos": [
+            {
+              "providerId": 27901,
+              "logoUrl": "https://cdn6.agoda.net/images/default/japanican-logo.png",
+              "logoName": "jtb",
+              "logoAltText": "Japanican.com"
+            },
+            {
+              "providerId": 28999,
+              "logoUrl": "https://cdn6.agoda.net/images/default/priceline-logo.png",
+              "logoName": "priceline",
+              "logoAltText": "Priceline.com"
+            },
+            {
+              "providerId": 27989,
+              "logoUrl": "https://cdn6.agoda.net/images/default/yanolja-logo.png",
+              "logoName": "yanolja",
+              "logoAltText": "Yanolja"
+            },
+            {
+              "providerId": 29014,
+              "logoUrl": "",
+              "logoName": "jtb",
+              "logoAltText": "Japanican.com"
+            }
+          ],
+          "score": 8.065,
+          "maxScore": 10.0,
+          "id": 0,
+          "count": 80,
+          "providerId": -999,
+          "cityAverageText": "",
+          "formattedScore": "8.1",
+          "name": "All guests",
+          "reviewProviderLogoText": "Real guests. Trusted reviews. Provided by",
+          "scoreText": "Excellent",
+          "grades": [],
+          "scoreDistribution": []
+        }
+      ],
+      "priceRange": ""
+    },
+    "reviewTabs": {
+      "reviewTabs": [
+        {
+          "providerId": 332,
+          "reviewCount": 2437,
+          "tabName": "Agoda Reviews (2,437)",
+          "ratingViaProvider": "Rating via Agoda"
+        },
+        {
+          "providerId": 3038,
+          "reviewCount": 1392,
+          "tabName": "Booking.com Reviews (1,392)",
+          "ratingViaProvider": "Rating via Booking.com"
+        },
+        {
+          "providerId": -999,
+          "reviewCount": 80,
+          "tabName": "Additional reviews (80)",
+          "ratingViaProvider": "Rating via additional providers"
+        }
+      ],
+      "defaultProviderId": 332,
+      "showBComAsLink": true,
+      "originalProvider": 332
+    },
+    "reviewCardPopup": {
+      "recommendTexts": [
+        "<b>1,467</b> customers had great experiences at this property",
+        "Excellent rating for <b>cleanliness</b> and <b>location</b>",
+        "Highly rated by <b>family</b> and <b>couple</b> travelers"
+      ],
+      "title": "<b>{0}% of guests</b> recommend this property, based on <b>{1} reviews.</b>\n",
+      "readAllButtonTitle": "Read all verified reviews",
+      "locale": "en-in"
+    },
+    "reviewWordCloud": {
+      "reviewWordCloud": [],
+      "hasReviewWordCloud": false
+    },
+    "facilityClassWordsCloud": {
+      "reviewWordCloud": [
+        {
+          "wordCloudList": [
+            {
+              "count": 2,
+              "filterTypeId": 7,
+              "hotelId": 1785304,
+              "wordsCloudId": 2,
+              "representors": "Breakfast",
+              "formattedCount": "2"
+            },
+            {
+              "count": 2,
+              "filterTypeId": 7,
+              "hotelId": 1785304,
+              "wordsCloudId": 4,
+              "representors": "Swimming pool",
+              "formattedCount": "2"
+            },
+            {
+              "count": 1,
+              "filterTypeId": 7,
+              "hotelId": 1785304,
+              "wordsCloudId": 25,
+              "representors": "Housekeeping",
+              "formattedCount": "1"
+            }
+          ],
+          "hasWordCloud": true,
+          "providerId": 332
+        }
+      ],
+      "hasReviewWordCloud": true
+    },
+    "reviewTagsV2": {
+      "reviewTagsV2": [
+        {
+          "tagId": 36,
+          "tagName": "Service",
+          "mentionedNumber": 96,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 70.0,
+          "negativePercentage": 29.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 13,
+          "tagName": "Cleanliness",
+          "mentionedNumber": 43,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 62.0,
+          "negativePercentage": 37.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 24,
+          "tagName": "Location",
+          "mentionedNumber": 34,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 88.0,
+          "negativePercentage": 11.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 31,
+          "tagName": "Room comfort",
+          "mentionedNumber": 22,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 72.0,
+          "negativePercentage": 27.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 30,
+          "tagName": "Restaurant options",
+          "mentionedNumber": 19,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 57.0,
+          "negativePercentage": 42.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 9,
+          "tagName": "Breakfast",
+          "mentionedNumber": 18,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 66.0,
+          "negativePercentage": 33.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 11,
+          "tagName": "Check in",
+          "mentionedNumber": 17,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 58.0,
+          "negativePercentage": 41.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 43,
+          "tagName": "Value for money",
+          "mentionedNumber": 14,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 71.0,
+          "negativePercentage": 28.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 5,
+          "tagName": "Bathroom",
+          "mentionedNumber": 11,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 9.0,
+          "negativePercentage": 90.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 28,
+          "tagName": "Pool",
+          "mentionedNumber": 11,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 63.0,
+          "negativePercentage": 36.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 3,
+          "tagName": "Atmosphere",
+          "mentionedNumber": 9,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 77.0,
+          "negativePercentage": 22.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 29,
+          "tagName": "Property facilities",
+          "mentionedNumber": 9,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 77.0,
+          "negativePercentage": 22.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 33,
+          "tagName": "Room size",
+          "mentionedNumber": 9,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 66.0,
+          "negativePercentage": 33.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 32,
+          "tagName": "Room design",
+          "mentionedNumber": 8,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 37.0,
+          "negativePercentage": 62.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 1,
+          "tagName": "Air conditioning",
+          "mentionedNumber": 6,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 16.0,
+          "negativePercentage": 83.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 6,
+          "tagName": "Bathtub",
+          "mentionedNumber": 6,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 50.0,
+          "negativePercentage": 50.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 38,
+          "tagName": "Shower",
+          "mentionedNumber": 6,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 16.0,
+          "negativePercentage": 83.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 10,
+          "tagName": "Business trip",
+          "mentionedNumber": 5,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 100.0,
+          "negativePercentage": 0.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 12,
+          "tagName": "Check-out",
+          "mentionedNumber": 5,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 60.0,
+          "negativePercentage": 40.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        },
+        {
+          "tagId": 21,
+          "tagName": "In room amenities",
+          "mentionedNumber": 5,
+          "positiveNumber": 0,
+          "negativeNumber": 0,
+          "neutralNumber": 0,
+          "positivePercentage": 80.0,
+          "negativePercentage": 20.0,
+          "neutralPercentage": 0.0,
+          "ratingType": "Excellent"
+        }
+      ],
+      "hasReviewTagsV2": true
+    },
+    "topicSummaries": {
+      "positives": [
+        {
+          "topicId": 40,
+          "topicName": "General Services",
+          "topicSummary": {
+            "text": "Courteous, helpful service stands out, with staff handling requests well and keeping interactions warm across the front desk, housekeeping, and restaurant.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 12
+          }
+        },
+        {
+          "topicId": 43,
+          "topicName": "Location",
+          "topicSummary": {
+            "text": "Central Bengaluru location makes it easy to get around, with Cubbon Park, Chinnaswamy, UB City mall, and other city spots close by.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 10
+          }
+        },
+        {
+          "topicId": 30,
+          "topicName": "Breakfast",
+          "topicSummary": {
+            "text": "Breakfast gets strong praise for taste and variety, with reviews mentioning a wide buffet spread, many fruits, sweets, juices, and good coffee.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 10
+          }
+        },
+        {
+          "topicId": 54,
+          "topicName": "Room Cleanliness",
+          "topicSummary": {
+            "text": "Clean, tidy rooms and spotless bathrooms come up often, with several reviews describing the rooms as well maintained and hygienic.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 10
+          }
+        },
+        {
+          "topicId": 41,
+          "topicName": "Value for Money",
+          "topicSummary": {
+            "text": "Value for money comes through in several reviews, especially for the central location, clean rooms, facilities, and overall quality at the rate paid.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 8
+          }
+        },
+        {
+          "topicId": 29,
+          "topicName": "On-site Restaurant",
+          "topicSummary": {
+            "text": "On-site dining earns praise for good food, with reviews highlighting the restaurant and in-room dining as enjoyable parts of the stay.",
+            "sentiment": "positive",
+            "numberOfReviewMentioned": 7
+          }
+        }
+      ]
+    }
+  }
+}

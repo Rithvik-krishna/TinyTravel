@@ -1,0 +1,741 @@
+{
+  "url": "https://www.agoda.com/api/activities/graphql",
+  "status": 200,
+  "data": {
+    "data": {
+      "search": {
+        "isSuccess": true,
+        "result": {
+          "isCompleted": true,
+          "resultInfo": {
+            "totalActivities": 0,
+            "totalFilteredActivities": 0,
+            "pagination": {
+              "number": 1,
+              "size": 10
+            }
+          },
+          "activities": [],
+          "matrix": {
+            "sort": {
+              "availableCode": [
+                "Price",
+                "Rating",
+                "Recommended",
+                "BestOfCity"
+              ],
+              "availableOrder": [
+                "Ascending",
+                "Descending"
+              ]
+            },
+            "filter": {
+              "rangeFilterMatrix": [
+                {
+                  "code": "Price",
+                  "min": 0.0,
+                  "max": 0.0,
+                  "bucket": []
+                },
+                {
+                  "code": "Rating",
+                  "min": 0.0,
+                  "max": 5.0,
+                  "bucket": []
+                }
+              ],
+              "valueFilterMatrix": [
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "UpTo1Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "1To4Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "4To24Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "24To72Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MoreThan72Hour",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Duration"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "VIATOR",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "KKDAY",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BCOM",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BEMYGUEST",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "GLOBALTIX",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BEMYGUESTCHANNELMANAGER",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BMGKLOOK",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Supplier"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "All",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Attractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Experiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FoodAndDrinks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SimCardsAndWifi",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Tours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Transportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "TravelEssentials",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Category"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "FreeCancellation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "InstantConfirmation",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "BookingFeature"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "All",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportFastTrack",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportLounges",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportTransfer",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AmusementParks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AquariumsAndZoos",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArcheryShooting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AtvRiding",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BeautyAndSkincare",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BeerAndWineTasting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BicycleAndEScooterRentals",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BicycleTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BoatAndYachtTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Buffet",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BusTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Buses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CableCars",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CampingGlamping",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CityPasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ClothingAndCostumeRental",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CookingClass",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CookingClasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Cruise",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CulinaryTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "EventsAndExhibitions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyDinner",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Fishing",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FullDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HalfDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HopOnHopOffTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HopOnHopOffTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IslandHopping",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "KayakingRafting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalDiningExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuggageServices",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LunchAndDinnerCruises",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuxuryExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuxuryTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MotorbikeTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MultiDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MuseumsAndGalleries",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightTimeAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightlifeExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ObservationDecks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherFoodAndDrinks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherSimAndWifi",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTravelEssentials",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Paragliding",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PhotographyExperience",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateCarTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateDrivers",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Restaurants",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticDinner",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SafariWildlife",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ScubaDiving",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SeasonalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SeasonalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SelfGuidedTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ShoppingTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ShowsAndPerformances",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SimCards",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SkipTheQueue",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SmallGroupTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Snorkeling",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SpasAndHotSprings",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Surfing",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Trains",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "VehicleRentals",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WalkingTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WaterTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WellnessYoga",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Wifi",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WorkshopsAndClasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ZipliningBungee",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "eSIMs",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "SubCategory"
+                }
+              ]
+            }
+          }
+        },
+        "errors": []
+      }
+    }
+  }
+}

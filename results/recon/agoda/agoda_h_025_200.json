@@ -1,0 +1,120 @@
+{
+  "url": "https://www.agoda.com/api/card/campaigns",
+  "status": 200,
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "bbb48e8d-0e86-4a70-b58b-53e0c8cbe239",
+      "sections": [
+        {
+          "sectionName": "Flights_And_Activities",
+          "cards": [
+            {
+              "cardId": 9392,
+              "cardName": "Activities_Wonderfruit_Homepage_Banner",
+              "priority": 346,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 54,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 54,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "activity",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/cdn-custmkt/upload/20261113/mspa_homepage_banner_688x320_en_2x_revis_3ee7.png",
+                "imageRedirectLink": "https://www.agoda.com/activities/detail?activityId=1777705&amp;ds=nhq3+A6EcKj4NRHT&amp;cityId=8584&amp;travelDate=2026-12-05&amp;site_id=1949835",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 9703,
+              "cardName": "26Q4_Activity_HKDL campaign",
+              "priority": 340,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 54,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 54,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "activity",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/webcampaign/2026_Q4_HKDL_Oct/MSPA/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/activities/detail?activityId=1033927&cid=1949833",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 4433,
+              "cardName": "Activities_Evergreen_PMC",
+              "priority": 332,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 54,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 54,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "activity",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/EmailMarketing/activities/hp_banner/web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/promotion/redeem?cinfo=20250501_174100&returnUrl=%2F%3Fcid%3D1915785",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            }
+          ],
+          "categories": [
+            {
+              "categoryId": 54,
+              "categoryName": "Uncategorized",
+              "categoryDescription": "Uncategorized",
+              "priority": 54,
+              "parentPriorityId": null
+            }
+          ]
+        }
+      ]
+    },
+    "error": null
+  }
+}

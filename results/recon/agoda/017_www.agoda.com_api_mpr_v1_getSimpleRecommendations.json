@@ -1,0 +1,121 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/getSimpleRecommendations?pageTypeId=1",
+  "status": 200,
+  "content_type": "application/json",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-9nffq",
+    "ag-correlation-id": "4c5f1e30-3eaf-4a47-8844-21ad313bec5a",
+    "content-type": "application/json",
+    "vary": "User-Agent, Accept-Encoding",
+    "date": "Sun, 15 Nov 2026 07:30:34 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "x-envoy-datacenter": "sg, sg, sg",
+    "x-envoy-upstream-service-time": "42",
+    "access-control-allow-credentials": "true",
+    "x-ratelimit-reset": "1794727835",
+    "x-ratelimit-remaining": "608",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "663",
+    "akamai-grn": "0.2d460317.1794727834.8edc1e8",
+    "x-ratelimit-limit": "1000"
+  },
+  "data": {
+    "tripRecommendationUIState": [
+      {
+        "component": "Carousel",
+        "productType": "Flight",
+        "id": 2,
+        "variant": "Full"
+      },
+      {
+        "component": "FlagshipAttractionCarousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "Carousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "ActivitySubCategoriesCarousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "Carousel",
+        "productType": "Property",
+        "id": 1,
+        "variant": "Full"
+      }
+    ],
+    "data": [
+      {
+        "id": 2,
+        "productType": "Flight",
+        "startDate": "2026-12-15T14:30:34",
+        "cityId": 14552,
+        "cityName": "New Delhi",
+        "adults": 1,
+        "children": 0,
+        "product": {
+          "flight": {
+            "searchType": 1,
+            "cabinType": "ECO",
+            "departureFromName": "Bangalore",
+            "departureFrom": "BLR",
+            "arrivalToName": "New Delhi",
+            "arrivalTo": "DEL"
+          }
+        },
+        "recommendationReason": "MostBookedFromOriginCity"
+      },
+      {
+        "id": 1,
+        "productType": "Property",
+        "startDate": "2026-12-15T14:30:34",
+        "endDate": "2026-12-21T14:30:34",
+        "cityId": 14552,
+        "cityName": "New Delhi",
+        "adults": 1,
+        "children": 0,
+        "product": {
+          "property": {
+            "numberOfRooms": 1
+          }
+        },
+        "recommendationReason": "MostBookedFromOriginCity"
+      },
+      {
+        "id": 3,
+        "productType": "Activity",
+        "startDate": "2026-12-15T14:30:34",
+        "cityId": 14552,
+        "cityName": "New Delhi",
+        "recommendationReason": "MostBookedFromOriginCity",
+        "latitude": 28.635308,
+        "longitude": 77.22496
+      }
+    ],
+    "cid": "1917399",
+    "utmCampaigns": {
+      "desktop": "home_page_widget_desktop",
+      "mobile": "home_page_widget_mweb"
+    },
+    "enabledFeatureFlags": [
+      "FlightsEligible",
+      "ActivitiesEligible",
+      "EnableESimBusesTrainsAndFerries",
+      "UCSDirectActivityUrl",
+      "FixActivityTravelDateTimezone",
+      "UCSActivitiesPromocodeBadges",
+      "UseActivityCityIdFromCriteria"
+    ]
+  }
+}

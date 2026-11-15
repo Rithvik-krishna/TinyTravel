@@ -1,0 +1,2780 @@
+{
+  "url": "https://www.cleartrip.com/offermgmt/hotelsOffer/offerJson/prod/hotelOffers.json",
+  "status": 200,
+  "data": [
+    {
+      "time": {
+        "to": "2026-11-30T23:59:59",
+        "from": "2026-11-04T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_bsb_fkaxis.jpg",
+            "url": "/all-offers/flipkart-axis-cc-ct-special-offer/?utm_source=Cleartrip_OTA"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_fksbi.jpg",
+            "url": "/all-offers/sbicbc-ct-special-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-10-31T23:59:59",
+        "from": "2026-10-19T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_bsb_fkaxis.jpg",
+            "url": "/all-offers/flipkart-axis-cc-ct-special-offer/?utm_source=Cleartrip_OTA"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_fksbi.jpg",
+            "url": "/all-offers/sbicbc-ct-special-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-10-18T23:59:59",
+        "from": "2026-10-08T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/desktop_bsb_oberoi.jpg",
+            "url": "/hotels/merchresults?name=Oberoi%20Hotels%20TBBD%202026&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_5_star.jpg",
+            "url": "/hotels/merchresults?name=5%20Star%20Hotels%20TBBD&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB (10).jpg",
+            "url": "/hotels/merchresults?name=Pride%20BBD%2726%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/desktop_rr_min44.png",
+            "url": "/hotels/merchresults?name=TICKTOK%20deals%20&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_ctfirst.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92499 | Flat 25% off on first booking | Book Hotels at \u20b90",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-10-08T23:59:59",
+        "from": "2026-10-08T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_marriott.jpg",
+            "url": "/hotels/merchresults?name=Marriott%20TBBD%202026&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_taj.jpg",
+            "url": "/hotels/merchresults?name=IHCL%20hotel%20deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_5_star.jpg",
+            "url": "/hotels/merchresults?name=5%20Star%20Hotels%20TBBD&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_lemontree.jpg",
+            "url": "/hotels/merchresults?name=Lemon%20Tree%20BBD%2726&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_rushhour.jpg",
+            "url": "/hotels/merchresults?name=Rush%20Hour%20TBBD&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_ctfirst.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92499 | Flat 25% off on first booking | Book Hotels at \u20b90",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-10-07T23:59:59",
+        "from": "2026-10-01T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_bsb_fkaxis.jpg",
+            "url": "/all-offers/flipkart-axis-cc-ct-special-offer/?utm_source=Cleartrip_OTA"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_BBD_coming soon_1_11zon (1).jpg",
+            "url": "/pages/BBD-P4-Oct26-intrigue?isRnRequired=true"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_fksbi.jpg",
+            "url": "/all-offers/sbicbc-ct-special-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/RR_BBD_coming soon (7)_11zon.jpg",
+            "url": "/pages/Earlbird-SPL-Oct26"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-09-30T23:59:59",
+        "from": "2026-09-01T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_bsb_fkaxis.jpg",
+            "url": "/all-offers/flipkart-axis-cc-ct-special-offer/?utm_source=Cleartrip_OTA"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_BBD_coming soon (2)_11zon.jpg",
+            "url": "/pages/BBD-P3-Sep-Oct26-intrigue"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_fksbi.jpg",
+            "url": "/all-offers/sbicbc-ct-special-offer/"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-08-31T23:59:59",
+        "from": "2026-05-16T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_CTFIRRST.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_5 star.jpg",
+            "url": "/hotels/merchresults?name=5%20star%20hotels&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_BOTD_Ginger_11zon (3).jpg",
+            "url": "/hotels/merchresults?name=Ginger%20TMS%2726&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "Login & Get Flat 25% off on your first booking - Use Code: CTFIRST",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-08-18T23:59:59",
+        "from": "2026-05-16T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_RBL (3)_11zon.jpg",
+            "url": "/all-offers/pnb-credit-cards-hotels-offer-3-2/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/dt_axis_freedom.jpg",
+            "url": "/all-offers/hotels-indsale-axis/"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "Login & Get Flat 25% off on your first booking - Use Code: CTFIRST",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-08-06T23:59:59",
+        "from": "2026-05-16T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/clarks_botd_bsb_tmsv2.jpg",
+            "url": "/hotels/merchresults?name=Clarks%20Deals%20TMS&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_Bank Dom-1.jpg",
+            "url": "/hotels/merchresults?name=5%20star%20hotels&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 |Book @ 0 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    },
+    {
+      "time": {
+        "to": "2026-07-31T23:59:59",
+        "from": "2026-05-16T00:00:00"
+      },
+      "HomePageBSB": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/CTFIRST_BSB_DESKTOP_1.jpg",
+            "url": "/all-offers/first-booking-exclusive-hotels-offer/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/clarks_botd_bsb_tmsv2.jpg",
+            "url": "/hotels/merchresults?name=Clarks%20Deals%20TMS&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_235,h_122,dpr_2/offermgmt-prod/offermgmt/images/banner/BSB_Bank Dom-1.jpg",
+            "url": "/hotels/merchresults?name=5%20star%20hotels&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageRightRail": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_206,dpr_2/offermgmt-prod/offermgmt/images/banner/gifts_rr.jpg",
+            "url": "/lp/giftcards/"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_265,h_202,dpr_2/offermgmt-prod/offermgmt/images/banner/hhp_dt_int_rr.jpg",
+            "url": "/hotels/merchresults?name=International%20hotel%20deal&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0"
+          }
+        ],
+        "enabled": true
+      },
+      "humbgerSale": {
+        "banners": [
+          {
+            "text": "",
+            "subHeading": "5-star hotels from \u20b92999 |Book @ 0 | Flat 25% off on first booking",
+            "dotEnabled": false,
+            "enabled": true,
+            "color": "red"
+          }
+        ],
+        "enabled": true
+      },
+      "name": "",
+      "HomePageRightRailBottom": {
+        "banners": [
+          {
+            "heading": "Last Minute Deals!",
+            "title": "Upto 40% off  on Hotels for check-ins today & tomorrow",
+            "link": "https://www.cleartrip.com/hotels/merchresults?name=Last%20Minute%20Deals&country=IN&checkIn=&checkOut=&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "Extra savings with Flipkart Axis bank cards!\"",
+            "title": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card ",
+            "link": "https://offers.cleartrip.com/flipkart-axis-bank-credit-cards/",
+            "desc": "",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "Get 5% unlimited cashback with Flipkart Axis Bank Credit Card "
+          },
+          {
+            "heading": "Domestic hotel offer!",
+            "title": "Get upto 30% Off on hotels",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/",
+            "desc": "Use Coupon Code : CTHOTEL\"",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": ""
+          },
+          {
+            "heading": "International Hotel Offer!",
+            "title": "Get up to \u20b94,000 off on International Hotels",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/",
+            "desc": "Use Coupon Code : CTINTL",
+            "hasTracker": "",
+            "trackerCat": "",
+            "tracker": "",
+            "description": "h"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePagePopularDestinations": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/manali.jpg",
+            "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&poi=&hotelId=&dest_code=34981&chk_in=&chk_out=&localityId=&version=V2&baseLocation=CITY-34981&adults=2&childs=0&num_rooms=1&adults1=2&children1=0",
+            "name": "Manali",
+            "properties": "676 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/goa.jpg",
+            "url": "/hotels/hotels-in-goa",
+            "name": "Goa",
+            "properties": "4010 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/bangalore.jpg",
+            "url": "/hotels/hotels-in-bangalore",
+            "name": "Bangalore",
+            "properties": "3162 Properties"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/jaipur.png",
+            "url": "/hotels/hotels-in-jaipur",
+            "properties": "2061 Properties",
+            "name": "Jaipur"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_176,h_178,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/offermgmt-prod/offermgmt/hotelsCommonImages/tripSuggestor/Pattaya.png",
+            "url": "/hotels/hotels-in-pattaya",
+            "name": "Pattaya",
+            "properties": "1329 Properties"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageGreatDeals": {
+        "banners": [
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/cocoon_h.jpg",
+            "url": "/hotels/info/cocoon-hotel-319778",
+            "name": "Cocoon Hotel",
+            "location": "Pune",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Country_Inn_H.jpg",
+            "url": "/hotels/info/country-inn-suites-by-radisson-sahibabad-3979805",
+            "name": "Country Inn & Suites By Radisson, Sahibabad",
+            "location": "Ghaziabad",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Radisson_H.jpg",
+            "url": "/hotels/info/radisson-blu-udaipur-palace-resort-spa-317199",
+            "name": "Radisson Blu Udaipur Palace Resort & Spa",
+            "location": "Udaipur",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Aamby_H.jpg",
+            "url": "/hotels/details/aamby-valley-city-753288?c=03092024|04092024&city=Lonavala&state=Maharashtra&country=IN&r=2,0",
+            "name": "Aamby Valley City",
+            "location": "Lonavala",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/pride_H.jpg",
+            "url": "/hotels/info/the-pride-hotel-chennai-42160",
+            "location": "Chennai",
+            "name": "The Pride Hotel Chennai",
+            "rating": "4"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Park_H.jpg",
+            "url": "/hotels/info/the-park-kolkata-40797",
+            "name": "The Park Kolkata",
+            "rating": "4.5",
+            "location": "Kolkata"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/purple_H.jpg",
+            "url": "/hotels/info/purple-palms-resort-spa-1361370",
+            "name": "Purple Palms Resort & Spa",
+            "location": "Coorg",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Golden_H (1).jpg",
+            "url": "/hotels/info/golden-tulip-goa-candolim-384982",
+            "location": "Goa",
+            "name": "Golden Tulip Goa Candolim",
+            "rating": "4.5"
+          },
+          {
+            "src": "https://rukmini-ct.flixcart.com/w_411,h_411,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive,dpr_2/offermgmt-prod/offermgmt/images/banner/Ramada_H_1.jpg",
+            "url": "/hotels/info/ramada-plaza-by-wyndham-palm-grove-41020",
+            "name": "Ramada Plaza by Wyndham Palm Grove",
+            "location": "Mumbai",
+            "rating": "4.5"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageTrendingGateways": {
+        "banners": [
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_241,h_246/offermgmt-prod/offermgmt/images/banner/Goa_1_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_2_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/f_auto,q_auto,w_121,h_120/offermgmt-prod/offermgmt/images/banner/Goa_3_1.jpg",
+                "url": "/hotels/results?city=Goa&state=Goa&country=IN&poi=&hotelId=&dest_code=37264&chk_in=28/04/2024&chk_out=29/04/2024&adults=2&childs=0&num_rooms=1&adults1=2&children1=0&"
+              }
+            ],
+            "name": "Best Hotels In Goa",
+            "properties": "3051 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty1.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty2.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Ooty3.jpg",
+                "url": "/hotels/results?city=Ooty&state=Tamil+Nadu&country=IN&dest_code=106258&adults1=2&children1=0&num_rooms=1&adults=2&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Couple friendly hotels in Ooty",
+            "properties": "530 properties available"
+          },
+          {
+            "images": [
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_241,h_246,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali1.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali2.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              },
+              {
+                "src": "https://rukmini-ct.flixcart.com/w_121,h_120,f_auto,q_auto,c_fill,e_sharpen:80,g_auto,fl_progressive/ct-hotel-images-devqa/places/cities/images/curated-images/Manali3.jpg",
+                "url": "/hotels/results?city=Manali&state=Himachal+Pradesh&country=IN&dest_code=34981&adults1=2&children1=0&num_rooms=1&childs=0&chk_in=28/04/2024&chk_out=29/04/2024"
+              }
+            ],
+            "name": "Hill view hotels in Manali",
+            "properties": "1198 properties available"
+          }
+        ],
+        "enabled": true
+      },
+      "HomePageFooter": {
+        "banners": [
+          {
+            "title": "5% - 30% Off Upto INR 4,000/-   on Domestic and International Hotels ~ CTHOTEL ",
+            "link": "https://offers.cleartrip.com/get-upto-25-off-on-hotels-cthotel/"
+          },
+          {
+            "title": "Flat 25% off on Hotels with AXIS Bank Credit Card & EMI Transactions! ~ AXISCC | AXISEMI",
+            "link": "https://www.cleartrip.com/all-offers/axis-bank-ct-cc-hotels-special-offer/"
+          },
+          {
+            "title": "Get Upto 4000 off on International Hotels - CTHOTEL",
+            "link": "https://offers.cleartrip.com/flat-10-off-upto-inr-7500-on-international-hotels/?_gl=1*13u2gzu*_gcl_au*MTIwODc1NDQ2NS4xNzE0MTExOTIy*_ga*MTIwMzA2MDUzLjE3MTQxMTE5MjI.*_ga_5CWGPF7QB9*MTcxNjI3MDU2NC4zMi4xLjE3MTYyNzIwNTkuNS4wLjA."
+          }
+        ],
+        "enabled": true
+      },
+      "featureFlagList": {
+        "cysWidget": true,
+        "earnedLoyaltyWidget": true
+      }
+    }
+  ]
+}

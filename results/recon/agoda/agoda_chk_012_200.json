@@ -1,0 +1,8 @@
+{
+  "url": "https://www.agoda.com/api/cronos/search/npc/GetTimeSaleContent",
+  "status": 200,
+  "data": {
+    "sectionTitle": "",
+    "banners": []
+  }
+}

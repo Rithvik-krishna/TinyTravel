@@ -1,0 +1,947 @@
+{
+  "timestamp": "2026-11-15T08:22:13.818209+00:00",
+  "summary": {
+    "cleartrip": {
+      "Radisson Blu Atria Bengaluru": {
+        "runs": 5,
+        "success_count": 5,
+        "success_rate_pct": 100.0,
+        "avg_seconds": 21.78,
+        "correct_occupancy_count": 5,
+        "blockers": []
+      },
+      "Sterlings Mac Hotel": {
+        "runs": 5,
+        "success_count": 5,
+        "success_rate_pct": 100.0,
+        "avg_seconds": 21.09,
+        "correct_occupancy_count": 5,
+        "blockers": []
+      },
+      "La Marvella": {
+        "runs": 5,
+        "success_count": 5,
+        "success_rate_pct": 100.0,
+        "avg_seconds": 20.84,
+        "correct_occupancy_count": 5,
+        "blockers": []
+      },
+      "_overall": {
+        "total_runs": 15,
+        "success_rate_pct": 100.0,
+        "avg_seconds": 21.24,
+        "correct_occupancy_rate_pct": 100.0
+      }
+    },
+    "agoda": {
+      "Radisson Blu Atria Bengaluru": {
+        "runs": 5,
+        "success_count": 0,
+        "success_rate_pct": 0.0,
+        "avg_seconds": 35.08,
+        "correct_occupancy_count": 0,
+        "blockers": [
+          "captcha"
+        ]
+      },
+      "Sterlings Mac Hotel": {
+        "runs": 5,
+        "success_count": 0,
+        "success_rate_pct": 0.0,
+        "avg_seconds": 8.36,
+        "correct_occupancy_count": 0,
+        "blockers": [
+          "captcha"
+        ]
+      },
+      "La Marvella": {
+        "runs": 5,
+        "success_count": 0,
+        "success_rate_pct": 0.0,
+        "avg_seconds": 8.72,
+        "correct_occupancy_count": 0,
+        "blockers": [
+          "captcha"
+        ]
+      },
+      "_overall": {
+        "total_runs": 15,
+        "success_rate_pct": 0.0,
+        "avg_seconds": 17.39,
+        "correct_occupancy_rate_pct": 0.0
+      }
+    }
+  },
+  "runs": [
+    {
+      "platform": "agoda",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 1,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 12.22,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 2,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 112.32,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 3,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 31.68,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 4,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 11.66,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 5,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 7.52,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 1,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 10.01,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 2,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 7.61,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 3,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 7.67,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 4,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 7.99,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 5,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 8.53,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "La Marvella",
+      "iteration": 1,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 7.97,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "La Marvella",
+      "iteration": 2,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 10.4,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "La Marvella",
+      "iteration": 3,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 8.21,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "La Marvella",
+      "iteration": 4,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 8.92,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "agoda",
+      "hotel_name": "La Marvella",
+      "iteration": 5,
+      "success": false,
+      "status": "blocked",
+      "blocker": "captcha",
+      "reached_payment_page": false,
+      "seconds": 8.12,
+      "steps": 2,
+      "max_occupancy": null,
+      "correct_occupancy": false,
+      "room_type": "",
+      "meal_plan": "",
+      "cancellation_policy": "",
+      "price_shown_on_listing": null,
+      "price_final_payable": null,
+      "cheapest_any_payable": null,
+      "fee_lines": [],
+      "notes": "Anti-bot CAPTCHA/challenge detected on Agoda search page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 1,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.86,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 9387.0,
+      "price_final_payable": 11077.0,
+      "cheapest_any_payable": 10611.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.8s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 2,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 23.63,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 9387.0,
+      "price_final_payable": 11077.0,
+      "cheapest_any_payable": 10611.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 23.6s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 3,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 23.32,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 9387.0,
+      "price_final_payable": 11077.0,
+      "cheapest_any_payable": 10611.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 23.3s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 4,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.22,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 9387.0,
+      "price_final_payable": 11077.0,
+      "cheapest_any_payable": 10611.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.2s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "iteration": 5,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.87,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 9387.0,
+      "price_final_payable": 11077.0,
+      "cheapest_any_payable": 10611.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.9s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 1,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.78,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939.0,
+      "price_final_payable": 38868.0,
+      "cheapest_any_payable": 38868.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5929.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.8s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 2,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 21.27,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939.0,
+      "price_final_payable": 38868.0,
+      "cheapest_any_payable": 38868.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5929.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 21.2s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 3,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.5,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939.0,
+      "price_final_payable": 38868.0,
+      "cheapest_any_payable": 38868.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5929.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 4,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.53,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939.0,
+      "price_final_payable": 38868.0,
+      "cheapest_any_payable": 38868.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5929.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "Sterlings Mac Hotel",
+      "iteration": 5,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 22.39,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room Only",
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 32939.0,
+      "price_final_payable": 38868.0,
+      "cheapest_any_payable": 38868.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 32939.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5929.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 22.4s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "La Marvella",
+      "iteration": 1,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 21.99,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 8539.0,
+      "price_final_payable": 15639.0,
+      "cheapest_any_payable": 11605.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 8539.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 7100.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 22.0s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "La Marvella",
+      "iteration": 2,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.53,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 8539.0,
+      "price_final_payable": 15639.0,
+      "cheapest_any_payable": 11605.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 8539.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 7100.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "La Marvella",
+      "iteration": 3,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.54,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 8539.0,
+      "price_final_payable": 15639.0,
+      "cheapest_any_payable": 11605.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 8539.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 7100.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "La Marvella",
+      "iteration": 4,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.54,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 8539.0,
+      "price_final_payable": 15639.0,
+      "cheapest_any_payable": 11605.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 8539.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 7100.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    },
+    {
+      "platform": "cleartrip",
+      "hotel_name": "La Marvella",
+      "iteration": 5,
+      "success": true,
+      "status": "verified",
+      "blocker": null,
+      "reached_payment_page": true,
+      "seconds": 20.59,
+      "steps": 7,
+      "max_occupancy": 2,
+      "correct_occupancy": true,
+      "room_type": "Room with Breakfast",
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 8539.0,
+      "price_final_payable": 15639.0,
+      "cheapest_any_payable": 11605.0,
+      "fee_lines": [
+        {
+          "label": "Base fare",
+          "amount": 8539.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 7100.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "other"
+        }
+      ],
+      "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+    }
+  ]
+}

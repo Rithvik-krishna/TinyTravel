@@ -1,0 +1,4517 @@
+{
+  "url": "https://www.agoda.com/api/gw/flight/SearchUnbundled?",
+  "status": 200,
+  "data": {
+    "retry": {
+      "next": 2000
+    },
+    "trips": [
+      {
+        "id": 1,
+        "bundles": [
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 6634.0,
+                              "inc": 9393.98
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 6634.0,
+                              "inc": 9393.98
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 6634.0,
+                          "inc": 9393.98
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2759.98,
+                              "inc": 2759.98
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2759.98,
+                              "inc": 2759.98
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2759.98,
+                              "inc": 2759.98
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2759.98,
+                              "inc": 2759.98
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2759.98,
+                          "inc": 2759.98
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -349.65,
+                              "inc": -349.65
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -349.65,
+                              "inc": -349.65
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -349.65,
+                          "inc": -349.65
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9044.33,
+                        "exclusive": 6284.35,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9044.33,
+                        "exclusive": 6284.35,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9044.33,
+                          "exclusive": 6284.35,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9393.98,
+                        "exclusive": 6634.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9393.98,
+                        "exclusive": 6634.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9393.98,
+                          "exclusive": 6634.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 349.65,
+                      "discountAmount": 349.65,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 3.72
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 349.65,
+                      "discountAmount": 349.65,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 3.72
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+                  "externalItineraryId": "1015543457",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 8,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 170,
+                  "token": "AAAA.AAAADMZATFaJwqzbpnCUky/SWkWv0o51BtsZin2/huZ4BowZsStt2Wrvc2jtyoVfN+orAffXJf0k/dcgfiQNsdu9+uj9dpDW9mPc+D1bnzeAYtI0noi9hlA42/oiUS3cZGhzo6sddvYH+9pLVBMpvTKJDQdM6vb+S1nIvIICGmSyK5FTE6ILI1fvy7fUIGPFWuu8m4IX8sjoG+gBO/MQER8Z23zD2nmYH3/7ZwAVAMZJCnPr4h1cfiR1aKI45pJNCIM1y48wyj09xkUZpPRkFpaP35sLjLkU7V/mVqOl+XNilo140sP5mNA8P2q9cw==",
+                  "ticketingAirline": "QP",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 6634.0,
+                                "inc": 9393.98
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 6634.0,
+                                "inc": 9393.98
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 6634.0,
+                            "inc": 9393.98
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2759.98,
+                                "inc": 2759.98
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2759.98,
+                                "inc": 2759.98
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2759.98,
+                                "inc": 2759.98
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2759.98,
+                                "inc": 2759.98
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2759.98,
+                            "inc": 2759.98
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -349.65,
+                                "inc": -349.65
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -349.65,
+                                "inc": -349.65
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -349.65,
+                            "inc": -349.65
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9044.33,
+                          "exclusive": 6284.35,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9044.33,
+                          "exclusive": 6284.35,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9044.33,
+                            "exclusive": 6284.35,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9393.98,
+                          "exclusive": 6634.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9393.98,
+                          "exclusive": 6634.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9393.98,
+                            "exclusive": 6634.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 349.65,
+                        "discountAmount": 349.65,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 3.72
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 349.65,
+                        "discountAmount": 349.65,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 3.72
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": ""
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "692065822",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 170,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T14:00:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T11:10:00",
+                  "destinationAirport": "DXN",
+                  "duration": 170,
+                  "originAirport": "BLR",
+                  "flightNumber": "1375",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 21037,
+                    "arrivalCityName": "Noida",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Noida International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "T1",
+                      "fareBasisCode": "T1O7RWIX",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 6919.0,
+                              "inc": 9395.82
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 6919.0,
+                              "inc": 9395.82
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 6919.0,
+                          "inc": 9395.82
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2476.82,
+                              "inc": 2476.82
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2476.82,
+                              "inc": 2476.82
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2476.82,
+                              "inc": 2476.82
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2476.82,
+                              "inc": 2476.82
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2476.82,
+                          "inc": 2476.82
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -349.71,
+                              "inc": -349.71
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -349.71,
+                              "inc": -349.71
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -349.71,
+                          "inc": -349.71
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9046.11,
+                        "exclusive": 6569.29,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9046.11,
+                        "exclusive": 6569.29,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9046.11,
+                          "exclusive": 6569.29,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9395.82,
+                        "exclusive": 6919.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9395.82,
+                        "exclusive": 6919.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9395.82,
+                          "exclusive": 6919.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 349.71,
+                      "discountAmount": 349.71,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 3.72
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 349.71,
+                      "discountAmount": 349.71,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 3.72
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___236970418",
+                  "externalItineraryId": "573010890",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 0,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 175,
+                  "token": "AAAA.AAAADF3pSSzFekquuc645481s2AWTYOyEInmQKjLtHpzK+iO/euMrSfKWXQr05h/3ZcdVmh/GRkDz0L+hLTqIG5BmC+J2dkKZnYLGYlfq9upLgzTIWpRKgN0Vx9ljOi5MDg2ATrkU7BISUE1iQdxoI3FoysVPojt+2IbQjuMTVWdzJVtjYEMTxTf0YzXNDQyXHa4HKHk/4ob0SUPKkQ1muehE4fJl3hh1JySnYr5lD7feLMTvC3p4jLpfBlltEpeJAotKH/RqI+TiM7J8KWfTZeQs5dCDfO2ka8yful3uxOIaEJh1hQCQa4enElCD5AIL2QTw0akvL2M",
+                  "ticketingAirline": "QP",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 6919.0,
+                                "inc": 9395.82
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 6919.0,
+                                "inc": 9395.82
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 6919.0,
+                            "inc": 9395.82
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2476.82,
+                                "inc": 2476.82
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2476.82,
+                                "inc": 2476.82
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2476.82,
+                                "inc": 2476.82
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2476.82,
+                                "inc": 2476.82
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2476.82,
+                            "inc": 2476.82
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -349.71,
+                                "inc": -349.71
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -349.71,
+                                "inc": -349.71
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -349.71,
+                            "inc": -349.71
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9046.11,
+                          "exclusive": 6569.29,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9046.11,
+                          "exclusive": 6569.29,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9046.11,
+                            "exclusive": 6569.29,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9395.82,
+                          "exclusive": 6919.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9395.82,
+                          "exclusive": 6919.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9395.82,
+                            "exclusive": 6919.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 349.71,
+                        "discountAmount": 349.71,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 3.72
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 349.71,
+                        "discountAmount": 349.71,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 3.72
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": ""
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "379752826",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 175,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T07:55:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T05:00:00",
+                  "destinationAirport": "DEL",
+                  "duration": 175,
+                  "originAirport": "BLR",
+                  "flightNumber": "1301",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "-",
+                      "fareBasisCode": "R0O7RWIX",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30011,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1832228807",
+                  "externalItineraryId": "472777606",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 4,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 180,
+                  "token": "AAAA.AAAADPjUD1FNdk+MtagmircYtyZS7Icj4ZEp5IISwMSmJndwi06YynMv15t0TOZ4NheagaD/YznL0RK0zMXfBLXjtc+qVjULbAv7sKBfmPZSZ8TrLCkD0ChWzNmWxtWWS7BZ9WNebPx1H7pZZhlv8vGgDMf1YTn9gapMQB73ZREYhd8jQiRs9d/zpKcMkkZNWBGfHyE3G1+rtny5ufLsQx0gJYfUsih/TYZWyKN7bc5fak1yI0xWZMdqip8bWJoPL5R+Wv/p9gSNogP+fC7Gzr5XstGzXOFTaVHg60gmv1DYwwEWqXN4pUHa9BxA",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "2061254031",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 180,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T15:00:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T12:00:00",
+                  "destinationAirport": "DEL",
+                  "duration": 180,
+                  "originAirport": "BLR",
+                  "flightNumber": "809",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1537967443",
+                  "externalItineraryId": "1591497491",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 34,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 180,
+                  "token": "AAAA.AAAADEAD+GjBDUejyx5IwLZBL/RAmU0TrP8xeEase8TYD6ufA3QRmsiqdao9nupkkkxBRnqvMPLMptOQhfINwDEPlPPDBTskCmD98agQIkFFaX3JrOC+Ap6Cm17mZ6RII/9vuBletk05fA7seDwKDq9MfyTZ4nUMrOzKsg4FFjE/lqDKPRDlXcI6b/nztVoqbgFAv1kVuCkzCt/cdCKmytwmj4mlTUw69YGfKdVIm65+4MKzNX/pjs9CX89jsbYJpuR2t1u6wUP1zyUkHbhtx37H5t2OI6gVuckT8Sgz1jBc41rq71fHpDip9Yjm6w==",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "1385435749",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 180,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T12:30:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T09:30:00",
+                  "destinationAirport": "DEL",
+                  "duration": 180,
+                  "originAirport": "BLR",
+                  "flightNumber": "830",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1946327207",
+                  "externalItineraryId": "1818826112",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 18,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 180,
+                  "token": "AAAA.AAAADFxMIEwNNYSKeyPi+I7J+vL0DrJ41jyQOM20Zofn6UlfaW4H8XRrsL8a8KA2k5dn+tA7gHLzPo+6yYAW0zm8WERgIB7yew+ND/1PChXbdEmNDuS3RvwfeFMDqk53QIreIeqhzT6fsXGXs0j2ml0EjfuiHU36JOdOenEdR55CWTKz4OokGUsf3Jx+JzO4vYKKjJCA+VGEhCD3QCs/enkVspDvKEEH4jHfm9z6GDggIPzCevLyB/6mcq+vmFqh9c7Qx5lT+d1ylhXsYTTmcRoXr7vp19+O2tBSftxnQQ+Y9YKN0TmwE+m7RJDQ6w==",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "1974555445",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 180,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T11:00:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T08:00:00",
+                  "destinationAirport": "DEL",
+                  "duration": 180,
+                  "originAirport": "BLR",
+                  "flightNumber": "849",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___984602731",
+                  "externalItineraryId": "2105577177",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 29,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 170,
+                  "token": "AAAA.AAAADILEqF6Gl5/fYj0R72hMekCdzAxqXTCQumx1ES28xF6moETye49exczzXR9KShUq85b2bakUHykGqR7xZ/3tu7P/WWdy749ZxHo9dqO1wkFRoBAXzxoCBBidp//8CgQA1REJnEge5rKZp1FLkU4a9gI/uZNeXkGkc4dclm2fbmyB8iiX2Rb3E4ZhPT8D/3spIkK0bU2jWaWRYM8YetqZJ5WkMnIarWyjIP6N0LAEmU/tKooLZA6lOkhmyIijPQLEakMjdUwvTd20gePYL0zRf2ujOWVb8dkMYmfTio47Y6EeB/HDWXG3v5D2",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "259222267",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 170,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T16:05:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T13:15:00",
+                  "destinationAirport": "DEL",
+                  "duration": 170,
+                  "originAirport": "BLR",
+                  "flightNumber": "869",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___965179483",
+                  "externalItineraryId": "1129053320",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 30,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 170,
+                  "token": "AAAA.AAAADGBiGFd4yCA29GX1JtuAiUqQR0bgRM/REf3yDj7fw02SIn6rT6wgxQ9Ub58jG6z5+3JvQW7dxZWaZmCBx/Afg2Mst0tRp414sQjY9gKf9vJ1MBhlZR0R+McE4qNMZ3oSfUqdEWh1gL68XldOL9mZmH9+5RExUk/K7dWDnjmx+WvwmtrUMiPAdkQgi+gv130llaGkRbDuonxe1Yh4SI5qTWUUStp98kkVDuMLvszfrZt1rmkvv1O6CIPcYKydXon3YcsbBY5oDiizbiOIQGguPwi72lLSe4vTTo/vWs8dn+KGlUc1S86+JoHZ",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "2006984155",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 170,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T17:20:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T14:30:00",
+                  "destinationAirport": "DEL",
+                  "duration": 170,
+                  "originAirport": "BLR",
+                  "flightNumber": "840",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7626.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7626.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2250.01,
+                              "inc": 2250.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2250.01,
+                          "inc": 2250.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7157.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7626.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1303988156",
+                  "externalItineraryId": "920324461",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 13,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 170,
+                  "token": "AAAA.AAAADKlthYjU60+A1wP1bJGLMCZ/gyXWUqU7DKiEnIUWYnXvZts+uSRwOjyl+A9gqOACMjt4REkrckOfu99gCW8glsGnJfE33DNs0Cwodovrs3DwrskGK5D6GzpkXM1eMvmEc8EkvMnTwZ/sHdtG/edes3idamcJx2l/J3D2zy8vgu6WFGJTMr872S/otG+yoiPetYAti0+1mJNiNL8Wh7dPNj3QTVkJtLJNAVW9Q+7hYumOgI78XSjkTIH8/UoVHh7lieXPeeaQt+HHk0pnaQeVb/7rupT3edd085n0TAwIfvuIYcEtbrhegENM",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7626.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7626.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2250.01,
+                                "inc": 2250.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2250.01,
+                            "inc": 2250.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7157.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7157.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7626.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7626.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "1297054622",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 170,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T18:35:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T15:45:00",
+                  "destinationAirport": "DEL",
+                  "duration": 170,
+                  "originAirport": "BLR",
+                  "flightNumber": "860",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7434.0,
+                              "inc": 9942.92
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7434.0,
+                              "inc": 9942.92
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7434.0,
+                          "inc": 9942.92
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2508.92,
+                              "inc": 2508.92
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2508.92,
+                              "inc": 2508.92
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2508.92,
+                              "inc": 2508.92
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2508.92,
+                              "inc": 2508.92
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2508.92,
+                          "inc": 2508.92
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -270.65,
+                              "inc": -270.65
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -270.65,
+                              "inc": -270.65
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -270.65,
+                          "inc": -270.65
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9672.27,
+                        "exclusive": 7163.35,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9672.27,
+                        "exclusive": 7163.35,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9672.27,
+                          "exclusive": 7163.35,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9942.92,
+                        "exclusive": 7434.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9942.92,
+                        "exclusive": 7434.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9942.92,
+                          "exclusive": 7434.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 270.65,
+                      "discountAmount": 270.65,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 2.72
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 270.65,
+                      "discountAmount": 270.65,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 2.72
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1147996257",
+                  "externalItineraryId": "1172868322",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 0,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 170,
+                  "token": "AAAA.AAAADMwsJ4f8qAjxrXXSlyTd4X4Ty8m87C3yC2Mu6yVrFYNa06Gmve2uyzH0eVJzRK2E53meDqEjk3wotoL4pu9sRI5/GpzjuCxqT3oxdhDZa97AiZ9oOBIWbHewlBelqFCq8kja6uEByFMN+fPNir/b+yp3jxw50U8ti3B/+kKn7NpTqhBzp1/8n53ltD3tJt0E5Owj8Uvdy1T7Wv8vZhCAzW2V/gE47d0LLasO2fuzIgjYE7+FEjvVKBHPyjolUB4VnKbmcLhg3hQYGeLlJY7U7xWSmzP/ce+s+KhmlhxWvU0YYxFDBpOgJpw4jJQ2xPy4LlqN0xDFA/dD",
+                  "ticketingAirline": "QP",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7434.0,
+                                "inc": 9942.92
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7434.0,
+                                "inc": 9942.92
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7434.0,
+                            "inc": 9942.92
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2508.92,
+                                "inc": 2508.92
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2508.92,
+                                "inc": 2508.92
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2508.92,
+                                "inc": 2508.92
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2508.92,
+                                "inc": 2508.92
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2508.92,
+                            "inc": 2508.92
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -270.65,
+                                "inc": -270.65
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -270.65,
+                                "inc": -270.65
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -270.65,
+                            "inc": -270.65
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9672.27,
+                          "exclusive": 7163.35,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9672.27,
+                          "exclusive": 7163.35,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9672.27,
+                            "exclusive": 7163.35,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9942.92,
+                          "exclusive": 7434.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9942.92,
+                          "exclusive": 7434.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9942.92,
+                            "exclusive": 7434.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 270.65,
+                        "discountAmount": 270.65,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 2.72
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 270.65,
+                        "discountAmount": 270.65,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 2.72
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": ""
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "1834988053",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 170,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T16:45:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T13:55:00",
+                  "destinationAirport": "DEL",
+                  "duration": 170,
+                  "originAirport": "BLR",
+                  "flightNumber": "1381",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 14552,
+                    "arrivalCityName": "New Delhi",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Indira Gandhi International Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "QP",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png",
+                    "carrierName": "Akasa Air"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "-",
+                      "fareBasisCode": "Q4O7RWIX",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30011,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          },
+          {
+            "bundlePrice": [
+              {
+                "price": {
+                  "inr": {
+                    "charges": [
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 7689.0,
+                              "inc": 9876.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 7689.0,
+                              "inc": 9876.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 7689.0,
+                          "inc": 9876.01
+                        },
+                        "type": "Fare"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2187.01,
+                              "inc": 2187.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2187.01,
+                              "inc": 2187.01
+                            }
+                          },
+                          {
+                            "basis": "PAPB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": 2187.01,
+                              "inc": 2187.01
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": 2187.01,
+                              "inc": 2187.01
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": 2187.01,
+                          "inc": 2187.01
+                        },
+                        "type": "TaxAndFee"
+                      },
+                      {
+                        "breakDown": [
+                          {
+                            "basis": "PB",
+                            "option": "Mandatory",
+                            "price": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            },
+                            "quantity": 1,
+                            "total": {
+                              "exc": -468.28,
+                              "inc": -468.28
+                            }
+                          }
+                        ],
+                        "total": {
+                          "exc": -468.28,
+                          "inc": -468.28
+                        },
+                        "type": "CidDiscount"
+                      }
+                    ],
+                    "display": {
+                      "averagePerPax": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7220.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9407.73,
+                        "exclusive": 7220.72,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7220.72,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "promotionDiscount": null,
+                    "crossedOutDisplay": {
+                      "averagePerPax": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7689.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perBook": {
+                        "allInclusive": 9876.01,
+                        "exclusive": 7689.0,
+                        "type": null,
+                        "differential": null,
+                        "loyaltyOffers": []
+                      },
+                      "perPax": [
+                        {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7689.0,
+                          "type": "ADT",
+                          "differential": null,
+                          "loyaltyOffers": []
+                        }
+                      ]
+                    },
+                    "discountItem": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 126027,
+                      "discountType": 2,
+                      "percentage": 4.74
+                    },
+                    "totalDiscount": {
+                      "averagePerPax": 468.28,
+                      "discountAmount": 468.28,
+                      "discountId": 0,
+                      "discountType": 99,
+                      "percentage": 4.74
+                    },
+                    "paymentModel": 1
+                  }
+                },
+                "priceType": 0,
+                "packaging": null,
+                "cart": null
+              }
+            ],
+            "itineraries": [
+              {
+                "inboundSlice": null,
+                "itineraryInfo": {
+                  "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___936971529",
+                  "externalItineraryId": "417694206",
+                  "lapInfantsAllowed": false,
+                  "availableSeats": 44,
+                  "passportRequired": false,
+                  "nationalityRequired": null,
+                  "passengerMinAge": -1,
+                  "totalTripDuration": 180,
+                  "token": "AAAA.AAAADHG87IynmjJjhtkabcPTyHBFdgwXe6bOjl2ramVb+EdXi7KZOqAsSZD2UinhJYaygHVWE99M5zSsiX2PEWyh7d/SetPq6terfPYxSFU4wlO/3m/DAijp1kgG0idSRtKcT3Yu26XPuJ+5yjAyIWizja4W+7w/ESlnZgiTlvLdmM0uQxEZMuNiGb4KlhELh6rxD59OJx/bGE7REmWrJbivinIKrju8TR8Yfg61HPTfBSsWTiHRL9Z5CpfuCZ4EkdZGbKsGd35b7evebweSq8aIgN0OHjhkhVWHnibalroZO50ZkGBgazDbth4=",
+                  "ticketingAirline": "6E",
+                  "ticketingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "voidWindowClose": "0001-01-01T00:00:00",
+                  "voidableWithinHours": 0,
+                  "price": {
+                    "inr": {
+                      "charges": [
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 7689.0,
+                                "inc": 9876.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 7689.0,
+                                "inc": 9876.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 7689.0,
+                            "inc": 9876.01
+                          },
+                          "type": "Fare"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2187.01,
+                                "inc": 2187.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2187.01,
+                                "inc": 2187.01
+                              }
+                            },
+                            {
+                              "basis": "PAPB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": 2187.01,
+                                "inc": 2187.01
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": 2187.01,
+                                "inc": 2187.01
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": 2187.01,
+                            "inc": 2187.01
+                          },
+                          "type": "TaxAndFee"
+                        },
+                        {
+                          "breakDown": [
+                            {
+                              "basis": "PB",
+                              "option": "Mandatory",
+                              "price": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              },
+                              "quantity": 1,
+                              "total": {
+                                "exc": -468.28,
+                                "inc": -468.28
+                              }
+                            }
+                          ],
+                          "total": {
+                            "exc": -468.28,
+                            "inc": -468.28
+                          },
+                          "type": "CidDiscount"
+                        }
+                      ],
+                      "display": {
+                        "averagePerPax": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7220.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9407.73,
+                          "exclusive": 7220.72,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9407.73,
+                            "exclusive": 7220.72,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "promotionDiscount": null,
+                      "crossedOutDisplay": {
+                        "averagePerPax": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7689.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perBook": {
+                          "allInclusive": 9876.01,
+                          "exclusive": 7689.0,
+                          "type": null,
+                          "differential": null,
+                          "loyaltyOffers": []
+                        },
+                        "perPax": [
+                          {
+                            "allInclusive": 9876.01,
+                            "exclusive": 7689.0,
+                            "type": "ADT",
+                            "differential": null,
+                            "loyaltyOffers": []
+                          }
+                        ]
+                      },
+                      "discountItem": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 126027,
+                        "discountType": 2,
+                        "percentage": 4.74
+                      },
+                      "totalDiscount": {
+                        "averagePerPax": 468.28,
+                        "discountAmount": 468.28,
+                        "discountId": 0,
+                        "discountType": 99,
+                        "percentage": 4.74
+                      },
+                      "paymentModel": 1
+                    }
+                  },
+                  "hackerFare": false,
+                  "packaging": null,
+                  "supplierAmount": null,
+                  "virtualInterlining": false,
+                  "baggageUrl": null,
+                  "cartInfo": null,
+                  "baggageUrlWithScope": {
+                    "scope": "ITINERARY",
+                    "baggageUrls": [
+                      {
+                        "scopeRefId": 1,
+                        "url": "https://www.goindigo.in/travel-information/en/baggage-allowance.en-d971d34cc9944e1ca7b19ba6eae0c83d.html"
+                      }
+                    ]
+                  },
+                  "cancellationPolicies": [],
+                  "availableFeatures": [
+                    "Brand"
+                  ]
+                },
+                "priceOptions": []
+              }
+            ],
+            "key": "1020633536",
+            "outboundSlice": {
+              "id": 1,
+              "duration": 180,
+              "overnightFlight": false,
+              "cancellationPolicies": [],
+              "channel": null,
+              "exchangePolicies": [],
+              "freeBags": [],
+              "segments": [
+                {
+                  "id": 1,
+                  "arrivalDateTime": "2026-12-15T09:35:00",
+                  "layoverAfter": null,
+                  "departDateTime": "2026-12-15T06:35:00",
+                  "destinationAirport": "HDO",
+                  "duration": 180,
+                  "originAirport": "BLR",
+                  "flightNumber": "2518",
+                  "baggageFee": 0.0,
+                  "aircraftContent": null,
+                  "airportContent": {
+                    "departureCityId": 4923,
+                    "departureCityName": "Bangalore",
+                    "departureCountryId": 35,
+                    "departureCountryName": "India",
+                    "departureAirportName": "Kempegowda International Airport",
+                    "arrivalCityId": 30355,
+                    "arrivalCityName": "Ghaziabad",
+                    "arrivalCountryId": 35,
+                    "arrivalCountryName": "India",
+                    "arrivalAirportName": "Hindon Airport"
+                  },
+                  "cabinClassContent": {
+                    "cabinClass": "ECO",
+                    "cabinName": "Economy Class"
+                  },
+                  "operatingCarrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "carrierContent": {
+                    "carrierCode": "6E",
+                    "carrierIcon": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png",
+                    "carrierName": "IndiGo"
+                  },
+                  "seatMapAvailable": false,
+                  "seatSelectionAllowed": false,
+                  "bagsRecheckRequired": false,
+                  "segmentInfoByPaxTypes": [
+                    {
+                      "passengerType": "ADT",
+                      "bookingClass": "R",
+                      "fareBasisCode": "R0IP",
+                      "fareBrand": ""
+                    }
+                  ]
+                }
+              ],
+              "subSupplierId": 30084,
+              "voidWindowClose": null,
+              "voidableWithinHours": 0,
+              "brand": null,
+              "sliceFeatures": []
+            },
+            "inboundFilters": null,
+            "totalCount": 1,
+            "inboundFeatures": [],
+            "priceOptions": []
+          }
+        ],
+        "pagination": {
+          "number": 1,
+          "size": 10
+        },
+        "isCompleted": true,
+        "totalBundles": 273,
+        "totalItineraries": 273,
+        "totalFilteredItineraries": 273,
+        "filters": {
+          "carriers": [
+            {
+              "count": 175,
+              "id": "AI",
+              "name": "Air India",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/AI_v4.png"
+            },
+            {
+              "count": 34,
+              "id": "IX",
+              "name": "Air India Express",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/IX_v2.png"
+            },
+            {
+              "count": 6,
+              "id": "QP",
+              "name": "Akasa Air",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png"
+            },
+            {
+              "count": 58,
+              "id": "6E",
+              "name": "IndiGo",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png"
+            }
+          ],
+          "duration": {
+            "fromProperty": 0,
+            "step": 60,
+            "to": 4320
+          },
+          "price": {
+            "fromProperty": 0,
+            "step": 752,
+            "to": 75116
+          },
+          "sliceFilters": [
+            {
+              "sliceId": 1,
+              "departureTime": {
+                "fromProperty": 0,
+                "step": 60,
+                "to": 1440
+              },
+              "arrivalTime": {
+                "fromProperty": 0,
+                "step": 60,
+                "to": 1440
+              }
+            }
+          ],
+          "stops": [
+            {
+              "count": 100,
+              "id": "Direct",
+              "name": "Direct",
+              "logo": null
+            },
+            {
+              "count": 100,
+              "id": "One",
+              "name": "1 Stop",
+              "logo": null
+            },
+            {
+              "count": 100,
+              "id": "TwoPlus",
+              "name": "2 Stops+",
+              "logo": null
+            }
+          ]
+        },
+        "outboundFilters": {
+          "carriers": [
+            {
+              "count": 175,
+              "id": "AI",
+              "name": "Air India",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/AI_v4.png"
+            },
+            {
+              "count": 34,
+              "id": "IX",
+              "name": "Air India Express",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/IX_v2.png"
+            },
+            {
+              "count": 6,
+              "id": "QP",
+              "name": "Akasa Air",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/QP_V2.png"
+            },
+            {
+              "count": 58,
+              "id": "6E",
+              "name": "IndiGo",
+              "logo": "https://img.agoda.net/images/mvc/default/airlines/6E_v2.png"
+            }
+          ],
+          "duration": {
+            "fromProperty": 0,
+            "step": 60,
+            "to": 4320
+          },
+          "cabinClasses": [
+            {
+              "count": 3,
+              "id": "MIX",
+              "name": "Mixed Class",
+              "logo": null
+            },
+            {
+              "count": 270,
+              "id": "ECO",
+              "name": "Economy Class",
+              "logo": null
+            }
+          ]
+        },
+        "preferredBundle": null,
+        "quickSortedItineraries": [
+          {
+            "itineraryId": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+            "priceInfo": {
+              "averagePerPax": {
+                "allInclusive": 9044.33,
+                "exclusive": 6284.35,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perBook": {
+                "allInclusive": 9044.33,
+                "exclusive": 6284.35,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perPax": [
+                {
+                  "allInclusive": 9044.33,
+                  "exclusive": 6284.35,
+                  "type": "ADT",
+                  "differential": null,
+                  "loyaltyOffers": []
+                }
+              ]
+            },
+            "sortType": "Cheapest",
+            "totalTripDuration": 170
+          },
+          {
+            "itineraryId": "A:BLR_20261215_G:DEL__1-0-0_ECO___1034714881",
+            "priceInfo": {
+              "averagePerPax": {
+                "allInclusive": 9409.7,
+                "exclusive": 6986.7,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perBook": {
+                "allInclusive": 9409.7,
+                "exclusive": 6986.7,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perPax": [
+                {
+                  "allInclusive": 9409.7,
+                  "exclusive": 6986.7,
+                  "type": "ADT",
+                  "differential": null,
+                  "loyaltyOffers": []
+                }
+              ]
+            },
+            "sortType": "Fastest",
+            "totalTripDuration": 155
+          },
+          {
+            "itineraryId": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+            "priceInfo": {
+              "averagePerPax": {
+                "allInclusive": 9044.33,
+                "exclusive": 6284.35,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perBook": {
+                "allInclusive": 9044.33,
+                "exclusive": 6284.35,
+                "type": null,
+                "differential": null,
+                "loyaltyOffers": []
+              },
+              "perPax": [
+                {
+                  "allInclusive": 9044.33,
+                  "exclusive": 6284.35,
+                  "type": "ADT",
+                  "differential": null,
+                  "loyaltyOffers": []
+                }
+              ]
+            },
+            "sortType": "Best",
+            "totalTripDuration": 170
+          }
+        ],
+        "specialAttributes": [
+          {
+            "attribute": 1,
+            "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+            "secondaryId": "692065822"
+          },
+          {
+            "attribute": 2,
+            "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___1034714881",
+            "secondaryId": "1525937673"
+          },
+          {
+            "attribute": 0,
+            "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+            "secondaryId": "692065822"
+          },
+          {
+            "attribute": 0,
+            "id": "A:BLR_20261215_G:DEL__1-0-0_ECO___255018724",
+            "secondaryId": "692065822"
+          }
+        ],
+        "isDiscountApplied": false,
+        "preferredItinerary": null,
+        "outboundFeatures": [
+          "MixedCabinClass"
+        ]
+      }
+    ],
+    "brands": [],
+    "status": null,
+    "debugInfo": null
+  }
+}

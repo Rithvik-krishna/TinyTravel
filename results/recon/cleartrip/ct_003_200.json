@@ -1,0 +1,50 @@
+{
+  "url": "https://www.cleartrip.com/uhp/v1/contents?usecases=HOTEL_LOYALTY&size=3",
+  "status": 200,
+  "data": [
+    {
+      "usecase": "HOTEL_LOYALTY",
+      "content": [
+        {
+          "type": "HOTEL_LOYALTY",
+          "title": "Min. 20% off on domestic hotels",
+          "subtitle": "Check your eligibility now",
+          "metaData": {
+            "loyaltyName": "ELITE",
+            "loyaltyStatus": "INACTIVE",
+            "redirectionUrl": "/loyalty/",
+            "benefits": [
+              {
+                "vertical": "FLIGHTS",
+                "title": "Flight date change at \u20b99"
+              },
+              {
+                "vertical": "HOTELS",
+                "title": "Min. 20% off on Hotels"
+              },
+              {
+                "vertical": "SUPERCOINS",
+                "title": "Earn up to 100 Supercoins"
+              },
+              {
+                "vertical": "HOLIDAYS",
+                "title": "Upto \u20b95,000 off on Holidays"
+              }
+            ],
+            "constraintList": [
+              {
+                "target": 2,
+                "bookingCount": 0,
+                "pending": 2,
+                "current": 0,
+                "upcoming": 0,
+                "type": "COUNT",
+                "evaluationDomain": "BOOKING"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

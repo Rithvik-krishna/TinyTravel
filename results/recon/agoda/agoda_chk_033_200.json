@@ -1,0 +1,267 @@
+{
+  "url": "https://www.agoda.com/graphql/npc",
+  "status": 200,
+  "data": {
+    "data": {
+      "SimilarCitySearch": {
+        "similarCities": [
+          {
+            "cityId": 4001,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/4001/092eca9a1f0615374d2fcca17e130b61.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/4001/092eca9a1f0615374d2fcca17e130b61.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/cebu-ph.html",
+            "cityName": "Cebu",
+            "countryName": "Philippines",
+            "noOfProperties": 5254
+          },
+          {
+            "cityId": 14690,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/14690/0d6f4afc6f404e65092123bead23f8ce.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/14690/0d6f4afc6f404e65092123bead23f8ce.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/seoul-kr.html",
+            "cityName": "Seoul",
+            "countryName": "South Korea",
+            "noOfProperties": 5945
+          },
+          {
+            "cityId": 16901,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/16901/1_16901_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/16901/1_16901_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/jeju-kr.html",
+            "cityName": "Jeju",
+            "countryName": "South Korea",
+            "noOfProperties": 4939
+          },
+          {
+            "cityId": 8584,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/8584/1_8584_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/8584/1_8584_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/pattaya-th.html",
+            "cityName": "Pattaya",
+            "countryName": "Thailand",
+            "noOfProperties": 11909
+          },
+          {
+            "cityId": 7401,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/7401/1_7401_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/7401/1_7401_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/chiang-mai-th.html",
+            "cityName": "Chiang Mai",
+            "countryName": "Thailand",
+            "noOfProperties": 7193
+          },
+          {
+            "cityId": 233,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/233/04f5fbf17ccbbbb04c24c30f03149c3c.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/233/04f5fbf17ccbbbb04c24c30f03149c3c.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/london-gb.html",
+            "cityName": "London",
+            "countryName": "United Kingdom",
+            "noOfProperties": 24105
+          },
+          {
+            "cityId": 13740,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/13740/1_13740_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/13740/1_13740_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/nagoya-jp.html",
+            "cityName": "Nagoya",
+            "countryName": "Japan",
+            "noOfProperties": 1183
+          },
+          {
+            "cityId": 1808,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/1808/0fdfe2e24c886b78b03e2d0c0eb8df8e.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/1808/0fdfe2e24c886b78b03e2d0c0eb8df8e.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/johor-bahru-my.html",
+            "cityName": "Johor Bahru",
+            "countryName": "Malaysia",
+            "noOfProperties": 6994
+          },
+          {
+            "cityId": 9395,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/9395/1_9395_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/9395/1_9395_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/bangkok-th.html",
+            "cityName": "Bangkok",
+            "countryName": "Thailand",
+            "noOfProperties": 12048
+          },
+          {
+            "cityId": 17172,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/17172/1_17172_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/17172/1_17172_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/busan-kr.html",
+            "cityName": "Busan",
+            "countryName": "South Korea",
+            "noOfProperties": 2734
+          },
+          {
+            "cityId": 1622,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/1622/1_1622_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/1622/1_1622_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/manila-ph.html",
+            "cityName": "Manila",
+            "countryName": "Philippines",
+            "noOfProperties": 13223
+          },
+          {
+            "cityId": 4951,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/4951/1_4951_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/4951/1_4951_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/taipei-tw.html",
+            "cityName": "Taipei",
+            "countryName": "Taiwan",
+            "noOfProperties": 3566
+          },
+          {
+            "cityId": 16440,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/16440/1_16440_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/16440/1_16440_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/da-n-ng-vn.html",
+            "cityName": "Da Nang",
+            "countryName": "Vietnam",
+            "noOfProperties": 5534
+          },
+          {
+            "cityId": 14524,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/14524/0435b08918aeb5e6ba2c933def5a3b57.jpg?ce=0&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/14524/0435b08918aeb5e6ba2c933def5a3b57.jpg?ce=0&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/kuala-lumpur-my.html",
+            "cityName": "Kuala Lumpur",
+            "countryName": "Malaysia",
+            "noOfProperties": 19902
+          },
+          {
+            "cityId": 15932,
+            "images": [
+              {
+                "key": "normal",
+                "url": "//pix6.agoda.net/geo/city/15932/1_15932_02.jpg?ca=6&ce=1&s=100x100"
+              },
+              {
+                "key": "retina",
+                "url": "//pix6.agoda.net/geo/city/15932/1_15932_02.jpg?ca=6&ce=1&s=200x200"
+              }
+            ],
+            "link": "/en-in/city/dalat-vn.html",
+            "cityName": "Dalat",
+            "countryName": "Vietnam",
+            "noOfProperties": 5165
+          }
+        ]
+      }
+    }
+  }
+}

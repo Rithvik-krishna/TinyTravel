@@ -1,0 +1,11 @@
+{
+  "url": "https://www.agoda.com/api/cronos/geo/country/getgenericinfo?ObjectId=35",
+  "status": 200,
+  "data": {
+    "id": 35,
+    "isoCode": "IND",
+    "isoCode2": "IN",
+    "name": "India",
+    "territoryName": "State"
+  }
+}

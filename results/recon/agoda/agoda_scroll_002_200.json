@@ -1,0 +1,13 @@
+{
+  "url": "https://www.agoda.com/graphql/search",
+  "status": 200,
+  "data": {
+    "data": {
+      "propertyAllotmentSearch": {
+        "PropertyAllotmentSearchDetails": {
+          "availabilities": []
+        }
+      }
+    }
+  }
+}

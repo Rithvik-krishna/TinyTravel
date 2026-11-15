@@ -1,0 +1,23 @@
+{
+  "url": "https://www.cleartrip.com/IOMWe0eD/J7rc3IT/fKplLaw/yJ/3biirmrQLzNfmLSuEE/aDtvbS14Ag/IDdcYx/U_BEE",
+  "status": 201,
+  "content_type": "application/json",
+  "headers": {
+    "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+    "access-control-allow-credentials": "true",
+    "x-content-type-options": "nosniff",
+    "x_req_id": "e098c619-04d2-44a1-b215-0fcea26ca3c6",
+    "x-akamai-transformed": "0 - 0 -",
+    "access-control-allow-origin": "https://www.cleartrip.com",
+    "server-timing": "edge; dur=7, origin; dur=504, cdn-cache; desc=MISS, ak_p; desc=\"1794727767821_3088753307_75327617_51429_11986_58_0_219\";dur=1",
+    "alt-svc": "h3=\":443\"; ma=93600",
+    "date": "Sun, 15 Nov 2026 07:29:28 GMT",
+    "akamai-grn": "0.9ba21ab8.1794727767.47d6881",
+    "content-type": "application/json",
+    "vary": "Origin",
+    "access-control-allow-headers": "Content-Type"
+  },
+  "data": {
+    "success": true
+  }
+}

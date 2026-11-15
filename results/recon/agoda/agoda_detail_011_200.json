@@ -1,0 +1,11 @@
+{
+  "url": "https://gumi.criteo.com/sid/json?origin=onetag&domain=agoda.com&sn=ChromeSyncframe&so=undefined&topUrl=www.agoda.com&ceid=4c6c3fdd-8bd6-4afd-a449-84f623e05ec4",
+  "status": 200,
+  "data": {
+    "sid": null,
+    "removeSid": false,
+    "bundle": "IkPaWl8lMkZLYjZDTEl6ZXg2elp0d2FwS0xJUE5WR3pTUyUyRlBtbUslMkY2RTNLYVl5dlZDR1BsVWxGM1BmOXFOcW5rMnFYVTVUN3U2SlB2QlMxJTJGUHRHY1dPYmFtNnk2WWxKMzkxSVRFWmtnb1BWTWlzeWV1c2tBRUpXWSUyRmZGZ1VXc2xJQlV6R0RTUmR5byUyQmhTWmZONmNuRHdDcU1WdnclM0QlM0Q",
+    "info": "PtkHg18lMkZLYjZDTEl6ZXg2elp0d2FwS0xJUE5WR3pTUyUyRlBtbUslMkY2RTNLYVl5dlZDR1BsVWxGM1BmOXFOcW5rMnFYVTVUSW9nM2tBWTFsS2pVWGl4eUl3NUtvdyUzRCUzRA",
+    "optout": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "url": "https://www.agoda.com/api/cusco/popup/campaigns",
+  "status": 200,
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "46e2520a-7d12-458d-99f2-2792ad72fd29",
+      "popup": null
+    },
+    "error": null
+  }
+}

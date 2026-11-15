@@ -1,0 +1,2016 @@
+{
+  "url": "https://www.agoda.com/api/mpr/cms/v1/lookup",
+  "status": 200,
+  "data": {
+    "translations": [
+      {
+        "id": 152703,
+        "message": "Next slide"
+      },
+      {
+        "id": 152704,
+        "message": "Previous slide"
+      },
+      {
+        "id": 252205,
+        "message": "All"
+      },
+      {
+        "id": 269920,
+        "message": "Tours & Trips"
+      },
+      {
+        "id": 269921,
+        "message": "Food & Drinks"
+      },
+      {
+        "id": 269922,
+        "message": "Attractions"
+      },
+      {
+        "id": 269923,
+        "message": "Outdoor activities"
+      },
+      {
+        "id": 269924,
+        "message": "Indoor activities"
+      },
+      {
+        "id": 269925,
+        "message": "Events, Exhibitions & Shows"
+      },
+      {
+        "id": 269926,
+        "message": "Transportation"
+      },
+      {
+        "id": 269927,
+        "message": "Health & Wellness"
+      },
+      {
+        "id": 269928,
+        "message": "Travel Essentials"
+      },
+      {
+        "id": 269929,
+        "message": "Art, Design & Culture"
+      },
+      {
+        "id": 288411,
+        "message": "Tours"
+      },
+      {
+        "id": 288412,
+        "message": "SIMs & WiFi"
+      },
+      {
+        "id": 288413,
+        "message": "Experiences"
+      },
+      {
+        "id": 366427,
+        "message": "SALE!"
+      },
+      {
+        "id": 416521,
+        "message": "Near your hotel"
+      },
+      {
+        "id": 298348,
+        "message": "Food"
+      },
+      {
+        "id": 116549,
+        "message": "Outdoor"
+      },
+      {
+        "id": 298349,
+        "message": "Indoor"
+      },
+      {
+        "id": 87711,
+        "message": "Events"
+      },
+      {
+        "id": 298350,
+        "message": "Health"
+      },
+      {
+        "id": 82740,
+        "message": "Culture"
+      },
+      {
+        "id": 582975,
+        "message": "Family Friendly"
+      },
+      {
+        "id": 337018,
+        "message": "Free cancellation"
+      },
+      {
+        "id": 337019,
+        "message": "Instant confirmation"
+      },
+      {
+        "id": 545248,
+        "message": "confirmation status"
+      },
+      {
+        "id": 337012,
+        "message": "Best seller"
+      },
+      {
+        "id": 337013,
+        "message": "Top in {0}"
+      },
+      {
+        "id": 337014,
+        "message": "Trending"
+      },
+      {
+        "id": 337015,
+        "message": "{0} booked"
+      },
+      {
+        "id": 337016,
+        "message": "{0} sold in last 24 hours"
+      },
+      {
+        "id": 337017,
+        "message": "{0}% off"
+      },
+      {
+        "id": 664098,
+        "message": "{0} applied"
+      },
+      {
+        "id": 664097,
+        "message": "{0} eligible"
+      },
+      {
+        "id": 349287,
+        "message": "Beer & Wine Tasting"
+      },
+      {
+        "id": 349288,
+        "message": "Buffet"
+      },
+      {
+        "id": 349289,
+        "message": "Cooking Classes"
+      },
+      {
+        "id": 534411,
+        "message": "Dining Cruises"
+      },
+      {
+        "id": 349291,
+        "message": "Restaurants"
+      },
+      {
+        "id": 349292,
+        "message": "Other Food & Drinks"
+      },
+      {
+        "id": 349293,
+        "message": "Family-friendly Dinner"
+      },
+      {
+        "id": 534412,
+        "message": "Local Dining"
+      },
+      {
+        "id": 349295,
+        "message": "Romantic Dinner"
+      },
+      {
+        "id": 349296,
+        "message": "Amusement Parks"
+      },
+      {
+        "id": 349297,
+        "message": "Aquariums & Zoos"
+      },
+      {
+        "id": 349298,
+        "message": "City Passes"
+      },
+      {
+        "id": 349299,
+        "message": "Events & Exhibitions"
+      },
+      {
+        "id": 349300,
+        "message": "Skip the Queue"
+      },
+      {
+        "id": 349301,
+        "message": "Museums & Galleries"
+      },
+      {
+        "id": 349302,
+        "message": "Observation Decks"
+      },
+      {
+        "id": 349303,
+        "message": "Shows & Performances"
+      },
+      {
+        "id": 349304,
+        "message": "Other Attractions"
+      },
+      {
+        "id": 349305,
+        "message": "Adults-only Attractions"
+      },
+      {
+        "id": 349306,
+        "message": "Adventure Attractions"
+      },
+      {
+        "id": 349307,
+        "message": "Art & Cultural Attractions"
+      },
+      {
+        "id": 349308,
+        "message": "Family-friendly Attractions"
+      },
+      {
+        "id": 349309,
+        "message": "Historical Attractions"
+      },
+      {
+        "id": 349310,
+        "message": "Indoor Attractions"
+      },
+      {
+        "id": 349311,
+        "message": "Nature Attractions"
+      },
+      {
+        "id": 349312,
+        "message": "Night-time Attractions"
+      },
+      {
+        "id": 349313,
+        "message": "Outdoor Attractions"
+      },
+      {
+        "id": 349314,
+        "message": "Romantic Attractions"
+      },
+      {
+        "id": 349315,
+        "message": "Airport Transfer"
+      },
+      {
+        "id": 349316,
+        "message": "Buses"
+      },
+      {
+        "id": 349317,
+        "message": "Hop On Hop Off Transportation"
+      },
+      {
+        "id": 349318,
+        "message": "Cable Cars"
+      },
+      {
+        "id": 349319,
+        "message": "Vehicle Rentals"
+      },
+      {
+        "id": 349320,
+        "message": "Bicycle & e-Scooter Rentals"
+      },
+      {
+        "id": 349321,
+        "message": "Boats & Ferries"
+      },
+      {
+        "id": 349322,
+        "message": "Private Drivers"
+      },
+      {
+        "id": 349323,
+        "message": "Trains"
+      },
+      {
+        "id": 349324,
+        "message": "Other Transportation"
+      },
+      {
+        "id": 349325,
+        "message": "Airport Fast Track"
+      },
+      {
+        "id": 349326,
+        "message": "Airport Lounges"
+      },
+      {
+        "id": 349327,
+        "message": "Luggage Services"
+      },
+      {
+        "id": 349328,
+        "message": "Other Travel Essentials"
+      },
+      {
+        "id": 349329,
+        "message": "Bicycle Tours"
+      },
+      {
+        "id": 349330,
+        "message": "Boat & Yacht Tours"
+      },
+      {
+        "id": 349331,
+        "message": "Bus Tours"
+      },
+      {
+        "id": 349332,
+        "message": "Hop On Hop Off Tours"
+      },
+      {
+        "id": 349333,
+        "message": "Motorbike Tours"
+      },
+      {
+        "id": 349334,
+        "message": "Private Car Tours"
+      },
+      {
+        "id": 349335,
+        "message": "Self-guided Tours"
+      },
+      {
+        "id": 349336,
+        "message": "Shopping Tours"
+      },
+      {
+        "id": 349337,
+        "message": "Walking Tours"
+      },
+      {
+        "id": 349338,
+        "message": "Full-day Tours"
+      },
+      {
+        "id": 534413,
+        "message": "Day Tours"
+      },
+      {
+        "id": 349340,
+        "message": "Multi-day Tours"
+      },
+      {
+        "id": 349341,
+        "message": "Private Tours"
+      },
+      {
+        "id": 534414,
+        "message": "Group Tours"
+      },
+      {
+        "id": 349343,
+        "message": "Other Tours"
+      },
+      {
+        "id": 349344,
+        "message": "Food Tours"
+      },
+      {
+        "id": 349345,
+        "message": "Adults-only Tours"
+      },
+      {
+        "id": 349346,
+        "message": "Adventure Tours"
+      },
+      {
+        "id": 349347,
+        "message": "Art & Cultural Tours"
+      },
+      {
+        "id": 349348,
+        "message": "Family-friendly Tours"
+      },
+      {
+        "id": 349349,
+        "message": "Historical Tours"
+      },
+      {
+        "id": 349350,
+        "message": "Indoor Tours"
+      },
+      {
+        "id": 349351,
+        "message": "Local Tours"
+      },
+      {
+        "id": 349352,
+        "message": "Luxury Tours"
+      },
+      {
+        "id": 349353,
+        "message": "Nature Tours"
+      },
+      {
+        "id": 349354,
+        "message": "Night Tours"
+      },
+      {
+        "id": 349355,
+        "message": "Outdoor Tours"
+      },
+      {
+        "id": 349356,
+        "message": "Romantic Tours"
+      },
+      {
+        "id": 349357,
+        "message": "Seasonal Tours"
+      },
+      {
+        "id": 534415,
+        "message": "eSIM"
+      },
+      {
+        "id": 534512,
+        "message": "Physical SIM"
+      },
+      {
+        "id": 349359,
+        "message": "Wifi"
+      },
+      {
+        "id": 349360,
+        "message": "Other SIMs & WiFi"
+      },
+      {
+        "id": 349361,
+        "message": "Beauty & Skincare"
+      },
+      {
+        "id": 349362,
+        "message": "Costume Rental"
+      },
+      {
+        "id": 349363,
+        "message": "Photography Experience"
+      },
+      {
+        "id": 349364,
+        "message": "Spas & Hot Springs"
+      },
+      {
+        "id": 534416,
+        "message": "Workshops"
+      },
+      {
+        "id": 349366,
+        "message": "Other Experiences"
+      },
+      {
+        "id": 349367,
+        "message": "Adults-only Experiences"
+      },
+      {
+        "id": 349368,
+        "message": "Adventure Experiences"
+      },
+      {
+        "id": 349369,
+        "message": "Art & Cultural Experiences"
+      },
+      {
+        "id": 349370,
+        "message": "Family-friendly Experiences"
+      },
+      {
+        "id": 349371,
+        "message": "Historical Experiences"
+      },
+      {
+        "id": 349372,
+        "message": "Indoor Experiences"
+      },
+      {
+        "id": 349373,
+        "message": "Local Experiences"
+      },
+      {
+        "id": 349374,
+        "message": "Luxury Experiences"
+      },
+      {
+        "id": 349375,
+        "message": "Nature Experiences"
+      },
+      {
+        "id": 349376,
+        "message": "Nightlife Experiences"
+      },
+      {
+        "id": 349377,
+        "message": "Outdoor Experiences"
+      },
+      {
+        "id": 349378,
+        "message": "Romantic Experiences"
+      },
+      {
+        "id": 349379,
+        "message": "Seasonal Experiences"
+      },
+      {
+        "id": 575742,
+        "message": "Safari & Wildlife"
+      },
+      {
+        "id": 575743,
+        "message": "Island Hopping"
+      },
+      {
+        "id": 575744,
+        "message": "Cooking Classes"
+      },
+      {
+        "id": 575745,
+        "message": "Camping & Glamping"
+      },
+      {
+        "id": 575746,
+        "message": "ATV Riding"
+      },
+      {
+        "id": 575747,
+        "message": "Scuba Diving"
+      },
+      {
+        "id": 575748,
+        "message": "Snorkeling"
+      },
+      {
+        "id": 575749,
+        "message": "Paragliding"
+      },
+      {
+        "id": 575750,
+        "message": "Kayaking & Rafting"
+      },
+      {
+        "id": 575751,
+        "message": "Ziplining & Bungee"
+      },
+      {
+        "id": 575752,
+        "message": "Fishing"
+      },
+      {
+        "id": 575753,
+        "message": "Archery & Shooting"
+      },
+      {
+        "id": 575754,
+        "message": "Wellness & Yoga"
+      },
+      {
+        "id": 575755,
+        "message": "Surfing"
+      },
+      {
+        "id": 575756,
+        "message": "Cruises"
+      },
+      {
+        "id": 1265,
+        "message": "to"
+      },
+      {
+        "id": 131694,
+        "message": "{0} Adult"
+      },
+      {
+        "id": 131697,
+        "message": "{0} Adults"
+      },
+      {
+        "id": 131695,
+        "message": "{0} Child"
+      },
+      {
+        "id": 131698,
+        "message": "{0} Children"
+      },
+      {
+        "id": 131696,
+        "message": "{0} Infant"
+      },
+      {
+        "id": 131699,
+        "message": "{0} Infants"
+      },
+      {
+        "id": 96538,
+        "message": "1 Passenger"
+      },
+      {
+        "id": 95804,
+        "message": "{No_of_Passengers} Passengers"
+      },
+      {
+        "id": 310408,
+        "message": "{0} to {1}"
+      },
+      {
+        "id": 310403,
+        "message": "One-way"
+      },
+      {
+        "id": 310404,
+        "message": "Round-trip"
+      },
+      {
+        "id": 92152,
+        "message": "Economy"
+      },
+      {
+        "id": 92153,
+        "message": "Premium economy"
+      },
+      {
+        "id": 92154,
+        "message": "Business"
+      },
+      {
+        "id": 92155,
+        "message": "First"
+      },
+      {
+        "id": 152359,
+        "message": "Mixed"
+      },
+      {
+        "id": 272145,
+        "message": "{0}! You've unlocked Trip Savings deals!"
+      },
+      {
+        "id": 281610,
+        "message": "You've unlocked Trip Savings deals!"
+      },
+      {
+        "id": 272146,
+        "message": "Save more with Trip Savings"
+      },
+      {
+        "id": 272147,
+        "message": "Search flights for your trip"
+      },
+      {
+        "id": 373375,
+        "message": "Flight to {0}"
+      },
+      {
+        "id": 272148,
+        "message": "As a thanks for booking with us, you have unlocked up to 8% off on flight bookings"
+      },
+      {
+        "id": 272149,
+        "message": "Up to 5% off"
+      },
+      {
+        "id": 281611,
+        "message": "Up to 8% off"
+      },
+      {
+        "id": 272150,
+        "message": "Book flights to {0}"
+      },
+      {
+        "id": 272151,
+        "message": "Search flights to {0}"
+      },
+      {
+        "id": 272152,
+        "message": "Cheapest flight deals, no hidden charges"
+      },
+      {
+        "id": 52163,
+        "message": "Search"
+      },
+      {
+        "id": 281022,
+        "message": "Search now"
+      },
+      {
+        "id": 564109,
+        "message": "Search now for flights for your trip"
+      },
+      {
+        "id": 531299,
+        "message": "Search for more hotels"
+      },
+      {
+        "id": 272153,
+        "message": "Find things to do in {0}"
+      },
+      {
+        "id": 272154,
+        "message": "Book tours, attractions, tickets, and even SIM cards"
+      },
+      {
+        "id": 76197,
+        "message": "{0} reviews"
+      },
+      {
+        "id": 272155,
+        "message": "See all things to do in {0}"
+      },
+      {
+        "id": 272156,
+        "message": "Plan your journey to your hotel"
+      },
+      {
+        "id": 558853,
+        "message": "All-in-one travel essentials"
+      },
+      {
+        "id": 272157,
+        "message": "Book your ride in advance for a hassle-free trip"
+      },
+      {
+        "id": 272158,
+        "message": "Book your airport transfer in advance"
+      },
+      {
+        "id": 524554,
+        "message": "Search for an airport transfer"
+      },
+      {
+        "id": 272159,
+        "message": "Get to your hotel easily and securely"
+      },
+      {
+        "id": 272160,
+        "message": "Most booked"
+      },
+      {
+        "id": 281044,
+        "message": "Up to 15% off with Trip Savings"
+      },
+      {
+        "id": 272161,
+        "message": "Rent a car"
+      },
+      {
+        "id": 524555,
+        "message": "Search for a rental car"
+      },
+      {
+        "id": 272162,
+        "message": "Book a car for your trip"
+      },
+      {
+        "id": 272163,
+        "message": "Need more hotels for your trip?"
+      },
+      {
+        "id": 483039,
+        "message": "Explore similar stays in {0}"
+      },
+      {
+        "id": 272164,
+        "message": "Book another place to stay"
+      },
+      {
+        "id": 272165,
+        "message": "We have unlocked the best deals with Trip Savings"
+      },
+      {
+        "id": 239421,
+        "message": "Trip Savings"
+      },
+      {
+        "id": 158602,
+        "message": "Free cancellation"
+      },
+      {
+        "id": 286300,
+        "message": "Need anything else for your {0} trip?"
+      },
+      {
+        "id": 286301,
+        "message": "As a thanks for booking with us, you have unlocked these rewards for your trip"
+      },
+      {
+        "id": 282888,
+        "message": "Book ferry tickets"
+      },
+      {
+        "id": 282893,
+        "message": "Efficient waterway travel"
+      },
+      {
+        "id": 282890,
+        "message": "Book bus tickets"
+      },
+      {
+        "id": 565196,
+        "message": "Buses"
+      },
+      {
+        "id": 565198,
+        "message": "Ferries"
+      },
+      {
+        "id": 565197,
+        "message": "Trains"
+      },
+      {
+        "id": 282889,
+        "message": "Budget-friendly, local routes"
+      },
+      {
+        "id": 282892,
+        "message": "Book train tickets"
+      },
+      {
+        "id": 282891,
+        "message": "Scenic routes by train"
+      },
+      {
+        "id": 285509,
+        "message": "https://agoda.12go.asia/en?utm_source={0}&utm_medium={1}&utm_campaign={2}"
+      },
+      {
+        "id": 285683,
+        "message": "Other transportation available"
+      },
+      {
+        "id": 298597,
+        "message": "Top things to do in {0}"
+      },
+      {
+        "id": 583631,
+        "message": "Top attractions in {city_name}"
+      },
+      {
+        "id": 593588,
+        "message": "Frequently booked with your {0}"
+      },
+      {
+        "id": 593589,
+        "message": "stay"
+      },
+      {
+        "id": 593590,
+        "message": "flight"
+      },
+      {
+        "id": 593591,
+        "message": "activity"
+      },
+      {
+        "id": 522749,
+        "message": "Previous slide for Top things to do in {0}"
+      },
+      {
+        "id": 522750,
+        "message": "Next slide for Top things to do in {0}"
+      },
+      {
+        "id": 522747,
+        "message": "Previous slide for Need a flight for your trip?"
+      },
+      {
+        "id": 522748,
+        "message": "Next slide for Need a flight for your trip?"
+      },
+      {
+        "id": 327565,
+        "message": "Heading to {0}? Book activities for your trip!"
+      },
+      {
+        "id": 357326,
+        "message": "Travel Essentials"
+      },
+      {
+        "id": 298598,
+        "message": "Popular things to do"
+      },
+      {
+        "id": 297857,
+        "message": "See all"
+      },
+      {
+        "id": 300440,
+        "message": "Stay connected"
+      },
+      {
+        "id": 300441,
+        "message": "Buy eSIM"
+      },
+      {
+        "id": 564132,
+        "message": "Get an eSIM for {0}"
+      },
+      {
+        "id": 564133,
+        "message": "Stay connected with affordable rates"
+      },
+      {
+        "id": 300442,
+        "message": "Stay conveniently connected"
+      },
+      {
+        "id": 321775,
+        "message": "From"
+      },
+      {
+        "id": 321777,
+        "message": "Average price per passenger"
+      },
+      {
+        "id": 300581,
+        "message": "Need a hotel for your trip?"
+      },
+      {
+        "id": 320924,
+        "message": "Unlock"
+      },
+      {
+        "id": 320925,
+        "message": "{0} applied!"
+      },
+      {
+        "id": 326640,
+        "message": "As a thank you for booking with us, you\u2019ve unlocked Trip Savings!"
+      },
+      {
+        "id": 326637,
+        "message": "{0}! Unlock {1} your next booking"
+      },
+      {
+        "id": 326638,
+        "message": "up to 10% off"
+      },
+      {
+        "id": 326639,
+        "message": "View benefits"
+      },
+      {
+        "id": 327263,
+        "message": "Find things to do in {city name} (Use promo ACTIVITIES5)"
+      },
+      {
+        "id": 327264,
+        "message": "FLAT 5% off"
+      },
+      {
+        "id": 126096,
+        "message": "Star ratings"
+      },
+      {
+        "id": 367119,
+        "message": "({0})"
+      },
+      {
+        "id": 367165,
+        "message": "Select to see price"
+      },
+      {
+        "id": 410003,
+        "message": "to"
+      },
+      {
+        "id": 410004,
+        "message": "with {0} stop to"
+      },
+      {
+        "id": 410005,
+        "message": "with {0} stops to"
+      },
+      {
+        "id": 338502,
+        "message": "Original price: {0}"
+      },
+      {
+        "id": 328926,
+        "message": "Original price"
+      },
+      {
+        "id": 564489,
+        "message": "Current price: {0}"
+      },
+      {
+        "id": 582976,
+        "message": "Up to 20% off"
+      },
+      {
+        "id": 536036,
+        "message": "Slide {0} of {1}"
+      },
+      {
+        "id": 582684,
+        "message": "Explore {0} your way"
+      },
+      {
+        "id": 603348,
+        "message": "Booked"
+      },
+      {
+        "id": 603349,
+        "message": "Book now"
+      },
+      {
+        "id": 642731,
+        "message": "Your trip to {0}"
+      },
+      {
+        "id": 642732,
+        "message": "Your trip to {0} and {1}"
+      },
+      {
+        "id": 642733,
+        "message": "Your trip to {0}, {1}, and {2}"
+      },
+      {
+        "id": 642734,
+        "message": "Your trip to {0}, {1}, and more"
+      },
+      {
+        "id": 642735,
+        "message": "{0} day to go!"
+      },
+      {
+        "id": 642736,
+        "message": "{0} days to go!"
+      },
+      {
+        "id": 642737,
+        "message": "Save more on additional bookings"
+      },
+      {
+        "id": 292807,
+        "message": "Alternative Transport options"
+      },
+      {
+        "id": 292808,
+        "message": "Train"
+      },
+      {
+        "id": 292809,
+        "message": "Bus"
+      },
+      {
+        "id": 292810,
+        "message": "Ferry"
+      },
+      {
+        "id": 298501,
+        "message": "Taxi"
+      },
+      {
+        "id": 292811,
+        "message": "Van / Minibus"
+      },
+      {
+        "id": 292812,
+        "message": "{0} + {1}"
+      },
+      {
+        "id": 292813,
+        "message": "Starting"
+      },
+      {
+        "id": 292814,
+        "message": "Price per passenger"
+      },
+      {
+        "id": 292815,
+        "message": "Need a {0} to {1}?"
+      },
+      {
+        "id": 292816,
+        "message": "See all"
+      },
+      {
+        "id": 325212,
+        "message": "Multiple airlines"
+      },
+      {
+        "id": 310406,
+        "message": "Estimated price per passenger"
+      },
+      {
+        "id": 326679,
+        "message": "Flights"
+      },
+      {
+        "id": 326681,
+        "message": "Activities"
+      },
+      {
+        "id": 326680,
+        "message": "Hotels"
+      },
+      {
+        "id": 326682,
+        "message": "Discounts will be automatically applied to the price."
+      },
+      {
+        "id": 326683,
+        "message": "Got it!"
+      },
+      {
+        "id": 320922,
+        "message": "Unlock Trip Savings"
+      },
+      {
+        "id": 320923,
+        "message": "Get {0} on your\u00a0booking"
+      },
+      {
+        "id": 321647,
+        "message": "up to 8% off"
+      },
+      {
+        "id": 152131,
+        "message": "Sorry, something went wrong. Please try again."
+      },
+      {
+        "id": -1,
+        "message": ""
+      },
+      {
+        "id": 292822,
+        "message": "Exceptional\u200b"
+      },
+      {
+        "id": 90902,
+        "message": "Excellent"
+      },
+      {
+        "id": 296512,
+        "message": "Very Good"
+      },
+      {
+        "id": 175790,
+        "message": "Good"
+      },
+      {
+        "id": 104010,
+        "message": "Okay"
+      },
+      {
+        "id": 326222,
+        "message": "Explore our selection of properties available during your dates"
+      },
+      {
+        "id": 326221,
+        "message": "Book a hotel for your trip"
+      },
+      {
+        "id": 349769,
+        "message": "See more hotels"
+      },
+      {
+        "id": 483040,
+        "message": "See all properties in {0}"
+      },
+      {
+        "id": 351139,
+        "message": "Per night includes taxes & fees"
+      },
+      {
+        "id": 351996,
+        "message": "or {0} {1}"
+      },
+      {
+        "id": 367166,
+        "message": "We\u2019re sold out for this date"
+      },
+      {
+        "id": 367427,
+        "message": "Per night with taxes"
+      },
+      {
+        "id": 309799,
+        "message": "points"
+      },
+      {
+        "id": 373903,
+        "message": "Per night before taxes"
+      },
+      {
+        "id": 396590,
+        "message": "See all places to stay in {0}"
+      },
+      {
+        "id": 71414,
+        "message": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec"
+      },
+      {
+        "id": 71411,
+        "message": "January,February,March,April,May,June,July,August,September,October,November,December"
+      },
+      {
+        "id": 71412,
+        "message": "Sun,Mon,Tue,Wed,Thu,Fri,Sat"
+      },
+      {
+        "id": 79894,
+        "message": "Su,Mo,Tu,We,Th,Fr,Sa"
+      },
+      {
+        "id": 79895,
+        "message": "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
+      },
+      {
+        "id": 130050,
+        "message": "{d} {mmmm} {yyyy}"
+      },
+      {
+        "id": 130051,
+        "message": "{dddd}, {mmmm} {d}, {yyyy}"
+      },
+      {
+        "id": 87582,
+        "message": "D MMM"
+      },
+      {
+        "id": 108016,
+        "message": "D MMM YYYY"
+      },
+      {
+        "id": 125670,
+        "message": "{days} {month_name}"
+      },
+      {
+        "id": 94110,
+        "message": "{day_name}, {month_name} {days}"
+      },
+      {
+        "id": 125671,
+        "message": "{days} {month_name}, {years}"
+      },
+      {
+        "id": 94111,
+        "message": "{day_name}, {month_name} {days}, {years}"
+      },
+      {
+        "id": 93867,
+        "message": "{hours}h {minutes}m"
+      },
+      {
+        "id": 78904,
+        "message": "{0} Korea local time"
+      },
+      {
+        "id": 105543,
+        "message": "MMM D YYYY"
+      },
+      {
+        "id": 108310,
+        "message": "{d} {mmm} {yyyy}"
+      },
+      {
+        "id": 418302,
+        "message": "{d} {mmm}"
+      },
+      {
+        "id": 418255,
+        "message": "{d}"
+      },
+      {
+        "id": 142461,
+        "message": "ddd, MMM D"
+      },
+      {
+        "id": 349244,
+        "message": "Things to do"
+      },
+      {
+        "id": 349245,
+        "message": "Most popular in {0}"
+      },
+      {
+        "id": 349246,
+        "message": "Top {0}"
+      },
+      {
+        "id": 349247,
+        "message": "See all"
+      },
+      {
+        "id": 349248,
+        "message": "Place to stay"
+      },
+      {
+        "id": 349249,
+        "message": "1 Guest"
+      },
+      {
+        "id": 349250,
+        "message": "{0} Guests"
+      },
+      {
+        "id": 349251,
+        "message": "Best sellers"
+      },
+      {
+        "id": 349252,
+        "message": "Top reviewed"
+      },
+      {
+        "id": 349253,
+        "message": "Need a flight"
+      },
+      {
+        "id": 349254,
+        "message": "1 Passenger"
+      },
+      {
+        "id": 349255,
+        "message": "{0} Passengers"
+      },
+      {
+        "id": 349256,
+        "message": "From"
+      },
+      {
+        "id": 349257,
+        "message": "Estimated price per passenger"
+      },
+      {
+        "id": 349258,
+        "message": "Starting"
+      },
+      {
+        "id": 349259,
+        "message": "Cheapest price"
+      },
+      {
+        "id": 349260,
+        "message": "Search flight from {0} to {1}"
+      },
+      {
+        "id": 349261,
+        "message": "Cheapest flight deals, no hidden charges"
+      },
+      {
+        "id": 349262,
+        "message": "Flights to {0}"
+      },
+      {
+        "id": 349263,
+        "message": "Search flight to {0} "
+      },
+      {
+        "id": 349264,
+        "message": "Check prices"
+      },
+      {
+        "id": 349265,
+        "message": "Book your transport"
+      },
+      {
+        "id": 349266,
+        "message": "Get around {0}"
+      },
+      {
+        "id": 349267,
+        "message": "{0} pax"
+      },
+      {
+        "id": 349268,
+        "message": "Train"
+      },
+      {
+        "id": 349269,
+        "message": "Bus"
+      },
+      {
+        "id": 422938,
+        "message": "Bus / Van"
+      },
+      {
+        "id": 349270,
+        "message": "Van / Minibus"
+      },
+      {
+        "id": 349271,
+        "message": "Ferry"
+      },
+      {
+        "id": 349272,
+        "message": "Get to your destination"
+      },
+      {
+        "id": 349273,
+        "message": "Schedule in advance"
+      },
+      {
+        "id": 349274,
+        "message": "Airport transfer"
+      },
+      {
+        "id": 422939,
+        "message": "Fixed price, no surprises"
+      },
+      {
+        "id": 422940,
+        "message": "No waiting in taxi lines"
+      },
+      {
+        "id": 349275,
+        "message": "Car rental"
+      },
+      {
+        "id": 349276,
+        "message": "Stay connected"
+      },
+      {
+        "id": 349277,
+        "message": "Global coverage "
+      },
+      {
+        "id": 349278,
+        "message": "Affordable rates"
+      },
+      {
+        "id": 349279,
+        "message": "Instant connectivity "
+      },
+      {
+        "id": 349280,
+        "message": "eSIM"
+      },
+      {
+        "id": 349281,
+        "message": "Trip savings - Up to 10% off"
+      },
+      {
+        "id": 349282,
+        "message": "Suggested"
+      },
+      {
+        "id": 349879,
+        "message": "Dismiss this suggestion"
+      },
+      {
+        "id": 349880,
+        "message": "Let us know why this suggestion isn't useful to you. "
+      },
+      {
+        "id": 349882,
+        "message": "I've already booked what I need"
+      },
+      {
+        "id": 349883,
+        "message": "Suggestion dismissed"
+      },
+      {
+        "id": 349884,
+        "message": "Undo"
+      },
+      {
+        "id": 349981,
+        "message": "I don't need a flight"
+      },
+      {
+        "id": 349982,
+        "message": "I don't need a place to stay"
+      },
+      {
+        "id": 349983,
+        "message": "I don't need an activity"
+      },
+      {
+        "id": 349984,
+        "message": "I don't need any transport"
+      },
+      {
+        "id": 349985,
+        "message": "I don't need an eSIM"
+      },
+      {
+        "id": 373376,
+        "message": "Flight from {0}"
+      },
+      {
+        "id": 373377,
+        "message": "Search flight to {0}"
+      },
+      {
+        "id": 373378,
+        "message": "Search flight from {0}"
+      },
+      {
+        "id": 524678,
+        "message": "Free eSIM"
+      },
+      {
+        "id": 524679,
+        "message": "As a Diamond tier member, You are eligible for a"
+      },
+      {
+        "id": 577077,
+        "message": "As a Diamond tier member, you are eligible for {0}"
+      },
+      {
+        "id": 524680,
+        "message": "free global eSIM"
+      },
+      {
+        "id": 577079,
+        "message": "3 free eSIMs per year"
+      },
+      {
+        "id": 536001,
+        "message": "More information"
+      },
+      {
+        "id": 524681,
+        "message": "Get free eSIM"
+      },
+      {
+        "id": 524682,
+        "message": "Global Coverage"
+      },
+      {
+        "id": 524683,
+        "message": "Affordable Rates"
+      },
+      {
+        "id": 524684,
+        "message": "Instant Connection"
+      },
+      {
+        "id": 599077,
+        "message": "10% off Airport transfer"
+      },
+      {
+        "id": 599078,
+        "message": "As a Diamond tier member, you are eligible for {0}"
+      },
+      {
+        "id": 599079,
+        "message": "10% off Airport transfer"
+      },
+      {
+        "id": 599080,
+        "message": "Schedule in advance"
+      },
+      {
+        "id": 599081,
+        "message": "Fixed prices"
+      },
+      {
+        "id": 599082,
+        "message": "No taxi lines"
+      },
+      {
+        "id": 600000,
+        "message": "Book transfer"
+      },
+      {
+        "id": 599486,
+        "message": "Discounted airport transfers"
+      },
+      {
+        "id": 599487,
+        "message": "This booking is eligible for a discount on airport transfers. Book your transfer following instructions on our partner's website."
+      },
+      {
+        "id": 999991,
+        "message": ""
+      },
+      {
+        "id": 999992,
+        "message": ""
+      },
+      {
+        "id": 999993,
+        "message": ""
+      },
+      {
+        "id": 999994,
+        "message": ""
+      },
+      {
+        "id": 999995,
+        "message": ""
+      },
+      {
+        "id": 999996,
+        "message": ""
+      },
+      {
+        "id": 999997,
+        "message": ""
+      },
+      {
+        "id": 665455,
+        "message": "{0} km"
+      },
+      {
+        "id": 665454,
+        "message": "{0}h {1}m"
+      },
+      {
+        "id": 665562,
+        "message": "{0}m"
+      },
+      {
+        "id": 676431,
+        "message": "{0}h"
+      },
+      {
+        "id": 666412,
+        "message": "Explore stays in {0}"
+      },
+      {
+        "id": 666413,
+        "message": "See more"
+      },
+      {
+        "id": 666414,
+        "message": "View more"
+      },
+      {
+        "id": 666415,
+        "message": "Trip recommendations"
+      },
+      {
+        "id": 666416,
+        "message": "10% off with VIP Diamond"
+      },
+      {
+        "id": 666417,
+        "message": "VIP Diamond benefit"
+      },
+      {
+        "id": 666418,
+        "message": "Search hotels"
+      },
+      {
+        "id": 666419,
+        "message": "in {0}"
+      },
+      {
+        "id": 666420,
+        "message": "Search flights"
+      },
+      {
+        "id": 666421,
+        "message": "Find things to do"
+      },
+      {
+        "id": 666422,
+        "message": "to/from {0} airport"
+      },
+      {
+        "id": 666423,
+        "message": "Book transport"
+      },
+      {
+        "id": 666424,
+        "message": "Cars, buses, trains, etc."
+      },
+      {
+        "id": 667356,
+        "message": "Rent a car"
+      },
+      {
+        "id": 667357,
+        "message": "from {0}"
+      },
+      {
+        "id": 666425,
+        "message": "Get eSIM"
+      },
+      {
+        "id": 666426,
+        "message": "{0} days in {1}"
+      },
+      {
+        "id": 666427,
+        "message": "1 day in {0}"
+      },
+      {
+        "id": 666430,
+        "message": "{0} \u2192 {1}"
+      },
+      {
+        "id": 153679,
+        "message": "Top Activities in {0}"
+      },
+      {
+        "id": 265369,
+        "message": "Book airport transfer"
+      },
+      {
+        "id": 359652,
+        "message": "Use Grab Advance Booking"
+      },
+      {
+        "id": 359653,
+        "message": "Book a ride to the airport up to 7 days ahead and {X}"
+      },
+      {
+        "id": 359654,
+        "message": "Terms & conditions"
+      },
+      {
+        "id": 359656,
+        "message": "The promocode cannot be redeemed on Agoda's platform and Agoda shall not be liable or responsible for the validity or the use of the promocode."
+      },
+      {
+        "id": 359657,
+        "message": "The promocode is offered by Grab and is subject to Grab's Terms and Conditions"
+      },
+      {
+        "id": 359658,
+        "message": "Grab promo terms & conditions"
+      },
+      {
+        "id": 359659,
+        "message": "Book on Grab"
+      },
+      {
+        "id": 359660,
+        "message": "We\u2019re redirecting you to Grab"
+      },
+      {
+        "id": 365761,
+        "message": "save up to {0}%"
+      },
+      {
+        "id": 640932,
+        "message": "Book your airport transfer"
+      },
+      {
+        "id": 640933,
+        "message": "Reliable rides to {departure_airport_code} airport for just {price}"
+      },
+      {
+        "id": 640934,
+        "message": "Reliable rides to {departure_airport_code} airport\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640935,
+        "message": "Reliable rides from {arrival_airport_code} airport for just {price}"
+      },
+      {
+        "id": 640936,
+        "message": "Reliable rides from {arrival_airport_code} airport\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640937,
+        "message": "Book your ride from your hotel to {departure_airport_code} airport"
+      },
+      {
+        "id": 640938,
+        "message": "Get to the airport in about {airport_travel_time} for {price}"
+      },
+      {
+        "id": 640939,
+        "message": "Get to the airport in about {airport_travel_time} from just {price} with your {0}!"
+      },
+      {
+        "id": 640940,
+        "message": "Book your ride from {arrival_airport_code} airport to your hotel"
+      },
+      {
+        "id": 640941,
+        "message": "Get to your hotel in about {hotel_travel_time} for {price}"
+      },
+      {
+        "id": 640942,
+        "message": "Get to your hotel in about {hotel_travel_time} from just {price} with your {0}!"
+      },
+      {
+        "id": 640892,
+        "message": "Board your {departure_time} flight feeling refreshed"
+      },
+      {
+        "id": 640893,
+        "message": "Recharge at {departure_airport_code} airport before boarding, from {price}"
+      },
+      {
+        "id": 640894,
+        "message": "Recharge at {departure_airport_code} airport before boarding\u2014from {price} with your {0}."
+      },
+      {
+        "id": 640895,
+        "message": "Early departure at {departure_airport_code} airport"
+      },
+      {
+        "id": 640896,
+        "message": "Early-departure rides start from {price}"
+      },
+      {
+        "id": 640897,
+        "message": "Early-departure rides start from {price} with your {0}"
+      },
+      {
+        "id": 640898,
+        "message": "Early arrival at {arrival_airport_code} airport"
+      },
+      {
+        "id": 640899,
+        "message": "Early-arrival rides start from {price}"
+      },
+      {
+        "id": 640900,
+        "message": "Early-arrival rides start from {price} with your {0}"
+      },
+      {
+        "id": 640901,
+        "message": "Late arrival at {arrival_airport_code} airport"
+      },
+      {
+        "id": 640902,
+        "message": "Have a driver waiting at the airport at any hour for just {price}"
+      },
+      {
+        "id": 640903,
+        "message": "Have a driver waiting at the airport at any hour\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640904,
+        "message": "Your hotel is {hotel_distance_km} to the airport"
+      },
+      {
+        "id": 640905,
+        "message": "Smooth rides to {departure_airport_code} airport start from {price}"
+      },
+      {
+        "id": 640906,
+        "message": "Smooth rides to {departure_airport_code} airport start from {price} with your {0}."
+      },
+      {
+        "id": 640907,
+        "message": "Your hotel is {hotel_distance_km} from the airport"
+      },
+      {
+        "id": 640908,
+        "message": "Smooth rides to {hotel_name} start from {price}"
+      },
+      {
+        "id": 640909,
+        "message": "Smooth rides to {hotel_name} start from {price} with your {0}."
+      },
+      {
+        "id": 640910,
+        "message": "Late departure at {departure_airport_code} airport"
+      },
+      {
+        "id": 640911,
+        "message": "Have a driver take you to the airport at any hour for just {price}"
+      },
+      {
+        "id": 640912,
+        "message": "Have a driver take you to the airport at any hour\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640913,
+        "message": "Group transportation made easy"
+      },
+      {
+        "id": 640914,
+        "message": "Get your whole gang to where you want to go easily for just {price}"
+      },
+      {
+        "id": 640915,
+        "message": "Get your whole gang to the airport\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640916,
+        "message": "Get your whole gang where you want to go\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640917,
+        "message": "Most reliable way to the airport"
+      },
+      {
+        "id": 640918,
+        "message": "Reach the airport in about {rail_travel_time}, from {price}"
+      },
+      {
+        "id": 640919,
+        "message": "Reach the airport in about {rail_travel_time}\u2014from {price} with your {0}."
+      },
+      {
+        "id": 640920,
+        "message": "Most reliable way into the city"
+      },
+      {
+        "id": 640921,
+        "message": "Reach city center in about {rail_travel_time}, from {price}"
+      },
+      {
+        "id": 640922,
+        "message": "Reach city center in about {rail_travel_time}\u2014from {price} with your {0}."
+      },
+      {
+        "id": 640923,
+        "message": "Average check-in takes {queue_time} hours at {departure_airport_code} airport"
+      },
+      {
+        "id": 640924,
+        "message": "Save around {time_saved} with fast track for just {price}"
+      },
+      {
+        "id": 640925,
+        "message": "Save around {time_saved} with fast track\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 640926,
+        "message": "Relax with lounge access at {layover_airport_code} airport"
+      },
+      {
+        "id": 640927,
+        "message": "Relax with lounge access, from {price}"
+      },
+      {
+        "id": 640928,
+        "message": "Layover lounge access\u2014from {price} with your {0}."
+      },
+      {
+        "id": 640929,
+        "message": "You only have {layover_duration} between flights"
+      },
+      {
+        "id": 640930,
+        "message": "Breeze through security with fast track for just {price}"
+      },
+      {
+        "id": 640931,
+        "message": "Breeze through security with fast track\u2014from {price} with your {0}!"
+      },
+      {
+        "id": 9999910,
+        "message": ""
+      },
+      {
+        "id": 9999911,
+        "message": ""
+      },
+      {
+        "id": 9999930,
+        "message": ""
+      },
+      {
+        "id": 9999912,
+        "message": ""
+      },
+      {
+        "id": 9999913,
+        "message": ""
+      },
+      {
+        "id": 9999914,
+        "message": ""
+      },
+      {
+        "id": 9999915,
+        "message": ""
+      },
+      {
+        "id": 9999931,
+        "message": ""
+      },
+      {
+        "id": 9999916,
+        "message": ""
+      },
+      {
+        "id": 9999917,
+        "message": ""
+      },
+      {
+        "id": 9999918,
+        "message": ""
+      },
+      {
+        "id": 9999919,
+        "message": ""
+      },
+      {
+        "id": 9999932,
+        "message": ""
+      },
+      {
+        "id": 9999920,
+        "message": ""
+      },
+      {
+        "id": 900554,
+        "message": ""
+      }
+    ]
+  }
+}

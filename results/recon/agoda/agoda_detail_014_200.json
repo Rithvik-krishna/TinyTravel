@@ -1,0 +1,86 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/getSimpleRecommendations?pageTypeId=7",
+  "status": 200,
+  "data": {
+    "tripRecommendationUIState": [
+      {
+        "component": "FlagshipAttractionCarousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "Carousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "ActivitySubCategoriesCarousel",
+        "productType": "Activity",
+        "id": 3,
+        "variant": "Full"
+      },
+      {
+        "component": "Section",
+        "children": [
+          {
+            "component": "Card",
+            "productType": "AirportTransfer",
+            "id": 4,
+            "variant": "Full"
+          },
+          {
+            "component": "Card",
+            "productType": "CarRental",
+            "id": 5,
+            "variant": "Full"
+          }
+        ]
+      }
+    ],
+    "data": [
+      {
+        "id": 3,
+        "productType": "Activity",
+        "startDate": "2026-11-20T00:00:00",
+        "cityId": 4923,
+        "cityName": "Bangalore",
+        "recommendationReason": "LastRecentSearch",
+        "latitude": 12.979863166809082,
+        "longitude": 77.58627319335938
+      },
+      {
+        "id": 4,
+        "productType": "AirportTransfer",
+        "startDate": "2026-11-20T00:00:00",
+        "cityId": 4923,
+        "adults": 2,
+        "children": 0,
+        "product": {
+          "airportTransfer": {
+            "numberOfPassengers": 2
+          }
+        },
+        "recommendationReason": "LastRecentSearch",
+        "propertyId": 1785304
+      },
+      {
+        "id": 5,
+        "productType": "CarRental",
+        "startDate": "2026-11-20T00:00:00",
+        "endDate": "2026-11-20T00:00:00",
+        "recommendationReason": "LastRecentSearch"
+      }
+    ],
+    "cid": "1917394",
+    "enabledFeatureFlags": [
+      "FlightsEligible",
+      "ActivitiesEligible",
+      "UCSDirectActivityUrl",
+      "FixActivityTravelDateTimezone",
+      "UCSActivitiesPromocodeBadges",
+      "UseActivityCityIdFromCriteria"
+    ]
+  }
+}

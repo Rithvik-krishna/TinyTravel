@@ -1,0 +1,24 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/getDropOffs?pageTypeId=1",
+  "status": 200,
+  "content_type": "application/json",
+  "headers": {
+    "strict-transport-security": "max-age=31536000",
+    "akamai-grn": "0.2d460317.1794727834.8edc1ea",
+    "access-control-expose-headers": "ag-correlation-id",
+    "x-envoy-datacenter": "sg, sg, sg",
+    "x-envoy-upstream-service-time": "16",
+    "access-control-allow-credentials": "true",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "58",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-cp2x2",
+    "ag-correlation-id": "e97484bb-f33b-4fe9-8c44-60cd9dd935cf",
+    "content-type": "application/json",
+    "vary": "User-Agent, Accept-Encoding",
+    "date": "Sun, 15 Nov 2026 07:30:34 GMT"
+  },
+  "data": {
+    "carouselTitleText": "Continue planning your trip"
+  }
+}

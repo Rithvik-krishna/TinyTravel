@@ -1,0 +1,240 @@
+{
+  "url": "https://www.agoda.com/api/cronos/geo/hotel/faq?propertyId=1785304",
+  "status": 200,
+  "data": [
+    {
+      "questionId": "4786054449887888105",
+      "question": "Does [hotel_name] offer 24-hour front desk assistance?",
+      "answer": "Yes, [hotel_name] has a 24-hour front desk.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5121226360878511062",
+      "question": "Are there in-room safes provided at [hotel_name]?",
+      "answer": "Yes, [hotel_name] provides safety deposit boxes.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "2751616735215741450",
+      "question": "Is there free parking available for guests at [hotel_name]?",
+      "answer": "Yes, [hotel_name] offers car park free of charge.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5000165161384854513",
+      "question": "Are there any popular tourist attractions near [hotel_name]?",
+      "answer": "Yes, popular attractions nearby include Cubbon Park (1.01 km), UB City (1.38 km), and Bangalore Palace (2.2 km).",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "4175873238280069028",
+      "question": "Are there vegetarian or vegan breakfast options at [hotel_name]?",
+      "answer": "Yes, [hotel_name] has a vegetarian restaurant and offers a variety of breakfast types.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "2642007394212480321",
+      "question": "Is [hotel_name] suitable for business travelers?",
+      "answer": "Yes, [hotel_name] provides business-friendly facilities such as meeting rooms, a business center, and free Wi-Fi for business events.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "6324997859243730926",
+      "question": "Is [hotel_name] located in the city center of Bangalore?",
+      "answer": "Yes, [hotel_name] is located in Bangalore.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "6202528947581330893",
+      "question": "Does [hotel_name] provide baby cots or extra beds?",
+      "answer": "Yes, [hotel_name] provides cots free of charge.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "6421285263848819030",
+      "question": "Are the rooms at [hotel_name] soundproofed?",
+      "answer": "Rooms at [hotel_name] feature double-glazed windows.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "3177809337203450228",
+      "question": "Is [hotel_name] wheelchair accessible?",
+      "answer": "Yes, [hotel_name] is wheelchair accessible.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5855607247910593046",
+      "question": "How close is [hotel_name] to the nearest metro station?",
+      "answer": "The nearest station, Dr. B R Ambedkar Station, Vidhana Soudha, is 0.58 km from [hotel_name].",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "139391944293861968",
+      "question": "Does [hotel_name] offer laundry or dry cleaning services?",
+      "answer": "Yes, [hotel_name] provides both laundry and dry cleaning services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "1198030227478890033",
+      "question": "Does [hotel_name] have a fitness center or gym?",
+      "answer": "Yes, [hotel_name] has a 24-hour fitness center.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "1015258807201483515",
+      "question": "Are there any shopping malls within walking distance of [hotel_name]?",
+      "answer": "UB City shopping center is located 1.38 km from [hotel_name].",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "4292442054763411228",
+      "question": "Does [hotel_name] offer express check-in and check-out?",
+      "answer": "Yes, [hotel_name] offers express check-in/check-out.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5367433458051158389",
+      "question": "Is there a bar or lounge area in [hotel_name]?",
+      "answer": "Yes, [hotel_name] has a bar, a poolside bar, and a shared lounge/TV area.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5214250583815942908",
+      "question": "Is Wi-Fi available at [hotel_name] and is it free?",
+      "answer": "Yes, Wi-Fi is available in all rooms and public areas, with complimentary wireless access in rooms.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "7681666161918392083",
+      "question": "What are the payment methods accepted at [hotel_name]?",
+      "answer": "[hotel_name] offers a cashless payment service.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "3641892397789859174",
+      "question": "What type of breakfast is served at [hotel_name]?",
+      "answer": "[hotel_name] serves a wide variety of breakfasts, including English, American, Indian, Asian, Continental, and gluten-free options.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "7121915273272370916",
+      "question": "How far is [hotel_name] from Kempegowda International Airport?",
+      "answer": "[hotel_name] is 27.93 km from Kempegowda International Airport.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "374135847352035827",
+      "question": "Does [hotel_name] offer ironing facilities in the room?",
+      "answer": "Yes, ironing facilities are available in all rooms at [hotel_name].",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "1192121306330626015",
+      "question": "Does [hotel_name] have meeting rooms or a business center?",
+      "answer": "Yes, [hotel_name] has meeting and banquet facilities, as well as a business center with fax and photocopying services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "871470107788347079",
+      "question": "Does [hotel_name] provide an airport shuttle service?",
+      "answer": "Yes, [hotel_name] provides airport transfer.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "4996690600148638696",
+      "question": "Can I store my luggage at [hotel_name] before check-in or after check-out?",
+      "answer": "Yes, [hotel_name] provides luggage storage.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "2632970568043289882",
+      "question": "Does [hotel_name] have family-friendly rooms?",
+      "answer": "Yes, [hotel_name] offers family rooms.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "1872128332603520652",
+      "question": "Is there a designated smoking area at [hotel_name]?",
+      "answer": "Yes, [hotel_name] has a designated smoking area.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "8390929019014951930",
+      "question": "Is there a tour desk or concierge service at [hotel_name]?",
+      "answer": "Yes, [hotel_name] offers both concierge and tour services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "2666734005302760854",
+      "question": "Is there high-speed internet in the rooms at [hotel_name]?",
+      "answer": "Yes, [hotel_name] provides wireless internet access in all rooms.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "8565039199679656932",
+      "question": "How do I get to the city center from [hotel_name]?",
+      "answer": "[hotel_name] is located in the heart of Bangalore, with easy access via local public transport and taxi services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "5181041179436546992",
+      "question": "Does [hotel_name] offer private car transfers?",
+      "answer": "Yes, [hotel_name] provides airport transfer and taxi services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "7781347199496811465",
+      "question": "Does [hotel_name] provide currency exchange services?",
+      "answer": "Yes, [hotel_name] provides currency exchange services.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "2023412831471654122",
+      "question": "Does [hotel_name] allow pets?",
+      "answer": "Yes, [hotel_name] allows dogs and cats, though charges apply and pets may not be left unattended.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "7103949729097332797",
+      "question": "Are there non-smoking rooms available at [hotel_name]?",
+      "answer": "Yes, [hotel_name] offers non-smoking rooms and is a 100% non-smoking property.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "3110003601133050646",
+      "question": "Does [hotel_name] have air conditioning in all rooms?",
+      "answer": "Yes, all rooms at [hotel_name] are equipped with air conditioning.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "3761558634602487180",
+      "question": "Does [hotel_name] provide daily housekeeping services?",
+      "answer": "Yes, [hotel_name] provides daily housekeeping.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "172815213337467986",
+      "question": "What time is check-in and check-out at [hotel_name]?",
+      "answer": "Check-in at [hotel_name] is from 02:00 PM to 12:00 AM, and check-out is by 12:00 PM.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "812015843183742190",
+      "question": "Does [hotel_name] have a doctor on call in case of emergency?",
+      "answer": "Yes, [hotel_name] has a doctor/nurse on call.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "9014535326351568352",
+      "question": "Is room service available 24 hours at [hotel_name]?",
+      "answer": "Yes, [hotel_name] offers 24-hour room service.",
+      "questionCategoryName": "faq_property_ai"
+    },
+    {
+      "questionId": "4446493071583197179",
+      "question": "Are there any restaurants available inside [hotel_name]?",
+      "answer": "Yes, [hotel_name] has 3 onsite restaurants.",
+      "questionCategoryName": "faq_property_ai"
+    }
+  ]
+}

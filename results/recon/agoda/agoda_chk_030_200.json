@@ -1,0 +1,66 @@
+{
+  "url": "https://www.agoda.com/api/cronos/geo/hotel/faq?propertyId=1785304",
+  "status": 200,
+  "data": [
+    {
+      "questionId": "35",
+      "question": "Does [hotel_name] have a swimming pool?",
+      "answer": "While relaxing at Radisson Blu Atria Bengaluru, you can enjoy the swimming pool facility to get your day started the right way with a splash for a revitalizing morning or evening.",
+      "questionCategoryName": "property_faq_hotel_facilities_things-to-do"
+    },
+    {
+      "questionId": "57",
+      "question": "Does [hotel_name] provide laundry services?",
+      "answer": "Yes! Radisson Blu Atria Bengaluru includes laundry service at your discretion and even hot water linen and laundry washing for whenever you need your favorite clothes clean and fresh all throughout your getaway. Please contact the property for more information.",
+      "questionCategoryName": "property_faq_hotel_facilities_cleaning"
+    },
+    {
+      "questionId": "92",
+      "question": "Are there ATM on-site at [hotel_name]?",
+      "answer": "Yes! The perks of staying at Radisson Blu Atria Bengaluru include an on-site ATM, providing customers with easy access point for cash withdrawal and remaining worry-free throughout your trip.",
+      "questionCategoryName": "property_faq_location_essential"
+    },
+    {
+      "questionId": "141",
+      "question": "How many rooms does [hotel_name] have?",
+      "answer": "Radisson Blu Atria Bengaluru has a total of 167 rooms.",
+      "questionCategoryName": "property_faq_property_info_property"
+    },
+    {
+      "questionId": "160",
+      "question": "In which languages can [hotel_name]'s employees communicate?",
+      "answer": "Radisson Blu Atria Bengaluru can converse up to 3 languages which includes English for travelers that prefer this language. Please refer to the \"Amenities and facilities\" section and in the \"Languages spoken\" category to find out what different languages this property supports.",
+      "questionCategoryName": "property_faq_property_info_languages spoken"
+    },
+    {
+      "questionId": "161",
+      "question": "What payment cards are accepted at [hotel_name]?",
+      "answer": "Radisson Blu Atria Bengaluru supports up to 5, with payment card selections including Visa, American Express, Cash, and MasterCard.",
+      "questionCategoryName": "property_faq_property_info_payment"
+    },
+    {
+      "questionId": "195",
+      "question": "What is the typical rating that past Business travelers' have given to [hotel_name]?",
+      "answer": "Verified business travelers that have stayed at this property have given Radisson Blu Atria Bengaluru an average rating of 8.1.  You can look up more detailed customer evaluations and responses by filtering for a specific type of verified travelers down in the review section.",
+      "questionCategoryName": "property_faq_review_traveler_type"
+    },
+    {
+      "questionId": "213",
+      "question": "What do local travelers think about [hotel_name]?",
+      "answer": "Past local travelers that have stayed at this property have given Radisson Blu Atria Bengaluru an average rating of 8.7. You can look up on more descriptive customer reviews, and responses for this property down in the review section.",
+      "questionCategoryName": "property_faq_review_traveler_type"
+    },
+    {
+      "questionId": "219",
+      "question": "What dining places are nearby [hotel_name]?",
+      "answer": "Radisson Blu Atria Bengaluru\u2019s local community is Bangalore City Center which consists of popular restaurants such as South Ruchis Square, Organic Fine Dine Restaurant, The London Curry House, and Empire Restaurant Majestic.",
+      "questionCategoryName": "property_faq_location_landmark"
+    },
+    {
+      "questionId": "376",
+      "question": "What is the closest airport to [hotel_name]?",
+      "answer": "The nearest airport to Radisson Blu Atria Bengaluru is Kempegowda International Airport, 28.0 km away.",
+      "questionCategoryName": "property_faq_location_airport"
+    }
+  ]
+}

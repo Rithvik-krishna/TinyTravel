@@ -1,0 +1,45 @@
+{
+  "url": "https://www.agoda.com/api/cronos/layout/GetCalendarExtrasAsync/?cityId=4923&occupancy=2&currency=INR&suggestedPrice=2&checkIn=2026-11-20T00%3A00%3A00.000Z",
+  "status": 200,
+  "data": {
+    "holidaySearchResults": [
+      {
+        "name": "Republic Day",
+        "date": "20270126",
+        "displayDate": "26 Jan"
+      },
+      {
+        "name": "Independence Day",
+        "date": "20270815",
+        "displayDate": "15 Aug"
+      },
+      {
+        "name": "Mahatma Gandhi\"s Birthday",
+        "date": "20271002",
+        "displayDate": "2 Oct"
+      }
+    ],
+    "cheaperPriceInformation": [
+      {
+        "checkIn": "2026-11-28T00:00:00+07:00",
+        "price": 5049.76
+      },
+      {
+        "checkIn": "2026-11-27T00:00:00+07:00",
+        "price": 5176.71
+      },
+      {
+        "checkIn": "2026-12-25T00:00:00+07:00",
+        "price": 5217.8
+      },
+      {
+        "checkIn": "2026-12-26T00:00:00+07:00",
+        "price": 5225.06
+      },
+      {
+        "checkIn": "2026-12-20T00:00:00+07:00",
+        "price": 5278.88
+      }
+    ]
+  }
+}

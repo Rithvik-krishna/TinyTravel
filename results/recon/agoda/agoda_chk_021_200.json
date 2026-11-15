@@ -1,0 +1,25 @@
+{
+  "url": "https://www.agoda.com/api/cronos/layout/GetCalendarExtrasAsync/?showHeavyDemand=true&propertyId=1785304",
+  "status": 200,
+  "data": {
+    "holidaySearchResults": [
+      {
+        "name": "Republic Day",
+        "date": "20270126",
+        "displayDate": "26 Jan"
+      },
+      {
+        "name": "Independence Day",
+        "date": "20270815",
+        "displayDate": "15 Aug"
+      },
+      {
+        "name": "Mahatma Gandhi\"s Birthday",
+        "date": "20271002",
+        "displayDate": "2 Oct"
+      }
+    ],
+    "inDemandDates": [],
+    "cheaperPriceInformation": []
+  }
+}

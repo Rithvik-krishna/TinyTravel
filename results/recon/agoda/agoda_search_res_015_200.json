@@ -1,0 +1,21 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/getSimpleRecommendations?pageTypeId=1",
+  "status": 200,
+  "data": {
+    "tripRecommendationUIState": [],
+    "cid": "1917399",
+    "utmCampaigns": {
+      "desktop": "home_page_widget_desktop",
+      "mobile": "home_page_widget_mweb"
+    },
+    "enabledFeatureFlags": [
+      "FlightsEligible",
+      "ActivitiesEligible",
+      "EnableESimBusesTrainsAndFerries",
+      "UCSDirectActivityUrl",
+      "FixActivityTravelDateTimezone",
+      "UcsNewTripHeader",
+      "UseActivityCityIdFromCriteria"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "url": "https://gumi.criteo.com/sid/json?origin=onetag&domain=agoda.com&sn=ChromeSyncframe&so=undefined&topUrl=www.agoda.com&ceid=74ad60c0-9729-4878-bf2a-c31469afe82b",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "headers": {
+    "strict-transport-security": "max-age=31536000; preload;",
+    "cache-control": "private, no-cache, max-age=0, must-revalidate",
+    "content-encoding": "gzip",
+    "pragma": "no-cache",
+    "server-processing-duration-in-ticks": "828962",
+    "expires": "0",
+    "date": "Sun, 15 Nov 2026 07:30:34 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "Accept-Encoding",
+    "server": "Kestrel"
+  },
+  "data": {
+    "sid": null,
+    "removeSid": false,
+    "bundle": "Z4cYQl90WTM5QXAwSXEydEdyNktSUlJ1NjJwYVVBYnRBaUdaQW9TUjdTSWl3dWRzZWNrYlclMkJETXQlMkZQZkFZaDVSJTJGZGZ4SlJyQTZNSHFvSXVBT0swd29xMm1vRkolMkJlUk9IM0VYSDYwUVFwb0MlMkZ2Wncwb1lGWUltWkV0YnlzNmExdmEya1dwVmN3OWhqcExzMkZQZENwMnl0bnBRJTNEJTNE",
+    "info": "pcDDkF90WTM5QXAwSXEydEdyNktSUlJ1NjJwYVVBYnRBaUdaQW9TUjdTSWl3dWRzZWNrYlclMkJETXQlMkZQZkFZaDVSJTJGZGZ4M1hBV3hnSDhyZGdmZ1BEWG0wYnQxdyUzRCUzRA",
+    "optout": false
+  }
+}

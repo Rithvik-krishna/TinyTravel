@@ -1,0 +1,20 @@
+{
+  "url": "https://www.agoda.com/api/cart/items",
+  "status": 200,
+  "data": {
+    "serverStatus": {
+      "status": "Ok",
+      "category": "Success"
+    },
+    "productItems": [],
+    "cartReferenceId": "7c393dea-2765-47c3-a10d-1c6982b4dcd5",
+    "cartSummary": {
+      "countSummary": {
+        "totalItems": 0,
+        "activeItems": 0,
+        "inactiveItems": 0,
+        "bookedItems": 0
+      }
+    }
+  }
+}

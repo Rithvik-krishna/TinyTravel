@@ -1,0 +1,39 @@
+{
+  "url": "https://www.agoda.com/api/cronos/loyalty/getloyaltybanners",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "access-control-allow-methods": "GET,POST",
+    "x-content-type-options": "nosniff",
+    "x-ua-compatible": "IE=edge",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-g9nqx",
+    "ag-correlation-id": "0e2afb72-a63b-4bc0-8de8-8bdb78b8ec73",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "User-Agent, Accept-Encoding",
+    "access-control-allow-headers": "Content-Type",
+    "strict-transport-security": "max-age=31536000",
+    "date": "Sun, 15 Nov 2026 07:30:32 GMT",
+    "x-envoy-datacenter": "sg",
+    "x-envoy-upstream-service-time": "33",
+    "access-control-allow-credentials": "true",
+    "request-context": "appId=",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "248",
+    "akamai-grn": "0.2d460317.1794727832.8edc0d9"
+  },
+  "data": {
+    "prominentAppDownload": {
+      "title": "Up to 17% off your 1st app booking",
+      "subTitle": "Scan the QR code to unlock app offers",
+      "buttonText": "Save more on App!",
+      "ariaLabelClose": "Close",
+      "agodaLogoAlt": "Agoda logo",
+      "phoneFrameAlt": "Phone frame",
+      "qrCodeAlt": "qr code image to download app"
+    },
+    "whiteBanner": null,
+    "downloadConfirmationBanner": null
+  }
+}

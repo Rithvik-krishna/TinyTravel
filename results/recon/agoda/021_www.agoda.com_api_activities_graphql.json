@@ -1,0 +1,1224 @@
+{
+  "url": "https://www.agoda.com/api/activities/graphql",
+  "status": 200,
+  "content_type": "application/json",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "ag-service-version": "master-1.849.0-70606",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-84kxs",
+    "ag-correlation-id": "218c5df7-8365-42bc-a615-330f3959c2be",
+    "content-type": "application/json",
+    "vary": "User-Agent, Accept-Encoding",
+    "ag-http-server-time": "51324 mcs",
+    "date": "Sun, 15 Nov 2026 07:30:35 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "ag-service-name": "activity-search",
+    "x-envoy-datacenter": "sg",
+    "x-envoy-upstream-service-time": "59",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "3732",
+    "akamai-grn": "0.2d460317.1794727834.8edc208",
+    "ag-atf-trace-id": "29ed45c98bff6da886ec130a9276453e"
+  },
+  "data": {
+    "data": {
+      "search": {
+        "isSuccess": true,
+        "result": {
+          "isCompleted": true,
+          "resultInfo": {
+            "totalActivities": 4,
+            "totalFilteredActivities": 4,
+            "pagination": {
+              "number": 1,
+              "size": 10
+            }
+          },
+          "activities": [
+            {
+              "masterActivityId": 1563604,
+              "masterSupplierId": 50002,
+              "rankScore": {
+                "value": -4.6972394
+              },
+              "content": {
+                "activity": {
+                  "title": "VOYE Asia eSIM ｜ 16 Asia Countries & Regions Data eSIM",
+                  "categories": [
+                    "SimCardsAndWifi"
+                  ],
+                  "description": "<ul><li>Extra 100MB for you to test the eSIM while you are still in your Home Country.<br></li><li>With coverage in 16 Asia countries, there’s no need for multiple SIM cards or VPNs.&nbsp;</li><li>Enjoy seamless access to TikTok, and your favorite social apps.</li><li>Activate easily and connect instantly upon arrival.&nbsp;</li></ul><p>This is a product of Voye Global Connectivity Ltd., a company incorporated in Israel with company registration number 516741196.</p>",
+                  "duration": {
+                    "minutes": 0,
+                    "minutesUntil": null,
+                    "durationType": "UNKNOWN"
+                  },
+                  "location": {
+                    "city": {
+                      "id": 9395,
+                      "name": "Bangkok"
+                    },
+                    "addressLine": "",
+                    "geo": {
+                      "lat": 13.750057,
+                      "long": 100.49881
+                    },
+                    "country": {
+                      "id": 106,
+                      "name": "Thailand"
+                    },
+                    "postalCode": ""
+                  }
+                },
+                "images": [
+                  {
+                    "url": "https://pix6.agoda.net/generic/1f8cd98d90140e314628dcb103758bb3.png?ce=3",
+                    "description": "",
+                    "imageType": "PROVIDER",
+                    "imageSize": {
+                      "height": 0,
+                      "width": 0
+                    }
+                  }
+                ],
+                "reviewSummary": {
+                  "averageScore": 3.3,
+                  "totalCount": 106
+                },
+                "detail": null,
+                "contentLocale": "en-in",
+                "badges": {
+                  "bookingInfo": [
+                    {
+                      "badgeType": "BOOKING_COUNT_ALL_TIME",
+                      "enrichmentData": [
+                        "1639"
+                      ]
+                    }
+                  ],
+                  "activityHighlights": [],
+                  "deals": [
+                    {
+                      "badgeType": "DISCOUNT",
+                      "enrichmentData": [
+                        "13"
+                      ]
+                    }
+                  ],
+                  "promocodes": [],
+                  "keyAttributes": [
+                    {
+                      "badgeType": "INSTANT_CONFIRMATION",
+                      "enrichmentData": null
+                    }
+                  ]
+                }
+              },
+              "activityRepresentativeInfo": {
+                "activityId": 1563604,
+                "activityToken": "AAABreF7Im1haWQiOm51bGwsIgsAoDE1NjM2MDQsInMOAPAINTAwMDIsInNhYyI6IjUzNjY3MSIsIm8bAFAwLCJzbxcA8BwiLCJjdXIiOiJJTlIiLCJwcmljZSI6eyJkdCI6IkJPT0siLCJxIjoxLCJ0FwAgZXgGAP8MY3QiOjEwMS4zMiwiY28iOjExNi44N30sImFsHwAKFWWtAAIJAOB9LCJsbyI6W10sInBtYwkAr30sInN0YXJ0cHKFAGsVdFgBNG9zdAsARXBheHIMABRtCgAVYhQAFG9bASJwclAAsG9naWQiOm51bGx9",
+                "pricingSummary": {
+                  "pricing": [
+                    {
+                      "currency": "INR",
+                      "display": {
+                        "perBook": {
+                          "displayType": "BOOK",
+                          "quantity": 1,
+                          "total": {
+                            "allInclusive": {
+                              "chargeTotal": 101.32,
+                              "crossedOut": 116.87
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "cancellationPolicy": {
+                  "cancellationType": "NON_REFUNDABLE",
+                  "policies": [
+                    {
+                      "hoursFrom": 8760,
+                      "hoursUntil": 0,
+                      "penaltyCode": "100P"
+                    },
+                    {
+                      "hoursFrom": 0,
+                      "hoursUntil": -1,
+                      "penaltyCode": "100P"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "masterActivityId": 1628416,
+              "masterSupplierId": 50002,
+              "rankScore": {
+                "value": -5.138025
+              },
+              "content": {
+                "activity": {
+                  "title": "eSIM in multiple Asian countries | 3HK 4G/5G universal eSIM in the Asia-Pacific region",
+                  "categories": [
+                    "SimCardsAndWifi"
+                  ],
+                  "description": "<ul><li>Using 3HK Telecom roaming resources, it supports 22 countries and regions in Asia.</li><li> Bonus Hong Kong internet data allowance, the top choice for internet access during transit.<br></li><li> You can set up an eSIM simply by scanning a QR code, eliminating the hassle of changing your SIM card.<br></li><li> Supports hotspot sharing</li></ul>",
+                  "duration": {
+                    "minutes": 0,
+                    "minutesUntil": null,
+                    "durationType": "UNKNOWN"
+                  },
+                  "location": {
+                    "city": {
+                      "id": 9395,
+                      "name": "Bangkok"
+                    },
+                    "addressLine": "",
+                    "geo": {
+                      "lat": 13.750057,
+                      "long": 100.49881
+                    },
+                    "country": {
+                      "id": 106,
+                      "name": "Thailand"
+                    },
+                    "postalCode": ""
+                  }
+                },
+                "images": [
+                  {
+                    "url": "https://pix6.agoda.net/generic/f574eef7dac86b796898caf4f990d461.jpeg?ce=3",
+                    "description": "",
+                    "imageType": "PROVIDER",
+                    "imageSize": {
+                      "height": 0,
+                      "width": 0
+                    }
+                  }
+                ],
+                "reviewSummary": {
+                  "averageScore": 4.7,
+                  "totalCount": 58
+                },
+                "detail": null,
+                "contentLocale": "en-in",
+                "badges": {
+                  "bookingInfo": [
+                    {
+                      "badgeType": "BOOKING_COUNT_ALL_TIME",
+                      "enrichmentData": [
+                        "85"
+                      ]
+                    }
+                  ],
+                  "activityHighlights": [],
+                  "deals": [
+                    {
+                      "badgeType": "DISCOUNT",
+                      "enrichmentData": [
+                        "15"
+                      ]
+                    }
+                  ],
+                  "promocodes": [],
+                  "keyAttributes": [
+                    {
+                      "badgeType": "INSTANT_CONFIRMATION",
+                      "enrichmentData": null
+                    }
+                  ]
+                }
+              },
+              "activityRepresentativeInfo": {
+                "activityId": 1628416,
+                "activityToken": "AAABreF7Im1haWQiOm51bGwsIgsAoDE2Mjg0MTYsInMOAPAINTAwMDIsInNhYyI6IjU3NDc1MSIsIm8bAFAwLCJzbxcA8BwiLCJjdXIiOiJJTlIiLCJwcmljZSI6eyJkdCI6IkJPT0siLCJxIjoxLCJ0FwAgZXgGAP8MY3QiOjQzNy40NiwiY28iOjUxNi40OH0sImFsHwAKFWWtAAIJAOB9LCJsbyI6W10sInBtYwkAr30sInN0YXJ0cHKFAGsVdFgBNG9zdAsARXBheHIMABRtCgAVYhQAFG9bASJwclAAsG9naWQiOm51bGx9",
+                "pricingSummary": {
+                  "pricing": [
+                    {
+                      "currency": "INR",
+                      "display": {
+                        "perBook": {
+                          "displayType": "BOOK",
+                          "quantity": 1,
+                          "total": {
+                            "allInclusive": {
+                              "chargeTotal": 437.46,
+                              "crossedOut": 516.48
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "cancellationPolicy": {
+                  "cancellationType": "NON_REFUNDABLE",
+                  "policies": [
+                    {
+                      "hoursFrom": 8760,
+                      "hoursUntil": 0,
+                      "penaltyCode": "100P"
+                    },
+                    {
+                      "hoursFrom": 0,
+                      "hoursUntil": -1,
+                      "penaltyCode": "100P"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "masterActivityId": 1553357,
+              "masterSupplierId": 50002,
+              "rankScore": {
+                "value": -5.5293303
+              },
+              "content": {
+                "activity": {
+                  "title": "Global Multi-Country Network SIM Card | Orange eSIM for Data and Calls in Multiple Countries",
+                  "categories": [
+                    "SimCardsAndWifi"
+                  ],
+                  "description": "<ul><li>Travel around the world, covering Europe, America, Asia, and Africa<br></li></ul><ul><li> No physical card required, no card replacement required, just follow the simple steps to set up your eSIM and enjoy high-speed internet.<br></li></ul>",
+                  "duration": {
+                    "minutes": 0,
+                    "minutesUntil": null,
+                    "durationType": "UNKNOWN"
+                  },
+                  "location": {
+                    "city": {
+                      "id": 4784,
+                      "name": "Torshavn"
+                    },
+                    "addressLine": "",
+                    "geo": {
+                      "lat": 62.016666,
+                      "long": -6.766667
+                    },
+                    "country": {
+                      "id": 200,
+                      "name": "Faroe Islands"
+                    },
+                    "postalCode": ""
+                  }
+                },
+                "images": [
+                  {
+                    "url": "https://pix6.agoda.net/generic/c36ff89c33dcf85538649a8e0a2eb668.jpeg?ce=3",
+                    "description": "",
+                    "imageType": "PROVIDER",
+                    "imageSize": {
+                      "height": 0,
+                      "width": 0
+                    }
+                  }
+                ],
+                "reviewSummary": {
+                  "averageScore": 4.0,
+                  "totalCount": 64
+                },
+                "detail": null,
+                "contentLocale": "en-in",
+                "badges": {
+                  "bookingInfo": [
+                    {
+                      "badgeType": "BOOKING_COUNT_ALL_TIME",
+                      "enrichmentData": [
+                        "64"
+                      ]
+                    }
+                  ],
+                  "activityHighlights": [],
+                  "deals": [
+                    {
+                      "badgeType": "DISCOUNT",
+                      "enrichmentData": [
+                        "14"
+                      ]
+                    }
+                  ],
+                  "promocodes": [],
+                  "keyAttributes": [
+                    {
+                      "badgeType": "INSTANT_CONFIRMATION",
+                      "enrichmentData": null
+                    }
+                  ]
+                }
+              },
+              "activityRepresentativeInfo": {
+                "activityId": 1553357,
+                "activityToken": "AAABteF7Im1haWQiOm51bGwsIgsAoDE1NTMzNTcsInMOAPAINTAwMDIsInNhYyI6IjUzNTM5MSIsIm8bAFAwLCJzbxcA8BwiLCJjdXIiOiJJTlIiLCJwcmljZSI6eyJkdCI6IkJPT0siLCJxIjoxLCJ0FwAgZXgGAP8OY3QiOjE5OTYuNjYsImNvIjoyMzI5LjgzfSwiYWwhAAwVZbEAAgkA4H0sImxvIjpbXSwicG1jCQCvfSwic3RhcnRwcokAbxV0YAE0b3N0CwBFcGF4cgwAFG0KABViFAAUb2MBInByUACwb2dpZCI6bnVsbH0",
+                "pricingSummary": {
+                  "pricing": [
+                    {
+                      "currency": "INR",
+                      "display": {
+                        "perBook": {
+                          "displayType": "BOOK",
+                          "quantity": 1,
+                          "total": {
+                            "allInclusive": {
+                              "chargeTotal": 1996.66,
+                              "crossedOut": 2329.83
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "cancellationPolicy": {
+                  "cancellationType": "NON_REFUNDABLE",
+                  "policies": [
+                    {
+                      "hoursFrom": 8760,
+                      "hoursUntil": 0,
+                      "penaltyCode": "100P"
+                    },
+                    {
+                      "hoursFrom": 0,
+                      "hoursUntil": -1,
+                      "penaltyCode": "100P"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "masterActivityId": 1629121,
+              "masterSupplierId": 50002,
+              "rankScore": {
+                "value": -5.973186
+              },
+              "content": {
+                "activity": {
+                  "title": "SIM cards for multiple Asian countries | 3HK 4G/5G universally compatible across the Asia-Pacific region | Pick up at Hong Kong Airport",
+                  "categories": [
+                    "SimCardsAndWifi"
+                  ],
+                  "description": "<ul><li>Using 3HK Telecom roaming resources, it supports 22 countries and regions in Asia.<br></li><li> Bonus Hong Kong internet data allowance, the top choice for internet access during transit.</li><li> Supports hotspot sharing</li><li> Pick up your item at Hong Kong International Airport – quick and convenient!</li><li> Three-in-one card, no need to find a card sleeve.<br></li></ul>",
+                  "duration": {
+                    "minutes": 0,
+                    "minutesUntil": null,
+                    "durationType": "UNKNOWN"
+                  },
+                  "location": {
+                    "city": {
+                      "id": 9395,
+                      "name": "Bangkok"
+                    },
+                    "addressLine": "",
+                    "geo": {
+                      "lat": 13.750057,
+                      "long": 100.49881
+                    },
+                    "country": {
+                      "id": 106,
+                      "name": "Thailand"
+                    },
+                    "postalCode": ""
+                  }
+                },
+                "images": [
+                  {
+                    "url": "https://pix6.agoda.net/generic/1e687ca69b7df72b1fae4825b9311130.jpeg?ce=3",
+                    "description": "",
+                    "imageType": "PROVIDER",
+                    "imageSize": {
+                      "height": 0,
+                      "width": 0
+                    }
+                  }
+                ],
+                "reviewSummary": {
+                  "averageScore": 3.6,
+                  "totalCount": 3
+                },
+                "detail": null,
+                "contentLocale": "en-in",
+                "badges": {
+                  "bookingInfo": [],
+                  "activityHighlights": [],
+                  "deals": [
+                    {
+                      "badgeType": "DISCOUNT",
+                      "enrichmentData": [
+                        "13"
+                      ]
+                    }
+                  ],
+                  "promocodes": [],
+                  "keyAttributes": [
+                    {
+                      "badgeType": "INSTANT_CONFIRMATION",
+                      "enrichmentData": null
+                    }
+                  ]
+                }
+              },
+              "activityRepresentativeInfo": {
+                "activityId": 1629121,
+                "activityToken": "AAABreF7Im1haWQiOm51bGwsIgsAoDE2MjkxMjEsInMOAPAINTAwMDIsInNhYyI6IjU3NDgwMyIsIm8bAFAwLCJzbxcA8BwiLCJjdXIiOiJJTlIiLCJwcmljZSI6eyJkdCI6IkJPT0siLCJxIjoxLCJ0FwAgZXgGAP8MY3QiOjU4My40NCwiY28iOjY3Mi45NH0sImFsHwAKFWWtAAIJAOB9LCJsbyI6W10sInBtYwkAr30sInN0YXJ0cHKFAGsVdFgBNG9zdAsARXBheHIMABRtCgAVYhQAFG9bASJwclAAsG9naWQiOm51bGx9",
+                "pricingSummary": {
+                  "pricing": [
+                    {
+                      "currency": "INR",
+                      "display": {
+                        "perBook": {
+                          "displayType": "BOOK",
+                          "quantity": 1,
+                          "total": {
+                            "allInclusive": {
+                              "chargeTotal": 583.44,
+                              "crossedOut": 672.94
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "cancellationPolicy": {
+                  "cancellationType": "NON_REFUNDABLE",
+                  "policies": [
+                    {
+                      "hoursFrom": 8760,
+                      "hoursUntil": 0,
+                      "penaltyCode": "100P"
+                    },
+                    {
+                      "hoursFrom": 0,
+                      "hoursUntil": -1,
+                      "penaltyCode": "100P"
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "matrix": {
+            "sort": {
+              "availableCode": [
+                "Price",
+                "Rating",
+                "Recommended",
+                "BestOfCity"
+              ],
+              "availableOrder": [
+                "Ascending",
+                "Descending"
+              ]
+            },
+            "filter": {
+              "rangeFilterMatrix": [
+                {
+                  "code": "Price",
+                  "min": 116.0,
+                  "max": 2330.0,
+                  "bucket": []
+                },
+                {
+                  "code": "Rating",
+                  "min": 0.0,
+                  "max": 5.0,
+                  "bucket": []
+                }
+              ],
+              "valueFilterMatrix": [
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "UpTo1Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "1To4Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "4To24Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "24To72Hour",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MoreThan72Hour",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Duration"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "VIATOR",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "KKDAY",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BCOM",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BEMYGUEST",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "GLOBALTIX",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BEMYGUESTCHANNELMANAGER",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Supplier"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 4,
+                      "id": "All",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 4,
+                      "id": "SimCardsAndWifi",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Attractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Experiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FoodAndDrinks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Tours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Transportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "TravelEssentials",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "Category"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 0,
+                      "id": "FreeCancellation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "InstantConfirmation",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "BookingFeature"
+                },
+                {
+                  "availableValue": [
+                    {
+                      "count": 4,
+                      "id": "All",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HalfDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MultiDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FullDayTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AmusementParks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BoatAndYachtTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyDinner",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Paragliding",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AtvRiding",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HopOnHopOffTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightlifeExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PhotographyExperience",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ShoppingTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SeasonalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BeerAndWineTasting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ClothingAndCostumeRental",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WorkshopsAndClasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Fishing",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CookingClass",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Snorkeling",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WalkingTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ScubaDiving",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherFoodAndDrinks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateCarTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IslandHopping",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuxuryTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CulinaryTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BusTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LunchAndDinnerCruises",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Restaurants",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OutdoorTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HistoricalAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ShowsAndPerformances",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalDiningExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Cruise",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SmallGroupTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MuseumsAndGalleries",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NatureAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SpasAndHotSprings",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Buffet",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "FamilyFriendlyAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AquariumsAndZoos",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArtAndCulturalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdventureTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 3,
+                      "id": "eSIMs",
+                      "isQuickFilter": true
+                    },
+                    {
+                      "count": 1,
+                      "id": "OtherSimAndWifi",
+                      "isQuickFilter": false
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AdultsOnlyTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportFastTrack",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportLounges",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "AirportTransfer",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ArcheryShooting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BeautyAndSkincare",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BicycleAndEScooterRentals",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "BicycleTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Buses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CableCars",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CampingGlamping",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CityPasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "CookingClasses",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "EventsAndExhibitions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "HopOnHopOffTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "IndoorTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "KayakingRafting",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LocalTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuggageServices",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "LuxuryExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "MotorbikeTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "NightTimeAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ObservationDecks",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "OtherTravelEssentials",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "PrivateDrivers",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticAttractions",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticDinner",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "RomanticExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SafariWildlife",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SeasonalExperiences",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SelfGuidedTours",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SimCards",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "SkipTheQueue",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Surfing",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Trains",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "VehicleRentals",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WaterTransportation",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "WellnessYoga",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "Wifi",
+                      "isQuickFilter": null
+                    },
+                    {
+                      "count": 0,
+                      "id": "ZipliningBungee",
+                      "isQuickFilter": null
+                    }
+                  ],
+                  "code": "SubCategory"
+                }
+              ]
+            }
+          }
+        },
+        "errors": []
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "url": "https://gumi.criteo.com/sid/json?origin=onetag&domain=agoda.com&sn=ChromeSyncframe&so=undefined&topUrl=www.agoda.com&bundle=wWzbLF82Q1cxWjY1WTNQa1ZDTjdQc3JYc09zbGVIaWNMMG92dnNhS3g4SklTQkFjVVlTb2lNaCUyQnNsSmVGRXFVb3Q1NnZPYXRjcTVDcDlIcm9VWkxCOGNPeUJ0NldpVGtrYVFDUlRoU3ZXWjZ6S2prdUZXbGZOWnMxWSUyRk5Cdng2dkc3QWMyTXNsJTJGUGFteG5TamRFa2tNRUlST3clM0QlM0Q&ceid=44f45653-7981-4aee-9785-0a9ba31c8191",
+  "status": 200,
+  "data": {
+    "sid": null,
+    "removeSid": false,
+    "bundle": "iyby3V82Q1cxWjY1WTNQa1ZDTjdQc3JYc09uY1htYnFiJTJGd1l5eThFRHhkRjglMkZvaWRzb2wwVnBYNkZaQlV2N2xVbElIQlZXQm9sOEtTRVNSdnVEOUN2Q1V3QUVnejklMkZjZVFyVFd6ODVqQUI2YnVCYWxtaFdPMlNzZU1xVDc2dmVBc1ZUT2o2UmQ1YUdmaFg0cFlLNHg0TUtRYmclM0QlM0Q",
+    "info": "pQaXZ182Q1cxWjY1WTNQa1ZDTjdQc3JYc09uY1htYnFiJTJGd1l5eThFRHhkRjglMkZvaWRzb2wwVnBYNkZaQlV2N2xVbElIQk5ZMSUyQnZ0JTJCbjFlT1A2QzBjb3g5YUZRJTNEJTNE",
+    "optout": false
+  }
+}

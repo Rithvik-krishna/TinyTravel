@@ -1,0 +1,17 @@
+{
+  "url": "https://www.agoda.com/api/cronos/loyalty/getloyaltybanners",
+  "status": 200,
+  "data": {
+    "prominentAppDownload": {
+      "title": "Up to 17% off your 1st app booking",
+      "subTitle": "Scan the QR code to unlock app offers",
+      "buttonText": "Save more on App!",
+      "ariaLabelClose": "Close",
+      "agodaLogoAlt": "Agoda logo",
+      "phoneFrameAlt": "Phone frame",
+      "qrCodeAlt": "qr code image to download app"
+    },
+    "whiteBanner": null,
+    "downloadConfirmationBanner": null
+  }
+}

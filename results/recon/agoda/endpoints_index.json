@@ -1,0 +1,176 @@
+[
+  {
+    "id": 1,
+    "url": "https://www.agoda.com/api/card/campaigns",
+    "file": "001_www.agoda.com_api_card_campaigns.json",
+    "status": 200
+  },
+  {
+    "id": 2,
+    "url": "https://www.agoda.com/api/cronos/layout/login/params",
+    "file": "002_www.agoda.com_api_cronos_layout_login_params.json",
+    "status": 200
+  },
+  {
+    "id": 3,
+    "url": "https://www.agoda.com/api/cronos/layout/login/params",
+    "file": "003_www.agoda.com_api_cronos_layout_login_params.json",
+    "status": 200
+  },
+  {
+    "id": 4,
+    "url": "https://www.agoda.com/api/cronos/layout/GetHotCities",
+    "file": "004_www.agoda.com_api_cronos_layout_GetHotCities.json",
+    "status": 200
+  },
+  {
+    "id": 5,
+    "url": "https://www.agoda.com/api/cronos/seo/base",
+    "file": "005_www.agoda.com_api_cronos_seo_base.json",
+    "status": 200
+  },
+  {
+    "id": 6,
+    "url": "https://www.agoda.com/api/gw/Cms/Lookup?",
+    "file": "006_www.agoda.com_api_gw_Cms_Lookup.json",
+    "status": 200
+  },
+  {
+    "id": 7,
+    "url": "https://www.agoda.com/api/cart/items",
+    "file": "007_www.agoda.com_api_cart_items.json",
+    "status": 200
+  },
+  {
+    "id": 8,
+    "url": "https://www.agoda.com/api/cusco/popup/campaigns",
+    "file": "008_www.agoda.com_api_cusco_popup_campaigns.json",
+    "status": 200
+  },
+  {
+    "id": 9,
+    "url": "https://www.agoda.com/api/cronos/home/GetTopDestinations",
+    "file": "009_www.agoda.com_api_cronos_home_GetTopDestinations.json",
+    "status": 200
+  },
+  {
+    "id": 10,
+    "url": "https://www.agoda.com/api/cronos/loyalty/getloyaltybanners",
+    "file": "010_www.agoda.com_api_cronos_loyalty_getloyaltybanners.json",
+    "status": 200
+  },
+  {
+    "id": 11,
+    "url": "https://www.agoda.com/api/cronos/loyalty/redirecttoappqr",
+    "file": "011_www.agoda.com_api_cronos_loyalty_redirecttoappqr.json",
+    "status": 200
+  },
+  {
+    "id": 12,
+    "url": "https://www.agoda.com/api/cronos/seo/base",
+    "file": "012_www.agoda.com_api_cronos_seo_base.json",
+    "status": 200
+  },
+  {
+    "id": 13,
+    "url": "https://www.agoda.com/activities/api/cronos/crosssell/GetServableCities",
+    "file": "013_www.agoda.com_activities_api_cronos_crosssell_GetServa.json",
+    "status": 200
+  },
+  {
+    "id": 14,
+    "url": "https://www.agoda.com/api/cronos/layout/GetCalendarExtrasAsync/?occupancy=2&currency=INR&suggestedPrice=2&checkIn=2026-11-24T14%3A30%3A29.7765488%2B07%3A00",
+    "file": "014_www.agoda.com_api_cronos_layout_GetCalendarExtrasAsync.json",
+    "status": 200
+  },
+  {
+    "id": 15,
+    "url": "https://www.agoda.com/api/mpr/cms/v1/lookup",
+    "file": "015_www.agoda.com_api_mpr_cms_v1_lookup.json",
+    "status": 200
+  },
+  {
+    "id": 16,
+    "url": "https://www.agoda.com/api/mpr/v1/getDropOffs?pageTypeId=1",
+    "file": "016_www.agoda.com_api_mpr_v1_getDropOffs.json",
+    "status": 200
+  },
+  {
+    "id": 17,
+    "url": "https://www.agoda.com/api/mpr/v1/getSimpleRecommendations?pageTypeId=1",
+    "file": "017_www.agoda.com_api_mpr_v1_getSimpleRecommendations.json",
+    "status": 200
+  },
+  {
+    "id": 18,
+    "url": "https://www.agoda.com/api/cronos/home/GetTopDestinations",
+    "file": "018_www.agoda.com_api_cronos_home_GetTopDestinations.json",
+    "status": 200
+  },
+  {
+    "id": 19,
+    "url": "https://gumi.criteo.com/sid/json?origin=onetag&domain=agoda.com&sn=ChromeSyncframe&so=undefined&topUrl=www.agoda.com&ceid=74ad60c0-9729-4878-bf2a-c31469afe82b",
+    "file": "019_gumi.criteo.com_sid_json.json",
+    "status": 200
+  },
+  {
+    "id": 20,
+    "url": "https://www.agoda.com/api/activities/graphql",
+    "file": "020_www.agoda.com_api_activities_graphql.json",
+    "status": 200
+  },
+  {
+    "id": 21,
+    "url": "https://www.agoda.com/api/activities/graphql",
+    "file": "021_www.agoda.com_api_activities_graphql.json",
+    "status": 200
+  },
+  {
+    "id": 22,
+    "url": "https://www.agoda.com/api/card/campaigns",
+    "file": "022_www.agoda.com_api_card_campaigns.json",
+    "status": 200
+  },
+  {
+    "id": 23,
+    "url": "https://www.agoda.com/api/card/campaigns",
+    "file": "023_www.agoda.com_api_card_campaigns.json",
+    "status": 200
+  },
+  {
+    "id": 24,
+    "url": "https://www.agoda.com/api/card/campaigns",
+    "file": "024_www.agoda.com_api_card_campaigns.json",
+    "status": 200
+  },
+  {
+    "id": 25,
+    "url": "https://www.agoda.com/api/gw/flight/SearchUnbundled?",
+    "file": "025_www.agoda.com_api_gw_flight_SearchUnbundled.json",
+    "status": 200
+  },
+  {
+    "id": 26,
+    "url": "https://www.agoda.com/graphql/search",
+    "file": "026_www.agoda.com_graphql_search.json",
+    "status": 200
+  },
+  {
+    "id": 27,
+    "url": "https://www.agoda.com/api/cronos/home/GetTimeSaleContent",
+    "file": "027_www.agoda.com_api_cronos_home_GetTimeSaleContent.json",
+    "status": 200
+  },
+  {
+    "id": 28,
+    "url": "https://www.agoda.com/api/cronos/home/GetTopDestinations",
+    "file": "028_www.agoda.com_api_cronos_home_GetTopDestinations.json",
+    "status": 200
+  },
+  {
+    "id": 29,
+    "url": "https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gpt&tv=m202611050101&st=env&sjk=4511826713256370",
+    "file": "029_ep1.adtrafficquality.google_getconfig_sodar.json",
+    "status": 200
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/activityCrossSellValidation",
+  "status": 200,
+  "data": {
+    "isValid": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "url": "https://www.agoda.com/api/cronos/layout/GetHotCities",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "access-control-allow-methods": "GET,POST",
+    "x-content-type-options": "nosniff",
+    "x-ua-compatible": "IE=edge",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-njz8l",
+    "ag-correlation-id": "53d4dbc4-9cdb-40e6-976c-76057f3d3a29",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "User-Agent, Accept-Encoding",
+    "access-control-allow-headers": "Content-Type",
+    "strict-transport-security": "max-age=31536000",
+    "date": "Sun, 15 Nov 2026 07:30:32 GMT",
+    "x-envoy-datacenter": "sg",
+    "x-envoy-upstream-service-time": "11",
+    "access-control-allow-credentials": "true",
+    "request-context": "appId=",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "152",
+    "akamai-grn": "0.2d460317.1794727832.8edc0aa"
+  },
+  "data": {
+    "searchHistoryViewModel": {
+      "recentSearchList_AllTypes": [],
+      "abandonedCartList": [],
+      "recentSearchList_CityAndHotel": [],
+      "showResentSearchesAboveTheFold": false,
+      "totalItem": 0
+    }
+  }
+}

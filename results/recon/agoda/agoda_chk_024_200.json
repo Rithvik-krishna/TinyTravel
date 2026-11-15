@@ -1,0 +1,305 @@
+{
+  "url": "https://www.agoda.com/api/cronos/seo/property",
+  "status": 200,
+  "data": {
+    "robotIndexDirective": "index",
+    "robotFollowDirective": "follow",
+    "metaText": {
+      "title": "Radisson Blu Atria Bengaluru | Bangalore 2020 UPDATED DEALS, HD Photos & Reviews",
+      "description": "Nightly rates in Bangalore!",
+      "keywords": "Radisson Blu Atria Bengaluru Bangalore India  Agoda hotels, discount hotel, online reservation, real time booking, 24 hrs customer service, Radisson Blu Atria Bengaluru Bangalore , Radisson Blu Atria Bengaluru India "
+    },
+    "appleStoreKey": "app-id=440676901",
+    "googlePlayKey": "com.agoda.mobile.consumer",
+    "appDeepLink": "android-app://com.agoda.mobile.consumer/agoda/hotel/Radisson%20Blu%20Atria%20Bengaluru/1785304?site_id=1742242",
+    "priceRange": "room rates from  per night (INR) - We Price Match!",
+    "staticMetaElements": [],
+    "canonicalLink": "https://www.agoda.com/en-in/accom/property",
+    "alternateLinks": [
+      {
+        "href": "https://www.agoda.com/accom/property",
+        "hrefLang": "en",
+        "title": "English"
+      },
+      {
+        "href": "https://www.agoda.com/fr-fr/accom/property",
+        "hrefLang": "fr",
+        "title": "Fran\u00e7ais"
+      },
+      {
+        "href": "https://www.agoda.com/de-de/accom/property",
+        "hrefLang": "de",
+        "title": "Deutsch"
+      },
+      {
+        "href": "https://www.agoda.com/it-it/accom/property",
+        "hrefLang": "it",
+        "title": "Italiano"
+      },
+      {
+        "href": "https://www.agoda.com/es-es/accom/property",
+        "hrefLang": "es",
+        "title": "Espa\u00f1ol"
+      },
+      {
+        "href": "https://www.agoda.com/ja-jp/accom/property",
+        "hrefLang": "ja",
+        "title": "\u65e5\u672c\u8a9e"
+      },
+      {
+        "href": "https://www.agoda.com/zh-hk/accom/property",
+        "hrefLang": "zh-hk",
+        "title": "\u7e41\u9ad4\u4e2d\u6587 (\u9999\u6e2f)"
+      },
+      {
+        "href": "https://www.agoda.com/zh-cn/accom/property",
+        "hrefLang": "zh-cn",
+        "title": "\u7b80\u4f53\u4e2d\u6587"
+      },
+      {
+        "href": "https://www.agoda.com/ko-kr/accom/property",
+        "hrefLang": "ko",
+        "title": "\ud55c\uad6d\uc5b4"
+      },
+      {
+        "href": "https://www.agoda.com/el-gr/accom/property",
+        "hrefLang": "el",
+        "title": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac"
+      },
+      {
+        "href": "https://www.agoda.com/ru-ru/accom/property",
+        "hrefLang": "ru",
+        "title": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439"
+      },
+      {
+        "href": "https://www.agoda.com/pt-pt/accom/property",
+        "hrefLang": "pt-pt",
+        "title": "Portugu\u00eas (PT)"
+      },
+      {
+        "href": "https://www.agoda.com/nl-nl/accom/property",
+        "hrefLang": "nl",
+        "title": "Nederlands"
+      },
+      {
+        "href": "https://www.agoda.com/en-ca/accom/property",
+        "hrefLang": "en-ca",
+        "title": "English / Canada"
+      },
+      {
+        "href": "https://www.agoda.com/en-in/accom/property",
+        "hrefLang": "en-in",
+        "title": "English / India"
+      },
+      {
+        "href": "https://www.agoda.com/en-gb/accom/property",
+        "hrefLang": "en-gb",
+        "title": "English / United Kingdom"
+      },
+      {
+        "href": "https://www.agoda.com/en-za/accom/property",
+        "hrefLang": "en-za",
+        "title": "English / South-Africa"
+      },
+      {
+        "href": "https://www.agoda.com/en-au/accom/property",
+        "hrefLang": "en-au",
+        "title": "English / Australia"
+      },
+      {
+        "href": "https://www.agoda.com/en-sg/accom/property",
+        "hrefLang": "en-sg",
+        "title": "English / Singapore"
+      },
+      {
+        "href": "https://www.agoda.com/zh-tw/accom/property",
+        "hrefLang": "zh-tw",
+        "title": "\u7e41\u9ad4\u4e2d\u6587 (\u53f0\u7063)"
+      },
+      {
+        "href": "https://www.agoda.com/en-nz/accom/property",
+        "hrefLang": "en-nz",
+        "title": "English / New Zealand"
+      },
+      {
+        "href": "https://www.agoda.com/th-th/accom/property",
+        "hrefLang": "th",
+        "title": "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22"
+      },
+      {
+        "href": "https://www.agoda.com/ms-my/accom/property",
+        "hrefLang": "ms",
+        "title": "Bahasa Malaysia"
+      },
+      {
+        "href": "https://www.agoda.com/vi-vn/accom/property",
+        "hrefLang": "vi",
+        "title": "Ti\u1ebfng Vi\u1ec7t"
+      },
+      {
+        "href": "https://www.agoda.com/sv-se/accom/property",
+        "hrefLang": "sv",
+        "title": "Svenska"
+      },
+      {
+        "href": "https://www.agoda.com/id-id/accom/property",
+        "hrefLang": "id",
+        "title": "Bahasa Indonesia"
+      },
+      {
+        "href": "https://www.agoda.com/pl-pl/accom/property",
+        "hrefLang": "pl",
+        "title": "J\u0119zyk polski"
+      },
+      {
+        "href": "https://www.agoda.com/nb-no/accom/property",
+        "hrefLang": "no",
+        "title": "Norsk"
+      },
+      {
+        "href": "https://www.agoda.com/da-dk/accom/property",
+        "hrefLang": "da",
+        "title": "Dansk"
+      },
+      {
+        "href": "https://www.agoda.com/fi-fi/accom/property",
+        "hrefLang": "fi",
+        "title": "Suomi"
+      },
+      {
+        "href": "https://www.agoda.com/cs-cz/accom/property",
+        "hrefLang": "cs",
+        "title": "\u010ce\u0161tina"
+      },
+      {
+        "href": "https://www.agoda.com/tr-tr/accom/property",
+        "hrefLang": "tr",
+        "title": "T\u00fcrk\u00e7e"
+      },
+      {
+        "href": "https://www.agoda.com/ca-es/accom/property",
+        "hrefLang": "ca",
+        "title": "Catal\u00e0"
+      },
+      {
+        "href": "https://www.agoda.com/hu-hu/accom/property",
+        "hrefLang": "hu",
+        "title": "Magyar"
+      },
+      {
+        "href": "https://www.agoda.com/bg-bg/accom/property",
+        "hrefLang": "bg",
+        "title": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0435\u0437\u0438\u043a"
+      },
+      {
+        "href": "https://www.agoda.com/ro-ro/accom/property",
+        "hrefLang": "ro",
+        "title": "Rom\u00e2n\u0103"
+      },
+      {
+        "href": "https://www.agoda.com/sl-si/accom/property",
+        "hrefLang": "sl",
+        "title": "Slovenski jezik"
+      },
+      {
+        "href": "https://www.agoda.com/he-il/accom/property",
+        "hrefLang": "he",
+        "title": "\u05e2\u05d1\u05e8\u05d9\u05ea"
+      },
+      {
+        "href": "https://www.agoda.com/ar-ae/accom/property",
+        "hrefLang": "ar",
+        "title": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
+      },
+      {
+        "href": "https://www.agoda.com/nl-be/accom/property",
+        "hrefLang": "nl-be",
+        "title": "Nederlands / Belgi\u00eb"
+      },
+      {
+        "href": "https://www.agoda.com/en-ie/accom/property",
+        "hrefLang": "en-ie",
+        "title": "English / Ireland"
+      },
+      {
+        "href": "https://www.agoda.com/pt-br/accom/property",
+        "hrefLang": "pt-br",
+        "title": "Portugu\u00eas (BR)"
+      },
+      {
+        "href": "https://www.agoda.com/es-ar/accom/property",
+        "hrefLang": "es-ar",
+        "title": "Espa\u00f1ol / Argentina"
+      },
+      {
+        "href": "https://www.agoda.com/es-mx/accom/property",
+        "hrefLang": "es-mx",
+        "title": "Espa\u00f1ol / M\u00e9xico"
+      },
+      {
+        "href": "https://www.agoda.com/lt-lt/accom/property",
+        "hrefLang": "lt",
+        "title": "Lietuvi\u0173"
+      },
+      {
+        "href": "https://www.agoda.com/lv-lv/accom/property",
+        "hrefLang": "lv",
+        "title": "Latvie\u0161u"
+      },
+      {
+        "href": "https://www.agoda.com/hr-hr/accom/property",
+        "hrefLang": "hr",
+        "title": "Hrvatski"
+      },
+      {
+        "href": "https://www.agoda.com/et-ee/accom/property",
+        "hrefLang": "et",
+        "title": "Eesti"
+      },
+      {
+        "href": "https://www.agoda.com/uk-ua/accom/property",
+        "hrefLang": "uk",
+        "title": "\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
+      }
+    ],
+    "openGraphs": {
+      "title": "Radisson Blu Atria Bengaluru | Bangalore 2020 UPDATED DEALS, HD Photos & Reviews",
+      "url": "https://www.agoda.com/en-in/accom/property",
+      "image": "https://pix8.agoda.net/hotelImages/1785304/0/63757aaa5807b18c739139ee98b79fcf.jpeg?va=1&ce=2&s=1024x768",
+      "siteName": "Agoda.com",
+      "appId": "161134343906646",
+      "description": "Nightly rates in Bangalore!",
+      "latitude": "12.979863166809082",
+      "longitude": "77.58627319335938",
+      "locality": "Bangalore",
+      "region": "Bangalore City Center",
+      "country": "India",
+      "type": "place",
+      "address": "No. 1, Palace Road, Bengaluru",
+      "postalCode": "560001",
+      "locale": "en-in",
+      "hotelName": "Radisson Blu Atria Bengaluru",
+      "imageWidth": null,
+      "imageHeight": null
+    },
+    "twitterCards": {
+      "card": "summary",
+      "site": "@agoda",
+      "creator": "@agoda",
+      "title": "Radisson Blu Atria Bengaluru | Bangalore 2020 UPDATED DEALS, HD Photos & Reviews",
+      "description": "Nightly rates in Bangalore!",
+      "url": "https://www.agoda.com/en-in/accom/property",
+      "image": "https://pix8.agoda.net/hotelImages/1785304/0/63757aaa5807b18c739139ee98b79fcf.jpeg?va=1&ce=2&s=1024x768"
+    },
+    "secureEnglishHomeUrl": "https://www.agoda.com/",
+    "metaLanguage": "en-in",
+    "openSearchLink": "",
+    "headingText": {
+      "h1": null,
+      "h2": null,
+      "h2DateLessSearch": null
+    },
+    "shouldRenderAsMultipleEntity": false,
+    "robots": "index, follow"
+  }
+}

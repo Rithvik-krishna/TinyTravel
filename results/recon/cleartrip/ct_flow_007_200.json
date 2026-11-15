@@ -1,0 +1,9 @@
+{
+  "url": "https://www.cleartrip.com/hotel/orchestrator/v2/itinerary/create",
+  "status": 200,
+  "data": {
+    "itineraryId": "750cdf8b46-733b-4743-8f59-261115131802",
+    "itineraryStatus": "CREATED",
+    "queryParams": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "url": "https://bam.nr-data.net/browser/connect/2/6f41accc47?a=1099357279&v=1.324.1&s=0b5f782534425e7a",
+  "status": 200,
+  "data": {
+    "config": {
+      "err": 1,
+      "ins": 1,
+      "spa": 1,
+      "sr": 0,
+      "srs": 0,
+      "st": 1,
+      "sts": 0,
+      "log": 0,
+      "logapi": 0
+    },
+    "app": {
+      "agents": [
+        {
+          "entityGuid": "MTgzNTg2MXxCUk9XU0VSfEFQUExJQ0FUSU9OfDExMDMyNTA4NjI"
+        }
+      ],
+      "igp": "",
+      "nrServerTime": 1794728136947
+    }
+  }
+}

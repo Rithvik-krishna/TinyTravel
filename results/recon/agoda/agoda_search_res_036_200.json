@@ -1,0 +1,59 @@
+{
+  "url": "https://www.agoda.com/api/cronos/seo/search",
+  "status": 200,
+  "data": {
+    "robotIndexDirective": "noindex",
+    "robotFollowDirective": "nofollow",
+    "metaText": {
+      "title": "Agoda | Hotels in Bangalore | Best Price Guarantee!",
+      "description": "Get the LOWEST prices on hotels in Bangalore, India. Best Price Guarantee + 24/7 online support & easy mobile booking.",
+      "keywords": "10 Top Hotels in Bangalore | Places to Stay w/ 24/7 Friendly Customer Service"
+    },
+    "appleStoreKey": "app-id=440676901",
+    "googlePlayKey": "com.agoda.mobile.consumer",
+    "appDeepLink": "",
+    "priceRange": null,
+    "staticMetaElements": [],
+    "canonicalLink": "",
+    "alternateLinks": [],
+    "openGraphs": {
+      "title": "Agoda | Hotels in Bangalore | Best Price Guarantee!",
+      "url": "https://www.agoda.com/en-in/search",
+      "image": "https://cdn6.agoda.net/images/mvc/default/agoda-logo-flat-2019.png",
+      "siteName": "Agoda.com",
+      "appId": "161134343906646",
+      "description": "Get the LOWEST prices on hotels in Bangalore, India. Best Price Guarantee + 24/7 online support & easy mobile booking.",
+      "latitude": null,
+      "longitude": null,
+      "locality": null,
+      "region": null,
+      "country": null,
+      "type": "place",
+      "address": null,
+      "postalCode": null,
+      "locale": "en-in",
+      "hotelName": null,
+      "imageWidth": null,
+      "imageHeight": null
+    },
+    "twitterCards": {
+      "card": "summary",
+      "site": "@agoda",
+      "creator": "@agoda",
+      "title": "Agoda | Hotels in Bangalore | Best Price Guarantee!",
+      "description": "Get the LOWEST prices on hotels in Bangalore, India. Best Price Guarantee + 24/7 online support & easy mobile booking.",
+      "url": "https://www.agoda.com/en-in/search",
+      "image": "https://cdn6.agoda.net/images/mvc/default/agoda-logo-flat-2019.png"
+    },
+    "secureEnglishHomeUrl": "https://www.agoda.com/",
+    "metaLanguage": "",
+    "openSearchLink": "",
+    "headingText": {
+      "h1": null,
+      "h2": null,
+      "h2DateLessSearch": null
+    },
+    "shouldRenderAsMultipleEntity": false,
+    "robots": "noindex, nofollow"
+  }
+}

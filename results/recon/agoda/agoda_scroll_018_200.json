@@ -1,0 +1,2815 @@
+{
+  "url": "https://www.agoda.com/api/v1/property/room-grid",
+  "status": 200,
+  "data": {
+    "propertyName": "Radisson Blu Atria Bengaluru",
+    "propertyId": 1785304,
+    "propertyType": "hotel",
+    "cityId": 4923,
+    "countryId": 35,
+    "searchCriteriaDescription": "",
+    "isSoldOut": false,
+    "disableSoldOutDetailsLink": false,
+    "filters": [],
+    "isMergeDayUseOffersWithOvernightEnabled": false,
+    "rooms": [
+      {
+        "typeId": 11128066,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Deluxe Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/133a48da64077412f630f1f282b5934c.jpeg?ce=2&s=800x600",
+            "id": 67403812,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/62743c5c5594c64ef13bd9551a4a8275.jpeg?ce=3&s=800x600",
+            "id": 193011541,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/f138e2e987aa123e6cb5e87d11f51a8d.jpeg?ce=2&s=800x600",
+            "id": 95106118,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/cf8536851b5819e187adb8b4281b46f0.jpeg?ce=3&s=800x600",
+            "id": 1662409652,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/332e475582c0ccaeeddb7c17302a0e74.jpeg?ce=3&s=800x600",
+            "id": 1662409655,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1024881971/545281ec37ebfbba2fa1786b07bbbbed.jpeg?ce=2&s=800x600",
+            "id": 293956258,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/0c16c8b3b71fb914e27a153f3c92181d.jpeg?ce=3&s=800x600",
+            "id": 1662409646,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/54228d98452d480700f7a51761f670c3.jpeg?ce=3&s=800x600",
+            "id": 192373238,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/157a7ae208111303baa7e3f7bfb4598f.jpeg?ce=3&s=800x600",
+            "id": 192373237,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/704e78aacc0dcf4892a931bbe354cc6f.jpeg?ce=2&s=800x600",
+            "id": 80269659,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/bda0b5e7643df81b773431c8c545a3c0.jpeg?ce=3&s=800x600",
+            "id": 1662409656,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/204619360.jpg?k=0e3c6f48d7073bbd78a13dc64a792df245c65e08fabdd0e9963a9b17a9d89298&o=",
+            "id": 873648905,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/530a357075ba21c703c1ae69b100496b.jpeg?ce=2&s=800x600",
+            "id": 106154397,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/831497218.jpg?k=932f203ad5f7646295c2f6013c31ddb460268a5c14d48e0634a09a6d20b5bbe7&o=",
+            "id": 1293977599,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/316886989ec1d54813de435422c761fb.jpeg?ce=3&s=800x600",
+            "id": 1662409640,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148989/a038a574471df5fc5c197b2cba7ec713.jpeg?ce=3&s=800x600",
+            "id": 1662409647,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/232839601.jpg?k=754374a4b128848335ea4b789c2eae0cdac9746c38f716eb611ed5b22e3c2dc9&o=",
+            "id": 873648908,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/33808610.jpg?k=4661983bc8f2cb0b4359bad311fd97c9e1d13c1034b66c83832a22c784925b16&o=",
+            "id": 873648909,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "30 m\u00b2/323 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "City view",
+            "icon": "fill.facility.window",
+            "type": "VIEW"
+          },
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Bathtub",
+            "icon": "fill.facility.bathtub",
+            "type": "BATHTUB"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [
+            {
+              "title": "Fitness club privileges"
+            },
+            {
+              "title": "Desk"
+            },
+            {
+              "title": "Mobility accessibility"
+            }
+          ],
+          "featured": [
+            {
+              "title": "30 m\u00b2/323 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "City view",
+              "icon": "fill.facility.window"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Bathtub",
+              "icon": "fill.facility.bathtub"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Accessibility",
+              "icon": "fill.facility.wheelchair",
+              "items": [
+                "Bathtub grab bar",
+                "Mobility accessibility",
+                "Non-slip grab bar"
+              ]
+            },
+            {
+              "text": "Kitchen",
+              "icon": "fill.facility.stove",
+              "items": [
+                "Electric kettle"
+              ]
+            },
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Accessible toilet",
+                "Adapted bath",
+                "Bathrobes",
+                "Bathtub",
+                "Cleaning products",
+                "Hair dryer",
+                "Mirror",
+                "Private bathroom",
+                "Shower",
+                "Toiletries",
+                "Towels",
+                "Walk-in shower"
+              ]
+            },
+            {
+              "text": "Entertainment ",
+              "icon": "fill.activity.game",
+              "items": [
+                "Internet access \u2013 LAN",
+                "Internet access \u2013 wireless",
+                "Reading light",
+                "Satellite/cable channels",
+                "Telephone",
+                "TV",
+                "TV [flat screen]",
+                "Wi-Fi [free]"
+              ]
+            },
+            {
+              "text": "Comforts",
+              "icon": "fill.facility.sofa",
+              "items": [
+                "Adapter",
+                "Air conditioning",
+                "Blackout curtains",
+                "Concierge",
+                "Linens",
+                "Private entrance",
+                "Sleep comfort items",
+                "Slippers",
+                "Soundproofing",
+                "Wake-up service"
+              ]
+            },
+            {
+              "text": "Dining, drinking, and snacking",
+              "icon": "fill.food.fork-knife",
+              "items": [
+                "Coffee/tea maker",
+                "Dishwasher",
+                "Free bottled water",
+                "Kettle",
+                "Mini bar",
+                "Refrigerator"
+              ]
+            },
+            {
+              "text": "Layout and furnishings",
+              "icon": "fill.facility.roomplan",
+              "items": [
+                "Carpeting",
+                "Desk",
+                "Extra long bed",
+                "High chair",
+                "Seating area",
+                "Separate dining area",
+                "Sofa",
+                "Trash cans",
+                "Window"
+              ]
+            },
+            {
+              "text": "Clothing and laundry",
+              "icon": "fill.service.laundry",
+              "items": [
+                "Closet",
+                "Ironing facilities"
+              ]
+            },
+            {
+              "text": "For the kids",
+              "icon": "fill.food.babybottle",
+              "items": [
+                "Baby amenities (upon request)",
+                "Baby cot (upon request)",
+                "Step stool"
+              ]
+            },
+            {
+              "text": "Access",
+              "icon": "fill.amenity.key",
+              "items": [
+                "Exterior corridor"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Accessible by elevator",
+                "In-room safe box",
+                "Laptop safe box",
+                "Non-smoking",
+                "Safety/security feature",
+                "Smoke detector"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 11128066,
+          "room_group_index": 0,
+          "master_room_index": 0,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 30,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "30 m\u00b2/323 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": [
+          {
+            "text": "City view",
+            "type": "ROOM_VIEW",
+            "icon": "fill.facility.window",
+            "id": "ROOM_VIEW"
+          }
+        ],
+        "reviewInformation": {
+          "score": 8.912,
+          "scoreText": "Excellent"
+        }
+      },
+      {
+        "typeId": 11128083,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Suite",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/cf8536851b5819e187adb8b4281b46f0.jpeg?ce=3&s=800x600",
+            "id": 1662405491,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/332e475582c0ccaeeddb7c17302a0e74.jpeg?ce=3&s=800x600",
+            "id": 1662405479,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/567fdf4f06827be66983f87185d4904e.jpeg?ce=3&s=800x600",
+            "id": 193011536,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/f6cc6ef94d0df7f9f0fe22ecddc78ead.jpeg?ce=2&s=800x600",
+            "id": 102669151,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/42c5daa9d13794b2c31f06d2f44451c8.jpeg?ce=2&s=800x600",
+            "id": 95107346,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/0104ac4a3c803322946b8210b9f0b607.jpeg?ce=3&s=800x600",
+            "id": 193011535,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/790b633bad8e2516db98c1bdfd52b894.jpeg?ce=2&s=800x600",
+            "id": 102669118,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/1c7d89a415e282bb5f476273fbb3a45d.jpeg?ce=3&s=800x600",
+            "id": 1662405482,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/157228550.jpg?k=648cc7dc5b9bc746d788e45e191513a44fb1625b1f42f0fef23f94231fec4df5&o=",
+            "id": 873649086,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/a379bb1e62a1e4a067bf3df18068db47.jpeg?ce=3&s=800x600",
+            "id": 1662405481,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/46b61a3473195a0cdd6858c0e85f6248.jpeg?ce=3&s=800x600",
+            "id": 1662405480,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/cf1943cdc9d9643af7f8da3ed2b91dab.jpeg?ce=2&s=800x600",
+            "id": 103498613,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/461202058/4ea2d3dd661f53819434cedc196a7e63.jpeg?ce=2&s=800x600",
+            "id": 103498612,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/22d6eab8bcb40ea82c6aff8f327d3da6.jpeg?ce=3&s=800x600",
+            "id": 1662405478,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/b9c584aecdf5e6d15b1565045584b7a9.jpeg?ce=2&s=800x600",
+            "id": 95106080,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148993/0b8429addf16af2316403b13f96d5fa3.jpeg?ce=3&s=800x600",
+            "id": 1662405483,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/c54a1cdbf6b28c26e17541083f01fe94.jpeg?ce=2&s=800x600",
+            "id": 95106210,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128083/109ef871e3befcc391e1c4fce2c6c0b2.jpeg?ce=2&s=800x600",
+            "id": 95106251,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "50 m\u00b2/538 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "City view",
+            "icon": "fill.facility.window",
+            "type": "VIEW"
+          },
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Bathtub",
+            "icon": "fill.facility.bathtub",
+            "type": "BATHTUB"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [
+            {
+              "title": "Fitness club privileges"
+            },
+            {
+              "title": "Desk"
+            },
+            {
+              "title": "Mobility accessibility"
+            }
+          ],
+          "featured": [
+            {
+              "title": "50 m\u00b2/538 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "City view",
+              "icon": "fill.facility.window"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Bathtub",
+              "icon": "fill.facility.bathtub"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Accessibility",
+              "icon": "fill.facility.wheelchair",
+              "items": [
+                "Bathtub grab bar",
+                "Mobility accessibility",
+                "Non-slip grab bar"
+              ]
+            },
+            {
+              "text": "Kitchen",
+              "icon": "fill.facility.stove",
+              "items": [
+                "Electric kettle"
+              ]
+            },
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Accessible toilet",
+                "Adapted bath",
+                "Bathrobes",
+                "Bathtub",
+                "Cleaning products",
+                "Hair dryer",
+                "Mirror",
+                "Private bathroom",
+                "Shower",
+                "Toiletries",
+                "Towels",
+                "Walk-in shower"
+              ]
+            },
+            {
+              "text": "Entertainment ",
+              "icon": "fill.activity.game",
+              "items": [
+                "Internet access \u2013 LAN",
+                "Internet access \u2013 wireless",
+                "Reading light",
+                "Satellite/cable channels",
+                "Telephone",
+                "TV",
+                "TV [flat screen]",
+                "Wi-Fi [free]"
+              ]
+            },
+            {
+              "text": "Comforts",
+              "icon": "fill.facility.sofa",
+              "items": [
+                "Adapter",
+                "Air conditioning",
+                "Blackout curtains",
+                "Concierge",
+                "Linens",
+                "Private entrance",
+                "Sleep comfort items",
+                "Slippers",
+                "Soundproofing",
+                "Wake-up service"
+              ]
+            },
+            {
+              "text": "Dining, drinking, and snacking",
+              "icon": "fill.food.fork-knife",
+              "items": [
+                "Coffee/tea maker",
+                "Dishwasher",
+                "Free bottled water",
+                "Kettle",
+                "Mini bar",
+                "Refrigerator"
+              ]
+            },
+            {
+              "text": "Layout and furnishings",
+              "icon": "fill.facility.roomplan",
+              "items": [
+                "Carpeting",
+                "Desk",
+                "Extra long bed",
+                "High chair",
+                "Seating area",
+                "Separate dining area",
+                "Sofa",
+                "Trash cans",
+                "Window"
+              ]
+            },
+            {
+              "text": "Clothing and laundry",
+              "icon": "fill.service.laundry",
+              "items": [
+                "Closet",
+                "Ironing facilities"
+              ]
+            },
+            {
+              "text": "For the kids",
+              "icon": "fill.food.babybottle",
+              "items": [
+                "Baby amenities (upon request)",
+                "Baby cot (upon request)",
+                "Step stool"
+              ]
+            },
+            {
+              "text": "Access",
+              "icon": "fill.amenity.key",
+              "items": [
+                "Exterior corridor"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Accessible by elevator",
+                "In-room safe box",
+                "Laptop safe box",
+                "Non-smoking",
+                "Safety/security feature",
+                "Smoke detector"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 11128083,
+          "room_group_index": 1,
+          "master_room_index": 1,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 50,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "50 m\u00b2/538 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": [
+          {
+            "text": "City view",
+            "type": "ROOM_VIEW",
+            "icon": "fill.facility.window",
+            "id": "ROOM_VIEW"
+          }
+        ],
+        "reviewInformation": {
+          "score": 9.4,
+          "scoreText": "Exceptional"
+        }
+      },
+      {
+        "typeId": 11128075,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Business Class Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/0089a7659f930787546749a04336c598.jpeg?ce=2&s=800x600",
+            "id": 103162272,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/7ba9c663c96cc88fd2d7625f9b5b209b.jpeg?ce=2&s=800x600",
+            "id": 103162291,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/232839227.jpg?k=eddc86f1f4b32837a5afd564e02d599897394575d98f6a57ecb347d85c54852d&o=",
+            "id": 873649362,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128066/54228d98452d480700f7a51761f670c3.jpeg?ce=3&s=800x600",
+            "id": 192373235,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/c8e73328dc73477162b7797cdb848d2b.jpeg?ce=3&s=800x600",
+            "id": 193011539,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/44edcce838e05f59a8e2ef99522f3b3d.jpeg?ce=2&s=800x600",
+            "id": 95106227,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/2c4d4fc5868f8231eb4b83f7b2b37c7d.jpeg?ce=2&s=800x600",
+            "id": 115854447,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/616919888/98dbaa57c37330cbd7f1670e9a35ef57.jpeg?ce=2&s=800x600",
+            "id": 516811844,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/530a357075ba21c703c1ae69b100496b.jpeg?ce=2&s=800x600",
+            "id": 106154396,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/831497218.jpg?k=932f203ad5f7646295c2f6013c31ddb460268a5c14d48e0634a09a6d20b5bbe7&o=",
+            "id": 1293977670,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/87131792.jpg?k=22bb637180dd0a188854a101e82898375dd59b2dbb45acdff8508f05bce84db1&o=",
+            "id": 873649361,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/e46204cd1ccaf1fceb11ed794b8f2b8b.jpeg?ce=2&s=800x600",
+            "id": 52441876,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11128075/1e5cbeb0820262443c36a8ce88c19f63.jpeg?ce=2&s=800x600",
+            "id": 52441877,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/616919875/64d9029ae5de6b499e0d71a128823c33.jpeg?ce=2&s=800x600",
+            "id": 516811845,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/616919887/76f67f52c54a8e3a9f98d667320bc821.jpeg?ce=2&s=800x600",
+            "id": 516811851,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/232839601.jpg?k=754374a4b128848335ea4b789c2eae0cdac9746c38f716eb611ed5b22e3c2dc9&o=",
+            "id": 873649360,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/616919887/8928809d8d8d755343f9769b96e3d2aa.jpeg?ce=2&s=800x600",
+            "id": 516811857,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/87351673.jpg?k=56a03b18528029ced1a04aa7c95ca656bba5ec6c95ae7ba789a4d7211821bc28&o=",
+            "id": 873649366,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "30 m\u00b2/323 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "2 semi double beds or 1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "City view",
+            "icon": "fill.facility.window",
+            "type": "VIEW"
+          },
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Bathtub",
+            "icon": "fill.facility.bathtub",
+            "type": "BATHTUB"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [
+            {
+              "title": "Fitness club privileges"
+            },
+            {
+              "title": "Desk"
+            },
+            {
+              "title": "Soundproofing"
+            }
+          ],
+          "featured": [
+            {
+              "title": "30 m\u00b2/323 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "2 semi double beds or 1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "City view",
+              "icon": "fill.facility.window"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Bathtub",
+              "icon": "fill.facility.bathtub"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Accessibility",
+              "icon": "fill.facility.wheelchair",
+              "items": [
+                "Bathtub grab bar",
+                "Non-slip grab bar"
+              ]
+            },
+            {
+              "text": "Kitchen",
+              "icon": "fill.facility.stove",
+              "items": [
+                "Electric kettle"
+              ]
+            },
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Accessible toilet",
+                "Adapted bath",
+                "Bathrobes",
+                "Bathtub",
+                "Hair dryer",
+                "Mirror",
+                "Private bathroom",
+                "Separate shower/bathtub",
+                "Shower",
+                "Toiletries",
+                "Towels",
+                "Walk-in shower"
+              ]
+            },
+            {
+              "text": "Entertainment ",
+              "icon": "fill.activity.game",
+              "items": [
+                "Internet access \u2013 LAN",
+                "Internet access \u2013 wireless",
+                "Reading light",
+                "Satellite/cable channels",
+                "Telephone",
+                "TV",
+                "TV [flat screen]",
+                "Wi-Fi [free]"
+              ]
+            },
+            {
+              "text": "Comforts",
+              "icon": "fill.facility.sofa",
+              "items": [
+                "Adapter",
+                "Air conditioning",
+                "Blackout curtains",
+                "Concierge",
+                "Daily newspaper",
+                "Linens",
+                "Private entrance",
+                "Sleep comfort items",
+                "Slippers",
+                "Soundproofing",
+                "Wake-up service"
+              ]
+            },
+            {
+              "text": "Dining, drinking, and snacking",
+              "icon": "fill.food.fork-knife",
+              "items": [
+                "Coffee/tea maker",
+                "Dishwasher",
+                "Free bottled water",
+                "Kettle",
+                "Mini bar",
+                "Refrigerator"
+              ]
+            },
+            {
+              "text": "Layout and furnishings",
+              "icon": "fill.facility.roomplan",
+              "items": [
+                "Carpeting",
+                "Desk",
+                "Extra long bed",
+                "High chair",
+                "Seating area",
+                "Separate dining area",
+                "Separate living room",
+                "Sofa",
+                "Trash cans"
+              ]
+            },
+            {
+              "text": "Clothing and laundry",
+              "icon": "fill.service.laundry",
+              "items": [
+                "Closet",
+                "Ironing facilities"
+              ]
+            },
+            {
+              "text": "For the kids",
+              "icon": "fill.food.babybottle",
+              "items": [
+                "Baby amenities (upon request)",
+                "Baby cot (upon request)"
+              ]
+            },
+            {
+              "text": "Access",
+              "icon": "fill.amenity.key",
+              "items": [
+                "Exterior corridor"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Accessible by elevator",
+                "In-room safe box",
+                "Laptop safe box",
+                "Non-smoking",
+                "Safety/security feature",
+                "Smoke detector"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 11128075,
+          "room_group_index": 2,
+          "master_room_index": 2,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 30,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "30 m\u00b2/323 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": [
+          {
+            "text": "City view",
+            "type": "ROOM_VIEW",
+            "icon": "fill.facility.window",
+            "id": "ROOM_VIEW"
+          }
+        ]
+      },
+      {
+        "typeId": 11123074,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Superior Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/4446c1430cc29c528ffcd29efea8e90a.jpeg?ce=3&s=800x600",
+            "id": 192373240,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/0/2301b1530ba80c92d95ad5124dacecfb.jpeg?ce=2&s=800x600",
+            "id": 294102325,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/530a357075ba21c703c1ae69b100496b.jpeg?ce=2&s=800x600",
+            "id": 106154398,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/12426f95a6d5898376f78b8cb55954ff.jpeg?ce=2&s=800x600",
+            "id": 102668437,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/02d1677daef9b64c7b9b00c92e25d220.jpeg?ce=3&s=800x600",
+            "id": 1662432845,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/58df0ba178d27aa90742deb691b36720.jpeg?ce=3&s=800x600",
+            "id": 1662432847,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/1e4cbb2e9ff901c05d2b62625a43206f.jpeg?ce=2&s=800x600",
+            "id": 102668509,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/5867f56259478f32ccb0286c811d0130.jpeg?ce=2&s=800x600",
+            "id": 95106058,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/87d79460ee6c796e9cde43265eeed590.jpeg?ce=3&s=800x600",
+            "id": 1662432848,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/539c1167a93d7b4b8baa7db22a016807.jpeg?ce=3&s=800x600",
+            "id": 1662432852,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/204619843.jpg?k=825d263e0ec76d0a16b43df0c2561f03cb0743a46b2e301896f643a0927dc46a&o=",
+            "id": 873648361,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/33808602.jpg?k=6de0875ca2f16af74174b90232bd68f7b1d27de8bdeb9a28958be34b5d1a5b40&o=",
+            "id": 873648362,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/ca798b2b10cac999727d270ecb3b2306.jpeg?ce=3&s=800x600",
+            "id": 1662432840,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/11123074/e0fe4fabc9577932f06eed7a6cee938f.jpeg?ce=2&s=800x600",
+            "id": 95106060,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/e1081e2c84eb62959ccbe57895ee943d.jpeg?ce=3&s=800x600",
+            "id": 1662432842,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/33808610.jpg?k=4661983bc8f2cb0b4359bad311fd97c9e1d13c1034b66c83832a22c784925b16&o=",
+            "id": 873648365,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148985/22d6eab8bcb40ea82c6aff8f327d3da6.jpeg?ce=3&s=800x600",
+            "id": 1662432844,
+            "typeId": 7
+          },
+          {
+            "url": "https://q-xx.bstatic.com/xdata/images/hotel/840x460/33808617.jpg?k=09bc67fc3b72a647bf3aa5dde9b0237213d181c71beec81f1637a46b734580f2&o=",
+            "id": 873648367,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "30 m\u00b2/323 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "2 semi double beds or 1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "City view",
+            "icon": "fill.facility.window",
+            "type": "VIEW"
+          },
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Shower",
+            "icon": "fill.facility.shower",
+            "type": "SHOWER"
+          }
+        ],
+        "badges": [
+          {
+            "id": "recommended_badge",
+            "text": "Recommended",
+            "leadingIcon": "fill.symbol.thumbs-up",
+            "clientAnalyticsContext": {
+              "elementName": "room-recommended-badge",
+              "version": 1,
+              "context": {
+                "element_data": "asgard-bff"
+              },
+              "actions": [
+                "seen"
+              ],
+              "elementData": "asgard-bff"
+            },
+            "position": "UNDER_ROOM_TITLE"
+          },
+          {
+            "id": "traveler_room_reco_badge",
+            "text": "Preferred by Couples",
+            "leadingIcon": "fill.people.family",
+            "clientAnalyticsContext": {
+              "elementName": "mob-traveller-room-reco-badge",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen"
+              ],
+              "elementData": "accom-webview"
+            },
+            "position": "UNDER_ROOM_TITLE"
+          }
+        ],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [
+            {
+              "title": "Fitness club privileges"
+            },
+            {
+              "title": "Desk"
+            },
+            {
+              "title": "Mobility accessibility"
+            }
+          ],
+          "featured": [
+            {
+              "title": "30 m\u00b2/323 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "2 semi double beds or 1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "City view",
+              "icon": "fill.facility.window"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Shower",
+              "icon": "fill.facility.shower"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Accessibility",
+              "icon": "fill.facility.wheelchair",
+              "items": [
+                "Accessible vanities",
+                "Adjustable height hand-held shower wand",
+                "Alarm clock telephone ringer",
+                "Audible alarm",
+                "Bathtub grab bar",
+                "Flashing door knocker",
+                "Lowered deadbolt on door",
+                "Lowered electrical outlet",
+                "Lowered view port in door",
+                "Mobility accessibility",
+                "Non-slip grab bar",
+                "Self-closing door",
+                "Visual alarm"
+              ]
+            },
+            {
+              "text": "Kitchen",
+              "icon": "fill.facility.stove",
+              "items": [
+                "Electric kettle"
+              ]
+            },
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Accessible toilet",
+                "Adapted bath",
+                "Bathrobes",
+                "Cleaning products",
+                "Hair dryer",
+                "Mirror",
+                "Private bathroom",
+                "Shower",
+                "Toiletries",
+                "Towels",
+                "Walk-in shower"
+              ]
+            },
+            {
+              "text": "Entertainment ",
+              "icon": "fill.activity.game",
+              "items": [
+                "Internet access \u2013 LAN",
+                "Internet access \u2013 wireless",
+                "Reading light",
+                "Satellite/cable channels",
+                "Telephone",
+                "TV",
+                "TV [flat screen]",
+                "Wi-Fi [free]"
+              ]
+            },
+            {
+              "text": "Comforts",
+              "icon": "fill.facility.sofa",
+              "items": [
+                "Adapter",
+                "Air conditioning",
+                "Blackout curtains",
+                "Concierge",
+                "Linens",
+                "Private entrance",
+                "Sleep comfort items",
+                "Slippers",
+                "Soundproofing",
+                "Wake-up service"
+              ]
+            },
+            {
+              "text": "Dining, drinking, and snacking",
+              "icon": "fill.food.fork-knife",
+              "items": [
+                "Coffee/tea maker",
+                "Dishwasher",
+                "Free bottled water",
+                "Kettle",
+                "Mini bar",
+                "Refrigerator"
+              ]
+            },
+            {
+              "text": "Layout and furnishings",
+              "icon": "fill.facility.roomplan",
+              "items": [
+                "Carpeting",
+                "Desk",
+                "Extra long bed",
+                "High chair",
+                "Seating area",
+                "Separate dining area",
+                "Sofa",
+                "Trash cans",
+                "Window"
+              ]
+            },
+            {
+              "text": "Clothing and laundry",
+              "icon": "fill.service.laundry",
+              "items": [
+                "Closet",
+                "Ironing facilities",
+                "Sewing kit",
+                "Shoeshine kit"
+              ]
+            },
+            {
+              "text": "For the kids",
+              "icon": "fill.food.babybottle",
+              "items": [
+                "Baby amenities (upon request)",
+                "Baby cot (upon request)",
+                "Step stool"
+              ]
+            },
+            {
+              "text": "Access",
+              "icon": "fill.amenity.key",
+              "items": [
+                "Exterior corridor"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Accessible by elevator",
+                "In-room safe box",
+                "Laptop safe box",
+                "Non-smoking",
+                "Safety/security feature",
+                "Smoke detector"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 11123074,
+          "room_group_index": 3,
+          "master_room_index": 3,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 30,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "30 m\u00b2/323 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": [
+          {
+            "text": "City view",
+            "type": "ROOM_VIEW",
+            "icon": "fill.facility.window",
+            "id": "ROOM_VIEW"
+          }
+        ],
+        "reviewInformation": {
+          "score": 8.703,
+          "scoreText": "Excellent"
+        }
+      },
+      {
+        "typeId": 1444149009,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Business Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/3cbfff1a58e3cebb940e6fad4c750293.jpeg?ce=3&s=800x600",
+            "id": 1662397495,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/1f6069bd9fa11d0bca42645da1898465.jpeg?ce=3&s=800x600",
+            "id": 1662397516,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149009/d96199163bc5c2b2b26237bc6e48e963.jpeg?ce=3&s=800x600",
+            "id": 1662397483,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/672374335f5aa318247324ddd258f14f.jpeg?ce=3&s=800x600",
+            "id": 1662397507,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/114a07496a4a2a656b8f5f955d1bc299.jpeg?ce=3&s=800x600",
+            "id": 1662397509,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/18e6f20f4fcb56aa93d13a042d29b2bf.jpeg?ce=3&s=800x600",
+            "id": 1662397501,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/a346e013d2feab49c48b8074e449f144.jpeg?ce=3&s=800x600",
+            "id": 1662397510,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/5df1e78aab8cf2755cdbac420f1d1e41.jpeg?ce=3&s=800x600",
+            "id": 1662397491,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/3e6b1a86cf0518ee43ae15602ecb838c.jpeg?ce=3&s=800x600",
+            "id": 1662397493,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/39fbd6d5447dd3b3bbdcec1ba9075a36.jpeg?ce=3&s=800x600",
+            "id": 1662397502,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149009/5de1018639988dc0fd56f1e0353ef2ba.jpeg?ce=3&s=800x600",
+            "id": 1662397503,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/7bd9abead7a46e3e32ab89747a3ee4df.jpeg?ce=3&s=800x600",
+            "id": 1662397496,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/9b2e9dde7a08468861be7dfc36162c98.jpeg?ce=3&s=800x600",
+            "id": 1662397485,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149009/b8126bd0ec7ddb15c491ed80dc15e2a0.jpeg?ce=3&s=800x600",
+            "id": 1662397497,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/d1345e84a206b543fa91b27ab69739fc.jpeg?ce=3&s=800x600",
+            "id": 1662397500,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/1dfdbc150b91cb2fa42950b2fce37a3c.jpeg?ce=3&s=800x600",
+            "id": 1662397511,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444149009/76101a17ced679451003ac14d0aa2d33.jpeg?ce=3&s=800x600",
+            "id": 1662397494,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149009/c3ad5ba30b96ef9b3d13c8f7fee17df9.jpeg?ce=3&s=800x600",
+            "id": 1662397484,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          }
+        ],
+        "facilities": [],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [],
+          "featured": [],
+          "grouped": []
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 1444149009,
+          "room_group_index": 392,
+          "master_room_index": 392,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 0,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "bedroomLayout": [],
+        "roomHighlights": []
+      },
+      {
+        "typeId": 1444148997,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Business Room (Business Class)",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/2e6aff226863539a32d6e6fc60d6c4c4.jpeg?ce=3&s=800x600",
+            "id": 1662471766,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/6b534e2132f9db05ad8573cf5ae0dbc3.jpeg?ce=3&s=800x600",
+            "id": 1662471763,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/04bfe4aeaa55f9cd9a7a7fcd59a01d64.jpeg?ce=3&s=800x600",
+            "id": 1662471760,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/be392ff3be1c9e5ee635242a0307c7be.jpeg?ce=3&s=800x600",
+            "id": 1662471767,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/e7a0ea7d94b5dfca9eb704499a1b462c.jpeg?ce=3&s=800x600",
+            "id": 1662471761,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/bb9c0d4c84d134d7c12d4f33045b0ba7.jpeg?ce=3&s=800x600",
+            "id": 1662471764,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/aea12c4302a6a2e2e6a8643eba3bce14.jpeg?ce=3&s=800x600",
+            "id": 1662471762,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/91148158/1444148997/6537470003f488455f6096102cdfb8df.jpeg?ce=3&s=800x600",
+            "id": 1662471759,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "Max 4 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [],
+          "featured": [
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Non-smoking"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 1444148997,
+          "room_group_index": 75,
+          "master_room_index": 75,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 0,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "bedroomLayout": [],
+        "roomHighlights": []
+      },
+      {
+        "typeId": 1286639029,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Presidential Suite",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1286639029/904ae85c2fe53bf6128d3062437b4e5c.jpeg?ce=3&s=800x600",
+            "id": 1503573234,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1286639029/ba356873c8bc23c73669549859a92abe.jpeg?ce=3&s=800x600",
+            "id": 1781053276,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1286639029/f59c6c484dfc17e086f937fda7f51d9e.jpeg?ce=3&s=800x600",
+            "id": 1503573235,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1286639029/9a09097308848092534b0528f2194c59.jpeg?ce=3&s=800x600",
+            "id": 1503573236,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1286639029/b451a6e771ac966153b8d4a14bad40b1.jpeg?ce=3&s=800x600",
+            "id": 1503573233,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "Max 4 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          }
+        ],
+        "facilities": [],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [],
+          "featured": [],
+          "grouped": []
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 1286639029,
+          "room_group_index": 239,
+          "master_room_index": 239,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 0,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "bedroomLayout": [],
+        "roomHighlights": []
+      },
+      {
+        "typeId": 1444149004,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Presidential Suite",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149004/43e382479b150322d159a84e35674eac.jpeg?ce=3&s=800x600",
+            "id": 1662441632,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149004/a0278e56534ce6f2d4fa6e31e52a9128.jpeg?ce=3&s=800x600",
+            "id": 1662441629,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149004/b24d38e6dd625782a4e200a86d26a297.jpeg?ce=3&s=800x600",
+            "id": 1662441631,
+            "typeId": 7
+          },
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1444149002/5605a23e9e3acdc69978a9e52c7f60fc.jpeg?ce=3&s=800x600",
+            "id": 1662441630,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "Max 4 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [],
+          "featured": [
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Non-smoking"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 1444149004,
+          "room_group_index": 76,
+          "master_room_index": 76,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 0,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "bedroomLayout": [],
+        "roomHighlights": []
+      },
+      {
+        "typeId": 507972868,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Business Classic Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/hotelImages/1785304/0/63757aaa5807b18c739139ee98b79fcf.jpeg?ce=2&s=800x600",
+            "id": 67403815,
+            "typeId": 6
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "28 m\u00b2/301 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "2 single beds / 1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "City view",
+            "icon": "fill.facility.window",
+            "type": "VIEW"
+          },
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Shower",
+            "icon": "fill.facility.shower",
+            "type": "SHOWER"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [],
+          "featured": [
+            {
+              "title": "28 m\u00b2/301 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "2 single beds / 1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "City view",
+              "icon": "fill.facility.window"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Shower",
+              "icon": "fill.facility.shower"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Shower"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "Non-smoking"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 507972868,
+          "room_group_index": 5,
+          "master_room_index": 5,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 28,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "28 m\u00b2/301 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": [
+          {
+            "text": "City view",
+            "type": "ROOM_VIEW",
+            "icon": "fill.facility.window",
+            "id": "ROOM_VIEW"
+          }
+        ]
+      },
+      {
+        "typeId": 1381268212,
+        "isSoldOut": false,
+        "filterTags": [],
+        "name": "Business Classic Room",
+        "isOccupancyExceeded": false,
+        "images": [
+          {
+            "url": "https://pix8.agoda.net/property/1785304/1381268212/f675b85d43ef5587b1324c02de19d8cd.jpeg?ce=4&s=800x600",
+            "id": 1815815713,
+            "typeId": 7
+          }
+        ],
+        "matterports": [],
+        "isFullPropertyGallery": false,
+        "features": [
+          {
+            "text": "28 m\u00b2/301 ft\u00b2",
+            "type": "ROOM_SIZE"
+          },
+          {
+            "text": "Max 3 adults",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-occupancy-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "MAX_OCCUPANCY"
+          },
+          {
+            "text": "2 single beds / 1 king bed",
+            "clientAnalyticsContext": {
+              "elementName": "mob-room-header-bedding-info",
+              "version": 1,
+              "context": {},
+              "actions": [
+                "seen",
+                "click"
+              ],
+              "elementData": "accom-webview"
+            },
+            "type": "BEDROOM_LAYOUT"
+          }
+        ],
+        "facilities": [
+          {
+            "text": "Non-smoking",
+            "icon": "fill.facility.smoke-no",
+            "type": "NON_SMOKING_ROOM"
+          },
+          {
+            "text": "Bathtub",
+            "icon": "fill.facility.bathtub",
+            "type": "BATHTUB"
+          }
+        ],
+        "badges": [],
+        "videos": [],
+        "offers": [],
+        "amenities": {
+          "top": [
+            {
+              "title": "Desk"
+            },
+            {
+              "title": "Mobility accessibility"
+            },
+            {
+              "title": "Sofa"
+            }
+          ],
+          "featured": [
+            {
+              "title": "28 m\u00b2/301 ft\u00b2",
+              "icon": "fill.facility.room-size"
+            },
+            {
+              "title": "2 single beds / 1 king bed",
+              "icon": "fill.facility.bed-king"
+            },
+            {
+              "title": "Non-smoking",
+              "icon": "fill.facility.smoke-no"
+            },
+            {
+              "title": "Bathtub",
+              "icon": "fill.facility.bathtub"
+            }
+          ],
+          "grouped": [
+            {
+              "text": "Accessibility",
+              "icon": "fill.facility.wheelchair",
+              "items": [
+                "Bathtub grab bar",
+                "Mobility accessibility",
+                "Non-slip grab bar"
+              ]
+            },
+            {
+              "text": "Kitchen",
+              "icon": "fill.facility.stove",
+              "items": [
+                "Electric kettle"
+              ]
+            },
+            {
+              "text": "Bathroom and toiletries",
+              "icon": "fill.amenity.toiletries",
+              "items": [
+                "Bathtub",
+                "Hair dryer"
+              ]
+            },
+            {
+              "text": "Entertainment ",
+              "icon": "fill.activity.game",
+              "items": [
+                "Internet access \u2013 wireless",
+                "Satellite/cable channels",
+                "Telephone"
+              ]
+            },
+            {
+              "text": "Comforts",
+              "icon": "fill.facility.sofa",
+              "items": [
+                "Blackout curtains",
+                "Slippers"
+              ]
+            },
+            {
+              "text": "Dining, drinking, and snacking",
+              "icon": "fill.food.fork-knife",
+              "items": [
+                "Coffee/tea maker",
+                "Free bottled water",
+                "Mini bar",
+                "Refrigerator"
+              ]
+            },
+            {
+              "text": "Layout and furnishings",
+              "icon": "fill.facility.roomplan",
+              "items": [
+                "Carpeting",
+                "Desk",
+                "Extra long bed",
+                "Sofa",
+                "Window"
+              ]
+            },
+            {
+              "text": "Clothing and laundry",
+              "icon": "fill.service.laundry",
+              "items": [
+                "Closet",
+                "Ironing facilities"
+              ]
+            },
+            {
+              "text": "For the kids",
+              "icon": "fill.food.babybottle",
+              "items": [
+                "Step stool"
+              ]
+            },
+            {
+              "text": "Safety and security features",
+              "icon": "fill.symbol.safe",
+              "items": [
+                "In-room safe box",
+                "Non-smoking"
+              ]
+            }
+          ]
+        },
+        "analyticsContext": {
+          "action_element_name": "room-grid-room-context",
+          "element_version": 4,
+          "master_room_id": 1381268212,
+          "room_group_index": 6,
+          "master_room_index": 6,
+          "is_kitchen_available": false,
+          "cheapest_room_price": "",
+          "room_size": 28,
+          "is_upsell_recommended_room": false,
+          "action_element_type": null,
+          "element_data": "asgard-bff"
+        },
+        "minimumCollapsedItems": 4,
+        "roomSize": "28 m\u00b2/301 ft\u00b2",
+        "bedroomLayout": [],
+        "roomHighlights": []
+      }
+    ],
+    "translations": {
+      "72786": "Back",
+      "71861": "Search",
+      "72729": "Share",
+      "337213": "{propertyName}\u00a0was added to your saved list",
+      "337214": "{propertyName}\u00a0was removed from your saved list",
+      "131708": "Oops! Something went wrong. Please try again later.",
+      "72747": "Add to Favorite",
+      "72511": "Remove from Favorite",
+      "232281": "loading",
+      "264410": "Share is not supported in this browser, but link has been copied to clipboard",
+      "337215": "Check out\u00a0{propertyName}",
+      "72820": "Filter",
+      "72409": "Select",
+      "82115": "Book",
+      "90743": "or change your dates",
+      "341764": "Change dates",
+      "90742": "See other properties",
+      "178849": "Remove",
+      "178848": "%s applied",
+      "539029": "Applied",
+      "89727": "(Room capacity exceeded)",
+      "662109": "Room capacity exceeded",
+      "156416": "Show more offers",
+      "72699": "Show less",
+      "97243": "Select rooms",
+      "96794": "Starting from",
+      "126405": "Subject to Cashback Terms",
+      "285941": "This room description was generated through A.I. Inaccuracies may occur.",
+      "244202": "No rooms match your selected filters",
+      "244203": "There are no rooms that match your selected filters. Please adjust the filters and try again.",
+      "244204": "Clear all filters",
+      "544121": "Age",
+      "544122": "Fee",
+      "96458": "See details",
+      "240093": "Rewards & discounts",
+      "77584": "Rooms",
+      "71707": "Details",
+      "534676": "Offer {Order}",
+      "593778": "Just sold out",
+      "534677": "See details for {RoomTypeWithOfferName}",
+      "534678": "Save {RoomTypeWithOfferName}",
+      "553825": "Add %s to saved list",
+      "553826": "Remove %s from saved list",
+      "565777": "Add {Offer} to saved list",
+      "565778": "Remove {Offer} from saved list",
+      "534679": "{RoomsCount} rooms for {RoomTypeWithOfferName}",
+      "534680": "Show more offers for {RoomType}",
+      "534905": "Show fewer offers for {RoomType}",
+      "667714": "Show sold out rooms ({0})",
+      "667715": "Hide sold out rooms",
+      "570583": "Show {0} more offers (From {1})",
+      "570584": "Show one more offer (From {1})",
+      "277541": "Sorry, we encountered a technical issue. Please try again.",
+      "277542": "Go back",
+      "277543": "Reload this page",
+      "277638": "You\u2019re currently offline. Please connect to a network to make changes or view updated information.",
+      "327856": "Original Price",
+      "285889": "Part of the JTB network",
+      "285890": "Listings and updated prices verified by JTB Corp.",
+      "269785": "Close",
+      "529483": "Got it",
+      "187430": "Installment Options",
+      "187433": "Check eligibility on the payment step",
+      "282585": "Featured amenities",
+      "290255": "Positive",
+      "290256": "Negative",
+      "290259": "based on guest reviews",
+      "90740": "Sold out!",
+      "90758": "Our last room is already booked",
+      "365678": "Booking modification",
+      "365679": "Select your offer",
+      "365680": "Verify booking details",
+      "365681": "Select payment method",
+      "365682": "Booking confirmed",
+      "365683": "You will need to pay the full amount for the updated booking first. Any refund due from the cancellation of your original booking will be processed after that.",
+      "408902": "Select room based on your new dates",
+      "85242": "Back to Top",
+      "101897": "Enter dates to see prices",
+      "569493": "See Prices",
+      "563790": "Details",
+      "336649": "Cross out price",
+      "72936": "Room comfort and quality",
+      "56923": "Including taxes and fees",
+      "107824": "Covered by EasyCancel",
+      "107932": " ",
+      "63651": "See photos",
+      "534627": "{roomCount} Rooms",
+      "534628": "1 Room",
+      "542316": "Hurry up! {soldOutRoom} has already sold out for your dates!",
+      "542313": "Hurry up! {soldOutRooms} have already sold out for your dates!",
+      "542314": "1 room type",
+      "542315": "{soldOutRoomCount} room types",
+      "3363": "Date",
+      "3782": "Promotion",
+      "336208": "\u8a73\u7d30",
+      "544530": "Price shown is for reference",
+      "559050": "Includes {roomsCount} rooms",
+      "92937": "Or book for %s on our app",
+      "281146": "Guest List",
+      "281141": "Edit",
+      "140111": "Cart",
+      "135267": "Add to Cart",
+      "276017": "Added to cart",
+      "337216": "Your room(s) at\u00a0{propertyName}\u00a0has been added for\u00a0{price}",
+      "276019": "Book multiple items together to earn bigger savings!",
+      "136231": "Book multiple hotels together to earn bigger savings!",
+      "337217": "Or book now for\u00a0{price}",
+      "136237": "Proceed to cart",
+      "337218": "Up to 10% off",
+      "276022": "Cheapest flight deals, no hidden charges",
+      "72372": "Sorry, we have encountered a technical issue. Please try again.",
+      "135268": "Your selection exceeds the maximum allowable number of items in cart. Please reduce your selection or remove items from your cart.",
+      "136230": "Add more, save more!",
+      "136236": "Add another hotel",
+      "136239": "Book this room only",
+      "173855": "Bundle and save more",
+      "136228": "Room added!",
+      "367487": "Offer saved",
+      "367488": "View",
+      "367489": "Offer removed",
+      "367490": "Undo",
+      "270241": "Learn more",
+      "270217": "Unlock a cheaper way to stay! Switch rooms to save.",
+      "270218": "By splitting your dates between two rooms, you gain access to the cheapest offer. Simply book this Switch & Save combo to enjoy the lowest price.",
+      "270220": "Ok, got it",
+      "270242": "Book now",
+      "263662": "See special offer details",
+      "128652": "Agoda Special Offer",
+      "133036": "What are Agoda Special Offers?",
+      "100326": "Check-in time",
+      "100327": "Check-out time",
+      "100328": "Plan detail",
+      "121371": "Offer details",
+      "100329": "Cancellation policy",
+      "101695": "Child policy",
+      "100335": "Payment",
+      "100336": "Notice",
+      "226562": "Guest above the age of 13 are considered adults and adult prices apply when staying at this property.",
+      "101696": "Child category",
+      "101697": "Room occupancy",
+      "101698": "Details",
+      "101699": "Price",
+      "101715": "Prices expressed as a percentage are based on the adult rate.",
+      "101716": "\u00a0?Due to the limited number of listings, we may get no search results when using some of the child categories. In that case, we will use a superior child category or the adult fare when calculating your price.",
+      "565802": "Nightly price {price} per person",
+      "124082": "Offer details",
+      "127596": "Room amenities",
+      "57189": "Children and extra beds",
+      "277193": "Amenities",
+      "423692": "Show all",
+      "423693": "Show less",
+      "423690": "Top amenities",
+      "102791": "Risk-free and fully refundable",
+      "99513": "No payment today",
+      "558544": "%s% of guests liked it",
+      "528869": "Image of {RoomName}",
+      "531053": "Carousel with images of {RoomName}",
+      "531146": "Image {CurrentImage} of {TotalImage}",
+      "531054": "Previous image of {RoomName}",
+      "531055": "Next image of {RoomName}",
+      "529190": "Double tap to select",
+      "411386": "Property Images",
+      "358002": "About room description",
+      "358003": "To assist your search, we've used AI to generate a description of the room you're viewing, based on its photos.",
+      "358004": "Do you find it useful?",
+      "358005": "Thanks for your valuable feedback!",
+      "71910": "Yes",
+      "71865": "No",
+      "188883": "This property offers day-use stays",
+      "188884": "Inexpensive room rentals that are not overnight.",
+      "188885": "Select time",
+      "72224": "Check-in",
+      "72231": "Check-out",
+      "107066": "Total",
+      "107060": "Note that the room is only available for %s hours at the check-in time you have selected",
+      "188886": "Try an hourly stay",
+      "188887": "Same-day checkout (day use)",
+      "107061": "Up to %s hours with taxes",
+      "107062": "Up to %s hours",
+      "360330": "Note that the room is only available for {duration} hours at the check-in time you have selected",
+      "483617": "Time slot selection",
+      "483611": "1 hour",
+      "483807": "{hour} hours",
+      "483613": "Only 1 hour available",
+      "483808": "Only {hour} hours available",
+      "483616": "If you check in at {checkinTime}, you will only get a {duration}-hour stay",
+      "483609": "Day-use room up to 1 hour,",
+      "483610": "Day-use room up to %s hours,",
+      "298465": "Want more options?",
+      "298466": "Click to see similar properties\u00a0",
+      "298467": "Similar properties ",
+      "316388": "Sorry! Data could not be loaded, please try again later",
+      "421695": "Upgrade your stay!",
+      "366457": "See properties with higher star ratings at similar prices",
+      "359242": "Filters",
+      "598269": "Filters",
+      "359243": "All filters",
+      "359244": "Meals",
+      "359245": "Payment options",
+      "359247": "Property Features",
+      "359248": "Clear",
+      "583967": "Clear all",
+      "359249": "Show {offersCount} results",
+      "359250": "Show result",
+      "560709": "Bed type",
+      "565803": "Views",
+      "597781": "Filter",
+      "523579": "523578",
+      "372538": "Waiting room",
+      "372539": "Lodgement",
+      "410798": "Earn {miles} miles",
+      "422626": "or {price} {text}",
+      "410810": "or {miles} Miles + {cash}",
+      "410797": "or {miles} Miles",
+      "137404": "from",
+      "336593": "A portion of payment must be made in cash at the property",
+      "336594": "Close",
+      "154034": "Per night",
+      "67501": "Per night after taxes and fees",
+      "285141": "Or pay miles + cash ",
+      "388358": "Top-tier Members",
+      "483792": "{tier} member",
+      "388356": "Westjet RBC Credit-card holder",
+      "524354": "Earn {prefix}{price} {unit}",
+      "604360": "Extra",
+      "229794": "miles",
+      "143109": "points",
+      "410360": "Avios",
+      "410354": "Gift Card",
+      "534656": "Per person includes taxes and fees",
+      "65082": "or",
+      "115975": "Save",
+      "107019": "Bundle savings",
+      "98578": "Flight + Hotel",
+      "662909": "Total for %s travelers",
+      "662910": "Total for 1 traveler",
+      "565395": "incl. taxes & fees",
+      "411222": "More information on price",
+      "572123": "{boost} boost {unit} applied",
+      "572125": "Best value for {unit}!",
+      "149609": "Adult guests",
+      "149610": "Standard beddings and meals",
+      "149611": "Gradeschooler",
+      "149612": "Standard beddings and reduced portion of standard adult meal",
+      "149613": "Preschooler",
+      "149614": "Standard beddings and special children\u2019s meal",
+      "149615": "Toddler",
+      "149616": "Standard beddings without meals",
+      "149617": "Baby",
+      "149618": "No beddings or meals included",
+      "149619": "Update my search",
+      "149608": "Please provide the following information to optimize the services provided by the property",
+      "149607": "Guest setting",
+      "72529": "",
+      "72530": "",
+      "72191": "",
+      "72961": "",
+      "71786": "",
+      "71785": "",
+      "409348": "Recommended Room",
+      "409350": "How are recommended rooms identified?",
+      "409351": "We recommend rooms when they offer meaningful benefits\u2014like extra space or better amenities\u2014for just a little more than the cheapest option.",
+      "422905": "Recommended",
+      "667188": "Recommended room:",
+      "667189": "View comparison",
+      "665353": "Recommended rooms (%s)",
+      "409349": "Enjoy %s%% more space than this property\u2019s cheapest room for just %s more per night!",
+      "415656": "Enjoy %s%% more space than this property\u2019s cheapest room for just %s more!",
+      "534225": "Enjoy %s%% more space and the %s for just %s more per night!",
+      "534226": "Enjoy %s%% more space and the %s for just %s more!",
+      "534227": "Enjoy the upgrade to %s for just %s more per night!",
+      "534228": "Enjoy the upgrade to %s for just %s more!",
+      "575805": "Best value\u2014breakfast included",
+      "575807": "Enjoy breakfast for only %s more per night, %s% cheaper than buying at the hotel",
+      "575806": "Enjoy breakfast for only %s more, %s% cheaper than buying at the hotel",
+      "575808": "Breakfast included",
+      "575810": "Cheapest rate",
+      "575814": "No breakfast ",
+      "575811": "Enjoy breakfast for only %s more per night",
+      "575812": "Enjoy breakfast for only %s more",
+      "575813": "%s% cheaper than buying at the hotel",
+      "575815": "%s per guest",
+      "575816": "Why is this the best value?",
+      "575817": "We highlight rates when adding breakfast costs just a small fraction more \u2014 so you never miss a good deal.",
+      "575809": "Positively rated by %s% of guests",
+      "349894": "When you",
+      "349895": "sign in",
+      "569630": "JTB APS Peek non-logged in MSPA/App PP",
+      "81066": "Sign in to unlock the cheaper price",
+      "569634": "JTB APS Peek logged in MSPA/App PP",
+      "244845": "Start at",
+      "246191": "See all rooms",
+      "246160": "Sorry, we are",
+      "246161": "Sold out!",
+      "247675": "Change Date",
+      "366697": "Rapid Earnings Eligible",
+      "483793": "%s bonus applied",
+      "535136": "{miles} miles",
+      "535370": "or Miles + cash",
+      "570020": "Save {percent}%",
+      "570018": "Save {points} points",
+      "576566": "Redeem {loycur}",
+      "576567": "for base tier members",
+      "576599": "silver members caption",
+      "576601": "gold members caption",
+      "576602": "diamond members caption",
+      "576603": "prime members caption",
+      "576598": "bronze members caption",
+      "599442": "Platinum Members",
+      "642574": "tierPreviewCat6",
+      "642575": "tierPreviewCat7",
+      "642576": "tierPreviewCat8",
+      "642577": "tierPreviewCat9",
+      "642578": "tierPreviewCat10",
+      "642579": "tierPreviewCat11",
+      "642580": "tierPreviewCat12",
+      "642606": "tierPreviewCat13",
+      "642607": "tierPreviewCat14",
+      "642608": "tierPreviewCat15",
+      "642609": "tierPreviewCat16",
+      "642610": "tierPreviewCat17",
+      "642611": "tierPreviewCat18",
+      "642612": "tierPreviewCat19",
+      "642613": "tierPreviewCat20",
+      "522256": "Connecting or adjacent rooms",
+      "522257": "Rooms allocated to you at check-in are guaranteed to be either connecting or adjacent.",
+      "522255": "I want connecting or adjacent rooms",
+      "542254": "We'll request connecting or adjacent rooms for you, but availability depends on the property at check-in.",
+      "554966": "Non-smoking room",
+      "554965": "I want a non-smoking room",
+      "554967": "We'll request a non-smoking room for you, but availability depends on the property at check-in.",
+      "388365": "Bundle with eSIM",
+      "565060": "%s x eSim for %s",
+      "522097": "Bundle unavailable",
+      "522098": "Sorry, your selected add-ons are no longer available.",
+      "522099": "Book this room only",
+      "522100": "Back to room selection",
+      "522944": "Close",
+      "569426": "Book 1 room + 1 eSIM",
+      "569428": "Book {noOfRoom} rooms + 1 eSIM",
+      "570987": "Free cancellation",
+      "570988": "Non-refundable",
+      "553540": "Modify options",
+      "534375": "Validity",
+      "552847": "Date",
+      "552851": "More dates",
+      "552848": "Less dates",
+      "70237": "\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"",
+      "418302": "{d} {mmm}",
+      "559171": "eSIMs",
+      "570492": "Number of {paxType}",
+      "570494": "Min {minCount} {paxType}",
+      "570496": "You can book up to {maxSlots} slots",
+      "570497": "You can book up to {maxPax} {paxType}",
+      "570499": "At least ({minPax}) {paxType} required",
+      "130958": "Adult",
+      "3208": "adults",
+      "130959": "Child",
+      "67872": "Children",
+      "130960": "Infant",
+      "264474": "Infants",
+      "130962": "Youth",
+      "-1": "",
+      "130961": "Senior",
+      "134328": "Seniors",
+      "156690": "Ticket",
+      "156705": "Tickets",
+      "156689": "Student",
+      "156704": "Students",
+      "156688": "Toddler",
+      "156703": "Toddlers",
+      "134329": "Traveler",
+      "130771": "Travelers",
+      "576903": "{totalPax} Pax",
+      "576904": "Pax",
+      "229775": "Enjoy additional benefits when you select a highlighted rate for one of these collections at this stay.",
+      "238412": "Additional benefits included at this rate",
+      "229469": "\t\nClose",
+      "544027": "Terms and conditions",
+      "421455": "The Reserve by Citi Travel Benefits and Supplemental Terms & Conditions",
+      "421476": "The Hotel Collection Benefits and Supplemental Terms & Conditions",
+      "421457": "The Reserve Benefits (Citi Strata EliteSM, Citi Strata Premier\u00ae, and Citi Prestige\u00ae cardmembers):",
+      "421477": "Hotel Collection Benefits (All eligible cardmembers who canwith access to Citi Travel\u00ae):",
+      "421473": " <ul>\n    <li>$100.00 (USD) Experience Credit</li>\n    <li>Room Upgrade, upon availability</li>\n    <li>Daily Breakfast for Two</li>\n    <li>Complimentary Wi-Fi</li>\n    <li>Early Check-In, upon availability</li>\n    <li>Late Check-Out, upon availability</li>\n  </ul>\n\n  <div class=\"note\">\n    *Experience varies by property\n  </div>\n\n  <div class=\"condition\">\n    To receive these benefits, you must select a hotel room rate offered by The Reserve at check-out.\n  </div>",
+      "421478": " <ul>\n    <li>Daily Breakfast for Two</li>\n    <li>Complimentary Wi-Fi</li>\n    <li>Early Check-In, upon availability</li>\n    <li>Late Check-Out, upon availability</li>\n  </ul>\n  <p>\n    To receive these benefits, you must select a hotel room rate within the Hotel Collection at check-out.\n  </p>",
+      "421475": " <h2>$100.00 Experience Credit (The Reserve rates only)</h2>\n  <p>\n    The complimentary $100.00 Experience Credit is determined by each hotel and shall be valued at $100.00 (USD). The $100.00 Experience Credit may be in the form of a credit or gift card, provided directly by the hotel. Please contact the hotel directly to inquire about what services are subject to $100.00 Experience Credit. Certain services subject to the $100.00 USD Experience Credit may require advance reservations. Contact the hotel directly for more information and in order to obtain reservations, if required.\n  </p>\n  <p>\n    Back-to-back stays within 24 hours at the same hotel are considered one stay. Benefits shall be awarded once per stay. If the $100.00 Experience Credit and other benefits are not consumed during the eligible stay, no refunds or compensation shall be provided to you and the remaining balance will be forfeited.\n  </p>\n\n  <h2>Room Upgrades (The Reserve rates only)</h2>\n  <p>\n    Room Upgrades are based on availability and only certain hotel room categories may be available for upgrade.\n  </p>\n\n  <h2>Daily Breakfast for Two (The Reserve rates)</h2>\n  <p>\n    Daily Breakfast for Two is included and may be provided directly by the hotel or in the form of a gift card or credit. If breakfast is included as a standard amenity of the hotel, no additional compensation or amenity will be provided to you.\n  </p>\n\n  <h2>Complimentary Wi-Fi (The Reserve rates and Hotel Collection)</h2>\n  <p>\n    Complimentary Wi-Fi is provided, with the exception of select hotels where Wi-Fi is included as part of a mandatory daily resort fee or is not available. If Wi-Fi is included as a standard amenity of the hotel, no additional compensation or amenity will be provided to you.\n  </p>\n\n  <h2>Check-In/Check-Out (The Reserve rates and Hotel Collection)</h2>\n  <p>\n    Early Check-In eligibility is determined at time of check-in and is subject to availability.\n  </p>\n  <p>\n    Late Check-Out eligibility is determined at time of check-in and is subject to availability.\n  </p>\n\n  <h2>General</h2>\n  <p>\n    Both The Reserve Benefits and Hotel Collection Benefits are subject to change, availability, may vary by hotel and benefits cannot be redeemed for cash and may not be combined with any other offers. Benefits must be used during the stay booked and may not be used at a later date. Benefits are available only when you book with Citi Travel\u00ae using your eligible Citi card. All bookings in the Hotel Collection and The Reserve are also subject to Rocket Travel by Agoda\u2019s Terms and Conditions of Use for Hotels, Cars, and Attractions, above.\n  </p>",
+      "421479": " <h2>Daily Breakfast for Two (Hotel Collection rates)</h2>\n  <p>\n    Daily Breakfast for Two is included and may be provided directly by the hotel or in the form of a gift card or credit. If breakfast is included as a standard amenity of the hotel, no additional compensation or amenity will be provided to you.\n  </p>\n\n  <h2>Complimentary Wi-Fi (Hotel Collection rates)</h2>\n  <p>\n    Complimentary Wi-Fi is provided, with the exception of select hotels where Wi-Fi is included as part of a mandatory daily resort fee or is not available. If Wi-Fi is included as a standard amenity of the hotel, no additional compensation or amenity will be provided to you.\n  </p>\n\n  <h2>Check-In/Check-Out (Hotel Collection rates)</h2>\n  <p>\n    Early Check-In eligibility is determined at time of check-in and is subject to availability.\n  </p>\n  <p>\n    Late Check-Out eligibility is determined at time of check-in and is subject to availability.\n  </p>\n\n  <h2>General</h2>\n  <p>\n    Hotel Collection Benefits are subject to change, availability, may vary by hotel and benefits cannot be redeemed for cash and may not be combined with any other offers. Benefits must be used during the stay booked and may not be used at a later date. Benefits are available only when you book with Citi Travel\u00ae using your eligible Citi card. All bookings in the Hotel Collection and The Reserve are also subject to Rocket Travel by Agoda\u2019s Terms and Conditions of Use for Hotels, Cars, and Attractions, above.\n  </p>",
+      "417884": "Location Rating",
+      "523865": "Offers from %s",
+      "523828": "Need help choosing a room?",
+      "523829": "Let AI help you",
+      "523831": "Ask now",
+      "534681": "Notify me when prices change",
+      "534682": "Create an alert and get notified about price drops or increases",
+      "534683": "Price alerts are coming soon!",
+      "534684": "We would love to know which of the following would be most helpful to you:",
+      "534685": "Notify me when the price changes for this property",
+      "534686": "Notify me when the price changes for a specific room",
+      "534689": "Cancel",
+      "534690": "Submit",
+      "534691": "Thank you for your feedback",
+      "541539": "Check out this awesome {propertyName}, book now for discounts!",
+      "359688": "\u5206\u4eab\u81f3",
+      "359689": "\u5fae\u4fe1\u597d\u53cb",
+      "359690": "\u5fae\u4fe1\u670b\u53cb\u5708",
+      "359691": "\u590d\u5236\u8fde\u63a5",
+      "566304": "Best deal I've found on Agoda. Check out this property!",
+      "541636": "Room 360 Tour",
+      "89696": "Book with us and get the best prices from our partner sites.",
+      "89697": "Best Price",
+      "89698": "Verified",
+      "89699": "with our partners",
+      "89700": "{0}{1}",
+      "89701": "{0} {1}",
+      "79647": "Agoda searches for the best deals from many sources, so you always get the best price! Best of all, you can book any of these deals through Agoda and get our secure transaction, 24/7 customer support, and free online booking management",
+      "99516": "No credit card needed",
+      "598508": "Your whole group can also stay together in 1 room, starting at {price}",
+      "598511": "This property offers larger rooms in which your whole group can stay together",
+      "598512": "See room offers",
+      "598513": "Rooms that fit your whole group",
+      "598515": "Other room types",
+      "598517": "{count} adults",
+      "598516": "1 adult",
+      "598519": "{count} children",
+      "598518": "1 child",
+      "598521": "{count} rooms",
+      "598520": "1 room",
+      "559134": "Parking is full today",
+      "575921": "+ {noOfRemainingFacilities} more",
+      "578462": "Pay {price}",
+      "578463": "Refund of {price}",
+      "570598": "This is the total amount that you will have to pay. Since we have offset the amount from your original booking, you\u2019ll only have to top up this difference.",
+      "570599": "This is the total amount that will be refunded to your original payment method or bank account. The refund will be processed automatically, and the refund timing will depend on your bank/card issuer.",
+      "570605": "Payment amount",
+      "570606": "Refund amount",
+      "586408": "View all available rooms"
+    },
+    "toggles": [
+      "enableSaveToTripFeatureOnWeb",
+      "tripPlanner",
+      "showSoldoutPrice",
+      "showRareFindPrice",
+      "pmcMigratePromoParamsToBfUrl",
+      "pmcRemovePromoParams",
+      "enableRoomGridNewStyleDiscountBadge",
+      "showPersonalizedRoomHighlights",
+      "genericLuxuryHotelCollection",
+      "uiFixCxpDesktop",
+      "enableRgSupplierPriceFrom",
+      "enablePriceViewSnapshotLogging",
+      "cxpRgPriceDisplayLayout",
+      "enableRxCRoomGridPriceDisplay",
+      "rgEnableSearchRebook",
+      "enableActivityCustomPaxBundleDisplay",
+      "fixMissingRoInNativeBfNavigationToggle",
+      "enableConnectingRoomsRG",
+      "cxpRgMigrateAccordionToCollapsible",
+      "fixAvengersIssues",
+      "enableRgChatbot",
+      "enableRgChatbotWL",
+      "cxpRgReadableRoomFacilities",
+      "cxpRgDesktopFacilitiesModalTwoColumns",
+      "enableCxpRgSeeMoreRoomAmenities",
+      "hotelImageFullViewExp",
+      "enabledSaveToTripPageLevelOwnership",
+      "isRgBenefitAccessible",
+      "fixFreeCancellationMessage",
+      "cxpRgTotalStayPriceTextOptimisationIos",
+      "cxpRgTotalStayPriceTextOptimisationAndroid",
+      "cxpRgHideSoldOutOnDatelessMspa",
+      "useUpdatedSearchCriteriaForSsrNavigation",
+      "seeOtherPropertiesInFloatingBarToggle",
+      "showRgHierarchyImprovement",
+      "togglePositionSpecificityFix",
+      "fixCarouselFocusIndicator",
+      "cxpRoomGridA11yFixes",
+      "roomGridStyleChanges",
+      "cxpRgBankOfferBottomJacket",
+      "indiaBankOffersOnRoomGridWL",
+      "fixEcoDealModalImage",
+      "sanitizeInnerHTML",
+      "cxpRoomGridIntegrationForUsBank",
+      "rgAddDoubleAndCouponCrossout",
+      "cxpRgPromoBfDescription",
+      "roomGridMultiRoomBundleText",
+      "enableFlightsBffOnCxpRoomGrid",
+      "displayUpsellRoomBannerDesktopToggle",
+      "mspaAdaFixUpc",
+      "hideRoomComfortScoreWL",
+      "hideDesktopPpChildPolicyWL",
+      "rgShowMoreOffersWithCountAndPrice",
+      "enableTopSellingPointTypes",
+      "fixMissingLogForAps",
+      "rgHideRoomGridInstallmentPriceOption",
+      "rgCxpOfferCardHeight",
+      "cxpRgTieredPreviewV2",
+      "burnPayableAmountForExclusive",
+      "showPayableAmountForExclusive",
+      "cxpRgBurnCrossoutPoints",
+      "rgHighlightFeaturedAmenities",
+      "rgCxpIncreaseRoomImageHeight",
+      "showRareFindLowestInDays",
+      "japan89RgRetainSelectedFilters",
+      "showRgAmenitiesBlackColor",
+      "pmcCouponWalletMigrateToCxp",
+      "cxpRgMoveRoomNameBelowImage",
+      "fixUpsellBannerLazyImageToggle",
+      "enableHotelPlusActivityOnCxpRg",
+      "enableFooterOnRatePlanAdaptiveDialogCxpRg",
+      "enableCxpOccupancyGuidance",
+      "enableCxpPapiRequestParityAllPlatform",
+      "roomGridFitThenPriceSort",
+      "hideSupplierIdFromRoomGrid",
+      "resetUiOnEntryToggle",
+      "hashScrollToMasterRoomToggle",
+      "enableSaveToTripPageIdToggle",
+      "enabledSaveToTripMobileWebToggle",
+      "enableChatbotHostWindowToggle",
+      "portaledUiAnalytics",
+      "pfoObservability",
+      "enablePropertySharePreviewToggle",
+      "collapseSoldOutRoomsToggle",
+      "cxpRgDeprecateInaccessibleColor",
+      "adsCxpRgIconsMigrationToV3",
+      "adsCxpRgIconAssetsMigrationToV3",
+      "cxpRgMigrateColorPairAccessibleTokenUsage",
+      "cxpRgMigrateInputV2ToV3UI",
+      "cxpRgNotificationTitleTagFix",
+      "cxpRgCarouselMigrationToV3",
+      "cxpRgIsMigratingNotificationToAccessibleColor",
+      "cxpRgSearchFieldAccessibleTextColorFix",
+      "cxpRgAccordionTriggerContrastFix",
+      "cxpRgIsInteractiveStateImproved",
+      "cxpRgTabItemA11yFix",
+      "cxpRgPaginationSemanticFix",
+      "cxpRgBreadcrumbSemanticFix",
+      "isIconV4AssetEnabled",
+      "headerButtonConsistentIconSize",
+      "modalActionButtonIconFix",
+      "useIntentColorForNotificationTextLink"
+    ],
+    "analyticsContext": {
+      "action_element_name": "room-grid-property-context",
+      "element_version": 14,
+      "property_id": 1785304,
+      "giftcard_balance_amount": -1.0,
+      "length_of_stay": 1,
+      "review_cleanliness_score": 0.0,
+      "is_hygiene_plus": false,
+      "price_search_id": "78b2016d-9947-4440-9bc7-9b36ebd7d119",
+      "checkin_date": null,
+      "checkout_date": null,
+      "no_of_rooms": 1,
+      "property_city_id": "4923",
+      "property_city_code_id": 4923,
+      "property_country_code_id": 35,
+      "property_rating": 5.0,
+      "recommendation_type": null,
+      "has_room_tour_360": false,
+      "is_downlift_activated": false,
+      "charge_currency": "inr",
+      "hh_booking_duration_type": 0,
+      "promo_selection_panel_type": null,
+      "search_occ_no_of_adults": 2,
+      "search_occ_no_of_children": 0,
+      "search_occ_no_of_rooms": 1,
+      "funnel_type": "hotel",
+      "element_data": "asgard-bff"
+    },
+    "roomLevelUiRefresh": true,
+    "collapseSoldOutRooms": true,
+    "cheapestPrice": {
+      "price": {
+        "final": {
+          "amount": "0",
+          "currency": "\u20b9",
+          "currencyPosition": "START",
+          "text": "\u20b9\u00a00"
+        }
+      },
+      "analyticsContext": {
+        "action_element_name": "property-cheapest-price-context",
+        "element_version": 1,
+        "trace_id": "",
+        "traffic_group_title": "",
+        "display_rate": 0.0,
+        "room_rate_channel_id": 0,
+        "room_identifier": "",
+        "supplier_id": 0,
+        "cashback_display_rate": 0.0,
+        "payment_model": 0,
+        "rate_category_id": 0,
+        "hotel_price_per_book": -1.0,
+        "price_search_id": "78b2016d-9947-4440-9bc7-9b36ebd7d119",
+        "cheapest_room_price": "",
+        "room_cancellation_policy_code": "",
+        "element_data": "asgard-bff"
+      }
+    },
+    "shouldShowEcoDeal": false,
+    "growthProgramBadgeType": "NONE",
+    "isDayUseMergedWithOvernight": false,
+    "isShowBothDayUseOvernightPriceOn": false,
+    "showDisableParkingBanner": false,
+    "dropOff": {
+      "papiFeatureFlags": []
+    },
+    "linkPreviewMetadata": {
+      "title": "Radisson Blu Atria Bengaluru",
+      "description": "8.5 Excellent \u00b7 Bangalore",
+      "imageUrl": "https://pix8.agoda.net/hotelImages/1785304/0/63757aaa5807b18c739139ee98b79fcf.jpeg?ce=2&s=800x600"
+    },
+    "propertyCountryName": "India"
+  }
+}

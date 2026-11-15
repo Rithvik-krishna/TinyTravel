@@ -1,0 +1,45 @@
+{
+  "url": "https://www.agoda.com/api/cronos/layout/GetCalendarExtrasAsync/?occupancy=2&currency=INR&suggestedPrice=2&checkIn=2026-11-24T14%3A30%3A29.7765488%2B07%3A00",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "x-content-type-options": "nosniff",
+    "access-control-allow-methods": "GET,POST",
+    "x-ua-compatible": "IE=edge",
+    "date": "Sun, 15 Nov 2026 07:30:33 GMT",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-cp2x2",
+    "ag-correlation-id": "63080a59-8e48-4fe6-92b6-727089245431",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "User-Agent, Accept-Encoding",
+    "access-control-allow-headers": "Content-Type",
+    "strict-transport-security": "max-age=31536000",
+    "x-envoy-datacenter": "sg, sg, sg",
+    "x-envoy-upstream-service-time": "14",
+    "access-control-allow-credentials": "true",
+    "request-context": "appId=",
+    "content-length": "193",
+    "akamai-grn": "0.2d460317.1794727833.8edc17d"
+  },
+  "data": {
+    "holidaySearchResults": [
+      {
+        "name": "Republic Day",
+        "date": "20270126",
+        "displayDate": "26 Jan"
+      },
+      {
+        "name": "Independence Day",
+        "date": "20270815",
+        "displayDate": "15 Aug"
+      },
+      {
+        "name": "Mahatma Gandhi\"s Birthday",
+        "date": "20271002",
+        "displayDate": "2 Oct"
+      }
+    ],
+    "cheaperPriceInformation": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "url": "https://www.agoda.com/api/card/campaigns",
+  "status": 200,
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "957e2a75-1a3c-4e52-841a-2c2ba654eb7a",
+      "sections": [
+        {
+          "sectionName": "vip_benefits",
+          "cards": [],
+          "categories": [
+            {
+              "categoryId": 503,
+              "categoryName": "Uncategorized",
+              "categoryDescription": "Uncategorized",
+              "priority": 509,
+              "parentPriorityId": null
+            }
+          ]
+        }
+      ]
+    },
+    "error": null
+  }
+}

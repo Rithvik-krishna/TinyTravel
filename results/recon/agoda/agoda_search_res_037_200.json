@@ -1,0 +1,460 @@
+{
+  "url": "https://www.agoda.com/api/cronos/search/npc/area/info",
+  "status": 200,
+  "data": {
+    "results": [
+      {
+        "id": 25894,
+        "name": "Bangalore City Center",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 8.222,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 0.0,
+            "text": "Inside city center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 1443155,
+            "name": "ISKCON Temple Bangalore"
+          },
+          {
+            "id": 32891,
+            "name": "UB City"
+          },
+          {
+            "id": 32836,
+            "name": "Cubbon Park"
+          }
+        ],
+        "atmosphere": {
+          "text": "Bangalore City Center is a great choice for travelers interested in shopping, business center and restaurants - View on map"
+        },
+        "popularity": {
+          "title": "29%",
+          "text": "Chosen by 29 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 4,547.50",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/1443155/2_1443155.jpg?ca=6&ce=1&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": {
+            "highlightTypeId": 0,
+            "highlightTypeName": "Most popular"
+          },
+          "neighborhoodVibes": [
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Top attractions"
+            },
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "City center"
+            },
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Shopping"
+            },
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Nightlife"
+            }
+          ]
+        }
+      },
+      {
+        "id": 57640,
+        "name": "Whitefield",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.712,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 13.27,
+            "text": "13.27 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 1572797,
+            "name": "Kapoor's Cafe"
+          },
+          {
+            "id": 3171680,
+            "name": "Anand Sweets & Savouries (Restaurant)"
+          }
+        ],
+        "atmosphere": {
+          "text": "Whitefield is a great choice for travelers interested in business center - View on map"
+        },
+        "popularity": {
+          "title": "17%",
+          "text": "Chosen by 17 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 2,126.25",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/1788120/497d411c4cc3e51c053b4613144cbafe.jpg?ce=0&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": {
+            "highlightTypeId": 4,
+            "highlightTypeName": "Best location rating"
+          },
+          "neighborhoodVibes": []
+        }
+      },
+      {
+        "id": 57744,
+        "name": "Indiranagar",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 8.2,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 4.48,
+            "text": "4.48 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 1507803,
+            "name": "Karnataka High Court"
+          },
+          {
+            "id": 2868650,
+            "name": "Toit Brewpub"
+          },
+          {
+            "id": 2868578,
+            "name": "Truffles - Indiranagar"
+          }
+        ],
+        "atmosphere": {
+          "text": "Indiranagar is a great choice for travelers interested in sports, shopping and nightlife - View on map"
+        },
+        "popularity": {
+          "title": "6%",
+          "text": "Chosen by 6 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 2,338.31",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/1507803/e4a4f175a06c4ca98c51517d8888a2e2.jpg?ce=0&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": {
+            "highlightTypeId": 4,
+            "highlightTypeName": "Best location rating"
+          },
+          "neighborhoodVibes": [
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Nightlife"
+            }
+          ]
+        }
+      },
+      {
+        "id": 484396,
+        "name": "Rajajinagar",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.841,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 6.36,
+            "text": "6.36 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 1507179,
+            "name": "Orion Mall"
+          },
+          {
+            "id": 1505799,
+            "name": "Malleswaram"
+          },
+          {
+            "id": 1507265,
+            "name": "JP Park"
+          }
+        ],
+        "atmosphere": null,
+        "popularity": {
+          "title": "4%",
+          "text": "Chosen by 4 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 4,700.19",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/1507179/0bea73f4ab6f6ba9bcf7598f1cc955f4.jpg?ce=0&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": null,
+          "neighborhoodVibes": [
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Top attractions"
+            }
+          ]
+        }
+      },
+      {
+        "id": 57747,
+        "name": "Marathahalli",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.992,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 6.48,
+            "text": "6.48 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 1503346,
+            "name": "Shivoham Shiva Temple"
+          },
+          {
+            "id": 1503789,
+            "name": "The Heritage Centre & Aerospace Museum"
+          },
+          {
+            "id": 1505984,
+            "name": "Sree Surya Narayana Swamy Temple"
+          }
+        ],
+        "atmosphere": null,
+        "popularity": {
+          "title": "11%",
+          "text": "Chosen by 11 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 2,615.40",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/1503346/6bba208e7d73cc3085f7606eaa75c0b9.jpg?ce=0&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": null
+      },
+      {
+        "id": 94930,
+        "name": "Gottigere",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.41,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 12.0,
+            "text": "12.0 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 32888,
+            "name": "Bannerghatta National Park"
+          },
+          {
+            "id": 1456431,
+            "name": "St. Mark's Cathedral"
+          }
+        ],
+        "atmosphere": null,
+        "popularity": {
+          "title": "5%",
+          "text": "Chosen by 5 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 2,142.28",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/32888/2_32888.jpg?ca=6&ce=1&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": {
+            "highlightTypeId": 4,
+            "highlightTypeName": "Best location rating"
+          },
+          "neighborhoodVibes": [
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Nature"
+            }
+          ]
+        }
+      },
+      {
+        "id": 57737,
+        "name": "Kormangala",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.652,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 4.64,
+            "text": "4.64 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 32842,
+            "name": "Lalbagh Botanical Garden"
+          },
+          {
+            "id": 32892,
+            "name": "The Forum Koramangala Mall"
+          },
+          {
+            "id": 144120,
+            "name": "Infant Jesus Shrine"
+          }
+        ],
+        "atmosphere": null,
+        "popularity": {
+          "title": "14%",
+          "text": "Chosen by 14 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 1,966.03",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/poi/32842/2_32842_02.jpg?ca=6&ce=1&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": null,
+          "neighborhoodVibes": [
+            {
+              "highlightTypeId": null,
+              "highlightTypeName": "Nightlife"
+            }
+          ]
+        }
+      },
+      {
+        "id": 597353,
+        "name": "HRBR Layout",
+        "overview": null,
+        "locationInfo": {
+          "averageLocationScore": 7.227,
+          "maxScore": 10,
+          "distanceToCityCenter": {
+            "landmarkId": null,
+            "distanceKm": 6.38,
+            "text": "6.38 km to center"
+          },
+          "majorAirport": null,
+          "cityAirport": null,
+          "nearestTransportation": null
+        },
+        "topPois": [
+          {
+            "id": 2870438,
+            "name": "Chulha Chauki da Dhaba | Kalyan Nagar Restaurant"
+          },
+          {
+            "id": 2870400,
+            "name": "DESI MASALA"
+          },
+          {
+            "id": 2870436,
+            "name": "Zamindar Restaurant"
+          }
+        ],
+        "atmosphere": null,
+        "popularity": {
+          "title": "4%",
+          "text": "Chosen by 4 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 1,559.82",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/city/4923/1_4923_02.jpg?ca=8&ce=1&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": null
+      },
+      {
+        "id": 598152,
+        "name": "Kempanahalli",
+        "overview": null,
+        "locationInfo": null,
+        "topPois": [],
+        "atmosphere": null,
+        "popularity": {
+          "title": "10%",
+          "text": "Chosen by 10 of guests",
+          "symbol": "human-large"
+        },
+        "price": {
+          "text": "Average stay INR 4,142.23",
+          "symbol": "menu-price-display"
+        },
+        "images": {
+          "t": "//pix6.agoda.net/geo/city/4923/1_4923_02.jpg?ca=8&ce=1&s=240x160&ar=2:1"
+        },
+        "neighborhoodHighlights": {
+          "touristFavourite": {
+            "highlightTypeId": 2,
+            "highlightTypeName": "Couple favorite"
+          },
+          "neighborhoodVibes": []
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://www.agoda.com/api/mpr/v1/getDropOffs?pageTypeId=1",
+  "status": 200,
+  "data": {
+    "carouselTitleText": "Continue planning your trip"
+  }
+}

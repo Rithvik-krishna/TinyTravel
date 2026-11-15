@@ -18,6 +18,7 @@ def build_evidence(
     mock: bool = False,
     existing_evidence: Optional[list[dict]] = None,
     offer_id: Optional[str] = None,
+    screenshot_url: Optional[str] = None,
 ) -> list[dict]:
 
     """Construct evidence items adhering to TinyTravel invariants.
@@ -83,6 +84,18 @@ def build_evidence(
             "step": "payment",
             "captured_at": finished_at or timestamp,
             "extracted_value": price_final_payable,
+            "currency": currency,
+            "mock": mock,
+        })
+
+    # Verifiable screenshot
+    if screenshot_url:
+        evidence_items.append({
+            "type": "screenshot",
+            "url": screenshot_url,
+            "step": "payment" if price_final_payable is not None else "listing",
+            "captured_at": finished_at or timestamp,
+            "extracted_value": price_final_payable or price_shown_on_listing,
             "currency": currency,
             "mock": mock,
         })

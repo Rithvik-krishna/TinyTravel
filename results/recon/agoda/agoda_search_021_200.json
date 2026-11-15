@@ -1,0 +1,840 @@
+{
+  "url": "https://www.agoda.com/graphql/search",
+  "status": 200,
+  "data": {
+    "data": {
+      "citySearch": {
+        "properties": [
+          {
+            "propertyId": 81056757,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-oakwood/hotel/new-delhi-and-ncr-in.html"
+                },
+                "localeName": "Hotel Oakwood",
+                "defaultName": "Hotel Oakwood",
+                "displayName": "Hotel Oakwood",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.646787643432617,
+                  "longitude": 77.21253967285156
+                },
+                "rating": 3.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 207083315,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/81056757/1271868100/302fed4275ace52c892cca8711802672.jpg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 141,
+                  "score": 7.7
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked 7 times today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 197.86,
+                                  "originalPrice": 197.86
+                                },
+                                "inclusive": {
+                                  "display": 1212.86,
+                                  "originalPrice": 1212.86
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 197.86,
+                                  "originalPrice": 197.86
+                                },
+                                "inclusive": {
+                                  "display": 1212.86,
+                                  "originalPrice": 1212.86
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 70949443,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/super-collection-o-shahdara-yamuna-sport-complex/hotel/shahdara-in.html"
+                },
+                "localeName": "Townhouse Oak GGS Indraprastha University",
+                "defaultName": "Townhouse Oak GGS Indraprastha University",
+                "displayName": "Townhouse Oak GGS Indraprastha University",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.665599822998047,
+                  "longitude": 77.29981231689453
+                },
+                "rating": 4.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 166419811,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/70949443/0/b7137b6c2aac8a13733c10d4005fbb9e.jpeg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 67,
+                  "score": 7.2
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked twice today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 1578.09,
+                                  "originalPrice": 1578.09
+                                },
+                                "inclusive": {
+                                  "display": 1657.0,
+                                  "originalPrice": 1657.0
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 1578.09,
+                                  "originalPrice": 1578.09
+                                },
+                                "inclusive": {
+                                  "display": 1657.0,
+                                  "originalPrice": 1657.0
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 80580410,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-royal-plaza/hotel/new-delhi-and-ncr-in.html"
+                },
+                "localeName": "Hotel Royal Plaza",
+                "defaultName": "Hotel Royal Plaza",
+                "displayName": "Hotel Royal Plaza",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.5432746549243,
+                  "longitude": 77.12867932353674
+                },
+                "rating": 3.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 210484715,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/80580410/0/7a1f643079c5253aa4ffc56dbfaba0bb.jpg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 120,
+                  "score": 7.0
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked once today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 129.43,
+                                  "originalPrice": 129.43
+                                },
+                                "inclusive": {
+                                  "display": 1040.86,
+                                  "originalPrice": 1040.86
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 129.43,
+                                  "originalPrice": 129.43
+                                },
+                                "inclusive": {
+                                  "display": 1040.86,
+                                  "originalPrice": 1040.86
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 94279146,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-west-suites/hotel/new-delhi-in.html"
+                },
+                "localeName": "Hotel West End Delhi Airport",
+                "defaultName": "Hotel West End Delhi Airport",
+                "displayName": "Hotel West End Delhi Airport",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.549326,
+                  "longitude": 77.129875
+                },
+                "rating": 4.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 215568020,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/94279146/0/148d01615c31efcb4411808d3051cc38.jpg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 63,
+                  "score": 8.1
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked once today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 2139.78,
+                                  "originalPrice": 2139.78
+                                },
+                                "inclusive": {
+                                  "display": 3213.78,
+                                  "originalPrice": 3213.78
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 2139.78,
+                                  "originalPrice": 2139.78
+                                },
+                                "inclusive": {
+                                  "display": 3213.78,
+                                  "originalPrice": 3213.78
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 92784257,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-stay-inn-plaza/hotel/new-delhi-in.html"
+                },
+                "localeName": "Hotel Stay Inn Plaza ",
+                "defaultName": "Hotel Stay Inn Plaza ",
+                "displayName": "Hotel Stay Inn Plaza ",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.556143,
+                  "longitude": 77.09996
+                },
+                "rating": 4.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 208045384,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/92784257/0/c321323683284c9ecd1962e820f60247.jpg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 36,
+                  "score": 7.8
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": ""
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 1511.81,
+                                  "originalPrice": 1511.81
+                                },
+                                "inclusive": {
+                                  "display": 1587.4,
+                                  "originalPrice": 1587.4
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 1511.81,
+                                  "originalPrice": 1511.81
+                                },
+                                "inclusive": {
+                                  "display": 1587.4,
+                                  "originalPrice": 1587.4
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 84440293,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/transit-pod-stay-new-delhi-airport-transit/hotel/new-delhi-and-ncr-in.html"
+                },
+                "localeName": "Transit POD Stay \u2013 New Delhi | Airport Transit",
+                "defaultName": "Transit POD Stay \u2013 New Delhi | Airport Transit",
+                "displayName": "Transit POD Stay \u2013 New Delhi | Airport Transit",
+                "accommodationType": 33,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.64121437072754,
+                  "longitude": 77.22367858886719
+                },
+                "rating": 3.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 194154153,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/84440293/0/148cb68f09099ec9ec36bb492e3d5d1f.jpeg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 348,
+                  "score": 8.6
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked 3 times today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 556.12,
+                                  "originalPrice": 556.12
+                                },
+                                "inclusive": {
+                                  "display": 594.62,
+                                  "originalPrice": 594.62
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 556.12,
+                                  "originalPrice": 556.12
+                                },
+                                "inclusive": {
+                                  "display": 594.62,
+                                  "originalPrice": 594.62
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 86748432,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-maryland-inn/hotel/new-delhi-in.html"
+                },
+                "localeName": "Hotel Maryland Inn - Indira Gandhi Int'l Airport Delhi",
+                "defaultName": "Hotel Maryland Inn - Indira Gandhi Int'l Airport Delhi",
+                "displayName": "Hotel Maryland Inn - Indira Gandhi Int'l Airport Delhi",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.54793930053711,
+                  "longitude": 77.12876892089844
+                },
+                "rating": 3.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 204710897,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/86748432/0/50d158bc6a1e0b74f3784af0bc4205be.jpeg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 424,
+                  "score": 8.9
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked 3 times today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 914.64,
+                                  "originalPrice": 914.64
+                                },
+                                "inclusive": {
+                                  "display": 1968.58,
+                                  "originalPrice": 1968.58
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 914.64,
+                                  "originalPrice": 914.64
+                                },
+                                "inclusive": {
+                                  "display": 1968.58,
+                                  "originalPrice": 1968.58
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 41968271,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/hotel-ginger-palace/hotel/noida-in.html"
+                },
+                "localeName": "Hotel East End",
+                "defaultName": "Hotel East End",
+                "displayName": "Hotel East End",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.549251556396484,
+                  "longitude": 77.13074493408203
+                },
+                "rating": 3.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 204942231,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/41968271/0/13ba99a0b1aaa38baee54d5071c3740a.jpeg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 695,
+                  "score": 8.0
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked once today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 2765.08,
+                                  "originalPrice": 2765.08
+                                },
+                                "inclusive": {
+                                  "display": 2994.56,
+                                  "originalPrice": 2994.56
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 2765.08,
+                                  "originalPrice": 2765.08
+                                },
+                                "inclusive": {
+                                  "display": 2994.56,
+                                  "originalPrice": 2994.56
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "propertyId": 64409597,
+            "propertyResultType": "NormalProperty",
+            "content": {
+              "informationSummary": {
+                "propertyLinks": {
+                  "propertyPage": "/the-metrostay-at-new-delhi-railway-station/hotel/new-delhi-and-ncr-in.html"
+                },
+                "localeName": "The  Metrostay Pod Hotel ",
+                "defaultName": "The  Metrostay Pod Hotel ",
+                "displayName": "The  Metrostay Pod Hotel ",
+                "accommodationType": 34,
+                "propertyType": "Hotel",
+                "address": {
+                  "city": {
+                    "id": 14552,
+                    "name": "New Delhi"
+                  }
+                },
+                "geoInfo": {
+                  "latitude": 28.64254379272461,
+                  "longitude": 77.22412109375
+                },
+                "rating": 5.0
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "id": 187569254,
+                    "urls": [
+                      {
+                        "key": "original",
+                        "value": "//pix8.agoda.net/hotelImages/64409597/0/313aa9ee2ed4c9e01d480f2d4f600a64.jpeg?va=1&ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "reviews": {
+                "cumulative": {
+                  "reviewCount": 887,
+                  "score": 8.5
+                }
+              },
+              "propertyEngagement": {
+                "todayBooking": "Booked 10 times today"
+              }
+            },
+            "pricing": {
+              "isAvailable": true,
+              "suggestPriceType": {
+                "suggestPrice": "Exclusive"
+              },
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "display": 503.83,
+                                  "originalPrice": 503.83
+                                },
+                                "inclusive": {
+                                  "display": 534.08,
+                                  "originalPrice": 534.08
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "display": 503.83,
+                                  "originalPrice": 503.83
+                                },
+                                "inclusive": {
+                                  "display": 534.08,
+                                  "originalPrice": 534.08
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

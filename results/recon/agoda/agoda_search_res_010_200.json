@@ -1,0 +1,317 @@
+{
+  "url": "https://www.agoda.com/api/cronos/seo/base",
+  "status": 200,
+  "data": {
+    "robotIndexDirective": "index",
+    "robotFollowDirective": "follow",
+    "metaText": {
+      "title": "Agoda Official Site | Free Cancellation & Booking Deals | Over 2 Million Hotels",
+      "description": "Free cancellation available! | Discounts on clean hotels, homes & flights | Best price guarantee! | Over 20 Million reviews | Safe & secure",
+      "keywords": "Agoda, hotel, hotels, discount, reservations, Asia, Europe, America, Bangkok, Singapore, Hong Kong, Phuket, Thailand, Malaysia, Bali, London, Paris, loyalty program, acommodation, accomodation, acomodation, accommodation, vacation rentals"
+    },
+    "appleStoreKey": "app-id=440676901",
+    "googlePlayKey": "com.agoda.mobile.consumer",
+    "appDeepLink": "android-app://com.agoda.mobile.consumer/agoda/home?site_id=1751131",
+    "priceRange": null,
+    "staticMetaElements": [
+      {
+        "name": "google-site-verification",
+        "content": "c_SYCgtjZ-BnVFdChVjErofS1XDPUCS5cGQk2L210uw",
+        "httpEquiv": null,
+        "property": null
+      }
+    ],
+    "canonicalLink": "https://www.agoda.com/en-in/",
+    "alternateLinks": [
+      {
+        "href": "https://www.agoda.com/",
+        "hrefLang": "en",
+        "title": "English"
+      },
+      {
+        "href": "https://www.agoda.com/fr-fr/",
+        "hrefLang": "fr",
+        "title": "Fran\u00e7ais"
+      },
+      {
+        "href": "https://www.agoda.com/de-de/",
+        "hrefLang": "de",
+        "title": "Deutsch"
+      },
+      {
+        "href": "https://www.agoda.com/it-it/",
+        "hrefLang": "it",
+        "title": "Italiano"
+      },
+      {
+        "href": "https://www.agoda.com/es-es/",
+        "hrefLang": "es",
+        "title": "Espa\u00f1ol"
+      },
+      {
+        "href": "https://www.agoda.com/ja-jp/",
+        "hrefLang": "ja",
+        "title": "\u65e5\u672c\u8a9e"
+      },
+      {
+        "href": "https://www.agoda.com/zh-hk/",
+        "hrefLang": "zh-hk",
+        "title": "\u7e41\u9ad4\u4e2d\u6587 (\u9999\u6e2f)"
+      },
+      {
+        "href": "https://www.agoda.com/zh-cn/",
+        "hrefLang": "zh-cn",
+        "title": "\u7b80\u4f53\u4e2d\u6587"
+      },
+      {
+        "href": "https://www.agoda.com/ko-kr/",
+        "hrefLang": "ko",
+        "title": "\ud55c\uad6d\uc5b4"
+      },
+      {
+        "href": "https://www.agoda.com/el-gr/",
+        "hrefLang": "el",
+        "title": "\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac"
+      },
+      {
+        "href": "https://www.agoda.com/ru-ru/",
+        "hrefLang": "ru",
+        "title": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439"
+      },
+      {
+        "href": "https://www.agoda.com/pt-pt/",
+        "hrefLang": "pt-pt",
+        "title": "Portugu\u00eas (PT)"
+      },
+      {
+        "href": "https://www.agoda.com/nl-nl/",
+        "hrefLang": "nl",
+        "title": "Nederlands"
+      },
+      {
+        "href": "https://www.agoda.com/en-ca/",
+        "hrefLang": "en-ca",
+        "title": "English / Canada"
+      },
+      {
+        "href": "https://www.agoda.com/en-in/",
+        "hrefLang": "en-in",
+        "title": "English / India"
+      },
+      {
+        "href": "https://www.agoda.com/en-gb/",
+        "hrefLang": "en-gb",
+        "title": "English / United Kingdom"
+      },
+      {
+        "href": "https://www.agoda.com/en-za/",
+        "hrefLang": "en-za",
+        "title": "English / South-Africa"
+      },
+      {
+        "href": "https://www.agoda.com/en-au/",
+        "hrefLang": "en-au",
+        "title": "English / Australia"
+      },
+      {
+        "href": "https://www.agoda.com/en-sg/",
+        "hrefLang": "en-sg",
+        "title": "English / Singapore"
+      },
+      {
+        "href": "https://www.agoda.com/zh-tw/",
+        "hrefLang": "zh-tw",
+        "title": "\u7e41\u9ad4\u4e2d\u6587 (\u53f0\u7063)"
+      },
+      {
+        "href": "https://www.agoda.com/en-nz/",
+        "hrefLang": "en-nz",
+        "title": "English / New Zealand"
+      },
+      {
+        "href": "https://www.agoda.com/th-th/",
+        "hrefLang": "th",
+        "title": "\u0e20\u0e32\u0e29\u0e32\u0e44\u0e17\u0e22"
+      },
+      {
+        "href": "https://www.agoda.com/ms-my/",
+        "hrefLang": "ms",
+        "title": "Bahasa Malaysia"
+      },
+      {
+        "href": "https://www.agoda.com/vi-vn/",
+        "hrefLang": "vi",
+        "title": "Ti\u1ebfng Vi\u1ec7t"
+      },
+      {
+        "href": "https://www.agoda.com/sv-se/",
+        "hrefLang": "sv",
+        "title": "Svenska"
+      },
+      {
+        "href": "https://www.agoda.com/id-id/",
+        "hrefLang": "id",
+        "title": "Bahasa Indonesia"
+      },
+      {
+        "href": "https://www.agoda.com/pl-pl/",
+        "hrefLang": "pl",
+        "title": "J\u0119zyk polski"
+      },
+      {
+        "href": "https://www.agoda.com/nb-no/",
+        "hrefLang": "no",
+        "title": "Norsk"
+      },
+      {
+        "href": "https://www.agoda.com/da-dk/",
+        "hrefLang": "da",
+        "title": "Dansk"
+      },
+      {
+        "href": "https://www.agoda.com/fi-fi/",
+        "hrefLang": "fi",
+        "title": "Suomi"
+      },
+      {
+        "href": "https://www.agoda.com/cs-cz/",
+        "hrefLang": "cs",
+        "title": "\u010ce\u0161tina"
+      },
+      {
+        "href": "https://www.agoda.com/tr-tr/",
+        "hrefLang": "tr",
+        "title": "T\u00fcrk\u00e7e"
+      },
+      {
+        "href": "https://www.agoda.com/ca-es/",
+        "hrefLang": "ca",
+        "title": "Catal\u00e0"
+      },
+      {
+        "href": "https://www.agoda.com/hu-hu/",
+        "hrefLang": "hu",
+        "title": "Magyar"
+      },
+      {
+        "href": "https://www.agoda.com/bg-bg/",
+        "hrefLang": "bg",
+        "title": "\u0411\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 \u0435\u0437\u0438\u043a"
+      },
+      {
+        "href": "https://www.agoda.com/ro-ro/",
+        "hrefLang": "ro",
+        "title": "Rom\u00e2n\u0103"
+      },
+      {
+        "href": "https://www.agoda.com/sl-si/",
+        "hrefLang": "sl",
+        "title": "Slovenski jezik"
+      },
+      {
+        "href": "https://www.agoda.com/he-il/",
+        "hrefLang": "he",
+        "title": "\u05e2\u05d1\u05e8\u05d9\u05ea"
+      },
+      {
+        "href": "https://www.agoda.com/ar-ae/",
+        "hrefLang": "ar",
+        "title": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629"
+      },
+      {
+        "href": "https://www.agoda.com/nl-be/",
+        "hrefLang": "nl-be",
+        "title": "Nederlands / Belgi\u00eb"
+      },
+      {
+        "href": "https://www.agoda.com/en-ie/",
+        "hrefLang": "en-ie",
+        "title": "English / Ireland"
+      },
+      {
+        "href": "https://www.agoda.com/pt-br/",
+        "hrefLang": "pt-br",
+        "title": "Portugu\u00eas (BR)"
+      },
+      {
+        "href": "https://www.agoda.com/es-ar/",
+        "hrefLang": "es-ar",
+        "title": "Espa\u00f1ol / Argentina"
+      },
+      {
+        "href": "https://www.agoda.com/es-mx/",
+        "hrefLang": "es-mx",
+        "title": "Espa\u00f1ol / M\u00e9xico"
+      },
+      {
+        "href": "https://www.agoda.com/lt-lt/",
+        "hrefLang": "lt",
+        "title": "Lietuvi\u0173"
+      },
+      {
+        "href": "https://www.agoda.com/lv-lv/",
+        "hrefLang": "lv",
+        "title": "Latvie\u0161u"
+      },
+      {
+        "href": "https://www.agoda.com/hr-hr/",
+        "hrefLang": "hr",
+        "title": "Hrvatski"
+      },
+      {
+        "href": "https://www.agoda.com/et-ee/",
+        "hrefLang": "et",
+        "title": "Eesti"
+      },
+      {
+        "href": "https://www.agoda.com/uk-ua/",
+        "hrefLang": "uk",
+        "title": "\u0423\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430"
+      },
+      {
+        "href": "https://www.agoda.com/tl-ph/",
+        "hrefLang": "tl",
+        "title": "Filipino"
+      }
+    ],
+    "openGraphs": {
+      "title": "Agoda Official Site | Free Cancellation & Booking Deals | Over 2 Million Hotels",
+      "url": "https://www.agoda.com/en-in/",
+      "image": "https://cdn6.agoda.net/images/mvc/default/agoda-logo-flat-2019.png",
+      "siteName": "Agoda.com",
+      "appId": "161134343906646",
+      "description": "Free cancellation available! | Discounts on clean hotels, homes & flights | Best price guarantee! | Over 20 Million reviews | Safe & secure",
+      "latitude": null,
+      "longitude": null,
+      "locality": null,
+      "region": null,
+      "country": null,
+      "type": "place",
+      "address": null,
+      "postalCode": null,
+      "locale": "en-in",
+      "hotelName": null,
+      "imageWidth": null,
+      "imageHeight": null
+    },
+    "twitterCards": {
+      "card": "summary",
+      "site": "@agoda",
+      "creator": "@agoda",
+      "title": "Agoda Official Site | Free Cancellation & Booking Deals | Over 2 Million Hotels",
+      "description": "Free cancellation available! | Discounts on clean hotels, homes & flights | Best price guarantee! | Over 20 Million reviews | Safe & secure",
+      "url": "https://www.agoda.com/en-in/",
+      "image": "https://cdn6.agoda.net/images/mvc/default/agoda-logo-flat-2019.png"
+    },
+    "secureEnglishHomeUrl": "https://www.agoda.com/",
+    "metaLanguage": "",
+    "openSearchLink": "https://www.agoda.com/opensearch.xml",
+    "headingText": {
+      "h1": null,
+      "h2": null,
+      "h2DateLessSearch": null
+    },
+    "shouldRenderAsMultipleEntity": false,
+    "robots": "index, follow"
+  }
+}

@@ -1,0 +1,1191 @@
+{
+  "url": "https://www.agoda.com/graphql/search",
+  "status": 200,
+  "data": {
+    "data": {
+      "citySearch": {
+        "highlyRatedAgodaHomes": [
+          {
+            "propertyId": 89418716,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 5798.34,
+                                  "display": 2371.18
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 6958.01,
+                                  "display": 2513.18
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 5798.34,
+                                  "display": 2371.18
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 6958.01,
+                                  "display": 2513.18
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 20,
+                      "score": 9.8
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 41,
+                      "score": 9.8
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 61,
+                  "score": 9.7
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/89418716/0/2fe51ee47b2c8e8abb1a1beda59f0cb7.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913555078.jpg?k=18efd2202435cb29c4cc1a448cdac7e7038686dd43bad664c0bddabe8a1b3010&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/882545099.jpg?k=2b7cb083a0c831f170d3c952f566b7fb1626525996748b49e3c8aa6138f58fb9&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/882545097.jpg?k=bcdbdd4c087776ca1f2015cf3607486d44ec2b865d76a303d81015efc0ed5d52&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913554040.jpg?k=69bb30b5a57870f76d96dadc8a2f96e7631fbdd0644c7b08776615a47efb433c&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913557038.jpg?k=a247c25e1b9715470707568a45942d99ab509a6757b013b3fd359e2064d0941e&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/883151005.jpg?k=aae17cdc0cf78e4d0711a241d22ba92b7a8fb218b2c7ccaeed48b09c21735892&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913561381.jpg?k=b10b740e8618dcf4fd4f2bd2d8c5192bd233a7c8c200a74695d724550f3eacea&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913554586.jpg?k=1378e0cc4b5cf73795d07bd06d5cd6b76512ea001c4525917c034a3579dcc9d2&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/913557059.jpg?k=012622ae5fd2b9f7c9c52393fcee360deba75650d125179503325eeee44eac9d&o="
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "Mansions by HomeSlice",
+                "rating": 3.5,
+                "propertyLinks": {
+                  "propertyPage": "/mansions-by-homeslice/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Marathahalli"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 83294755,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 2044.88,
+                                  "display": 1278.51
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 2453.86,
+                                  "display": 1355.19
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 2044.88,
+                                  "display": 1278.51
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 2453.86,
+                                  "display": 1355.19
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 160,
+                      "score": 9.2
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 171,
+                      "score": 9.1
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 331,
+                  "score": 9.1
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/83294755/0/7744d566eca4e168dbe538ae869edd22.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/834419125.jpg?k=5190339765900219512c4b108febc200dd3902e7a4dcf1b2921aa74c1ea4288b&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/860416712.jpg?k=ee85e66793784f238aa8c347ebef02586a108f73e581bd388a161aa7399bf349&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/860420304.jpg?k=6aab36c717aa78eff2533f5b8a57a8cd57adc0118f485ef896274352aebbb1e4&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/860416708.jpg?k=d373d94630a23b1dda71f04dbeb1bad28e6fb79677f11805cd0b82d3ee1b6f56&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/860420297.jpg?k=a92fdb51ff6b8b39f139bd8f6b30b00a4eaa5b88132f4d053fd0a95954256290&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/860416718.jpg?k=fbe8b5c08652a668892b193bd47fef91df74a9a61a1adbac0bda75664e8b476d&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/834415927.jpg?k=2757f384a92c737ebc7465e8e711ce91d54b21a3c4560534fcbde62de72447c3&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/834415908.jpg?k=efd3b3e5a1f8da3e4666728f06b8078fd8369ea71dbab20a4674c8973922dbe3&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/834415664.jpg?k=d11a93afa2e769fd4ae9184f611a42e286d816749eceeb50c76da2d7c5f9e5c7&o="
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "HomeSlice Sarjapur",
+                "rating": 4.0,
+                "propertyLinks": {
+                  "propertyPage": "/homeslice-sarjapur-h83288747/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Electronic City"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 62152989,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 14532.0,
+                                  "display": 7238.54
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 17147.76,
+                                  "display": 9854.3
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 14532.0,
+                                  "display": 7238.54
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 17147.76,
+                                  "display": 9854.3
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 26,
+                      "score": 9.2
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 27,
+                      "score": 9.1
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 53,
+                  "score": 9.1
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/637998972.jpg?k=3096271630d5a22e2a211de76d025b31324157812c38220295e0d98a9fc1979f&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/62152989/1047147556/6cbf63eba06faefaba3cb756336b3a95.jpg?ce=0"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/637999019.jpg?k=830842bc5fe3d72ea2718d746bfd43bd39b36485429754a723428c76343fcaf5&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/638256557.jpg?k=7edad68797eb7ef09627cbf9fa724797b995559e047b9f17b32e769a80eac673&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/638256566.jpg?k=abe2396b715b780c64dc16b1d1a70bfa27f49564a5108d74e1ff1958b5ca9eb3&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/750953320.jpg?k=27e359d6ff000e2b1bfa5063a4afed4438ff49771ec9a3e0ce9f18bbd4a827fd&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/635136645.jpg?k=b83997eda6fb87ca59928ef7ec1761d8dce815b2d2214545a8438ac057b1c415&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/638256571.jpg?k=1ad69f9baa97fc0dcf5288c8e0a6cd827d22b5ea5fcdd40cfb74ed7b7fb63841&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/635136658.jpg?k=56df4241abc6733d40e12ea09dffac7e789f679721ba8dd84e80f2abebeba210&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/636301423.jpg?k=96ad23db4d067578d67ac1d010480d976a4af14eeebe430f169f4265649c7ca4&o="
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "Hodo stays - Heiwa",
+                "rating": 4.5,
+                "propertyLinks": {
+                  "propertyPage": "/hodo-stays-heiwa/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "HSR Layout"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 77260699,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 6225.17,
+                                  "display": 1556.29
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 6645.53,
+                                  "display": 1661.38
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 6225.17,
+                                  "display": 1556.29
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 6645.53,
+                                  "display": 1661.38
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 20,
+                      "score": 9.2
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 51,
+                      "score": 7.6
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 29100,
+                    "cumulative": {
+                      "reviewCount": 2,
+                      "score": 6.0
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 73,
+                  "score": 7.9
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/77260699/0/172801e5b0fd74f7ab5a8415e967b491.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/77260699/1265267987/49ff7f4e1ef26cb3325673108bce29e2.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/767299606.jpg?k=1cc79ed2018e3d23fcf13f0caddd5284e285b7a80de2128bc4e13b3663e84108&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/756224355.jpg?k=8963457358de1d9c32329c9f55a622de2600acb69e21ffe4a67dac47a96a4f5c&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/756224349.jpg?k=ea473b62386057ddebea17c6494f5a007e9b9e789a499124a1948018a1c6178b&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/759399937.jpg?k=dcab193153adaac1a075af64447a2fd0d2ee75b193a1f75181cc030c34cc3b34&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/759401165.jpg?k=a40adba68599f171e732ff14bc9c400ba7479ee6391b86a9eb6690480bab3f3a&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/759435942.jpg?k=95b0843550ef8e065155a8aa1c1c5e42fb228c02383e6c66db2e3b8c7b60a4e3&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/767629909.jpg?k=0527bcee491c762043386c2924164abf99bdd6407ef61f99e1a3c729c3ff1047&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/77260699/1265267987/cf12a7254f8f9037d1251edecd54df06.jpeg?ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "HomeSlice Manor, Premium Apartment in Whitefield",
+                "rating": 4.5,
+                "propertyLinks": {
+                  "propertyPage": "/homeslice-manor-premium-apartment-in-whitefield-h76379611/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Whitefield"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 87921997,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 4545.89,
+                                  "display": 1136.47
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 4819.94,
+                                  "display": 1204.98
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 4545.89,
+                                  "display": 1136.47
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 4819.94,
+                                  "display": 1204.98
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 25,
+                      "score": 8.7
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 40,
+                      "score": 9.0
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 65,
+                  "score": 8.8
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/0/294f27acd0342684e596c8ceb7e59908.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/1375364998/fcb701739a4ba95e13ff18419792b198.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/0/c5b7ecff5fd2a99d72131767ed762e76.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/0/334cf425de89517fadee833fc2c7da33.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/865096439.jpg?k=c2c1cb735b4727de5c8b18863356221bcdeb39c31ce3e80fff6752ca0c15f7ed&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/865096910.jpg?k=c0440476a0828e34b9b417bc20e05f62042320de48d9f047089bf07ec29875aa&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/1375360021/c2a859a7d7cc0670461022e4caef9060.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/0/c3e2cef13b807bba910f1373ec2efca4.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/1375364998/de618c61f74fa6a71f0126f7eecf18ae.jpg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/87921997/1375360021/acb963af82421451d048d238b37b69d1.jpg?ce=3"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "HomeSlice Koramangala",
+                "rating": 3.0,
+                "propertyLinks": {
+                  "propertyPage": "/homeslice-koramangala/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Kormangala"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 22845683,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 2125.7,
+                                  "display": 2015.64
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 2550.84,
+                                  "display": 2136.39
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 2125.7,
+                                  "display": 2015.64
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 2550.84,
+                                  "display": 2136.39
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 115,
+                      "score": 8.0
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 131,
+                      "score": 8.1
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 29100,
+                    "cumulative": {
+                      "reviewCount": 133,
+                      "score": 7.9
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 379,
+                  "score": 7.9
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/22845683/0/30104f2f884c038b916ca98b39976bf9.jpeg"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/206492424.jpg?k=e2c3885850886c13546cfb73e1c9e0ed525de38c1b2fa3239f69433934ab501d&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/118375495.jpg?k=366277750fa0b8de643e8c0af93bae95c0a18e5d69042ef94b4c3ce760dd6f3d&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/101861454.jpg?k=cf1c850cd861d6935b87be1cab9cd9da94416e4557228c5bfd1b8b88348176d2&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/153417419.jpg?k=98481e62e9330b4ca4d4f41aca3c3711a65c34719813403baf76d7c286d4ecea&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/101865809.jpg?k=5bc1332d7ae58016a955a7661e4e3cf392c08e6bff96b1df1d9acda05e7cf822&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/587388565.jpg?k=857397190f466c9a948e2f2cc774022ae15b0d6eb6378ad576db60b79861dfc3&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/206492402.jpg?k=7673d97fabe9e763495c8c569c8844fe2a314125f470c2ff1d45e0c29506d57b&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/587381906.jpg?k=32c60b6a7484b94b644ac6d30c30e775cfa46b3b9c7a2ba60072fb8cbb9d1453&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/206523608.jpg?k=2a3cd8700ed2af135584d8479a2bcc601526200a2c376bac5f446aa5be67bd33&o="
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "Tranquil Serviced Apartments - Bommanahalli/Bannerghatta Road",
+                "rating": 4.0,
+                "propertyLinks": {
+                  "propertyPage": "/tranquil-serviced-apartments/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Electronic City"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          },
+          {
+            "propertyId": 56199395,
+            "propertyResultType": "HighlyRatedAgodaHomesProperty",
+            "pricing": {
+              "isAvailable": true,
+              "isReady": true,
+              "offers": [
+                {
+                  "roomOffers": [
+                    {
+                      "room": {
+                        "pricing": [
+                          {
+                            "currency": "INR",
+                            "price": {
+                              "perNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 3938.81,
+                                  "display": 2877.26
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 4726.58,
+                                  "display": 3067.35
+                                }
+                              },
+                              "perRoomPerNight": {
+                                "exclusive": {
+                                  "crossedOutPrice": 3938.81,
+                                  "display": 2877.26
+                                },
+                                "inclusive": {
+                                  "crossedOutPrice": 4726.58,
+                                  "display": 3067.35
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "content": {
+              "reviews": {
+                "contentReview": [
+                  {
+                    "isDefault": true,
+                    "providerId": 332,
+                    "cumulative": {
+                      "reviewCount": 67,
+                      "score": 7.8
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 3038,
+                    "cumulative": {
+                      "reviewCount": 256,
+                      "score": 8.6
+                    }
+                  },
+                  {
+                    "isDefault": false,
+                    "providerId": 29100,
+                    "cumulative": {
+                      "reviewCount": 42,
+                      "score": 8.9
+                    }
+                  }
+                ],
+                "cumulative": {
+                  "reviewCount": 365,
+                  "score": 8.4
+                }
+              },
+              "images": {
+                "hotelImages": [
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/56199395/0/790a3cf99d5302fa017ae61c8e356c80.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/478175454.jpg?k=303af2e8fb0c095c7b97c2180ef63ffab8aaba4c288a25baf0f328e1282e28c6&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/478183312.jpg?k=66c45a42f01abf42117b487dc9308ce4076b07b8e28c9f9fe2970a11dd6356c7&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/478175473.jpg?k=e415a8ca76097ab104a491eb4fd5ff0b3d53c9453d5d19f1b24e87ca65efc05d&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/56199395/0/e36573886d445721d6ba4eba0915b9be.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/478177490.jpg?k=2df6fc53c1b147d999b723f7177bfc1eafca371d18e1542dcdb51bfb4d1c2698&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/56199395/0/3a009eff7f72cf973cee5af859bc101d.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/56199395/0/9a29551087f0dbd336489a3c628f9a0f.jpeg?ce=3"
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//q-xx.bstatic.com/xdata/images/hotel/max500/478175485.jpg?k=f8ede5eda487720f17d4cddf8ceb0c132d620b06f9985315e2450426285492a7&o="
+                      }
+                    ]
+                  },
+                  {
+                    "urls": [
+                      {
+                        "value": "//pix8.agoda.net/hotelImages/56199395/0/697c556b077d3d9797556ede0517f104.jpg?ce=0"
+                      }
+                    ]
+                  }
+                ]
+              },
+              "informationSummary": {
+                "propertyType": "NonHotel",
+                "hasHostExperience": true,
+                "displayName": "BluO Studios - Koramangala",
+                "rating": 4.5,
+                "propertyLinks": {
+                  "propertyPage": "/bluo-studios-koramangala/hotel/bangalore-in.html"
+                },
+                "address": {
+                  "country": {
+                    "id": 35
+                  },
+                  "area": {
+                    "name": "Kormangala"
+                  },
+                  "city": {
+                    "name": "Bangalore"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

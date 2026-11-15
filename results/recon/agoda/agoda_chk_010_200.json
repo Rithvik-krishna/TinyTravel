@@ -1,0 +1,8 @@
+{
+  "url": "https://www.agoda.com/bff/trips/save-to-trip/retrieve",
+  "status": 200,
+  "data": {
+    "success": true,
+    "savedItems": []
+  }
+}

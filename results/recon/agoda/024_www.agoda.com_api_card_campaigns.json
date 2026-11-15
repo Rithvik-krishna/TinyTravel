@@ -1,0 +1,1692 @@
+{
+  "url": "https://www.agoda.com/api/card/campaigns",
+  "status": 200,
+  "content_type": "application/json",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "content-encoding": "gzip",
+    "ag-service-version": "1.1808.0master",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-wvpn6",
+    "ag-correlation-id": "29ab3b44-379f-4e07-a634-961970775bda",
+    "content-type": "application/json",
+    "vary": "User-Agent, Accept-Encoding",
+    "ag-http-server-time": "77575 mcs",
+    "date": "Sun, 15 Nov 2026 07:30:35 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "ag-service-name": "cusco-customer-facing-api",
+    "x-envoy-datacenter": "sg",
+    "x-envoy-upstream-service-time": "85",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "2476",
+    "akamai-grn": "0.2d460317.1794727835.8edc20e",
+    "ag-atf-trace-id": "7be458fe5f5e12dc7375a36fefbcdd72"
+  },
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "29ab3b44-379f-4e07-a634-961970775bda",
+      "sections": [
+        {
+          "sectionName": "Accommodation",
+          "cards": [
+            {
+              "cardId": 8713,
+              "cardName": "pulse_MegaSale_26Q4_VIPAccess",
+              "priority": 1022,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_VIPAccess/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/MegaSale_VIPAccess?cid=1957895",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8625,
+              "cardName": "pulse_MegaSale_26Q4_HotelLivemax",
+              "priority": 1020,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261112_Q4_MegaSale_HotelLiveMax/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HotelLivemaxMegaSale?cid=1957873",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10285,
+              "cardName": "pulse_MegaSale_26Q4_ROH",
+              "priority": 1019,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261112_Q4_MegaSale_RoyalOrchid/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/ROHMegaSale?cid=1958047",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10183,
+              "cardName": "pulse_MegaSale_26Q4_OYORooms",
+              "priority": 1018,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_OYORooms/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/OYORoomsMegaSale?cid=1958021",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6414,
+              "cardName": "pulse_Mega_26Q4_InterContinental",
+              "priority": 1017,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_Intercontinental/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/IHGMegaSale?cid=1957872",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10172,
+              "cardName": "pulse_MegaSale_26Q4_Mitsui",
+              "priority": 1016,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Mitsui/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/MitsuiMegaSale?cid=1958019",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6599,
+              "cardName": "pulse_Mega_26Q4_Wyndham Hotels & Resorts",
+              "priority": 1014,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Wyndham/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/Wyndham_MegaSale?cid=1958017",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10175,
+              "cardName": "pulse_MegaSale_26Q4_Sunway",
+              "priority": 1013,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Sunway/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SunwayMegaSale?cid=1958020",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6445,
+              "cardName": "pulse_Mega_26Q4_BestWestern",
+              "priority": 1011,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_BestWestern/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/BestWestern_MegaSale?cid=1957875",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8850,
+              "cardName": "pulse_MegaSale_26Q4_Cinnamon",
+              "priority": 1008,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Cinnamon/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/CinnamonHotelsMegaSale?cid=1958016",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6331,
+              "cardName": "pulse_Mega_26Q4_LaLiTHotels",
+              "priority": 1007,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_LaLitHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/LalitHotels_MegaSale?cid=1957874",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10247,
+              "cardName": "pulse_MegaSale_26Q4_RadissonHotels",
+              "priority": 1005,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_RadissonHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/RadissonHotelsMegaSale?cid=1958045",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8771,
+              "cardName": "pulse_Mega_26Q4_Dusit Hotels_th",
+              "priority": 1004,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_DusitHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/DusitHotelsMegaSale?cid=1957898",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6340,
+              "cardName": "pulse_Mega_26Q4_HotelMonterey_JP",
+              "priority": 1003,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261109_Q4_MegaSale_HotelMonterey/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HotelMontereyMegaSale?cid=1925242",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6419,
+              "cardName": "pulse_Mega_26Q4_Belluna",
+              "priority": 1002,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_Belluna/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/BellunaMegaSale?cid=1925264",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6518,
+              "cardName": "pulse_Mega_26Q4_ABaccommo",
+              "priority": 1001,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_ABAccommo/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/ABaccommoMegaSale?cid=1957663",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6408,
+              "cardName": "pulse_Mega_26Q4_CentaraHotels",
+              "priority": 1000,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_Centara/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/CentaraHotelsMegaSale?cid=1925262",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6323,
+              "cardName": "pulse_Mega_26Q4_HiltonWorldwide",
+              "priority": 999,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_Hilton/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HiltonWorldwideMegaSale?cid=1925239",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10139,
+              "cardName": "pulse_MegaSale_26Q4_OkuraNikko",
+              "priority": 998,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_OkuraNikko/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/OkuraNikkoMegaSale?cid=1958031",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6451,
+              "cardName": "pulse_Mega_26Q4_PrinceHotels",
+              "priority": 997,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_PrinceHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/PrinceHotelsMegaSale?cid=1925267",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8640,
+              "cardName": "pulse_MegaSale_26Q4_HotelAmanek",
+              "priority": 996,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_HotelAmanek/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HotelAmanekMegaSale?cid=1957890",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6509,
+              "cardName": "pulse_Mega_26Q4_Karaksa Hotels_jp",
+              "priority": 995,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_KaraksaHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/KaraksaHotelsMegaSale?cid=1951247",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6401,
+              "cardName": "pulse_Mega_26Q4_FJHOTELS_jp",
+              "priority": 994,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261112_Q4_MegaSale_FJHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/FJHOTELSMegaSale?cid=1925256",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10151,
+              "cardName": "pulse_MegaSale_26Q4_RedDoorz",
+              "priority": 993,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_RedDoorz/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/RedDoorzMegaSale?cid=1958035",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8808,
+              "cardName": "pulse_Mega_26Q4_Hoshino_jp",
+              "priority": 992,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_HoshinoResorts/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HoshinoMegaSale?cid=1957904",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8817,
+              "cardName": "pulse_MegaSale_26Q4_BanyanTree",
+              "priority": 991,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_BanyanTree/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/BanyanTreeMegaSale?cid=1957911",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10121,
+              "cardName": "pulse_MegaSale_26Q4_ComfortCorner",
+              "priority": 990,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_ComfortCorner/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/ComfortCornerMegaSale?cid=1958025",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10148,
+              "cardName": "pulse_MegaSale_26Q4_VillaHotels",
+              "priority": 988,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_VillaHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/VillaHotelsMegaSale?cid=1958034",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10145,
+              "cardName": "pulse_MegaSale_26Q4_SunSiyam",
+              "priority": 987,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_SunSiyam/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SunSiyamMegaSale?cid=1958033",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10127,
+              "cardName": "pulse_MegaSale_26Q4_TwoSpaces",
+              "priority": 986,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_TwoSpaces/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/TwoSpacesMegaSale?cid=1958027",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8643,
+              "cardName": "pulse_MegaSale_26Q4_Saltstayz",
+              "priority": 985,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_SaltStayz/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SaltstayzMega_Sale?cid=1958023",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10133,
+              "cardName": "pulse_MegaSale_26Q4_eCommerceLoka",
+              "priority": 984,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_eCommerceLoka/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/eCommerceLokaMegaSale?cid=1958029",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10130,
+              "cardName": "pulse_MegaSale_26Q4_ProtexGlobal",
+              "priority": 983,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_ProtexGlobal/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/ProtexGlobalMegaSale?cid=1958028",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10142,
+              "cardName": "pulse_MegaSale_26Q4_Samann",
+              "priority": 982,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Samann/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SamannMegaSale?cid=1958032",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8793,
+              "cardName": "pulse_MegaSale_26Q4_Alivaa",
+              "priority": 981,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_AlivaaHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/AlivaaMegaSale?cid=1957902",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6404,
+              "cardName": "pulse_Mega_26Q4_Minor Hotels",
+              "priority": 980,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_Minor/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/MinorHotelsMegaSale?cid=1957878",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 6410,
+              "cardName": "pulse_Mega_26Q4_HotelManagement",
+              "priority": 979,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_OrientalHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HotelManagementMegaSale?cid=1925258",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8784,
+              "cardName": "pulse_MegaSale_26Q4_Justa",
+              "priority": 978,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_JustaHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/JustaMegaSale?cid=1957899",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8654,
+              "cardName": "pulse_MegaSale_26Q4_SummitGroup",
+              "priority": 977,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261111_Q4_MegaSale_SummitGroup/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SummitGroupMegaSale?cid=1957892",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8649,
+              "cardName": "pulse_MegaSale_26Q4_SancoInn",
+              "priority": 976,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261110_Q4_MegaSale_SancoInnHotels/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/SancoInnMegaSale?cid=1957891",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10136,
+              "cardName": "pulse_MegaSale_26Q4_Travelio",
+              "priority": 975,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Travelio/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/TravelioMegaSale?cid=1958030",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 10124,
+              "cardName": "pulse_MegaSale_26Q4_Bedsolving",
+              "priority": 974,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_MegaSale_26Q4_Bedsolving/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/BedsolvingMegaSale?cid=1958026",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 1723,
+              "cardName": "dealspage_banner_1strank",
+              "priority": 837,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/dealspagebanner_hp_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/deals?cid=1916891",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 8506,
+              "cardName": "pulse_local_campaign_always in season_sg",
+              "priority": 771,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/2026_Q3_SG_AlwaysInSeason/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/sgalwaysinseason?cid=1957860",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 455,
+              "cardName": "pulse_global campaign_mid month sale",
+              "priority": 759,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/wcMM20230312/home_banner_web3/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/MidMonthSale?cid=1901260",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 9467,
+              "cardName": "pulse_local_campaign_chinese new year_eu",
+              "priority": 748,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260930_Q4_EU_ChineseNewYear/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/ChineseNewYearEU?cid=1957954",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 5256,
+              "cardName": "pulse_local_campaign_visit malaysia_my",
+              "priority": 746,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/2026_Q4_MY_VisitMalaysia/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/VisitMalaysia?cid=1957955",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 2438,
+              "cardName": "pulse_localcampaign_granddiwali_in",
+              "priority": 745,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261028_Q4_ISC_GrandDiwali/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/GrandDiwaliIN?cid=1924783",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 2122,
+              "cardName": "pulse_globalcampaign_prestigesavings_ka",
+              "priority": 742,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/pulse_globalcampaign_prestigesavings_ka/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/PrestigeSavingsKA?cid=1914577",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 9457,
+              "cardName": "pulse_local_campaign_amazing shenzhen_cn",
+              "priority": 731,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260930_Q4_CN_AmazingShenzhen/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/AmazingShenzhenCN?cid=1957952",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 3979,
+              "cardName": "pulse_local_campaign_brandexclusives_acq_vn",
+              "priority": 723,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20250528_vn_acq/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/NewListingsHotDealsVN?cid=1924974",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 9692,
+              "cardName": "pulse_local campaign_last minute deals_in",
+              "priority": 722,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20261030_Q4_IN_LastMinute/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/LastMinuteDealsIN?cid=1957977",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            },
+            {
+              "cardId": 9461,
+              "cardName": "pulse_local_campaign_holiday countdown_ph",
+              "priority": 710,
+              "cardType": "banner",
+              "categories": [
+                {
+                  "categoryId": 30,
+                  "categoryName": "Uncategorized",
+                  "categoryDescription": "Uncategorized",
+                  "priority": 30,
+                  "parentPriorityId": null
+                }
+              ],
+              "productFunnel": "hotel",
+              "content": {
+                "imageUrl": "https://cdn6.agoda.net/images/WebCampaign/20260930_Q4_PH_HolidayCountdown/home_banner_web/en-us.png",
+                "imageRedirectLink": "https://www.agoda.com/HolidayCountdownPH?cid=1957953",
+                "title": null,
+                "description": null,
+                "buttonText": null,
+                "buttonUrl": null,
+                "buttonType": null,
+                "contentMetaInfo": "[]",
+                "contentMetaInfoKeyValue": {}
+              },
+              "dynamicContent": null,
+              "surveyContent": null,
+              "htmlContent": null,
+              "toolkitPlacement": null
+            }
+          ],
+          "categories": [
+            {
+              "categoryId": 30,
+              "categoryName": "Uncategorized",
+              "categoryDescription": "Uncategorized",
+              "priority": 30,
+              "parentPriorityId": null
+            }
+          ]
+        }
+      ]
+    },
+    "error": null
+  }
+}

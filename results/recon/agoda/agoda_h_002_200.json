@@ -1,0 +1,13 @@
+{
+  "url": "https://www.agoda.com/api/cronos/layout/GetHotCities",
+  "status": 200,
+  "data": {
+    "searchHistoryViewModel": {
+      "recentSearchList_AllTypes": [],
+      "abandonedCartList": [],
+      "recentSearchList_CityAndHotel": [],
+      "showResentSearchesAboveTheFold": false,
+      "totalItem": 0
+    }
+  }
+}

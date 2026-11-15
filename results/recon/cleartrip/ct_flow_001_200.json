@@ -1,0 +1,2207 @@
+{
+  "url": "https://featureassets.org/v1/initialize",
+  "status": 200,
+  "data": {
+    "feature_gates": {
+      "122466127": {
+        "name": "122466127",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "647596224": {
+        "name": "647596224",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "745166714": {
+        "name": "745166714",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "837786061": {
+        "name": "837786061",
+        "value": true,
+        "rule_id": "65XPff5iTZxbPvHl9bEGTE",
+        "id_type": "stable_id",
+        "secondary_exposures": []
+      },
+      "1114152311": {
+        "name": "1114152311",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "1625988818": {
+        "name": "1625988818",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": [
+          {
+            "gate": "837786061",
+            "gateValue": "true",
+            "ruleID": "65XPff5iTZxbPvHl9bEGTE"
+          }
+        ]
+      },
+      "1648254047": {
+        "name": "1648254047",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "1897203577": {
+        "name": "1897203577",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      },
+      "2386699479": {
+        "name": "2386699479",
+        "value": false,
+        "rule_id": "default",
+        "id_type": "stableID",
+        "secondary_exposures": []
+      }
+    },
+    "dynamic_configs": {
+      "3348037": {
+        "name": "3348037",
+        "value": {
+          "variant": "V2",
+          "variants": "V1"
+        },
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "is_in_layer": true,
+        "explicit_parameters": [
+          "variants"
+        ],
+        "secondary_exposures": []
+      },
+      "3556498": {
+        "name": "3556498",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "73532355": {
+        "name": "73532355",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "85594701": {
+        "name": "85594701",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "95266617": {
+        "name": "95266617",
+        "value": {
+          "variants": "v2"
+        },
+        "rule_id": "39fgZEB3axsHG6LiQKenDE",
+        "group": "39fgZEB3axsHG6LiQKenDE",
+        "group_name": "aerobridge",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "98205098": {
+        "name": "98205098",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "98974749": {
+        "name": "98974749",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "eIbYCYQhxgTVsNiurUfly",
+        "group": "eIbYCYQhxgTVsNiurUfly",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "98984197": {
+        "name": "98984197",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "7GBfYo4z4mJJGVZY074tJD",
+        "group": "7GBfYo4z4mJJGVZY074tJD",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "99667985": {
+        "name": "99667985",
+        "value": {
+          "bucket": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "99668434": {
+        "name": "99668434",
+        "value": {
+          "variant": "v2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "110251487": {
+        "name": "110251487",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "189070617": {
+        "name": "189070617",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "192331437": {
+        "name": "192331437",
+        "value": {
+          "fk_flights_fkt_for_work": "False"
+        },
+        "rule_id": "7GyLqFb4jVINZqCV1aeW6d",
+        "group": "7GyLqFb4jVINZqCV1aeW6d",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "245831743": {
+        "name": "245831743",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "282499454": {
+        "name": "282499454",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "284618335": {
+        "name": "284618335",
+        "value": {
+          "variant": "test1"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "test1",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "308537207": {
+        "name": "308537207",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "316925068": {
+        "name": "316925068",
+        "value": {
+          "bucket": "heuristic_v2"
+        },
+        "rule_id": "3Rb2qG6kKHUVzrlkq97HaS",
+        "group": "3Rb2qG6kKHUVzrlkq97HaS",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "409317995": {
+        "name": "409317995",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "19nfAj4bDV2adyv0Bb3jPH",
+        "group": "19nfAj4bDV2adyv0Bb3jPH",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "455546454": {
+        "name": "455546454",
+        "value": {
+          "variants": "bottomsheet"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "BottomSheet",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "510548583": {
+        "name": "510548583",
+        "value": {
+          "variants": "default_off"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "522551580": {
+        "name": "522551580",
+        "value": {
+          "variants": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "530210780": {
+        "name": "530210780",
+        "value": {
+          "variants": "test2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "530215561": {
+        "name": "530215561",
+        "value": {
+          "variants": "test2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "547517539": {
+        "name": "547517539",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "6sJ3ithICo1lGJbxBTyFfr",
+        "group": "6sJ3ithICo1lGJbxBTyFfr",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "572824049": {
+        "name": "572824049",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "597977225": {
+        "name": "597977225",
+        "value": {
+          "variants": "bottomsheet"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "BottomSheet",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "625610251": {
+        "name": "625610251",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "679595428": {
+        "name": "679595428",
+        "value": {
+          "variants": "v1"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "701562709": {
+        "name": "701562709",
+        "value": {
+          "Variants": "v3"
+        },
+        "rule_id": "1CfGDOmPldEzWI2NbhKj97",
+        "group": "1CfGDOmPldEzWI2NbhKj97",
+        "group_name": "Test 1",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "701566552": {
+        "name": "701566552",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "735943061": {
+        "name": "735943061",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "776135658": {
+        "name": "776135658",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "780389777": {
+        "name": "780389777",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "5d9Cc23a5KvSuvjNgmGixu",
+        "group": "5d9Cc23a5KvSuvjNgmGixu",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "838795041": {
+        "name": "838795041",
+        "value": {
+          "variant": "control"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "895435124": {
+        "name": "895435124",
+        "value": {
+          "variants": "control"
+        },
+        "rule_id": "65wR4ret0wSGgmahTaxwFf",
+        "group": "65wR4ret0wSGgmahTaxwFf",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "908988033": {
+        "name": "908988033",
+        "value": {
+          "bucket": "a"
+        },
+        "rule_id": "5QPeRClfdGqzT3xVn9DMjl",
+        "group": "5QPeRClfdGqzT3xVn9DMjl",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "929194325": {
+        "name": "929194325",
+        "value": {},
+        "rule_id": "targetingGate",
+        "group": "targetingGate",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": [
+          {
+            "gate": "122466127",
+            "gateValue": "false",
+            "ruleID": "default"
+          }
+        ]
+      },
+      "980105279": {
+        "name": "980105279",
+        "value": {
+          "variants": "V2"
+        },
+        "rule_id": "3sf4FQmbanw4hMy7hpd7RU",
+        "group": "3sf4FQmbanw4hMy7hpd7RU",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1114554957": {
+        "name": "1114554957",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1167727224": {
+        "name": "1167727224",
+        "value": {
+          "variant": "V2",
+          "variants": "V1"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "is_in_layer": true,
+        "explicit_parameters": [
+          "variant"
+        ],
+        "secondary_exposures": []
+      },
+      "1197983810": {
+        "name": "1197983810",
+        "value": {
+          "search_v3": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1250372722": {
+        "name": "1250372722",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1256643240": {
+        "name": "1256643240",
+        "value": {
+          "LoyaltySparks": "newBenefitEngine"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1323472748": {
+        "name": "1323472748",
+        "value": {
+          "onboardingVariant": "V3"
+        },
+        "rule_id": "20QOLhALhZO7DqIrSxTWxf",
+        "group": "20QOLhALhZO7DqIrSxTWxf",
+        "group_name": "Carousel and Skip",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1367563489": {
+        "name": "1367563489",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1371341174": {
+        "name": "1371341174",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1389555928": {
+        "name": "1389555928",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "5RjjXBHcjfJSGHqcK6oae9",
+        "group": "5RjjXBHcjfJSGHqcK6oae9",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1492705208": {
+        "name": "1492705208",
+        "value": {
+          "xsell_ver": "x"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "f20_all_new",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1497695193": {
+        "name": "1497695193",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1519210056": {
+        "name": "1519210056",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "7gaA3HwXmuJYXdhsoW2wat",
+        "group": "7gaA3HwXmuJYXdhsoW2wat",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1541024591": {
+        "name": "1541024591",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1567654781": {
+        "name": "1567654781",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1567659562": {
+        "name": "1567659562",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1578430580": {
+        "name": "1578430580",
+        "value": {
+          "variants": "v1"
+        },
+        "rule_id": "4xiUhflYdcLz1WNNEWIpZN",
+        "group": "4xiUhflYdcLz1WNNEWIpZN",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1578783916": {
+        "name": "1578783916",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1670281426": {
+        "name": "1670281426",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1693408506": {
+        "name": "1693408506",
+        "value": {
+          "Variant": "a"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1754401181": {
+        "name": "1754401181",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1766636551": {
+        "name": "1766636551",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "DPqcS5s41STRRVwZE0MI7",
+        "group": "DPqcS5s41STRRVwZE0MI7",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1778207860": {
+        "name": "1778207860",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1780931523": {
+        "name": "1780931523",
+        "value": {
+          "bestBenefitLogin": "singleLoyaltyBenefit"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "singleLoyaltyBenefit",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1859868020": {
+        "name": "1859868020",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1862991447": {
+        "name": "1862991447",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1863894002": {
+        "name": "1863894002",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "7sHI3yL33qC7ZXQhFpsdTa",
+        "group": "7sHI3yL33qC7ZXQhFpsdTa",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1881110215": {
+        "name": "1881110215",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "1wY7QND50J2fpMvdFLFOdg",
+        "group": "1wY7QND50J2fpMvdFLFOdg",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1881110299": {
+        "name": "1881110299",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "2Vi2GKNgu4mubxYFOuB7rI",
+        "group": "2Vi2GKNgu4mubxYFOuB7rI",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1881434300": {
+        "name": "1881434300",
+        "value": {},
+        "rule_id": "targetingGate",
+        "group": "targetingGate",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": [
+          {
+            "gate": "1897203577",
+            "gateValue": "false",
+            "ruleID": "default"
+          }
+        ]
+      },
+      "1886534439": {
+        "name": "1886534439",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1895096176": {
+        "name": "1895096176",
+        "value": {
+          "Variant": "test"
+        },
+        "rule_id": "34brV7jlSURr6WpsFFwDu6",
+        "group": "34brV7jlSURr6WpsFFwDu6",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1928290930": {
+        "name": "1928290930",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "1979295518": {
+        "name": "1979295518",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "6xqekcLRpEcDJy14CXiLw2",
+        "group": "6xqekcLRpEcDJy14CXiLw2",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "1998601741": {
+        "name": "1998601741",
+        "value": {
+          "rank_model": "heuristic"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2001722639": {
+        "name": "2001722639",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2031075573": {
+        "name": "2031075573",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "5P7UdbUVj73kkD91NYSoYK",
+        "group": "5P7UdbUVj73kkD91NYSoYK",
+        "group_name": "Test",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "2051547070": {
+        "name": "2051547070",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2131988321": {
+        "name": "2131988321",
+        "value": {
+          "cys_enabled": "yes"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2146605462": {
+        "name": "2146605462",
+        "value": {},
+        "rule_id": "targetingGate",
+        "group": "targetingGate",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": [
+          {
+            "gate": "1648254047",
+            "gateValue": "false",
+            "ruleID": "default"
+          }
+        ]
+      },
+      "2148493858": {
+        "name": "2148493858",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2157608835": {
+        "name": "2157608835",
+        "value": {
+          "bucket": "test"
+        },
+        "rule_id": "6GPMrlgEmst1IDKCGdemZ3",
+        "group": "6GPMrlgEmst1IDKCGdemZ3",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "2158726100": {
+        "name": "2158726100",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2239071033": {
+        "name": "2239071033",
+        "value": {
+          "variant": "V2",
+          "variants": "V2"
+        },
+        "rule_id": "Kb3Z0qhwI3yOGYhWXpKy2",
+        "group": "Kb3Z0qhwI3yOGYhWXpKy2",
+        "group_name": "mevc_fare_calendar",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "is_in_layer": true,
+        "explicit_parameters": [
+          "variants"
+        ],
+        "secondary_exposures": []
+      },
+      "2242904525": {
+        "name": "2242904525",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2334871763": {
+        "name": "2334871763",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2337552953": {
+        "name": "2337552953",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2341555419": {
+        "name": "2341555419",
+        "value": {
+          "Packages_v2_rollout": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2342245471": {
+        "name": "2342245471",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2368358357": {
+        "name": "2368358357",
+        "value": {
+          "variant": "v2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2410893034": {
+        "name": "2410893034",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2468847074": {
+        "name": "2468847074",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2490742666": {
+        "name": "2490742666",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2509079225": {
+        "name": "2509079225",
+        "value": {
+          "variant": "a"
+        },
+        "rule_id": "ly24th3BBwI46lKQrgTNt",
+        "group": "ly24th3BBwI46lKQrgTNt",
+        "group_name": "currentflow",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "2556420007": {
+        "name": "2556420007",
+        "value": {
+          "variant": "control"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2557542827": {
+        "name": "2557542827",
+        "value": {
+          "rank_model": "heuristic"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2567951863": {
+        "name": "2567951863",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2626433657": {
+        "name": "2626433657",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2627375614": {
+        "name": "2627375614",
+        "value": {
+          "bucket": "new_experience_with_chatbot"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "new_experience_with_chatbot",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2656581776": {
+        "name": "2656581776",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2756670325": {
+        "name": "2756670325",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2757856350": {
+        "name": "2757856350",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2760147632": {
+        "name": "2760147632",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2765955993": {
+        "name": "2765955993",
+        "value": {},
+        "rule_id": "targetingGate",
+        "group": "targetingGate",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": [
+          {
+            "gate": "1897203577",
+            "gateValue": "false",
+            "ruleID": "default"
+          }
+        ]
+      },
+      "2785431747": {
+        "name": "2785431747",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2821694360": {
+        "name": "2821694360",
+        "value": {
+          "Variant": "test"
+        },
+        "rule_id": "53LZ83mwY89tNly9Ntxxyl",
+        "group": "53LZ83mwY89tNly9Ntxxyl",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "2853202824": {
+        "name": "2853202824",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2853202908": {
+        "name": "2853202908",
+        "value": {
+          "Variant": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2879370165": {
+        "name": "2879370165",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2899272757": {
+        "name": "2899272757",
+        "value": {
+          "variants": "v2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2903827583": {
+        "name": "2903827583",
+        "value": {
+          "variants": "v2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2914304172": {
+        "name": "2914304172",
+        "value": {
+          "onboardingVariant": "V3"
+        },
+        "rule_id": "2qtbDBoblWIy9y0Pxb6Bm4",
+        "group": "2qtbDBoblWIy9y0Pxb6Bm4",
+        "group_name": "Carousel and Skip",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "2941164695": {
+        "name": "2941164695",
+        "value": {
+          "variants": "V2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test 2",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "2989047424": {
+        "name": "2989047424",
+        "value": {
+          "variant": "Fare_Family_Int_Test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "fare family",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3034441304": {
+        "name": "3034441304",
+        "value": {
+          "variant": "ff_old"
+        },
+        "rule_id": "5P7skmqlOq3Hqg6OzE6SNT",
+        "group": "5P7skmqlOq3Hqg6OzE6SNT",
+        "group_name": "Test",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3047220532": {
+        "name": "3047220532",
+        "value": {
+          "hpm_hpi_removal": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3088355368": {
+        "name": "3088355368",
+        "value": {
+          "variants": "v1"
+        },
+        "rule_id": "61LZzR0winqi34BvyXfGiX",
+        "group": "61LZzR0winqi34BvyXfGiX",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3089707584": {
+        "name": "3089707584",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3100689629": {
+        "name": "3100689629",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3104525059": {
+        "name": "3104525059",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3112546020": {
+        "name": "3112546020",
+        "value": {
+          "variants": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3247714609": {
+        "name": "3247714609",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3269049016": {
+        "name": "3269049016",
+        "value": {
+          "variant": "control"
+        },
+        "rule_id": "6wJEBfaAN25AsPTToazIp0",
+        "group": "6wJEBfaAN25AsPTToazIp0",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3319193242": {
+        "name": "3319193242",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3417796179": {
+        "name": "3417796179",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3417797620": {
+        "name": "3417797620",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3433958252": {
+        "name": "3433958252",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3436310389": {
+        "name": "3436310389",
+        "value": {
+          "variant": "b"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3461162605": {
+        "name": "3461162605",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3481941278": {
+        "name": "3481941278",
+        "value": {},
+        "rule_id": "inlineTargetingRules",
+        "group": "inlineTargetingRules",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": [
+          {
+            "gate": "1114152311",
+            "gateValue": "false",
+            "ruleID": "default"
+          },
+          {
+            "gate": "2386699479",
+            "gateValue": "false",
+            "ruleID": "default"
+          },
+          {
+            "gate": "122466127",
+            "gateValue": "false",
+            "ruleID": "default"
+          }
+        ]
+      },
+      "3482813672": {
+        "name": "3482813672",
+        "value": {
+          "packages_first_rollout": "control"
+        },
+        "rule_id": "5maaBLAozfq73mGMEbmfCU",
+        "group": "5maaBLAozfq73mGMEbmfCU",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3508583095": {
+        "name": "3508583095",
+        "value": {
+          "bucket": "new_experience"
+        },
+        "rule_id": "1LseXoNpxNsE8GM8jGX54S",
+        "group": "1LseXoNpxNsE8GM8jGX54S",
+        "group_name": "Test 2",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3517603836": {
+        "name": "3517603836",
+        "value": {
+          "sellingHotels": "DetailScreenBottom"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "DetailScreenBottom",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3533008842": {
+        "name": "3533008842",
+        "value": {
+          "variant": "control"
+        },
+        "rule_id": "p1gNDraP9XuKVDXXAVIR9",
+        "group": "p1gNDraP9XuKVDXXAVIR9",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3547622112": {
+        "name": "3547622112",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3555323208": {
+        "name": "3555323208",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3716198664": {
+        "name": "3716198664",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "4oGfSIKHjpmeLgWOnTs7dT",
+        "group": "4oGfSIKHjpmeLgWOnTs7dT",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3717234144": {
+        "name": "3717234144",
+        "value": {
+          "enablePN": "Fbooking_confirmation_PN"
+        },
+        "rule_id": "6XBIyLFNggzQ1u8ZoQsK4b",
+        "group": "6XBIyLFNggzQ1u8ZoQsK4b",
+        "group_name": "Fbooking_confirmation_PN",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3739910814": {
+        "name": "3739910814",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": false,
+        "id_type": "userID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3750730927": {
+        "name": "3750730927",
+        "value": {
+          "variant": "test"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "fare family",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3771756718": {
+        "name": "3771756718",
+        "value": {
+          "variant": "control"
+        },
+        "rule_id": "6K0WyPVrRC1CxI7fEf8k6J",
+        "group": "6K0WyPVrRC1CxI7fEf8k6J",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3788420245": {
+        "name": "3788420245",
+        "value": {
+          "tab_position": "hotel_tab_on_left"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3816156363": {
+        "name": "3816156363",
+        "value": {
+          "variant": "itin_addon"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test 2",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3853830254": {
+        "name": "3853830254",
+        "value": {
+          "bucket": "heuristic_v2"
+        },
+        "rule_id": "27KVfuAMPLWxeMnyNcy626",
+        "group": "27KVfuAMPLWxeMnyNcy626",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3854079481": {
+        "name": "3854079481",
+        "value": {
+          "variant": "itin_addon"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "Test 2",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3903482301": {
+        "name": "3903482301",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3903923290": {
+        "name": "3903923290",
+        "value": {
+          "variants": "v2"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3903923291": {
+        "name": "3903923291",
+        "value": {
+          "variants": "v1"
+        },
+        "rule_id": "6yUQmsfLdSYPXztg61nPM9",
+        "group": "6yUQmsfLdSYPXztg61nPM9",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "3923353438": {
+        "name": "3923353438",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "3966906137": {
+        "name": "3966906137",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4013548150": {
+        "name": "4013548150",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4124070778": {
+        "name": "4124070778",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4133332272": {
+        "name": "4133332272",
+        "value": {
+          "xsell_ver": "p"
+        },
+        "rule_id": "launchedGroup",
+        "group": "launchedGroup",
+        "group_name": "lpg_all_new",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4149633373": {
+        "name": "4149633373",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4171759634": {
+        "name": "4171759634",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4178840466": {
+        "name": "4178840466",
+        "value": {},
+        "rule_id": "11lmhbwAeKsdCfFoxDUjXK",
+        "group": "11lmhbwAeKsdCfFoxDUjXK",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "4198313912": {
+        "name": "4198313912",
+        "value": {
+          "variant": "a"
+        },
+        "rule_id": "3DSvoxGlMsq6xkRuGYUCL",
+        "group": "3DSvoxGlMsq6xkRuGYUCL",
+        "group_name": "Control",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "4228935550": {
+        "name": "4228935550",
+        "value": {},
+        "rule_id": "prestart",
+        "group": "prestart",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": false,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4231496637": {
+        "name": "4231496637",
+        "value": {},
+        "rule_id": "layerAssignment",
+        "group": "layerAssignment",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": false,
+        "secondary_exposures": []
+      },
+      "4242380670": {
+        "name": "4242380670",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "76vtkgQGZyBQSvLQRia4gj",
+        "group": "76vtkgQGZyBQSvLQRia4gj",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      },
+      "4290143164": {
+        "name": "4290143164",
+        "value": {
+          "bucket": "b"
+        },
+        "rule_id": "4Go3yWdCfDVr6D8B6gSXBb",
+        "group": "4Go3yWdCfDVr6D8B6gSXBb",
+        "group_name": "Test",
+        "is_device_based": true,
+        "id_type": "stableID",
+        "is_experiment_active": true,
+        "is_user_in_experiment": true,
+        "secondary_exposures": []
+      }
+    },
+    "layer_configs": {
+      "2383360722": {
+        "name": "2383360722",
+        "value": {
+          "variant": "V2",
+          "variants": "V2"
+        },
+        "rule_id": "Kb3Z0qhwI3yOGYhWXpKy2",
+        "group": "Kb3Z0qhwI3yOGYhWXpKy2",
+        "group_name": "mevc_fare_calendar",
+        "allocated_experiment_name": "2239071033",
+        "is_device_based": true,
+        "is_experiment_active": true,
+        "explicit_parameters": [
+          "variants"
+        ],
+        "is_user_in_experiment": true,
+        "id_type": "stableID",
+        "secondary_exposures": [],
+        "undelegated_secondary_exposures": []
+      },
+      "3399936687": {
+        "name": "3399936687",
+        "value": {},
+        "rule_id": "default",
+        "group": "default",
+        "is_device_based": true,
+        "explicit_parameters": [],
+        "id_type": "stableID",
+        "secondary_exposures": [],
+        "undelegated_secondary_exposures": []
+      }
+    },
+    "sdkParams": {},
+    "has_updates": true,
+    "generator": "scrapi-nest",
+    "time": 1794564950135,
+    "company_lcut": 1794564950135,
+    "evaluated_keys": {
+      "stableID": "bbe7dbeb-2dbd-43d7-bfb5-1b5aba7a0524",
+      "customIDs": {
+        "stableID": "bbe7dbeb-2dbd-43d7-bfb5-1b5aba7a0524"
+      }
+    },
+    "hash_used": "djb2",
+    "derived_fields": {
+      "ip": "203.153.32.222",
+      "country": "IN",
+      "browserName": "Chrome",
+      "browserVersion": "128.0.0",
+      "osName": "Windows",
+      "osVersion": "10.0.0",
+      "browser_name": "Chrome",
+      "browser_version": "128.0.0",
+      "os_name": "Windows",
+      "os_version": "10.0.0"
+    },
+    "hashed_sdk_key_used": "2540628270",
+    "can_record_session": true,
+    "recording_blocked": false,
+    "session_recording_rate": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "props": {
+    "pageProps": {}
+  },
+  "page": "/hotels/itinerary/[itineraryId]/info",
+  "query": {},
+  "buildId": "ggIvhdjMcU-IPX3r8NaOm",
+  "assetPrefix": "https://static-assets-ct.flixcart.com/ct/assets/ct-pwa-static-prod/ct-pwa-static/ct-hotels-desktop-next",
+  "nextExport": true,
+  "autoExport": true,
+  "isFallback": false,
+  "dynamicIds": [
+    21941,
+    2863
+  ],
+  "scriptLoader": []
+}

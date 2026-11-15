@@ -190,8 +190,32 @@ async def verify_offer(
     profile: str = "lite",
     on_stream_url: Optional[Callable[[str], Any]] = None,
     on_progress: Optional[Callable[[str], Any]] = None,
+    force_tinyfish: bool = False,
 ) -> dict:
     """Execute end-to-end checkout verification for an offer, post-processing observed results."""
+    runner = (req.get("runner") or os.getenv("AGENT_RUNNER", "tinyfish")).lower().strip()
+    if not force_tinyfish and runner in ("own", "hybrid"):
+        try:
+            from ..services.agent_router import run_hybrid_agent, run_own_playbook
+        except ImportError:
+            from services.agent_router import run_hybrid_agent, run_own_playbook
+        if runner == "own":
+            return await run_own_playbook(
+                platform=platform,
+                hotel_name=hotel_name,
+                req=req,
+                on_stream_url=on_stream_url,
+                on_progress=on_progress,
+            )
+        else:
+            return await run_hybrid_agent(
+                platform=platform,
+                hotel_name=hotel_name,
+                req=req,
+                on_stream_url=on_stream_url,
+                on_progress=on_progress,
+            )
+
     # Allow explicit URL override (useful for CLI manual probes or tests)
     explicit_url = req.get("url")
     url = explicit_url if explicit_url else site_url(platform, req)

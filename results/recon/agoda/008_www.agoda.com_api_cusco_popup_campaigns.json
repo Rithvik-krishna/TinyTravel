@@ -1,0 +1,33 @@
+{
+  "url": "https://www.agoda.com/api/cusco/popup/campaigns",
+  "status": 200,
+  "content_type": "application/json",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "ag-service-version": "1.1808.0master",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-vdf5g",
+    "ag-correlation-id": "984b11ed-6a78-48ff-a394-98e6c6fd0e77",
+    "content-type": "application/json",
+    "vary": "User-Agent, Accept-Encoding",
+    "ag-http-server-time": "9569 mcs",
+    "date": "Sun, 15 Nov 2026 07:30:32 GMT",
+    "strict-transport-security": "max-age=31536000",
+    "ag-service-name": "cusco-customer-facing-api",
+    "x-envoy-datacenter": "sg, sg, sg",
+    "x-envoy-upstream-service-time": "27",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "106",
+    "akamai-grn": "0.2d460317.1794727832.8edc0c8",
+    "ag-atf-trace-id": "96b9136d80778fc92238acedfcc2af8a"
+  },
+  "data": {
+    "isSuccess": true,
+    "result": {
+      "requestId": "984b11ed-6a78-48ff-a394-98e6c6fd0e77",
+      "popup": null
+    },
+    "error": null
+  }
+}

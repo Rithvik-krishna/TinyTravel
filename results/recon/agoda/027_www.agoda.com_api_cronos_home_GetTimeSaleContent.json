@@ -1,0 +1,29 @@
+{
+  "url": "https://www.agoda.com/api/cronos/home/GetTimeSaleContent",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "headers": {
+    "access-control-expose-headers": "ag-correlation-id",
+    "access-control-allow-methods": "GET,POST",
+    "x-content-type-options": "nosniff",
+    "x-ua-compatible": "IE=edge",
+    "x-envoy-upstream-address": "user-7d7d4c74f8-qgdfq",
+    "ag-correlation-id": "80467dd9-87ef-48d0-8e98-8b97333dee61",
+    "content-type": "application/json; charset=utf-8",
+    "vary": "User-Agent, Accept-Encoding",
+    "access-control-allow-headers": "Content-Type",
+    "strict-transport-security": "max-age=31536000",
+    "date": "Sun, 15 Nov 2026 07:30:36 GMT",
+    "x-envoy-datacenter": "sg, sg, sg",
+    "x-envoy-upstream-service-time": "21",
+    "access-control-allow-credentials": "true",
+    "request-context": "appId=",
+    "access-control-allow-origin": "https://www.agoda.com",
+    "content-length": "32",
+    "akamai-grn": "0.2d460317.1794727835.8edc26e"
+  },
+  "data": {
+    "sectionTitle": "",
+    "banners": []
+  }
+}
