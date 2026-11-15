@@ -346,7 +346,8 @@
      "evidence": 10
     },
     "note": "observed on this run; stability N/A, weights re-normalised"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h1_agoda",
@@ -454,7 +455,8 @@
      "evidence": 10
     },
     "note": "observed on this run"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h1_booking",
@@ -561,7 +563,8 @@
      "evidence": 10
     },
     "note": "observed on this run; stability N/A, weights re-normalised"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h2_cleartrip",
@@ -673,7 +676,8 @@
      "evidence": 10
     },
     "note": "observed on this run; stability N/A, weights re-normalised"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h2_agoda",
@@ -780,7 +784,8 @@
      "evidence": 10
     },
     "note": "observed on this run; stability N/A, weights re-normalised"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h2_booking",
@@ -826,7 +831,8 @@
     "score": null,
     "breakdown": null,
     "note": "N/A (not verified)"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h3_cleartrip",
@@ -936,7 +942,8 @@
      "evidence": 10
     },
     "note": "observed on this run; stability N/A, weights re-normalised"
-   }
+   },
+   "verification_level": "checkout"
   },
   {
    "offer_id": "h3_booking",
@@ -997,7 +1004,8 @@
     "score": null,
     "breakdown": null,
     "note": "N/A (not verified)"
-   }
+   },
+   "verification_level": "checkout"
   }
  ],
  "verdicts": {

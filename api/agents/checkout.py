@@ -437,6 +437,7 @@ async def verify_offer(
         "pay_at_hotel": pay_at_hotel,
         "rate_cohort": rate_cohort,
         "cheapest_any_payable": cheapest_any_payable,
+        "verification_level": probe_data.get("verification_level", "checkout"),
 
         "evidence": evidence,
         "mock": is_mock,

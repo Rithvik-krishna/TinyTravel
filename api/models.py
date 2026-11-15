@@ -13,6 +13,7 @@ MatchStatus = Literal["merged", "suggested"]
 TravellerType = Literal["solo", "couple", "friends", "family", "business"]
 EvidenceType = Literal["screenshot", "recording", "page_text"]
 FeeKind = Literal["tax", "platform_fee", "property_fee", "add_on", "other"]
+VerificationLevel = Literal["checkout", "listing"]
 
 
 class BaseModelForbid(BaseModel):
@@ -173,10 +174,7 @@ class ProbeResult(BaseModelForbid):
     cheapest_any_payable: Optional[float] = None
     pay_now: Optional[float] = None
     pay_at_hotel: Optional[float] = None
-    rate_cohort: Optional[str] = "cheapest_free_cancellation"
-    cheapest_any_payable: Optional[float] = None
-    pay_now: Optional[float] = None
-    pay_at_hotel: Optional[float] = None
+    verification_level: Optional[VerificationLevel] = "checkout"
 
 
 class Offer(BaseModelForbid):
@@ -220,6 +218,7 @@ class Offer(BaseModelForbid):
     cheapest_any_payable: Optional[float] = None
     pay_now: Optional[float] = None
     pay_at_hotel: Optional[float] = None
+    verification_level: Optional[VerificationLevel] = "checkout"
 
 
 class RankingItem(BaseModelForbid):

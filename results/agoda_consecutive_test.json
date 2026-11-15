@@ -1,0 +1,12 @@
+{
+  "consecutive_searches_passed": 0,
+  "first_challenge_at_search": 1,
+  "runs": [
+    {
+      "search_index": 1,
+      "seconds": 5.58,
+      "challenge_detected": true,
+      "url": "https://www.agoda.com/en-in/search?hotel=1785304&selectedproperty=1785304&city=4923&checkIn=2026-11-20&checkOut=2026-11-21&rooms=1&adults=2&currency=INR&ds=LAAo7LAtM2v0PWO0"
+    }
+  ]
+}

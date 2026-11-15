@@ -26,6 +26,55 @@ def normalize_meal_plan(meal_plan: Optional[str]) -> str:
     return mp.strip()
 
 
+def normalize_room_tier(room_type: Optional[str]) -> str:
+    """Normalize room type into standardized tier categories."""
+    if not room_type:
+        return "standard"
+    rt = room_type.lower()
+    if any(k in rt for k in ["suite", "presidential", "penthouse"]):
+        return "suite"
+    elif any(k in rt for k in ["executive", "club"]):
+        return "executive"
+    elif any(k in rt for k in ["deluxe", "superior", "premium"]):
+        return "deluxe"
+    elif any(k in rt for k in ["villa", "cottage"]):
+        return "villa"
+    return "standard"
+
+
+def cohort_key(offer: dict) -> tuple:
+    """Extract 4-tuple comparison cohort: (room_tier, occupancy, meal_plan, cancellation_category).
+    Two offers are comparable if and only if all 4 dimensions match identically.
+    """
+    room_tier = normalize_room_tier(offer.get("room_type"))
+    occupancy = int(offer.get("max_occupancy") or 2)
+    meal = normalize_meal_plan(offer.get("meal_plan"))
+    cancellation = offer.get("cancellation_category") or "unknown"
+    return (room_tier, occupancy, meal, cancellation)
+
+
+def are_offers_comparable(offer_a: dict, offer_b: dict) -> tuple[bool, Optional[str]]:
+    """Determine if two offers belong to the same cohort.
+    Returns (True, None) if comparable, or (False, reason) if not comparable.
+    """
+    key_a = cohort_key(offer_a)
+    key_b = cohort_key(offer_b)
+    if key_a == key_b:
+        return True, None
+
+    mismatches = []
+    if key_a[0] != key_b[0]:
+        mismatches.append(f"room tier mismatch ({key_a[0]} vs {key_b[0]})")
+    if key_a[1] != key_b[1]:
+        mismatches.append(f"occupancy mismatch ({key_a[1]} vs {key_b[1]} guests)")
+    if key_a[2] != key_b[2]:
+        mismatches.append(f"meal plan mismatch ({key_a[2]} vs {key_b[2]})")
+    if key_a[3] != key_b[3]:
+        mismatches.append(f"cancellation mismatch ({key_a[3]} vs {key_b[3]})")
+
+    return False, "not comparable: " + ", ".join(mismatches)
+
+
 def comparable_key(offer: dict) -> tuple:
     """Extract comparison tuple (occupancy, nights, meal_plan, cancellation_category).
     

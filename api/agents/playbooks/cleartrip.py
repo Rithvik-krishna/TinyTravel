@@ -23,6 +23,24 @@ KNOWN_CLEARTRIP_HOTELS = {
     "la marvella": ("2050898", "la-marvella-2050898"),
     "the chancery pavilion": ("40140", "the-chancery-pavillion-40140"),
     "the pride hotel": ("349942", "the-pride-hotel-349942"),
+    "bloomrooms city centre": ("3919535", "3919535"),
+    "bloomrooms": ("3919535", "3919535"),
+    "fabhotel ivory pearl": ("5587799", "5587799"),
+    "fabhotel": ("5587799", "5587799"),
+    "treebo tiba": ("4280268", "4280268"),
+    "treebo": ("4280268", "4280268"),
+    "hotel maurya": ("375474", "375474"),
+    "ibis bengaluru city centre": ("725958", "725958"),
+    "ibis bengaluru": ("725958", "725958"),
+    "lemon tree premier electronics city": ("306900", "306900"),
+    "lemon tree": ("306900", "306900"),
+    "fortune select jp cosmos": ("79905", "79905"),
+    "fortune select": ("79905", "79905"),
+    "the oberoi bengaluru": ("40128", "40128"),
+    "the oberoi": ("40128", "40128"),
+    "the leela palace bengaluru": ("40167", "40167"),
+    "the leela palace": ("40167", "40167"),
+    "taj west end": ("159153", "159153"),
 }
 
 
@@ -38,7 +56,12 @@ def _format_date_ct(dt_str: str) -> str:
 
 
 def _build_hotel_url(hotel_name: str, check_in: str, check_out: str, guests: int = 2) -> Optional[str]:
-    norm_name = hotel_name.lower().strip()
+    cin_str = _format_date_ct(check_in)
+    cout_str = _format_date_ct(check_out)
+    clean_name = hotel_name.strip()
+    if clean_name.isdigit():
+        return f"https://www.cleartrip.com/hotels/details/{clean_name}?c={cin_str}%7C{cout_str}&r={guests}%2C0"
+    norm_name = clean_name.lower()
     match = None
     for k, v in KNOWN_CLEARTRIP_HOTELS.items():
         if k in norm_name or norm_name in k:
@@ -47,8 +70,6 @@ def _build_hotel_url(hotel_name: str, check_in: str, check_out: str, guests: int
     if not match:
         return None
     slug = match[1]
-    cin_str = _format_date_ct(check_in)
-    cout_str = _format_date_ct(check_out)
     return f"https://www.cleartrip.com/hotels/details/{slug}?c={cin_str}%7C{cout_str}&r={guests}%2C0"
 
 
@@ -60,7 +81,7 @@ def to_probe_result_dict(raw: Dict[str, Any]) -> Dict[str, Any]:
         "price_shown_on_listing", "price_shown_on_room_selection", "price_final_payable",
         "fee_lines", "preselected_addons", "urgency_or_scarcity_messages", "price_trail",
         "currency", "notes", "listing_page_text", "payment_page_text", "rate_cohort",
-        "cheapest_any_payable", "pay_now", "pay_at_hotel"
+        "cheapest_any_payable", "pay_now", "pay_at_hotel", "verification_level"
     }
     return {k: v for k, v in raw.items() if k in probe_keys}
 

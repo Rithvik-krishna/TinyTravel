@@ -1,0 +1,330 @@
+{
+  "timestamp": "2026-11-15T11:51:47.036746+00:00",
+  "summary": {
+    "Booking.com": {
+      "runs": 3,
+      "reached_review_count": 3,
+      "gate": "none",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "avg_seconds": 8.12,
+      "verdict": "GO",
+      "reason": "Accessible via automated guest flow"
+    },
+    "EaseMyTrip": {
+      "runs": 3,
+      "reached_review_count": 0,
+      "gate": "captcha",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "avg_seconds": 9.42,
+      "verdict": "NO-GO (KILLED)",
+      "reason": "Hard-blocked by anti-bot / CAPTCHA challenge"
+    },
+    "MakeMyTrip": {
+      "runs": 3,
+      "reached_review_count": 0,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "avg_seconds": 1.09,
+      "verdict": "NO-GO (BLOCKED)",
+      "reason": "Complex multi-step SPA / authentication barriers"
+    },
+    "Goibibo": {
+      "runs": 3,
+      "reached_review_count": 0,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "avg_seconds": 1.09,
+      "verdict": "NO-GO (BLOCKED)",
+      "reason": "Complex multi-step SPA / authentication barriers"
+    }
+  },
+  "runs": [
+    {
+      "site": "Booking.com",
+      "slug": "bookingcom",
+      "run_index": 1,
+      "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+      "reached_review_page": true,
+      "gate": "none",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 8.85,
+      "endpoints_count": 20,
+      "sample_endpoints": [
+        {
+          "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+          "status": 202,
+          "size": 8864
+        },
+        {
+          "url": "https://www.booking.com/page/v0/chunk-metadata?chunk=8eb41777&mfe=b-search-web-searchresults&lang=en-gb&namespace=aYANMGZR",
+          "status": 200,
+          "size": 1564
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 274
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 287
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 186
+        }
+      ]
+    },
+    {
+      "site": "Booking.com",
+      "slug": "bookingcom",
+      "run_index": 2,
+      "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+      "reached_review_page": true,
+      "gate": "none",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 7.58,
+      "endpoints_count": 20,
+      "sample_endpoints": [
+        {
+          "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+          "status": 202,
+          "size": 8859
+        },
+        {
+          "url": "https://www.booking.com/page/v0/chunk-metadata?chunk=8eb41777&mfe=b-search-web-searchresults&lang=en-gb&namespace=aYANMGZR",
+          "status": 200,
+          "size": 1564
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 287
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 274
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 186
+        }
+      ]
+    },
+    {
+      "site": "Booking.com",
+      "slug": "bookingcom",
+      "run_index": 3,
+      "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+      "reached_review_page": true,
+      "gate": "none",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 7.93,
+      "endpoints_count": 16,
+      "sample_endpoints": [
+        {
+          "url": "https://www.booking.com/searchresults.html?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+          "status": 202,
+          "size": 8864
+        },
+        {
+          "url": "https://www.booking.com/page/v0/chunk-metadata?chunk=8eb41777&mfe=b-search-web-searchresults&lang=en-gb&namespace=aYANMGZR",
+          "status": 200,
+          "size": 1564
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 287
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 274
+        },
+        {
+          "url": "https://www.booking.com/dml/graphql?ss=Bengaluru&checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&chal_t=1794743",
+          "status": 200,
+          "size": 186
+        }
+      ]
+    },
+    {
+      "site": "EaseMyTrip",
+      "slug": "easemytrip",
+      "run_index": 1,
+      "url": "https://www.easemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "captcha",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 9.5,
+      "endpoints_count": 2,
+      "sample_endpoints": [
+        {
+          "url": "https://www.easemytrip.com/search.aspx/CheckSignIn",
+          "status": 200,
+          "size": 23
+        },
+        {
+          "url": "https://www.easemytrip.com/search.aspx/GenCustId",
+          "status": 200,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "site": "EaseMyTrip",
+      "slug": "easemytrip",
+      "run_index": 2,
+      "url": "https://www.easemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "captcha",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 9.48,
+      "endpoints_count": 2,
+      "sample_endpoints": [
+        {
+          "url": "https://www.easemytrip.com/search.aspx/CheckSignIn",
+          "status": 200,
+          "size": 23
+        },
+        {
+          "url": "https://www.easemytrip.com/search.aspx/GenCustId",
+          "status": 200,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "site": "EaseMyTrip",
+      "slug": "easemytrip",
+      "run_index": 3,
+      "url": "https://www.easemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "captcha",
+      "rate_fields_found": true,
+      "occupancy_fields_found": true,
+      "cancellation_fields_found": true,
+      "seconds": 9.27,
+      "endpoints_count": 2,
+      "sample_endpoints": [
+        {
+          "url": "https://www.easemytrip.com/search.aspx/CheckSignIn",
+          "status": 200,
+          "size": 23
+        },
+        {
+          "url": "https://www.easemytrip.com/search.aspx/GenCustId",
+          "status": 200,
+          "size": 22
+        }
+      ]
+    },
+    {
+      "site": "MakeMyTrip",
+      "slug": "makemytrip",
+      "run_index": 1,
+      "url": "https://www.makemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.06,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    },
+    {
+      "site": "MakeMyTrip",
+      "slug": "makemytrip",
+      "run_index": 2,
+      "url": "https://www.makemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.09,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    },
+    {
+      "site": "MakeMyTrip",
+      "slug": "makemytrip",
+      "run_index": 3,
+      "url": "https://www.makemytrip.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.12,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    },
+    {
+      "site": "Goibibo",
+      "slug": "goibibo",
+      "run_index": 1,
+      "url": "https://www.goibibo.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.16,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    },
+    {
+      "site": "Goibibo",
+      "slug": "goibibo",
+      "run_index": 2,
+      "url": "https://www.goibibo.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.1,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    },
+    {
+      "site": "Goibibo",
+      "slug": "goibibo",
+      "run_index": 3,
+      "url": "https://www.goibibo.com/hotels/",
+      "reached_review_page": false,
+      "gate": "other",
+      "rate_fields_found": false,
+      "occupancy_fields_found": false,
+      "cancellation_fields_found": false,
+      "seconds": 1.02,
+      "endpoints_count": 0,
+      "sample_endpoints": []
+    }
+  ]
+}

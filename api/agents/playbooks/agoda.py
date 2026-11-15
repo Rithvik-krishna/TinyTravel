@@ -55,7 +55,7 @@ def to_probe_result_dict(raw: Dict[str, Any]) -> Dict[str, Any]:
         "price_shown_on_listing", "price_shown_on_room_selection", "price_final_payable",
         "fee_lines", "preselected_addons", "urgency_or_scarcity_messages", "price_trail",
         "currency", "notes", "listing_page_text", "payment_page_text", "rate_cohort",
-        "cheapest_any_payable", "pay_now", "pay_at_hotel"
+        "cheapest_any_payable", "pay_now", "pay_at_hotel", "verification_level"
     }
     return {k: v for k, v in raw.items() if k in probe_keys}
 

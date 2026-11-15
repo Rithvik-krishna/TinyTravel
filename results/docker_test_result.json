@@ -1,0 +1,81 @@
+{
+  "container_environment": "Linux Docker (Ubuntu noble, Playwright 1.49.0)",
+  "hotel_name": "Radisson Blu Atria Bengaluru",
+  "headless": true,
+  "status": "PASS",
+  "elapsed_seconds": 21.25,
+  "reached_payment_page": true,
+  "price_final_payable": 11077.0,
+  "fee_lines_sum": 11077.0,
+  "fee_lines_reconciled": true,
+  "max_occupancy": 2,
+  "cancellation_category": null,
+  "meal_plan": "Room Only",
+  "rate_cohort": "cheapest_free_cancellation",
+  "raw_result": {
+    "site": "Cleartrip",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762?c=201126%7C211126&r=2%2C0",
+    "room_type": "Room Only",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation till 19 Nov",
+    "price_shown_on_listing": 9387.0,
+    "price_shown_on_room_selection": 9387.0,
+    "price_final_payable": 11077.0,
+    "fee_lines": [
+      {
+        "label": "Base fare",
+        "amount": 9387.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 1690.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "room",
+        "amount": 9387.0,
+        "currency": "INR"
+      },
+      {
+        "step": "traveller_details",
+        "amount": 11077.0,
+        "currency": "INR"
+      },
+      {
+        "step": "payment",
+        "amount": 11077.0,
+        "currency": "INR"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Deterministic Playwright playbook completed in 21.2s (7 steps). STOPPED at payment page.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 10611.0,
+    "pay_now": 11077.0,
+    "pay_at_hotel": 0.0,
+    "steps": 7,
+    "seconds": 21.157045,
+    "cost_usd": 0.0,
+    "status": "verified"
+  }
+}

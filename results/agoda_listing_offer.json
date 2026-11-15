@@ -1,0 +1,79 @@
+{
+  "offer_id": "off_agoda_radisson_list",
+  "hotel_id": "h_agoda_1785304",
+  "run_id": "run_agoda_list_1794743528",
+  "streaming_url": null,
+  "started_at": "2026-11-15T17:22:08.090768+05:30",
+  "finished_at": "2026-11-15T17:22:08.090768+05:30",
+  "steps": 2,
+  "cost_usd": 0.0,
+  "status": "unverified",
+  "reconciliation": null,
+  "cancellation_category": null,
+  "site": "Agoda",
+  "reached_payment_page": false,
+  "furthest_step": "listing",
+  "blocker": null,
+  "hotel_name": "Hotel Oakwood",
+  "hotel_url": "https://www.agoda.com/en-in/search?hotel=1785304&selectedproperty=1785304&city=4923&checkIn=2026-11-20&checkOut=2026-11-21&rooms=1&adults=2&currency=INR",
+  "room_type": "Deluxe Room (Listing)",
+  "max_occupancy": 2,
+  "meal_plan": "Room Only",
+  "cancellation_policy": "See property page for cancellation policy details",
+  "price_shown_on_listing": 197.86,
+  "price_shown_on_room_selection": 197.86,
+  "price_final_payable": null,
+  "fee_lines": [
+    {
+      "label": "Base Price (Excl. Tax)",
+      "amount": 197.86,
+      "fee_kind": "property_fee"
+    },
+    {
+      "label": "Estimated Taxes & Fees",
+      "amount": 1015.0,
+      "fee_kind": "tax"
+    }
+  ],
+  "preselected_addons": [],
+  "urgency_or_scarcity_messages": [],
+  "price_trail": [
+    {
+      "step": "listing_exclusive",
+      "amount": 197.86,
+      "currency": "INR"
+    },
+    {
+      "step": "listing_inclusive",
+      "amount": 1212.86,
+      "currency": "INR"
+    }
+  ],
+  "currency": "INR",
+  "notes": "Listing-level rate extracted from Agoda graphql/search: exclusive=197.86, inclusive=1212.86. Stopping before checkout.",
+  "fee_leak_pct": null,
+  "evidence": [
+    {
+      "type": "page_text",
+      "url": "/evidence/off_agoda_radisson_list_listing.txt",
+      "step": "listing",
+      "captured_at": "2026-11-15T17:22:08.090768+05:30",
+      "extracted_value": 197.86,
+      "currency": "INR",
+      "mock": false
+    }
+  ],
+  "mock": false,
+  "transparency": {
+    "score": null,
+    "breakdown": null,
+    "note": "N/A (listing-level only; checkout unverified)"
+  },
+  "listing_page_text": "Agoda Listing: Hotel Oakwood. Rate per night: INR 197.86 (exclusive), INR 1212.86 (inclusive).",
+  "payment_page_text": null,
+  "rate_cohort": "cheapest_any",
+  "cheapest_any_payable": 1212.86,
+  "pay_now": null,
+  "pay_at_hotel": null,
+  "verification_level": "listing"
+}

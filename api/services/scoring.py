@@ -481,8 +481,23 @@ def summary_strip(offers: list[dict], listings: Union[list[dict], int] = 0) -> d
     }
 
 
+def _normalize_tier(room_type: Optional[str]) -> str:
+    if not room_type:
+        return "standard"
+    rt = room_type.lower()
+    if any(k in rt for k in ["suite", "presidential", "penthouse"]):
+        return "suite"
+    elif any(k in rt for k in ["executive", "club"]):
+        return "executive"
+    elif any(k in rt for k in ["deluxe", "superior", "premium"]):
+        return "deluxe"
+    elif any(k in rt for k in ["villa", "cottage"]):
+        return "villa"
+    return "standard"
+
+
 def non_comparable_warnings(offers: list[dict]) -> list[dict]:
-    """Detect and describe differences on cancellation, meal plan, occupancy, or nights within each hotel group."""
+    """Detect and describe differences on cancellation, meal plan, occupancy, or room tier within each hotel group."""
     by_hotel: dict[str, list[dict]] = {}
     for o in offers:
         hid = o.get("hotel_id", "")
@@ -495,7 +510,7 @@ def non_comparable_warnings(offers: list[dict]) -> list[dict]:
         if len(verified) < 2:
             continue
 
-        # Cancellation category comparison
+        # 1. Cancellation category comparison
         categories = [o.get("cancellation_category") for o in verified]
         cat_counts = Counter(categories)
         majority_cat, majority_count = cat_counts.most_common(1)[0]
@@ -532,6 +547,57 @@ def non_comparable_warnings(offers: list[dict]) -> list[dict]:
                         "hotel_id": hid,
                         "offer_id": o["offer_id"],
                         "message": msg,
+                    })
+
+        # 2. Meal plan comparison
+        meals = [o.get("meal_plan", "").strip().lower() for o in verified]
+        meal_counts = Counter(meals)
+        if len(meal_counts) > 1:
+            maj_meal, maj_m_count = meal_counts.most_common(1)[0]
+            maj_m_sites = [o.get("site", "") for o in verified if o.get("meal_plan", "").strip().lower() == maj_meal]
+            maj_m_str = " and ".join(maj_m_sites) if len(maj_m_sites) == 2 else ", ".join(maj_m_sites)
+            for o in verified:
+                m = o.get("meal_plan", "").strip().lower()
+                if m != maj_meal and not any(w["offer_id"] == o["offer_id"] and "meal plan" in w["message"] for w in warnings):
+                    site_name = o.get("site", "")
+                    warnings.append({
+                        "hotel_id": hid,
+                        "offer_id": o["offer_id"],
+                        "message": f"{site_name} meal plan '{o.get('meal_plan', '')}'; not comparable with '{maj_meal}' on {maj_m_str}."
+                    })
+
+        # 3. Occupancy comparison
+        occs = [o.get("max_occupancy") for o in verified if o.get("max_occupancy") is not None]
+        occ_counts = Counter(occs)
+        if len(occ_counts) > 1:
+            maj_occ, _ = occ_counts.most_common(1)[0]
+            maj_o_sites = [o.get("site", "") for o in verified if o.get("max_occupancy") == maj_occ]
+            maj_o_str = " and ".join(maj_o_sites) if len(maj_o_sites) == 2 else ", ".join(maj_o_sites)
+            for o in verified:
+                occ = o.get("max_occupancy")
+                if occ != maj_occ and not any(w["offer_id"] == o["offer_id"] and "occupancy" in w["message"] for w in warnings):
+                    site_name = o.get("site", "")
+                    warnings.append({
+                        "hotel_id": hid,
+                        "offer_id": o["offer_id"],
+                        "message": f"{site_name} fits {occ} guests; not comparable with {maj_occ} guests on {maj_o_str}."
+                    })
+
+        # 4. Room tier comparison
+        tiers = [_normalize_tier(o.get("room_type")) for o in verified]
+        tier_counts = Counter(tiers)
+        if len(tier_counts) > 1:
+            maj_tier, _ = tier_counts.most_common(1)[0]
+            maj_t_sites = [o.get("site", "") for o in verified if _normalize_tier(o.get("room_type")) == maj_tier]
+            maj_t_str = " and ".join(maj_t_sites) if len(maj_t_sites) == 2 else ", ".join(maj_t_sites)
+            for o in verified:
+                t = _normalize_tier(o.get("room_type"))
+                if t != maj_tier and not any(w["offer_id"] == o["offer_id"] and "tier" in w["message"] for w in warnings):
+                    site_name = o.get("site", "")
+                    warnings.append({
+                        "hotel_id": hid,
+                        "offer_id": o["offer_id"],
+                        "message": f"{site_name} room is {t} tier; not comparable with {maj_tier} tier rooms on {maj_t_str}."
                     })
 
     # Currency mismatch check: detect non-INR or currency differences across offers
