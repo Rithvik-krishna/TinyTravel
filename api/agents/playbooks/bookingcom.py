@@ -71,12 +71,12 @@ async def run_bookingcom_playbook(
     hotel_url = None
     for k, v in KNOWN_BOOKING_HOTELS.items():
         if k in norm_name or norm_name in k:
-            hotel_url = f"{v}?checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR"
+            hotel_url = f"{v}?checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR&lang=en-gb"
             break
 
     if not hotel_url:
         encoded_q = hotel_name.replace(" ", "+")
-        hotel_url = f"https://www.booking.com/searchresults.html?ss={encoded_q}&checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR"
+        hotel_url = f"https://www.booking.com/searchresults.html?ss={encoded_q}&checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR&lang=en-gb"
 
     evidence_dir = Path("evidence") / "bookingcom"
     evidence_dir.mkdir(parents=True, exist_ok=True)
@@ -118,9 +118,10 @@ async def run_bookingcom_playbook(
             )
             context = await browser.new_context(
                 user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36",
-                locale="en-IN",
+                locale="en-GB",
                 timezone_id="Asia/Kolkata",
                 viewport={"width": 1280, "height": 800},
+                extra_http_headers={"Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"},
             )
             page = await context.new_page()
 
@@ -491,14 +492,49 @@ async def run_bookingcom_playbook(
 
             total_payable = float(m_total.group(1).replace(",", ""))
 
-            # Extract tax line if present on payment page
-            m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat)[:\n\r\s]*₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            if m_tax:
+            # Extract explicit tax line if present on payment page
+            m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat|टैक्स और शुल्क)[:\n\r\s]*[+₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            m_base = re.search(r'(?:price|room price|charges for \d+ room[s]?|कीमत)[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            
+            if m_tax and m_base:
+                taxes = float(m_tax.group(1).replace(",", ""))
+                base_fare = float(m_base.group(1).replace(",", ""))
+                result["fee_lines"] = [
+                    {
+                        "label": "Room rate",
+                        "amount": base_fare,
+                        "fee_kind": "other",
+                    },
+                    {
+                        "label": "Taxes & charges",
+                        "amount": taxes,
+                        "fee_kind": "tax",
+                    },
+                ]
+            elif m_tax:
                 taxes = float(m_tax.group(1).replace(",", ""))
                 base_fare = round(total_payable - taxes, 2)
+                result["fee_lines"] = [
+                    {
+                        "label": "Room rate",
+                        "amount": base_fare,
+                        "fee_kind": "other",
+                    },
+                    {
+                        "label": "Taxes & charges",
+                        "amount": taxes,
+                        "fee_kind": "tax",
+                    },
+                ]
             else:
-                base_fare = rate_amount
-                taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else 0.0
+                # No separate tax line displayed: room rate is all-inclusive
+                result["fee_lines"] = [
+                    {
+                        "label": "Total room rate (incl. taxes)",
+                        "amount": total_payable,
+                        "fee_kind": "other",
+                    },
+                ]
 
             result["furthest_step"] = "payment"
             result["reached_payment_page"] = True
@@ -519,32 +555,10 @@ async def run_bookingcom_playbook(
             else:
                 result["meal_plan"] = "Room Only"
 
-            if "free cancellation" in fin_text.lower():
+            if "free cancellation" in fin_text.lower() or "मुफ़्त कैंसलेशन" in fin_text:
                 result["cancellation_policy"] = "Free cancellation"
             else:
                 result["cancellation_policy"] = "Non-refundable"
-
-            if taxes > 0:
-                result["fee_lines"] = [
-                    {
-                        "label": "Room rate",
-                        "amount": base_fare,
-                        "fee_kind": "other",
-                    },
-                    {
-                        "label": "Taxes & charges",
-                        "amount": taxes,
-                        "fee_kind": "tax",
-                    },
-                ]
-            else:
-                result["fee_lines"] = [
-                    {
-                        "label": "Total room rate (incl. taxes)",
-                        "amount": total_payable,
-                        "fee_kind": "other",
-                    },
-                ]
 
             result["price_trail"].append({
                 "step": "payment",

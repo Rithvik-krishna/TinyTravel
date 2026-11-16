@@ -540,20 +540,20 @@ async def run_cleartrip_playbook(
 
             if parsed_fee_lines:
                 fee_lines = parsed_fee_lines
-                base = next((l["amount"] for l in fee_lines if any(k in l["label"].lower() for k in ["room", "base"])), target_rate["base_price"])
-                taxes = next((l["amount"] for l in fee_lines if "tax" in l["label"].lower()), target_rate["tax_price"])
+                base = next((l["amount"] for l in fee_lines if any(k in l["label"].lower() for k in ["room", "base"])), None)
+                taxes = next((l["amount"] for l in fee_lines if "tax" in l["label"].lower()), None)
             else:
-                base = target_rate["base_price"]
-                taxes = payable - base if payable >= base else target_rate["tax_price"]
+                base = None
+                taxes = None
                 fee_lines = [
-                    {"label": "Base fare", "amount": float(base), "fee_kind": "other"},
-                    {"label": "Hotel taxes", "amount": float(taxes), "fee_kind": "tax"},
+                    {"label": "Total payable", "amount": float(payable), "fee_kind": "other"},
                 ]
 
+            fee_breakdown_str = ", ".join(f"{l['label']}: INR {l['amount']:.0f}" for l in fee_lines)
             payment_page_text = (
                 f"Booking: {hotel_name}. Room: {target_rate['room_name']}. "
                 f"Dates: {check_in} to {check_out}, Occupancy: 1 Room, {guests} Adults. "
-                f"Base fare: INR {base:.0f}. Hotel taxes: INR {taxes:.0f}. Total: INR {payable:.0f}. "
+                f"Total: INR {payable:.0f}. Breakdown: [{fee_breakdown_str}]. "
                 f"Guest: Test Guest (test.guest+probe@example.com)."
             )
 

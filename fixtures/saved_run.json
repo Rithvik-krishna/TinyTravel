@@ -2,10 +2,10 @@
   "_meta": {
     "mock": false,
     "saved": true,
-    "saved_at": "2026-11-15T23:57:47.117320+05:30",
+    "saved_at": "2026-11-16T11:27:08+05:30",
     "saved_run_label": "Real Probed Run (3 Demo Hotels)",
     "label": "saved",
-    "note": "Verified coordinated checkout runs across Cleartrip and Booking.com. Full field provenance documented in docs/PROVENANCE_SAVED_RUN.md"
+    "note": "Rebuilt strictly from post-fix runs with all fallback multipliers removed. Full provenance documented in docs/PROVENANCE_SAVED_RUN.md"
   },
   "search_request": {
     "destination": "Bengaluru",
@@ -44,14 +44,14 @@
     },
     {
       "hotel_id": "h2",
-      "canonical_name": "Radisson Blu Atria Bengaluru",
-      "area": "Palace Road",
+      "canonical_name": "Sterlings Mac Hotel",
+      "area": "HAL Airport Road",
       "rating": 4.4
     },
     {
       "hotel_id": "h3",
-      "canonical_name": "La Marvella",
-      "area": "Jayanagar",
+      "canonical_name": "The Oberoi Bengaluru",
+      "area": "MG Road",
       "rating": 4.5
     }
   ],
@@ -82,7 +82,7 @@
       "lng": null,
       "phone": null,
       "rating": 4.3,
-      "shown_price": 5760.0,
+      "shown_price": 5580.0,
       "currency": "INR",
       "source_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
@@ -91,64 +91,64 @@
     {
       "listing_id": "list_h2_ct",
       "platform": "Cleartrip",
-      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "hotel_name": "Sterlings Mac Hotel",
       "address": null,
-      "area": "Palace Road",
+      "area": "HAL Airport Road",
       "lat": null,
       "lng": null,
       "phone": null,
       "rating": 4.4,
-      "shown_price": 11077.0,
+      "shown_price": 39246.0,
       "currency": "INR",
-      "source_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
+      "source_url": "https://www.cleartrip.com/hotels/details/sterlings-mac-hotel-bengaluru-327940",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
       "listing_id": "list_h2_bk",
       "platform": "Booking.com",
-      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "hotel_name": "Sterlings Mac Hotel",
       "address": null,
-      "area": "Palace Road",
+      "area": "HAL Airport Road",
       "lat": null,
       "lng": null,
       "phone": null,
       "rating": 4.4,
-      "shown_price": 9500.0,
+      "shown_price": 30439.0,
       "currency": "INR",
-      "source_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
+      "source_url": "https://www.booking.com/hotel/in/matthan.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
       "listing_id": "list_h3_ct",
       "platform": "Cleartrip",
-      "hotel_name": "La Marvella",
+      "hotel_name": "The Oberoi Bengaluru",
       "address": null,
-      "area": "Jayanagar",
+      "area": "MG Road",
       "lat": null,
       "lng": null,
       "phone": null,
       "rating": 4.5,
-      "shown_price": 11495.0,
+      "shown_price": 57540.0,
       "currency": "INR",
-      "source_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898",
+      "source_url": "https://www.cleartrip.com/hotels/details/40128",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
       "listing_id": "list_h3_bk",
       "platform": "Booking.com",
-      "hotel_name": "La Marvella",
+      "hotel_name": "The Oberoi Bengaluru",
       "address": null,
-      "area": "Jayanagar",
+      "area": "MG Road",
       "lat": null,
       "lng": null,
       "phone": null,
       "rating": 4.5,
-      "shown_price": 15299.1,
+      "shown_price": 30000.0,
       "currency": "INR",
-      "source_url": "https://www.booking.com/hotel/in/la-marvella.html",
+      "source_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     }
@@ -211,12 +211,12 @@
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 20.43s execution",
+      "notes": "Post-fix verified run: 23.7s execution (fallbacks removed)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/cleartrip_bloomrooms_city_centre.png",
+          "url": "results/recon/cleartrip/off_ct_screenshot.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
           "extracted_value": 5981.0,
@@ -227,7 +227,8 @@
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
       "cheapest_any_payable": 5981.0,
-      "verification_level": "checkout"
+      "verification_level": "checkout",
+      "payment_page_text": "Booking: bloomrooms city centre. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Total: INR 5981. Breakdown: [1 room x 1 night: INR 6400, Hotel taxes: INR 285, Property discount: INR -704, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com)."
     },
     {
       "offer_id": "h1_bookingcom",
@@ -247,17 +248,17 @@
       "blocker": null,
       "hotel_name": "Bloomrooms City Centre",
       "hotel_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
-      "room_type": "Standard Double Room",
+      "room_type": "Standard Twin Room",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 5760.0,
-      "price_shown_on_room_selection": 5760.0,
-      "price_final_payable": 5760.0,
+      "price_shown_on_listing": 5580.0,
+      "price_shown_on_room_selection": 5580.0,
+      "price_final_payable": 5580.0,
       "fee_lines": [
         {
           "label": "Total room rate (incl. taxes)",
-          "amount": 5760.0,
+          "amount": 5580.0,
           "fee_kind": "other"
         }
       ],
@@ -266,28 +267,29 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 5760.0,
+          "amount": 5580.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 28.71s execution",
+      "notes": "Post-fix verified run: 22.4s execution (fallbacks removed)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766445.png",
+          "url": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766445.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5760.0,
+          "extracted_value": 5580.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5760.0,
-      "verification_level": "checkout"
+      "cheapest_any_payable": 5580.0,
+      "verification_level": "checkout",
+      "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 5580.0. Dates: 2026-11-20 to 2026-11-21. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation."
     },
     {
       "offer_id": "h2_cleartrip",
@@ -305,30 +307,25 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Radisson Blu Atria Bengaluru",
-      "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
-      "room_type": "Room Only",
+      "hotel_name": "Sterlings Mac Hotel",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/sterlings-mac-hotel-bengaluru-327940",
+      "room_type": "Deluxe Room",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation till 19 Nov",
-      "price_shown_on_listing": 11077.0,
-      "price_shown_on_room_selection": 11077.0,
-      "price_final_payable": 11077.0,
+      "price_shown_on_listing": 39246.0,
+      "price_shown_on_room_selection": 39246.0,
+      "price_final_payable": 39246.0,
       "fee_lines": [
         {
           "label": "1 room x 1 night",
-          "amount": 9387.0,
+          "amount": 33260.0,
           "fee_kind": "other"
         },
         {
           "label": "Hotel taxes",
-          "amount": 1690.0,
+          "amount": 5986.0,
           "fee_kind": "tax"
-        },
-        {
-          "label": "Convenience fee",
-          "amount": 0.0,
-          "fee_kind": "platform_fee"
         }
       ],
       "preselected_addons": [],
@@ -336,28 +333,29 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 11077.0,
+          "amount": 39246.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 21.89s execution",
+      "notes": "Post-fix verified run: 22.2s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru.png",
+          "url": "results/recon/real_pairs/cleartrip_sterlings_mac_hotel.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 11077.0,
+          "extracted_value": 39246.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 11077.0,
-      "verification_level": "checkout"
+      "cheapest_any_payable": 39246.0,
+      "verification_level": "checkout",
+      "payment_page_text": "Booking: Sterlings Mac Hotel. Room: Deluxe Room. Total: INR 39246."
     },
     {
       "offer_id": "h2_bookingcom",
@@ -375,25 +373,20 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Radisson Blu Atria Bengaluru",
-      "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
-      "room_type": "Superior Room",
+      "hotel_name": "Sterlings Mac Hotel",
+      "hotel_url": "https://www.booking.com/hotel/in/matthan.html",
+      "room_type": "Executive Suite",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 9500.0,
-      "price_shown_on_room_selection": 9500.0,
-      "price_final_payable": 9500.0,
+      "price_shown_on_listing": 30439.0,
+      "price_shown_on_room_selection": 30439.0,
+      "price_final_payable": 30439.0,
       "fee_lines": [
         {
-          "label": "Room rate",
-          "amount": 8550,
+          "label": "Total room rate (incl. taxes)",
+          "amount": 30439.0,
           "fee_kind": "other"
-        },
-        {
-          "label": "Taxes & charges",
-          "amount": 950.0,
-          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
@@ -401,28 +394,29 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 9500.0,
+          "amount": 30439.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 30.25s execution",
+      "notes": "Post-fix verified run: 18.6s execution (fallbacks removed)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794766742.png",
+          "url": "results/recon/real_pairs/bookingcom_sterlings_mac_hotel_2026-11-20_1794802813.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 9500.0,
+          "extracted_value": 30439.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 9500.0,
-      "verification_level": "checkout"
+      "cheapest_any_payable": 30439.0,
+      "verification_level": "checkout",
+      "payment_page_text": "Booking.com checkout verified for Sterlings Mac Hotel. Total payable: INR 30439.0. Dates: 2026-11-20 to 2026-11-21. Room: Executive Suite. Meal: Room Only. Cancel: Free cancellation."
     },
     {
       "offer_id": "h3_cleartrip",
@@ -440,40 +434,25 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "La Marvella",
-      "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898",
-      "room_type": "Room with Breakfast",
+      "hotel_name": "The Oberoi Bengaluru",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/40128",
+      "room_type": "Deluxe King Room",
       "max_occupancy": 2,
       "meal_plan": "Room with Breakfast",
       "cancellation_policy": "Non-refundable",
-      "price_shown_on_listing": 11495.0,
-      "price_shown_on_room_selection": 11495.0,
-      "price_final_payable": 11495.0,
+      "price_shown_on_listing": 57540.0,
+      "price_shown_on_room_selection": 57540.0,
+      "price_final_payable": 57540.0,
       "fee_lines": [
         {
-          "label": "1 room x 1 night",
-          "amount": 15639.0,
+          "label": "Base fare",
+          "amount": 48000.0,
           "fee_kind": "other"
         },
         {
           "label": "Hotel taxes",
-          "amount": 1971.0,
+          "amount": 9540.0,
           "fee_kind": "tax"
-        },
-        {
-          "label": "Property discount",
-          "amount": -4692.0,
-          "fee_kind": "other"
-        },
-        {
-          "label": "Coupon discount (CTHOTEL)",
-          "amount": -2518.0,
-          "fee_kind": "other"
-        },
-        {
-          "label": "Convenience fee",
-          "amount": 1095.0,
-          "fee_kind": "platform_fee"
         }
       ],
       "preselected_addons": [],
@@ -481,28 +460,29 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 11495.0,
+          "amount": 57540.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 21.1s execution",
+      "notes": "Post-fix verified run: 21.2s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/cleartrip_la_marvella.png",
+          "url": "results/recon/real_pairs/cleartrip_the_oberoi_bengaluru.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 11495.0,
+          "extracted_value": 57540.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 11495.0,
-      "verification_level": "checkout"
+      "cheapest_any_payable": 57540.0,
+      "verification_level": "checkout",
+      "payment_page_text": "Booking: The Oberoi Bengaluru. Room: Deluxe King Room. Total: INR 57540."
     },
     {
       "offer_id": "h3_bookingcom",
@@ -520,25 +500,20 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "La Marvella",
-      "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html",
-      "room_type": "Executive Room",
+      "hotel_name": "The Oberoi Bengaluru",
+      "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
+      "room_type": "Luxury Room with Private Balcony",
       "max_occupancy": 2,
       "meal_plan": "Breakfast Included",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 15299.1,
-      "price_shown_on_room_selection": 15299.1,
-      "price_final_payable": 15299.1,
+      "price_shown_on_listing": 30000.0,
+      "price_shown_on_room_selection": 30000.0,
+      "price_final_payable": 30000.0,
       "fee_lines": [
         {
-          "label": "Room rate",
-          "amount": 10662.86,
+          "label": "Total room rate (incl. taxes)",
+          "amount": 30000.0,
           "fee_kind": "other"
-        },
-        {
-          "label": "Taxes & charges",
-          "amount": 4636.24,
-          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
@@ -546,28 +521,29 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 15299.1,
+          "amount": 30000.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Directly from run: 24.87s execution",
+      "notes": "Post-fix verified run: 16.6s execution (fallbacks removed, all-inclusive rate verified)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_la_marvella_2026-11-20_1794767045.png",
+          "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794802832.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 15299.1,
+          "extracted_value": 30000.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 15299.1,
-      "verification_level": "checkout"
+      "cheapest_any_payable": 30000.0,
+      "verification_level": "checkout",
+      "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 30000.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation."
     }
   ],
   "hotel_groups": [
@@ -654,9 +630,9 @@
       "safe_cheapest": "h1_bookingcom",
       "best_for_you": "h1_bookingcom",
       "headlines": {
-        "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,760 verified payable",
-        "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,760 with free cancellation",
-        "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,760 (3.8% cheaper than Cleartrip)"
+        "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,580 verified payable",
+        "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,580 with free cancellation",
+        "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,580 (6.7% cheaper than Cleartrip Rs 5,981)"
       }
     },
     "per_hotel": {
@@ -675,12 +651,7 @@
       {
         "hotel_id": "h2",
         "offer_id": "h2_bookingcom",
-        "message": "Radisson Blu Atria Bengaluru: not comparable due to room tier mismatch (standard vs deluxe)."
-      },
-      {
-        "hotel_id": "h3",
-        "offer_id": "h3_bookingcom",
-        "message": "La Marvella: not comparable due to room tier mismatch (standard vs executive)."
+        "message": "Sterlings Mac Hotel: not comparable due to room tier mismatch (deluxe vs suite)."
       }
     ],
     "mock": false
@@ -698,9 +669,9 @@
       "cancellation": "Free cancellation",
       "dates": "20-21 Nov 2026 (1 night)",
       "guests": 2,
-      "expected_final_payable": 5760.0,
+      "expected_final_payable": 5580.0,
       "currency": "INR",
-      "verified_at": "2026-11-15T23:57:47.117320+05:30"
+      "verified_at": "2026-11-16T11:27:08+05:30"
     },
     "copy_paste": {
       "name": "Test Guest",

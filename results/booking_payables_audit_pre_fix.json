@@ -1,0 +1,232 @@
+[
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 0,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 5760.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 1,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 5760.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 2,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 5760.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 3,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 6480.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 4,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 6480.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 5,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 6480.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 6,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 9500.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 7,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 9500.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 8,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "BLOCKED_SOLD_OUT",
+    "payable": null,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 9,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "BLOCKED_SOLD_OUT",
+    "payable": null,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 10,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 12550.0,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 11,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "BLOCKED_SOLD_OUT",
+    "payable": null,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 12,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "BLOCKED_SOLD_OUT",
+    "payable": null,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 13,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 15299.1,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 14,
+    "hotel_name": null,
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 15299.1,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 15,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 15299.1,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 16,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 15299.1,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/3demo_hotels_matrix_results.json",
+    "entry_index": 17,
+    "hotel_name": null,
+    "check_in": "2026-11-27",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 15299.1,
+    "fallback_risk": "High (contained fallback regex/tax multiplier logic)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/bookingcom_additional_checkouts.json",
+    "entry_index": 0,
+    "hotel_name": "Sterlings Mac Hotel",
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 30439.0,
+    "fallback_risk": "Medium (Oberoi Rs 30,000 omitted taxes due to lang=hi regex mismatch)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/bookingcom_additional_checkouts.json",
+    "entry_index": 1,
+    "hotel_name": "The Oberoi Bengaluru",
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": 30000.0,
+    "fallback_risk": "Medium (Oberoi Rs 30,000 omitted taxes due to lang=hi regex mismatch)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/site2_recon_results.json",
+    "entry_index": 0,
+    "hotel_name": "Booking.com Recon Search",
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": null,
+    "fallback_risk": "Catalog-only extraction (not payment review)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/site2_recon_results.json",
+    "entry_index": 1,
+    "hotel_name": "Booking.com Recon Search",
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": null,
+    "fallback_risk": "Catalog-only extraction (not payment review)",
+    "reproduced_post_fix": null
+  },
+  {
+    "source_file": "results/site2_recon_results.json",
+    "entry_index": 2,
+    "hotel_name": "Booking.com Recon Search",
+    "check_in": "2026-11-20",
+    "status": "FLAGGED_PREDATES_FIX",
+    "payable": null,
+    "fallback_risk": "Catalog-only extraction (not payment review)",
+    "reproduced_post_fix": null
+  }
+]
