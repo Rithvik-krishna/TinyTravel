@@ -31,7 +31,7 @@ def test_get_coverage_endpoint_contract():
     assert bk.checkout_capable is True
     assert bk.status == "verified"
     assert bk.success_rate >= 0.70
-    assert bk.source_file == "results/3demo_hotels_matrix_results.json"
+    assert bk.source_file in ["results/pass3_checkout_5hotels.json", "results/3demo_hotels_matrix_results.json"]
 
     # Check Agoda
     ag = next(s for s in validated.sites if s.site == "Agoda")

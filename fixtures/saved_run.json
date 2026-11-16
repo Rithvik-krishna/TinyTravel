@@ -130,7 +130,7 @@
       "lng": null,
       "phone": null,
       "rating": 4.5,
-      "shown_price": 57540.0,
+      "shown_price": 31920.0,
       "currency": "INR",
       "source_url": "https://www.cleartrip.com/hotels/details/40128",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
@@ -146,7 +146,7 @@
       "lng": null,
       "phone": null,
       "rating": 4.5,
-      "shown_price": 30000.0,
+      "shown_price": 27000.0,
       "currency": "INR",
       "source_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
@@ -172,7 +172,7 @@
       "blocker": null,
       "hotel_name": "Bloomrooms City Centre",
       "hotel_url": "https://www.cleartrip.com/hotels/details/3919535",
-      "room_type": "Room Only",
+      "room_type": "Standard Twin Room",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation till 18 Nov",
@@ -228,7 +228,7 @@
       "rate_cohort": "cheapest_free_cancellation",
       "cheapest_any_payable": 5981.0,
       "verification_level": "checkout",
-      "payment_page_text": "Booking: bloomrooms city centre. Room: Room Only. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Total: INR 5981. Breakdown: [1 room x 1 night: INR 6400, Hotel taxes: INR 285, Property discount: INR -704, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com)."
+      "payment_page_text": "Booking: bloomrooms city centre. Room: Standard Twin Room. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Total: INR 5981. Breakdown: [1 room x 1 night: INR 6400, Hotel taxes: INR 285, Property discount: INR -704, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com)."
     },
     {
       "offer_id": "h1_bookingcom",
@@ -429,30 +429,40 @@
       "cost_usd": 0.0,
       "status": "verified",
       "reconciliation": "ok",
-      "cancellation_category": "non_refundable",
+      "cancellation_category": "free",
       "site": "Cleartrip",
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
       "hotel_name": "The Oberoi Bengaluru",
       "hotel_url": "https://www.cleartrip.com/hotels/details/40128",
-      "room_type": "Deluxe King Room",
+      "room_type": "Superior Room",
       "max_occupancy": 2,
-      "meal_plan": "Room with Breakfast",
-      "cancellation_policy": "Non-refundable",
-      "price_shown_on_listing": 57540.0,
-      "price_shown_on_room_selection": 57540.0,
-      "price_final_payable": 57540.0,
+      "meal_plan": "Room Only",
+      "cancellation_policy": "Fully refundable for cancellations done before 18 Nov, 18:00 IST",
+      "price_shown_on_listing": 26880.0,
+      "price_shown_on_room_selection": 26880.0,
+      "price_final_payable": 31920.0,
       "fee_lines": [
         {
-          "label": "Base fare",
-          "amount": 48000.0,
+          "label": "1 room x 1 night",
+          "amount": 28000.0,
           "fee_kind": "other"
         },
         {
           "label": "Hotel taxes",
-          "amount": 9540.0,
+          "amount": 5040.0,
           "fee_kind": "tax"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -1120.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
         }
       ],
       "preselected_addons": [],
@@ -460,7 +470,7 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 57540.0,
+          "amount": 31920.0,
           "currency": "INR"
         }
       ],
@@ -470,19 +480,19 @@
       "evidence": [
         {
           "type": "screenshot",
-          "url": "results/recon/real_pairs/cleartrip_the_oberoi_bengaluru.png",
+          "url": "results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794852187.png",
           "step": "payment",
-          "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 57540.0,
+          "captured_at": "2026-11-16T23:33:02+05:30",
+          "extracted_value": 31920.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 57540.0,
+      "cheapest_any_payable": 31920.0,
       "verification_level": "checkout",
-      "payment_page_text": "Booking: The Oberoi Bengaluru. Room: Deluxe King Room. Total: INR 57540."
+      "payment_page_text": "Booking: The Oberoi Bengaluru. Room: Superior Room. Dates: 2026-11-20 to 2026-11-21, Occupancy: 1 Room, 2 Adults. Total: INR 31920. Breakdown: [1 room x 1 night: INR 28000, Hotel taxes: INR 5040, Coupon discount (CTHOTEL): INR -1120, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com)."
     },
     {
       "offer_id": "h3_bookingcom",
@@ -504,15 +514,15 @@
       "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
       "room_type": "Luxury Room with Private Balcony",
       "max_occupancy": 2,
-      "meal_plan": "Breakfast Included",
+      "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 30000.0,
-      "price_shown_on_room_selection": 30000.0,
-      "price_final_payable": 30000.0,
+      "price_shown_on_listing": 27000.0,
+      "price_shown_on_room_selection": 27000.0,
+      "price_final_payable": 27000.0,
       "fee_lines": [
         {
           "label": "Total room rate (incl. taxes)",
-          "amount": 30000.0,
+          "amount": 27000.0,
           "fee_kind": "other"
         }
       ],
@@ -521,7 +531,7 @@
       "price_trail": [
         {
           "step": "payment",
-          "amount": 30000.0,
+          "amount": 27000.0,
           "currency": "INR"
         }
       ],
@@ -531,19 +541,19 @@
       "evidence": [
         {
           "type": "screenshot",
-          "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794802832.png",
+          "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794852208.png",
           "step": "payment",
-          "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 30000.0,
+          "captured_at": "2026-11-16T23:33:43+05:30",
+          "extracted_value": 27000.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 30000.0,
+      "cheapest_any_payable": 27000.0,
       "verification_level": "checkout",
-      "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 30000.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation."
+      "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 27000.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation."
     }
   ],
   "hotel_groups": [
@@ -641,9 +651,9 @@
         "safe_cheapest": "h1_bookingcom",
         "best_for_you": "h1_bookingcom",
         "headlines": {
-          "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,760",
-          "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,760 with free cancellation",
-          "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,760"
+          "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,580",
+          "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,580 with free cancellation",
+          "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,580"
         }
       }
     },
@@ -652,6 +662,11 @@
         "hotel_id": "h2",
         "offer_id": "h2_bookingcom",
         "message": "Sterlings Mac Hotel: not comparable due to room tier mismatch (deluxe vs suite)."
+      },
+      {
+        "hotel_id": "h3",
+        "offer_id": "h3_bookingcom",
+        "message": "The Oberoi Bengaluru: not comparable on 2026-11-20 due to room tier mismatch (deluxe vs standard)."
       }
     ],
     "mock": false
@@ -664,7 +679,7 @@
     "qr_note": "[CONTRACT SCAFFOLDING] Real checkout handoff for lowest verified offer",
     "selection_card": {
       "hotel": "Bloomrooms City Centre",
-      "room_type": "Standard Double Room",
+      "room_type": "Standard Twin Room",
       "meal_plan": "Room Only",
       "cancellation": "Free cancellation",
       "dates": "20-21 Nov 2026 (1 night)",

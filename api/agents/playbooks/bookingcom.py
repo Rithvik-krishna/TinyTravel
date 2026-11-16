@@ -38,6 +38,10 @@ KNOWN_BOOKING_HOTELS = {
     "the leela palace bengaluru": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
     "the leela palace": "https://www.booking.com/hotel/in/the-leela-palace-bangalore.html",
     "taj west end": "https://www.booking.com/hotel/in/taj-west-end.html",
+    "hotel maurya": "https://www.booking.com/hotel/in/maurya.html",
+    "fortune select jp cosmos": "https://www.booking.com/hotel/in/fortune-select-jp-cosmos.html",
+    "lemon tree premier electronics city": "https://www.booking.com/hotel/in/lemon-tree-hotel-electronics-city.html",
+    "fabhotel ivory pearl": "https://www.booking.com/hotel/in/fabhotel-ivory-pearl-koramangala.html",
 }
 
 
@@ -168,13 +172,20 @@ async def run_bookingcom_playbook(
                     })
 
             # Check if direct property page or search listing
-            if "searchresults" in page.url:
+            if "searchresults" in page.url or "checkin" not in page.url:
+                if "searchresults" not in page.url:
+                    logger.info("Direct navigation stripped query parameters (%s); trying search flow for %s", page.url, hotel_name)
+                    encoded_q = hotel_name.replace(" ", "+")
+                    search_fallback = f"https://www.booking.com/searchresults.en-gb.html?ss={encoded_q}&checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR"
+                    await page.goto(search_fallback, wait_until="domcontentloaded", timeout=30000)
+                    await asyncio.sleep(3.0)
+
                 hotel_card = await page.query_selector('a[data-testid="title-link"]')
                 if hotel_card:
                     href = await hotel_card.get_attribute("href")
                     if href:
                         await page.goto(href, wait_until="domcontentloaded", timeout=25000)
-                        await asyncio.sleep(2.0)
+                        await asyncio.sleep(3.0)
 
             result["furthest_step"] = "room_selection"
 

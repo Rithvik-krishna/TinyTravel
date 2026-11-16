@@ -1,0 +1,536 @@
+[
+  {
+    "hotel_name": "bloomrooms city centre",
+    "cleartrip_rates_count": 2,
+    "bookingcom_rates_count": 8,
+    "has_intersection": true,
+    "intersection_count": 4,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 6586.0,
+        "ct_total": 6915.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Twin Room",
+        "bk_base": 6660,
+        "bk_total": 6993,
+        "bk_block_id": "603040402_397121283_2_0_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 6586.0,
+        "ct_total": 6915.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Twin Room",
+        "bk_base": 6480,
+        "bk_total": 6804,
+        "bk_block_id": "603040402_397121283_1_0_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 7182.0,
+        "ct_total": 7541.0,
+        "ct_button_index": 1,
+        "bk_room_name": "Standard Twin Room",
+        "bk_base": 7263,
+        "bk_total": 7626.15,
+        "bk_block_id": "603040402_397121283_2_1_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Executive Queen Room",
+      "Standard Twin Room"
+    ]
+  },
+  {
+    "hotel_name": "sterlings mac hotel",
+    "cleartrip_rates_count": 2,
+    "bookingcom_rates_count": 12,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Deluxe Suite with Complimentary evening Hi Tea (from 4pm to 6pm) and 15% Discount on F&B",
+      "Executive Suite with Complimentary evening Hi Tea (from 4pm to 6pm) and 15% Discount on F&B"
+    ]
+  },
+  {
+    "hotel_name": "the oberoi bengaluru",
+    "cleartrip_rates_count": 6,
+    "bookingcom_rates_count": 24,
+    "has_intersection": true,
+    "intersection_count": 56,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 26880.0,
+        "ct_total": 31920.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Luxury Room with Private Balcony",
+        "bk_base": 28000,
+        "bk_total": 33040.0002,
+        "bk_block_id": "7880002_364831211_2_2_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 26880.0,
+        "ct_total": 31920.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Luxury Room with Private Balcony",
+        "bk_base": 27000,
+        "bk_total": 31860.0002,
+        "bk_block_id": "7880002_364831211_1_2_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 26880.0,
+        "ct_total": 31920.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Premier Room with private balcony",
+        "bk_base": 30000,
+        "bk_total": 35400.0002,
+        "bk_block_id": "7880003_364831211_2_2_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Premier Room with private balcony",
+      "Executive Room with Private Balcony",
+      "Executive Suite With Private Balcony"
+    ]
+  },
+  {
+    "hotel_name": "radisson blu atria bengaluru",
+    "cleartrip_rates_count": 24,
+    "bookingcom_rates_count": 48,
+    "has_intersection": true,
+    "intersection_count": 48,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_room_only_non_refundable",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "non_refundable",
+        "ct_room_name": "Standard Room",
+        "ct_base": 9041.0,
+        "ct_total": 10668.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Business Room",
+        "bk_base": 10170,
+        "bk_total": 12000.6001,
+        "bk_block_id": "111844108_95900508_2_42_0_1117061"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_non_refundable",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "non_refundable",
+        "ct_room_name": "Standard Room",
+        "ct_base": 9041.0,
+        "ct_total": 10668.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Business Room",
+        "bk_base": 9945,
+        "bk_total": 11735.1001,
+        "bk_block_id": "111844108_95900508_1_42_0_1117061"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 9387.0,
+        "ct_total": 11077.0,
+        "ct_button_index": 1,
+        "bk_room_name": "Business Room",
+        "bk_base": 10575,
+        "bk_total": 12478.5001,
+        "bk_block_id": "111844108_431792859_2_42_0_1117061"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Deluxe Room",
+      "Superior Room",
+      "Business Room"
+    ]
+  },
+  {
+    "hotel_name": "la marvella",
+    "cleartrip_rates_count": 5,
+    "bookingcom_rates_count": 6,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Economy Twin Room",
+      "Executive Room",
+      "Suite"
+    ]
+  },
+  {
+    "hotel_name": "the chancery pavilion",
+    "cleartrip_rates_count": 5,
+    "bookingcom_rates_count": 0,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": []
+  },
+  {
+    "hotel_name": "the pride hotel",
+    "cleartrip_rates_count": 0,
+    "bookingcom_rates_count": 0,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [],
+    "bk_sample_rooms": []
+  },
+  {
+    "hotel_name": "hotel maurya",
+    "cleartrip_rates_count": 2,
+    "bookingcom_rates_count": 1,
+    "has_intersection": true,
+    "intersection_count": 1,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 3399.0,
+        "ct_total": 3999.0,
+        "ct_button_index": 1,
+        "bk_room_name": "Two-Bedroom Apartment",
+        "bk_base": 1079.1,
+        "bk_total": 1133.055,
+        "bk_block_id": "1739092201_445448352_2_1_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Two-Bedroom Apartment"
+    ]
+  },
+  {
+    "hotel_name": "ibis bengaluru city centre",
+    "cleartrip_rates_count": 12,
+    "bookingcom_rates_count": 21,
+    "has_intersection": true,
+    "intersection_count": 30,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 6499.0,
+        "ct_total": 6824.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Queen Room",
+        "bk_base": 6499,
+        "bk_total": 6823.95,
+        "bk_block_id": "111633201_278231150_2_42_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 6499.0,
+        "ct_total": 6824.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Twin Room ",
+        "bk_base": 6499,
+        "bk_total": 6823.95,
+        "bk_block_id": "111633202_278231150_2_42_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 7499.0,
+        "ct_total": 7874.0,
+        "ct_button_index": 1,
+        "bk_room_name": "Standard Queen Room",
+        "bk_base": 7499,
+        "bk_total": 7873.95,
+        "bk_block_id": "111633201_278231150_2_41_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Standard Queen Room",
+      "Superior Queen Room - 30% discount on F&B",
+      "Standard Twin Room "
+    ]
+  },
+  {
+    "hotel_name": "lemon tree premier electronics city",
+    "cleartrip_rates_count": 16,
+    "bookingcom_rates_count": 0,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": []
+  },
+  {
+    "hotel_name": "fortune select jp cosmos",
+    "cleartrip_rates_count": 12,
+    "bookingcom_rates_count": 12,
+    "has_intersection": true,
+    "intersection_count": 12,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 14585.0,
+        "ct_total": 17700.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Triple Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )",
+        "bk_base": 16000,
+        "bk_total": 18880.0001,
+        "bk_block_id": "25871608_441062473_2_41_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 14585.0,
+        "ct_total": 17700.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Triple Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )",
+        "bk_base": 15500,
+        "bk_total": 18290.0001,
+        "bk_block_id": "25871608_441062473_1_41_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 14585.0,
+        "ct_total": 17700.0,
+        "ct_button_index": 2,
+        "bk_room_name": "Triple Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )",
+        "bk_base": 16000,
+        "bk_total": 18880.0001,
+        "bk_block_id": "25871608_441062473_2_41_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Fortune Club Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )",
+      "Deluxe King Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )",
+      "Triple Room with 15% Discount on Food and Soft Beverages,Spa(with Prior reservation) and Laundry,Complimentary Happy Hours with 1+1 offer(available from 6:00 PM till 8:00 PM )"
+    ]
+  },
+  {
+    "hotel_name": "the leela palace bengaluru",
+    "cleartrip_rates_count": 11,
+    "bookingcom_rates_count": 20,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Royal Club rooms with Balcony, Club Lounge Access including Cocktail Hours",
+      "The Leela Signature Room",
+      "Royal Club Suite with Pool / Garden View Balcony, BMW Airport Transfers & Cocktail hours"
+    ]
+  },
+  {
+    "hotel_name": "taj west end",
+    "cleartrip_rates_count": 8,
+    "bookingcom_rates_count": 24,
+    "has_intersection": true,
+    "intersection_count": 16,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 31000.0,
+        "ct_total": 36580.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Luxury Grande Room Heritage Wing",
+        "bk_base": 31000,
+        "bk_total": 36580.0002,
+        "bk_block_id": "7473114_256459293_2_42_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_room_only_free",
+        "tier": "standard",
+        "meal": "room_only",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 31000.0,
+        "ct_total": 36580.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Luxury Grande Room Heritage Wing",
+        "bk_base": 29000,
+        "bk_total": 34220.0002,
+        "bk_block_id": "7473114_256459293_1_42_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 32000.0,
+        "ct_total": 37760.0,
+        "ct_button_index": 1,
+        "bk_room_name": "Luxury Grande Room Heritage Wing",
+        "bk_base": 32000,
+        "bk_total": 37760.0002,
+        "bk_block_id": "7473114_256459293_2_41_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Grande Luxury Suite One Bedroom Garden View King Bed",
+      "Luxury Grande Room Heritage Wing",
+      "Luxury Suite One Bedroom Garden View King Bed"
+    ]
+  },
+  {
+    "hotel_name": "treebo tiba",
+    "cleartrip_rates_count": 2,
+    "bookingcom_rates_count": 5,
+    "has_intersection": true,
+    "intersection_count": 6,
+    "matched_cohorts": [
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 1893.0,
+        "ct_total": 2216.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Double Room",
+        "bk_base": 2168.48,
+        "bk_total": 2291.689,
+        "bk_block_id": "1110505102_432088013_2_1_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 1893.0,
+        "ct_total": 2216.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Standard Double Room",
+        "bk_base": 1934.85,
+        "bk_total": 2044.7845,
+        "bk_block_id": "1110505102_432088013_1_1_0"
+      },
+      {
+        "normalized_cohort": "standard_occ2_breakfast_free",
+        "tier": "standard",
+        "meal": "breakfast",
+        "cancellation": "free",
+        "ct_room_name": "Standard Room",
+        "ct_base": 1893.0,
+        "ct_total": 2216.0,
+        "ct_button_index": 0,
+        "bk_room_name": "Economy Double Room",
+        "bk_base": 1779.62,
+        "bk_total": 1880.7345,
+        "bk_block_id": "1110505101_432088013_1_1_0"
+      }
+    ],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": [
+      "Standard Double Room",
+      "Economy Double Room",
+      "Superior Double Room"
+    ]
+  },
+  {
+    "hotel_name": "fabhotel ivory pearl",
+    "cleartrip_rates_count": 3,
+    "bookingcom_rates_count": 0,
+    "has_intersection": false,
+    "intersection_count": 0,
+    "matched_cohorts": [],
+    "ct_sample_rooms": [
+      "Standard Room"
+    ],
+    "bk_sample_rooms": []
+  }
+]

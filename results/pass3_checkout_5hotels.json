@@ -1,0 +1,622 @@
+[
+  {
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 5981.0,
+      "room_type": "Standard Twin Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation till 18 Nov",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6400.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 285.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -704.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 23.655523
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 5580.0,
+      "room_type": "Standard Twin Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 5580.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "standard_occ2_room_only_free",
+    "spread_inr": 401.0,
+    "spread_pct": 6.7,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6728.0,
+      "room_type": "Standard Twin Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation till 25 Nov",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 7200.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 320.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -792.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 24.086238
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6300.0,
+      "room_type": "Standard Twin Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6300.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "standard_occ2_room_only_free",
+    "spread_inr": 428.0,
+    "spread_pct": 6.36,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "ibis bengaluru city centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6824.0,
+      "room_type": "Twin Room, 2 Twin Beds",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 19 Nov, 00:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6499.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 325.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.845815
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6499.0,
+      "room_type": "Standard Queen Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6499.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "standard_occ2_room_only_free",
+    "spread_inr": 325.0,
+    "spread_pct": 4.76,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "ibis bengaluru city centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6825.0,
+      "room_type": "Twin Room, 2 Twin Beds",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 26 Nov, 00:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6500.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 325.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 21.314384
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 6500.0,
+      "room_type": "Standard Queen Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6500.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "standard_occ2_room_only_free",
+    "spread_inr": 325.0,
+    "spread_pct": 4.76,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "the oberoi bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 31920.0,
+      "room_type": "Superior Room",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 18 Nov, 18:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 28000.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5040.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -1120.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.624745
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 27000.0,
+      "room_type": "Luxury Room with Private Balcony",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 27000.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": false,
+    "cohort": "not_comparable",
+    "spread_inr": null,
+    "spread_pct": null,
+    "non_comparable_reason": "not comparable: room tier mismatch (deluxe vs standard)"
+  },
+  {
+    "hotel_name": "the oberoi bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 23940.0,
+      "room_type": "Deluxe Rooms with Private Balcony",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 25 Nov, 18:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 21000.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 3780.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -840.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.471045
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 20000.0,
+      "room_type": "Deluxe Room with Private Balcony",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 20000.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "deluxe_occ2_room_only_free",
+    "spread_inr": 3940.0,
+    "spread_pct": 16.46,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "radisson blu atria bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 11077.0,
+      "room_type": "Superior Room",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 19 Nov, 00:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.728901
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 9000.0,
+      "room_type": "Superior Room",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 9000.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "deluxe_occ2_room_only_free",
+    "spread_inr": 2077.0,
+    "spread_pct": 18.75,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "radisson blu atria bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 14458.0,
+      "room_type": "Superior Room",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Fully refundable for cancellations done before 26 Nov, 00:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 12253.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 2205.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.743526
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 11900.0,
+      "room_type": "Superior Room",
+      "normalized_tier": "deluxe",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 11900.0,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": true,
+    "cohort": "deluxe_occ2_room_only_free",
+    "spread_inr": 2558.0,
+    "spread_pct": 17.69,
+    "non_comparable_reason": null
+  },
+  {
+    "hotel_name": "treebo tiba",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 2216.0,
+      "room_type": "Standard Double Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room with Breakfast",
+      "normalized_meal": "breakfast",
+      "cancellation_policy": "Fully refundable for cancellations done before 19 Nov, 13:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 5587.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 108.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -3436.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -258.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 215.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.322419
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 3209.99,
+      "room_type": "Economy Double Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 3209.99,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": false,
+    "cohort": "not_comparable",
+    "spread_inr": null,
+    "spread_pct": null,
+    "non_comparable_reason": "not comparable: meal plan mismatch (breakfast vs room_only)"
+  },
+  {
+    "hotel_name": "treebo tiba",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "cleartrip": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 2229.0,
+      "room_type": "Standard Double Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room with Breakfast",
+      "normalized_meal": "breakfast",
+      "cancellation_policy": "Fully refundable for cancellations done before 26 Nov, 13:00 IST",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 5621.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 108.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -3457.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -260.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 216.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "seconds": 20.166794
+    },
+    "bookingcom": {
+      "status": "verified",
+      "reached_payment_page": true,
+      "price_final_payable": 3233.96,
+      "room_type": "Economy Double Room",
+      "normalized_tier": "standard",
+      "meal_plan": "Room Only",
+      "normalized_meal": "room_only",
+      "cancellation_policy": "Free cancellation",
+      "normalized_cancellation": "free",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 3233.96,
+          "fee_kind": "other"
+        }
+      ],
+      "seconds": null
+    },
+    "comparable": false,
+    "cohort": "not_comparable",
+    "spread_inr": null,
+    "spread_pct": null,
+    "non_comparable_reason": "not comparable: meal plan mismatch (breakfast vs room_only)"
+  }
+]

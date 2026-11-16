@@ -1,0 +1,254 @@
+[
+  {
+    "site": "Cleartrip",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-04",
+    "check_out": "2026-12-05",
+    "run_index": 1,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 5327.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable for cancellations done before 02 Dec, 14:00 IST",
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5700.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 254.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -627.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "payment_page_text": "Booking: bloomrooms city centre. Room: Standard Twin Room. Dates: 2026-12-04 to 2026-12-05, Occupancy: 1 Room, 2 Adults. Total: INR 5327. Breakdown: [1 room x 1 night: INR 5700, Hotel taxes: INR 254, Property discount: INR -627, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com).",
+    "seconds": 20.551282,
+    "notes": "Deterministic Playwright playbook completed in 20.6s (7 steps). STOPPED at payment page."
+  },
+  {
+    "site": "Booking.com",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-04",
+    "check_out": "2026-12-05",
+    "run_index": 1,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 4950.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 4950.0,
+        "fee_kind": "other"
+      }
+    ],
+    "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 4950.0. Dates: 2026-12-04 to 2026-12-05. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation.",
+    "seconds": null,
+    "notes": "Booking.com automated guest checkout playbook"
+  },
+  {
+    "site": "Cleartrip",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-04",
+    "check_out": "2026-12-05",
+    "run_index": 2,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 5327.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable for cancellations done before 02 Dec, 14:00 IST",
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5700.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 254.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -627.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "payment_page_text": "Booking: bloomrooms city centre. Room: Standard Twin Room. Dates: 2026-12-04 to 2026-12-05, Occupancy: 1 Room, 2 Adults. Total: INR 5327. Breakdown: [1 room x 1 night: INR 5700, Hotel taxes: INR 254, Property discount: INR -627, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com).",
+    "seconds": 20.826966,
+    "notes": "Deterministic Playwright playbook completed in 20.8s (7 steps). STOPPED at payment page."
+  },
+  {
+    "site": "Booking.com",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-04",
+    "check_out": "2026-12-05",
+    "run_index": 2,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 4950.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 4950.0,
+        "fee_kind": "other"
+      }
+    ],
+    "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 4950.0. Dates: 2026-12-04 to 2026-12-05. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation.",
+    "seconds": null,
+    "notes": "Booking.com automated guest checkout playbook"
+  },
+  {
+    "site": "Cleartrip",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-11",
+    "check_out": "2026-12-12",
+    "run_index": 1,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 5327.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable for cancellations done before 09 Dec, 14:00 IST",
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5700.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 254.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -627.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "payment_page_text": "Booking: bloomrooms city centre. Room: Standard Twin Room. Dates: 2026-12-11 to 2026-12-12, Occupancy: 1 Room, 2 Adults. Total: INR 5327. Breakdown: [1 room x 1 night: INR 5700, Hotel taxes: INR 254, Property discount: INR -627, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com).",
+    "seconds": 20.875657,
+    "notes": "Deterministic Playwright playbook completed in 20.9s (7 steps). STOPPED at payment page."
+  },
+  {
+    "site": "Booking.com",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-11",
+    "check_out": "2026-12-12",
+    "run_index": 1,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 4950.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 4950.0,
+        "fee_kind": "other"
+      }
+    ],
+    "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 4950.0. Dates: 2026-12-11 to 2026-12-12. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation.",
+    "seconds": null,
+    "notes": "Booking.com automated guest checkout playbook"
+  },
+  {
+    "site": "Cleartrip",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-11",
+    "check_out": "2026-12-12",
+    "run_index": 2,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 5327.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Fully refundable for cancellations done before 09 Dec, 14:00 IST",
+    "fee_lines": [
+      {
+        "label": "1 room x 1 night",
+        "amount": 5700.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Hotel taxes",
+        "amount": 254.0,
+        "fee_kind": "tax"
+      },
+      {
+        "label": "Property discount",
+        "amount": -627.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Convenience fee",
+        "amount": 0.0,
+        "fee_kind": "platform_fee"
+      }
+    ],
+    "payment_page_text": "Booking: bloomrooms city centre. Room: Standard Twin Room. Dates: 2026-12-11 to 2026-12-12, Occupancy: 1 Room, 2 Adults. Total: INR 5327. Breakdown: [1 room x 1 night: INR 5700, Hotel taxes: INR 254, Property discount: INR -627, Convenience fee: INR 0]. Guest: Test Guest (test.guest+probe@example.com).",
+    "seconds": 20.453292,
+    "notes": "Deterministic Playwright playbook completed in 20.5s (7 steps). STOPPED at payment page."
+  },
+  {
+    "site": "Booking.com",
+    "hotel_name": "bloomrooms city centre",
+    "check_in": "2026-12-11",
+    "check_out": "2026-12-12",
+    "run_index": 2,
+    "status": "verified",
+    "reached_payment_page": true,
+    "price_final_payable": 4950.0,
+    "room_type": "Standard Twin Room",
+    "occupancy": "1 Room, 2 Adults",
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 4950.0,
+        "fee_kind": "other"
+      }
+    ],
+    "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 4950.0. Dates: 2026-12-11 to 2026-12-12. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation.",
+    "seconds": null,
+    "notes": "Booking.com automated guest checkout playbook"
+  }
+]

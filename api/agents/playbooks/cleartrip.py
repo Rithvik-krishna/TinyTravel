@@ -296,7 +296,8 @@ async def run_cleartrip_playbook(
                         re.search(r'\b(room|suite|deluxe|superior|executive|classic|standard|club|studio)\b', l, re.I)
                         and not re.search(r'\b(book|fees|night|taxes|details|per|total|pay)\b', l, re.I)
                         and not re.search(r'^(?:room|rooms)$', l, re.I)
-                        and len(l) < 40
+                        and not re.search(r'\b(room only|breakfast|refundable|cancellation)\b', l, re.I)
+                        and len(l) < 50
                     ):
                         room_name = l
                         break
@@ -549,18 +550,73 @@ async def run_cleartrip_playbook(
                     {"label": "Total payable", "amount": float(payable), "fee_kind": "other"},
                 ]
 
+            # Refine room name, meal plan, and cancellation policy from itinerary page
+            itin_room_type = None
+            try:
+                page_room = await itin_page.evaluate('''() => {
+                    const all = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, div, span, p'));
+                    for (const el of all) {
+                        const txt = (el.innerText || '').trim();
+                        if (/^(Standard|Deluxe|Executive|Superior|Classic|Premium|Suite|Club|Twin|Queen|King).*(Room|Suite|Twin|King|Queen)?$/i.test(txt) && txt.length < 50 && !txt.includes('\\n')) {
+                            return txt;
+                        }
+                    }
+                    return null;
+                }''')
+                if page_room:
+                    itin_room_type = page_room
+            except Exception:
+                pass
+
+            if not itin_room_type and target_rate["room_name"] != "Room Only":
+                itin_room_type = target_rate["room_name"]
+            elif not itin_room_type:
+                itin_room_type = "Standard Room"
+
+            if "breakfast" in itin_body_text.lower():
+                itin_meal_plan = "Room with Breakfast"
+            else:
+                itin_meal_plan = "Room Only"
+
+            m_canc = re.search(r'(Fully refundable for cancellations done before [^\.\n]+|Free cancellation till [^\.\n]+)', itin_body_text, re.I)
+            if m_canc:
+                itin_canc = m_canc.group(1).strip()
+            elif "free cancellation" in itin_body_text.lower():
+                itin_canc = "Free cancellation"
+            else:
+                itin_canc = target_rate.get("cancellation_policy", "Non-refundable")
+
             fee_breakdown_str = ", ".join(f"{l['label']}: INR {l['amount']:.0f}" for l in fee_lines)
             payment_page_text = (
-                f"Booking: {hotel_name}. Room: {target_rate['room_name']}. "
+                f"Booking: {hotel_name}. Room: {itin_room_type}. "
                 f"Dates: {check_in} to {check_out}, Occupancy: 1 Room, {guests} Adults. "
                 f"Total: INR {payable:.0f}. Breakdown: [{fee_breakdown_str}]. "
                 f"Guest: Test Guest (test.guest+probe@example.com)."
             )
 
-            # Capture screenshot and save evidence files
-            payment_shot_path = evidence_dir / f"{offer_id}_screenshot.png"
-            await itin_page.screenshot(path=str(payment_shot_path))
+            # Capture screenshot and save evidence files (both unique and baseline)
+            hotel_slug = hotel_name.lower().replace(" ", "_")
+            ts_int = int(t0.timestamp())
+            unique_shot_name = f"cleartrip_{hotel_slug}_{check_in}_{ts_int}.png"
             
+            recon_dir = Path("results/recon/real_pairs")
+            recon_dir.mkdir(parents=True, exist_ok=True)
+            recon_shot_path = recon_dir / unique_shot_name
+            try:
+                await itin_page.screenshot(path=str(recon_shot_path))
+            except Exception:
+                pass
+
+            payment_shot_path = evidence_dir / f"{offer_id}_{check_in}_{ts_int}_screenshot.png"
+            await itin_page.screenshot(path=str(payment_shot_path))
+            legacy_shot_path = evidence_dir / f"{offer_id}_screenshot.png"
+            try:
+                await itin_page.screenshot(path=str(legacy_shot_path))
+            except Exception:
+                pass
+
+            (evidence_dir / f"{offer_id}_{check_in}_{ts_int}_listing.txt").write_text(listing_page_text, encoding="utf-8")
+            (evidence_dir / f"{offer_id}_{check_in}_{ts_int}_payment.txt").write_text(payment_page_text, encoding="utf-8")
             (evidence_dir / f"{offer_id}_listing.txt").write_text(listing_page_text, encoding="utf-8")
             (evidence_dir / f"{offer_id}_payment.txt").write_text(payment_page_text, encoding="utf-8")
 
@@ -583,10 +639,10 @@ async def run_cleartrip_playbook(
                 "blocker": None,
                 "hotel_name": hotel_name,
                 "hotel_url": target_url,
-                "room_type": target_rate["room_name"],
+                "room_type": itin_room_type,
                 "max_occupancy": guests,
-                "meal_plan": target_rate["meal_plan"],
-                "cancellation_policy": target_rate["cancellation_policy"],
+                "meal_plan": itin_meal_plan,
+                "cancellation_policy": itin_canc,
                 "price_shown_on_listing": float(target_rate["base_price"]),
                 "price_shown_on_room_selection": float(target_rate["base_price"]),
                 "price_final_payable": float(payable),
