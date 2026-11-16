@@ -98,6 +98,16 @@ This is an append-only log tracking all changes to the API and SSE contracts bet
   - Added `"sold_out"` to `Blocker` literal in `api/models.py` (`Blocker = Literal["captcha", "login", "otp", "timeout", "sold_out", "other"]`).
   - Added `SiteCoverage` and `CoverageResponse` models in `api/models.py`.
   - Added `GET /api/coverage` endpoint in `api/main.py` returning site verification capabilities (checkout/listing/blocked), sample count, success rate, median seconds, and blocker taxonomy.
+
+### 2026-11-16 - Nikhil
+- **Coverage Source File Provenance**:
+  - Added optional `source_file: Optional[str] = None` to `SiteCoverage` in `api/models.py`.
+  - Implemented `api/services/coverage_service.py` computing all platform coverage metrics strictly from real test run files.
+  - Where no test runs exist, sets `verification_level="not_measured"` and `reason="NOT MEASURED"`.
+  - Removed all "Production-Ready" claims.
+  - Audited `fixtures/saved_run.json` ensuring 100% provenance tracing to real run files, removing synthetic transparency scores and isolating derived contract scaffolding.
+- **Why**: Eliminates hardcoded coverage metrics, guarantees verifiable provenance, and adheres to strict zero-fabrication invariants.
+- **Fixtures updated**: Yes (`fixtures/saved_run.json` rebuilt from real checkout files).
   - Implemented 3-pass cohort comparison engine (`api/services/cohort_engine.py`) and Gemini extraction fallback (`api/services/gemini_fallback.py`) behind env flag `GEMINI_FALLBACK_EXTRACTION`.
 - **Why**: Allows deterministic detection and classification of sold-out hotel inventory, delivers platform reliability dashboard data, and guarantees 100% genuine verified data across Cleartrip and Booking.com.
 - **Fixtures updated**: Yes (`fixtures/saved_run.json` updated with real probed data, `mock: false, saved: true`).

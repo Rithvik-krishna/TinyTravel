@@ -13,6 +13,11 @@ import re
 from typing import Dict, Any, Optional
 from playwright.async_api import async_playwright
 
+try:
+    from ...services.normalize import normalize_room_tier, normalize_meal_plan
+except ImportError:
+    from services.normalize import normalize_room_tier, normalize_meal_plan
+
 logger = logging.getLogger("tinytravel.playbook.bookingcom")
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -235,14 +240,16 @@ async def run_bookingcom_playbook(
                         const hasBreakfast = /breakfast/i.test(txt);
                         const priceMatches = Array.from(txt.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
                         if (priceMatches.length === 0) return;
-                        const base = priceMatches.find(p => p >= 2000) || priceMatches[0];
+                        const base = priceMatches[0];
+                        const totalPrice = priceMatches.length > 1 ? Math.max(...priceMatches) : base;
+                        const taxes = totalPrice > base ? Math.round((totalPrice - base) * 100) / 100 : 0.0;
                         rates.push({
                             blockId: sel.name ? sel.name.replace('nr_rooms_', '') : `row_${idx}`,
                             roomName: curRoom,
                             occupancy: 2,
                             basePrice: base,
-                            totalPrice: base * 1.18,
-                            taxes: base * 0.18,
+                            totalPrice: totalPrice,
+                            taxes: taxes,
                             isFreeCancel: isFreeCancel,
                             mealPlan: hasBreakfast ? "Breakfast Included" : "Room Only",
                             source: "dom_table"
@@ -259,7 +266,9 @@ async def run_bookingcom_playbook(
                         const txt = card.innerText;
                         const priceMatches = Array.from(txt.matchAll(/₹\\s*([0-9,]+)/g)).map(m => parseFloat(m[1].replace(/,/g, '')));
                         if (priceMatches.length === 0) return;
-                        const base = priceMatches.find(p => p >= 2000) || priceMatches[0];
+                        const base = priceMatches[0];
+                        const totalPrice = priceMatches.length > 1 ? Math.max(...priceMatches) : base;
+                        const taxes = totalPrice > base ? Math.round((totalPrice - base) * 100) / 100 : 0.0;
                         const isFreeCancel = /free cancellation/i.test(txt);
                         const hasBreakfast = /breakfast/i.test(txt);
                         const sel = card.querySelector('select');
@@ -269,8 +278,8 @@ async def run_bookingcom_playbook(
                             roomName: curRoom,
                             occupancy: 2,
                             basePrice: base,
-                            totalPrice: base * 1.18,
-                            taxes: base * 0.18,
+                            totalPrice: totalPrice,
+                            taxes: taxes,
                             isFreeCancel: isFreeCancel,
                             mealPlan: hasBreakfast ? "Breakfast Included" : "Room Only",
                             source: "dom_card"
@@ -300,6 +309,29 @@ async def run_bookingcom_playbook(
                 result["notes"] = "Could not parse real room rate from Booking.com JSON state or tables/cards."
                 await browser.close()
                 return to_probe_result_dict(result)
+
+            if search_params.get("catalog_only"):
+                logger.info("Catalog only requested for Booking.com: %d rates found", len(rates))
+                await browser.close()
+                for r in rates:
+                    tier = normalize_room_tier(r["roomName"])
+                    meal_raw = r["mealPlan"]
+                    norm_meal = normalize_meal_plan(meal_raw)
+                    canc_cat = "free" if r["isFreeCancel"] else "non_refundable"
+                    r["room_name"] = r["roomName"]
+                    r["room_tier"] = tier
+                    r["base_price"] = r["basePrice"]
+                    r["tax_price"] = r.get("taxes", 0.0)
+                    r["total_price"] = r["totalPrice"]
+                    r["norm_meal_plan"] = norm_meal
+                    r["cancellation_category"] = canc_cat
+                    r["cohort"] = (tier, 2, norm_meal, canc_cat)
+                return {
+                    "site": "Booking.com",
+                    "status": "catalog",
+                    "rates": rates,
+                    "seconds": (datetime.now(IST) - t0).total_seconds(),
+                }
 
             # Target cohort or block ID matching
             target_block_id = search_params.get("target_block_id")
@@ -442,15 +474,31 @@ async def run_bookingcom_playbook(
 
             clean_fin = [float(p.replace(",", "")) for p in prices_fin]
             
-            # Find total payable
+            # Find total payable strictly (no blind max fallback)
             m_total = re.search(r'(?:total|price|amount|payable|you pay)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s]*₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            if m_total:
-                total_payable = float(m_total.group(1).replace(",", ""))
-            else:
-                total_payable = max(clean_fin)
+            if not m_total:
+                m_total = re.search(r'₹\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:total|payable)', fin_text, re.I)
 
-            base_fare = rate_amount
-            taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else 0.0
+            if not m_total:
+                result["blocker"] = "other"
+                result["reached_payment_page"] = False
+                result["furthest_step"] = "traveller_details"
+                result["price_final_payable"] = None
+                result["fee_lines"] = []
+                result["notes"] = "Could not parse explicit total payable from Booking.com payment page text."
+                await browser.close()
+                return to_probe_result_dict(result)
+
+            total_payable = float(m_total.group(1).replace(",", ""))
+
+            # Extract tax line if present on payment page
+            m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat)[:\n\r\s]*₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            if m_tax:
+                taxes = float(m_tax.group(1).replace(",", ""))
+                base_fare = round(total_payable - taxes, 2)
+            else:
+                base_fare = rate_amount
+                taxes = round(total_payable - base_fare, 2) if total_payable >= base_fare else 0.0
 
             result["furthest_step"] = "payment"
             result["reached_payment_page"] = True

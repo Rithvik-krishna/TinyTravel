@@ -1,0 +1,107 @@
+[
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "Sterlings Mac Hotel",
+    "hotel_url": "https://www.booking.com/hotel/in/matthan.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Executive Suite with Complimentary evening Hi Tea (from 4pm to 6pm) and 15% Discount on F&B",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 1000.0,
+    "price_shown_on_room_selection": 26786.32,
+    "price_final_payable": 30439.0,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 26786.32,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 3652.68,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 1000.0,
+        "timestamp": "2026-11-16T09:50:19.684590+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 26786.32,
+        "timestamp": "2026-11-16T09:50:19.945571+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 30439.0,
+        "timestamp": "2026-11-16T09:50:30.219693+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for Sterlings Mac Hotel. Total payable: INR 30439.0. Dates: 2026-11-20 to 2026-11-21. Room: Executive Suite with Complimentary evening Hi Tea (from 4pm to 6pm) and 15% Discount on F&B. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 30439.0,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout"
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "The Oberoi Bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR",
+    "room_type": "Luxury Room with Private Balcony",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 5400.0,
+    "price_shown_on_room_selection": 30000,
+    "price_final_payable": 30000.0,
+    "fee_lines": [
+      {
+        "label": "Total room rate (incl. taxes)",
+        "amount": 30000.0,
+        "fee_kind": "other"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 5400.0,
+        "timestamp": "2026-11-16T09:50:37.434872+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 30000,
+        "timestamp": "2026-11-16T09:50:37.528093+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 30000.0,
+        "timestamp": "2026-11-16T09:50:47.512912+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 30000.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 30000.0,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout"
+  }
+]

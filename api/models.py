@@ -379,6 +379,7 @@ class SiteCoverage(BaseModelForbid):
     success_rate: float = 0.0
     median_seconds: Optional[float] = None
     blocked_reasons: dict[str, int] = {}
+    source_file: Optional[str] = None
 
 
 class CoverageResponse(BaseModelForbid):

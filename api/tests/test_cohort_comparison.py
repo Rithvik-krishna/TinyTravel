@@ -10,6 +10,9 @@ from api.services.normalize import (
 )
 from api.services.scoring import non_comparable_warnings
 
+ROOT_DIR = Path(__file__).resolve().parent.parent.parent
+
+
 
 def test_normalize_room_tier():
     assert normalize_room_tier("Standard Double Room") == "standard"
@@ -140,7 +143,7 @@ def test_verification_level_model_validation():
 
 
 def test_cohort_comparison_with_fixtures():
-    demo_run_path = Path("fixtures/demo_run.json")
+    demo_run_path = ROOT_DIR / "fixtures/demo_run.json"
     assert demo_run_path.exists()
 
     with open(demo_run_path, "r", encoding="utf-8") as f:
@@ -165,7 +168,7 @@ def test_cohort_comparison_with_fixtures():
 
 
 def test_saved_cleartrip_html_analysis():
-    html_path = Path("results/recon/cleartrip/after_book_click.html")
+    html_path = ROOT_DIR / "results/recon/cleartrip/after_book_click.html"
     if html_path.exists():
         content = html_path.read_text(encoding="utf-8", errors="ignore")
         assert len(content) > 100
@@ -174,7 +177,7 @@ def test_saved_cleartrip_html_analysis():
 
 
 def test_passing_platforms_fixture_validation():
-    fixture_path = Path("fixtures/passing_platforms_offers.json")
+    fixture_path = ROOT_DIR / "fixtures/passing_platforms_offers.json"
     assert fixture_path.exists()
 
     with open(fixture_path, "r", encoding="utf-8") as f:
@@ -198,7 +201,7 @@ def test_passing_platforms_fixture_validation():
 
 
 def test_cross_platform_cohort_comparison():
-    fixture_path = Path("fixtures/passing_platforms_offers.json")
+    fixture_path = ROOT_DIR / "fixtures/passing_platforms_offers.json"
     with open(fixture_path, "r", encoding="utf-8") as f:
         offers = {o["site"]: o for o in json.load(f)}
 
@@ -237,14 +240,14 @@ def test_cross_platform_cohort_comparison():
 
 def test_saved_recon_results_exist():
     # Verify all generated recon datasets are present and non-empty
-    direct_path = Path("results/recon_direct_otas.json")
+    direct_path = ROOT_DIR / "results/recon_direct_otas.json"
     assert direct_path.exists()
     direct_data = json.loads(direct_path.read_text(encoding="utf-8"))
     assert "expedia" in direct_data
     assert "tripcom" in direct_data
     assert "onefinerate" in direct_data
 
-    brands_path = Path("results/recon_brands_and_homestays.json")
+    brands_path = ROOT_DIR / "results/recon_brands_and_homestays.json"
     assert brands_path.exists()
     brands_data = json.loads(brands_path.read_text(encoding="utf-8"))
     assert "treebo" in brands_data
@@ -252,14 +255,14 @@ def test_saved_recon_results_exist():
     assert "stayvista" in brands_data
     assert "hostelworld" in brands_data
 
-    meta_path = Path("results/recon_metasearch.json")
+    meta_path = ROOT_DIR / "results/recon_metasearch.json"
     assert meta_path.exists()
     meta_data = json.loads(meta_path.read_text(encoding="utf-8"))
     assert "googlehotels" in meta_data
     assert "trivago" in meta_data
     assert "kayak" in meta_data
 
-    docker_path = Path("results/docker_passing_sites_test.json")
+    docker_path = ROOT_DIR / "results/docker_passing_sites_test.json"
     assert docker_path.exists()
     docker_data = json.loads(docker_path.read_text(encoding="utf-8"))
     assert len(docker_data["results"]) >= 3
@@ -269,7 +272,7 @@ def test_la_marvella_saved_breakdown_and_payable():
     """Verify La Marvella breakdown from saved payment review page.
     Assures that Rs 15,639 is the undiscounted rack price, while final payable is Rs 11,604.
     """
-    html_path = Path("results/recon/cleartrip/la_marvella_payment_page.html")
+    html_path = ROOT_DIR / "results/recon/cleartrip/la_marvella_payment_page.html"
     assert html_path.exists()
     html = html_path.read_text(encoding="utf-8")
 
@@ -305,7 +308,7 @@ def test_la_marvella_saved_breakdown_and_payable():
 
 def test_cleartrip_dates_variability():
     """Verify Cleartrip date test results on same hotel across 3 dates."""
-    dates_path = Path("results/cleartrip_dates_test.json")
+    dates_path = ROOT_DIR / "results/cleartrip_dates_test.json"
     assert dates_path.exists()
     runs = json.loads(dates_path.read_text(encoding="utf-8"))
     assert len(runs) == 3
@@ -323,7 +326,8 @@ def test_cleartrip_dates_variability():
 
     # Verify screenshots exist
     for r in runs:
-        assert Path(r["screenshot"]).exists()
+        sc = ROOT_DIR / r["screenshot"] if not Path(r["screenshot"]).is_absolute() else Path(r["screenshot"])
+        assert sc.exists()
 
 
 def test_no_ranking_across_verification_levels():
@@ -370,7 +374,7 @@ def test_no_ranking_across_verification_levels():
 
 def test_payable_traceable_to_saved_page():
     """Fail if any verified offer has a payable that cannot be traced to saved evidence."""
-    demo_run = Path("fixtures/demo_run.json")
+    demo_run = ROOT_DIR / "fixtures/demo_run.json"
     if demo_run.exists():
         data = json.loads(demo_run.read_text(encoding="utf-8"))
         for off in data.get("offers", []):
@@ -394,7 +398,7 @@ def test_payable_traceable_to_saved_page():
 
 def test_unsupported_platforms_marked_blocked():
     """Verify Treebo, FabHotels, and StayVista are recorded as blocked (login/otp/layout)."""
-    bench_file = Path("results/benchmark_10runs_summary.json")
+    bench_file = ROOT_DIR / "results/benchmark_10runs_summary.json"
     if bench_file.exists():
         data = json.loads(bench_file.read_text(encoding="utf-8"))
         for t_run in data.get("treebo", []):

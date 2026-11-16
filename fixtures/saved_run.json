@@ -5,7 +5,7 @@
     "saved_at": "2026-11-15T23:57:47.117320+05:30",
     "saved_run_label": "Real Probed Run (3 Demo Hotels)",
     "label": "saved",
-    "note": "Verified coordinated checkout runs across Cleartrip and Booking.com"
+    "note": "Verified coordinated checkout runs across Cleartrip and Booking.com. Full field provenance documented in docs/PROVENANCE_SAVED_RUN.md"
   },
   "search_request": {
     "destination": "Bengaluru",
@@ -24,7 +24,7 @@
     "deal_mode": "best_value",
     "currency": "INR",
     "mock": false,
-    "raw_text": "Bengaluru, 20-21 Nov 2026, 2 adults, 1 room"
+    "raw_text": "[CONTRACT SCAFFOLDING] Bengaluru, 20-21 Nov 2026, 2 adults, 1 room"
   },
   "travel_profile": {
     "traveller_type": "couple",
@@ -57,7 +57,7 @@
   ],
   "listings": [
     {
-      "listing_id": "h1_cleartrip_listing",
+      "listing_id": "list_h1_ct",
       "platform": "Cleartrip",
       "hotel_name": "Bloomrooms City Centre",
       "address": null,
@@ -68,12 +68,12 @@
       "rating": 4.3,
       "shown_price": 5981.0,
       "currency": "INR",
-      "source_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
+      "source_url": "https://www.cleartrip.com/hotels/details/3919535",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
-      "listing_id": "h1_bookingcom_listing",
+      "listing_id": "list_h1_bk",
       "platform": "Booking.com",
       "hotel_name": "Bloomrooms City Centre",
       "address": null,
@@ -84,71 +84,71 @@
       "rating": 4.3,
       "shown_price": 5760.0,
       "currency": "INR",
-      "source_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
+      "source_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
-      "listing_id": "h1_cleartrip_listing",
+      "listing_id": "list_h2_ct",
       "platform": "Cleartrip",
-      "hotel_name": "Bloomrooms City Centre",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
       "address": null,
-      "area": "Cunningham Road",
+      "area": "Palace Road",
       "lat": null,
       "lng": null,
       "phone": null,
-      "rating": 4.3,
-      "shown_price": 5981.0,
+      "rating": 4.4,
+      "shown_price": 11077.0,
       "currency": "INR",
-      "source_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
+      "source_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
-      "listing_id": "h1_bookingcom_listing",
+      "listing_id": "list_h2_bk",
       "platform": "Booking.com",
-      "hotel_name": "Bloomrooms City Centre",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
       "address": null,
-      "area": "Cunningham Road",
+      "area": "Palace Road",
       "lat": null,
       "lng": null,
       "phone": null,
-      "rating": 4.3,
-      "shown_price": 5760.0,
+      "rating": 4.4,
+      "shown_price": 9500.0,
       "currency": "INR",
-      "source_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
+      "source_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
-      "listing_id": "h1_cleartrip_listing",
+      "listing_id": "list_h3_ct",
       "platform": "Cleartrip",
-      "hotel_name": "Bloomrooms City Centre",
+      "hotel_name": "La Marvella",
       "address": null,
-      "area": "Cunningham Road",
+      "area": "Jayanagar",
       "lat": null,
       "lng": null,
       "phone": null,
-      "rating": 4.3,
-      "shown_price": 5981.0,
+      "rating": 4.5,
+      "shown_price": 11495.0,
       "currency": "INR",
-      "source_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
+      "source_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     },
     {
-      "listing_id": "h1_bookingcom_listing",
+      "listing_id": "list_h3_bk",
       "platform": "Booking.com",
-      "hotel_name": "Bloomrooms City Centre",
+      "hotel_name": "La Marvella",
       "address": null,
-      "area": "Cunningham Road",
+      "area": "Jayanagar",
       "lat": null,
       "lng": null,
       "phone": null,
-      "rating": 4.3,
-      "shown_price": 5760.0,
+      "rating": 4.5,
+      "shown_price": 15299.1,
       "currency": "INR",
-      "source_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
+      "source_url": "https://www.booking.com/hotel/in/la-marvella.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
       "mock": false
     }
@@ -171,7 +171,7 @@
       "furthest_step": "payment",
       "blocker": null,
       "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/3919535",
       "room_type": "Room Only",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
@@ -205,18 +205,13 @@
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5981.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
           "amount": 5981.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Cleartrip",
+      "notes": "Directly from run: 20.43s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
@@ -230,16 +225,6 @@
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.4,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.0,
-          "evidence": 9.0
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
       "cheapest_any_payable": 5981.0,
       "verification_level": "checkout"
@@ -261,7 +246,7 @@
       "furthest_step": "payment",
       "blocker": null,
       "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
+      "hotel_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
       "room_type": "Standard Double Room",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
@@ -280,23 +265,18 @@
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5760.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
           "amount": 5760.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Booking.com",
+      "notes": "Directly from run: 28.71s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_bloomrooms_city_centre.png",
+          "url": "/results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766445.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
           "extracted_value": 5760.0,
@@ -305,24 +285,14 @@
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.6,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.5,
-          "evidence": 9.5
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
       "cheapest_any_payable": 5760.0,
       "verification_level": "checkout"
     },
     {
-      "offer_id": "h1_cleartrip",
-      "hotel_id": "h1",
-      "run_id": "real_run_h1_ct",
+      "offer_id": "h2_cleartrip",
+      "hotel_id": "h2",
+      "run_id": "real_run_h2_ct",
       "streaming_url": null,
       "started_at": "2026-11-15T23:57:47.117320+05:30",
       "finished_at": "2026-11-15T23:57:47.117320+05:30",
@@ -335,30 +305,25 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
       "room_type": "Room Only",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
-      "cancellation_policy": "Free cancellation till 18 Nov",
-      "price_shown_on_listing": 5981.0,
-      "price_shown_on_room_selection": 5981.0,
-      "price_final_payable": 5981.0,
+      "cancellation_policy": "Free cancellation till 19 Nov",
+      "price_shown_on_listing": 11077.0,
+      "price_shown_on_room_selection": 11077.0,
+      "price_final_payable": 11077.0,
       "fee_lines": [
         {
           "label": "1 room x 1 night",
-          "amount": 6400.0,
+          "amount": 9387.0,
           "fee_kind": "other"
         },
         {
           "label": "Hotel taxes",
-          "amount": 285.0,
+          "amount": 1690.0,
           "fee_kind": "tax"
-        },
-        {
-          "label": "Property discount",
-          "amount": -704.0,
-          "fee_kind": "other"
         },
         {
           "label": "Convenience fee",
@@ -370,49 +335,34 @@
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5981.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
-          "amount": 5981.0,
+          "amount": 11077.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Cleartrip",
+      "notes": "Directly from run: 21.89s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/cleartrip_bloomrooms_city_centre.png",
+          "url": "/results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5981.0,
+          "extracted_value": 11077.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.4,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.0,
-          "evidence": 9.0
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5981.0,
+      "cheapest_any_payable": 11077.0,
       "verification_level": "checkout"
     },
     {
-      "offer_id": "h1_bookingcom",
-      "hotel_id": "h1",
-      "run_id": "real_run_h1_bk",
+      "offer_id": "h2_bookingcom",
+      "hotel_id": "h2",
+      "run_id": "real_run_h2_bk",
       "streaming_url": null,
       "started_at": "2026-11-15T23:57:47.117320+05:30",
       "finished_at": "2026-11-15T23:57:47.117320+05:30",
@@ -425,69 +375,59 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
-      "room_type": "Standard Double Room",
+      "hotel_name": "Radisson Blu Atria Bengaluru",
+      "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
+      "room_type": "Superior Room",
       "max_occupancy": 2,
       "meal_plan": "Room Only",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 5760.0,
-      "price_shown_on_room_selection": 5760.0,
-      "price_final_payable": 5760.0,
+      "price_shown_on_listing": 9500.0,
+      "price_shown_on_room_selection": 9500.0,
+      "price_final_payable": 9500.0,
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
-          "amount": 5760.0,
+          "label": "Room rate",
+          "amount": 8550,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 950.0,
+          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5760.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
-          "amount": 5760.0,
+          "amount": 9500.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Booking.com",
+      "notes": "Directly from run: 30.25s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_bloomrooms_city_centre.png",
+          "url": "/results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794766742.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5760.0,
+          "extracted_value": 9500.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.6,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.5,
-          "evidence": 9.5
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5760.0,
+      "cheapest_any_payable": 9500.0,
       "verification_level": "checkout"
     },
     {
-      "offer_id": "h1_cleartrip",
-      "hotel_id": "h1",
-      "run_id": "real_run_h1_ct",
+      "offer_id": "h3_cleartrip",
+      "hotel_id": "h3",
+      "run_id": "real_run_h3_ct",
       "streaming_url": null,
       "started_at": "2026-11-15T23:57:47.117320+05:30",
       "finished_at": "2026-11-15T23:57:47.117320+05:30",
@@ -495,39 +435,44 @@
       "cost_usd": 0.0,
       "status": "verified",
       "reconciliation": "ok",
-      "cancellation_category": "free",
+      "cancellation_category": "non_refundable",
       "site": "Cleartrip",
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.cleartrip.com/hotels/details/Bloomrooms City Centre",
-      "room_type": "Room Only",
+      "hotel_name": "La Marvella",
+      "hotel_url": "https://www.cleartrip.com/hotels/details/la-marvella-2050898",
+      "room_type": "Room with Breakfast",
       "max_occupancy": 2,
-      "meal_plan": "Room Only",
-      "cancellation_policy": "Free cancellation till 18 Nov",
-      "price_shown_on_listing": 5981.0,
-      "price_shown_on_room_selection": 5981.0,
-      "price_final_payable": 5981.0,
+      "meal_plan": "Room with Breakfast",
+      "cancellation_policy": "Non-refundable",
+      "price_shown_on_listing": 11495.0,
+      "price_shown_on_room_selection": 11495.0,
+      "price_final_payable": 11495.0,
       "fee_lines": [
         {
           "label": "1 room x 1 night",
-          "amount": 6400.0,
+          "amount": 15639.0,
           "fee_kind": "other"
         },
         {
           "label": "Hotel taxes",
-          "amount": 285.0,
+          "amount": 1971.0,
           "fee_kind": "tax"
         },
         {
           "label": "Property discount",
-          "amount": -704.0,
+          "amount": -4692.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -2518.0,
           "fee_kind": "other"
         },
         {
           "label": "Convenience fee",
-          "amount": 0.0,
+          "amount": 1095.0,
           "fee_kind": "platform_fee"
         }
       ],
@@ -535,49 +480,34 @@
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5981.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
-          "amount": 5981.0,
+          "amount": 11495.0,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Cleartrip",
+      "notes": "Directly from run: 21.1s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/cleartrip_bloomrooms_city_centre.png",
+          "url": "/results/recon/real_pairs/cleartrip_la_marvella.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5981.0,
+          "extracted_value": 11495.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.4,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.0,
-          "evidence": 9.0
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5981.0,
+      "cheapest_any_payable": 11495.0,
       "verification_level": "checkout"
     },
     {
-      "offer_id": "h1_bookingcom",
-      "hotel_id": "h1",
-      "run_id": "real_run_h1_bk",
+      "offer_id": "h3_bookingcom",
+      "hotel_id": "h3",
+      "run_id": "real_run_h3_bk",
       "streaming_url": null,
       "started_at": "2026-11-15T23:57:47.117320+05:30",
       "finished_at": "2026-11-15T23:57:47.117320+05:30",
@@ -590,120 +520,56 @@
       "reached_payment_page": true,
       "furthest_step": "payment",
       "blocker": null,
-      "hotel_name": "Bloomrooms City Centre",
-      "hotel_url": "https://www.booking.com/hotel/in/Bloomrooms City Centre",
-      "room_type": "Standard Double Room",
+      "hotel_name": "La Marvella",
+      "hotel_url": "https://www.booking.com/hotel/in/la-marvella.html",
+      "room_type": "Executive Room",
       "max_occupancy": 2,
-      "meal_plan": "Room Only",
+      "meal_plan": "Breakfast Included",
       "cancellation_policy": "Free cancellation",
-      "price_shown_on_listing": 5760.0,
-      "price_shown_on_room_selection": 5760.0,
-      "price_final_payable": 5760.0,
+      "price_shown_on_listing": 15299.1,
+      "price_shown_on_room_selection": 15299.1,
+      "price_final_payable": 15299.1,
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
-          "amount": 5760.0,
+          "label": "Room rate",
+          "amount": 10662.86,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4636.24,
+          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
       "urgency_or_scarcity_messages": [],
       "price_trail": [
         {
-          "step": "listing",
-          "amount": 5760.0,
-          "currency": "INR"
-        },
-        {
           "step": "payment",
-          "amount": 5760.0,
+          "amount": 15299.1,
           "currency": "INR"
         }
       ],
       "currency": "INR",
-      "notes": "Verified guest checkout on Booking.com",
+      "notes": "Directly from run: 24.87s execution",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "/results/recon/real_pairs/bookingcom_bloomrooms_city_centre.png",
+          "url": "/results/recon/real_pairs/bookingcom_la_marvella_2026-11-20_1794767045.png",
           "step": "payment",
           "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5760.0,
+          "extracted_value": 15299.1,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
-      "transparency": {
-        "score": 9.6,
-        "breakdown": {
-          "fee_leak": 10.0,
-          "addons_pressure": 9.5,
-          "price_stability": 9.5,
-          "evidence": 9.5
-        },
-        "note": "Fully reconciled all-in price verified on payment page."
-      },
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5760.0,
+      "cheapest_any_payable": 15299.1,
       "verification_level": "checkout"
     }
   ],
-  "verdicts": {
-    "deal_mode": "best_value",
-    "hero_hotel_id": "h1",
-    "ranking": [
-      {
-        "offer_id": "h1_bookingcom",
-        "total": 9.6,
-        "components": {
-          "transparency": 9.6,
-          "price": 9.8,
-          "cancellation": 9.5
-        },
-        "weights": {
-          "transparency": 0.4,
-          "price": 0.4,
-          "cancellation": 0.2
-        }
-      },
-      {
-        "offer_id": "h1_cleartrip",
-        "total": 9.2,
-        "components": {
-          "transparency": 9.4,
-          "price": 9.2,
-          "cancellation": 9.0
-        },
-        "weights": {
-          "transparency": 0.4,
-          "price": 0.4,
-          "cancellation": 0.2
-        }
-      }
-    ],
-    "overall": {
-      "cheapest_verified": "h1_bookingcom",
-      "safe_cheapest": "h1_bookingcom",
-      "best_for_you": "h1_bookingcom",
-      "headlines": {
-        "cheapest_verified": "Booking.com is \u20b9401 (7.2%) cheaper than Cleartrip for Bloomrooms City Centre.",
-        "safe_cheapest": "Both offer verified free cancellation with 100% price breakdown reconciliation."
-      }
-    },
-    "per_hotel": {
-      "h1": {
-        "cheapest_verified": "h1_bookingcom",
-        "safe_cheapest": "h1_bookingcom",
-        "best_for_you": "h1_bookingcom",
-        "headlines": {
-          "cheapest_verified": "Booking.com wins on price (INR 5,580 vs INR 5,981 on Cleartrip)"
-        }
-      }
-    },
-    "non_comparable_warnings": []
-  },
   "hotel_groups": [
     {
       "hotel_id": "h1",
@@ -711,7 +577,7 @@
       "area": "Cunningham Road",
       "match_status": "merged",
       "confidence": 1.0,
-      "why": "Exact property match across Cleartrip and Booking.com",
+      "why": "[DERIVED POST-RUN] Exact property match",
       "offer_ids": [
         "h1_cleartrip",
         "h1_bookingcom"
@@ -723,7 +589,7 @@
       "area": "Palace Road",
       "match_status": "suggested",
       "confidence": 0.95,
-      "why": "Exact property name match; room tiers differed",
+      "why": "[DERIVED POST-RUN] Property matched, room tiers differed",
       "offer_ids": [
         "h2_cleartrip",
         "h2_bookingcom"
@@ -735,19 +601,96 @@
       "area": "Jayanagar",
       "match_status": "suggested",
       "confidence": 0.95,
-      "why": "Exact property name match; room tiers differed",
+      "why": "[DERIVED POST-RUN] Property matched, room tiers differed",
       "offer_ids": [
         "h3_cleartrip",
         "h3_bookingcom"
       ]
     }
   ],
+  "verdicts": {
+    "deal_mode": "best_value",
+    "hero_hotel_id": "h1",
+    "ranking": [
+      {
+        "offer_id": "h1_bookingcom",
+        "total": 96.2,
+        "components": {
+          "price": 100.0,
+          "prefs": 100.0,
+          "cancellation": 100.0,
+          "quality": 86.0,
+          "transparency": 95.0
+        },
+        "weights": {
+          "price": 35.0,
+          "prefs": 25.0,
+          "cancellation": 20.0,
+          "quality": 10.0,
+          "transparency": 10.0
+        }
+      },
+      {
+        "offer_id": "h1_cleartrip",
+        "total": 92.4,
+        "components": {
+          "price": 96.2,
+          "prefs": 100.0,
+          "cancellation": 100.0,
+          "quality": 86.0,
+          "transparency": 90.0
+        },
+        "weights": {
+          "price": 35.0,
+          "prefs": 25.0,
+          "cancellation": 20.0,
+          "quality": 10.0,
+          "transparency": 10.0
+        }
+      }
+    ],
+    "overall": {
+      "cheapest_verified": "h1_bookingcom",
+      "safe_cheapest": "h1_bookingcom",
+      "best_for_you": "h1_bookingcom",
+      "headlines": {
+        "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,760 verified payable",
+        "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,760 with free cancellation",
+        "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,760 (3.8% cheaper than Cleartrip)"
+      }
+    },
+    "per_hotel": {
+      "h1": {
+        "cheapest_verified": "h1_bookingcom",
+        "safe_cheapest": "h1_bookingcom",
+        "best_for_you": "h1_bookingcom",
+        "headlines": {
+          "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,760",
+          "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,760 with free cancellation",
+          "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,760"
+        }
+      }
+    },
+    "non_comparable_warnings": [
+      {
+        "hotel_id": "h2",
+        "offer_id": "h2_bookingcom",
+        "message": "Radisson Blu Atria Bengaluru: not comparable due to room tier mismatch (standard vs deluxe)."
+      },
+      {
+        "hotel_id": "h3",
+        "offer_id": "h3_bookingcom",
+        "message": "La Marvella: not comparable due to room tier mismatch (standard vs executive)."
+      }
+    ],
+    "mock": false
+  },
   "handoff": {
     "offer_id": "h1_bookingcom",
     "platform": "Booking.com",
     "deep_link": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
     "qr_png_base64": "",
-    "qr_note": "Probed real checkout handoff: Booking.com verified lowest payable",
+    "qr_note": "[CONTRACT SCAFFOLDING] Real checkout handoff for lowest verified offer",
     "selection_card": {
       "hotel": "Bloomrooms City Centre",
       "room_type": "Standard Double Room",
@@ -757,7 +700,7 @@
       "guests": 2,
       "expected_final_payable": 5760.0,
       "currency": "INR",
-      "verified_at": "2026-11-15T23:57:47+05:30"
+      "verified_at": "2026-11-15T23:57:47.117320+05:30"
     },
     "copy_paste": {
       "name": "Test Guest",
@@ -771,9 +714,9 @@
   "summary_strip": {
     "listings_found": 6,
     "unique_hotels": 3,
-    "verified": 4,
-    "unverified": 2,
+    "verified": 6,
+    "unverified": 0,
     "blocked": 0,
-    "avg_fee_leak_pct": 4.2
+    "avg_fee_leak_pct": 0.0
   }
 }

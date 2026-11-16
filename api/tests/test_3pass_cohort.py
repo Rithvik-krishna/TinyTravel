@@ -220,8 +220,55 @@ def test_compare_coordinated_runs_unmatched():
         "price_final_payable": 32265.0,
     }
 
-    res = compare_coordinated_runs("Sterlings Mac Hotel", ct_offer, bk_offer)
+@pytest.mark.anyio
+async def test_cohort_engine_stops_before_checkout_when_intersection_empty():
+    """Verify that if cohort intersection is empty, execution stops before checkout.
+    
+    No checkout playbook is called; returns status='NOT COMPARABLE' with stopped_before_checkout=True.
+    """
+    from api.services.cohort_engine import run_3pass_cohort_verification
+
+    # Disjoint catalogs: Cleartrip only has standard, Booking.com only has suite
+    ct_rates = [
+        {
+            "button_index": 0,
+            "room_name": "Standard Room Only",
+            "room_tier": "standard",
+            "max_occupancy": 2,
+            "norm_meal_plan": "room_only",
+            "cancellation_category": "free",
+            "total_price": 5000.0,
+            "cohort": ("standard", 2, "room_only", "free"),
+        }
+    ]
+    bk_rates = [
+        {
+            "block_id": "blk_presidential",
+            "room_name": "Presidential Suite",
+            "room_tier": "suite",
+            "max_occupancy": 2,
+            "norm_meal_plan": "breakfast",
+            "cancellation_category": "free",
+            "total_price": 35000.0,
+            "cohort": ("suite", 2, "breakfast", "free"),
+        }
+    ]
+
+    res = await run_3pass_cohort_verification(
+        hotel_name="Radisson Blu Atria Bengaluru",
+        check_in="2026-11-20",
+        check_out="2026-11-21",
+        guests=2,
+        headless=True,
+        ct_rates=ct_rates,
+        bk_rates=bk_rates,
+    )
+
     assert res["comparable"] is False
     assert res["status"] == "NOT COMPARABLE"
+    assert res["stopped_before_checkout"] is True
+    assert res["cleartrip_payable"] is None
+    assert res["bookingcom_payable"] is None
     assert res["spread_inr"] is None
-    assert "not comparable" in res["reason"]
+    assert "No overlapping cohort found" in res["reason"]
+

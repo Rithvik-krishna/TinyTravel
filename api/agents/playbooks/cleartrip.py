@@ -12,6 +12,11 @@ from pathlib import Path
 import re
 from typing import Dict, Any, Optional
 
+try:
+    from ...services.normalize import normalize_room_tier, normalize_meal_plan
+except ImportError:
+    from services.normalize import normalize_room_tier, normalize_meal_plan
+
 logger = logging.getLogger("tinytravel.playbook.cleartrip")
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -322,6 +327,24 @@ async def run_cleartrip_playbook(
                     "seconds": (datetime.now(IST) - t0).total_seconds(),
                     "notes": "Failed to parse rate details from Cleartrip DOM.",
                     "cost_usd": 0.0,
+                }
+
+            if req.get("catalog_only"):
+                logger.info("Catalog only requested for Cleartrip: %d rates found", len(parsed_rates))
+                await browser.close()
+                for pr in parsed_rates:
+                    tier = normalize_room_tier(pr["room_name"])
+                    norm_meal = normalize_meal_plan(pr["meal_plan"])
+                    canc_cat = "free" if pr["free_cancellation"] else "non_refundable"
+                    pr["room_tier"] = tier
+                    pr["norm_meal_plan"] = norm_meal
+                    pr["cancellation_category"] = canc_cat
+                    pr["cohort"] = (tier, guests, norm_meal, canc_cat)
+                return {
+                    "site": "Cleartrip",
+                    "status": "catalog",
+                    "rates": parsed_rates,
+                    "seconds": (datetime.now(IST) - t0).total_seconds(),
                 }
 
             # Deterministic selection:

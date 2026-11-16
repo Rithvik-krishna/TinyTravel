@@ -255,11 +255,13 @@ async def run_3pass_cohort_verification(
     check_out: str = "2026-11-21",
     guests: int = 2,
     headless: bool = False,
+    ct_rates: Optional[List[Dict[str, Any]]] = None,
+    bk_rates: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """Execute 3-Pass Cohort Verification:
     Pass 1: Catalog rates on Cleartrip and Booking.com.
     Pass 2: Intersect (room_tier, occupancy >= 2, meal_plan, cancellation_category).
-            If intersection is empty -> NOT COMPARABLE.
+            If intersection is empty -> STOP before checkout and return NOT COMPARABLE.
     Pass 3: Coordinated checkout targeting the exact matching cohort on both platforms.
     """
     req_ct = {
@@ -277,26 +279,69 @@ async def run_3pass_cohort_verification(
         "destination": "Bengaluru",
     }
 
-    # Pass 1 & 3: Run Cleartrip with cohort pinning
-    logger.info("Pass 1/3: Running Cleartrip checkout for %s (%s to %s)...", hotel_name, check_in, check_out)
-    ct_offer = await run_cleartrip_playbook(hotel_name, req_ct, headless=headless)
-    logger.info("Cleartrip result: reached=%s, payable=%s, room=%s, meal=%s, cancel=%s",
-                ct_offer.get("reached_payment_page"), ct_offer.get("price_final_payable"),
-                ct_offer.get("room_type"), ct_offer.get("meal_plan"), ct_offer.get("cancellation_policy"))
+    # Pass 1: Catalog extraction (if not pre-provided)
+    if ct_rates is None:
+        logger.info("Pass 1: Extracting Cleartrip catalog for %s...", hotel_name)
+        req_ct_cat = dict(req_ct, catalog_only=True)
+        ct_cat_res = await run_cleartrip_playbook(hotel_name, req_ct_cat, headless=headless)
+        ct_rates = ct_cat_res.get("rates", [])
 
-    # Pass 2: Pin Booking.com checkout to target the exact same cohort as Cleartrip
-    ct_cohort = cohort_key(ct_offer)
-    req_bk["target_cohort"] = ct_cohort
-    logger.info("Pass 2/3: Running Booking.com checkout targeting cohort %s...", ct_cohort)
+    if bk_rates is None:
+        logger.info("Pass 1: Extracting Booking.com catalog for %s...", hotel_name)
+        req_bk_cat = dict(req_bk, catalog_only=True)
+        bk_cat_res = await run_bookingcom_playbook(hotel_name, req_bk_cat, headless=headless)
+        bk_rates = bk_cat_res.get("rates", [])
+
+    # Pass 2: Cohort Intersection
+    inter_res = intersect_catalogs(ct_rates, bk_rates)
+    if not inter_res["comparable"]:
+        logger.info("Pass 2: Empty cohort intersection for %s. Stopping before checkout.", hotel_name)
+        return {
+            "hotel_name": hotel_name,
+            "status": "NOT COMPARABLE",
+            "comparable": False,
+            "stopped_before_checkout": True,
+            "reason": inter_res["reason"],
+            "check_in": check_in,
+            "check_out": check_out,
+            "common_cohorts": [],
+            "selected_cohort": None,
+            "cleartrip_payable": None,
+            "bookingcom_payable": None,
+            "spread_inr": None,
+            "spread_pct": None,
+            "cheaper_platform": None,
+            "cleartrip_catalog_count": len(ct_rates),
+            "bookingcom_catalog_count": len(bk_rates),
+            "cleartrip_details": {"reached_payment_page": False, "rates_found": len(ct_rates)},
+            "bookingcom_details": {"reached_payment_page": False, "rates_found": len(bk_rates)},
+        }
+
+    # Pass 3: Coordinated Checkout (only if intersection is non-empty)
+    chosen_cohort = inter_res["selected_cohort"]
+    sel_ct = inter_res["selected_ct_rate"]
+    sel_bk = inter_res["selected_bk_rate"]
+
+    req_ct["target_cohort"] = chosen_cohort
+    if sel_ct and "button_index" in sel_ct:
+        req_ct["target_button_index"] = sel_ct["button_index"]
+
+    req_bk["target_cohort"] = chosen_cohort
+    if sel_bk and "block_id" in sel_bk:
+        req_bk["target_block_id"] = sel_bk["block_id"]
+
+    logger.info("Pass 3: Running Cleartrip coordinated checkout targeting %s...", chosen_cohort)
+    ct_offer = await run_cleartrip_playbook(hotel_name, req_ct, headless=headless)
+
+    logger.info("Pass 3: Running Booking.com coordinated checkout targeting %s...", chosen_cohort)
     bk_offer = await run_bookingcom_playbook(hotel_name, req_bk, headless=headless)
-    logger.info("Booking.com result: reached=%s, payable=%s, room=%s, meal=%s, cancel=%s",
-                bk_offer.get("reached_payment_page"), bk_offer.get("price_final_payable"),
-                bk_offer.get("room_type"), bk_offer.get("meal_plan"), bk_offer.get("cancellation_policy"))
 
     # Evaluate comparison
     comp = compare_coordinated_runs(hotel_name, ct_offer, bk_offer)
     comp["check_in"] = check_in
     comp["check_out"] = check_out
+    comp["stopped_before_checkout"] = False
+    comp["selected_cohort"] = str(chosen_cohort)
     comp["cleartrip_details"] = {
         "reached_payment_page": ct_offer.get("reached_payment_page"),
         "payable": ct_offer.get("price_final_payable"),

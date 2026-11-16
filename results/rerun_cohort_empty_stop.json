@@ -1,0 +1,54 @@
+[
+  {
+    "hotel_name": "Radisson Blu Atria Bengaluru",
+    "status": "NOT COMPARABLE",
+    "comparable": false,
+    "stopped_before_checkout": true,
+    "reason": "No overlapping cohort found. Cleartrip cohorts: [('standard', 2, 'room_only', 'non_refundable'), ('standard', 2, 'room_only', 'free'), ('standard', 2, 'breakfast', 'non_refundable'), ('standard', 2, 'breakfast', 'free')]. Booking.com cohorts: [].",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "common_cohorts": [],
+    "selected_cohort": null,
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "spread_inr": null,
+    "spread_pct": null,
+    "cheaper_platform": null,
+    "cleartrip_catalog_count": 24,
+    "bookingcom_catalog_count": 0,
+    "cleartrip_details": {
+      "reached_payment_page": false,
+      "rates_found": 24
+    },
+    "bookingcom_details": {
+      "reached_payment_page": false,
+      "rates_found": 0
+    }
+  },
+  {
+    "hotel_name": "La Marvella",
+    "status": "NOT COMPARABLE",
+    "comparable": false,
+    "stopped_before_checkout": true,
+    "reason": "No overlapping cohort found. Cleartrip cohorts: [('standard', 2, 'breakfast', 'non_refundable')]. Booking.com cohorts: [].",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "common_cohorts": [],
+    "selected_cohort": null,
+    "cleartrip_payable": null,
+    "bookingcom_payable": null,
+    "spread_inr": null,
+    "spread_pct": null,
+    "cheaper_platform": null,
+    "cleartrip_catalog_count": 5,
+    "bookingcom_catalog_count": 0,
+    "cleartrip_details": {
+      "reached_payment_page": false,
+      "rates_found": 5
+    },
+    "bookingcom_details": {
+      "reached_payment_page": false,
+      "rates_found": 0
+    }
+  }
+]
