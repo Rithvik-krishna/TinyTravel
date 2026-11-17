@@ -1,0 +1,33 @@
+[
+  {
+    "hotel": "Radisson Blu Atria",
+    "device": "desktop",
+    "locale": "en-GB",
+    "data": {
+      "url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.en-gb.html?label=gen173nr-10CAsobEIccmFkaXNzb24tYmx1LWF0cmlhLWJlbmdhbHVydUgzWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgCh4Xx1wbAAgHSAiRkYmU1MzA1MC03MjcwLTQ4MTYtOGUwZi0zYjNlMGJlNzBlNmTYAgHgAgE&sid=20c0c746460899bb1dfbf4724793dcb0&checkin=2026-11-20&checkout=2026-11-21&dist=0&group_adults=2&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&chal_t=1794917000259&force_referer=",
+      "hasGenius": false,
+      "hasMobileRate": false,
+      "hasMemberRate": false,
+      "badges": [],
+      "first1000Chars": ""
+    }
+  },
+  {
+    "hotel": "Radisson Blu Atria",
+    "device": "mobile",
+    "locale": "en-IN",
+    "error": "Page.evaluate: TypeError: Cannot read properties of undefined (reading 'trim')\n    at eval (eval at evaluate (:370:30), <anonymous>:7:168)\n    at Array.map (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:7:147)\n    at UtilityScript.evaluate (<anonymous>:377:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "device": "desktop",
+    "locale": "en-GB",
+    "error": "Page.evaluate: TypeError: Cannot read properties of undefined (reading 'trim')\n    at eval (eval at evaluate (:370:30), <anonymous>:7:168)\n    at Array.map (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:7:147)\n    at UtilityScript.evaluate (<anonymous>:377:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "device": "mobile",
+    "locale": "en-IN",
+    "error": "Page.evaluate: TypeError: Cannot read properties of undefined (reading 'trim')\n    at eval (eval at evaluate (:370:30), <anonymous>:7:168)\n    at Array.map (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:7:147)\n    at UtilityScript.evaluate (<anonymous>:377:18)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+  }
+]

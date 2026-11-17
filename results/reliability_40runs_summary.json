@@ -1,0 +1,298 @@
+{
+  "cleartrip": {
+    "total_runs": 20,
+    "verified": 19,
+    "success_rate_pct": 95.0,
+    "median_seconds": 22.66,
+    "runs": [
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 23.06,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 23.65,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 27.02,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 22.15,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 22.8,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 22.53,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 21.8,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-20",
+        "status": "unverified",
+        "seconds": 33.75,
+        "blocker": "other"
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 22.12,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 23.1,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 20.9,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 22.2,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 24.38,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 23.5,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 21.8,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 22.23,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 24.84,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 25.1,
+        "blocker": null
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 21.4,
+        "blocker": null
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 22.3,
+        "blocker": null
+      }
+    ]
+  },
+  "bookingcom": {
+    "total_runs": 20,
+    "verified": 14,
+    "success_rate_pct": 70.0,
+    "median_seconds": 22.8,
+    "runs": [
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 21.85,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 22.1,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 22.25,
+        "blocker": null
+      },
+      {
+        "hotel": "Bloomrooms City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 23.4,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 34.68,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 33.5,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 34.31,
+        "blocker": null
+      },
+      {
+        "hotel": "Radisson Blu Atria",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 35.1,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 24.2,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 23.8,
+        "blocker": null
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-27",
+        "status": "unverified",
+        "seconds": 21.91,
+        "blocker": "other"
+      },
+      {
+        "hotel": "The Oberoi Bengaluru",
+        "date": "2026-11-27",
+        "status": "unverified",
+        "seconds": 22.5,
+        "blocker": "other"
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 22.39,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-20",
+        "status": "verified",
+        "seconds": 23.1,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 24.13,
+        "blocker": null
+      },
+      {
+        "hotel": "ibis Bengaluru City Centre",
+        "date": "2026-11-27",
+        "status": "verified",
+        "seconds": 24.8,
+        "blocker": null
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-20",
+        "status": "blocked",
+        "seconds": 12.1,
+        "blocker": "sold_out"
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-20",
+        "status": "blocked",
+        "seconds": 11.8,
+        "blocker": "sold_out"
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-27",
+        "status": "blocked",
+        "seconds": 12.4,
+        "blocker": "sold_out"
+      },
+      {
+        "hotel": "Treebo Tiba",
+        "date": "2026-11-27",
+        "status": "blocked",
+        "seconds": 12.9,
+        "blocker": "sold_out"
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+row_id,platform,hotel_name,check_in_date,screenshot_path,parsed_payable,ground_truth_payable,match,diff_pct,human_confirmed,notes
+1,Cleartrip,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-20_1794895211.png,5981.0,5981.0,YES,0.0%,CONFIRMED,"Base: 6400, Tax: 285, Property Discount: -704"
+2,Cleartrip,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-20_1794897813.png,5981.0,5981.0,YES,0.0%,CONFIRMED,Drift rerun at 12:13. Identical payable 5981.0
+3,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794892782.png,5859.0,5859.0,YES,0.0%,CONFIRMED,"Line 51 text: 'Rs. 5,859' (Base 5580 + Tax 279)"
+4,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794895236.png,5859.0,5859.0,YES,0.0%,CONFIRMED,"Line 45 text: 'Price ₹ 5,580 + ₹ 279 taxes = ₹ 5,859'"
+5,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766316.png,5859.0,5859.0,YES,0.0%,CONFIRMED,"Pre-tax audit capture (old parser extracted 5580, GT is 5859)"
+6,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766445.png,5859.0,5859.0,YES,0.0%,CONFIRMED,Checkout review page capture
+7,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766496.png,5859.0,5859.0,YES,0.0%,CONFIRMED,Booking summary card capture
+8,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766537.png,5859.0,5859.0,YES,0.0%,CONFIRMED,Final confirmation step capture
+9,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794808442.png,5859.0,5859.0,YES,0.0%,CONFIRMED,Rerun capture with full page view
+10,Booking.com,Bloomrooms City Centre,2026-11-20,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794808497.png,5859.0,5859.0,YES,0.0%,CONFIRMED,Rerun payment card capture
+11,Cleartrip,Bloomrooms City Centre,2026-11-27,results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-27_1794895260.png,6728.0,6728.0,YES,0.0%,CONFIRMED,"Base: 7200, Tax: 320, Property Discount: -792"
+12,Booking.com,Bloomrooms City Centre,2026-11-27,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-27_1794895284.png,6615.0,6615.0,YES,0.0%,CONFIRMED,Base 6300 + Tax 315 = 6615.0
+13,Booking.com,Bloomrooms City Centre,2026-11-27,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-27_1794766593.png,6615.0,6615.0,YES,0.0%,CONFIRMED,Room rate 6300 + 5% GST = 6615.0
+14,Booking.com,Bloomrooms City Centre,2026-11-27,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-27_1794766637.png,6615.0,6615.0,YES,0.0%,CONFIRMED,Checkout card capture
+15,Booking.com,Bloomrooms City Centre,2026-11-27,results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-27_1794766689.png,6615.0,6615.0,YES,0.0%,CONFIRMED,Booking details capture
+16,Cleartrip,Radisson Blu Atria,2026-11-20,results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-20_1794895308.png,11077.0,11077.0,YES,0.0%,CONFIRMED,"Base: 9387, Tax: 1690"
+17,Cleartrip,Radisson Blu Atria,2026-11-20,results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-20_1794852272.png,11077.0,11077.0,YES,0.0%,CONFIRMED,Prior night run at 23:34. Payable 11077.0
+18,Booking.com,Radisson Blu Atria,2026-11-20,results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794895333.png,9558.0,9558.0,YES,0.0%,CONFIRMED,Discounted base 8100 + 18% tax 1458 = 9558.0
+19,Booking.com,Radisson Blu Atria,2026-11-20,results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794893051.png,9558.0,9558.0,YES,0.0%,CONFIRMED,Discounted base 8100 + 18% tax 1458 = 9558.0
+20,Booking.com,Radisson Blu Atria,2026-11-20,results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794753963.png,9558.0,9558.0,YES,0.0%,CONFIRMED,Pre-fix capture of Radisson checkout
+21,Cleartrip,Radisson Blu Atria,2026-11-27,results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-27_1794895370.png,14458.0,14458.0,YES,0.0%,CONFIRMED,"Base: 12253, Tax: 2205"
+22,Cleartrip,Radisson Blu Atria,2026-11-27,results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-27_1794852315.png,14458.0,14458.0,YES,0.0%,CONFIRMED,Prior night run at 23:35. Payable 14458.0
+23,Booking.com,Radisson Blu Atria,2026-11-27,results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-27_1794895394.png,12637.8,12637.8,YES,0.0%,CONFIRMED,Discounted base 10710 + 18% tax 1927.80 = 12637.80
+24,Booking.com,Radisson Blu Atria,2026-11-27,results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-27_1794852338.png,12637.8,12637.8,YES,0.0%,CONFIRMED,Prior night run at 23:35
+25,Cleartrip,The Oberoi Bengaluru,2026-11-20,results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794895957.png,31920.0,31920.0,YES,0.0%,CONFIRMED,"Base: 28000, Tax: 5040, CTHOTEL: -1120"
+26,Cleartrip,The Oberoi Bengaluru,2026-11-20,results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794895500.png,31920.0,31920.0,YES,0.0%,CONFIRMED,"Base: 28000, Tax: 5040, CTHOTEL: -1120"
+27,Cleartrip,The Oberoi Bengaluru,2026-11-20,results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794852182.png,31920.0,31920.0,YES,0.0%,CONFIRMED,Prior run at 23:33. Payable 31920.0
+28,Booking.com,The Oberoi Bengaluru,2026-11-20,results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794895532.png,31860.0,31860.0,YES,0.0%,CONFIRMED,Room rate 27000 + 18% tax 4860 = 31860.0
+29,Booking.com,The Oberoi Bengaluru,2026-11-20,results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794892980.png,31860.0,31860.0,YES,0.0%,CONFIRMED,Cancellation cost explicitly 31860.0
+30,Cleartrip,The Oberoi Bengaluru,2026-11-27,results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-27_1794895991.png,23940.0,23940.0,YES,0.0%,CONFIRMED,"Base: 21000, Tax: 3780, CTHOTEL: -840"
