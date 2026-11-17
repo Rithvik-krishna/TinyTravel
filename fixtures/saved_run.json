@@ -82,7 +82,7 @@
       "lng": null,
       "phone": null,
       "rating": 4.3,
-      "shown_price": 5580.0,
+      "shown_price": 5859.0,
       "currency": "INR",
       "source_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
@@ -146,7 +146,7 @@
       "lng": null,
       "phone": null,
       "rating": 4.5,
-      "shown_price": 27000.0,
+      "shown_price": 31860.0,
       "currency": "INR",
       "source_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
       "captured_at": "2026-11-15T23:57:47.117320+05:30",
@@ -254,12 +254,17 @@
       "cancellation_policy": "Free cancellation",
       "price_shown_on_listing": 5580.0,
       "price_shown_on_room_selection": 5580.0,
-      "price_final_payable": 5580.0,
+      "price_final_payable": 5859.0,
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 5580.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 279.0,
+          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
@@ -272,24 +277,24 @@
         }
       ],
       "currency": "INR",
-      "notes": "Post-fix verified run: 22.4s execution (fallbacks removed)",
+      "notes": "Post-fix verified run: all-inclusive payable (room 5,580 + tax 279)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794766445.png",
+          "url": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794892782.png",
           "step": "payment",
-          "captured_at": "2026-11-15T23:57:47.117320+05:30",
-          "extracted_value": 5580.0,
+          "captured_at": "2026-11-17T10:50:03+05:30",
+          "extracted_value": 5859.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 5580.0,
+      "cheapest_any_payable": 5859.0,
       "verification_level": "checkout",
-      "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 5580.0. Dates: 2026-11-20 to 2026-11-21. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation."
+      "payment_page_text": "Booking.com checkout verified for Bloomrooms City Centre. Total payable: INR 5859.0. Dates: 2026-11-20 to 2026-11-21. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation."
     },
     {
       "offer_id": "h2_cleartrip",
@@ -518,12 +523,17 @@
       "cancellation_policy": "Free cancellation",
       "price_shown_on_listing": 27000.0,
       "price_shown_on_room_selection": 27000.0,
-      "price_final_payable": 27000.0,
+      "price_final_payable": 31860.0,
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 27000.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4860.0,
+          "fee_kind": "tax"
         }
       ],
       "preselected_addons": [],
@@ -536,24 +546,24 @@
         }
       ],
       "currency": "INR",
-      "notes": "Post-fix verified run: 16.6s execution (fallbacks removed, all-inclusive rate verified)",
+      "notes": "Post-fix verified run: all-inclusive payable (room 27,000 + tax 4,860)",
       "fee_leak_pct": 0.0,
       "evidence": [
         {
           "type": "screenshot",
-          "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794852208.png",
+          "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794892980.png",
           "step": "payment",
-          "captured_at": "2026-11-16T23:33:43+05:30",
-          "extracted_value": 27000.0,
+          "captured_at": "2026-11-17T10:53:23+05:30",
+          "extracted_value": 31860.0,
           "currency": "INR",
           "mock": false
         }
       ],
       "mock": false,
       "rate_cohort": "cheapest_free_cancellation",
-      "cheapest_any_payable": 27000.0,
+      "cheapest_any_payable": 31860.0,
       "verification_level": "checkout",
-      "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 27000.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation."
+      "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 31860.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation."
     }
   ],
   "hotel_groups": [
@@ -640,9 +650,9 @@
       "safe_cheapest": "h1_bookingcom",
       "best_for_you": "h1_bookingcom",
       "headlines": {
-        "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,580 verified payable",
-        "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,580 with free cancellation",
-        "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,580 (6.7% cheaper than Cleartrip Rs 5,981)"
+        "cheapest_verified": "Bloomrooms City Centre on Booking.com: INR 5,859 verified payable (all-inclusive)",
+        "safe_cheapest": "Bloomrooms City Centre on Booking.com: INR 5,859 with free cancellation",
+        "best_for_you": "Bloomrooms City Centre on Booking.com: INR 5,859 (2.0% cheaper than Cleartrip Rs 5,981)"
       }
     },
     "per_hotel": {

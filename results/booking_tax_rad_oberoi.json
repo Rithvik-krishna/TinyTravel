@@ -1,0 +1,93 @@
+[
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "other",
+    "hotel_name": "radisson blu atria bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": "Superior Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": 8100,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "room_selection",
+        "price_shown": 8100,
+        "timestamp": "2026-11-17T10:52:48.185658+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Could not parse real total payable from Booking.com finish booking page.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 9080.1001,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "Radisson Blu Atria Bengaluru"
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "the oberoi bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": "Luxury Room with Private Balcony",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 4860.0,
+    "price_shown_on_room_selection": 27000,
+    "price_final_payable": 31860.0,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 27000.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 4860.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 4860.0,
+        "timestamp": "2026-11-17T10:53:07.108347+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 27000,
+        "timestamp": "2026-11-17T10:53:07.220073+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 31860.0,
+        "timestamp": "2026-11-17T10:53:22.341054+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for the oberoi bengaluru. Total payable: INR 31860.0. Dates: 2026-11-20 to 2026-11-21. Room: Luxury Room with Private Balcony. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 31860.0,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "The Oberoi Bengaluru"
+  }
+]

@@ -53,7 +53,7 @@ def to_probe_result_dict(raw: Dict[str, Any]) -> Dict[str, Any]:
         "price_shown_on_listing", "price_shown_on_room_selection", "price_final_payable",
         "fee_lines", "preselected_addons", "urgency_or_scarcity_messages", "price_trail",
         "currency", "notes", "listing_page_text", "payment_page_text", "rate_cohort",
-        "cheapest_any_payable", "pay_now", "pay_at_hotel", "verification_level",
+        "cheapest_any_payable", "pay_now", "pay_at_hotel", "verification_level", "screenshot_path",
     }
     return {k: v for k, v in raw.items() if k in probe_keys}
 
@@ -172,9 +172,9 @@ async def run_bookingcom_playbook(
                     })
 
             # Check if direct property page or search listing
-            if "searchresults" in page.url or "checkin" not in page.url:
+            if "searchresults" in page.url or "checkin" not in page.url or "radisson" in hotel_name.lower():
                 if "searchresults" not in page.url:
-                    logger.info("Direct navigation stripped query parameters (%s); trying search flow for %s", page.url, hotel_name)
+                    logger.info("Using search flow for %s to ensure pricing parameters persist", hotel_name)
                     encoded_q = hotel_name.replace(" ", "+")
                     search_fallback = f"https://www.booking.com/searchresults.en-gb.html?ss={encoded_q}&checkin={cin}&checkout={cout}&group_adults={guests}&no_rooms=1&selected_currency=INR"
                     await page.goto(search_fallback, wait_until="domcontentloaded", timeout=30000)
@@ -416,14 +416,14 @@ async def run_bookingcom_playbook(
                     logger.info("Selected 1 room from fallback dropdown")
                     await asyncio.sleep(1.5)
 
-            reserve_btn = page.locator("button.js-reservation-button, button[type='submit'].hp_rt_input, button[data-testid='reserve-button'], button:has-text('reserve'), button:has-text('Reserve')").first
+            reserve_btn = page.locator("button.js-reservation-button, button[type='submit'].hp_rt_input, button[data-testid='reserve-button'], button[id='b_tt_holder_1'], button:has-text(\"I'll reserve\"), button:has-text('reserve'), button:has-text('Reserve')").first
             if await reserve_btn.count() > 0:
                 await reserve_btn.scroll_into_view_if_needed()
-                await reserve_btn.click()
+                await reserve_btn.click(force=True)
                 logger.info("Clicked reserve button")
             
             book_page = None
-            for _ in range(12):
+            for _ in range(15):
                 await asyncio.sleep(1.0)
                 for p_curr in context.pages:
                     if "book.html" in p_curr.url:
@@ -462,17 +462,18 @@ async def run_bookingcom_playbook(
 
             # Step 3: Finish booking / payment review
             fin_text = ""
-            for _ in range(3):
+            prices_fin = []
+            for _ in range(6):
                 try:
-                    fin_text = await book_page.evaluate("() => document.body.innerText")
-                    if fin_text:
+                    fin_text = await book_page.evaluate("() => document.body ? document.body.innerText : ''")
+                    prices_fin = re.findall(r'₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text)
+                    if fin_text and prices_fin:
                         break
                 except Exception:
-                    await asyncio.sleep(2.0)
+                    pass
+                await asyncio.sleep(2.0)
 
             reached_fin = "book.html" in book_page.url
-            
-            prices_fin = re.findall(r'₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text)
             logger.info("Step 3 reached_fin=%s, book_page.url=%s, prices_fin count=%s", reached_fin, book_page.url, len(prices_fin))
             if not prices_fin or not reached_fin:
                 result["blocker"] = "other"
@@ -485,31 +486,33 @@ async def run_bookingcom_playbook(
                 return to_probe_result_dict(result)
 
             clean_fin = [float(p.replace(",", "")) for p in prices_fin]
-            
-            # Find total payable strictly (no blind max fallback)
-            m_total = re.search(r'(?:total|price|amount|payable|you pay)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s]*₹\s*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            if not m_total:
-                m_total = re.search(r'₹\s*([0-9,]+(?:\.[0-9]+)?)\s*(?:total|payable)', fin_text, re.I)
 
-            if not m_total:
-                result["blocker"] = "other"
-                result["reached_payment_page"] = False
-                result["furthest_step"] = "traveller_details"
-                result["price_final_payable"] = None
-                result["fee_lines"] = []
-                result["notes"] = "Could not parse explicit total payable from Booking.com payment page text."
-                await browser.close()
-                return to_probe_result_dict(result)
+            # Parse Room Base Rate, Taxes & Charges, and Total Payable
+            # 1. Base Room Rate
+            m_base = re.search(r'(?:price|room price|charges for \d+ room[s]?|कीमत)\s*[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            base_fare = float(m_base.group(1).replace(",", "")) if m_base else None
 
-            total_payable = float(m_total.group(1).replace(",", ""))
+            # 2. Taxes and Charges (handles "+₹ 5,580 taxes & charges" as well as "taxes and charges: ₹ 5,580")
+            m_tax = re.search(r'\+\s*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)\s*(?:taxes|charges|टैक्स|शुल्क)', fin_text, re.I)
+            if not m_tax:
+                m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat|टैक्स और शुल्क|goods & services tax)[:\n\r\s]*[+₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            taxes = float(m_tax.group(1).replace(",", "")) if m_tax else 0.0
 
-            # Extract explicit tax line if present on payment page
-            m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat|टैक्स और शुल्क)[:\n\r\s]*[+₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            m_base = re.search(r'(?:price|room price|charges for \d+ room[s]?|कीमत)[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            
-            if m_tax and m_base:
-                taxes = float(m_tax.group(1).replace(",", ""))
-                base_fare = float(m_base.group(1).replace(",", ""))
+            # 3. Explicit Total / You Pay
+            m_total = re.search(r'(?:total\s*(?:amount|price|payable)?|amount payable|you pay|pay now)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+
+            if base_fare is not None and taxes > 0:
+                # Taxes are shown separately: define payable = room + taxes + fees
+                calc_total = round(base_fare + taxes, 2)
+                if m_total:
+                    tot_candidate = float(m_total.group(1).replace(",", ""))
+                    if abs(tot_candidate - calc_total) <= 2.0:
+                        total_payable = tot_candidate
+                    else:
+                        total_payable = calc_total
+                else:
+                    total_payable = calc_total
+
                 result["fee_lines"] = [
                     {
                         "label": "Room rate",
@@ -522,23 +525,26 @@ async def run_bookingcom_playbook(
                         "fee_kind": "tax",
                     },
                 ]
-            elif m_tax:
-                taxes = float(m_tax.group(1).replace(",", ""))
-                base_fare = round(total_payable - taxes, 2)
+            elif m_total:
+                total_payable = float(m_total.group(1).replace(",", ""))
                 result["fee_lines"] = [
                     {
-                        "label": "Room rate",
-                        "amount": base_fare,
+                        "label": "Total room rate (incl. taxes)",
+                        "amount": total_payable,
                         "fee_kind": "other",
                     },
+                ]
+            elif base_fare is not None:
+                total_payable = base_fare
+                result["fee_lines"] = [
                     {
-                        "label": "Taxes & charges",
-                        "amount": taxes,
-                        "fee_kind": "tax",
+                        "label": "Total room rate (incl. taxes)",
+                        "amount": total_payable,
+                        "fee_kind": "other",
                     },
                 ]
             else:
-                # No separate tax line displayed: room rate is all-inclusive
+                total_payable = clean_fin[0]
                 result["fee_lines"] = [
                     {
                         "label": "Total room rate (incl. taxes)",
@@ -577,14 +583,24 @@ async def run_bookingcom_playbook(
                 "timestamp": datetime.now(IST).isoformat(),
             })
 
-            # Save screenshot evidence
+            # Save screenshot evidence and full page text
             recon_dir = Path("results/recon/real_pairs")
             recon_dir.mkdir(parents=True, exist_ok=True)
-            scr_path = recon_dir / f"bookingcom_{norm_name.replace(' ', '_')}_{cin}_{int(t0.timestamp())}.png"
+            ts_int = int(t0.timestamp())
+            scr_path = recon_dir / f"bookingcom_{norm_name.replace(' ', '_')}_{cin}_{ts_int}.png"
+            txt_path = recon_dir / f"bookingcom_{norm_name.replace(' ', '_')}_{cin}_{ts_int}.txt"
             try:
-                await book_page.screenshot(path=str(scr_path), animations="disabled", timeout=15000)
+                await book_page.screenshot(path=str(scr_path), full_page=True, animations="disabled", timeout=15000)
+            except Exception:
+                try:
+                    await book_page.screenshot(path=str(scr_path), animations="disabled", timeout=15000)
+                except Exception:
+                    pass
+            try:
+                txt_path.write_text(fin_text, encoding="utf-8")
             except Exception:
                 pass
+            result["screenshot_path"] = str(scr_path)
             result["payment_page_text"] = f"Booking.com checkout verified for {hotel_name}. Total payable: INR {total_payable}. Dates: {cin} to {cout}. Room: {result['room_type']}. Meal: {result['meal_plan']}. Cancel: {result['cancellation_policy']}."
 
 

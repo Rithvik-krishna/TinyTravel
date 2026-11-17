@@ -1,0 +1,41 @@
+[
+  {
+    "hotel": "Bloomrooms City Centre",
+    "url": "https://secure.booking.com/book.html?hotel_id=6030404&occupancy_setup_issue_flags=&label=gen173nr-10CAsobEIYYmxvb21yb29tLWN1bm5pbmdoYW1yb2FkSAlYBGhsiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALMxe_XBsACAdICJDgyZWZhMDNjLWJkYjItNDUzMC1hNDhmLWI5ODQyMzA1ZTkwMdgCAeACAQ&sid=3fcfd8cab123bc63d09b1dc6e2fd83ca&room1=A%2CA&error_url=%2Fhotel%2Fin%2Fbloomroom-cunninghamroad.en-gb.html%3Flabel%3Dgen173nr-10CAsobEIYYmxvb21yb29tLWN1bm5pbmdoYW1yb2FkSAlYBGhsiAEBmAEzuAEXyAEM2AED6AEB-AEBiAIBqAIBuALMxe_XBsACAdICJDgyZWZhMDNjLWJkYjItNDUzMC1hNDhmLWI5ODQyMzA1ZTkwMdgCAeACAQ%26sid%3D3fcfd8cab123bc63d09b1dc6e2fd83ca%26&hostname=www.booking.com&stage=1&checkin=2026-11-20&interval=1&children_extrabeds=&srpvid=&hp_visits_num=1&rt_pos_selected=1&rt_pos_selected_within_room=1&rt_selected_block_position=1&rt_num_blocks=4&rt_num_rooms=1&rt_num_blocks_per_room=%7B%22603040402%22%3A4%7D&rt_selected_blocks_info=%7B%22603040402_397121283_2_0_0%22%3A%7B%22rt_selected_block_position_in_rt%22%3A1%2C%22rt_selected_block_position_in_room_group%22%3A0%2C%22count%22%3A1%2C%22rt_room_symmetry_category%22%3A%22symmetric%22%7D%7D&rt_relevance_metric_id=011c7f13-a441-4601-81e1-8837fcfb0960&rt_pageview_id=a8d324e8cf7e07ab&rt_pos_final=1.1&rt_selected_total_price=5760&rt_cheapest_search_price=5760&rt_with_no_dimensions=&from_source=hotel&rt_fetch_room_table_time=1794892494.61437&nr_rooms_603040402_397121283_2_0_0=1&basket_id=6a7e01b0-ebc3-4ea0-bdaa-9a66dd38b1f1",
+    "screenshot": "results\\recon\\tax_audit\\bookingcom_bloomrooms_city_centre_2026-11-20_fullpage.png",
+    "text_file": "results\\recon\\tax_audit\\bookingcom_bloomrooms_city_centre_2026-11-20_page.txt",
+    "box_file": "results\\recon\\tax_audit\\bookingcom_bloomrooms_city_centre_2026-11-20_pricebox.txt"
+  },
+  {
+    "hotel": "ibis Bengaluru City Centre",
+    "url": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.en-gb.html?label=gen173nr-10CAsobEIaaWJpcy1iZW5nYWx1cnUtY2l0eS1jZW50cmVICVgEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4AtvF79cGwAIB0gIkNjhkMzY5OTUtMzhkYy00OTZhLWI3MTYtYjY1MzVjYTlhZDVh2AIB4AIB&sid=cd635c1cf1cbf16a4f867239392bad7f&checkin=2026-11-20&checkout=2026-11-21&dist=0&group_adults=2&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&chal_t=1794892507646&force_referer=",
+    "screenshot": "results\\recon\\tax_audit\\bookingcom_ibis_bengaluru_city_centre_2026-11-20_fullpage.png",
+    "text_file": "results\\recon\\tax_audit\\bookingcom_ibis_bengaluru_city_centre_2026-11-20_page.txt",
+    "box_file": "results\\recon\\tax_audit\\bookingcom_ibis_bengaluru_city_centre_2026-11-20_pricebox.txt"
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.en-gb.html?label=gen173nr-10CAsobEIccmFkaXNzb24tYmx1LWF0cmlhLWJlbmdhbHVydUgJWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC5sXv1wbAAgHSAiRjNDY0NTUwNy05ZjNiLTRjMDAtYTg3MC03MmQ5NmFlOTRiZGTYAgHgAgE&sid=ff8095a68d1ef01c91fe0f64bbc019a3&checkin=2026-11-20&checkout=2026-11-21&dist=0&group_adults=2&keep_landing=1&no_rooms=1&sb_price_type=total&type=total&chal_t=1794892518935&force_referer=",
+    "screenshot": "results\\recon\\tax_audit\\bookingcom_radisson_blu_atria_bengaluru_2026-11-20_fullpage.png",
+    "text_file": "results\\recon\\tax_audit\\bookingcom_radisson_blu_atria_bengaluru_2026-11-20_page.txt",
+    "box_file": "results\\recon\\tax_audit\\bookingcom_radisson_blu_atria_bengaluru_2026-11-20_pricebox.txt"
+  },
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "error": "Page.query_selector: Execution context was destroyed, most likely because of a navigation"
+  },
+  {
+    "hotel": "Sterlings Mac Hotel",
+    "url": "https://secure.booking.com/book.html?hotel_id=357064&occupancy_setup_issue_flags=&label=gen173nr-10CAsobEIHbWF0dGhhbkgJWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC_8Xv1wbAAgHSAiRjZjllNDVlNC1jYmZmLTRjNzAtYjI1NC05NTgxNTg0YjYxM2XYAgHgAgE&sid=3d39401650e32a0d49811338953ce7d3&room1=A%2CA&error_url=%2Fhotel%2Fin%2Fmatthan.en-gb.html%3Flabel%3Dgen173nr-10CAsobEIHbWF0dGhhbkgJWARobIgBAZgBM7gBF8gBDNgBA-gBAfgBAYgCAagCAbgC_8Xv1wbAAgHSAiRjZjllNDVlNC1jYmZmLTRjNzAtYjI1NC05NTgxNTg0YjYxM2XYAgHgAgE%26sid%3D3d39401650e32a0d49811338953ce7d3%26&hostname=www.booking.com&stage=1&checkin=2026-11-20&interval=1&children_extrabeds=&srpvid=&hp_visits_num=1&rt_pos_selected=1&rt_pos_selected_within_room=1&rt_selected_block_position=1&rt_num_blocks=12&rt_num_rooms=2&rt_num_blocks_per_room=%7B%2235706406%22%3A6%2C%2235706404%22%3A6%7D&rt_selected_blocks_info=%7B%2235706404_429276038_2_42_0_1410219%22%3A%7B%22rt_selected_block_position_in_rt%22%3A1%2C%22rt_selected_block_position_in_room_group%22%3A0%2C%22count%22%3A1%2C%22rt_room_symmetry_category%22%3A%22asymmetric%22%7D%7D&rt_relevance_metric_id=2643ef03-264a-439b-ab8c-5e68292fc0ff&rt_pageview_id=88472502ff0e0d02&rt_pos_final=1.1&rt_selected_total_price=28846&rt_cheapest_search_price=28846&rt_with_no_dimensions=&from_source=hotel&rt_fetch_room_table_time=1794892546.47273&nr_rooms_35706404_429276038_2_42_0_1410219=1&basket_id=59eea499-2e58-4071-bcd1-7bc8bbd34642",
+    "screenshot": "results\\recon\\tax_audit\\bookingcom_sterlings_mac_hotel_2026-11-20_fullpage.png",
+    "text_file": "results\\recon\\tax_audit\\bookingcom_sterlings_mac_hotel_2026-11-20_page.txt",
+    "box_file": "results\\recon\\tax_audit\\bookingcom_sterlings_mac_hotel_2026-11-20_pricebox.txt"
+  },
+  {
+    "hotel": "Treebo Tiba",
+    "url": "https://secure.booking.com/book.html?hotel_id=11105051&occupancy_setup_issue_flags=&label=gen173nr-10CAsobEIRdHJlZWJvLXRyZW5kLXRpYmFICVgEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApbG79cGwAIB0gIkNjQwM2YwMTMtMjZhNC00Y2M4LWI0YzEtNmQzMjQzMmFhODE52AIB4AIB&sid=2b4806623793e5a37dbd241dc4d1c5f0&room1=A%2CA&error_url=%2Fhotel%2Fin%2Ftreebo-trend-tiba.en-gb.html%3Flabel%3Dgen173nr-10CAsobEIRdHJlZWJvLXRyZW5kLXRpYmFICVgEaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGoAgG4ApbG79cGwAIB0gIkNjQwM2YwMTMtMjZhNC00Y2M4LWI0YzEtNmQzMjQzMmFhODE52AIB4AIB%26sid%3D2b4806623793e5a37dbd241dc4d1c5f0%26&hostname=www.booking.com&stage=1&checkin=2026-11-20&interval=1&children_extrabeds=&srpvid=&hp_visits_num=1&rt_pos_selected=1&rt_pos_selected_within_room=1&rt_selected_block_position=1&rt_num_blocks=5&rt_num_rooms=3&rt_num_blocks_per_room=%7B%221110505102%22%3A2%2C%221110505104%22%3A2%2C%221110505101%22%3A1%7D&rt_selected_blocks_info=%7B%221110505102_432088013_2_1_0%22%3A%7B%22rt_selected_block_position_in_rt%22%3A1%2C%22rt_selected_block_position_in_room_group%22%3A0%2C%22count%22%3A1%2C%22rt_room_symmetry_category%22%3A%22one_dimension%22%7D%7D&rt_relevance_metric_id=fdc45d07-71d0-4289-9674-afb4b4079f48&rt_pageview_id=6a12250d3157084a&rt_pos_final=1.1&rt_selected_total_price=2168&rt_cheapest_search_price=2168&rt_with_no_dimensions=&from_source=hotel&rt_fetch_room_table_time=1794892569.48615&nr_rooms_1110505102_432088013_2_1_0=1&basket_id=fe4fca5b-254e-4376-8cfb-4650a0f4abca",
+    "screenshot": "results\\recon\\tax_audit\\bookingcom_treebo_tiba_2026-11-20_fullpage.png",
+    "text_file": "results\\recon\\tax_audit\\bookingcom_treebo_tiba_2026-11-20_page.txt",
+    "box_file": "results\\recon\\tax_audit\\bookingcom_treebo_tiba_2026-11-20_pricebox.txt"
+  }
+]

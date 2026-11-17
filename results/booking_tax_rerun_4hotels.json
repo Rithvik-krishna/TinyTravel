@@ -1,0 +1,183 @@
+[
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "bloomrooms city centre",
+    "hotel_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": "Standard Twin Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 279.0,
+    "price_shown_on_room_selection": 5580,
+    "price_final_payable": 5859.0,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 5580.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 279.0,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 279.0,
+        "timestamp": "2026-11-17T10:49:49.005627+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 5580,
+        "timestamp": "2026-11-17T10:49:49.097420+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 5859.0,
+        "timestamp": "2026-11-17T10:50:01.667246+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for bloomrooms city centre. Total payable: INR 5859.0. Dates: 2026-11-20 to 2026-11-21. Room: Standard Twin Room. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 5859.0,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "Bloomrooms City Centre"
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": true,
+    "furthest_step": "payment",
+    "blocker": null,
+    "hotel_name": "ibis bengaluru city centre",
+    "hotel_url": "https://www.booking.com/hotel/in/ibis-bengaluru-city-centre.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": "Standard Queen Room",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 324.0,
+    "price_shown_on_room_selection": 6499,
+    "price_final_payable": 6823.95,
+    "fee_lines": [
+      {
+        "label": "Room rate",
+        "amount": 6499.0,
+        "fee_kind": "other"
+      },
+      {
+        "label": "Taxes & charges",
+        "amount": 324.95,
+        "fee_kind": "tax"
+      }
+    ],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 324.0,
+        "timestamp": "2026-11-17T10:50:12.323261+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 6499,
+        "timestamp": "2026-11-17T10:50:12.443697+05:30"
+      },
+      {
+        "step": "payment",
+        "price_shown": 6823.95,
+        "timestamp": "2026-11-17T10:50:28.899962+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Booking.com automated guest checkout playbook",
+    "listing_page_text": "",
+    "payment_page_text": "Booking.com checkout verified for ibis bengaluru city centre. Total payable: INR 6823.95. Dates: 2026-11-20 to 2026-11-21. Room: Standard Queen Room. Meal: Room Only. Cancel: Free cancellation.",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 6823.95,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "ibis Bengaluru City Centre"
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "room_selection",
+    "blocker": "other",
+    "hotel_name": "radisson blu atria bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": null,
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": null,
+    "price_shown_on_room_selection": null,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [],
+    "currency": "INR",
+    "notes": "Could not parse real room rate from Booking.com JSON state or tables/cards.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": null,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "Radisson Blu Atria Bengaluru"
+  },
+  {
+    "site": "Booking.com",
+    "reached_payment_page": false,
+    "furthest_step": "traveller_details",
+    "blocker": "other",
+    "hotel_name": "the oberoi bengaluru",
+    "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html?checkin=2026-11-20&checkout=2026-11-21&group_adults=2&no_rooms=1&selected_currency=INR&lang=en-gb",
+    "room_type": "Luxury Room with Private Balcony",
+    "max_occupancy": 2,
+    "meal_plan": "Room Only",
+    "cancellation_policy": "Free cancellation",
+    "price_shown_on_listing": 4860.0,
+    "price_shown_on_room_selection": 27000,
+    "price_final_payable": null,
+    "fee_lines": [],
+    "preselected_addons": [],
+    "urgency_or_scarcity_messages": [],
+    "price_trail": [
+      {
+        "step": "listing",
+        "price_shown": 4860.0,
+        "timestamp": "2026-11-17T10:50:46.738058+05:30"
+      },
+      {
+        "step": "room_selection",
+        "price_shown": 27000,
+        "timestamp": "2026-11-17T10:50:46.791124+05:30"
+      }
+    ],
+    "currency": "INR",
+    "notes": "Could not parse real total payable from Booking.com finish booking page.",
+    "listing_page_text": "",
+    "payment_page_text": "",
+    "rate_cohort": "cheapest_free_cancellation",
+    "cheapest_any_payable": 31860.0002,
+    "pay_now": null,
+    "pay_at_hotel": null,
+    "verification_level": "checkout",
+    "hotel_display_name": "The Oberoi Bengaluru"
+  }
+]

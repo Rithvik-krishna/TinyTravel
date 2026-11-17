@@ -40,7 +40,7 @@
     "bookingcom": {
       "status": "verified",
       "reached_payment_page": true,
-      "price_final_payable": 5580.0,
+      "price_final_payable": 5859.0,
       "room_type": "Standard Twin Room",
       "normalized_tier": "standard",
       "meal_plan": "Room Only",
@@ -49,17 +49,23 @@
       "normalized_cancellation": "free",
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 5580.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 279.0,
+          "fee_kind": "tax"
         }
       ],
-      "seconds": null
+      "seconds": null,
+      "screenshot": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794892782.png"
     },
     "comparable": true,
     "cohort": "standard_occ2_room_only_free",
-    "spread_inr": 401.0,
-    "spread_pct": 6.7,
+    "spread_inr": 122.0,
+    "spread_pct": 2.04,
     "non_comparable_reason": null
   },
   {
@@ -161,7 +167,7 @@
     "bookingcom": {
       "status": "verified",
       "reached_payment_page": true,
-      "price_final_payable": 6499.0,
+      "price_final_payable": 6823.95,
       "room_type": "Standard Queen Room",
       "normalized_tier": "standard",
       "meal_plan": "Room Only",
@@ -170,17 +176,23 @@
       "normalized_cancellation": "free",
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 6499.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 324.95,
+          "fee_kind": "tax"
         }
       ],
-      "seconds": null
+      "seconds": null,
+      "screenshot": "results/recon/real_pairs/bookingcom_ibis_bengaluru_city_centre_2026-11-20_1794892805.png"
     },
     "comparable": true,
     "cohort": "standard_occ2_room_only_free",
-    "spread_inr": 325.0,
-    "spread_pct": 4.76,
+    "spread_inr": 0.05,
+    "spread_pct": 0.0,
     "non_comparable_reason": null
   },
   {
@@ -282,7 +294,7 @@
     "bookingcom": {
       "status": "verified",
       "reached_payment_page": true,
-      "price_final_payable": 27000.0,
+      "price_final_payable": 31860.0,
       "room_type": "Luxury Room with Private Balcony",
       "normalized_tier": "standard",
       "meal_plan": "Room Only",
@@ -291,12 +303,18 @@
       "normalized_cancellation": "free",
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 27000.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 4860.0,
+          "fee_kind": "tax"
         }
       ],
-      "seconds": null
+      "seconds": null,
+      "screenshot": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794892980.png"
     },
     "comparable": false,
     "cohort": "not_comparable",
@@ -403,7 +421,7 @@
     "bookingcom": {
       "status": "verified",
       "reached_payment_page": true,
-      "price_final_payable": 9000.0,
+      "price_final_payable": 10458.0,
       "room_type": "Superior Room",
       "normalized_tier": "deluxe",
       "meal_plan": "Room Only",
@@ -412,17 +430,23 @@
       "normalized_cancellation": "free",
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 9000.0,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 1458.0,
+          "fee_kind": "tax"
         }
       ],
-      "seconds": null
+      "seconds": null,
+      "screenshot": "results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794893051.png"
     },
     "comparable": true,
     "cohort": "deluxe_occ2_room_only_free",
-    "spread_inr": 2077.0,
-    "spread_pct": 18.75,
+    "spread_inr": 619.0,
+    "spread_pct": 5.59,
     "non_comparable_reason": null
   },
   {
@@ -529,7 +553,7 @@
     "bookingcom": {
       "status": "verified",
       "reached_payment_page": true,
-      "price_final_payable": 3209.99,
+      "price_final_payable": 3595.19,
       "room_type": "Economy Double Room",
       "normalized_tier": "standard",
       "meal_plan": "Room Only",
@@ -538,12 +562,18 @@
       "normalized_cancellation": "free",
       "fee_lines": [
         {
-          "label": "Total room rate (incl. taxes)",
+          "label": "Room rate",
           "amount": 3209.99,
           "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 385.2,
+          "fee_kind": "tax"
         }
       ],
-      "seconds": null
+      "seconds": null,
+      "screenshot": "results/recon/real_pairs/bookingcom_treebo_tiba_2026-11-20_1794754462.png"
     },
     "comparable": false,
     "cohort": "not_comparable",
