@@ -1,0 +1,72 @@
+[
+  {
+    "screenshot": "results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-20_1794895211.png",
+    "dom_payable": null,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794895236.png",
+    "dom_payable": 5859.0,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-27_1794895260.png",
+    "dom_payable": null,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-27_1794895284.png",
+    "dom_payable": 6615.0,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-20_1794895308.png",
+    "dom_payable": null,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794895333.png",
+    "dom_payable": 9558.0,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-27_1794895370.png",
+    "dom_payable": null,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-27_1794895394.png",
+    "dom_payable": 12637.8,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794895957.png",
+    "dom_payable": null,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  },
+  {
+    "screenshot": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794895532.png",
+    "dom_payable": 31860.0,
+    "vision_payable": "NOT RUN",
+    "status": "NOT RUN (GEMINI_API_KEY unset)",
+    "diff_pct": "NOT RUN"
+  }
+]
