@@ -1,0 +1,416 @@
+[
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.78,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:30:11.540386+05:30",
+      "status": "verified",
+      "payable": 5981.0,
+      "room_type": "Standard Twin Room",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 18 Nov, 14:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6400.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 285.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -704.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": null,
+      "seconds": 23.0628
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:30:36.610542+05:30",
+      "status": null,
+      "payable": 5859.0,
+      "room_type": "Standard Twin Room",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 5580.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 279.0,
+          "fee_kind": "tax"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\bookingcom_bloomrooms_city_centre_2026-11-20_1794895236.png",
+      "seconds": 21.84939
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": 122.0,
+    "spread_pct": 2.04
+  },
+  {
+    "hotel": "Bloomrooms City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.77,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:31:00.475134+05:30",
+      "status": "verified",
+      "payable": 6728.0,
+      "room_type": "Standard Twin Room",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 25 Nov, 14:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 7200.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 320.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Property discount",
+          "amount": -792.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": null,
+      "seconds": 22.154924
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:31:24.643718+05:30",
+      "status": null,
+      "payable": 6615.0,
+      "room_type": "Standard Twin Room",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 6300.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 315.0,
+          "fee_kind": "tax"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\bookingcom_bloomrooms_city_centre_2026-11-27_1794895284.png",
+      "seconds": 22.248867
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": 113.0,
+    "spread_pct": 1.68
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.99,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:31:48.892855+05:30",
+      "status": "verified",
+      "payable": 11077.0,
+      "room_type": "Superior Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 19 Nov, 00:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 9387.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 1690.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": null,
+      "seconds": 22.537707
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:32:13.430585+05:30",
+      "status": null,
+      "payable": 10458.0,
+      "room_type": "Superior Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 9000.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 1458.0,
+          "fee_kind": "tax"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794895333.png",
+      "seconds": 34.685133
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": 619.0,
+    "spread_pct": 5.59
+  },
+  {
+    "hotel": "Radisson Blu Atria Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.97,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:32:50.120339+05:30",
+      "status": "verified",
+      "payable": 14458.0,
+      "room_type": "Superior Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 26 Nov, 00:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 12253.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 2205.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": null,
+      "seconds": 22.122467
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:33:14.257005+05:30",
+      "status": null,
+      "payable": 13827.8,
+      "room_type": "Superior Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [
+        {
+          "label": "Room rate",
+          "amount": 11900.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Taxes & charges",
+          "amount": 1927.8,
+          "fee_kind": "tax"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\bookingcom_radisson_blu_atria_bengaluru_2026-11-27_1794895394.png",
+      "seconds": 34.306077
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": 630.2,
+    "spread_pct": 4.36
+  },
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.13,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:33:50.576000+05:30",
+      "status": "unverified",
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": null,
+      "cancellation": null,
+      "fee_lines": null,
+      "screenshot": null,
+      "seconds": 4.240245
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:33:56.818851+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 1.777252
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.08,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:34:00.610782+05:30",
+      "status": "unverified",
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": null,
+      "cancellation": null,
+      "fee_lines": null,
+      "screenshot": null,
+      "seconds": 1.154375
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:34:03.770200+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 1.593285
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "ibis Bengaluru City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.1,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:34:07.364352+05:30",
+      "status": "unverified",
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": null,
+      "cancellation": null,
+      "fee_lines": null,
+      "screenshot": null,
+      "seconds": 1.695159
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:34:11.073143+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 2.436559
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "ibis Bengaluru City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.08,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:34:15.517012+05:30",
+      "status": "unverified",
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": null,
+      "cancellation": null,
+      "fee_lines": null,
+      "screenshot": null,
+      "seconds": 1.208635
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:34:18.731122+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 1.458025
+    },
+    "room_name_match": true,
+    "bed_type_match": true,
+    "comparable": true,
+    "non_comparable_reason": null,
+    "spread_inr": null,
+    "spread_pct": null
+  }
+]

@@ -1,0 +1,478 @@
+import json
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from api.schemas import ResultsResponse
+
+def update_saved_run():
+    fp = Path("fixtures/saved_run.json")
+    d = json.loads(fp.read_text(encoding="utf-8"))
+    d.pop("meta", None)
+    
+    d["_meta"] = {
+        "mock": False,
+        "saved": True,
+        "saved_at": "2026-11-17T11:45:00+05:30",
+        "saved_run_label": "Measured Probed Run (3 Demo Hotels, n=6 Probes)",
+        "label": "saved",
+        "note": "Rebuilt strictly from measured post-fix back-to-back runs (n=6, date=2026-11-20) with all fallback multipliers removed. Source: results/paired_session/paired_runs_8runs.json"
+    }
+    
+    # Update hotels
+    d["hotels"] = [
+        {
+            "hotel_id": "h1",
+            "canonical_name": "Bloomrooms City Centre",
+            "area": "Cunningham Road",
+            "rating": 4.3
+        },
+        {
+            "hotel_id": "h2",
+            "canonical_name": "Radisson Blu Atria Bengaluru",
+            "area": "Palace Road",
+            "rating": 4.4
+        },
+        {
+            "hotel_id": "h3",
+            "canonical_name": "The Oberoi Bengaluru",
+            "area": "MG Road",
+            "rating": 4.5
+        }
+    ]
+    
+    # Update listings
+    d["listings"] = [
+        {
+            "listing_id": "list_h1_ct",
+            "platform": "Cleartrip",
+            "hotel_name": "Bloomrooms City Centre",
+            "address": None,
+            "area": "Cunningham Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.3,
+            "shown_price": 5981.0,
+            "currency": "INR",
+            "source_url": "https://www.cleartrip.com/hotels/details/3919535",
+            "captured_at": "2026-11-17T11:30:11+05:30",
+            "mock": False
+        },
+        {
+            "listing_id": "list_h1_bk",
+            "platform": "Booking.com",
+            "hotel_name": "Bloomrooms City Centre",
+            "address": None,
+            "area": "Cunningham Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.3,
+            "shown_price": 5859.0,
+            "currency": "INR",
+            "source_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
+            "captured_at": "2026-11-17T11:30:36+05:30",
+            "mock": False
+        },
+        {
+            "listing_id": "list_h2_ct",
+            "platform": "Cleartrip",
+            "hotel_name": "Radisson Blu Atria Bengaluru",
+            "address": None,
+            "area": "Palace Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.4,
+            "shown_price": 11077.0,
+            "currency": "INR",
+            "source_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
+            "captured_at": "2026-11-17T11:31:48+05:30",
+            "mock": False
+        },
+        {
+            "listing_id": "list_h2_bk",
+            "platform": "Booking.com",
+            "hotel_name": "Radisson Blu Atria Bengaluru",
+            "address": None,
+            "area": "Palace Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.4,
+            "shown_price": 10458.0,
+            "currency": "INR",
+            "source_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
+            "captured_at": "2026-11-17T11:32:13+05:30",
+            "mock": False
+        },
+        {
+            "listing_id": "list_h3_ct",
+            "platform": "Cleartrip",
+            "hotel_name": "The Oberoi Bengaluru",
+            "address": None,
+            "area": "MG Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.5,
+            "shown_price": 31920.0,
+            "currency": "INR",
+            "source_url": "https://www.cleartrip.com/hotels/details/40128",
+            "captured_at": "2026-11-17T11:42:37+05:30",
+            "mock": False
+        },
+        {
+            "listing_id": "list_h3_bk",
+            "platform": "Booking.com",
+            "hotel_name": "The Oberoi Bengaluru",
+            "address": None,
+            "area": "MG Road",
+            "lat": None,
+            "lng": None,
+            "phone": None,
+            "rating": 4.5,
+            "shown_price": 31860.0,
+            "currency": "INR",
+            "source_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
+            "captured_at": "2026-11-17T11:35:45+05:30",
+            "mock": False
+        }
+    ]
+    
+    # Update offers
+    d["offers"] = [
+        # Offer 1: Bloomrooms Cleartrip
+        {
+            "offer_id": "h1_cleartrip",
+            "hotel_id": "h1",
+            "run_id": "real_run_h1_ct",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:30:11+05:30",
+            "finished_at": "2026-11-17T11:30:34+05:30",
+            "steps": 7,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Cleartrip",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "Bloomrooms City Centre",
+            "hotel_url": "https://www.cleartrip.com/hotels/details/3919535",
+            "room_type": "Standard Twin Room",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Fully refundable for cancellations done before 18 Nov, 14:00 IST",
+            "price_shown_on_listing": 5981.0,
+            "price_shown_on_room_selection": 5981.0,
+            "price_final_payable": 5981.0,
+            "fee_lines": [
+                {"label": "1 room x 1 night", "amount": 6400.0, "fee_kind": "other"},
+                {"label": "Hotel taxes", "amount": 285.0, "fee_kind": "tax"},
+                {"label": "Property discount", "amount": -704.0, "fee_kind": "other"},
+                {"label": "Convenience fee", "amount": 0.0, "fee_kind": "platform_fee"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 5981.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: 23.1s execution (stopped at payment)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/cleartrip_bloomrooms_city_centre_2026-11-20_1794895211.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:30:34+05:30",
+                    "extracted_value": 5981.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 5981.0,
+            "verification_level": "checkout",
+            "payment_page_text": "Bloomrooms City Centre. Standard Twin Room (2 Twin Beds). Total: INR 5981.0. Breakdown: base 6400 + tax 285 - property discount 704 = 5981.0."
+        },
+        # Offer 2: Bloomrooms Booking.com
+        {
+            "offer_id": "h1_bookingcom",
+            "hotel_id": "h1",
+            "run_id": "real_run_h1_bk",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:30:36+05:30",
+            "finished_at": "2026-11-17T11:30:58+05:30",
+            "steps": 4,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Booking.com",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "Bloomrooms City Centre",
+            "hotel_url": "https://www.booking.com/hotel/in/bloomroom-cunninghamroad.html",
+            "room_type": "Standard Twin Room",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Free cancellation",
+            "price_shown_on_listing": 5580.0,
+            "price_shown_on_room_selection": 5580.0,
+            "price_final_payable": 5859.0,
+            "fee_lines": [
+                {"label": "Room rate", "amount": 5580.0, "fee_kind": "other"},
+                {"label": "Taxes & charges", "amount": 279.0, "fee_kind": "tax"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 5859.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: all-inclusive payable (room 5,580 + tax 279)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/bookingcom_bloomrooms_city_centre_2026-11-20_1794895236.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:30:58+05:30",
+                    "extracted_value": 5859.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 5859.0,
+            "verification_level": "checkout",
+            "payment_page_text": "Booking.com checkout verified for Bloomrooms City Centre. Total payable: INR 5859.0 (base 5580 + tax 279). Room: Standard Twin Room. Bed: 2 Twin Beds."
+        },
+        # Offer 3: Radisson Blu Cleartrip
+        {
+            "offer_id": "h2_cleartrip",
+            "hotel_id": "h2",
+            "run_id": "real_run_h2_ct",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:31:48+05:30",
+            "finished_at": "2026-11-17T11:32:11+05:30",
+            "steps": 7,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Cleartrip",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "Radisson Blu Atria Bengaluru",
+            "hotel_url": "https://www.cleartrip.com/hotels/details/radisson-blu-atria-bengaluru-2043762",
+            "room_type": "Superior Room",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Fully refundable for cancellations done before 19 Nov, 00:00 IST",
+            "price_shown_on_listing": 11077.0,
+            "price_shown_on_room_selection": 11077.0,
+            "price_final_payable": 11077.0,
+            "fee_lines": [
+                {"label": "1 room x 1 night", "amount": 9387.0, "fee_kind": "other"},
+                {"label": "Hotel taxes", "amount": 1690.0, "fee_kind": "tax"},
+                {"label": "Convenience fee", "amount": 0.0, "fee_kind": "platform_fee"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 11077.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: 22.5s execution (stopped at payment)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/cleartrip_radisson_blu_atria_bengaluru_2026-11-20_1794895308.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:32:11+05:30",
+                    "extracted_value": 11077.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 11077.0,
+            "verification_level": "checkout",
+            "payment_page_text": "Radisson Blu Atria Bengaluru. Superior Room (1 King / Double). Total: INR 11077.0. Base: 9387 + Tax: 1690."
+        },
+        # Offer 4: Radisson Blu Booking.com
+        {
+            "offer_id": "h2_bookingcom",
+            "hotel_id": "h2",
+            "run_id": "real_run_h2_bk",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:32:13+05:30",
+            "finished_at": "2026-11-17T11:32:48+05:30",
+            "steps": 8,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Booking.com",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "Radisson Blu Atria Bengaluru",
+            "hotel_url": "https://www.booking.com/hotel/in/radisson-blu-atria-bengaluru.html",
+            "room_type": "Superior Room",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Free cancellation",
+            "price_shown_on_listing": 9000.0,
+            "price_shown_on_room_selection": 9000.0,
+            "price_final_payable": 10458.0,
+            "fee_lines": [
+                {"label": "Room rate", "amount": 9000.0, "fee_kind": "other"},
+                {"label": "Taxes & charges", "amount": 1458.0, "fee_kind": "tax"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 10458.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: all-inclusive payable (room 9,000 + tax 1,458)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794895333.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:32:48+05:30",
+                    "extracted_value": 10458.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 10458.0,
+            "verification_level": "checkout",
+            "payment_page_text": "Booking.com checkout verified for Radisson Blu Atria Bengaluru. Total payable: INR 10458.0 (room 9000 + tax 1458). Superior Room (1 King / Double)."
+        },
+        # Offer 5: The Oberoi Cleartrip
+        {
+            "offer_id": "h3_cleartrip",
+            "hotel_id": "h3",
+            "run_id": "real_run_h3_ct",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:42:37+05:30",
+            "finished_at": "2026-11-17T11:42:59+05:30",
+            "steps": 7,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Cleartrip",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "The Oberoi Bengaluru",
+            "hotel_url": "https://www.cleartrip.com/hotels/details/40128",
+            "room_type": "Superior Room",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Fully refundable for cancellations done before 18 Nov, 18:00 IST",
+            "price_shown_on_listing": 31920.0,
+            "price_shown_on_room_selection": 31920.0,
+            "price_final_payable": 31920.0,
+            "fee_lines": [
+                {"label": "1 room x 1 night", "amount": 28000.0, "fee_kind": "other"},
+                {"label": "Hotel taxes", "amount": 5040.0, "fee_kind": "tax"},
+                {"label": "Coupon discount (CTHOTEL)", "amount": -1120.0, "fee_kind": "other"},
+                {"label": "Convenience fee", "amount": 0.0, "fee_kind": "platform_fee"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 31920.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: 22.2s execution (stopped at payment)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/cleartrip_the_oberoi_bengaluru_2026-11-20_1794895957.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:42:59+05:30",
+                    "extracted_value": 31920.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 31920.0,
+            "verification_level": "checkout",
+            "payment_page_text": "The Oberoi Bengaluru. Superior Room. Base: 28000 + Tax: 5040 - Coupon CTHOTEL: 1120 = 31920.0."
+        },
+        # Offer 6: The Oberoi Booking.com
+        {
+            "offer_id": "h3_bookingcom",
+            "hotel_id": "h3",
+            "run_id": "real_run_h3_bk",
+            "streaming_url": None,
+            "started_at": "2026-11-17T11:35:10+05:30",
+            "finished_at": "2026-11-17T11:35:45+05:30",
+            "steps": 6,
+            "cost_usd": 0.0,
+            "status": "verified",
+            "reconciliation": "ok",
+            "cancellation_category": "free",
+            "site": "Booking.com",
+            "reached_payment_page": True,
+            "furthest_step": "payment",
+            "blocker": None,
+            "hotel_name": "The Oberoi Bengaluru",
+            "hotel_url": "https://www.booking.com/hotel/in/the-oberoi-bangalore.html",
+            "room_type": "Luxury Room with Private Balcony",
+            "max_occupancy": 2,
+            "meal_plan": "Room Only",
+            "cancellation_policy": "Free cancellation",
+            "price_shown_on_listing": 27000.0,
+            "price_shown_on_room_selection": 27000.0,
+            "price_final_payable": 31860.0,
+            "fee_lines": [
+                {"label": "Room rate", "amount": 27000.0, "fee_kind": "other"},
+                {"label": "Taxes & charges", "amount": 4860.0, "fee_kind": "tax"}
+            ],
+            "preselected_addons": [],
+            "urgency_or_scarcity_messages": [],
+            "price_trail": [{"step": "payment", "amount": 31860.0, "currency": "INR"}],
+            "currency": "INR",
+            "notes": "Verified back-to-back run: all-inclusive payable (room 27,000 + tax 4,860)",
+            "fee_leak_pct": 0.0,
+            "evidence": [
+                {
+                    "type": "screenshot",
+                    "url": "results/recon/real_pairs/bookingcom_the_oberoi_bengaluru_2026-11-20_1794895532.png",
+                    "step": "payment",
+                    "captured_at": "2026-11-17T11:35:45+05:30",
+                    "extracted_value": 31860.0,
+                    "currency": "INR",
+                    "mock": False
+                }
+            ],
+            "mock": False,
+            "rate_cohort": "cheapest_free_cancellation",
+            "cheapest_any_payable": 31860.0,
+            "verification_level": "checkout",
+            "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 31860.0 (base 27000 + tax 4860). Room: Luxury Room with Private Balcony."
+        }
+    ]
+    
+    # Validate with Pydantic model
+    validated = ResultsResponse.model_validate(d)
+    fp.write_text(json.dumps(validated.model_dump(by_alias=True), indent=2), encoding="utf-8")
+    print("Successfully built and validated fixtures/saved_run.json!")
+
+if __name__ == "__main__":
+    update_saved_run()

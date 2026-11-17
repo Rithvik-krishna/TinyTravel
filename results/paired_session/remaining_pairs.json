@@ -1,0 +1,230 @@
+[
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.54,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:42:37.347819+05:30",
+      "status": "verified",
+      "payable": 31920.0,
+      "room_type": "Superior Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 18 Nov, 18:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 28000.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 5040.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -1120.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\cleartrip_the_oberoi_bengaluru_2026-11-20_1794895957.png",
+      "seconds": 22.201485
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:43:01.553263+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Room",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 8.041294
+    },
+    "room_name_match": false,
+    "bed_type_match": true,
+    "comparable": false,
+    "non_comparable_reason": "Room name mismatch (Cleartrip: 'Superior Room' vs Booking: 'Standard Room')",
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "The Oberoi Bengaluru",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.81,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:43:11.597865+05:30",
+      "status": "verified",
+      "payable": 23940.0,
+      "room_type": "Deluxe Rooms with Private Balcony",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 25 Nov, 18:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 21000.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 3780.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Coupon discount (CTHOTEL)",
+          "amount": -840.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\cleartrip_the_oberoi_bengaluru_2026-11-27_1794895991.png",
+      "seconds": 24.386797
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:43:37.991598+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Deluxe Room with Private Balcony",
+      "bed_type": "1 King / Double",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 21.915244
+    },
+    "room_name_match": false,
+    "bed_type_match": true,
+    "comparable": false,
+    "non_comparable_reason": "Room name mismatch (Cleartrip: 'Deluxe Rooms with Private Balcony' vs Booking: 'Deluxe Room with Private Balcony')",
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "ibis Bengaluru City Centre",
+    "check_in": "2026-11-20",
+    "check_out": "2026-11-21",
+    "back_to_back_delta_min": 0.78,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:44:01.912009+05:30",
+      "status": "verified",
+      "payable": 6824.0,
+      "room_type": "Twin Room, 2 Twin Beds",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 19 Nov, 00:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6499.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 325.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\cleartrip_ibis_bengaluru_city_centre_2026-11-20_1794896041.png",
+      "seconds": 22.232755
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:44:26.147309+05:30",
+      "status": null,
+      "payable": null,
+      "room_type": "Standard Queen Room",
+      "bed_type": "1 Queen Bed",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [],
+      "screenshot": null,
+      "seconds": 22.386159
+    },
+    "room_name_match": false,
+    "bed_type_match": false,
+    "comparable": false,
+    "non_comparable_reason": "Bed type mismatch (Cleartrip: 2 Twin Beds vs Booking: 1 Queen Bed)",
+    "spread_inr": null,
+    "spread_pct": null
+  },
+  {
+    "hotel": "ibis Bengaluru City Centre",
+    "check_in": "2026-11-27",
+    "check_out": "2026-11-28",
+    "back_to_back_delta_min": 0.85,
+    "within_5_min": true,
+    "cleartrip": {
+      "timestamp": "2026-11-17T11:44:50.539600+05:30",
+      "status": "verified",
+      "payable": 6825.0,
+      "room_type": "Twin Room, 2 Twin Beds",
+      "bed_type": "2 Twin Beds",
+      "meal_plan": "Room Only",
+      "cancellation": "Fully refundable for cancellations done before 26 Nov, 00:00 IST",
+      "fee_lines": [
+        {
+          "label": "1 room x 1 night",
+          "amount": 6500.0,
+          "fee_kind": "other"
+        },
+        {
+          "label": "Hotel taxes",
+          "amount": 325.0,
+          "fee_kind": "tax"
+        },
+        {
+          "label": "Convenience fee",
+          "amount": 0.0,
+          "fee_kind": "platform_fee"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\cleartrip_ibis_bengaluru_city_centre_2026-11-27_1794896090.png",
+      "seconds": 24.840943
+    },
+    "bookingcom": {
+      "timestamp": "2026-11-17T11:45:17.387276+05:30",
+      "status": null,
+      "payable": 6825.0,
+      "room_type": "Standard Queen Room",
+      "bed_type": "1 Queen Bed",
+      "meal_plan": "Room Only",
+      "cancellation": "Free cancellation",
+      "fee_lines": [
+        {
+          "label": "Total room rate (incl. taxes)",
+          "amount": 6825.0,
+          "fee_kind": "other"
+        }
+      ],
+      "screenshot": "results\\recon\\real_pairs\\bookingcom_ibis_bengaluru_city_centre_2026-11-27_1794896117.png",
+      "seconds": 24.12579
+    },
+    "room_name_match": false,
+    "bed_type_match": false,
+    "comparable": false,
+    "non_comparable_reason": "Bed type mismatch (Cleartrip: 2 Twin Beds vs Booking: 1 Queen Bed)",
+    "spread_inr": null,
+    "spread_pct": null
+  }
+]

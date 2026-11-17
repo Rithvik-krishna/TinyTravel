@@ -126,6 +126,7 @@ async def run_bookingcom_playbook(
                 timezone_id="Asia/Kolkata",
                 viewport={"width": 1280, "height": 800},
                 extra_http_headers={"Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"},
+                ignore_https_errors=True,
             )
             page = await context.new_page()
 

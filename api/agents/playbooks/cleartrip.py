@@ -660,6 +660,7 @@ async def run_cleartrip_playbook(
                 "pay_at_hotel": 0.0,
                 "payment_page_dates": verified_dates_str,
                 # Operational stats for runner
+                "screenshot_path": str(recon_shot_path),
                 "steps": steps,
                 "seconds": elapsed,
                 "cost_usd": 0.0,
