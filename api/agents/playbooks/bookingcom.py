@@ -126,7 +126,6 @@ async def run_bookingcom_playbook(
                 timezone_id="Asia/Kolkata",
                 viewport={"width": 1280, "height": 800},
                 extra_http_headers={"Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"},
-                ignore_https_errors=True,
             )
             page = await context.new_page()
 
@@ -488,10 +487,22 @@ async def run_bookingcom_playbook(
 
             clean_fin = [float(p.replace(",", "")) for p in prices_fin]
 
-            # Parse Room Base Rate, Taxes & Charges, and Total Payable
-            # 1. Base Room Rate
-            m_base = re.search(r'(?:price|room price|charges for \d+ room[s]?|कीमत)\s*[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
-            base_fare = float(m_base.group(1).replace(",", "")) if m_base else None
+            # Parse Room Base Rate, Discounts, Taxes & Charges, and Total Payable
+            # 1. Original Price & Discounts
+            m_orig = re.search(r'Original price\s*[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            m_disc = re.search(r'[-\u2212]\s*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text)
+            m_price = re.search(r'(?:^|\n)\s*Price\s*[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+
+            original_price = float(m_orig.group(1).replace(",", "")) if m_orig else None
+            discount_amount = float(m_disc.group(1).replace(",", "")) if m_disc else 0.0
+
+            if m_price:
+                base_fare = float(m_price.group(1).replace(",", ""))
+            elif original_price is not None:
+                base_fare = round(original_price - discount_amount, 2)
+            else:
+                m_base = re.search(r'(?:room price|charges for \d+ room[s]?|कीमत)\s*[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+                base_fare = float(m_base.group(1).replace(",", "")) if m_base else None
 
             # 2. Taxes and Charges (handles "+₹ 5,580 taxes & charges" as well as "taxes and charges: ₹ 5,580")
             m_tax = re.search(r'\+\s*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)\s*(?:taxes|charges|टैक्स|शुल्क)', fin_text, re.I)
@@ -499,11 +510,11 @@ async def run_bookingcom_playbook(
                 m_tax = re.search(r'(?:taxes\s*(?:and|&)?\s*(?:charges|fees)?|gst|vat|टैक्स और शुल्क|goods & services tax)[:\n\r\s]*[+₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
             taxes = float(m_tax.group(1).replace(",", "")) if m_tax else 0.0
 
-            # 3. Explicit Total / You Pay
-            m_total = re.search(r'(?:total\s*(?:amount|price|payable)?|amount payable|you pay|pay now)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
+            # 3. Explicit Total / You Pay / Cancellation Total
+            m_total = re.search(r'(?:total\s*(?:amount|price|payable)?|amount payable|today you\'ll pay|you pay|pay now|cancellation cost|From \d\d:\d\d on)\s*(?:for\s*\d+\s*room[s]?)?[:\n\r\s\w]*[₹Rs.\s]*([0-9,]+(?:\.[0-9]+)?)', fin_text, re.I)
 
             if base_fare is not None and taxes > 0:
-                # Taxes are shown separately: define payable = room + taxes + fees
+                # Taxes are shown separately: define payable = room (after discount) + taxes + fees
                 calc_total = round(base_fare + taxes, 2)
                 if m_total:
                     tot_candidate = float(m_total.group(1).replace(",", ""))
@@ -514,18 +525,37 @@ async def run_bookingcom_playbook(
                 else:
                     total_payable = calc_total
 
-                result["fee_lines"] = [
-                    {
-                        "label": "Room rate",
-                        "amount": base_fare,
-                        "fee_kind": "other",
-                    },
-                    {
-                        "label": "Taxes & charges",
-                        "amount": taxes,
-                        "fee_kind": "tax",
-                    },
-                ]
+                if original_price is not None and discount_amount > 0:
+                    result["fee_lines"] = [
+                        {
+                            "label": "Original room price",
+                            "amount": original_price,
+                            "fee_kind": "other",
+                        },
+                        {
+                            "label": "Member / Genius discount",
+                            "amount": -discount_amount,
+                            "fee_kind": "other",
+                        },
+                        {
+                            "label": "Taxes & charges",
+                            "amount": taxes,
+                            "fee_kind": "tax",
+                        },
+                    ]
+                else:
+                    result["fee_lines"] = [
+                        {
+                            "label": "Room rate",
+                            "amount": base_fare,
+                            "fee_kind": "other",
+                        },
+                        {
+                            "label": "Taxes & charges",
+                            "amount": taxes,
+                            "fee_kind": "tax",
+                        },
+                    ]
             elif m_total:
                 total_payable = float(m_total.group(1).replace(",", ""))
                 result["fee_lines"] = [

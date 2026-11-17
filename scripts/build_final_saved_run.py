@@ -329,18 +329,19 @@ def update_saved_run():
             "max_occupancy": 2,
             "meal_plan": "Room Only",
             "cancellation_policy": "Free cancellation",
-            "price_shown_on_listing": 9000.0,
-            "price_shown_on_room_selection": 9000.0,
-            "price_final_payable": 10458.0,
+            "price_shown_on_listing": 8100.0,
+            "price_shown_on_room_selection": 8100.0,
+            "price_final_payable": 9558.0,
             "fee_lines": [
-                {"label": "Room rate", "amount": 9000.0, "fee_kind": "other"},
+                {"label": "Original room price", "amount": 9000.0, "fee_kind": "other"},
+                {"label": "Member / Genius discount", "amount": -900.0, "fee_kind": "other"},
                 {"label": "Taxes & charges", "amount": 1458.0, "fee_kind": "tax"}
             ],
             "preselected_addons": [],
             "urgency_or_scarcity_messages": [],
-            "price_trail": [{"step": "payment", "amount": 10458.0, "currency": "INR"}],
+            "price_trail": [{"step": "payment", "amount": 9558.0, "currency": "INR"}],
             "currency": "INR",
-            "notes": "Verified back-to-back run: all-inclusive payable (room 9,000 + tax 1,458)",
+            "notes": "Verified back-to-back run: all-inclusive payable on discounted base (room 8,100 + 18% tax 1,458 = 9,558)",
             "fee_leak_pct": 0.0,
             "evidence": [
                 {
@@ -348,16 +349,16 @@ def update_saved_run():
                     "url": "results/recon/real_pairs/bookingcom_radisson_blu_atria_bengaluru_2026-11-20_1794895333.png",
                     "step": "payment",
                     "captured_at": "2026-11-17T11:32:48+05:30",
-                    "extracted_value": 10458.0,
+                    "extracted_value": 9558.0,
                     "currency": "INR",
                     "mock": False
                 }
             ],
             "mock": False,
             "rate_cohort": "cheapest_free_cancellation",
-            "cheapest_any_payable": 10458.0,
+            "cheapest_any_payable": 9558.0,
             "verification_level": "checkout",
-            "payment_page_text": "Booking.com checkout verified for Radisson Blu Atria Bengaluru. Total payable: INR 10458.0 (room 9000 + tax 1458). Superior Room (1 King / Double)."
+            "payment_page_text": "Booking.com checkout verified for Radisson Blu Atria Bengaluru. Total payable: INR 9558.0 (original 9000 - discount 900 + tax 1458). Superior Room (1 King / Double)."
         },
         # Offer 5: The Oberoi Cleartrip
         {
@@ -466,6 +467,46 @@ def update_saved_run():
             "cheapest_any_payable": 31860.0,
             "verification_level": "checkout",
             "payment_page_text": "Booking.com checkout verified for The Oberoi Bengaluru. Total payable: INR 31860.0 (base 27000 + tax 4860). Room: Luxury Room with Private Balcony."
+        }
+    ]
+
+    # Hotel groups
+    d["hotel_groups"] = [
+        {
+            "hotel_id": "h1",
+            "canonical_name": "Bloomrooms City Centre",
+            "area": "Cunningham Road",
+            "match_status": "merged",
+            "confidence": 1.0,
+            "why": "Exact property and room match (Standard Twin Room, 2 Twin Beds)",
+            "offer_ids": ["h1_cleartrip", "h1_bookingcom"]
+        },
+        {
+            "hotel_id": "h2",
+            "canonical_name": "Radisson Blu Atria Bengaluru",
+            "area": "Palace Road",
+            "match_status": "merged",
+            "confidence": 1.0,
+            "why": "Exact property and room match (Superior Room, 1 King / Double)",
+            "offer_ids": ["h2_cleartrip", "h2_bookingcom"]
+        },
+        {
+            "hotel_id": "h3",
+            "canonical_name": "The Oberoi Bengaluru",
+            "area": "MG Road",
+            "match_status": "suggested",
+            "confidence": 0.85,
+            "why": "Property matched, room names differed ('Superior Room' vs 'Luxury Room with Private Balcony') - NOT COMPARABLE",
+            "offer_ids": ["h3_cleartrip", "h3_bookingcom"]
+        }
+    ]
+
+    # Verdicts
+    d["verdicts"]["non_comparable_warnings"] = [
+        {
+            "hotel_id": "h3",
+            "offer_id": "h3_bookingcom",
+            "message": "The Oberoi Bengaluru: not comparable on 2026-11-20 due to room name mismatch (Cleartrip: 'Superior Room' vs Booking.com: 'Luxury Room with Private Balcony')."
         }
     ]
     
